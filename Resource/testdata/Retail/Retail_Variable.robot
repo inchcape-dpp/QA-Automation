@@ -1413,7 +1413,8 @@ ${Retail_HK_AccountVehicleListingPage_VehicleCard_List}    //dpp-hk-vehicle-list
 
 #-----------------------------------------------------Retail Account Vehicle Listing Page
 ${Retail_AccountVehicleListingPageSelectVehicleRegoValue}    CX20LA
-${Retail_AccountVehicleListingPageSelectVehicleVINNumValue}    123456
+${Retail_AccountVehicleListingPageSelectVehicleVINNumValue}    JF1ZD8K72PG004012
+
 
 ${Retail_AccountVehicleListingPageSelectVehicleRegoInvalidValue}    654321
 ${Retail_AccountVehicleListingPageSelectVehicleVINNumInvalidValue}    123456

@@ -26,19 +26,19 @@ ${Retail_screenshot_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\py
 
 ${UploadPhoto_Path_Value}    C:\\Users\\Danielouie.Estopace\\Pictures\\Sample Image\\Image.jpg
 
-${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Pictures\\Files\\HKProductReportView.xlsx
+${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\FilesHKProductReportView.xlsx
 
 #${LogDIR}
 
 #${Username}    hktestric3@yopmail.com
 #${Password}    Pass@12345
 
-${Username}    ${admin1_s2_HKretail_UID}
-${Password}    ${admin1_s2_HKretail_PWD}
+${Username}    ${admin1_s2_retail_UID}
+${Password}    ${admin1_s2_retail_PWD}
 
 *** Keywords ***
 Open Chrome Browser
-    SeleniumLibrary.Open Browser    ${s2HKRetail}    Chrome  executable_path=${driver_path}
+    SeleniumLibrary.Open Browser    ${s2Retail}    Chrome  executable_path=${driver_path}
     maximize browser window
 #    press keys    none    ctrl + t
 ##    ${test1}    get window titles

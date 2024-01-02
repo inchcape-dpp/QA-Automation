@@ -33,15 +33,24 @@ TC-020 - User should be able to click Login Button
     run keyword and continue on failure    User should be able to click Login Button
     run keyword and continue on failure    TC Sleep
 
-TC-106 - User should be able to select vehicle using Rego in Retail Account Vehicle Listing Page
+TC-107 - User should be able to add new vehicle using Manual Search in Retail Account Vehicle Listing Page
     [Tags]    Vehicle Listing Page
     run keyword and continue on failure    User should be able to click Select Your Vehicle
     run keyword and continue on failure    User should be able to view add vehicle in Retail Select Vehicle
     run keyword and continue on failure    User should be able to click add new vehicle in Retail Select Vehicle
     run keyword and continue on failure    User should be able to view add vehicle in Retail Select Vehicle
-    run keyword and continue on failure    User should be albe to inout vin in Retail Select Vehicle
-    run keyword and continue on failure    User should be albe to click search button in Retail Select Vehicle
-    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User should be able to click search by make and model button in Retail Select Vehicle
+    run keyword and continue on failure    User should be able to click model on manual search in Retail Select Vehicle
+    run keyword and continue on failure    User should be able to select model on manual search in Retail Select Vehicle
+    run keyword and continue on failure    User should be able to click year on manual search in Retail Select Vehicle
+    run keyword and continue on failure    User should be able to select year on manual search in Retail Select Vehicle
+    run keyword and continue on failure    User should be able to click series on manual search in Retail Select Vehicle
+    run keyword and continue on failure    User should be able to select series on manual search in Retail Select Vehicle
+    run keyword and continue on failure    User should be able to click engine on manual search in Retail Select Vehicle
+    run keyword and continue on failure    User should be able to select engine on manual search in Retail Select Vehicle
+    run keyword and continue on failure    User should be able to click details on manual search in Retail Select Vehicle
+    run keyword and continue on failure    User should be able to select details on manual search in Retail Select Vehicle
+    run keyword and continue on failure    User shoud be albe to click search this vehicle on manual seearh in Retail Select Vehicle
     run keyword and continue on failure    User should be able to click select this vehicle in Retail Select Vehicle
     run keyword and continue on failure    TC Sleep
 
@@ -54,11 +63,11 @@ TC-058 - User should be able to filter product
     run keyword and continue on failure    User should be able to filter product name from A to Z
     run keyword and continue on failure    User should be able to fitler results per page to 100
 
-TC-065 - User should be able to click add to cart button for out of stock and dc stock in Retail Product Page
+TC-067 - User should be able to click add to cart button for in stock only in Retail Product Page
     [Tags]    All Products Page
-    run keyword and continue on failure    User should be able to click add to cart button for out of stock and dc stock in Retail Product Page
+    run keyword and continue on failure    User should be able to click add to cart button for in stock only in Retail Product Page
     run keyword and continue on failure    Return to first page
-    run keyword and continue on failure    User should be able to click add to cart button for out of stock and dc stock in Retail Product Page
+    run keyword and continue on failure    User should be able to click add to cart button for in stock only in Retail Product Page
     run keyword and continue on failure    Return to first page
 
 TC-069 - User should be able to view shopping cart pop up modal
@@ -92,33 +101,6 @@ TC-078 - User should be able to place order in Retail Checkout Page
     run keyword and continue on failure    User should be able to click place order button in Retail Checkout Page
     run keyword and continue on failure    User should be able to view place order in Retail Place Order Page
     run keyword and continue on failure    User should be able to click back to home button in Retail Place Order Page
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
