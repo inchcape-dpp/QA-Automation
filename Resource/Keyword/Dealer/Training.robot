@@ -30,3 +30,6 @@ User should be able to click login button in Training TC
 
 TCsleep training
     sleep    10
+
+TCsleep training
+    sleep    10
