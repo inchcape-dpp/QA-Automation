@@ -883,5 +883,63 @@ Get Number of DCStock
 
 Product Price Check
     open excel document    ${ExcelFile_HK_Product_List_Path}    VHKProdPartsSOHPrice
-    @{data}=    read excel row    row_num=2    max_num=${data}    VHKProdPartsSOHPrice
-    sleep    20
+    ${sheets}=    get list sheet names
+    Log    ${sheets}
+#    @{row}=    read excel row    row_num=2    max_num=20    sheet_name=VHKProdPartsSOHPrice
+#    @{Prod_Num_Column}=    read excel column    col_num=1    max_num=1500    sheet_name=VHKProdPartsSOHPrice
+#    @{Bronze_Price_Column}=    read excel column    col_num=12    max_num=1500    sheet_name=VHKProdPartsSOHPrice
+##    ${ProdNum}=    read excel cell    row_num=1    col_num=3    sheet_name=VHKProdPartsSOHPrice
+#    ${Prod_Num}=    convert to string    ${Prod_Num_Column}[2]
+#    ${Prod_Price}=    convert to string    ${Bronze_Price_Column}[2]
+#    Log     ${Prod_Num}
+#    Log    ${Prod_Price}
+#    sleep    10
+##    Log    ${row_values}
+
+    FOR    ${PriceCheck}    IN RANGE    1    5
+
+      log    ${Prod_NumPrize_Index}
+
+      @{Prod_Num_Column}=    read excel column    col_num=1    max_num=1500    sheet_name=VHKProdPartsSOHPrice
+      @{Bronze_Price_Column}=    read excel column    col_num=12    max_num=1500    sheet_name=VHKProdPartsSOHPrice
+
+      ${Prod_Num}=    convert to string    ${Prod_Num_Column}[${Prod_NumPrize_Index}]
+      ${Prod_Price}=    convert to string    ${Bronze_Price_Column}[${Prod_NumPrize_Index}]
+
+      ${Prod_Price_RemoveString}    remove string    ${Prod_Price}    $    ,
+
+      wait until element is visible    ${HomePageSearhProduct}    10
+      click element    ${HomePageSearhProduct}
+      clear element text    ${HomePageSearhProduct}
+      input text    ${HomePageSearhProduct}    ${Prod_Num}
+      sleep    2
+
+      wait until element is visible    ${HomePageSearchSuggestionList1}    10
+      ${Prod_Price}  get text   ${SearchProdPrice}
+      ${Prod_Search_RemoveString}    remove string    ${Prod_Price}    $    ,
+      click element    ${HomePageSearchSuggestionList1}
+      mouse over    ${HomePageLogo}
+      sleep    3
+
+      wait until element is visible    ${ProductDeatilsPageProductPrice}    10
+      ${Prod_Detail_Price}    get text    ${ProductDeatilsPageProductPrice}
+      ${Prod_Detail_RemoveString}    remove string    ${Prod_Detail_Price}    $    ,
+
+      ${Price1}    set variable    ${Prod_Price_RemoveString}
+      ${Price2}    set variable    ${Prod_Search_RemoveString}
+      ${Price3}    set variable    ${Prod_Detail_RemoveString}
+
+      Log    ${Price1}
+      Log    ${Price2}
+      Log    ${Price3}
+
+      run keyword and continue on failure    should be equal    ${Price2}    ${Price3}
+      run keyword and continue on failure    should be equal    ${Price1}    ${Price2}
+      run keyword and continue on failure    should be equal    ${Price1}    ${Price3}
+
+      ${Prod_NumPrize_Index}    evaluate    ${Prod_NumPrize_Index}+1
+
+      sleep    5
+    END
+
+    close all excel documents

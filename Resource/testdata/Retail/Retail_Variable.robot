@@ -402,6 +402,10 @@ ${HomePageSearchSuggestion}    //ul[@class='suggestions']//li/a
 
 ${Retail_FilterListSubElements}    ((//dpp-category-navigation//button[@tabindex='0'])[${RandomFilterIndex}]/following-sibling::div[@class='wrapper']//li)
 
+${Prod_NumPrize_Index}    2
+
+${HomePageSearchSuggestionList1}    (//div[@id='results']//ul[@class='products'])[1]
+${SearchProdPrice}    (//div[@id='results']//ul[@class='products']//li[@class='row-wrapper']//span[@class='price'])[1]
 
 
 #-----------------------------------------------------Retail Home Page HK
