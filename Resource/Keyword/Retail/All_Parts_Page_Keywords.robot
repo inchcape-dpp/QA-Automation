@@ -896,7 +896,7 @@ Product Price Check
 #    sleep    10
 ##    Log    ${row_values}
 
-    FOR    ${PriceCheck}    IN RANGE    1    5
+    FOR    ${PriceCheck}    IN RANGE    1    500
 
       log    ${Prod_NumPrize_Index}
 
@@ -916,14 +916,14 @@ Product Price Check
 
       wait until element is visible    ${HomePageSearchSuggestionList1}    10
       ${Prod_Price}  get text   ${SearchProdPrice}
-      ${Prod_Search_RemoveString}    remove string    ${Prod_Price}    $    ,
+      ${Prod_Search_RemoveString}    remove string    ${Prod_Price}    $    ,    .0
       click element    ${HomePageSearchSuggestionList1}
       mouse over    ${HomePageLogo}
       sleep    3
 
       wait until element is visible    ${ProductDeatilsPageProductPrice}    10
       ${Prod_Detail_Price}    get text    ${ProductDeatilsPageProductPrice}
-      ${Prod_Detail_RemoveString}    remove string    ${Prod_Detail_Price}    $    ,
+      ${Prod_Detail_RemoveString}    remove string    ${Prod_Detail_Price}    $    ,    .0
 
       ${Price1}    set variable    ${Prod_Price_RemoveString}
       ${Price2}    set variable    ${Prod_Search_RemoveString}
@@ -937,9 +937,13 @@ Product Price Check
       run keyword and continue on failure    should be equal    ${Price1}    ${Price2}
       run keyword and continue on failure    should be equal    ${Price1}    ${Price3}
 
+
+
       ${Prod_NumPrize_Index}    evaluate    ${Prod_NumPrize_Index}+1
 
       sleep    5
     END
 
     close all excel documents
+
+
