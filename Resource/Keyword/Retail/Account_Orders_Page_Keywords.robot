@@ -130,6 +130,26 @@ User should be able to click filter status in Account Order Page
     click element    ${Retail_AccountOrderPageStatusFilter}
     sleep    2
 
+User should be able to check all filter status in Account Order Page
+    wait until element is enabled    ${Retail_AccountOrderPageStatusFilterALL}    10
+    wait until element is enabled    ${Retail_AccountOrderPageStatusFilterReceived}    10
+    wait until element is enabled    ${Retail_AccountOrderPageStatusFilterSubmitted}    10
+    wait until element is visible    ${Retail_AccountOrderPageStatusFilterDispatched}    10
+    wait until element is visible    ${Retail_AccountOrderPageStatusFilterPartiallyDispatched}    10
+    wait until element is visible    ${Retail_AccountOrderPageStatusFilterOrderwithReturns}    10
+    element should not be visible    ${Retail_HK_AccountOrderPage_StatusFilter_Delivered}
+    element should not be visible    ${Retail_HK_AccountOrderPage_StatusFilter_Processing}
+
+User should be able to check all filter status in HK Account Order Page
+    wait until element is enabled    ${Retail_AccountOrderPageStatusFilterALL}    10
+    wait until element is enabled    ${Retail_AccountOrderPageStatusFilterReceived}    10
+    wait until element is enabled    ${Retail_AccountOrderPageStatusFilterSubmitted}    10
+    wait until element is visible    ${Retail_AccountOrderPageStatusFilterDispatched}    10
+    element should not be visible    ${Retail_AccountOrderPageStatusFilterPartiallyDispatched}
+    wait until element is visible    ${Retail_AccountOrderPageStatusFilterOrderwithReturns}    10
+    wait until element is enabled    ${Retail_HK_AccountOrderPage_StatusFilter_Delivered}    10
+    wait until element is enabled    ${Retail_HK_AccountOrderPage_StatusFilter_Processing}    10
+
 User should be able to filter status by ALL in Account Order Page
     wait until element is visible    ${Retail_AccountOrderPageStatusFilterALL}    10
     capture element screenshot    ${Retail_AccountOrderPageStatusFilterALL}
@@ -164,6 +184,18 @@ User should be able to filter status by Order with Returns in Account Order Page
     wait until element is visible    ${Retail_AccountOrderPageStatusFilterOrderwithReturns}    10
     capture element screenshot    ${Retail_AccountOrderPageStatusFilterOrderwithReturns}
     click element    ${Retail_AccountOrderPageStatusFilterOrderwithReturns}
+    sleep    2
+
+User should be able to filter status by Delivered in HK Account Order Page
+    wait until element is visible    ${Retail_HK_AccountOrderPage_StatusFilter_Delivered}    10
+    capture element screenshot    ${Retail_HK_AccountOrderPage_StatusFilter_Delivered}
+    click element    ${Retail_HK_AccountOrderPage_StatusFilter_Delivered}
+    sleep    2
+
+User should be able to filter status by Processing in HK Account Order Page
+    wait until element is visible    ${Retail_HK_AccountOrderPage_StatusFilter_Processing}    10
+    capture element screenshot    ${Retail_HK_AccountOrderPage_StatusFilter_Processing}
+    click element    ${Retail_HK_AccountOrderPage_StatusFilter_Processing}
     sleep    2
 
 User should be able to click Date Filter in Account Order Page

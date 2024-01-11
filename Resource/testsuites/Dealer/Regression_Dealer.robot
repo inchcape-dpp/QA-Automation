@@ -1069,4 +1069,6 @@ TC-190 - User should be able to Logout
     [Tags]    Home Page    Settings
     run keyword and continue on failure    User should be able to Logout
 
-Test Teardown  Run Keywords  Close Browser
+Test Teardown
+    Run Keywords    Close Browser
+    run keyword    Save Log DIR

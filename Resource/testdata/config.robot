@@ -33,12 +33,12 @@ ${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\
 #${Username}    seller1.admin@test.com
 #${Password}    PartsLane@123!
 
-${Username}    ${admin1_s2_HKretail_UID}
-${Password}    ${admin1_s2_HKretail_PWD}
+${Username}    ${DanProdRetailUID}
+${Password}    ${DanProdRetailPWD}
 
 *** Keywords ***
 Open Chrome Browser
-    SeleniumLibrary.Open Browser    ${s2HKRetail}    Chrome  executable_path=${driver_path}
+    SeleniumLibrary.Open Browser    ${p1Retail}    Chrome  executable_path=${driver_path}
     maximize browser window
 #    press keys    none    ctrl + t
 ##    ${test1}    get window titles
@@ -55,18 +55,21 @@ BE Screent Shot DIR
 Dealer Screent Shot DIR
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
     create directory    ${Dealer_screenshot_path}/${currentdate}
-    set screenshot directory    ${Dealer_screenshot_path}/${currentdate}
-    ${LogDIR}    convert to string    ${Dealer_screenshot_path}/${currentdate}
+    ${LogDIR}=    convert to string    ${Dealer_screenshot_path}/${currentdate}
+    set screenshot directory    ${LogDIR}
+    set global variable    ${LogDIR}
+
 
 
 Retail Screent Shot DIR
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
     create directory    ${Retail_screenshot_path}/${currentdate}
-    set screenshot directory    ${Retail_screenshot_path}/${currentdate}
-    ${NewDIR}    convert to string    ${Retail_screenshot_path}\\${currentdate}
+    ${LogDIR}=    convert to string    ${Retail_screenshot_path}/${currentdate}
+    set screenshot directory    ${LogDIR}
+    set global variable    ${LogDIR}
 
-#Save Log DIR
-#    copy file    log.html    ${LogDIR}
+Save Log DIR
+    copy file    log.html    ${LogDIR}
 
 
 #-----------------------------------------------------Browser Commands--------------------------------------------------

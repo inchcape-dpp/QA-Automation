@@ -860,6 +860,9 @@ ${Retail_AccountOrderPageStatusFilterDispatched}    (//div[@class='ng-dropdown-p
 ${Retail_AccountOrderPageStatusFilterPartiallyDispatched}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Partially Dispatched')]
 ${Retail_AccountOrderPageStatusFilterOrderwithReturns}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Order with Returns')]
 
+${Retail_HK_AccountOrderPage_StatusFilter_Delivered}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Delivered')]
+${Retail_HK_AccountOrderPage_StatusFilter_Processing}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Processing')]
+
 ${Retail_AccountOrderPageDateFilter}    //div[@id='dateRangePicker']
 ${Retail_AccountOrderPageDateFilterContainer}    //ngb-datepicker[@class='dropdown-menu show']
 ${Retail_AccountOrderPageDateFilterPreviousMonth}    //ngb-datepicker-navigation//button[@aria-label='Previous month']
