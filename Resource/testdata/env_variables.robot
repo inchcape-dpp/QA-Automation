@@ -39,9 +39,23 @@ ${p1HKDealer}    	https://www.partslane.com.hk/hkdealer
 #------------------------Waf------------------------
 ${wafRetail}    https://wafretail.partslane.com.au
 
+
+
 #------------------------YopMail------------------------
 ${YopMail}    https://yopmail.com/en/
 
+${Yopmail_Banner}    //header//img[@id='logoacc']
+${Yopmail_Email_TextBox}    //div[@class='ycolleft']//div[@class='ycptctn']//input
+${Yopmail_Email_Next_Button}    //div[@class='ycolleft']//div[@class='ycptctn']//button
+${Yopmail_Refresh_Button}    //div[@class='wmmain']//button[@id='refresh']
+${Yopmail_Menu_Button}    (//div[@class='wmmain']//div[@class='wminboxheader']//button//i[@class='material-icons-outlined'])[1]
+${Yopmail_ClearInbox_Button}    //div[@class='wmmain']//div[@class='wminboxheader']//div[@class='menu']//button[@id='delall']
+${Yopmail_InboxMessage_Option1}    (//body[@class='bodyinbox yscrollbar']//div[@class='m'])[1]
+${Yopmail_InboxBody}    //body[@class='bodymail yscrollbar']
+${Yopmail_Inbox_Title_Message}    (//div[@class='fl']//div)[1]
+${Yopmail_Inbox_Sender_Email}    //div[@class='fl']//div//span
+${Yopmail_Inbox_ShowPicture_Button}    //div[@class='fl']//div[@class='noprint']//button
 
-
-
+${Yopmail_InboxBody_Header}    (//div[@id='mail']//tbody//tr)[1]
+${Yopmail_InboxBody_Content}    //div[@id='mail']//tbody//tr[2]//tbody
+${Yopmail_InboxBody_Footer}    (//div[@id='mail']//tbody//tr)[3]

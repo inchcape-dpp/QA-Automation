@@ -884,17 +884,17 @@ Get Number of DCStock
 Product Price Check
     open excel document    ${ExcelFile_HK_Product_List_Path}    VHKProdPartsSOHPrice
     ${sheets}=    get list sheet names
-    Log    ${sheets}
+#    Log    ${sheets}
 #    @{row}=    read excel row    row_num=2    max_num=20    sheet_name=VHKProdPartsSOHPrice
 #    @{Prod_Num_Column}=    read excel column    col_num=1    max_num=1500    sheet_name=VHKProdPartsSOHPrice
 #    @{Bronze_Price_Column}=    read excel column    col_num=12    max_num=1500    sheet_name=VHKProdPartsSOHPrice
-##    ${ProdNum}=    read excel cell    row_num=1    col_num=3    sheet_name=VHKProdPartsSOHPrice
+    ${ProdNum}=    read excel cell    row_num=3    col_num=2    sheet_name=VHKProdPartsSOHPrice
 #    ${Prod_Num}=    convert to string    ${Prod_Num_Column}[2]
 #    ${Prod_Price}=    convert to string    ${Bronze_Price_Column}[2]
 #    Log     ${Prod_Num}
 #    Log    ${Prod_Price}
 #    sleep    10
-##    Log    ${row_values}
+#    Log    ${row_values}
 
     FOR    ${PriceCheck}    IN RANGE    1    500
 
@@ -905,6 +905,7 @@ Product Price Check
 
       ${Prod_Num}=    convert to string    ${Prod_Num_Column}[${Prod_NumPrize_Index}]
       ${Prod_Price}=    convert to string    ${Bronze_Price_Column}[${Prod_NumPrize_Index}]
+
 
       ${Prod_Price_RemoveString}    remove string    ${Prod_Price}    $    ,
 
@@ -938,12 +939,34 @@ Product Price Check
       run keyword and continue on failure    should be equal    ${Price1}    ${Price3}
 
 
-
       ${Prod_NumPrize_Index}    evaluate    ${Prod_NumPrize_Index}+1
 
       sleep    5
     END
 
     close all excel documents
+
+New browser tab
+    Log to console    Adding new tab
+    execute javascript    window.open('', '_blank')
+#    press keys    none    CTRL+TAB
+#    sleep    5
+#    press keys    none    CTRL+TAB
+#    go to    ${YopMail}
+    sleep    10
+    Log to console    Getting window name
+    @{test}=    get window handles
+    Log    ${test}
+    ${Tab1}=    convert to string    ${test}[0]
+    ${Tab2}=    convert to string    ${test}[1]
+    Log    ${Tab1}
+    Log    ${Tab2}
+    Log to console    Switching window 2
+    switch window    ${Tab2}
+    go to    ${YopMail}
+    sleep    10
+    Log to console    Switching window 1
+    switch window    ${Tab1}
+    sleep    10
 
 

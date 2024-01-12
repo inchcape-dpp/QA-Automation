@@ -203,9 +203,9 @@ TC-041 - User should be able to logout
     [Tags]    TC009    Logout
     run keyword and continue on failure    User should be able to logout
 
-Test Teardown
-    Run Keywords  Close Browser
-    run keyword    Save Log DIR
+#Test Teardown
+#    Run Keywords  Close Browser
+#    run keyword    Save Log DIR
 
 
 
