@@ -402,6 +402,10 @@ ${HomePageSearchSuggestion}    //ul[@class='suggestions']//li/a
 
 ${Retail_FilterListSubElements}    ((//dpp-category-navigation//button[@tabindex='0'])[${RandomFilterIndex}]/following-sibling::div[@class='wrapper']//li)
 
+${Prod_NumPrize_Index}    2
+
+${HomePageSearchSuggestionList1}    (//div[@id='results']//ul[@class='products'])[1]
+${SearchProdPrice}    (//div[@id='results']//ul[@class='products']//li[@class='row-wrapper']//span[@class='price'])[1]
 
 
 #-----------------------------------------------------Retail Home Page HK
@@ -855,6 +859,9 @@ ${Retail_AccountOrderPageStatusFilterSubmitted}    //div[@class='ng-dropdown-pan
 ${Retail_AccountOrderPageStatusFilterDispatched}    (//div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Dispatched')])[1]
 ${Retail_AccountOrderPageStatusFilterPartiallyDispatched}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Partially Dispatched')]
 ${Retail_AccountOrderPageStatusFilterOrderwithReturns}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Order with Returns')]
+
+${Retail_HK_AccountOrderPage_StatusFilter_Delivered}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Delivered')]
+${Retail_HK_AccountOrderPage_StatusFilter_Processing}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Processing')]
 
 ${Retail_AccountOrderPageDateFilter}    //div[@id='dateRangePicker']
 ${Retail_AccountOrderPageDateFilterContainer}    //ngb-datepicker[@class='dropdown-menu show']

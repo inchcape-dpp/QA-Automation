@@ -497,6 +497,7 @@ TC-080 - User should be able to view account orders page
 TC-081 - User should be able to apply filter status in Retail Account Orders Page
     [Tags]    Order Page
     run keyword and continue on failure    User should be able to click filter status in Account Order Page
+    run keyword and continue on failure    User should be able to check all filter status in Account Order Page
     run keyword and continue on failure    User should be able to filter status by Order with Returns in Account Order Page
     run keyword and continue on failure    User should be able to click filter status in Account Order Page
     run keyword and continue on failure    User should be able to filter status by Partially Dispathed in Account Order Page
@@ -1059,4 +1060,6 @@ TC-136 - User should be able to logout
     [Tags]    Logout
     run keyword and continue on failure    User should be able to logout
 
-Test Teardown  Run Keywords  Close Browser
+Test Teardown
+    Run Keywords    Close Browser
+    run keyword    Save Log DIR
