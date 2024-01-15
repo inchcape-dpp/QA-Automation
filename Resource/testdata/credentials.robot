@@ -227,8 +227,7 @@ ${Ty_s2_HK_Bronze_Retail_PWD}    Pass@12345
 ${Dan_s2_HK_Bronze_Retail_UID}    hkdan@yopmail.com
 ${Dan_s2_HK_Bronze_Retail_PWD}    Pass123@321
 
-
-
+                                                                        #------------------------YopMail----------------
 ${AU_D1_Automation_UID}    au_automation1retaild1@yopmail.com
 ${AU_D1_Automation_PWD}    AU_Auto@12345!
 
@@ -246,3 +245,7 @@ ${HK_S2_Automation_Bronze_PWD}    HK_Auto@12345!
 
 ${HK_S2_Automation_Gold_UID}    hk_automation1retails2_gold@yopmail.com
 ${HK_S2_Automation_Gold_PWD}    HK_Auto@12345!
+
+                                                                        #------------------------Inboxes----------------
+${HK_D1_Automation_Bronze_UID}    hk_automation1retaild1_bronze@robot-mail.com
+${HK_D1_Automation_Bronze_PWD}    HK_Auto@12345!
