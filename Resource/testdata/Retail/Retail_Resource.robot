@@ -25,3 +25,4 @@ Resource  ../../../Resource/Keyword/Retail/All_Parts_Page_Keywords.robot
 
 
 Resource  ../../../Resource/Keyword/Retail/Search_Bar_Keywords.robot
+Resource  ../../../Resource/Keyword/Retail/Email.robot
