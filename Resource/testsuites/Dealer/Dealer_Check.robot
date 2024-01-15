@@ -181,7 +181,9 @@ TC-036 - User should be able to view staff page
 #    run keyword and continue on failure    User should be able to view settings page
 
 
-Test Teardown  Run Keywords  Close Browser
+#Test Teardown
+#    Run Keywords  Close Browser
+#    run keyword    Save Log DIR
 
 
 

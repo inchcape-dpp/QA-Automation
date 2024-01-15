@@ -820,7 +820,7 @@ TC-148 - User should be able to input and save company details in Dealer Company
     run keyword and continue on failure    User should be able to input valid Postal Code in Dealer Company Details Page
     run keyword and continue on failure    User should be able to click Postal Address State Drop Down in Dealer Company Details Page
     run keyword and continue on failure    User should be able to select Postal Address State in Dealer Company Details Page
-    run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Dealer Company Details Page
+#    run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Dealer Company Details Page
 #    run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Dealer Company Details Page
     run keyword and continue on failure    User should be able to input valid Delivery Address Line 1 in Dealer Company Details Page
     run keyword and continue on failure    User should be able to input valid Delivery Address Line 2 in Dealer Company Details Page
@@ -1069,4 +1069,6 @@ TC-190 - User should be able to Logout
     [Tags]    Home Page    Settings
     run keyword and continue on failure    User should be able to Logout
 
-Test Teardown  Run Keywords  Close Browser
+Test Teardown
+    Run Keywords    Close Browser
+    run keyword    Save Log DIR

@@ -416,15 +416,15 @@ TC-070 - User should be able to view shopping cart in Retail Shopping Cart Page
     run keyword and continue on failure    User should be able to toggle on/off GST in Retail Shopping Cart Page
     run keyword and continue on failure    User should be able to toggle on/off GST in Retail Shopping Cart Page
 
-#TC-071 - User should be able to click save cart button in Retail Shopping Cart Page
-#    [Tags]    Shopping Cart Page
-#    run keyword and continue on failure    User should be able to click save cart button in Retail Shopping Cart Page
-#    run keyword and continue on failure    User should be able to edit Name for Edit Pop Up in Retail Account Saved Carts Details Page
-#    run keyword and continue on failure    User should be able to edit Description for Edit Pop Up in Retail Account Saved Carts Details Page
-#    run keyword and continue on failure    User shoulld be albe to click Update for Edit Pop Up in Retail Account Saved Carts Details Page
-#    run keyword and continue on failure    TC Sleep
-#    run keyword and continue on failure    User should be able to click Restore in Retail Account Saved Carts Page
-#    run keyword and continue on failure    TC Sleep
+TC-071 - User should be able to click save cart button in Retail Shopping Cart Page
+    [Tags]    Shopping Cart Page
+    run keyword and continue on failure    User should be able to click save cart button in Retail Shopping Cart Page
+    run keyword and continue on failure    User should be able to edit Name for Edit Pop Up in Retail Account Saved Carts Details Page
+    run keyword and continue on failure    User should be able to edit Description for Edit Pop Up in Retail Account Saved Carts Details Page
+    run keyword and continue on failure    User shoulld be albe to click Update for Edit Pop Up in Retail Account Saved Carts Details Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User should be able to click Restore in Retail Account Saved Carts Page
+    run keyword and continue on failure    TC Sleep
 
 TC-072 - User should be able to edit shopping cart items in Retail Shopping Cart Page
     [Tags]    Shopping Cart Page
@@ -497,6 +497,7 @@ TC-080 - User should be able to view account orders page
 TC-081 - User should be able to apply filter status in Retail Account Orders Page
     [Tags]    Order Page
     run keyword and continue on failure    User should be able to click filter status in Account Order Page
+    run keyword and continue on failure    User should be able to check all filter status in Account Order Page
     run keyword and continue on failure    User should be able to filter status by Order with Returns in Account Order Page
     run keyword and continue on failure    User should be able to click filter status in Account Order Page
     run keyword and continue on failure    User should be able to filter status by Partially Dispathed in Account Order Page
@@ -1059,4 +1060,6 @@ TC-136 - User should be able to logout
     [Tags]    Logout
     run keyword and continue on failure    User should be able to logout
 
-Test Teardown  Run Keywords  Close Browser
+Test Teardown
+    Run Keywords    Close Browser
+    run keyword    Save Log DIR
