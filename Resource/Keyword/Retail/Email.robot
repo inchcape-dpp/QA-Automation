@@ -13,21 +13,14 @@ Resource  ../../../Resource/testdata/credentials.robot
 
 *** Keywords ***
 New browser tab
-    Log to console    Adding new tab
     execute javascript    window.open('', '_blank')
-#    press keys    none    CTRL+TAB
-#    sleep    5
-#    press keys    none    CTRL+TAB
-#    go to    ${YopMail}
     sleep    10
-    Log to console    Getting window name
     @{test}=    get window handles
-    Log    ${test}
+    Log to console    ${test}
     ${Tab1}=    convert to string    ${test}[0]
     ${Tab2}=    convert to string    ${test}[1]
-    Log    ${Tab1}
-    Log    ${Tab2}
-    Log to console    Switching window 2
+    Log to console    ${Tab1}
+    Log to console    ${Tab2}
     switch window    ${Tab2}
     go to    ${YopMail}
     sleep    10
@@ -44,7 +37,14 @@ Enter Yop Mail
     click element    ${Yopmail_Email_Next_Button}
     sleep    5
 
-Swithc to Inbox List Frame
-    select frame
+Switch to Inbox List Frame
+    select frame    ${Yopmail_Inbox_List_Frame}
+    sleep    2
 
-#Test
+Click Inbox Messages
+    wait until element is visible    ${Yopmail_InboxMessage_Option2}    10
+    click element    ${Yopmail_InboxMessage_Option2}
+    sleep    5
+    wait until element is visible    ${Yopmail_InboxMessage_Option1}    10
+    click element    ${Yopmail_InboxMessage_Option1}
+    sleep    5

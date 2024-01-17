@@ -946,27 +946,27 @@ Product Price Check
 
     close all excel documents
 
-New browser tab
-    Log to console    Adding new tab
-    execute javascript    window.open('', '_blank')
-#    press keys    none    CTRL+TAB
-#    sleep    5
-#    press keys    none    CTRL+TAB
+#New browser tab
+#    Log to console    Adding new tab
+#    execute javascript    window.open('', '_blank')
+##    press keys    none    CTRL+TAB
+##    sleep    5
+##    press keys    none    CTRL+TAB
+##    go to    ${YopMail}
+#    sleep    10
+#    Log to console    Getting window name
+#    @{test}=    get window handles
+#    Log    ${test}
+#    ${Tab1}=    convert to string    ${test}[0]
+#    ${Tab2}=    convert to string    ${test}[1]
+#    Log    ${Tab1}
+#    Log    ${Tab2}
+#    Log to console    Switching window 2
+#    switch window    ${Tab2}
 #    go to    ${YopMail}
-    sleep    10
-    Log to console    Getting window name
-    @{test}=    get window handles
-    Log    ${test}
-    ${Tab1}=    convert to string    ${test}[0]
-    ${Tab2}=    convert to string    ${test}[1]
-    Log    ${Tab1}
-    Log    ${Tab2}
-    Log to console    Switching window 2
-    switch window    ${Tab2}
-    go to    ${YopMail}
-    sleep    10
-    Log to console    Switching window 1
-    switch window    ${Tab1}
-    sleep    10
+#    sleep    10
+#    Log to console    Switching window 1
+#    switch window    ${Tab1}
+#    sleep    10
 
 

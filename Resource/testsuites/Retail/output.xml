@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20240115 15:44:40.978" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20240117 09:51:29.574" rpa="false" schemaversion="4">
 <suite id="s1" name="Test Retail Smoke1" source="C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Test_Retail_Smoke1.robot">
 <test id="s1-t1" name="Test Setup" line="13">
 <kw name="Run Keywords" library="BuiltIn">
@@ -11,18 +11,18 @@
 <arg>Chrome</arg>
 <arg>executable_path=${driver_path}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240115 15:44:42.254" level="INFO">Opening browser 'Chrome' to base url 'https://www.partslane.com.au/dppretail/login'.</msg>
-<status status="PASS" starttime="20240115 15:44:42.254" endtime="20240115 15:44:47.028"/>
+<msg timestamp="20240117 09:51:30.433" level="INFO">Opening browser 'Chrome' to base url 'https://www.partslane.com.au/dppretail/login'.</msg>
+<status status="PASS" starttime="20240117 09:51:30.433" endtime="20240117 09:51:37.342"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240115 15:44:47.028" endtime="20240115 15:44:47.146"/>
+<status status="PASS" starttime="20240117 09:51:37.342" endtime="20240117 09:51:37.455"/>
 </kw>
-<status status="PASS" starttime="20240115 15:44:42.254" endtime="20240115 15:44:47.146"/>
+<status status="PASS" starttime="20240117 09:51:30.432" endtime="20240117 09:51:37.455"/>
 </kw>
-<status status="PASS" starttime="20240115 15:44:42.254" endtime="20240115 15:44:47.146"/>
+<status status="PASS" starttime="20240117 09:51:30.432" endtime="20240117 09:51:37.455"/>
 </kw>
-<status status="PASS" starttime="20240115 15:44:42.254" endtime="20240115 15:44:47.146"/>
+<status status="PASS" starttime="20240117 09:51:30.431" endtime="20240117 09:51:37.456"/>
 </test>
 <test id="s1-t2" name="Screen Shot DIR" line="14">
 <kw name="Run Keywords" library="BuiltIn">
@@ -33,38 +33,38 @@
 <var>${currentdate}</var>
 <arg>result_format=%m-%d-%y %H-%M</arg>
 <doc>Returns current local or UTC time with an optional increment.</doc>
-<msg timestamp="20240115 15:44:47.146" level="INFO">${currentdate} = 01-15-24 15-44</msg>
-<status status="PASS" starttime="20240115 15:44:47.146" endtime="20240115 15:44:47.146"/>
+<msg timestamp="20240117 09:51:37.458" level="INFO">${currentdate} = 01-17-24 09-51</msg>
+<status status="PASS" starttime="20240117 09:51:37.457" endtime="20240117 09:51:37.458"/>
 </kw>
 <kw name="Create Directory" library="OperatingSystem">
 <arg>${Retail_screenshot_path}/${currentdate}</arg>
 <doc>Creates the specified directory.</doc>
-<msg timestamp="20240115 15:44:47.146" level="INFO" html="true">Created directory '&lt;a href="file://C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots\01-15-24 15-44"&gt;C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots\01-15-24 15-44&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20240115 15:44:47.146" endtime="20240115 15:44:47.146"/>
+<msg timestamp="20240117 09:51:37.458" level="INFO" html="true">Created directory '&lt;a href="file://C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots\01-17-24 09-51"&gt;C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots\01-17-24 09-51&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20240117 09:51:37.458" endtime="20240117 09:51:37.458"/>
 </kw>
 <kw name="Convert To String" library="BuiltIn">
 <var>${LogDIR}</var>
 <arg>${Retail_screenshot_path}/${currentdate}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240115 15:44:47.146" level="INFO">${LogDIR} = C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots/01-15-24 15-44</msg>
-<status status="PASS" starttime="20240115 15:44:47.146" endtime="20240115 15:44:47.146"/>
+<msg timestamp="20240117 09:51:37.459" level="INFO">${LogDIR} = C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots/01-17-24 09-51</msg>
+<status status="PASS" starttime="20240117 09:51:37.459" endtime="20240117 09:51:37.459"/>
 </kw>
 <kw name="Set Screenshot Directory" library="SeleniumLibrary">
 <arg>${LogDIR}</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20240115 15:44:47.146" endtime="20240115 15:44:47.146"/>
+<status status="PASS" starttime="20240117 09:51:37.459" endtime="20240117 09:51:37.459"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${LogDIR}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20240115 15:44:47.146" level="INFO">${LogDIR} = C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots/01-15-24 15-44</msg>
-<status status="PASS" starttime="20240115 15:44:47.146" endtime="20240115 15:44:47.146"/>
+<msg timestamp="20240117 09:51:37.460" level="INFO">${LogDIR} = C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots/01-17-24 09-51</msg>
+<status status="PASS" starttime="20240117 09:51:37.459" endtime="20240117 09:51:37.460"/>
 </kw>
-<status status="PASS" starttime="20240115 15:44:47.146" endtime="20240115 15:44:47.146"/>
+<status status="PASS" starttime="20240117 09:51:37.457" endtime="20240117 09:51:37.460"/>
 </kw>
-<status status="PASS" starttime="20240115 15:44:47.146" endtime="20240115 15:44:47.146"/>
+<status status="PASS" starttime="20240117 09:51:37.457" endtime="20240117 09:51:37.460"/>
 </kw>
-<status status="PASS" starttime="20240115 15:44:47.146" endtime="20240115 15:44:47.146"/>
+<status status="PASS" starttime="20240117 09:51:37.456" endtime="20240117 09:51:37.460"/>
 </test>
 <test id="s1-t3" name="TC-001 - Verify Login Page" line="16">
 <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
@@ -74,33 +74,96 @@
 <kw name="Sleep" library="BuiltIn">
 <arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240115 15:44:57.146" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20240115 15:44:47.146" endtime="20240115 15:44:57.146"/>
+<msg timestamp="20240117 09:51:47.463" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240117 09:51:37.462" endtime="20240117 09:51:47.463"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20240115 15:44:57.688" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/01-15-24%2015-44/selenium-screenshot-1.png"&gt;&lt;img src="Screenshots/01-15-24%2015-44/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20240115 15:44:57.146" endtime="20240115 15:44:57.688"/>
+<msg timestamp="20240117 09:51:47.970" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/01-17-24%2009-51/selenium-screenshot-1.png"&gt;&lt;img src="Screenshots/01-17-24%2009-51/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240117 09:51:47.463" endtime="20240117 09:51:47.970"/>
 </kw>
-<status status="PASS" starttime="20240115 15:44:47.146" endtime="20240115 15:44:57.688"/>
+<status status="PASS" starttime="20240117 09:51:37.461" endtime="20240117 09:51:47.970"/>
 </kw>
-<status status="PASS" starttime="20240115 15:44:47.146" endtime="20240115 15:44:57.688"/>
+<status status="PASS" starttime="20240117 09:51:37.461" endtime="20240117 09:51:47.970"/>
 </kw>
 <tag>Login Page</tag>
 <tag>TC001</tag>
-<status status="PASS" starttime="20240115 15:44:47.146" endtime="20240115 15:44:57.688"/>
+<status status="PASS" starttime="20240117 09:51:37.461" endtime="20240117 09:51:47.970"/>
 </test>
 <test id="s1-t4" name="TC-002 - Email" line="20">
 <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
 <arg>New browser tab</arg>
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="New browser tab">
-<msg timestamp="20240115 15:44:57.690" level="FAIL">Multiple keywords with name 'New browser tab' found. Give the full name of the keyword you want to use:
-    All_Parts_Page_Keywords.New browser tab
-    Email.New browser tab</msg>
-<status status="FAIL" starttime="20240115 15:44:57.690" endtime="20240115 15:44:57.690"/>
+<kw name="New browser tab" library="Email">
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<arg>window.open('', '_blank')</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<msg timestamp="20240117 09:51:47.974" level="INFO">Executing JavaScript:
+window.open('', '_blank')
+Without any arguments.</msg>
+<status status="PASS" starttime="20240117 09:51:47.973" endtime="20240117 09:51:48.010"/>
 </kw>
-<status status="FAIL" starttime="20240115 15:44:57.690" endtime="20240115 15:44:57.690"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240117 09:51:58.011" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240117 09:51:48.010" endtime="20240117 09:51:58.011"/>
+</kw>
+<kw name="Get Window Handles" library="SeleniumLibrary">
+<var>@{test}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<msg timestamp="20240117 09:51:58.016" level="INFO">@{test} = [ B89ABDACE09B6BF3184DAE59DD95E811 | 54CD8B26F7324414259339700DF5FA6B ]</msg>
+<status status="PASS" starttime="20240117 09:51:58.011" endtime="20240117 09:51:58.016"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${test}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240117 09:51:58.016" endtime="20240117 09:51:58.017"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${Tab1}</var>
+<arg>${test}[0]</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20240117 09:51:58.017" level="INFO">${Tab1} = B89ABDACE09B6BF3184DAE59DD95E811</msg>
+<status status="PASS" starttime="20240117 09:51:58.017" endtime="20240117 09:51:58.017"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${Tab2}</var>
+<arg>${test}[1]</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20240117 09:51:58.017" level="INFO">${Tab2} = 54CD8B26F7324414259339700DF5FA6B</msg>
+<status status="PASS" starttime="20240117 09:51:58.017" endtime="20240117 09:51:58.017"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Tab1}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240117 09:51:58.017" endtime="20240117 09:51:58.018"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>${Tab2}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" starttime="20240117 09:51:58.018" endtime="20240117 09:51:58.018"/>
+</kw>
+<kw name="Switch Window" library="SeleniumLibrary">
+<arg>${Tab2}</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" starttime="20240117 09:51:58.018" endtime="20240117 09:51:58.054"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${YopMail}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240117 09:51:58.055" level="INFO">Opening url 'https://yopmail.com/en/'</msg>
+<status status="PASS" starttime="20240117 09:51:58.055" endtime="20240117 09:52:03.180"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240117 09:52:13.181" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240117 09:52:03.180" endtime="20240117 09:52:13.181"/>
+</kw>
+<status status="PASS" starttime="20240117 09:51:47.973" endtime="20240117 09:52:13.181"/>
+</kw>
+<status status="PASS" starttime="20240117 09:51:47.972" endtime="20240117 09:52:13.181"/>
 </kw>
 <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
 <arg>Enter Yop Mail</arg>
@@ -110,74 +173,135 @@
 <arg>${Yopmail_Banner}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<msg timestamp="20240115 15:45:08.354" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/01-15-24%2015-44/selenium-screenshot-2.png"&gt;&lt;img src="Screenshots/01-15-24%2015-44/selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20240115 15:45:08.354" level="FAIL">Element '//header//img[@id='logoacc']' not visible after 10 seconds.</msg>
-<status status="FAIL" starttime="20240115 15:44:57.691" endtime="20240115 15:45:08.370"/>
+<status status="PASS" starttime="20240117 09:52:13.182" endtime="20240117 09:52:13.207"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${Yopmail_Email_TextBox}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" starttime="20240115 15:45:08.370" endtime="20240115 15:45:08.370"/>
+<status status="PASS" starttime="20240117 09:52:13.207" endtime="20240117 09:52:13.228"/>
 </kw>
 <kw name="Capture Element Screenshot" library="SeleniumLibrary">
 <arg>${Yopmail_Banner}</arg>
 <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" starttime="20240115 15:45:08.370" endtime="20240115 15:45:08.370"/>
+<msg timestamp="20240117 09:52:13.409" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/01-17-24%2009-51/selenium-element-screenshot-1.png"&gt;&lt;img src="Screenshots/01-17-24%2009-51/selenium-element-screenshot-1.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240117 09:52:13.228" endtime="20240117 09:52:13.409"/>
 </kw>
 <kw name="Capture Element Screenshot" library="SeleniumLibrary">
 <arg>${Yopmail_Email_TextBox}</arg>
 <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" starttime="20240115 15:45:08.370" endtime="20240115 15:45:08.370"/>
+<msg timestamp="20240117 09:52:13.510" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/01-17-24%2009-51/selenium-element-screenshot-2.png"&gt;&lt;img src="Screenshots/01-17-24%2009-51/selenium-element-screenshot-2.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240117 09:52:13.409" endtime="20240117 09:52:13.510"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>${Yopmail_Email_TextBox}</arg>
 <arg>${HK_D1_Automation_Bronze_UID}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240115 15:45:08.370" endtime="20240115 15:45:08.370"/>
+<msg timestamp="20240117 09:52:13.511" level="INFO">Typing text 'hk_automation1retaild1_bronze@yopmail.com' into text field '//div[@class='ycolleft']//div[@class='nw']//div[@class='tooltip click']//input'.</msg>
+<status status="PASS" starttime="20240117 09:52:13.511" endtime="20240117 09:52:13.631"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${Yopmail_Email_Next_Button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20240115 15:45:08.370" endtime="20240115 15:45:08.370"/>
+<msg timestamp="20240117 09:52:13.632" level="INFO">Clicking element '//div[@class='ycolleft']//div[@class='ycptctn']//button'.</msg>
+<status status="PASS" starttime="20240117 09:52:13.631" endtime="20240117 09:52:15.191"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20240115 15:45:08.370" endtime="20240115 15:45:08.370"/>
+<msg timestamp="20240117 09:52:20.191" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240117 09:52:15.191" endtime="20240117 09:52:20.191"/>
 </kw>
-<status status="FAIL" starttime="20240115 15:44:57.691" endtime="20240115 15:45:08.370"/>
+<status status="PASS" starttime="20240117 09:52:13.182" endtime="20240117 09:52:20.191"/>
 </kw>
-<status status="FAIL" starttime="20240115 15:44:57.691" endtime="20240115 15:45:08.370"/>
+<status status="PASS" starttime="20240117 09:52:13.181" endtime="20240117 09:52:20.191"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Switch to Inbox List Frame</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Switch to Inbox List Frame" library="Email">
+<kw name="Select Frame" library="SeleniumLibrary">
+<arg>${Yopmail_Inbox_List_Frame}</arg>
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<msg timestamp="20240117 09:52:20.192" level="INFO">Selecting frame 'ifinbox'.</msg>
+<status status="PASS" starttime="20240117 09:52:20.192" endtime="20240117 09:52:20.218"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240117 09:52:22.218" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240117 09:52:20.218" endtime="20240117 09:52:22.218"/>
+</kw>
+<status status="PASS" starttime="20240117 09:52:20.192" endtime="20240117 09:52:22.218"/>
+</kw>
+<status status="PASS" starttime="20240117 09:52:20.191" endtime="20240117 09:52:22.218"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Click Inbox Messages</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Click Inbox Messages" library="Email">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Yopmail_InboxMessage_Option2}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240117 09:52:22.219" endtime="20240117 09:52:22.238"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Yopmail_InboxMessage_Option2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240117 09:52:22.239" level="INFO">Clicking element '(//body[@class='bodyinbox yscrollbar']//div[@class='m'])[2]'.</msg>
+<status status="PASS" starttime="20240117 09:52:22.238" endtime="20240117 09:52:22.318"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240117 09:52:27.320" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240117 09:52:22.319" endtime="20240117 09:52:27.320"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Yopmail_InboxMessage_Option1}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240117 09:52:27.320" endtime="20240117 09:52:27.338"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Yopmail_InboxMessage_Option1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240117 09:52:27.338" level="INFO">Clicking element '(//body[@class='bodyinbox yscrollbar']//div[@class='m'])[1]'.</msg>
+<status status="PASS" starttime="20240117 09:52:27.338" endtime="20240117 09:52:27.398"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240117 09:52:32.398" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20240117 09:52:27.398" endtime="20240117 09:52:32.398"/>
+</kw>
+<status status="PASS" starttime="20240117 09:52:22.219" endtime="20240117 09:52:32.398"/>
+</kw>
+<status status="PASS" starttime="20240117 09:52:22.218" endtime="20240117 09:52:32.398"/>
 </kw>
 <tag>Login Page</tag>
 <tag>TC001</tag>
-<status status="FAIL" starttime="20240115 15:44:57.690" endtime="20240115 15:45:08.370">Several failures occurred:
-
-1) Multiple keywords with name 'New browser tab' found. Give the full name of the keyword you want to use:
-    All_Parts_Page_Keywords.New browser tab
-    Email.New browser tab
-
-2) Element '//header//img[@id='logoacc']' not visible after 10 seconds.</status>
+<status status="PASS" starttime="20240117 09:51:47.972" endtime="20240117 09:52:32.398"/>
 </test>
 <doc>Suite description</doc>
-<status status="FAIL" starttime="20240115 15:44:40.978" endtime="20240115 15:45:08.370"/>
+<status status="PASS" starttime="20240117 09:51:29.576" endtime="20240117 09:52:32.399"/>
 </suite>
 <statistics>
 <total>
-<stat pass="3" fail="1" skip="0">All Tests</stat>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="1" skip="0">Login Page</stat>
-<stat pass="1" fail="1" skip="0">TC001</stat>
+<stat pass="2" fail="0" skip="0">Login Page</stat>
+<stat pass="2" fail="0" skip="0">TC001</stat>
 </tag>
 <suite>
-<stat pass="3" fail="1" skip="0" id="s1" name="Test Retail Smoke1">Test Retail Smoke1</stat>
+<stat pass="4" fail="0" skip="0" id="s1" name="Test Retail Smoke1">Test Retail Smoke1</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20240115 15:44:41.404" level="ERROR">Error in file 'C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testdata\Retail\Retail_Variable.robot' on line 2123: Setting variable '//tbody//tbody//tr//td//a//font[contains(text(),'Contact Us')]' failed: Invalid variable name '//tbody//tbody//tr//td//a//font[contains(text(),'Contact Us')]'.</msg>
-<msg timestamp="20240115 15:44:41.514" level="ERROR">Error in file 'C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\Keyword\Retail\Account_Orders_Page_Keywords.robot' on line 543: Creating keyword 'User should be able to click orders with $129.0 spent in HK Retail Account Order Details Page' failed: Keyword with same name defined multiple times.</msg>
-<msg timestamp="20240115 15:44:42.238" level="ERROR">Error in file 'C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testdata\Retail\Retail_Variable.robot' on line 403: Setting variable '${Retail_FilterListSubElements}' failed: Variable '${RandomFilterIndex}' not found.</msg>
+<msg timestamp="20240117 09:51:29.883" level="ERROR">Error in file 'C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testdata\Retail\Retail_Variable.robot' on line 2125: Setting variable '//tbody//tbody//tr//td//a//font[contains(text(),'Contact Us')]' failed: Invalid variable name '//tbody//tbody//tr//td//a//font[contains(text(),'Contact Us')]'.</msg>
+<msg timestamp="20240117 09:51:29.965" level="ERROR">Error in file 'C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\Keyword\Retail\Account_Orders_Page_Keywords.robot' on line 543: Creating keyword 'User should be able to click orders with $129.0 spent in HK Retail Account Order Details Page' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20240117 09:51:30.415" level="ERROR">Error in file 'C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testdata\Retail\Retail_Variable.robot' on line 403: Setting variable '${Retail_FilterListSubElements}' failed: Variable '${RandomFilterIndex}' not found.</msg>
 </errors>
 </robot>
