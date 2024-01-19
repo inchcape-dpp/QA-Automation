@@ -23,6 +23,9 @@ TC-002 - Email
     run keyword and continue on failure    Enter Yop Mail
     run keyword and continue on failure    Switch to Inbox List Frame
     run keyword and continue on failure    Click Inbox Messages
+    run keyword and continue on failure    Unselect Mail Frame
+    run keyword and continue on failure    Switch to Inbox Message Frame
+    run keyword and continue on failure    Read Message
 
 #TC-002 - Input Valid Username
 #    [Tags]    Login Page

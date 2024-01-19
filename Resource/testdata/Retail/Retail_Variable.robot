@@ -375,7 +375,8 @@ ${Retail_HomePageEnginePartsCategoryMiscButton}    //dpp-category-navigation//bu
 @{Retail_RandomEnginePartsList}    ${Retail_HomePageEnginePartsCategoryValvetrainButton}    ${Retail_HomePageEnginePartsCategoryConnectingRodButton}    ${Retail_HomePageEnginePartsCategoryManifoldsButton}    ${Retail_HomePageEnginePartsCategoryEngineMountButton}    ${Retail_HomePageEnginePartsCategoryEngineValvesButton}    ${Retail_HomePageEnginePartsCategoryHarmonicButton}    ${Retail_HomePageEnginePartsCategoryOilSumpButton}    ${Retail_HomePageEnginePartsCategoryOilPumpButton}    ${Retail_HomePageEnginePartsCategoryPistonsButton}    ${Retail_HomePageEnginePartsCategoryTimingBeltsButton}    ${Retail_HomePageEnginePartsCategoryTimingChainsButton}    ${Retail_HomePageEnginePartsCategoryTimingCoverButton}    ${Retail_HomePageEnginePartsCategoryTurbochargerButton}    ${Retail_HomePageEnginePartsCategoryCylinderButton}    ${Retail_HomePageEnginePartsCategoryCrankshaftButton}    ${Retail_HomePageEnginePartsCategoryEngineBlockButton}    ${Retail_HomePageEnginePartsCategoryTimingGearsButton}    ${Retail_HomePageEnginePartsCategoryRockerCoverButton}    ${Retail_HomePageEnginePartsCategoryMiscButton}
 
 #-----------------------------------------------------Retail Home Page All
-${HomePageAllCategory}    //dpp-category-navigation//a[@href='/dppretail/c/0']|//dpp-category-navigation//a[contains(text(),'All')]
+${HomePageAllCategory}    //dpp-category-navigation//a[@href='/dppretail/c/0']|//dpp-category-navigation//a[contains(text(),'All') or contains(text(),'Other')]
+${HomePageOtherCategory}
 
 #${HomePageYourPirceLabel}    //div[@class='custom-control custom-switch']//label
 #${HomePageYourPirceToggle}    //div[@class='custom-control custom-switch']//input[@type='checkbox']
@@ -837,7 +838,7 @@ ${Retail_AccountpageOrdersMenu}    //ul[@class='vertical-menu tab-level']//*[con
 ${Retail_AccountAccountpageReturnMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Return ')]
 ${Retail_AccountpageSavedCartsMenu}    //div[@class='ml-3']//a[contains(text(),'Saved Carts')]
 ${Retail_AccountpageVehicleListingMenu}    //div[@class='ml-3']//a[contains(text(),'Vehicle Listing')]
-${Retail_AccountpageMessagesMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Messages ')]
+${Retail_AccountpageMessagesMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Messages ') or contains(text(),'Inbox')]
 ${Retail_AccountpageProfileMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Profile ')]
 ${Retail_AccountpageProfileAccountDetails}    //a[contains(text(),'Profile')]/parent::cx-generic-link/parent::div/parent::div/following-sibling::div//div[1]
 ${AccountpageProfileChangePass}    //a[contains(text(),'Profile')]/parent::cx-generic-link/parent::div/parent::div/following-sibling::div//div[2]
@@ -1155,7 +1156,7 @@ ${Retail_AccountReturnDetailsMessageCofirmationContainer}    //div[@class='cx-mo
 ${Retail_AccountReturnDetailsMessageCofirmationButton}    //div[@class='cx-modal-content']//button//span[contains(text(),'Back to Return Request')]
 
 #-----------------------------------------------------Retail Account Retrun Details Page--------------------------------
-${Retail_AccountReturnPageReturnDetailsHeader}    //span[@class='return-request-heading' or @class='return-request-heading col-12 col-md-6 p-0 p-md-3']
+${Retail_AccountReturnPageReturnDetailsHeader}    //span[@class='return-request-heading col-12 col-md-6 p-0 p-md-3']
 ${Retail_AccountReturnPageReturnDetailsStatus}    //span[@class='status']
 ${Retail_AccountReturnPageReturnDetailsBack}    //a[@class='back-to-order-history']
 ${Retail_AccountReturnPageReturnDetailsContainer}    //div[@class='order-details-container']
@@ -1323,7 +1324,7 @@ ${Retail_AccountVehicleListingPageShopThisVehicleButton}    (//dpp-vehicle-listi
 ${Retail_AccountVehicleListingPageSelectedVehicleShopThisVehicleButton}    //div[@class='selected-vehicle-modal']//div[@class='row selected-vehicle-info align-items-center']//button[@class='btn btn-sm btn-primary']
 ${Retail_AccountVehicleListingPageSelectedVehicleClearVehicleButton}    //div[@class='selected-vehicle-modal']//div[@class='row selected-vehicle-info align-items-center']//button[@class='btn mt-3 btn-sm btn-default clear-vehicle']
 
-${Retail_AccountVehicleListingPageSelectVehicleAddVehicleButton}    //div[@class='selected-vehicle-modal vehicle-not-selected']//button[@class='btn btn-secondary']|//dpp-vehicle-box-list//div[@class='vehicle-box last-box-container p-3 d-flex flex-column text-center align-items-center']
+${Retail_AccountVehicleListingPageSelectVehicleAddVehicleButton}    //dpp-vehicle-box-list//div[@class='vehicle-box last-box-container p-3 d-flex flex-column text-center align-items-center justify-content-center']|//dpp-vehicle-box-list//div[@class='vehicle-box last-box-container p-3 d-flex flex-column text-center align-items-center']
 ${Retail_HK_AccountVehicleListingPage_SelectVehicleAddVehicle_Button}    //div[@class='cx-dialog-body modal-body flex-layout']//button[@class='btn btn-secondary']
 
 ${Retail_AccountVehicleListingPageSelectVehicleContainer}    //div[@class='add-vehicle-container']|//div[@class='cx-modal-content d-flex']
@@ -1389,7 +1390,7 @@ ${Retail_HK_AccountVehicleListingPage_SelectVehicle_SearchManual_ModelID_Opt}   
 ${Retail_AccountVehicleListingPageSelectVehicleSearchResultContainer}    //div[@class='vehicle-results']
 ${Retail_AccountVehicleListingPageSelectVehicleSearchResultVehicleLabel}    //div[@class='vehicle-results']//div[@class='col-md-7 pr-0']//p
 ${Retail_AccountVehicleListingPageSelectVehicleSearchResultSelectVehicleButton}    //dpp-vehicle-results//button[@class='btn btn-sm btn-block ml-2 mt-0 p-1 select-this-vehicle-btn btn-secondary']|//div[@class='vehicle-results flex-layout']//button[@class='btn btn-sm btn-block btn-default mt-2 p-1 select-this-vehicle-btn']
-${Retail_AccountVehicleListingPageSelectVehicleSearchResultSelect&SaveVehicleButton}    //div[@class='vehicle-results']//button[@class='btn btn-sm btn-block mr-1 mt-3 p-1 select-this-vehicle-btn btn-default vehicleListing-btn']|//button[@class='btn btn-sm btn-block mr-2 mt-0 p-1 select-this-vehicle-btn btn-default vehicleListing-btn']|//div[@class='vehicle-results flex-layout']//button[@class='btn btn-sm btn-primary btn-block p-1 select-this-vehicle-btn vehicleListing-btn']
+${Retail_AccountVehicleListingPageSelectVehicleSearchResultSelect&SaveVehicleButton}    //dpp-vehicle-results//button[@class='btn btn-sm btn-block mt-0 p-1 select-this-vehicle-btn btn-default vehicleListing-btn']|//button[@class='btn btn-sm btn-block mr-2 mt-0 p-1 select-this-vehicle-btn btn-default vehicleListing-btn']|//div[@class='vehicle-results flex-layout']//button[@class='btn btn-sm btn-primary btn-block p-1 select-this-vehicle-btn vehicleListing-btn']
 ${Retail_AccountVehicleListingPageSelectVehicleSearchResultSearchAgainButton}    //div[@class='vehicle-results']//button[@class='btn btn-block btn-default vehicleListing-btn-sm']|//div[@class='vehicle-results flex-layout']//button[@class='btn btn-block btn-default vehicleListing-btn-sm']
 
 ${Retail_AccountVehicleListingPageVehicleCardList}    //dpp-vehicle-listing//div[@class='vehicle-card']

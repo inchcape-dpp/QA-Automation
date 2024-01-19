@@ -33,12 +33,12 @@ ${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\
 #${Username}    seller1.admin@test.com
 #${Password}    PartsLane@123!
 
-${Username}    ${DanProdRetailUID}
-${Password}    ${DanProdRetailPWD}
+${Username}    ${HK_S2_Automation_Bronze_UID}
+${Password}    ${HK_S2_Automation_Bronze_PWD}
 
 *** Keywords ***
 Open Chrome Browser
-    SeleniumLibrary.Open Browser    ${p1Retail}    Chrome  executable_path=${driver_path}
+    SeleniumLibrary.Open Browser    ${s2HKRetail}    Chrome  executable_path=${driver_path}
     maximize browser window
 #    press keys    none    ctrl + t
 ##    ${test1}    get window titles

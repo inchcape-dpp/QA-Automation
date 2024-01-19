@@ -41,6 +41,14 @@ Switch to Inbox List Frame
     select frame    ${Yopmail_Inbox_List_Frame}
     sleep    2
 
+Unselect Mail Frame
+    unselect frame
+    sleep    2
+
+Switch to Inbox Message Frame
+    select frame    ${YopMail_Message_Frame}
+    sleep    2
+
 Click Inbox Messages
     wait until element is visible    ${Yopmail_InboxMessage_Option2}    10
     click element    ${Yopmail_InboxMessage_Option2}
@@ -48,3 +56,14 @@ Click Inbox Messages
     wait until element is visible    ${Yopmail_InboxMessage_Option1}    10
     click element    ${Yopmail_InboxMessage_Option1}
     sleep    5
+
+Read Message
+    wait until element is visible    ${Yopmail_Inbox_Title_Message}    10
+    capture element screenshot    ${Yopmail_Inbox_Title_Message}
+    capture element screenshot    ${Yopmail_InboxBody}
+    capture element screenshot    ${Yopmail_Inbox_Sender_Email}
+    capture element screenshot    ${Yopmail_Inbox_ShowPicture_Button}
+    capture element screenshot    ${Yopmail_InboxBody_Header}
+    capture element screenshot    ${Yopmail_InboxBody_Content}
+    capture element screenshot    ${Yopmail_InboxBody_Footer}
+    sleep    2
