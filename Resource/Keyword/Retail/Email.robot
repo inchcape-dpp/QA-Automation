@@ -33,7 +33,7 @@ Enter Yop Mail
     wait until element is visible    ${Yopmail_Email_TextBox}    10
     capture element screenshot    ${Yopmail_Banner}
     capture element screenshot    ${Yopmail_Email_TextBox}
-    input text    ${Yopmail_Email_TextBox}    ${HK_D1_Automation_Bronze_UID}
+    input text    ${Yopmail_Email_TextBox}    ${YopMailEmail}
     click element    ${Yopmail_Email_Next_Button}
     sleep    5
 

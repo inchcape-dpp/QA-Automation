@@ -35,6 +35,7 @@ ${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\
 
 ${Username}    ${HK_S2_Automation_Bronze_UID}
 ${Password}    ${HK_S2_Automation_Bronze_PWD}
+${YopMailEmail}    ${HK_S2_Automation_Gold_UID}
 
 *** Keywords ***
 Open Chrome Browser
