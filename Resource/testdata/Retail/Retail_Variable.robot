@@ -612,8 +612,8 @@ ${Retail_CheckoutPageCustomerDetailsSupplierValue}    (//div[@class='col-md-6 co
 
 ${Retail_CheckoutPageCustomerDetailsPONumberLabel}    //div[@class='col-md-6 col-sm-12']//p[@class='po-number']
 ${Retail_CheckoutPageCustomerDetailsPONumberInfoButton}    //div[@class='col-md-6 col-sm-12']//dpp-popover-info//cx-icon
-${Retail_CheckoutPageCustomerDetailsPONumberTextBox}    //div[@class='col-md-6 col-sm-12']//div[@class='mb-3']//input
-${Retail_CheckoutPageCustomerDetailsPONumberSaveButton}    //div[@class='col-md-6 col-sm-12']//div[@class='mb-3']//button
+${Retail_CheckoutPageCustomerDetailsPONumberTextBox}    //div[@class='col-md-6 col-sm-12']//div[@class='mb-3']//input|//div[@class='column ml-lg-4']//div[@class='col-12 p-0 px-lg-3']//input
+${Retail_CheckoutPageCustomerDetailsPONumberSaveButton}    //div[@class='col-md-6 col-sm-12']//div[@class='mb-3']//button|//div[@class='column ml-lg-4']//div[@class='col-12 p-0 px-lg-3']//button
 ${Retail_CheckoutPageCustomerDetailsPONumberResetButton}    //div[@class='col-md-6 col-sm-12']//div[@class='mb-3']//div//a
 ${Retail_CheckoutPageCustomerDetailsShippingToLabel}    //div[@class='col-md-6 col-sm-12']//div[@class='column ml-4']//p[@class='m-0 d-flex']
 ${Retail_CheckoutPageCustomerDetailsShippingToInfoButton}    //div[@class='col-md-6 col-sm-12']//div[@class='column ml-4']//p[@class='m-0 d-flex']//cx-icon
@@ -2083,14 +2083,16 @@ ${Yopmail_Inbox_Title_Message}    (//div[@class='fl']//div)[1]
 ${Yopmail_Inbox_Sender_Email}    //div[@class='fl']//div//span
 ${Yopmail_Inbox_ShowPicture_Button}    //div[@class='fl']//div[@class='noprint']//button
 
-${Yopmail_InboxBody_Header}    (//div[@id='mail']//tbody//tr)[1]
-${Yopmail_InboxBody_Content}    //div[@id='mail']//tbody//tr[2]//tbody
-${Yopmail_InboxBody_Footer}    (//div[@id='mail']//tbody//tr)[3]
+${Yopmail_InboxBody_Header}    //div[@id='mail']//div//tbody//tr//a/parent::div/parent::td
+#(//div[@id='mail']//div//tbody//tr)[1]
+${Yopmail_InboxBody_Content}     (//div[@id='mail']//div//tbody//tr//table/parent::td)[2]
+${Yopmail_InboxBody_Footer}    //div[@id='mail']//div//tbody//tr//a[contains(text(),'Contact Us') or contains(text(),'聯繫我們')]/parent::td
+#(//div[@id='mail']//div//tbody//tr)[3]
 
 ${Yopmail_Inbox_List_Frame}    ifinbox
 ${YopMail_Message_Frame}    ifmail
 
-
+${PartsLaneEmail}    admin@partslane.com.hk
 
 
 

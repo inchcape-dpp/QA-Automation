@@ -59,11 +59,46 @@ Click Inbox Messages
 
 Read Message
     wait until element is visible    ${Yopmail_Inbox_Title_Message}    10
+    click element    ${Yopmail_Inbox_ShowPicture_Button}
+    sleep    2
     capture element screenshot    ${Yopmail_Inbox_Title_Message}
     capture element screenshot    ${Yopmail_InboxBody}
     capture element screenshot    ${Yopmail_Inbox_Sender_Email}
-    capture element screenshot    ${Yopmail_Inbox_ShowPicture_Button}
+#    capture element screenshot    ${Yopmail_Inbox_ShowPicture_Button}
     capture element screenshot    ${Yopmail_InboxBody_Header}
     capture element screenshot    ${Yopmail_InboxBody_Content}
     capture element screenshot    ${Yopmail_InboxBody_Footer}
     sleep    2
+
+Get Sender Email
+    ${SenderEmail}    get text    ${Yopmail_Inbox_Sender_Email}
+    ${StringEmail}    remove string    ${SenderEmail}   PartsLane HK - Admin    <    >    ${SPACE}    ${EMPTY}
+    run keyword and continue on failure    should be equal    ${StringEmail}    ${PartsLaneEmail}
+    sleep    2
+
+Get Email Message
+    ${EmailMessage}    get text    ${Yopmail_InboxBody_Content}
+    Log to console    ${EmailMessage}
+    sleep    2
+
+#Get text between
+##    ${full_text}    Set Variable    ${stringemail}
+##    ${start_string}    Set Variable    <
+##    ${end_string}    Set Variable    >
+#    ${Removestringemail}    remove string    ${stringemail}    PartsLane HK - Admin    <    >
+#    Log    ${Removestringemail}
+#
+##    ${start_index}    evaluate    ${Removestringemail}.find(' ')+len(' ')
+##    ${end_index}    evaluate    ${Removestringemail}.find('${end_string}', ${start_index})
+##    ${result}    evaluate    '${Removestringemail}'[${start_index}:${end_index}]
+##    Log    ${result}
+#
+##    ${result}    Get Text Between Strings    ${full_text}    ${start_string}    ${end_string}
+##    Log    Result: ${result}
+#
+#Get Text Between Strings
+#    [Arguments]    ${full_text}    ${start_string}    ${end_string}
+#    ${start_index}    evaluate    ${full_text}.find('${start_string}')+len('${start_string}')
+#    ${end_index}    evaluate    ${full_text}.find('${end_string}', ${start_index})
+#    ${result}    evaluate    '${full_text}'[${start_index}:${end_index}]
+#    [Return]    ${result}
