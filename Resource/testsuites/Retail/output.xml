@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20240122 09:12:07.233" rpa="false" schemaversion="4">
-<suite id="s1" name="Test Retail Smoke1" source="C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Test_Retail_Smoke1.robot">
-<test id="s1-t1" name="Test Setup" line="13">
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20240124 14:14:20.024" rpa="false" schemaversion="4">
+<suite id="s1" name="Regression Retail" source="C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Regression_Retail.robot">
+<test id="s1-t1" name="Test Setup" line="15">
 <kw name="Run Keywords" library="BuiltIn">
 <arg>Open Chrome Browser</arg>
 <doc>Executes all the given keywords in a sequence.</doc>
 <kw name="Open Chrome Browser" library="config">
 <kw name="Open Browser" library="SeleniumLibrary">
-<arg>${s2HKRetail}</arg>
+<arg>${s2Retail}</arg>
 <arg>Chrome</arg>
 <arg>executable_path=${driver_path}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20240122 09:12:07.984" level="INFO">Opening browser 'Chrome' to base url 'https://hkretail.coyzchwfjr-inchcaped2-s2-public.model-t.cc.commerce.ondemand.com/hkretail/'.</msg>
-<status status="PASS" starttime="20240122 09:12:07.984" endtime="20240122 09:12:11.812"/>
+<msg timestamp="20240124 14:14:21.020" level="INFO">Opening browser 'Chrome' to base url 'https://retail.coyzchwfjr-inchcaped2-s2-public.model-t.cc.commerce.ondemand.com/dppretail/'.</msg>
+<status status="PASS" starttime="20240124 14:14:21.019" endtime="20240124 14:14:24.935"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20240122 09:12:11.812" endtime="20240122 09:12:11.941"/>
+<status status="PASS" starttime="20240124 14:14:24.935" endtime="20240124 14:14:25.054"/>
 </kw>
-<status status="PASS" starttime="20240122 09:12:07.983" endtime="20240122 09:12:11.941"/>
+<status status="PASS" starttime="20240124 14:14:21.018" endtime="20240124 14:14:25.054"/>
 </kw>
-<status status="PASS" starttime="20240122 09:12:07.983" endtime="20240122 09:12:11.941"/>
+<status status="PASS" starttime="20240124 14:14:21.018" endtime="20240124 14:14:25.054"/>
 </kw>
-<status status="PASS" starttime="20240122 09:12:07.983" endtime="20240122 09:12:11.942"/>
+<status status="PASS" starttime="20240124 14:14:21.017" endtime="20240124 14:14:25.055"/>
 </test>
-<test id="s1-t2" name="Screen Shot DIR" line="14">
+<test id="s1-t2" name="Screen Shot DIR" line="16">
 <kw name="Run Keywords" library="BuiltIn">
 <arg>Retail Screent Shot DIR</arg>
 <doc>Executes all the given keywords in a sequence.</doc>
@@ -33,40 +33,40 @@
 <var>${currentdate}</var>
 <arg>result_format=%m-%d-%y %H-%M</arg>
 <doc>Returns current local or UTC time with an optional increment.</doc>
-<msg timestamp="20240122 09:12:11.946" level="INFO">${currentdate} = 01-22-24 09-12</msg>
-<status status="PASS" starttime="20240122 09:12:11.946" endtime="20240122 09:12:11.946"/>
+<msg timestamp="20240124 14:14:25.057" level="INFO">${currentdate} = 01-24-24 14-14</msg>
+<status status="PASS" starttime="20240124 14:14:25.057" endtime="20240124 14:14:25.057"/>
 </kw>
 <kw name="Create Directory" library="OperatingSystem">
 <arg>${Retail_screenshot_path}/${currentdate}</arg>
 <doc>Creates the specified directory.</doc>
-<msg timestamp="20240122 09:12:11.947" level="INFO" html="true">Created directory '&lt;a href="file://C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots\01-22-24 09-12"&gt;C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots\01-22-24 09-12&lt;/a&gt;'.</msg>
-<status status="PASS" starttime="20240122 09:12:11.946" endtime="20240122 09:12:11.947"/>
+<msg timestamp="20240124 14:14:25.059" level="INFO" html="true">Created directory '&lt;a href="file://C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots\01-24-24 14-14"&gt;C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots\01-24-24 14-14&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20240124 14:14:25.058" endtime="20240124 14:14:25.059"/>
 </kw>
 <kw name="Convert To String" library="BuiltIn">
 <var>${LogDIR}</var>
 <arg>${Retail_screenshot_path}/${currentdate}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240122 09:12:11.947" level="INFO">${LogDIR} = C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots/01-22-24 09-12</msg>
-<status status="PASS" starttime="20240122 09:12:11.947" endtime="20240122 09:12:11.947"/>
+<msg timestamp="20240124 14:14:25.059" level="INFO">${LogDIR} = C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots/01-24-24 14-14</msg>
+<status status="PASS" starttime="20240124 14:14:25.059" endtime="20240124 14:14:25.059"/>
 </kw>
 <kw name="Set Screenshot Directory" library="SeleniumLibrary">
 <arg>${LogDIR}</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" starttime="20240122 09:12:11.947" endtime="20240122 09:12:11.947"/>
+<status status="PASS" starttime="20240124 14:14:25.059" endtime="20240124 14:14:25.060"/>
 </kw>
 <kw name="Set Global Variable" library="BuiltIn">
 <arg>${LogDIR}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<msg timestamp="20240122 09:12:11.948" level="INFO">${LogDIR} = C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots/01-22-24 09-12</msg>
-<status status="PASS" starttime="20240122 09:12:11.948" endtime="20240122 09:12:11.948"/>
+<msg timestamp="20240124 14:14:25.060" level="INFO">${LogDIR} = C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots/01-24-24 14-14</msg>
+<status status="PASS" starttime="20240124 14:14:25.060" endtime="20240124 14:14:25.060"/>
 </kw>
-<status status="PASS" starttime="20240122 09:12:11.945" endtime="20240122 09:12:11.948"/>
+<status status="PASS" starttime="20240124 14:14:25.056" endtime="20240124 14:14:25.060"/>
 </kw>
-<status status="PASS" starttime="20240122 09:12:11.945" endtime="20240122 09:12:11.948"/>
+<status status="PASS" starttime="20240124 14:14:25.056" endtime="20240124 14:14:25.060"/>
 </kw>
-<status status="PASS" starttime="20240122 09:12:11.945" endtime="20240122 09:12:11.948"/>
+<status status="PASS" starttime="20240124 14:14:25.055" endtime="20240124 14:14:25.060"/>
 </test>
-<test id="s1-t3" name="TC-001 - Verify Login Page" line="16">
+<test id="s1-t3" name="TC-001 - Verify Login Page" line="18">
 <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
 <arg>Verify Login Page</arg>
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
@@ -74,334 +74,1607 @@
 <kw name="Sleep" library="BuiltIn">
 <arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240122 09:12:21.950" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20240122 09:12:11.949" endtime="20240122 09:12:21.950"/>
+<msg timestamp="20240124 14:14:35.063" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240124 14:14:25.062" endtime="20240124 14:14:35.063"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20240122 09:12:22.299" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/01-22-24%2009-12/selenium-screenshot-1.png"&gt;&lt;img src="Screenshots/01-22-24%2009-12/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20240122 09:12:21.950" endtime="20240122 09:12:22.299"/>
+<msg timestamp="20240124 14:14:35.065" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<msg timestamp="20240124 14:14:35.066" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<status status="FAIL" starttime="20240124 14:14:35.063" endtime="20240124 14:14:35.069"/>
 </kw>
-<status status="PASS" starttime="20240122 09:12:11.949" endtime="20240122 09:12:22.299"/>
+<status status="FAIL" starttime="20240124 14:14:25.061" endtime="20240124 14:14:35.069"/>
 </kw>
-<status status="PASS" starttime="20240122 09:12:11.949" endtime="20240122 09:12:22.299"/>
+<status status="FAIL" starttime="20240124 14:14:25.061" endtime="20240124 14:14:35.069"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Verify Login Page Elements</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Verify Login Page Elements" library="Login_Page_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Logo}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:14:35.073" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<msg timestamp="20240124 14:14:35.074" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<status status="FAIL" starttime="20240124 14:14:35.070" endtime="20240124 14:14:35.076"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Header}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.077" endtime="20240124 14:14:35.077"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.077" endtime="20240124 14:14:35.077"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Pass}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.077" endtime="20240124 14:14:35.077"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Remember}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.077" endtime="20240124 14:14:35.077"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Forgot}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.077" endtime="20240124 14:14:35.077"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LoginButton}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.077" endtime="20240124 14:14:35.077"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${NoAccount}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.077" endtime="20240124 14:14:35.077"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CreateAccount}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.077" endtime="20240124 14:14:35.077"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FooterLogo}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.078" endtime="20240124 14:14:35.078"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PN}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.078" endtime="20240124 14:14:35.078"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TnC}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.078" endtime="20240124 14:14:35.078"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CopyRight}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.078" endtime="20240124 14:14:35.078"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Logo}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.078" endtime="20240124 14:14:35.078"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Header}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.078" endtime="20240124 14:14:35.078"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.078" endtime="20240124 14:14:35.078"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Pass}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.078" endtime="20240124 14:14:35.078"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Remember}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.078" endtime="20240124 14:14:35.078"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Forgot}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.078" endtime="20240124 14:14:35.078"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${LoginButton}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.079" endtime="20240124 14:14:35.079"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${NoAccount}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.079" endtime="20240124 14:14:35.079"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${CreateAccount}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.079" endtime="20240124 14:14:35.079"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${FooterLogo}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.079" endtime="20240124 14:14:35.079"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${PN}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.079" endtime="20240124 14:14:35.079"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${TnC}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.079" endtime="20240124 14:14:35.079"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${CopyRight}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.079" endtime="20240124 14:14:35.079"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.079" endtime="20240124 14:14:35.079"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:14:35.069" endtime="20240124 14:14:35.079"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:14:35.069" endtime="20240124 14:14:35.080"/>
 </kw>
 <tag>Login Page</tag>
-<tag>TC001</tag>
-<status status="PASS" starttime="20240122 09:12:11.949" endtime="20240122 09:12:22.299"/>
+<status status="FAIL" starttime="20240124 14:14:25.061" endtime="20240124 14:14:35.080">Several failures occurred:
+
+1) NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+    [ Message content over the limit has been removed. ]
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]</status>
 </test>
-<test id="s1-t4" name="TC-002 - Email" line="20">
+<test id="s1-t4" name="TC-002 - Input Invalid Username" line="23">
 <kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>New browser tab</arg>
+<arg>Input Invalid Username</arg>
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="New browser tab" library="Email">
-<kw name="Execute Javascript" library="SeleniumLibrary">
-<arg>window.open('', '_blank')</arg>
-<doc>Executes the given JavaScript code with possible arguments.</doc>
-<msg timestamp="20240122 09:12:22.299" level="INFO">Executing JavaScript:
-window.open('', '_blank')
-Without any arguments.</msg>
-<status status="PASS" starttime="20240122 09:12:22.299" endtime="20240122 09:12:22.330"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>10</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240122 09:12:32.330" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20240122 09:12:22.330" endtime="20240122 09:12:32.330"/>
-</kw>
-<kw name="Get Window Handles" library="SeleniumLibrary">
-<var>@{test}</var>
-<doc>Returns all child window handles of the selected browser as a list.</doc>
-<msg timestamp="20240122 09:12:32.330" level="INFO">@{test} = [ 54D4E13CDE3D10B2C9BBD307B4F1AB6C | B80FEC70AC8E3871A8F318176EE406CA ]</msg>
-<status status="PASS" starttime="20240122 09:12:32.330" endtime="20240122 09:12:32.330"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${test}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240122 09:12:32.330" endtime="20240122 09:12:32.337"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${Tab1}</var>
-<arg>${test}[0]</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240122 09:12:32.337" level="INFO">${Tab1} = 54D4E13CDE3D10B2C9BBD307B4F1AB6C</msg>
-<status status="PASS" starttime="20240122 09:12:32.337" endtime="20240122 09:12:32.337"/>
-</kw>
-<kw name="Convert To String" library="BuiltIn">
-<var>${Tab2}</var>
-<arg>${test}[1]</arg>
-<doc>Converts the given item to a Unicode string.</doc>
-<msg timestamp="20240122 09:12:32.337" level="INFO">${Tab2} = B80FEC70AC8E3871A8F318176EE406CA</msg>
-<status status="PASS" starttime="20240122 09:12:32.337" endtime="20240122 09:12:32.337"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${Tab1}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240122 09:12:32.337" endtime="20240122 09:12:32.337"/>
-</kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>${Tab2}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" starttime="20240122 09:12:32.337" endtime="20240122 09:12:32.337"/>
-</kw>
-<kw name="Switch Window" library="SeleniumLibrary">
-<arg>${Tab2}</arg>
-<doc>Switches to browser window matching ``locator``.</doc>
-<status status="PASS" starttime="20240122 09:12:32.337" endtime="20240122 09:12:32.377"/>
-</kw>
-<kw name="Go To" library="SeleniumLibrary">
-<arg>${YopMail}</arg>
-<doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20240122 09:12:32.377" level="INFO">Opening url 'https://yopmail.com/en/'</msg>
-<status status="PASS" starttime="20240122 09:12:32.377" endtime="20240122 09:12:35.998"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>10</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240122 09:12:45.999" level="INFO">Slept 10 seconds</msg>
-<status status="PASS" starttime="20240122 09:12:35.998" endtime="20240122 09:12:45.999"/>
-</kw>
-<status status="PASS" starttime="20240122 09:12:22.299" endtime="20240122 09:12:45.999"/>
-</kw>
-<status status="PASS" starttime="20240122 09:12:22.299" endtime="20240122 09:12:45.999"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>Enter Yop Mail</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Enter Yop Mail" library="Email">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Yopmail_Banner}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240122 09:12:45.999" endtime="20240122 09:12:46.028"/>
-</kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Yopmail_Email_TextBox}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240122 09:12:46.028" endtime="20240122 09:12:46.044"/>
-</kw>
-<kw name="Capture Element Screenshot" library="SeleniumLibrary">
-<arg>${Yopmail_Banner}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<msg timestamp="20240122 09:12:46.228" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/01-22-24%2009-12/selenium-element-screenshot-1.png"&gt;&lt;img src="Screenshots/01-22-24%2009-12/selenium-element-screenshot-1.png" width="400px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20240122 09:12:46.044" endtime="20240122 09:12:46.228"/>
-</kw>
-<kw name="Capture Element Screenshot" library="SeleniumLibrary">
-<arg>${Yopmail_Email_TextBox}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<msg timestamp="20240122 09:12:46.319" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/01-22-24%2009-12/selenium-element-screenshot-2.png"&gt;&lt;img src="Screenshots/01-22-24%2009-12/selenium-element-screenshot-2.png" width="400px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20240122 09:12:46.228" endtime="20240122 09:12:46.319"/>
+<kw name="Input Invalid Username" library="Login_Page_Keywords">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<msg timestamp="20240124 14:14:35.086" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<msg timestamp="20240124 14:14:35.088" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<status status="FAIL" starttime="20240124 14:14:35.083" endtime="20240124 14:14:35.089"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>${Yopmail_Email_TextBox}</arg>
-<arg>${YopMailEmail}</arg>
+<arg>${Email}</arg>
+<arg>${InvalidEmailFormat}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20240122 09:12:46.319" level="INFO">Typing text 'hk_automation1retails2_gold@yopmail.com' into text field '//div[@class='ycolleft']//div[@class='nw']//div[@class='tooltip click']//input'.</msg>
-<status status="PASS" starttime="20240122 09:12:46.319" endtime="20240122 09:12:46.433"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Yopmail_Email_Next_Button}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240122 09:12:46.434" level="INFO">Clicking element '//div[@class='ycolleft']//div[@class='ycptctn']//button'.</msg>
-<status status="PASS" starttime="20240122 09:12:46.434" endtime="20240122 09:12:47.360"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240122 09:12:52.361" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20240122 09:12:47.360" endtime="20240122 09:12:52.361"/>
-</kw>
-<status status="PASS" starttime="20240122 09:12:45.999" endtime="20240122 09:12:52.361"/>
-</kw>
-<status status="PASS" starttime="20240122 09:12:45.999" endtime="20240122 09:12:52.361"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>Switch to Inbox List Frame</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Switch to Inbox List Frame" library="Email">
-<kw name="Select Frame" library="SeleniumLibrary">
-<arg>${Yopmail_Inbox_List_Frame}</arg>
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20240122 09:12:52.367" level="INFO">Selecting frame 'ifinbox'.</msg>
-<status status="PASS" starttime="20240122 09:12:52.365" endtime="20240122 09:12:52.392"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240122 09:12:54.392" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240122 09:12:52.392" endtime="20240122 09:12:54.392"/>
-</kw>
-<status status="PASS" starttime="20240122 09:12:52.364" endtime="20240122 09:12:54.392"/>
-</kw>
-<status status="PASS" starttime="20240122 09:12:52.363" endtime="20240122 09:12:54.392"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>Click Inbox Messages</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Click Inbox Messages" library="Email">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Yopmail_InboxMessage_Option2}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240122 09:12:54.396" endtime="20240122 09:12:54.417"/>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Yopmail_InboxMessage_Option2}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240122 09:12:54.418" level="INFO">Clicking element '(//body[@class='bodyinbox yscrollbar']//div[@class='m'])[2]'.</msg>
-<status status="PASS" starttime="20240122 09:12:54.418" endtime="20240122 09:12:54.479"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240122 09:12:59.480" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20240122 09:12:54.479" endtime="20240122 09:12:59.481"/>
+<status status="NOT RUN" starttime="20240124 14:14:35.090" endtime="20240124 14:14:35.090"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Yopmail_InboxMessage_Option1}</arg>
+<arg>${InvalidEmailMessage}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240122 09:12:59.481" endtime="20240122 09:12:59.508"/>
+<status status="NOT RUN" starttime="20240124 14:14:35.090" endtime="20240124 14:14:35.090"/>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<arg>${Yopmail_InboxMessage_Option1}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20240122 09:12:59.508" level="INFO">Clicking element '(//body[@class='bodyinbox yscrollbar']//div[@class='m'])[1]'.</msg>
-<status status="PASS" starttime="20240122 09:12:59.508" endtime="20240122 09:12:59.554"/>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.090" endtime="20240124 14:14:35.090"/>
 </kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240122 09:13:04.554" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20240122 09:12:59.554" endtime="20240122 09:13:04.554"/>
-</kw>
-<status status="PASS" starttime="20240122 09:12:54.395" endtime="20240122 09:13:04.554"/>
-</kw>
-<status status="PASS" starttime="20240122 09:12:54.394" endtime="20240122 09:13:04.554"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>Unselect Mail Frame</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Unselect Mail Frame" library="Email">
-<kw name="Unselect Frame" library="SeleniumLibrary">
-<doc>Sets the main frame as the current frame.</doc>
-<status status="PASS" starttime="20240122 09:13:04.554" endtime="20240122 09:13:04.562"/>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${InvalidEmailMessage}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.090" endtime="20240124 14:14:35.090"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240122 09:13:06.563" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240122 09:13:04.562" endtime="20240122 09:13:06.563"/>
+<status status="NOT RUN" starttime="20240124 14:14:35.090" endtime="20240124 14:14:35.090"/>
 </kw>
-<status status="PASS" starttime="20240122 09:13:04.554" endtime="20240122 09:13:06.563"/>
+<status status="FAIL" starttime="20240124 14:14:35.083" endtime="20240124 14:14:35.090"/>
 </kw>
-<status status="PASS" starttime="20240122 09:13:04.554" endtime="20240122 09:13:06.563"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>Switch to Inbox Message Frame</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Switch to Inbox Message Frame" library="Email">
-<kw name="Select Frame" library="SeleniumLibrary">
-<arg>${YopMail_Message_Frame}</arg>
-<doc>Sets frame identified by ``locator`` as the current frame.</doc>
-<msg timestamp="20240122 09:13:06.563" level="INFO">Selecting frame 'ifmail'.</msg>
-<status status="PASS" starttime="20240122 09:13:06.563" endtime="20240122 09:13:06.587"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240122 09:13:08.587" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240122 09:13:06.587" endtime="20240122 09:13:08.587"/>
-</kw>
-<status status="PASS" starttime="20240122 09:13:06.563" endtime="20240122 09:13:08.587"/>
-</kw>
-<status status="PASS" starttime="20240122 09:13:06.563" endtime="20240122 09:13:08.587"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
-<arg>Read Message</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<kw name="Read Message" library="Email">
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>${Yopmail_Inbox_Title_Message}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20240122 09:13:08.591" endtime="20240122 09:13:08.610"/>
-</kw>
-<kw name="Capture Element Screenshot" library="SeleniumLibrary">
-<arg>${Yopmail_Inbox_Title_Message}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<msg timestamp="20240122 09:13:08.771" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/01-22-24%2009-12/selenium-element-screenshot-3.png"&gt;&lt;img src="Screenshots/01-22-24%2009-12/selenium-element-screenshot-3.png" width="400px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20240122 09:13:08.611" endtime="20240122 09:13:08.771"/>
-</kw>
-<kw name="Capture Element Screenshot" library="SeleniumLibrary">
-<arg>${Yopmail_InboxBody}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<msg timestamp="20240122 09:13:08.892" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/01-22-24%2009-12/selenium-element-screenshot-4.png"&gt;&lt;img src="Screenshots/01-22-24%2009-12/selenium-element-screenshot-4.png" width="400px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20240122 09:13:08.771" endtime="20240122 09:13:08.892"/>
-</kw>
-<kw name="Capture Element Screenshot" library="SeleniumLibrary">
-<arg>${Yopmail_Inbox_Sender_Email}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<msg timestamp="20240122 09:13:08.999" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/01-22-24%2009-12/selenium-element-screenshot-5.png"&gt;&lt;img src="Screenshots/01-22-24%2009-12/selenium-element-screenshot-5.png" width="400px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20240122 09:13:08.892" endtime="20240122 09:13:08.999"/>
-</kw>
-<kw name="Capture Element Screenshot" library="SeleniumLibrary">
-<arg>${Yopmail_Inbox_ShowPicture_Button}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<msg timestamp="20240122 09:13:09.123" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/01-22-24%2009-12/selenium-element-screenshot-6.png"&gt;&lt;img src="Screenshots/01-22-24%2009-12/selenium-element-screenshot-6.png" width="400px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20240122 09:13:08.999" endtime="20240122 09:13:09.123"/>
-</kw>
-<kw name="Capture Element Screenshot" library="SeleniumLibrary">
-<arg>${Yopmail_InboxBody_Header}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<msg timestamp="20240122 09:13:09.253" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/01-22-24%2009-12/selenium-element-screenshot-7.png"&gt;&lt;img src="Screenshots/01-22-24%2009-12/selenium-element-screenshot-7.png" width="400px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20240122 09:13:09.123" endtime="20240122 09:13:09.253"/>
-</kw>
-<kw name="Capture Element Screenshot" library="SeleniumLibrary">
-<arg>${Yopmail_InboxBody_Content}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<msg timestamp="20240122 09:13:09.375" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/01-22-24%2009-12/selenium-element-screenshot-8.png"&gt;&lt;img src="Screenshots/01-22-24%2009-12/selenium-element-screenshot-8.png" width="400px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20240122 09:13:09.253" endtime="20240122 09:13:09.376"/>
-</kw>
-<kw name="Capture Element Screenshot" library="SeleniumLibrary">
-<arg>${Yopmail_InboxBody_Footer}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<msg timestamp="20240122 09:13:09.477" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/01-22-24%2009-12/selenium-element-screenshot-9.png"&gt;&lt;img src="Screenshots/01-22-24%2009-12/selenium-element-screenshot-9.png" width="400px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20240122 09:13:09.376" endtime="20240122 09:13:09.477"/>
-</kw>
-<kw name="Sleep" library="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20240122 09:13:11.478" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20240122 09:13:09.477" endtime="20240122 09:13:11.478"/>
-</kw>
-<status status="PASS" starttime="20240122 09:13:08.590" endtime="20240122 09:13:11.478"/>
-</kw>
-<status status="PASS" starttime="20240122 09:13:08.590" endtime="20240122 09:13:11.478"/>
+<status status="FAIL" starttime="20240124 14:14:35.082" endtime="20240124 14:14:35.090"/>
 </kw>
 <tag>Login Page</tag>
-<tag>TC001</tag>
-<status status="PASS" starttime="20240122 09:12:22.299" endtime="20240122 09:13:11.478"/>
+<status status="FAIL" starttime="20240124 14:14:35.082" endtime="20240124 14:14:35.091">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</status>
 </test>
-<doc>Suite description</doc>
-<status status="PASS" starttime="20240122 09:12:07.234" endtime="20240122 09:13:11.479"/>
-</suite>
-<statistics>
-<total>
-<stat pass="4" fail="0" skip="0">All Tests</stat>
-</total>
-<tag>
-<stat pass="2" fail="0" skip="0">Login Page</stat>
-<stat pass="2" fail="0" skip="0">TC001</stat>
-</tag>
-<suite>
-<stat pass="4" fail="0" skip="0" id="s1" name="Test Retail Smoke1">Test Retail Smoke1</stat>
-</suite>
-</statistics>
-<errors>
-<msg timestamp="20240122 09:12:07.499" level="ERROR">Error in file 'C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testdata\Retail\Retail_Variable.robot' on line 2126: Setting variable '//tbody//tbody//tr//td//a//font[contains(text(),'Contact Us')]' failed: Invalid variable name '//tbody//tbody//tr//td//a//font[contains(text(),'Contact Us')]'.</msg>
-<msg timestamp="20240122 09:12:07.574" level="ERROR">Error in file 'C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\Keyword\Retail\Account_Orders_Page_Keywords.robot' on line 543: Creating keyword 'User should be able to click orders with $129.0 spent in HK Retail Account Order Details Page' failed: Keyword with same name defined multiple times.</msg>
-<msg timestamp="20240122 09:12:07.968" level="ERROR">Error in file 'C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testdata\Retail\Retail_Variable.robot' on line 404: Setting variable '${Retail_FilterListSubElements}' failed: Variable '${RandomFilterIndex}' not found.</msg>
-</errors>
-</robot>
+<test id="s1-t5" name="TC-003 - Input Invalid Password" line="27">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Input Invalid Password</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Input Invalid Password" library="Login_Page_Keywords">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Pass}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<msg timestamp="20240124 14:14:35.096" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<msg timestamp="20240124 14:14:35.097" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<status status="FAIL" starttime="20240124 14:14:35.094" endtime="20240124 14:14:35.098"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Pass}</arg>
+<arg>${InvalidPassFormat}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.098" endtime="20240124 14:14:35.098"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Pass}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.098" endtime="20240124 14:14:35.098"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.098" endtime="20240124 14:14:35.099"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:14:35.094" endtime="20240124 14:14:35.099"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:14:35.093" endtime="20240124 14:14:35.099"/>
+</kw>
+<tag>Login Page</tag>
+<status status="FAIL" starttime="20240124 14:14:35.093" endtime="20240124 14:14:35.099">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</status>
+</test>
+<test id="s1-t6" name="TC-004 - User should not be able to login using invalid account" line="31">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should not be able to login using invalid account</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should not be able to login using invalid account" library="Login_Page_Keywords">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<msg timestamp="20240124 14:14:35.103" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<msg timestamp="20240124 14:14:35.104" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<status status="FAIL" starttime="20240124 14:14:35.101" endtime="20240124 14:14:35.106"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<arg>${InvalidEmail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.106" endtime="20240124 14:14:35.106"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Pass}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.107" endtime="20240124 14:14:35.107"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Pass}</arg>
+<arg>${InvalidPass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.107" endtime="20240124 14:14:35.107"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LoginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.107" endtime="20240124 14:14:35.107"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${InvalidEmailPassMessage}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.107" endtime="20240124 14:14:35.107"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${InvalidEmailPassMessage}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.107" endtime="20240124 14:14:35.107"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.107" endtime="20240124 14:14:35.107"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:14:35.100" endtime="20240124 14:14:35.107"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:14:35.100" endtime="20240124 14:14:35.107"/>
+</kw>
+<tag>Login Page</tag>
+<status status="FAIL" starttime="20240124 14:14:35.100" endtime="20240124 14:14:35.108">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</status>
+</test>
+<test id="s1-t7" name="TC-005 - User should be able to check/uncheck Remember me in Retail Login Page" line="35">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to check/uncheck Remember me in Retail Login Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to check/uncheck Remember me in Retail Login Page" library="Login_Page_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${RememberCheck}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:14:35.113" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<msg timestamp="20240124 14:14:35.113" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<status status="FAIL" starttime="20240124 14:14:35.110" endtime="20240124 14:14:35.115"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RememberCheck}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.115" endtime="20240124 14:14:35.115"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${RememberCheck}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.115" endtime="20240124 14:14:35.115"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.115" endtime="20240124 14:14:35.115"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:14:35.109" endtime="20240124 14:14:35.115"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:14:35.109" endtime="20240124 14:14:35.115"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to check/uncheck Remember me in Retail Login Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to check/uncheck Remember me in Retail Login Page" library="Login_Page_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${RememberCheck}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:14:35.119" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<msg timestamp="20240124 14:14:35.119" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<status status="FAIL" starttime="20240124 14:14:35.116" endtime="20240124 14:14:35.121"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RememberCheck}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.121" endtime="20240124 14:14:35.121"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${RememberCheck}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.121" endtime="20240124 14:14:35.121"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.121" endtime="20240124 14:14:35.121"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:14:35.116" endtime="20240124 14:14:35.121"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:14:35.116" endtime="20240124 14:14:35.121"/>
+</kw>
+<tag>Login Page</tag>
+<status status="FAIL" starttime="20240124 14:14:35.109" endtime="20240124 14:14:35.121">Several failures occurred:
+
+1) NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+    [ Message content over the limit has been removed. ]
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]</status>
+</test>
+<test id="s1-t8" name="TC-006 - User should be able to click Forgot Password in Retail Login Page" line="40">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to click Forgot Password in Retail Login Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to click Forgot Password in Retail Login Page" library="Login_Page_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Forgot}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:14:35.127" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<msg timestamp="20240124 14:14:35.127" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<status status="FAIL" starttime="20240124 14:14:35.125" endtime="20240124 14:14:35.129"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Forgot}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.129" endtime="20240124 14:14:35.129"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Forgot}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.129" endtime="20240124 14:14:35.129"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.129" endtime="20240124 14:14:35.129"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:14:35.124" endtime="20240124 14:14:35.129"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:14:35.124" endtime="20240124 14:14:35.129"/>
+</kw>
+<tag>Forgot Password</tag>
+<tag>Login Page</tag>
+<status status="FAIL" starttime="20240124 14:14:35.123" endtime="20240124 14:14:35.130">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</status>
+</test>
+<test id="s1-t9" name="TC-007 - User should be able to view Forgot Password Page in Retail Forgot Password Page" line="44">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to view Forgot Password Page in Retail Forgot Password Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to view Forgot Password Page in Retail Forgot Password Page" library="Login_Page_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageContainer}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:14:35.134" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<msg timestamp="20240124 14:14:35.134" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<status status="FAIL" starttime="20240124 14:14:35.131" endtime="20240124 14:14:35.136"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageLogo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.137" endtime="20240124 14:14:35.137"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageHeader}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.137" endtime="20240124 14:14:35.137"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageSubheader}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.137" endtime="20240124 14:14:35.137"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.137" endtime="20240124 14:14:35.137"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageSubmitButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.137" endtime="20240124 14:14:35.137"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageCreateAccountButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.137" endtime="20240124 14:14:35.137"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageContainer}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.137" endtime="20240124 14:14:35.137"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageLogo}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.137" endtime="20240124 14:14:35.137"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageHeader}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.138" endtime="20240124 14:14:35.138"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageSubheader}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.138" endtime="20240124 14:14:35.138"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.138" endtime="20240124 14:14:35.138"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageSubmitButton}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.138" endtime="20240124 14:14:35.138"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageCreateAccountButton}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.138" endtime="20240124 14:14:35.138"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.138" endtime="20240124 14:14:35.138"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:14:35.131" endtime="20240124 14:14:35.138"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:14:35.131" endtime="20240124 14:14:35.138"/>
+</kw>
+<tag>Forgot Password</tag>
+<tag>Login Page</tag>
+<status status="FAIL" starttime="20240124 14:14:35.130" endtime="20240124 14:14:35.138">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</status>
+</test>
+<test id="s1-t10" name="TC-008 - User should be albe to view Error Message in Retail Forgot Password Page" line="48">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be albe to view Error Message in Retail Forgot Password Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be albe to view Error Message in Retail Forgot Password Page" library="Login_Page_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:14:35.143" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<msg timestamp="20240124 14:14:35.143" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<status status="FAIL" starttime="20240124 14:14:35.140" endtime="20240124 14:14:35.144"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.144" endtime="20240124 14:14:35.144"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<arg>${InvalidEmailFormat}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.146" endtime="20240124 14:14:35.146"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailErrorMessage}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.146" endtime="20240124 14:14:35.146"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailErrorMessage}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.146" endtime="20240124 14:14:35.146"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.146" endtime="20240124 14:14:35.146"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:14:35.140" endtime="20240124 14:14:35.146"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:14:35.140" endtime="20240124 14:14:35.146"/>
+</kw>
+<tag>Forgot Password</tag>
+<tag>Login Page</tag>
+<status status="FAIL" starttime="20240124 14:14:35.139" endtime="20240124 14:14:35.146">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</status>
+</test>
+<test id="s1-t11" name="TC-009 - User should be albe to view Error Message in Retail Forgot Password Page" line="52">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be albe to view Error Message in Retail Forgot Password Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be albe to view Error Message in Retail Forgot Password Page" library="Login_Page_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:14:35.151" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<msg timestamp="20240124 14:14:35.152" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<status status="FAIL" starttime="20240124 14:14:35.149" endtime="20240124 14:14:35.153"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.153" endtime="20240124 14:14:35.153"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<arg>${InvalidEmailFormat}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.153" endtime="20240124 14:14:35.154"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailErrorMessage}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.154" endtime="20240124 14:14:35.154"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailErrorMessage}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.154" endtime="20240124 14:14:35.154"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.154" endtime="20240124 14:14:35.154"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:14:35.148" endtime="20240124 14:14:35.154"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:14:35.148" endtime="20240124 14:14:35.154"/>
+</kw>
+<tag>Forgot Password</tag>
+<tag>Login Page</tag>
+<status status="FAIL" starttime="20240124 14:14:35.147" endtime="20240124 14:14:35.154">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</status>
+</test>
+<test id="s1-t12" name="TC-010 - User should be able to Input Valid Email Address in Retail Forgot Password Page" line="56">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to Input Valid Email Address in Retail Forgot Password Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to Input Valid Email Address in Retail Forgot Password Page" library="Login_Page_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:14:35.159" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<msg timestamp="20240124 14:14:35.160" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<status status="FAIL" starttime="20240124 14:14:35.157" endtime="20240124 14:14:35.162"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.162" endtime="20240124 14:14:35.162"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.162" endtime="20240124 14:14:35.162"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.162" endtime="20240124 14:14:35.162"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.162" endtime="20240124 14:14:35.162"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:14:35.156" endtime="20240124 14:14:35.162"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:14:35.156" endtime="20240124 14:14:35.162"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>browse back button</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Browse Back Button" library="config">
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<msg timestamp="20240124 14:14:35.166" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<msg timestamp="20240124 14:14:35.167" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<status status="FAIL" starttime="20240124 14:14:35.163" endtime="20240124 14:14:35.168"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.168" endtime="20240124 14:14:35.168"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:14:35.163" endtime="20240124 14:14:35.168"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:14:35.163" endtime="20240124 14:14:35.168"/>
+</kw>
+<tag>Forgot Password</tag>
+<tag>Login Page</tag>
+<status status="FAIL" starttime="20240124 14:14:35.155" endtime="20240124 14:14:35.169">Several failures occurred:
+
+1) NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+    [ Message content over the limit has been removed. ]
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]</status>
+</test>
+<test id="s1-t13" name="TC-018 - Input Valid Username" line="120">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Input Valid Username</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Input Valid Username" library="Login_Page_Keywords">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<msg timestamp="20240124 14:14:35.173" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<msg timestamp="20240124 14:14:35.174" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.86)
+Stacktrace:
+	GetHandleVerifier [0x00007FF77FCF5E42+3538674]
+	(No symbol) [0x00007FF77F914C02]
+	(No symbol) [0x00007FF77F7C5AEB]
+	(No symbol) [0x00007FF77F7A288C]
+	(No symbol) [0x00007FF77F835DD7]
+	(No symbol) [0x00007FF77F84B40F]
+	(No symbol) [0x00007FF77F82EE53]
+	(No symbol) [0x00007FF77F7FF514]
+	(No symbol) [0x00007FF77F800631]
+	GetHandleVerifier [0x00007FF77FD26CAD+3738973]
+	GetHandleVerifier [0x00007FF77FD7C506+4089270]
+	GetHandleVerifier [0x00007FF77FD74823+4057299]
+	GetHandleVerifier [0x00007FF77FA45C49+720121]
+	(No symbol) [0x00007FF77F92126F]
+	(No symbol) [0x00007FF77F91C304]
+	(No symbol) [0x00007FF77F91C432]
+	(No symbol) [0x00007FF77F90BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<status status="FAIL" starttime="20240124 14:14:35.171" endtime="20240124 14:14:35.176"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:14:35.176" endtime="20240124 14:14:35.176"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Email}

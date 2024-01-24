@@ -451,12 +451,12 @@ TC-061 - User should be able to apply filter status in Retail Account Orders Pag
     run keyword and continue on failure    User should be able to click filter status in Account Order Page
     run keyword and continue on failure    User should be able to check all filter status in HK Account Order Page
     run keyword and continue on failure    User should be able to filter status by Order with Returns in Account Order Page
-    run keyword and continue on failure    User should be able to click filter status in Account Order Page
-#    run keyword and continue on failure    User should be able to filter status by Partially Dispathed in Account Order Page
 #    run keyword and continue on failure    User should be able to click filter status in Account Order Page
-    run keyword and continue on failure    User should be able to filter status by Dispatched in Account Order Page
+#    run keyword and continue on failure    User should be able to filter status by Partially Dispathed in Account Order Page
     run keyword and continue on failure    User should be able to click filter status in Account Order Page
-    run keyword and continue on failure    User should be able to filter status by Submitted in Account Order Page
+    run keyword and continue on failure    User should be able to filter status by Dispatched in Account Order Page
+#    run keyword and continue on failure    User should be able to click filter status in Account Order Page
+#    run keyword and continue on failure    User should be able to filter status by Submitted in Account Order Page
     run keyword and continue on failure    User should be able to click filter status in Account Order Page
     run keyword and continue on failure    User should be able to filter status by Received in Account Order Page
     run keyword and continue on failure    User should be able to click filter status in Account Order Page

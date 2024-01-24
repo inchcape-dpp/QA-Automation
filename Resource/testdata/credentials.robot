@@ -141,7 +141,7 @@ ${admin1_s2_Bronze_HKretail_PWD}    HKPass@12345
 
                                                                          #------------------------Dealer----------------
                                                                              #------------------------ADMIN1------------
-${admin1_s2_dealer_UID}   seller1.admin@test.com
+${admin1_s2_dealer_UID}    seller1.admin@test.com
 ${admin1_s2_dealer_PWD}    AUPass@12345
                                                                              #------------------------ADMIN2------------
 ${admin2_s2_dealer_UID}    seller2.admin@test.com
@@ -176,7 +176,7 @@ ${user1_p1_retail_PWD}    AUPass@12345
                                                                          #------------------------HK--------------------
                                                                              #------------------------ADMIN1------------
 ${admin1_p1_HKretail_UID}    hk.buyer1.admin@test.com
-${admin1_p1_HKretail_PWD}   HKPass@12345
+${admin1_p1_HKretail_PWD}    HKPass@12345
 
                                                                              #------------------------GOLD ADMIN1-------
 ${admin1_p1_HKretail_Gold_UID}    hk.goldsilver.admin@test.com
