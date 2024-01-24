@@ -139,6 +139,9 @@ ${admin1_s2_Gold_HKretail_PWD}    HKPass@12345
 ${admin1_s2_Bronze_HKretail_UID}    hk.bronze.admin@test.com
 ${admin1_s2_Bronze_HKretail_PWD}    HKPass@12345
 
+${Ric_S2_HKUser_GOLD}    hktestric3@yopmail.com
+${Ric_S2_HKPass_GOLD}    Pass@12345
+
                                                                          #------------------------Dealer----------------
                                                                              #------------------------ADMIN1------------
 ${admin1_s2_dealer_UID}    seller1.admin@test.com

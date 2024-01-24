@@ -33,8 +33,8 @@ ${ExcelFile_HK_Product_List_Path}    C:\\Users\\Ericson.Tinana\Pictures\\Files\\
 #${Username}    hktestric3@yopmail.com
 #${Password}    Pass@12345
 
-${Username}    ${admin1_s2_HKretail_UID}
-${Password}    ${admin1_s2_HKretail_PWD}
+${Username}    ${Ric_S2_HKUser_GOLD}
+${Password}    ${Ric_S2_HKPass_GOLD}
 
 *** Keywords ***
 Open Chrome Browser

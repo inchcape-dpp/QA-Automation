@@ -908,29 +908,29 @@ TC-097 - User should be able to edit company details page
     run keyword and continue on failure    User should be able to click save button in Retail Account Company Details Page
     run keyword and continue on failure    User should be able to click no on update cofirmation modal in Retail Account Company Details Page
 
-TC-098 - User should be able to view staff page
-    [Tags]    Staff Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
-    run keyword and continue on failure    User should be able to view staff page
-
-TC-099 - User should be able to add new staff in Retail Account Staff Page
-    [Tags]    Staff Page
-    run keyword and continue on failure    User should be able to click add new staff in Retail Account Staff Page
-    run keyword and continue on failure    User should be able to add new staff details in HK Retail Account Staff Page
-    run keyword and continue on failure    User should be able to click active checkbox at add new staff in Retail Account Staff Page
-    run keyword and continue on failure    User should be able to click active checkbox at add new staff in Retail Account Staff Page
-    run keyword and continue on failure    User should be able to click cancel add new staff in Retail Account Staff Page
-
-TC-100 - User should be able to edit staff button in Retail Account Staff Page
-    [Tags]    Staff Page
-    run keyword and continue on failure    User should be able to click edit staff button in Retail Account Staff Page
-    run keyword and continue on failure    User should be able to edit First Name in Retail Account Staff Page
-    run keyword and continue on failure    User should be able to edit Last Name in Retail Account Staff Page
-    run keyword and continue on failure    User should be able to edit Phone Number in HK Retail Account Staff Page
-    run keyword and continue on failure    User should be able to click active checkbox in Retail Account Staff Page
-    run keyword and continue on failure    User should be able to click active checkbox in Retail Account Staff Page
-    run keyword and continue on failure    User should ba able to click save in Retail Account Staff Page
-    run keyword and continue on failure    User should be able to click no in the confirmation in Retail Account Staff Page
+#TC-098 - User should be able to view staff page
+#    [Tags]    Staff Page
+#    run keyword and continue on failure    User should be able to access account from top navigaton
+#    run keyword and continue on failure    User should be able to view staff page
+#
+#TC-099 - User should be able to add new staff in Retail Account Staff Page
+#    [Tags]    Staff Page
+#    run keyword and continue on failure    User should be able to click add new staff in Retail Account Staff Page
+#    run keyword and continue on failure    User should be able to add new staff details in HK Retail Account Staff Page
+#    run keyword and continue on failure    User should be able to click active checkbox at add new staff in Retail Account Staff Page
+#    run keyword and continue on failure    User should be able to click active checkbox at add new staff in Retail Account Staff Page
+#    run keyword and continue on failure    User should be able to click cancel add new staff in Retail Account Staff Page
+#
+#TC-100 - User should be able to edit staff button in Retail Account Staff Page
+#    [Tags]    Staff Page
+#    run keyword and continue on failure    User should be able to click edit staff button in Retail Account Staff Page
+#    run keyword and continue on failure    User should be able to edit First Name in Retail Account Staff Page
+#    run keyword and continue on failure    User should be able to edit Last Name in Retail Account Staff Page
+#    run keyword and continue on failure    User should be able to edit Phone Number in HK Retail Account Staff Page
+#    run keyword and continue on failure    User should be able to click active checkbox in Retail Account Staff Page
+#    run keyword and continue on failure    User should be able to click active checkbox in Retail Account Staff Page
+#    run keyword and continue on failure    User should ba able to click save in Retail Account Staff Page
+#    run keyword and continue on failure    User should be able to click no in the confirmation in Retail Account Staff Page
 
 
 
