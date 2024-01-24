@@ -1,0 +1,2264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20240124 14:18:38.438" rpa="false" schemaversion="4">
+<suite id="s1" name="HK Regression Gold" source="C:\Users\Ericson.Tinana\PycharmProjects\pythonProject1\Resource\testsuites\Retail\HK_Regression_Gold.robot">
+<test id="s1-t1" name="Test Setup" line="13">
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Open Chrome Browser</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Chrome Browser" library="config">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${s2HKRetail}</arg>
+<arg>Chrome</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240124 14:18:39.098" level="INFO">Opening browser 'Chrome' to base url 'https://hkretail.coyzchwfjr-inchcaped2-s2-public.model-t.cc.commerce.ondemand.com/hkretail/'.</msg>
+<msg timestamp="20240124 14:18:42.359" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:18:42.359" level="FAIL">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 119
+Current browser version is 121.0.6167.86 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x002572A3+45731]
+	(No symbol) [0x001E2D51]
+	(No symbol) [0x000D880D]
+	(No symbol) [0x00101281]
+	(No symbol) [0x00100A9A]
+	(No symbol) [0x000FD3C2]
+	(No symbol) [0x000FA310]
+	(No symbol) [0x0012EB26]
+	(No symbol) [0x0012E6BC]
+	(No symbol) [0x00127DD6]
+	(No symbol) [0x001031F6]
+	(No symbol) [0x0010439D]
+	GetHandleVerifier [0x00560716+3229462]
+	GetHandleVerifier [0x005A84C8+3523784]
+	GetHandleVerifier [0x005A214C+3498316]
+	GetHandleVerifier [0x002E1680+611968]
+	(No symbol) [0x001ECCCC]
+	(No symbol) [0x001E8DF8]
+	(No symbol) [0x001E8F1D]
+	(No symbol) [0x001DB2C7]
+	(No symbol) [0x75DC6839]
+	RtlGetFullPathName_UEx [0x770D901F+1215]
+	RtlGetFullPathName_UEx [0x770D8FED+1165]
+	(No symbol) [0x00000000]
+</msg>
+<status status="FAIL" starttime="20240124 14:18:39.097" endtime="20240124 14:18:42.363"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" starttime="20240124 14:18:42.363" endtime="20240124 14:18:42.363"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:18:39.097" endtime="20240124 14:18:42.363"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:18:39.096" endtime="20240124 14:18:42.364"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:18:39.096" endtime="20240124 14:18:42.364">SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 119
+Current browser version is 121.0.6167.86 with binary path C:\Program Files\Google\Chrome\Application\chrome.exe
+Stacktrace:
+	GetHandleVerifier [0x002572A3+45731]
+	(No symbol) [0x001E2D51]
+	(No symbol) [0x000D880D]
+	(No symbol) [0x00101281]
+	(No symbol) [0x00100A9A]
+	(No symbol) [0x000FD3C2]
+	(No symbol) [0x000FA310]
+	(No symbol) [0x0012EB26]
+	(No symbol) [0x0012E6BC]
+	(No symbol) [0x00127DD6]
+	(No symbol) [0x001031F6]
+	(No symbol) [0x0010439D]
+	GetHandleVerifier [0x00560716+3229462]
+	GetHandleVerifier [0x005A84C8+3523784]
+	GetHandleVerifier [0x005A214C+3498316]
+	GetHandleVerifier [0x002E1680+611968]
+	(No symbol) [0x001ECCCC]
+	(No symbol) [0x001E8DF8]
+	(No symbol) [0x001E8F1D]
+	(No symbol) [0x001DB2C7]
+	(No symbol) [0x75DC6839]
+	RtlGetFullPathName_UEx [0x770D901F+1215]
+	RtlGetFullPathName_UEx [0x770D8FED+1165]
+	(No symbol) [0x00000000]
+</status>
+</test>
+<test id="s1-t2" name="Screen Shot DIR" line="14">
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Retail Screent Shot DIR</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Retail Screent Shot DIR" library="config">
+<kw name="Get Current Date" library="DateTime">
+<var>${currentdate}</var>
+<arg>result_format=%m-%d-%y %H-%M</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20240124 14:18:42.367" level="INFO">${currentdate} = 01-24-24 14-18</msg>
+<status status="PASS" starttime="20240124 14:18:42.367" endtime="20240124 14:18:42.367"/>
+</kw>
+<kw name="Create Directory" library="OperatingSystem">
+<arg>${Retail_screenshot_path}/${currentdate}</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20240124 14:18:42.368" level="INFO" html="true">Created directory '&lt;a href="file://C:\Users\Ericson.Tinana\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots\01-24-24 14-18"&gt;C:\Users\Ericson.Tinana\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots\01-24-24 14-18&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20240124 14:18:42.367" endtime="20240124 14:18:42.368"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${Retail_screenshot_path}/${currentdate}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20240124 14:18:42.368" endtime="20240124 14:18:42.369"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${NewDIR}</var>
+<arg>${Retail_screenshot_path}\\${currentdate}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20240124 14:18:42.369" level="INFO">${NewDIR} = C:\Users\Ericson.Tinana\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots\01-24-24 14-18</msg>
+<status status="PASS" starttime="20240124 14:18:42.369" endtime="20240124 14:18:42.369"/>
+</kw>
+<status status="PASS" starttime="20240124 14:18:42.366" endtime="20240124 14:18:42.370"/>
+</kw>
+<status status="PASS" starttime="20240124 14:18:42.366" endtime="20240124 14:18:42.370"/>
+</kw>
+<status status="PASS" starttime="20240124 14:18:42.366" endtime="20240124 14:18:42.370"/>
+</test>
+<test id="s1-t3" name="TC-001 - Verify Login Page" line="16">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>TC Sleep</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="TC Sleep" library="config">
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240124 14:18:52.372" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240124 14:18:42.372" endtime="20240124 14:18:52.372"/>
+</kw>
+<status status="PASS" starttime="20240124 14:18:42.371" endtime="20240124 14:18:52.372"/>
+</kw>
+<status status="PASS" starttime="20240124 14:18:42.371" endtime="20240124 14:18:52.372"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to click Translate to English Button</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to click Translate to English Button" library="Login_Page_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_LoginPage_English_Button}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:18:52.374" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:18:52.374" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:18:52.373" endtime="20240124 14:18:52.376"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_LoginPage_English_Button}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:18:52.376" endtime="20240124 14:18:52.376"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Retail_HK_LoginPage_English_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:18:52.376" endtime="20240124 14:18:52.376"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:18:52.376" endtime="20240124 14:18:52.376"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:18:52.373" endtime="20240124 14:18:52.376"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:18:52.372" endtime="20240124 14:18:52.376"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Verify Login Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Verify Login Page" library="Login_Page_Keywords">
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240124 14:19:02.378" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240124 14:18:52.377" endtime="20240124 14:19:02.378"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240124 14:19:02.378" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<status status="PASS" starttime="20240124 14:19:02.378" endtime="20240124 14:19:02.378"/>
+</kw>
+<status status="PASS" starttime="20240124 14:18:52.377" endtime="20240124 14:19:02.379"/>
+</kw>
+<status status="PASS" starttime="20240124 14:18:52.377" endtime="20240124 14:19:02.379"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Verify Login Page Elements</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Verify Login Page Elements" library="Login_Page_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Logo}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:02.381" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:02.381" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:02.380" endtime="20240124 14:19:02.382"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Header}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.382" endtime="20240124 14:19:02.382"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.383" endtime="20240124 14:19:02.383"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Pass}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.383" endtime="20240124 14:19:02.383"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Remember}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.383" endtime="20240124 14:19:02.383"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Forgot}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.383" endtime="20240124 14:19:02.383"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${LoginButton}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.383" endtime="20240124 14:19:02.383"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${NoAccount}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.383" endtime="20240124 14:19:02.383"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CreateAccount}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.383" endtime="20240124 14:19:02.383"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FooterLogo}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.383" endtime="20240124 14:19:02.383"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${PN}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.384" endtime="20240124 14:19:02.384"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${TnC}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.384" endtime="20240124 14:19:02.384"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CopyRight}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.384" endtime="20240124 14:19:02.384"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Logo}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.384" endtime="20240124 14:19:02.384"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Header}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.384" endtime="20240124 14:19:02.384"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.384" endtime="20240124 14:19:02.384"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Pass}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.384" endtime="20240124 14:19:02.384"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Remember}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.384" endtime="20240124 14:19:02.384"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Forgot}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.384" endtime="20240124 14:19:02.384"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${LoginButton}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.384" endtime="20240124 14:19:02.385"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${NoAccount}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.385" endtime="20240124 14:19:02.385"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${CreateAccount}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.385" endtime="20240124 14:19:02.385"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${FooterLogo}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.385" endtime="20240124 14:19:02.385"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${PN}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.385" endtime="20240124 14:19:02.385"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${TnC}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.385" endtime="20240124 14:19:02.385"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${CopyRight}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.386" endtime="20240124 14:19:02.386"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.386" endtime="20240124 14:19:02.386"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.380" endtime="20240124 14:19:02.386"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.379" endtime="20240124 14:19:02.386"/>
+</kw>
+<tag>Login Page</tag>
+<tag>TC001</tag>
+<status status="FAIL" starttime="20240124 14:18:42.371" endtime="20240124 14:19:02.386">Several failures occurred:
+
+1) No browser is open.
+
+2) No browser is open.</status>
+</test>
+<test id="s1-t4" name="TC-002 - Input Invalid Username" line="23">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Input Invalid Username</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Input Invalid Username" library="Login_Page_Keywords">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<msg timestamp="20240124 14:19:02.389" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:02.389" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:02.388" endtime="20240124 14:19:02.390"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<arg>${InvalidEmailFormat}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.390" endtime="20240124 14:19:02.390"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${InvalidEmailMessage}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.390" endtime="20240124 14:19:02.390"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.391" endtime="20240124 14:19:02.391"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${InvalidEmailMessage}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.391" endtime="20240124 14:19:02.391"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.391" endtime="20240124 14:19:02.391"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.388" endtime="20240124 14:19:02.391"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.388" endtime="20240124 14:19:02.391"/>
+</kw>
+<tag>Login Page</tag>
+<status status="FAIL" starttime="20240124 14:19:02.387" endtime="20240124 14:19:02.391">No browser is open.</status>
+</test>
+<test id="s1-t5" name="TC-003 - Input Invalid Password" line="27">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Input Invalid Password</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Input Invalid Password" library="Login_Page_Keywords">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Pass}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<msg timestamp="20240124 14:19:02.393" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:02.393" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:02.393" endtime="20240124 14:19:02.394"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Pass}</arg>
+<arg>${InvalidPassFormat}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.394" endtime="20240124 14:19:02.394"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Pass}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.395" endtime="20240124 14:19:02.395"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.395" endtime="20240124 14:19:02.395"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.393" endtime="20240124 14:19:02.395"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.392" endtime="20240124 14:19:02.395"/>
+</kw>
+<tag>Login Page</tag>
+<status status="FAIL" starttime="20240124 14:19:02.392" endtime="20240124 14:19:02.395">No browser is open.</status>
+</test>
+<test id="s1-t6" name="TC-004 - User should not be able to login using invalid account" line="31">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should not be able to login using invalid account</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should not be able to login using invalid account" library="Login_Page_Keywords">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<msg timestamp="20240124 14:19:02.397" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:02.397" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:02.397" endtime="20240124 14:19:02.399"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<arg>${InvalidEmail}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.399" endtime="20240124 14:19:02.399"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Pass}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.399" endtime="20240124 14:19:02.399"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Pass}</arg>
+<arg>${InvalidPass}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.399" endtime="20240124 14:19:02.399"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LoginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.399" endtime="20240124 14:19:02.399"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${InvalidEmailPassMessage}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.399" endtime="20240124 14:19:02.400"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${InvalidEmailPassMessage}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.400" endtime="20240124 14:19:02.400"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.400" endtime="20240124 14:19:02.400"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.397" endtime="20240124 14:19:02.400"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.397" endtime="20240124 14:19:02.400"/>
+</kw>
+<tag>Login Page</tag>
+<status status="FAIL" starttime="20240124 14:19:02.396" endtime="20240124 14:19:02.400">No browser is open.</status>
+</test>
+<test id="s1-t7" name="TC-005 - User should be able to check/uncheck Remember me in Retail Login Page" line="35">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to check/uncheck Remember me in Retail Login Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to check/uncheck Remember me in Retail Login Page" library="Login_Page_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${RememberCheck}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:02.402" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:02.403" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:02.402" endtime="20240124 14:19:02.404"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RememberCheck}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.404" endtime="20240124 14:19:02.404"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${RememberCheck}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.404" endtime="20240124 14:19:02.404"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.404" endtime="20240124 14:19:02.404"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.402" endtime="20240124 14:19:02.404"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.401" endtime="20240124 14:19:02.404"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to check/uncheck Remember me in Retail Login Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to check/uncheck Remember me in Retail Login Page" library="Login_Page_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${RememberCheck}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:02.405" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:02.406" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:02.405" endtime="20240124 14:19:02.406"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RememberCheck}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.407" endtime="20240124 14:19:02.407"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${RememberCheck}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.407" endtime="20240124 14:19:02.407"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.407" endtime="20240124 14:19:02.407"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.405" endtime="20240124 14:19:02.407"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.404" endtime="20240124 14:19:02.407"/>
+</kw>
+<tag>Login Page</tag>
+<status status="FAIL" starttime="20240124 14:19:02.401" endtime="20240124 14:19:02.407">Several failures occurred:
+
+1) No browser is open.
+
+2) No browser is open.</status>
+</test>
+<test id="s1-t8" name="TC-006 - User should be able to click Forgot Password in Retail Login Page" line="40">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to click Forgot Password in Retail Login Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to click Forgot Password in Retail Login Page" library="Login_Page_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Forgot}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:02.410" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:02.410" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:02.409" endtime="20240124 14:19:02.411"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Forgot}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.411" endtime="20240124 14:19:02.411"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Forgot}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.411" endtime="20240124 14:19:02.411"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.411" endtime="20240124 14:19:02.411"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.409" endtime="20240124 14:19:02.411"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.409" endtime="20240124 14:19:02.411"/>
+</kw>
+<tag>Forgot Password</tag>
+<tag>Login Page</tag>
+<status status="FAIL" starttime="20240124 14:19:02.408" endtime="20240124 14:19:02.412">No browser is open.</status>
+</test>
+<test id="s1-t9" name="TC-007 - User should be able to view Forgot Password Page in Retail Forgot Password Page" line="44">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to view Forgot Password Page in Retail Forgot Password Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to view Forgot Password Page in Retail Forgot Password Page" library="Login_Page_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageContainer}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:02.415" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:02.415" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:02.414" endtime="20240124 14:19:02.416"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageLogo}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.416" endtime="20240124 14:19:02.416"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageHeader}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.416" endtime="20240124 14:19:02.417"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageSubheader}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.417" endtime="20240124 14:19:02.417"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.417" endtime="20240124 14:19:02.417"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageSubmitButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.417" endtime="20240124 14:19:02.417"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageCreateAccountButton}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.417" endtime="20240124 14:19:02.417"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageContainer}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.417" endtime="20240124 14:19:02.417"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageLogo}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.417" endtime="20240124 14:19:02.417"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageHeader}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.417" endtime="20240124 14:19:02.417"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageSubheader}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.417" endtime="20240124 14:19:02.417"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.418" endtime="20240124 14:19:02.418"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageSubmitButton}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.418" endtime="20240124 14:19:02.418"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageCreateAccountButton}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.418" endtime="20240124 14:19:02.418"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.418" endtime="20240124 14:19:02.418"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.414" endtime="20240124 14:19:02.418"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.414" endtime="20240124 14:19:02.418"/>
+</kw>
+<tag>Forgot Password</tag>
+<tag>Login Page</tag>
+<status status="FAIL" starttime="20240124 14:19:02.413" endtime="20240124 14:19:02.419">No browser is open.</status>
+</test>
+<test id="s1-t10" name="TC-008 - User should be albe to view Error Message in Retail Forgot Password Page" line="48">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be albe to view Error Message in Retail Forgot Password Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be albe to view Error Message in Retail Forgot Password Page" library="Login_Page_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:02.421" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:02.421" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:02.421" endtime="20240124 14:19:02.422"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.423" endtime="20240124 14:19:02.423"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<arg>${InvalidEmailFormat}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.423" endtime="20240124 14:19:02.423"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailErrorMessage}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.423" endtime="20240124 14:19:02.423"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailErrorMessage}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.423" endtime="20240124 14:19:02.423"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.423" endtime="20240124 14:19:02.423"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.420" endtime="20240124 14:19:02.423"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.420" endtime="20240124 14:19:02.423"/>
+</kw>
+<tag>Forgot Password</tag>
+<tag>Login Page</tag>
+<status status="FAIL" starttime="20240124 14:19:02.420" endtime="20240124 14:19:02.424">No browser is open.</status>
+</test>
+<test id="s1-t11" name="TC-009 - User should be albe to view Error Message in Retail Forgot Password Page" line="52">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be albe to view Error Message in Retail Forgot Password Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be albe to view Error Message in Retail Forgot Password Page" library="Login_Page_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:02.426" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:02.426" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:02.425" endtime="20240124 14:19:02.427"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.427" endtime="20240124 14:19:02.427"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<arg>${InvalidEmailFormat}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.427" endtime="20240124 14:19:02.427"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailErrorMessage}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.427" endtime="20240124 14:19:02.427"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailErrorMessage}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.428" endtime="20240124 14:19:02.428"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.428" endtime="20240124 14:19:02.428"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.425" endtime="20240124 14:19:02.428"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.425" endtime="20240124 14:19:02.428"/>
+</kw>
+<tag>Forgot Password</tag>
+<tag>Login Page</tag>
+<status status="FAIL" starttime="20240124 14:19:02.424" endtime="20240124 14:19:02.428">No browser is open.</status>
+</test>
+<test id="s1-t12" name="TC-010 - User should be able to Input Valid Email Address in Retail Forgot Password Page" line="56">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to Input Valid Email Address in Retail Forgot Password Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to Input Valid Email Address in Retail Forgot Password Page" library="Login_Page_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:02.430" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:02.431" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:02.430" endtime="20240124 14:19:02.432"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.432" endtime="20240124 14:19:02.432"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.432" endtime="20240124 14:19:02.432"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ForgotPasswordPageEmailTextBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.433" endtime="20240124 14:19:02.433"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.433" endtime="20240124 14:19:02.433"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.429" endtime="20240124 14:19:02.433"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.429" endtime="20240124 14:19:02.433"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>browse back button</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Browse Back Button" library="config">
+<kw name="Go Back" library="SeleniumLibrary">
+<doc>Simulates the user clicking the back button on their browser.</doc>
+<msg timestamp="20240124 14:19:02.434" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:02.434" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:02.434" endtime="20240124 14:19:02.435"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.435" endtime="20240124 14:19:02.435"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.433" endtime="20240124 14:19:02.435"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.433" endtime="20240124 14:19:02.435"/>
+</kw>
+<tag>Forgot Password</tag>
+<tag>Login Page</tag>
+<status status="FAIL" starttime="20240124 14:19:02.429" endtime="20240124 14:19:02.435">Several failures occurred:
+
+1) No browser is open.
+
+2) No browser is open.</status>
+</test>
+<test id="s1-t13" name="TC-011 - User should be able to click Create Account in Retail Login Page" line="61">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to click Create Account in Retail Login Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to click Create Account in Retail Login Page" library="Login_Page_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${CreateAccount}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:02.438" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:02.438" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:02.438" endtime="20240124 14:19:02.440"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${CreateAccount}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.440" endtime="20240124 14:19:02.441"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${CreateAccount}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.441" endtime="20240124 14:19:02.441"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.441" endtime="20240124 14:19:02.441"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.437" endtime="20240124 14:19:02.441"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.437" endtime="20240124 14:19:02.441"/>
+</kw>
+<tag>Login Page</tag>
+<tag>Registration</tag>
+<status status="FAIL" starttime="20240124 14:19:02.436" endtime="20240124 14:19:02.442">No browser is open.</status>
+</test>
+<test id="s1-t14" name="TC-012 - User should be able to view HK Registration Form" line="65">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to view HK Registration Form</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to view HK Registration Form" library="Registration_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationPageBackToLoginButton}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:02.444" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:02.444" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:02.443" endtime="20240124 14:19:02.445"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationJoinPartsLaneHeader}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.445" endtime="20240124 14:19:02.445"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationCompNameLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.446" endtime="20240124 14:19:02.446"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationPostalAddLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.446" endtime="20240124 14:19:02.446"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationPostalAddLine2Label}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.446" endtime="20240124 14:19:02.446"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalAreaLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.446" endtime="20240124 14:19:02.446"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalDistrictLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.446" endtime="20240124 14:19:02.446"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationCompNameTextbox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.446" endtime="20240124 14:19:02.446"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalAddLine1ComboBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.447" endtime="20240124 14:19:02.447"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationPostalAddLine2Textbox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.447" endtime="20240124 14:19:02.447"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalAreaComboBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.447" endtime="20240124 14:19:02.447"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalDistrictComboBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.447" endtime="20240124 14:19:02.447"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationPageBackToLoginButton}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.447" endtime="20240124 14:19:02.447"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationJoinPartsLaneHeader}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.447" endtime="20240124 14:19:02.447"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationCompNameLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.447" endtime="20240124 14:19:02.447"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationPostalAddLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.447" endtime="20240124 14:19:02.447"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationPostalAddLine2Label}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.447" endtime="20240124 14:19:02.448"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalAreaLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.448" endtime="20240124 14:19:02.448"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalDistrictLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.448" endtime="20240124 14:19:02.448"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationCompNameTextbox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.448" endtime="20240124 14:19:02.448"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalAddLine1ComboBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.448" endtime="20240124 14:19:02.448"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationPostalAddLine2Textbox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.448" endtime="20240124 14:19:02.448"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalAreaComboBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.448" endtime="20240124 14:19:02.448"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalDistrictComboBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.448" endtime="20240124 14:19:02.448"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Retail_RegistrationContactFNLabel}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.449" endtime="20240124 14:19:02.449"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationDelAddSameAsPostalLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.449" endtime="20240124 14:19:02.449"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationDelAddLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.449" endtime="20240124 14:19:02.449"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationDelAddLine2Label}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.449" endtime="20240124 14:19:02.449"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelAreaLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.449" endtime="20240124 14:19:02.449"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelDistrictLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.449" endtime="20240124 14:19:02.449"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationOpeningLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.449" endtime="20240124 14:19:02.449"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationClosingLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.449" endtime="20240124 14:19:02.449"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelAddLine1ComboBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.450" endtime="20240124 14:19:02.450"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationDelAddLine2Textbox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.450" endtime="20240124 14:19:02.450"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelAreaComboBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.450" endtime="20240124 14:19:02.450"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelDistrictComboBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.450" endtime="20240124 14:19:02.450"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationOpeningHoursComboBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.450" endtime="20240124 14:19:02.450"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationClosingHoursComboBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.450" endtime="20240124 14:19:02.450"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationDelAddSameAsPostalLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.451" endtime="20240124 14:19:02.451"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationDelAddLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.451" endtime="20240124 14:19:02.451"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationDelAddLine2Label}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.451" endtime="20240124 14:19:02.451"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelAreaLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.451" endtime="20240124 14:19:02.451"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelDistrictLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.451" endtime="20240124 14:19:02.451"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationOpeningLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.452" endtime="20240124 14:19:02.452"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationClosingLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.452" endtime="20240124 14:19:02.452"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelAddLine1ComboBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.452" endtime="20240124 14:19:02.452"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationDelAddLine2Textbox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.452" endtime="20240124 14:19:02.452"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelAreaComboBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.452" endtime="20240124 14:19:02.452"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelDistrictComboBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.452" endtime="20240124 14:19:02.452"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationOpeningHoursComboBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.452" endtime="20240124 14:19:02.452"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationClosingHoursComboBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.452" endtime="20240124 14:19:02.452"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Retail_RegistrationSubmitButton}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.452" endtime="20240124 14:19:02.453"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationContactFNLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.453" endtime="20240124 14:19:02.453"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationContactLNLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.453" endtime="20240124 14:19:02.453"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationContactEmailLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.453" endtime="20240124 14:19:02.453"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationContactCompanyPhoneNumTextBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.453" endtime="20240124 14:19:02.453"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationContactLandlineTextBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.453" endtime="20240124 14:19:02.453"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationTNC&amp;PNLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.453" endtime="20240124 14:19:02.453"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationSubmitButton}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.453" endtime="20240124 14:19:02.454"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationContactFNLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.454" endtime="20240124 14:19:02.454"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationContactLNLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.454" endtime="20240124 14:19:02.454"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationContactEmailLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.454" endtime="20240124 14:19:02.454"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationContactCompanyPhoneNumTextBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.454" endtime="20240124 14:19:02.454"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationContactCompanyPhoneNumTextBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.454" endtime="20240124 14:19:02.454"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationTNC&amp;PNLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.454" endtime="20240124 14:19:02.454"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationSubmitButton}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.454" endtime="20240124 14:19:02.454"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Retail_RegistrationJoinPartsLaneHeader}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.454" endtime="20240124 14:19:02.454"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.443" endtime="20240124 14:19:02.455"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.443" endtime="20240124 14:19:02.455"/>
+</kw>
+<tag>Login Page</tag>
+<tag>Registration</tag>
+<status status="FAIL" starttime="20240124 14:19:02.442" endtime="20240124 14:19:02.455">No browser is open.</status>
+</test>
+<test id="s1-t15" name="TC-013 - User should be able to input details in Registration Form Page" line="69">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to input Company Name</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to input Company Name" library="Registration_Keywords">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Retail_RegistrationCompNameTextbox}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20240124 14:19:02.457" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:02.457" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:02.456" endtime="20240124 14:19:02.458"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationCompNameTextbox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.458" endtime="20240124 14:19:02.458"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Retail_RegistrationCompNameTextbox}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.458" endtime="20240124 14:19:02.458"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Retail_RegistrationCompNameTextbox}</arg>
+<arg>${Retail_RegistrationCompNameValue}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.459" endtime="20240124 14:19:02.459"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationCompNameTextbox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.459" endtime="20240124 14:19:02.459"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.459" endtime="20240124 14:19:02.459"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.456" endtime="20240124 14:19:02.459"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.456" endtime="20240124 14:19:02.459"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to click Postal Address Dropdown for HK Registration Form</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to click Postal Address Dropdown for HK Registration Form" library="Registration_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalAddLine1ComboBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:02.461" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:02.461" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:02.460" endtime="20240124 14:19:02.462"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalAddLine1ComboBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.462" endtime="20240124 14:19:02.462"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalAddLine1ComboBox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.462" endtime="20240124 14:19:02.462"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.462" endtime="20240124 14:19:02.462"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.460" endtime="20240124 14:19:02.462"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.459" endtime="20240124 14:19:02.462"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to input text in Postal Address for HK Registration Form</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to input text in Postal Address for HK Registration Form" library="Registration_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalAddLine1Texbox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:02.464" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:02.464" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:02.463" endtime="20240124 14:19:02.465"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalAddLine1Texbox}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.465" endtime="20240124 14:19:02.465"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalAddLine1Texbox}</arg>
+<arg>${Retail_HK_RegistrationPostalAddLine1Value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.465" endtime="20240124 14:19:02.465"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalAddLine1Texbox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.465" endtime="20240124 14:19:02.465"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.465" endtime="20240124 14:19:02.465"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.463" endtime="20240124 14:19:02.465"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.463" endtime="20240124 14:19:02.465"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to select Random Postal Address from suggestions for HK Registration Form</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to select Random Postal Address from suggestions for HK Registration Form" library="Registration_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalAddLine1ComboBoxOptionsContainer}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:02.468" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:02.468" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:02.467" endtime="20240124 14:19:02.469"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${PostalAddressCount}</var>
+<arg>${Retail_HK_RegistrationPostalAddLine1ComboBoxOptionsContainer}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.469" endtime="20240124 14:19:02.469"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${PostalAddressRanIndex}</var>
+<arg>random.randint(1,${PostalAddressCount})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.469" endtime="20240124 14:19:02.469"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalAddLine1ComboBoxOptionsContainer}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.469" endtime="20240124 14:19:02.469"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>(//form//div[@formgroupname='postalAddress']//ng-dropdown-panel//div//div[@role='option'])[${PostalAddressRanIndex}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.469" endtime="20240124 14:19:02.469"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>(//form//div[@formgroupname='postalAddress']//ng-dropdown-panel//div//div[@role='option'])[${PostalAddressRanIndex}]</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.470" endtime="20240124 14:19:02.470"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//form//div[@formgroupname='postalAddress']//ng-dropdown-panel//div//div[@role='option'])[${PostalAddressRanIndex}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.470" endtime="20240124 14:19:02.470"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.470" endtime="20240124 14:19:02.470"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.466" endtime="20240124 14:19:02.470"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.466" endtime="20240124 14:19:02.470"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to input Postal Address Line 2</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to input Postal Address Line 2" library="Registration_Keywords">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Retail_RegistrationPostalAddLine2Textbox}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20240124 14:19:02.472" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:02.472" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:02.471" endtime="20240124 14:19:02.473"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationPostalAddLine2Textbox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.473" endtime="20240124 14:19:02.473"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Retail_RegistrationPostalAddLine2Textbox}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.473" endtime="20240124 14:19:02.473"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Retail_RegistrationPostalAddLine2Textbox}</arg>
+<arg>${Retail_RegistrationPostalAddLine2Value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.473" endtime="20240124 14:19:02.473"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationPostalAddLine2Textbox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.473" endtime="20240124 14:19:02.473"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.473" endtime="20240124 14:19:02.473"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.471" endtime="20240124 14:19:02.474"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.471" endtime="20240124 14:19:02.474"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to click Area Dropdown in Postal Address for HK Registration Form</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to click Area Dropdown in Postal Address for HK Registration Form" library="Registration_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalAreaComboBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:02.475" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:02.475" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:02.475" endtime="20240124 14:19:02.476"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalAreaComboBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.476" endtime="20240124 14:19:02.476"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalAreaComboBox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.477" endtime="20240124 14:19:02.477"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.477" endtime="20240124 14:19:02.477"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.474" endtime="20240124 14:19:02.477"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.474" endtime="20240124 14:19:02.477"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to select Random Postal Address Area for HK Registration Form</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to select Random Postal Address Area for HK Registration Form" library="Registration_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalAreaComboBoxOptionsContainer}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:02.478" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:02.479" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:02.478" endtime="20240124 14:19:02.479"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${PostalAreaCount}</var>
+<arg>${Retail_HK_RegistrationPostalAreaComboBoxOptionsContainer}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.480" endtime="20240124 14:19:02.480"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${PostalAreaRanIndex}</var>
+<arg>random.randint(1,${PostalAreaCount})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.480" endtime="20240124 14:19:02.480"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalAreaComboBoxOptionsContainer}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.480" endtime="20240124 14:19:02.480"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>(//form//div[@formgroupname='postalAddress']//ng-select[@formcontrolname='area']//ng-dropdown-panel//div//div[@role='option'])[${PostalAreaRanIndex}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.480" endtime="20240124 14:19:02.480"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>(//form//div[@formgroupname='postalAddress']//ng-select[@formcontrolname='area']//ng-dropdown-panel//div//div[@role='option'])[${PostalAreaRanIndex}]</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.480" endtime="20240124 14:19:02.480"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//form//div[@formgroupname='postalAddress']//ng-select[@formcontrolname='area']//ng-dropdown-panel//div//div[@role='option'])[${PostalAreaRanIndex}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.480" endtime="20240124 14:19:02.480"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:02.480" endtime="20240124 14:19:02.480"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.477" endtime="20240124 14:19:02.481"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.477" endtime="20240124 14:19:02.481"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to click District Dropdown in Postal Address for HK Registration Form</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to click District Dropdown in Postal Address for HK Registration Form" library="Registration_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalDistrictComboBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:06.503" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:06.503" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:06.502" endtime="20240124 14:19:06.504"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalDistrictComboBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.504" endtime="20240124 14:19:06.504"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalDistrictComboBox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.504" endtime="20240124 14:19:06.504"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.504" endtime="20240124 14:19:06.504"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.481" endtime="20240124 14:19:06.505"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:02.481" endtime="20240124 14:19:06.505"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to select Random Postal Address District for HK Registration Form</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to select Random Postal Address District for HK Registration Form" library="Registration_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalDistrictComboBoxOptionsContainer}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:06.506" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:06.506" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:06.506" endtime="20240124 14:19:06.507"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${PostalDistrictCount}</var>
+<arg>${Retail_HK_RegistrationPostalDistrictComboBoxOptionsContainer}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.508" endtime="20240124 14:19:06.508"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${PostalDistrictRanIndex}</var>
+<arg>random.randint(1,${PostalDistrictCount})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.508" endtime="20240124 14:19:06.508"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationPostalDistrictComboBoxOptionsContainer}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.508" endtime="20240124 14:19:06.508"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>(//form//div[@formgroupname='postalAddress']//ng-select[@formcontrolname='district']//ng-dropdown-panel//div//div[@role='option'])[${PostalDistrictRanIndex}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.508" endtime="20240124 14:19:06.508"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>(//form//div[@formgroupname='postalAddress']//ng-select[@formcontrolname='district']//ng-dropdown-panel//div//div[@role='option'])[${PostalDistrictRanIndex}]</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.508" endtime="20240124 14:19:06.508"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//form//div[@formgroupname='postalAddress']//ng-select[@formcontrolname='district']//ng-dropdown-panel//div//div[@role='option'])[${PostalDistrictRanIndex}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.508" endtime="20240124 14:19:06.508"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.508" endtime="20240124 14:19:06.508"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.505" endtime="20240124 14:19:06.508"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.505" endtime="20240124 14:19:06.509"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to click Delivery Address Dropdown for HK Registration Form</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to click Delivery Address Dropdown for HK Registration Form" library="Registration_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelAddLine1ComboBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:06.510" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:06.510" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:06.510" endtime="20240124 14:19:06.511"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelAddLine1ComboBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.511" endtime="20240124 14:19:06.511"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelAddLine1ComboBox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.512" endtime="20240124 14:19:06.512"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.512" endtime="20240124 14:19:06.512"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.509" endtime="20240124 14:19:06.512"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.509" endtime="20240124 14:19:06.512"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to input text in Deliver Address for HK Registration Form</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to input text in Deliver Address for HK Registration Form" library="Registration_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelAddLine1Texbox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:06.513" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:06.513" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:06.513" endtime="20240124 14:19:06.514"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelAddLine1Texbox}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.514" endtime="20240124 14:19:06.514"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelAddLine1Texbox}</arg>
+<arg>${Retail_HK_RegistrationDelAddLine1Value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.514" endtime="20240124 14:19:06.514"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelAddLine1Texbox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.514" endtime="20240124 14:19:06.514"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.515" endtime="20240124 14:19:06.515"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.512" endtime="20240124 14:19:06.515"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.512" endtime="20240124 14:19:06.515"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to select Random Delivery Address from suggestions for HK Registration Form</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to select Random Delivery Address from suggestions for HK Registration Form" library="Registration_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelAddLine1ComboBoxOptionsContainer}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:06.517" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:06.517" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:06.516" endtime="20240124 14:19:06.518"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${DelAddressCount}</var>
+<arg>${Retail_HK_RegistrationDelAddLine1ComboBoxOptionsContainer}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.518" endtime="20240124 14:19:06.518"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${DelAddressRanIndex}</var>
+<arg>random.randint(1,${DelAddressCount})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.518" endtime="20240124 14:19:06.518"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelAddLine1ComboBoxOptionsContainer}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.518" endtime="20240124 14:19:06.518"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>(//form//div[@formgroupname='deliveryAddress']//ng-dropdown-panel//div//div[@role='option'])[${DelAddressRanIndex}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.519" endtime="20240124 14:19:06.519"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>(//form//div[@formgroupname='deliveryAddress']//ng-dropdown-panel//div//div[@role='option'])[${DelAddressRanIndex}]</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.519" endtime="20240124 14:19:06.519"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//form//div[@formgroupname='deliveryAddress']//ng-dropdown-panel//div//div[@role='option'])[${DelAddressRanIndex}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.519" endtime="20240124 14:19:06.519"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.519" endtime="20240124 14:19:06.519"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.515" endtime="20240124 14:19:06.519"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.515" endtime="20240124 14:19:06.519"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to input Delivery Address Line 2</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to input Delivery Address Line 2" library="Registration_Keywords">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Retail_RegistrationDelAddLine2Textbox}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20240124 14:19:06.521" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:06.521" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:06.520" endtime="20240124 14:19:06.522"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationDelAddLine2Textbox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.522" endtime="20240124 14:19:06.522"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Retail_RegistrationDelAddLine2Textbox}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.522" endtime="20240124 14:19:06.522"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Retail_RegistrationDelAddLine2Textbox}</arg>
+<arg>${Retail_RegistrationDelAddLine2Value}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.522" endtime="20240124 14:19:06.522"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationDelAddLine2Textbox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.522" endtime="20240124 14:19:06.523"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.523" endtime="20240124 14:19:06.523"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.520" endtime="20240124 14:19:06.523"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.520" endtime="20240124 14:19:06.523"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to click Area Dropdown in Delivery Address for HK Registration Form</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to click Area Dropdown in Delivery Address for HK Registration Form" library="Registration_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelAreaComboBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:06.525" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:06.525" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:06.524" endtime="20240124 14:19:06.527"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelAreaComboBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.527" endtime="20240124 14:19:06.527"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelAreaComboBox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.527" endtime="20240124 14:19:06.527"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.527" endtime="20240124 14:19:06.527"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.523" endtime="20240124 14:19:06.527"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.523" endtime="20240124 14:19:06.528"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to select Random Delivery Address Area for HK Registration Form</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to select Random Delivery Address Area for HK Registration Form" library="Registration_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelAreaComboBoxOptionsContainer}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:06.529" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:06.529" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:06.528" endtime="20240124 14:19:06.530"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${DelAreaCount}</var>
+<arg>${Retail_HK_RegistrationDelAreaComboBoxOptionsContainer}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.530" endtime="20240124 14:19:06.530"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${DelAreaRanIndex}</var>
+<arg>random.randint(1,${DelAreaCount})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.531" endtime="20240124 14:19:06.531"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelAreaComboBoxOptionsContainer}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.531" endtime="20240124 14:19:06.531"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>(//form//div[@formgroupname='deliveryAddress']//ng-select[@formcontrolname='area']//ng-dropdown-panel//div//div[@role='option'])[${DelAreaRanIndex}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.531" endtime="20240124 14:19:06.531"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>(//form//div[@formgroupname='deliveryAddress']//ng-select[@formcontrolname='area']//ng-dropdown-panel//div//div[@role='option'])[${DelAreaRanIndex}]</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.531" endtime="20240124 14:19:06.531"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//form//div[@formgroupname='deliveryAddress']//ng-select[@formcontrolname='area']//ng-dropdown-panel//div//div[@role='option'])[${DelAreaRanIndex}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.531" endtime="20240124 14:19:06.531"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.531" endtime="20240124 14:19:06.531"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.528" endtime="20240124 14:19:06.531"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.528" endtime="20240124 14:19:06.531"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to click District Dropdown in Delivery Address for HK Registration Form</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to click District Dropdown in Delivery Address for HK Registration Form" library="Registration_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelDistrictComboBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:06.534" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:06.534" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:06.533" endtime="20240124 14:19:06.536"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelDistrictComboBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.536" endtime="20240124 14:19:06.536"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelDistrictComboBox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.536" endtime="20240124 14:19:06.536"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.536" endtime="20240124 14:19:06.536"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.532" endtime="20240124 14:19:06.536"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.532" endtime="20240124 14:19:06.536"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to select Random Delivery Address District for HK Registration Form</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to select Random Delivery Address District for HK Registration Form" library="Registration_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelDistrictComboBoxOptionsContainer}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:06.539" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:06.539" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:06.537" endtime="20240124 14:19:06.541"/>
+</kw>
+<kw name="Get Element Count" library="SeleniumLibrary">
+<var>${DelDistrictCount}</var>
+<arg>${Retail_HK_RegistrationDelDistrictComboBoxOptionsContainer}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.541" endtime="20240124 14:19:06.541"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${DelDistrictRanIndex}</var>
+<arg>random.randint(1,${DelDistrictCount})</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.541" endtime="20240124 14:19:06.541"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationDelDistrictComboBoxOptionsContainer}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.542" endtime="20240124 14:19:06.542"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>(//form//div[@formgroupname='deliveryAddress']//ng-select[@formcontrolname='district']//ng-dropdown-panel//div//div[@role='option'])[${DelDistrictRanIndex}]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.542" endtime="20240124 14:19:06.542"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>(//form//div[@formgroupname='deliveryAddress']//ng-select[@formcontrolname='district']//ng-dropdown-panel//div//div[@role='option'])[${DelDistrictRanIndex}]</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.542" endtime="20240124 14:19:06.542"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>(//form//div[@formgroupname='deliveryAddress']//ng-select[@formcontrolname='district']//ng-dropdown-panel//div//div[@role='option'])[${DelDistrictRanIndex}]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.542" endtime="20240124 14:19:06.542"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.542" endtime="20240124 14:19:06.542"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.537" endtime="20240124 14:19:06.542"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.537" endtime="20240124 14:19:06.542"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to click Opening Hours</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to click Opening Hours" library="Registration_Keywords">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Retail_RegistrationOpeningHoursComboBox}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20240124 14:19:06.544" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:06.544" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:06.543" endtime="20240124 14:19:06.545"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationOpeningHoursComboBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.545" endtime="20240124 14:19:06.545"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationOpeningHoursComboBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.545" endtime="20240124 14:19:06.545"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Retail_RegistrationOpeningHoursComboBox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.545" endtime="20240124 14:19:06.545"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.545" endtime="20240124 14:19:06.545"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.543" endtime="20240124 14:19:06.546"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.543" endtime="20240124 14:19:06.546"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to select Opening Hours</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to select Opening Hours" library="Registration_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationOpeningHoursComboBoxValue}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:06.547" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:06.547" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:06.547" endtime="20240124 14:19:06.548"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationOpeningHoursComboBoxValue}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.549" endtime="20240124 14:19:06.549"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Retail_RegistrationOpeningHoursComboBoxValue}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.549" endtime="20240124 14:19:06.549"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.549" endtime="20240124 14:19:06.549"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.546" endtime="20240124 14:19:06.549"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.546" endtime="20240124 14:19:06.549"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to click Closing Hours</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to click Closing Hours" library="Registration_Keywords">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Retail_RegistrationClosingHoursComboBox}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20240124 14:19:06.551" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:06.551" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:06.550" endtime="20240124 14:19:06.552"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationClosingHoursComboBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.552" endtime="20240124 14:19:06.552"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationClosingHoursComboBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.552" endtime="20240124 14:19:06.552"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Retail_RegistrationClosingHoursComboBox}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.552" endtime="20240124 14:19:06.552"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.552" endtime="20240124 14:19:06.552"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.550" endtime="20240124 14:19:06.552"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.549" endtime="20240124 14:19:06.552"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to select Closing Hours</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to select Closing Hours" library="Registration_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationClosingHoursComboBoxValue}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20240124 14:19:06.554" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:06.554" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:06.553" endtime="20240124 14:19:06.555"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationClosingHoursComboBoxValue}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.555" endtime="20240124 14:19:06.555"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Retail_RegistrationClosingHoursComboBoxValue}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.555" endtime="20240124 14:19:06.555"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.555" endtime="20240124 14:19:06.555"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.553" endtime="20240124 14:19:06.555"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.553" endtime="20240124 14:19:06.556"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to input Contact First Name</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to input Contact First Name" library="Registration_Keywords">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Retail_RegistrationContactFNTextBox}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20240124 14:19:06.557" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:06.557" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:06.556" endtime="20240124 14:19:06.557"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationContactFNTextBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.558" endtime="20240124 14:19:06.558"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Retail_RegistrationContactFNTextBox}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.558" endtime="20240124 14:19:06.558"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Retail_RegistrationContactFNTextBox}</arg>
+<arg>${Retail_RegistrationFNValue}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.558" endtime="20240124 14:19:06.558"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationContactFNTextBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.558" endtime="20240124 14:19:06.558"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.558" endtime="20240124 14:19:06.558"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.556" endtime="20240124 14:19:06.558"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.556" endtime="20240124 14:19:06.558"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to input Contact Last Name</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to input Contact Last Name" library="Registration_Keywords">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Retail_RegistrationContactLNTextBox}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20240124 14:19:06.560" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:06.560" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:06.559" endtime="20240124 14:19:06.561"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationContactLNTextBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.561" endtime="20240124 14:19:06.561"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Retail_RegistrationContactLNTextBox}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.561" endtime="20240124 14:19:06.561"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Retail_RegistrationContactLNTextBox}</arg>
+<arg>${Retail_RegistrationLNValue}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.561" endtime="20240124 14:19:06.561"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationContactLNTextBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.561" endtime="20240124 14:19:06.561"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.561" endtime="20240124 14:19:06.561"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.559" endtime="20240124 14:19:06.562"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.559" endtime="20240124 14:19:06.562"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to input Email Address</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to input Email Address" library="Registration_Keywords">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Retail_RegistrationContactEmailTextBox}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20240124 14:19:06.564" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:06.564" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:06.563" endtime="20240124 14:19:06.565"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_RegistrationContactEmailTextBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.565" endtime="20240124 14:19:06.565"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Retail_RegistrationContactEmailTextBox}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.565" endtime="20240124 14:19:06.565"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Retail_RegistrationContactEmailTextBox}</arg>
+<arg>${Retail_RegistrationEmailValue}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.565" endtime="20240124 14:19:06.565"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_RegistrationContactEmailTextBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.565" endtime="20240124 14:19:06.565"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.565" endtime="20240124 14:19:06.565"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.562" endtime="20240124 14:19:06.565"/>
+</kw>
+<status status="FAIL" starttime="20240124 14:19:06.562" endtime="20240124 14:19:06.565"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to input Company Phone Number for HK Registration Form</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to input Company Phone Number for HK Registration Form" library="Registration_Keywords">
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationContactCompanyPhoneNumTextBox}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<msg timestamp="20240124 14:19:06.567" level="INFO">Cannot capture screenshot because no browser is open.</msg>
+<msg timestamp="20240124 14:19:06.567" level="FAIL">No browser is open.</msg>
+<status status="FAIL" starttime="20240124 14:19:06.566" endtime="20240124 14:19:06.568"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationContactCompanyPhoneNumTextBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.568" endtime="20240124 14:19:06.568"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationContactCompanyPhoneNumTextBox}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.568" endtime="20240124 14:19:06.568"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationContactCompanyPhoneNumTextBox}</arg>
+<arg>${Retail_RegistrationCompPhoneNumValue}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.568" endtime="20240124 14:19:06.568"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_RegistrationContactCompanyPhoneNumTextBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="NOT RUN" starttime="20240124 14:19:06.568" endtime="20240124 14:19:06.568"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
