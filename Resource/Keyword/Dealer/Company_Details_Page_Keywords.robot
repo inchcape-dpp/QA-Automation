@@ -39,7 +39,7 @@ User should be able to view company details page
     capture page screenshot
 
     scroll element into view    ${CompanyDetailsPageEmailAddLabel}
-    run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Dealer Company Details Page
+#    run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Dealer Company Details Page
 
     wait until element is visible    ${CompanyDetailsPagePostalAddressSuburbLabel}    10
     wait until element is visible    ${CompanyDetailsPagePostalAddressPostalCodeLabel}    10

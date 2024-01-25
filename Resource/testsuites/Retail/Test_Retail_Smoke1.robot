@@ -17,9 +17,18 @@ TC-001 - Verify Login Page
     [Tags]    TC001    Login Page
     run keyword and continue on failure    Verify Login Page
 
-TC-002 - Verify Login Page
+TC-002 - Email
     [Tags]    TC001    Login Page
     run keyword and continue on failure    New browser tab
+    run keyword and continue on failure    Enter Yop Mail
+    run keyword and continue on failure    Switch to Inbox List Frame
+    run keyword and continue on failure    Click Inbox Messages
+    run keyword and continue on failure    Unselect Mail Frame
+    run keyword and continue on failure    Switch to Inbox Message Frame
+    run keyword and continue on failure    Read Message
+    run keyword and continue on failure    Get Sender Email
+    run keyword and continue on failure    Get Email Message
+
 
 #TC-002 - Input Valid Username
 #    [Tags]    Login Page
