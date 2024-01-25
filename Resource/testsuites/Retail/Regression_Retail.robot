@@ -717,6 +717,8 @@ TC-100 - User should be able to view account saved carts page
     [Tags]    Saved Carts Page
     run keyword and continue on failure    User should be able to access account from top navigaton
     run keyword and continue on failure    User should be able to view account saved carts page
+    run keyword and continue on failure    reload page
+    run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view Saved Carts Panel
     run keyword and continue on failure    User should be able to view Saved Carts List in Retail Account Saved Carts Page
 
