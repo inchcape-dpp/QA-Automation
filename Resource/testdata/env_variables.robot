@@ -18,6 +18,9 @@ ${s1BE}             https://backoffice.coyzchwfjr-inchcaped2-s1-public.model-t.c
 ${s1Retail}         https://retail.coyzchwfjr-inchcaped2-s1-public.model-t.cc.commerce.ondemand.com/
 ${s1Dealer}         https://dealer.coyzchwfjr-inchcaped2-s1-public.model-t.cc.commerce.ondemand.com/dppdealer/login
 
+${s1HKRetail}    https://hkretail.coyzchwfjr-inchcaped2-s1-public.model-t.cc.commerce.ondemand.com/hkretail
+${s1HKDealer}    https://hkdealer.coyzchwfjr-inchcaped2-s1-public.model-t.cc.commerce.ondemand.com/hkdealer
+
 #------------------------S2------------------------
 ${s2BE}             https://backoffice.coyzchwfjr-inchcaped2-s2-public.model-t.cc.commerce.ondemand.com/backoffice
 ${s2Retail}         https://retail.coyzchwfjr-inchcaped2-s2-public.model-t.cc.commerce.ondemand.com/dppretail/
@@ -39,8 +42,6 @@ ${p1HKDealer}    	https://www.partslane.com.hk/hkdealer
 #------------------------Waf------------------------
 ${wafRetail}    https://wafretail.partslane.com.au
 
-#------------------------YopMail------------------------
-${YopMail}    https://yopmail.com/en/
 
 
 

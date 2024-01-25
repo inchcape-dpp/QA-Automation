@@ -210,11 +210,11 @@ ${ReturnPageReturnHeader}    //h3[@class='return-requests-heading']
 ${ReturnPageTotalReturnRequests}    //h3[@class='return-requests-heading']//span
 ${ReturnPageFilterRow}    //dpp-return-request-list//div[@class='row']
 
-${ReturnPageStatusFilter}    //div[@class='col-md-3 pr-0' or @class='col-10 col-sm-10 col-md-3 pr-lg-0 pr-0 pr-md-1 pl-0 pl-md-3']//div[@class='ng-select-container ng-has-value']
-${RetrunPageStatusFilterALL}    //div[@class='col-md-3 pr-0' or @class='col-10 col-sm-10 col-md-3 pr-lg-0 pr-0 pr-md-1 pl-0 pl-md-3']//div[@role='option']//span[contains(text(),'All')]
-${RetrunPageStatusFilterAccepted}    //div[@class='col-md-3 pr-0' or @class='col-10 col-sm-10 col-md-3 pr-lg-0 pr-0 pr-md-1 pl-0 pl-md-3']//div[@role='option']//span[contains(text(),'Accepted')]
-${RetrunPageStatusFilterDeclined}    //div[@class='col-md-3 pr-0' or @class='col-10 col-sm-10 col-md-3 pr-lg-0 pr-0 pr-md-1 pl-0 pl-md-3']//div[@role='option']//span[contains(text(),'Declined')]
-${RetrunPageStatusFilterInProgress}    //div[@class='col-md-3 pr-0' or @class='col-10 col-sm-10 col-md-3 pr-lg-0 pr-0 pr-md-1 pl-0 pl-md-3']//div[@role='option']//span[contains(text(),'In Progress')]
+${ReturnPageStatusFilter}    //div[@class='col-11 col-md-3 pr-lg-0 pr-1 pr-md-1 pl-0 pl-md-3' or @class='col-10 col-sm-10 col-md-3 pr-lg-0 pr-0 pr-md-1 pl-0 pl-md-3']//div[@class='ng-select-container ng-has-value']
+${RetrunPageStatusFilterALL}    //div[@class='col-11 col-md-3 pr-lg-0 pr-1 pr-md-1 pl-0 pl-md-3' or @class='col-10 col-sm-10 col-md-3 pr-lg-0 pr-0 pr-md-1 pl-0 pl-md-3']//div[@role='option']//span[contains(text(),'All')]
+${RetrunPageStatusFilterAccepted}    //div[@class='col-11 col-md-3 pr-lg-0 pr-1 pr-md-1 pl-0 pl-md-3' or @class='col-10 col-sm-10 col-md-3 pr-lg-0 pr-0 pr-md-1 pl-0 pl-md-3']//div[@role='option']//span[contains(text(),'Accepted')]
+${RetrunPageStatusFilterDeclined}    //div[@class='col-11 col-md-3 pr-lg-0 pr-1 pr-md-1 pl-0 pl-md-3' or @class='col-10 col-sm-10 col-md-3 pr-lg-0 pr-0 pr-md-1 pl-0 pl-md-3']//div[@role='option']//span[contains(text(),'Declined')]
+${RetrunPageStatusFilterInProgress}    //div[@class='col-11 col-md-3 pr-lg-0 pr-1 pr-md-1 pl-0 pl-md-3' or @class='col-10 col-sm-10 col-md-3 pr-lg-0 pr-0 pr-md-1 pl-0 pl-md-3']//div[@role='option']//span[contains(text(),'In Progress')]
 
 ${ReturnPageDateFilter}    //button[@class='calendar']
 ${ReturnPageDateFilterContainer}    //ngb-datepicker[@class='dropdown-menu show']

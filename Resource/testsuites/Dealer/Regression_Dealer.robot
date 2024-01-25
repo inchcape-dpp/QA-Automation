@@ -625,6 +625,8 @@ TC-117 - User should be able to click clear button from Search Box in Dealer Mes
 
 TC-118 - User should be able to click and send message on read General Enquiry in Dealer Message Page
     [Tags]    Home Page    Messages
+    run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
+    run keyword and continue on failure    User should be able to select General Enquiry filter in Dealer Messages Page
     run keyword and continue on failure    User should be able to view read General Enquiry in Dealer Message Page
     run keyword and continue on failure    User should be able to click read General Enquiry in Dealer Message Page
     run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
@@ -634,8 +636,11 @@ TC-118 - User should be able to click and send message on read General Enquiry i
     run keyword and continue on failure    User should be able to click send in Dealer Messages Details Page
     run keyword and continue on failure    User should be able to click Back to All Message in Dealer Messages Details Page
 
+
 TC-119 - User should be able to click and send message on read Order Enquiry in Dealer Message Page
     [Tags]    Home Page    Messages
+    run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
+    run keyword and continue on failure    User should be able to select Order Enquiry filter in Dealer Messages Page
     run keyword and continue on failure    User should be able to view read Order Enquiry in Dealer Message Page
     run keyword and continue on failure    User should be able to click read Order Enquiry in Dealer Message Page
     run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
@@ -647,6 +652,8 @@ TC-119 - User should be able to click and send message on read Order Enquiry in 
 
 TC-120 - User should be able to click and send message on read Return Enquiry in Dealer Message Page
     [Tags]    Home Page    Messages
+    run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
+    run keyword and continue on failure    User should be able to select Return Enquiry filter in Dealer Messages Page
     run keyword and continue on failure    User should be able to view read Return Enquiry in Dealer Message Page
     run keyword and continue on failure    User should be able to click read Return Enquiry in Dealer Message Page
     run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
@@ -658,6 +665,8 @@ TC-120 - User should be able to click and send message on read Return Enquiry in
 
 TC-121 - User should be able to click and send message on read Product Enquiry in Dealer Message Page
     [Tags]    Home Page    Messages
+    run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
+    run keyword and continue on failure    User should be able to select Product Enquiry filter in Dealer Messages Page
     run keyword and continue on failure    User should be able to view read Product Enquiry in Dealer Message Page
     run keyword and continue on failure    User should be able to click read Product Enquiry in Dealer Message Page
     run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
@@ -669,6 +678,8 @@ TC-121 - User should be able to click and send message on read Product Enquiry i
 
 TC-122 - User should be able to click and send message on unread General Enquiry in Dealer Message Page
     [Tags]    Home Page    Messages
+    run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
+    run keyword and continue on failure    User should be able to select General Enquiry filter in Dealer Messages Page
     run keyword and continue on failure    User should be able to view unread General Enquiry in Dealer Message Page
     run keyword and continue on failure    User should be able to click unread General Enquiry in Dealer Message Page
     run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
@@ -680,6 +691,8 @@ TC-122 - User should be able to click and send message on unread General Enquiry
 
 TC-123 - User should be able to click and send message on unread Order Enquiry in Dealer Message Page
     [Tags]    Home Page    Messages
+    run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
+    run keyword and continue on failure    User should be able to select Order Enquiry filter in Dealer Messages Page
     run keyword and continue on failure    User should be able to view unread Order Enquiry in Dealer Message Page
     run keyword and continue on failure    User should be able to click unread Order Enquiry in Dealer Message Page
     run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
@@ -691,6 +704,8 @@ TC-123 - User should be able to click and send message on unread Order Enquiry i
 
 TC-124 - User should be able to click and send message on unread Return Enquiry in Dealer Message Page
     [Tags]    Home Page    Messages
+    run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
+    run keyword and continue on failure    User should be able to select Return Enquiry filter in Dealer Messages Page
     run keyword and continue on failure    User should be able to view unread Return Enquiry in Dealer Message Page
     run keyword and continue on failure    User should be able to click unread Return Enquiry in Dealer Message Page
     run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
@@ -702,6 +717,8 @@ TC-124 - User should be able to click and send message on unread Return Enquiry 
 
 TC-125 - User should be able to click and send message on unread Product Enquiry in Dealer Message Page
     [Tags]    Home Page    Messages
+    run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
+    run keyword and continue on failure    User should be able to select Product Enquiry filter in Dealer Messages Page
     run keyword and continue on failure    User should be able to view unread Product Enquiry in Dealer Message Page
     run keyword and continue on failure    User should be able to click unread Product Enquiry in Dealer Message Page
     run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
@@ -1069,4 +1086,6 @@ TC-190 - User should be able to Logout
     [Tags]    Home Page    Settings
     run keyword and continue on failure    User should be able to Logout
 
-Test Teardown  Run Keywords  Close Browser
+#Test Teardown
+#    Run Keywords    Close Browser
+#    run keyword    Save Log DIR

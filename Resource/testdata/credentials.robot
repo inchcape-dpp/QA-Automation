@@ -141,7 +141,7 @@ ${admin1_s2_Bronze_HKretail_PWD}    HKPass@12345
 
                                                                          #------------------------Dealer----------------
                                                                              #------------------------ADMIN1------------
-${admin1_s2_dealer_UID}   seller1.admin@test.com
+${admin1_s2_dealer_UID}    seller1.admin@test.com
 ${admin1_s2_dealer_PWD}    AUPass@12345
                                                                              #------------------------ADMIN2------------
 ${admin2_s2_dealer_UID}    seller2.admin@test.com
@@ -176,7 +176,7 @@ ${user1_p1_retail_PWD}    AUPass@12345
                                                                          #------------------------HK--------------------
                                                                              #------------------------ADMIN1------------
 ${admin1_p1_HKretail_UID}    hk.buyer1.admin@test.com
-${admin1_p1_HKretail_PWD}   HKPass@12345
+${admin1_p1_HKretail_PWD}    HKPass@12345
 
                                                                              #------------------------GOLD ADMIN1-------
 ${admin1_p1_HKretail_Gold_UID}    hk.goldsilver.admin@test.com
@@ -226,3 +226,26 @@ ${Ty_s2_HK_Bronze_Retail_PWD}    Pass@12345
 
 ${Dan_s2_HK_Bronze_Retail_UID}    hkdan@yopmail.com
 ${Dan_s2_HK_Bronze_Retail_PWD}    Pass123@321
+
+                                                                        #------------------------YopMail----------------
+${AU_D1_Automation_UID}    au_automation1retaild1@yopmail.com
+${AU_D1_Automation_PWD}    AU_Auto@12345!
+
+${HK_D1_Automation_Bronze_UID}    hk_automation1retaild1_bronze@yopmail.com
+${HK_D1_Automation_Bronze_PWD}    HK_Auto@12345!
+
+${HK_D1_Automation_Gold_UID}    hk_automation1retaild1_gold@yopmail.com
+${HK_D1_Automation_Gold_PWD}    HK_Auto@12345!
+
+${AU_S2_Automation_UID}    au_automation1retails2@yopmail.com
+${AU_S2_Automation_PWD}    AU_Auto@12345!
+
+${HK_S2_Automation_Bronze_UID}    hk_automation1retails2_bronze@yopmail.com
+${HK_S2_Automation_Bronze_PWD}    HK_Auto@12345!
+
+${HK_S2_Automation_Gold_UID}    hk_automation1retails2_gold@yopmail.com
+${HK_S2_Automation_Gold_PWD}    HK_Auto@12345!
+
+                                                                        #------------------------Inboxes----------------
+${HK_D1_Automation_Bronze_UID}    hk_automation1retaild1_bronze@robot-mail.com
+${HK_D1_Automation_Bronze_PWD}    HK_Auto@12345!

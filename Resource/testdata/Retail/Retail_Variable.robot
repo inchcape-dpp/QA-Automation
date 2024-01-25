@@ -375,7 +375,8 @@ ${Retail_HomePageEnginePartsCategoryMiscButton}    //dpp-category-navigation//bu
 @{Retail_RandomEnginePartsList}    ${Retail_HomePageEnginePartsCategoryValvetrainButton}    ${Retail_HomePageEnginePartsCategoryConnectingRodButton}    ${Retail_HomePageEnginePartsCategoryManifoldsButton}    ${Retail_HomePageEnginePartsCategoryEngineMountButton}    ${Retail_HomePageEnginePartsCategoryEngineValvesButton}    ${Retail_HomePageEnginePartsCategoryHarmonicButton}    ${Retail_HomePageEnginePartsCategoryOilSumpButton}    ${Retail_HomePageEnginePartsCategoryOilPumpButton}    ${Retail_HomePageEnginePartsCategoryPistonsButton}    ${Retail_HomePageEnginePartsCategoryTimingBeltsButton}    ${Retail_HomePageEnginePartsCategoryTimingChainsButton}    ${Retail_HomePageEnginePartsCategoryTimingCoverButton}    ${Retail_HomePageEnginePartsCategoryTurbochargerButton}    ${Retail_HomePageEnginePartsCategoryCylinderButton}    ${Retail_HomePageEnginePartsCategoryCrankshaftButton}    ${Retail_HomePageEnginePartsCategoryEngineBlockButton}    ${Retail_HomePageEnginePartsCategoryTimingGearsButton}    ${Retail_HomePageEnginePartsCategoryRockerCoverButton}    ${Retail_HomePageEnginePartsCategoryMiscButton}
 
 #-----------------------------------------------------Retail Home Page All
-${HomePageAllCategory}    //dpp-category-navigation//a[@href='/dppretail/c/0']|//dpp-category-navigation//a[contains(text(),'All')]
+${HomePageAllCategory}    //dpp-category-navigation//a[@href='/dppretail/c/0']|//dpp-category-navigation//a[contains(text(),'All') or contains(text(),'Other')]
+${HomePageOtherCategory}
 
 #${HomePageYourPirceLabel}    //div[@class='custom-control custom-switch']//label
 #${HomePageYourPirceToggle}    //div[@class='custom-control custom-switch']//input[@type='checkbox']
@@ -402,6 +403,10 @@ ${HomePageSearchSuggestion}    //ul[@class='suggestions']//li/a
 
 ${Retail_FilterListSubElements}    ((//dpp-category-navigation//button[@tabindex='0'])[${RandomFilterIndex}]/following-sibling::div[@class='wrapper']//li)
 
+${Prod_NumPrize_Index}    2
+
+${HomePageSearchSuggestionList1}    (//div[@id='results']//ul[@class='products'])[1]
+${SearchProdPrice}    (//div[@id='results']//ul[@class='products']//li[@class='row-wrapper']//span[@class='price'])[1]
 
 
 #-----------------------------------------------------Retail Home Page HK
@@ -607,8 +612,8 @@ ${Retail_CheckoutPageCustomerDetailsSupplierValue}    (//div[@class='col-md-6 co
 
 ${Retail_CheckoutPageCustomerDetailsPONumberLabel}    //div[@class='col-md-6 col-sm-12']//p[@class='po-number']
 ${Retail_CheckoutPageCustomerDetailsPONumberInfoButton}    //div[@class='col-md-6 col-sm-12']//dpp-popover-info//cx-icon
-${Retail_CheckoutPageCustomerDetailsPONumberTextBox}    //div[@class='col-md-6 col-sm-12']//div[@class='mb-3']//input
-${Retail_CheckoutPageCustomerDetailsPONumberSaveButton}    //div[@class='col-md-6 col-sm-12']//div[@class='mb-3']//button
+${Retail_CheckoutPageCustomerDetailsPONumberTextBox}    //div[@class='col-md-6 col-sm-12']//div[@class='mb-3']//input|//div[@class='column ml-lg-4']//div[@class='col-12 p-0 px-lg-3']//input
+${Retail_CheckoutPageCustomerDetailsPONumberSaveButton}    //div[@class='col-md-6 col-sm-12']//div[@class='mb-3']//button|//div[@class='column ml-lg-4']//div[@class='col-12 p-0 px-lg-3']//button
 ${Retail_CheckoutPageCustomerDetailsPONumberResetButton}    //div[@class='col-md-6 col-sm-12']//div[@class='mb-3']//div//a
 ${Retail_CheckoutPageCustomerDetailsShippingToLabel}    //div[@class='col-md-6 col-sm-12']//div[@class='column ml-4']//p[@class='m-0 d-flex']
 ${Retail_CheckoutPageCustomerDetailsShippingToInfoButton}    //div[@class='col-md-6 col-sm-12']//div[@class='column ml-4']//p[@class='m-0 d-flex']//cx-icon
@@ -833,7 +838,7 @@ ${Retail_AccountpageOrdersMenu}    //ul[@class='vertical-menu tab-level']//*[con
 ${Retail_AccountAccountpageReturnMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Return ')]
 ${Retail_AccountpageSavedCartsMenu}    //div[@class='ml-3']//a[contains(text(),'Saved Carts')]
 ${Retail_AccountpageVehicleListingMenu}    //div[@class='ml-3']//a[contains(text(),'Vehicle Listing')]
-${Retail_AccountpageMessagesMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Messages ')]
+${Retail_AccountpageMessagesMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Messages ') or contains(text(),'Inbox')]
 ${Retail_AccountpageProfileMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Profile ')]
 ${Retail_AccountpageProfileAccountDetails}    //a[contains(text(),'Profile')]/parent::cx-generic-link/parent::div/parent::div/following-sibling::div//div[1]
 ${AccountpageProfileChangePass}    //a[contains(text(),'Profile')]/parent::cx-generic-link/parent::div/parent::div/following-sibling::div//div[2]
@@ -855,6 +860,9 @@ ${Retail_AccountOrderPageStatusFilterSubmitted}    //div[@class='ng-dropdown-pan
 ${Retail_AccountOrderPageStatusFilterDispatched}    (//div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Dispatched')])[1]
 ${Retail_AccountOrderPageStatusFilterPartiallyDispatched}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Partially Dispatched')]
 ${Retail_AccountOrderPageStatusFilterOrderwithReturns}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Order with Returns')]
+
+${Retail_HK_AccountOrderPage_StatusFilter_Delivered}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Delivered')]
+${Retail_HK_AccountOrderPage_StatusFilter_Processing}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Processing')]
 
 ${Retail_AccountOrderPageDateFilter}    //div[@id='dateRangePicker']
 ${Retail_AccountOrderPageDateFilterContainer}    //ngb-datepicker[@class='dropdown-menu show']
@@ -1148,7 +1156,7 @@ ${Retail_AccountReturnDetailsMessageCofirmationContainer}    //div[@class='cx-mo
 ${Retail_AccountReturnDetailsMessageCofirmationButton}    //div[@class='cx-modal-content']//button//span[contains(text(),'Back to Return Request')]
 
 #-----------------------------------------------------Retail Account Retrun Details Page--------------------------------
-${Retail_AccountReturnPageReturnDetailsHeader}    //span[@class='return-request-heading' or @class='return-request-heading col-12 col-md-6 p-0 p-md-3']
+${Retail_AccountReturnPageReturnDetailsHeader}    //span[@class='return-request-heading col-12 col-md-6 p-0 p-md-3']
 ${Retail_AccountReturnPageReturnDetailsStatus}    //span[@class='status']
 ${Retail_AccountReturnPageReturnDetailsBack}    //a[@class='back-to-order-history']
 ${Retail_AccountReturnPageReturnDetailsContainer}    //div[@class='order-details-container']
@@ -1316,7 +1324,7 @@ ${Retail_AccountVehicleListingPageShopThisVehicleButton}    (//dpp-vehicle-listi
 ${Retail_AccountVehicleListingPageSelectedVehicleShopThisVehicleButton}    //div[@class='selected-vehicle-modal']//div[@class='row selected-vehicle-info align-items-center']//button[@class='btn btn-sm btn-primary']
 ${Retail_AccountVehicleListingPageSelectedVehicleClearVehicleButton}    //div[@class='selected-vehicle-modal']//div[@class='row selected-vehicle-info align-items-center']//button[@class='btn mt-3 btn-sm btn-default clear-vehicle']
 
-${Retail_AccountVehicleListingPageSelectVehicleAddVehicleButton}    //div[@class='selected-vehicle-modal vehicle-not-selected']//button[@class='btn btn-secondary']|//dpp-vehicle-box-list//div[@class='vehicle-box last-box-container p-3 d-flex flex-column text-center align-items-center']
+${Retail_AccountVehicleListingPageSelectVehicleAddVehicleButton}    //dpp-vehicle-box-list//div[@class='vehicle-box last-box-container p-3 d-flex flex-column text-center align-items-center justify-content-center']|//dpp-vehicle-box-list//div[@class='vehicle-box last-box-container p-3 d-flex flex-column text-center align-items-center']
 ${Retail_HK_AccountVehicleListingPage_SelectVehicleAddVehicle_Button}    //div[@class='cx-dialog-body modal-body flex-layout']//button[@class='btn btn-secondary']
 
 ${Retail_AccountVehicleListingPageSelectVehicleContainer}    //div[@class='add-vehicle-container']|//div[@class='cx-modal-content d-flex']
@@ -1382,7 +1390,7 @@ ${Retail_HK_AccountVehicleListingPage_SelectVehicle_SearchManual_ModelID_Opt}   
 ${Retail_AccountVehicleListingPageSelectVehicleSearchResultContainer}    //div[@class='vehicle-results']
 ${Retail_AccountVehicleListingPageSelectVehicleSearchResultVehicleLabel}    //div[@class='vehicle-results']//div[@class='col-md-7 pr-0']//p
 ${Retail_AccountVehicleListingPageSelectVehicleSearchResultSelectVehicleButton}    //dpp-vehicle-results//button[@class='btn btn-sm btn-block ml-2 mt-0 p-1 select-this-vehicle-btn btn-secondary']|//div[@class='vehicle-results flex-layout']//button[@class='btn btn-sm btn-block btn-default mt-2 p-1 select-this-vehicle-btn']
-${Retail_AccountVehicleListingPageSelectVehicleSearchResultSelect&SaveVehicleButton}    //div[@class='vehicle-results']//button[@class='btn btn-sm btn-block mr-1 mt-3 p-1 select-this-vehicle-btn btn-default vehicleListing-btn']|//button[@class='btn btn-sm btn-block mr-2 mt-0 p-1 select-this-vehicle-btn btn-default vehicleListing-btn']|//div[@class='vehicle-results flex-layout']//button[@class='btn btn-sm btn-primary btn-block p-1 select-this-vehicle-btn vehicleListing-btn']
+${Retail_AccountVehicleListingPageSelectVehicleSearchResultSelect&SaveVehicleButton}    //dpp-vehicle-results//button[@class='btn btn-sm btn-block mt-0 p-1 select-this-vehicle-btn btn-default vehicleListing-btn']|//button[@class='btn btn-sm btn-block mr-2 mt-0 p-1 select-this-vehicle-btn btn-default vehicleListing-btn']|//div[@class='vehicle-results flex-layout']//button[@class='btn btn-sm btn-primary btn-block p-1 select-this-vehicle-btn vehicleListing-btn']
 ${Retail_AccountVehicleListingPageSelectVehicleSearchResultSearchAgainButton}    //div[@class='vehicle-results']//button[@class='btn btn-block btn-default vehicleListing-btn-sm']|//div[@class='vehicle-results flex-layout']//button[@class='btn btn-block btn-default vehicleListing-btn-sm']
 
 ${Retail_AccountVehicleListingPageVehicleCardList}    //dpp-vehicle-listing//div[@class='vehicle-card']
@@ -2058,11 +2066,66 @@ ${ProductDeatilsPageProductGSTToggleDisabled}    //div[@class='ml-5 custom-contr
 
 
 
-${Test Test}
+#------------------------YopMail------------------------
+${YopMail}    https://yopmail.com/en/
+
+${Yopmail_Banner}    //header//img[@id='logoacc']
+${Yopmail_Email_TextBox}    //div[@class='ycolleft']//div[@class='nw']//div[@class='tooltip click']//input
+${Yopmail_Email_Next_Button}    //div[@class='ycolleft']//div[@class='ycptctn']//button
+${Yopmail_Refresh_Button}    //div[@class='wmmain']//button[@id='refresh']
+${Yopmail_Menu_Button}    (//div[@class='wmmain']//div[@class='wminboxheader']//button//i[@class='material-icons-outlined'])[1]
+${Yopmail_ClearInbox_Button}    //div[@class='wmmain']//div[@class='wminboxheader']//div[@class='menu']//button[@id='delall']
+${Yopmail_InboxMessage_Option1}    (//body[@class='bodyinbox yscrollbar']//div[@class='m'])[1]
+${Yopmail_InboxMessage_Option2}    (//body[@class='bodyinbox yscrollbar']//div[@class='m'])[2]
+
+${Yopmail_InboxBody}    //body[@class='bodymail yscrollbar']
+${Yopmail_Inbox_Title_Message}    (//div[@class='fl']//div)[1]
+${Yopmail_Inbox_Sender_Email}    //div[@class='fl']//div//span
+${Yopmail_Inbox_ShowPicture_Button}    //div[@class='fl']//div[@class='noprint']//button
+
+${Yopmail_InboxBody_Header}    //div[@id='mail']//div//tbody//tr//a/parent::div/parent::td
+#(//div[@id='mail']//div//tbody//tr)[1]
+${Yopmail_InboxBody_Content}     (//div[@id='mail']//div//tbody//tr//table/parent::td)[2]
+${Yopmail_InboxBody_Footer}    //div[@id='mail']//div//tbody//tr//a[contains(text(),'Contact Us') or contains(text(),'聯繫我們')]/parent::td
+#(//div[@id='mail']//div//tbody//tr)[3]
+
+${Yopmail_Inbox_List_Frame}    ifinbox
+${YopMail_Message_Frame}    ifmail
+
+${PartsLaneEmail}    admin@partslane.com.hk
 
 
 
 
+#------------------------Inboxes------------------------
+${Inboxes}    https://inboxes.com/
+${GetFirstInbox}    //div[@class='flex-row justify-center items-center text-center mt-16 mb-4 lg:mr-8 lg:ml-8']//button[@type='button']
+${Add_Inbox_Button}    //div[@class='flex relative max-w-md w-full max-h-full']//button[contains(text(),'Add Inbox')]
+${Cancel_Inbox_Button}    //div[@class='flex relative max-w-md w-full max-h-full']//button[contains(text(),'Cancel')]
+${Close_Inbox_Button}    //div[@class='flex relative max-w-md w-full max-h-full']//button[@aria-label='Close modal']
+${Email_Inbox_TextBox}    //div[@class='flex flex-wrap -mx-3 mb-6']//input
+${Email_Inbox_Dropdown}    //div[@class='flex flex-wrap -mx-3 mb-6']//Select
+${Email_Inbox_Dropdown_Value}    //div[@class='flex flex-wrap -mx-3 mb-6']//Select//option[@value='robot-mail.com']
+
+${Email_Inbox_Email_Text}    (//h1//span)[2]
+${Email_Inbox_Copy_Button}    (//h1//span)[3]
+${Email_Inbox_Add_Button}    //button[contains(text(),'Add Inbox')]
+${Email_Inbox_DeleteInbox_Button}    //button[contains(text(),'Delete Inbox')]
+${Email_Inbox_YourInbox_Button}    //button[contains(text(),'Your inboxes')]
+
+${Email_Inbox_Reload_Button}    //div//button[@title='Reload']
+${Email_Inbox_Delete_Button}     //div//button[@title='Delete']
+
+${Email_Inbox_MarkAll_CheckBox}    //div[@class='flex items-center']//input[@type='checkbox']
+${Email_Inbox_Message_Selection_1}    (//div//table//tbody//tr[1])
+
+${Email_Inbox_BackToInbox_Button}    //div//a[contains(text(),'Back to Inbox')]
+
+${Email_Inbox_Body_Header}    //tbody//tbody//tr//div
+${Email_Inbox_Body_Text}    //tbody//tbody//td//p
+${Email_Inbox_Body_Footer}    (//tr//td)[9]
+
+//tbody//tbody//tr//td//a//font[contains(text(),'Contact Us')]
 
 
 

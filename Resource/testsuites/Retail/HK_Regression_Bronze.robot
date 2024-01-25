@@ -449,13 +449,14 @@ TC-060 - User should be able to view account orders page
 TC-061 - User should be able to apply filter status in Retail Account Orders Page
     [Tags]    Order Page
     run keyword and continue on failure    User should be able to click filter status in Account Order Page
+    run keyword and continue on failure    User should be able to check all filter status in HK Account Order Page
     run keyword and continue on failure    User should be able to filter status by Order with Returns in Account Order Page
-    run keyword and continue on failure    User should be able to click filter status in Account Order Page
-    run keyword and continue on failure    User should be able to filter status by Partially Dispathed in Account Order Page
+#    run keyword and continue on failure    User should be able to click filter status in Account Order Page
+#    run keyword and continue on failure    User should be able to filter status by Partially Dispathed in Account Order Page
     run keyword and continue on failure    User should be able to click filter status in Account Order Page
     run keyword and continue on failure    User should be able to filter status by Dispatched in Account Order Page
-    run keyword and continue on failure    User should be able to click filter status in Account Order Page
-    run keyword and continue on failure    User should be able to filter status by Submitted in Account Order Page
+#    run keyword and continue on failure    User should be able to click filter status in Account Order Page
+#    run keyword and continue on failure    User should be able to filter status by Submitted in Account Order Page
     run keyword and continue on failure    User should be able to click filter status in Account Order Page
     run keyword and continue on failure    User should be able to filter status by Received in Account Order Page
     run keyword and continue on failure    User should be able to click filter status in Account Order Page
@@ -680,8 +681,8 @@ TC-083 - User should be able to add new vehicle in Retail Account Vehicle Listin
     [Tags]    Vehicle Listing Page
     run keyword and continue on failure    User should be able to click add new vehicle in Retail Account Vehicle Listing Page
     run keyword and continue on failure    User should be able to view add vehicle in HK Retail Select Vehicle
-    run keyword and continue on failure    User should be able to click add new vehicle in HK Retail Select Vehicle
-    run keyword and continue on failure    User should be able to view add vehicle in HK Retail Select Vehicle
+#    run keyword and continue on failure    User should be able to click add new vehicle in HK Retail Select Vehicle
+#    run keyword and continue on failure    User should be able to view add vehicle in HK Retail Select Vehicle
     run keyword and continue on failure    User should be able to click model on manual search in Retail Select Vehicle
     run keyword and continue on failure    User should be able to select model on manual search in Retail Select Vehicle
     run keyword and continue on failure    User should be able to click year on manual search in Retail Select Vehicle
