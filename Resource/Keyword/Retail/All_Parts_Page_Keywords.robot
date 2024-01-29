@@ -22,7 +22,7 @@ User should be able to view All Parts Page
 
 User should be able to filter product name from A to Z
     wait until element is visible    ${AllProdPageSortProdDropdown}    10
-    scroll element into view    ${AllProdPageSortProdDropdown}
+    scroll element into view    ${AllProdPageLabelFilter}
     capture element screenshot    ${AllProdPageSortProdDropdown}
     click element    ${AllProdPageSortProdDropdown}
     wait until element is visible    ${AllProdPageSortProdDropdownAtoZ}    10

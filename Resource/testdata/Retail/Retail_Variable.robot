@@ -251,6 +251,9 @@ ${HomePageCartIcon}    //dpp-mini-cart//cx-icon
 ${HomePageCartCountIcon}    (//dpp-mini-cart//div[@class='mini-cart--info']//span[@class='count'])[1]
 ${HomePageSellerInfo}    //div[@class='mini-cart--seller-info']
 
+${ProdductSearchValue}    8521458030
+#8521458030
+#26296SG011
 #-----------------------------------------------------Retail Home Page Filters & Oil
 ${Retail_HomePageFilter&OilCategoryButton}    //dpp-category-navigation//button[@aria-label='Filters & Oil' or @aria-label='油隔及機油']
 ${Retail_HomePageFilter&OilCategoryList}    //dpp-category-navigation//button[@aria-label='Filters & Oil']/following-sibling::div[@class='wrapper']//li
@@ -610,15 +613,15 @@ ${Retail_CheckoutPageCustomerDetailsAccountNameValue}    (//div[@class='col-md-6
 ${Retail_CheckoutPageCustomerDetailsSupplierLabel}    (//div[@class='col-md-6 col-sm-12 custom-divider']//div[@class='col-12 mt-4']//p)[2]
 ${Retail_CheckoutPageCustomerDetailsSupplierValue}    (//div[@class='col-md-6 col-sm-12 custom-divider']//div[@class='col-12 mt-4']//span)[2]
 
-${Retail_CheckoutPageCustomerDetailsPONumberLabel}    //div[@class='col-md-6 col-sm-12']//p[@class='po-number']
-${Retail_CheckoutPageCustomerDetailsPONumberInfoButton}    //div[@class='col-md-6 col-sm-12']//dpp-popover-info//cx-icon
-${Retail_CheckoutPageCustomerDetailsPONumberTextBox}    //div[@class='col-md-6 col-sm-12']//div[@class='mb-3']//input|//div[@class='column ml-lg-4']//div[@class='col-12 p-0 px-lg-3']//input
-${Retail_CheckoutPageCustomerDetailsPONumberSaveButton}    //div[@class='col-md-6 col-sm-12']//div[@class='mb-3']//button|//div[@class='column ml-lg-4']//div[@class='col-12 p-0 px-lg-3']//button
-${Retail_CheckoutPageCustomerDetailsPONumberResetButton}    //div[@class='col-md-6 col-sm-12']//div[@class='mb-3']//div//a
-${Retail_CheckoutPageCustomerDetailsShippingToLabel}    //div[@class='col-md-6 col-sm-12']//div[@class='column ml-4']//p[@class='m-0 d-flex']
-${Retail_CheckoutPageCustomerDetailsShippingToInfoButton}    //div[@class='col-md-6 col-sm-12']//div[@class='column ml-4']//p[@class='m-0 d-flex']//cx-icon
-${Retail_CheckoutPageCustomerDetailsShippingToNameLabel}    //div[@class='col-md-6 col-sm-12']//div[@class='column ml-4']//span[@class='shipping-to']//strong
-${Retail_CheckoutPageCustomerDetailsShippingToAddressLabel}    //div[@class='col-md-6 col-sm-12']//div[@class='column ml-4']//div[@class='col-12']//p[@class='m-0 d-flex']/following-sibling::span
+${Retail_CheckoutPageCustomerDetailsPONumberLabel}    //div[@class='column ml-lg-4']//div[@class='col-12 p-0 px-lg-3']//p[@class='po-number']
+${Retail_CheckoutPageCustomerDetailsPONumberInfoButton}    //div[@class='column ml-lg-4']//dpp-popover-info//cx-icon
+${Retail_CheckoutPageCustomerDetailsPONumberTextBox}    //div[@class='column ml-lg-4']//div[@class='col-12 p-0 px-lg-3']//input
+${Retail_CheckoutPageCustomerDetailsPONumberSaveButton}    //div[@class='column ml-lg-4']//div[@class='col-12 p-0 px-lg-3']//button
+${Retail_CheckoutPageCustomerDetailsPONumberResetButton}    //div[@class='col-12 p-0 px-lg-3']//div//a
+${Retail_CheckoutPageCustomerDetailsShippingToLabel}    //div[@class='column ml-lg-4 pb-3 pb-lg-0']//p[@class='m-0 d-flex']
+${Retail_CheckoutPageCustomerDetailsShippingToInfoButton}    //div[@class='column ml-lg-4 pb-3 pb-lg-0']//p[@class='m-0 d-flex']//cx-icon
+${Retail_CheckoutPageCustomerDetailsShippingToNameLabel}    //div[@class='column ml-lg-4 pb-3 pb-lg-0']//span[@class='shipping-to']//strong
+${Retail_CheckoutPageCustomerDetailsShippingToAddressLabel}    //div[@class='column ml-lg-4 pb-3 pb-lg-0']//div[@class='col-12 p-0 px-lg-3']//p[@class='m-0 d-flex']/following-sibling::span
 
 ${Retail_HK_CheckoutPageReviewItemsContainer}    //dpp-hk-order-items-summary
 ${Retail_HK_CheckoutPageReviewItemsHeader}    //dpp-hk-order-items-summary//*[@class='title']
@@ -788,8 +791,8 @@ ${Retail_CheckoutPageCustomerDetailsOrderSummaryBacktoCartButton}    //div[@clas
 ${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryContinuePaymentButton}    //div[@class='actions-container w-100']//button[@class='btn btn-secondary w-100']
 ${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryBacktoCartButton}    //div[@class='actions-container w-100']//button[@class='btn btn-outline-secondary w-100 mt-3']
 
-${Retail_CheckoutPageCustomerDetailsPONumberGroup}    //div[@class='col-md-6 col-sm-12']//div[@class='mb-3']
-${Retail_CheckoutPageCustomerDetailsPONumberErrorMessage}    //div[@class='col-md-6 col-sm-12']//div[@class='mb-3']//div[@class='form-errors po-invalid-format-message']
+${Retail_CheckoutPageCustomerDetailsPONumberGroup}    //div[@class='col-md-6 col-sm-12']//div[@class='mb-3']|//div[@class='column ml-lg-4']//div[@class='col-12 p-0 px-lg-3']
+${Retail_CheckoutPageCustomerDetailsPONumberErrorMessage}    //div[@class='col-12 p-0 px-lg-3']//div[@class='form-errors po-invalid-format-message']
 
 ${Retail_CheckoutPageCustomerDetailsPONumberTextBoxValidValue}    TestQEAutomation1234
 ${Retail_CheckoutPageCustomerDetailsPONumberTextBoxValid-Value}    TestQEAutomation12-3
