@@ -143,7 +143,7 @@ User should be able to check all filter status in Account Order Page
 User should be able to check all filter status in HK Account Order Page
     wait until element is enabled    ${Retail_AccountOrderPageStatusFilterALL}    10
     wait until element is enabled    ${Retail_AccountOrderPageStatusFilterReceived}    10
-    wait until element is enabled    ${Retail_AccountOrderPageStatusFilterSubmitted}    10
+    element should not be visible    ${Retail_AccountOrderPageStatusFilterSubmitted}    10
     wait until element is visible    ${Retail_AccountOrderPageStatusFilterDispatched}    10
     element should not be visible    ${Retail_AccountOrderPageStatusFilterPartiallyDispatched}
     wait until element is visible    ${Retail_AccountOrderPageStatusFilterOrderwithReturns}    10

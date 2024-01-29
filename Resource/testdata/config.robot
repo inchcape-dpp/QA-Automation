@@ -31,7 +31,7 @@ ${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\
 #${LogDIR}
 
 #${Username}    seller1.admin@test.com
-#${Password}    PartsLane@123!
+#${Password}    sellEr@dm!n1
 
 ${Username}    ${DanProdRetailUID}
 ${Password}    ${DanProdRetailPWD}
