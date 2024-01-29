@@ -15,13 +15,13 @@ ${FirefoxBrowser}    Firefox
 ${EdgeBrowser}    Edge
 ${SafariBrowser}    Safari
 
-${driver_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject2\\Resource\\chromedriver.exe
-#${driver_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject2\\Resource\\geckodriver.exe
+${driver_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject1\\Resource\\chromedriver.exe
+#${driver_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject1\\Resource\\geckodriver.exe
 
-${BE_screenshot_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\BE\\Screenshots
-${Dealer_screenshot_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Dealer\\Screenshots
+${BE_screenshot_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject1\\Resource\\testsuites\\BE\\Screenshots
+${Dealer_screenshot_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject1\\Resource\\testsuites\\Dealer\\Screenshots
 #${Dealer_screenshot_path}    C:\\Users\\Ericson.Tinana\\OneDrive - Inchcape\\06.Dev\\Dan\\Dealer Screenshots
-${Retail_screenshot_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Retail\\Screenshots
+${Retail_screenshot_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject1\\Resource\\testsuites\\Retail\\Screenshots
 #${Retail_screenshot_path}    C:\\Users\\Ericson.Tinana\\OneDrive - Inchcape\\06.Dev\\Dan\\Retail Screenshots
 
 ${UploadPhoto_Path_Value}    C:\\Users\\Ericson.Tinana\\Pictures\\Sample Image\\Image.jpg
