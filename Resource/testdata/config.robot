@@ -27,19 +27,21 @@ ${Retail_screenshot_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\py
 ${UploadPhoto_Path_Value}    C:\\Users\\Danielouie.Estopace\\Pictures\\Sample Image\\Image.jpg
 
 ${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\HKProductReportView.xlsx
+${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\You left something behind (ENG).txt
+
 
 #${LogDIR}
 
 #${Username}    seller1.admin@test.com
 #${Password}    sellEr@dm!n1
 
-${Username}    ${DanProdRetailUID}
-${Password}    ${DanProdRetailPWD}
+${Username}    ${HK_S2_Automation_Bronze_UID}
+${Password}    ${HK_S2_Automation_Bronze_PWD}
 ${YopMailEmail}    ${HK_S2_Automation_Bronze_UID}
 
 *** Keywords ***
 Open Chrome Browser
-    SeleniumLibrary.Open Browser    ${p1Retail}    Chrome  executable_path=${driver_path}
+    SeleniumLibrary.Open Browser    ${s2HKRetail}    Chrome  executable_path=${driver_path}
     maximize browser window
 #    press keys    none    ctrl + t
 ##    ${test1}    get window titles

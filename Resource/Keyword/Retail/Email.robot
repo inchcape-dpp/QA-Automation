@@ -4,6 +4,7 @@ Documentation    Suite description
 Library    SeleniumLibrary
 Library    String
 Library    ExcelLibrary
+Library    OperatingSystem
 
 Resource  ../../../Resource/testdata/config.robot
 Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
@@ -50,11 +51,11 @@ Switch to Inbox Message Frame
     sleep    2
 
 Click Inbox Messages
-    wait until element is visible    ${Yopmail_InboxMessage_Option2}    10
-    click element    ${Yopmail_InboxMessage_Option2}
-    sleep    5
     wait until element is visible    ${Yopmail_InboxMessage_Option1}    10
     click element    ${Yopmail_InboxMessage_Option1}
+    sleep    5
+    wait until element is visible    ${Yopmail_InboxMessage_Option2}    10
+    click element    ${Yopmail_InboxMessage_Option2}
     sleep    5
 
 Read Message
@@ -102,3 +103,8 @@ Get Email Message
 #    ${end_index}    evaluate    ${full_text}.find('${end_string}', ${start_index})
 #    ${result}    evaluate    '${full_text}'[${start_index}:${end_index}]
 #    [Return]    ${result}
+
+
+Read Text File
+    ${File Content}    get file    ${YouLeftSomething_FilePath}
+    Log    ${File Content}
