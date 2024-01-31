@@ -12,7 +12,7 @@ Resource  ../../../Resource/testdata/credentials.robot
 User should be able to input text on search bar
     wait until element is visible    ${HomePageSearhProduct}    10
     click element    ${HomePageSearhProduct}
-    input text    ${HomePageSearhProduct}    26296SG011
+    input text    ${HomePageSearhProduct}    ${ProdductSearchValue}
     sleep    2
 
 User should be able to click searched text
