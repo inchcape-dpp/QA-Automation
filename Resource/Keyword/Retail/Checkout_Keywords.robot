@@ -2,6 +2,7 @@
 Documentation    Suite description
 
 Library  SeleniumLibrary
+Library    String
 
 Resource  ../../../Resource/testdata/config.robot
 Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
@@ -91,8 +92,22 @@ User should be able to view checkout in HK Retail Checkout Page
 
     capture element screenshot    ${Retail_CheckoutPageHeader}
 
-    wait until element is visible    ${Retail_CheckoutPageCustomerDetailsOrderItemList}    10
-    capture element screenshot    ${Retail_CheckoutPageCustomerDetailsOrderItemList}
+    wait until element is visible    ${Retail_HK_CheckoutPageReviewItemsContainer}    10
+    wait until element is visible    ${Retail_HK_CheckoutPageReviewItemsHeader}    10
+    wait until element is visible    ${Retail_HK_CheckoutPageReviewItemsDeliveryDate}    10
+    ${DelData}    get text    ${Retail_HK_CheckoutPageReviewItemsDeliveryDate}
+    ${RemoveStringDelDate}    remove string    ${DelData}    Delivery:
+    Log    ${RemoveStringDelDate}
+    wait until element is visible    ${Retail_HK_CheckoutPageReviewItemsList}    10
+
+    capture element screenshot    ${Retail_HK_CheckoutPageReviewItemsContainer}
+    capture element screenshot    ${Retail_HK_CheckoutPageReviewItemsHeader}
+    capture element screenshot    ${Retail_HK_CheckoutPageReviewItemsDeliveryDate}
+    capture element screenshot    ${Retail_HK_CheckoutPageReviewItemsDeliveryDate}
+    capture element screenshot    ${Retail_HK_CheckoutPageReviewItemsList}
+
+#    wait until element is visible    ${Retail_CheckoutPageCustomerDetailsOrderItemList}    10
+#    capture element screenshot    ${Retail_CheckoutPageCustomerDetailsOrderItemList}
 
     wait until element is visible    ${Retail_CheckoutPageCustomerDetailsOrderSummaryContainer}    10
     wait until element is visible    ${Retail_CheckoutPageCustomerDetailsOrderSummaryHeader}    10
@@ -118,6 +133,9 @@ User should be able to view checkout in HK Retail Checkout Page
     capture element screenshot    ${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryContinuePaymentButton}
     capture element screenshot    ${Retail_CheckoutPageCustomerDetailsOrderSummaryBacktoCartButton}
 
+    ${currentshippingfee}    get text    ${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryShippingFeeValue}
+    ${currentshippingvalue}    remove string    ${currentshippingfee}    $
+    set global variable    ${currentshippingvalue}
 
 User should be able to click po number info in Retail Checkout Page
     wait until element is visible    ${Retail_CheckoutPageCustomerDetailsPONumberInfoButton}    10
@@ -174,6 +192,15 @@ User should be able to click shipping info button in Retail Checkout Page
     sleep    1
     click element    ${Retail_CheckoutPageCustomerDetailsShippingToInfoButton}
     sleep    2
+
+
+
+User should be albe to Compare Shipping Fee in HK Retail Checkout Page
+    wait until element is visible    ${Retail_CheckoutPageCustomerDetailsOrderSummaryContainer}    10
+    ${changeshippingfee}    get text    ${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryShippingFeeValue}
+    ${changeshippingvalue}    remove string    $
+    run keyword and continue on failure    should not be equal    ${changeshippingvalue}    ${currentshippingvalue}
+    sleep    5
 
 User should be able to view Shipping Details in HK Retail Checkout Page
     wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressContainer}    10
@@ -392,7 +419,7 @@ User should be able to click Save Button on change shipping in HK Retail Checkou
     scroll element into view    ${Retail_HK_CheckoutPageShippingAddressChangePopUpSaveButton}
     capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpSaveButton}
     click element    ${Retail_HK_CheckoutPageShippingAddressChangePopUpSaveButton}
-    sleep    2
+    sleep    5
 
 User should be able to click Cancel Button on change shipping in HK Retail Checkout Page
     wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpCancelButton}    10

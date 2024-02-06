@@ -168,8 +168,13 @@ User should be able to select 1 filter from selected category in HK Retail Home 
 
 User should be albe to View Search Vehicle in HK Retail Home Page
 User should be albe to View Search VIN in HK Retail Home Page
-User should be albe to Search VIN in HK Retail Home Page
+User should be albe to Input Search VIN1 in HK Retail Home Page
+User should be albe to Input Search VIN2 in HK Retail Home Page
+User should be albe to Input Search VIN3 in HK Retail Home Page
+User should be albe to Input Search VIN4 in HK Retail Home Page
+User should be albe to Input Search VIN5 in HK Retail Home Page
 User should be albe to Click Search VIN in HK Retail Home Page
+
 #-----------------------------------------------------Retail Search Bar-------------------------------------------------
 User should be able to input text on search bar
 User should be able to click searched text

@@ -55,7 +55,7 @@ ${HomepageOrdersMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text
 ${HomepageReturnMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Return ')]
 ${HomepageCustomerMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Customer ')]
 ${HomepageCustomerNewReg}    //div[@class='tab-data has-child']//a[contains(text(),'New Registration Request')]
-${HomepageCustomerBuyerRelation}    //div[@class='tab-data has-child']//a[contains(text(),'Customer Relationship')]
+${HomepageCustomerBuyerRelation}    //div[@class='tab-data has-child']//a[contains(text(),'Customer Relationship') or contains(text(),'Buyer Relationship')]
 ${HomepageCustomerDropdownClosed}    (//ul[@class='vertical-menu tab-level']//div[@class='dropdown-icon'])[1]
 ${HomepageCustomerDropdownOpen}    (//ul[@class='vertical-menu tab-level']//div[@class='dropdown-icon opened'])[1]
 ${HomepageMessagesMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Messages ')]

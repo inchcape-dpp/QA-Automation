@@ -80,6 +80,7 @@ Get Sender Email
 Get Email Message
     ${EmailMessage}    get text    ${Yopmail_InboxBody_Content}
     Log to console    ${EmailMessage}
+    Get line count    ${EmailMessage}
     sleep    2
 
 #Get text between

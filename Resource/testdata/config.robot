@@ -26,17 +26,21 @@ ${Retail_screenshot_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\py
 
 ${UploadPhoto_Path_Value}    C:\\Users\\Danielouie.Estopace\\Pictures\\Sample Image\\Image.jpg
 
-${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\HKProductReportView.xlsx
+${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\HKProductReportView.
+${ExcelFile_AU_Stock_List_Path}    C:\\\Users\\\Danielouie.Estopace\\\Documents\\\Files\\Parex_SU_AU.xlsx
 ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\You left something behind (ENG).txt
-
 
 #${LogDIR}
 
 #${Username}    seller1.admin@test.com
 #${Password}    sellEr@dm!n1
 
+#${Username}    inchmcgrath_test@yopmail.com
+#${Password}    Welcom3@NM
+
 ${Username}    ${HK_S2_Automation_Bronze_UID}
 ${Password}    ${HK_S2_Automation_Bronze_PWD}
+
 ${YopMailEmail}    ${HK_S2_Automation_Bronze_UID}
 
 *** Keywords ***
