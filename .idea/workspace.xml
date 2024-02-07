@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="TestC">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="Commit">
+      <change afterPath="$PROJECT_DIR$/Resource/Keyword/QE MiniSIte/Ty/Minisite_Footer.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resource/testdata/QE MiniSIte/Ty/Minisite_Footer_Resource.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resource/testdata/QE MiniSIte/Ty/Minisite_Footer_Variable.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resource/testsuites/QE MiniSIte/Ty/Minisite_Footer_TestSuite.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/pythonProject2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pythonProject2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/QE MiniSIte/Dan/MiniSite_Variable.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/QE MiniSIte/Dan/MiniSite_Variable.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testdata/config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/Regression_Retail.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/Regression_Retail.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/report.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +64,15 @@
       <option name="project" value="LOCAL" />
       <updated>1705046919604</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1706149986016</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706149986016</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -100,6 +115,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="TestC" />
-    <option name="LAST_COMMIT_MESSAGE" value="TestC" />
+    <MESSAGE value="Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
 </project>

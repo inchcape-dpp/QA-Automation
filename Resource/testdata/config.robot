@@ -24,7 +24,9 @@ ${Dealer_screenshot_path}    C:\\Users\\Tyron.Demate\\PycharmProjects\\pythonPro
 ${Retail_screenshot_path}    C:\\Users\\Tyron.Demate\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Retail\\Screenshots
 #${Retail_screenshot_path}    C:\\Users\\Tyron.Demate\\OneDrive - Inchcape\\06.Dev\\Ty\\Retail Screenshots
 
-${UploadPhoto_Path_Value}    C:\\Users\\Tyron.Demate\\Pictures\\Sample Image\\Image.jpg
+${UploadPhoto_Path_Value}    C:\\Users\\Tyron.Demate\\Pictures\\Sample Image\\Image.png
+
+
 
 ${ExcelFile_HK_Product_List_Path}    C:\\Users\\Tyron.Demate\\Documents\\FilesHKProductReportView.xlsx
 
@@ -33,12 +35,12 @@ ${ExcelFile_HK_Product_List_Path}    C:\\Users\\Tyron.Demate\\Documents\\FilesHK
 #${Username}    hktestric3@yopmail.com
 #${Password}    Pass@12345
 
-${Username}    ${admin1_s2_retail_UID}
-${Password}    ${admin1_s2_retail_PWD}
+${Username}    ${AU_S2_Automation_UID}
+${Password}    ${AU_S2_Automation_PWD}
 
 *** Keywords ***
 Open Chrome Browser
-    SeleniumLibrary.Open Browser    ${s2Retail}    Chrome  executable_path=${driver_path}
+    SeleniumLibrary.Open Browser    ${s2Retail}}    Chrome  executable_path=${driver_path}
     maximize browser window
 #    press keys    none    ctrl + t
 ##    ${test1}    get window titles

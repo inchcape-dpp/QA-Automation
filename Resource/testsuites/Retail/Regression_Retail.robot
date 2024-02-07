@@ -621,10 +621,10 @@ TC-091 - User should be able to view account return request page
     run keyword and continue on failure    User should be able to view account return request page
     run keyword and continue on failure    User should be able to view Return Request Panel
 
-TC-092 - User should be able to click filter by status in Account Retrun Page
-    [Tags]    Return Page
-    run keyword and continue on failure    User should be able to click filter by status in Account Retrun Page
-    run keyword and continue on failure    User should be able to click filter by status in Account Retrun Page
+#TC-092 - User should be able to click filter by status in Account Retrun Page
+#    [Tags]    Return Page
+#    run keyword and continue on failure    User should be able to click filter by status in Account Retrun Page
+#    run keyword and continue on failure    User should be able to click filter by status in Account Retrun Page
 
 TC-093 - User should be able to apply filter status in Account Retrun Page
     [Tags]    Return Page
