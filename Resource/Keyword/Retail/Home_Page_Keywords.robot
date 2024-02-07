@@ -577,10 +577,38 @@ User should be albe to View Search VIN in HK Retail Home Page
     capture element screenshot    ${Retail_HK_HomePage_SearchVIN_Container}
     sleep    2
 
-User should be albe to Input Search VIN in HK Retail Home Page
+User should be albe to Input Search VIN1 in HK Retail Home Page
     wait until element is visible    ${Retail_HK_HomePage_SearchVIN_TextBox}    10
     clear element text    ${Retail_HK_HomePage_SearchVIN_TextBox}
-    input text    ${Retail_HK_HomePage_SearchVIN_TextBox}    ${Retail_HK_HomePage_SearchVIN_TextBox_Value}
+    input text    ${Retail_HK_HomePage_SearchVIN_TextBox}    ${Retail_HK_HomePage_SearchVIN_TextBox_Value1}
+    capture element screenshot    ${Retail_HK_HomePage_SearchVIN_TextBox}
+    sleep    2
+
+User should be albe to Input Search VIN2 in HK Retail Home Page
+    wait until element is visible    ${Retail_HK_HomePage_SearchVIN_TextBox}    10
+    clear element text    ${Retail_HK_HomePage_SearchVIN_TextBox}
+    input text    ${Retail_HK_HomePage_SearchVIN_TextBox}    ${Retail_HK_HomePage_SearchVIN_TextBox_Value2}
+    capture element screenshot    ${Retail_HK_HomePage_SearchVIN_TextBox}
+    sleep    2
+
+User should be albe to Input Search VIN3 in HK Retail Home Page
+    wait until element is visible    ${Retail_HK_HomePage_SearchVIN_TextBox}    10
+    clear element text    ${Retail_HK_HomePage_SearchVIN_TextBox}
+    input text    ${Retail_HK_HomePage_SearchVIN_TextBox}    ${Retail_HK_HomePage_SearchVIN_TextBox_Value3}
+    capture element screenshot    ${Retail_HK_HomePage_SearchVIN_TextBox}
+    sleep    2
+
+User should be albe to Input Search VIN4 in HK Retail Home Page
+    wait until element is visible    ${Retail_HK_HomePage_SearchVIN_TextBox}    10
+    clear element text    ${Retail_HK_HomePage_SearchVIN_TextBox}
+    input text    ${Retail_HK_HomePage_SearchVIN_TextBox}    ${Retail_HK_HomePage_SearchVIN_TextBox_Value4}
+    capture element screenshot    ${Retail_HK_HomePage_SearchVIN_TextBox}
+    sleep    2
+
+User should be albe to Input Search VIN5 in HK Retail Home Page
+    wait until element is visible    ${Retail_HK_HomePage_SearchVIN_TextBox}    10
+    clear element text    ${Retail_HK_HomePage_SearchVIN_TextBox}
+    input text    ${Retail_HK_HomePage_SearchVIN_TextBox}    ${Retail_HK_HomePage_SearchVIN_TextBox_Value5}
     capture element screenshot    ${Retail_HK_HomePage_SearchVIN_TextBox}
     sleep    2
 

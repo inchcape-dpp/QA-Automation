@@ -407,6 +407,7 @@ ${HomePageSearchSuggestion}    //ul[@class='suggestions']//li/a
 ${Retail_FilterListSubElements}    ((//dpp-category-navigation//button[@tabindex='0'])[${RandomFilterIndex}]/following-sibling::div[@class='wrapper']//li)
 
 ${Prod_NumPrize_Index}    2
+${Part_Num_Index}    1
 
 ${HomePageSearchSuggestionList1}    (//div[@id='results']//ul[@class='products'])[1]
 ${SearchProdPrice}    (//div[@id='results']//ul[@class='products']//li[@class='row-wrapper']//span[@class='price'])[1]
@@ -418,7 +419,12 @@ ${Retail_HK_HomePage_SearchVIN_Container}    //dpp-hk-search-by-vin//div[@class=
 ${Retail_HK_HomePage_SearchVIN_TextBox}    //dpp-hk-search-by-vin//div[@class='main-box main-box--padding']//input
 ${Retail_HK_HomePage_SearchVIN_Button}    //dpp-hk-search-by-vin//div[@class='main-box main-box--padding']//button
 
-${Retail_HK_HomePage_SearchVIN_TextBox_Value}    JTNB24HK703072114
+${Retail_HK_HomePage_SearchVIN_TextBox_Value1}    JTNBF4FK403021435
+${Retail_HK_HomePage_SearchVIN_TextBox_Value2}    JTMBH31V10D017606
+${Retail_HK_HomePage_SearchVIN_TextBox_Value3}    JT711MP1000052922
+${Retail_HK_HomePage_SearchVIN_TextBox_Value4}    JTHBH96S605048702
+${Retail_HK_HomePage_SearchVIN_TextBox_Value5}    JTHGL46F705046712
+
 
 #-----------------------------------------------------Retail HK Home Page Body Parts
 ${Retail_HK_HomePage_BodyParts_Category_Button}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']
@@ -625,6 +631,9 @@ ${Retail_CheckoutPageCustomerDetailsShippingToAddressLabel}    //div[@class='col
 
 ${Retail_HK_CheckoutPageReviewItemsContainer}    //dpp-hk-order-items-summary
 ${Retail_HK_CheckoutPageReviewItemsHeader}    //dpp-hk-order-items-summary//*[@class='title']
+${Retail_HK_CheckoutPageReviewItemsDeliveryDate}    //dpp-hk-order-items-summary//div[@class='col-12 p-0 sub-header']
+${Retail_HK_CheckoutPageReviewItemsList}    //dpp-hk-order-items-summary//dpp-hk-order-items//div[@class='product-list-item']
+
 ${Retail_HK_CheckoutPageReviewItemsArrowUp}    //dpp-hk-order-items-summary//cx-icon[@class='cx-icon dpp-icons__icon-up-arrow']
 ${Retail_HK_CheckoutPageReviewItemsArrowDown}    //dpp-hk-order-items-summary//cx-icon[@class='cx-icon dpp-icons__icon-down-arrow']
 
