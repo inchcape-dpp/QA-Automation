@@ -488,7 +488,6 @@ TC-077 - User should be able to edit po number in Retail Checkout Page
 #    run keyword and continue on failure    User should be able to view place order in Retail Place Order Page
 #    run keyword and continue on failure    User should be able to click back to home button in Retail Place Order Page
 
-
 #TC-080 - User should be able to view account orders page
 #    [Tags]    Order Page
 #    run keyword and continue on failure    User should be able to access account from top navigaton

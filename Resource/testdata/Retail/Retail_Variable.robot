@@ -1196,6 +1196,18 @@ ${Retail_AccountReturnPageOrderReturnHeader}    //h2[@class='returned']
 ${Retail_AccountReturnPageReturnReturnContainer}    //table/..
 ${Retail_AccountReturnPageOrderReturnItemList}    //table[@class='return-request-detail-table']
 
+${Retail_AccountReturnPageOrderReturnItemList_Desc_Label}    //table[@class='return-request-detail-table']//tr//th[contains(text(),'Description')]
+${Retail_AccountReturnPageOrderReturnItemList_Price_Label}    //table[@class='return-request-detail-table']//tr//th[contains(text(),'Price')]
+${Retail_AccountReturnPageOrderReturnItemList_RRP_Label}    //table[@class='return-request-detail-table']//tr//th[contains(text(),'RRP')]
+${Retail_AccountReturnPageOrderReturnItemList_Qty_Label}    //table[@class='return-request-detail-table']//tr//th[contains(text(),'Qty')]
+${Retail_AccountReturnPageOrderReturnItemList_Total_Label}    //table[@class='return-request-detail-table']//tr//th[contains(text(),'Total')]
+
+${Retail_AccountReturnPageOrderReturnItemList_Desc_Value1}    (//table[@class='return-request-detail-table']//tbody//td)[1]
+${Retail_AccountReturnPageOrderReturnItemList_Price_Value1}    (//table[@class='return-request-detail-table']//tbody//td)[2]
+${Retail_AccountReturnPageOrderReturnItemList_RRP_Value1}    (//table[@class='return-request-detail-table']//tbody//td)[3]
+${Retail_AccountReturnPageOrderReturnItemList_Qty_Value1}    (//table[@class='return-request-detail-table']//tbody//td)[4]
+${Retail_AccountReturnPageOrderReturnItemList_Total_Value1}    (//table[@class='return-request-detail-table']//tbody//td)[5]
+
 ${Retail_AccountReturnPageOrderReturnDataSectionContainer}    //div[@class='return-request-data-section' or @class='cancel-order-container']
 ${Retail_AccountReturnPageOrderReturnDataSectionReasonLabel}    //div[@class='form-group']//span[@class='label-content']
 ${Retail_AccountReturnPageOrderReturnDataSectionReasonSelection}    //div[@class='ng-select-container ng-has-value']
