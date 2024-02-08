@@ -6,7 +6,7 @@ Library    Process
 Library    String
 
 
-Resource  ../../../Resource/testdata/config.robot
+Resource  ../../../Resource/testdata/configd1.robot
 Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../Resource/testdata/Retail/Retail_Resource.robot
 

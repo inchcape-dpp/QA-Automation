@@ -27,7 +27,7 @@ ${Retail_screenshot_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\py
 ${UploadPhoto_Path_Value}    C:\\Users\\Danielouie.Estopace\\Pictures\\Sample Image\\Image.jpg
 
 ${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\HKProductReportView.
-${ExcelFile_AU_Stock_List_Path}    C:\\\Users\\\Danielouie.Estopace\\\Documents\\\Files\\Parex_SU_AU.xlsx
+${ExcelFile_AU_Stock_List_Path}    C:\\\Users\\\Danielouie.Estopace\\\Documents\\\Files\\Titan SUB Geerex.xlsx
 ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\You left something behind (ENG).txt
 
 #${LogDIR}
@@ -35,11 +35,13 @@ ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files
 #${Username}    seller1.admin@test.com
 #${Password}    sellEr@dm!n1
 
-#${Username}    inchmcgrath_test@yopmail.com
-#${Password}    Welcom3@NM
+#${Username}    retailtitanp1@yopmail.com
+#${Password}    Welcom3@NT
 
 ${Username}    ${HK_S2_Automation_Bronze_UID}
 ${Password}    ${HK_S2_Automation_Bronze_PWD}
+
+
 
 ${YopMailEmail}    ${HK_S2_Automation_Bronze_UID}
 
@@ -66,14 +68,13 @@ Dealer Screent Shot DIR
     set screenshot directory    ${LogDIR}
     set global variable    ${LogDIR}
 
-
-
 Retail Screent Shot DIR
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
     create directory    ${Retail_screenshot_path}/${currentdate}
     ${LogDIR}=    convert to string    ${Retail_screenshot_path}/${currentdate}
     set screenshot directory    ${LogDIR}
     set global variable    ${LogDIR}
+
 
 Save Log DIR
     copy file    log.html    ${LogDIR}

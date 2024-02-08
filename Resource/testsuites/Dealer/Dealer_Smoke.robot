@@ -10,6 +10,12 @@ Resource  ../../../Resource/testdata/Dealer/Dealer_Variable.robot
 Resource  ../../../Resource/testdata/Dealer/Dealer_Resource.robot
 
 
+*** Keywords ***
+Setup Environment
+
+${Environment}    ${d1Dealer}
+${Username}    ${HK_D1_Automation_Bronze_UID}
+
 *** Test Cases ***
 Test Setup  Run Keywords   Open Chrome Browser
 Screen Shot DIR  Run Keywords    Dealer Screent Shot DIR

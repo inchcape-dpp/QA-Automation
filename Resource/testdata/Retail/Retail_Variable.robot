@@ -419,6 +419,11 @@ ${Retail_HK_HomePage_SearchVIN_Container}    //dpp-hk-search-by-vin//div[@class=
 ${Retail_HK_HomePage_SearchVIN_TextBox}    //dpp-hk-search-by-vin//div[@class='main-box main-box--padding']//input
 ${Retail_HK_HomePage_SearchVIN_Button}    //dpp-hk-search-by-vin//div[@class='main-box main-box--padding']//button
 
+${Retail_HK_HomePage_SearchVIN_PopUp_Container}    //dpp-hk-vehicle-results
+${Retail_HK_HomePage_SearchVIN_PopUp_ShopVehicle_Button}    //dpp-hk-vehicle-results//div/button[@class='btn btn-sm btn-block btn-default mt-2 p-1 select-this-vehicle-btn']
+${Retail_HK_HomePage_SearchVIN_PopUp_SaveVehicle_Button}    //dpp-hk-vehicle-results//div/button[@class='btn btn-sm btn-primary btn-block p-1 select-this-vehicle-btn vehicleListing-btn']
+${Retail_HK_HomePage_SearchVIN_PopUp_Search_Button}    //dpp-hk-vehicle-results//div[@class='button-wrapper d-flex justify-content-center mt-3']//button
+
 ${Retail_HK_HomePage_SearchVIN_TextBox_Value1}    JTNBF4FK403021435
 ${Retail_HK_HomePage_SearchVIN_TextBox_Value2}    JTMBH31V10D017606
 ${Retail_HK_HomePage_SearchVIN_TextBox_Value3}    JT711MP1000052922

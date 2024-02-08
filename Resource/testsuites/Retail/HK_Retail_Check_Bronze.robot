@@ -191,6 +191,7 @@ TC-053 - User should be able to Search Vehicle in the home page
     run keyword and continue on failure    User should be able to click Model ID on manual search in HK Retail Select Vehicle
     run keyword and continue on failure    User should be able to select Model ID on manual search in HK Retail Select Vehicle
     run keyword and continue on failure    User shoud be albe to click search this vehicle on manual seearh in Retail Select Vehicle
+    run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
     run keyword and continue on failure    TC Sleep
 
 TC-053 - User should be able to Go to Home Page in HK Retail
@@ -203,6 +204,7 @@ TC-053 - User should be able to search by VIN1 to HK Retail Home Page
     run keyword and continue on failure    User should be albe to View Search VIN in HK Retail Home Page
     run keyword and continue on failure    User should be albe to Input Search VIN1 in HK Retail Home Page
     run keyword and continue on failure    User should be albe to Click Search VIN in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view All Parts Page
     run keyword and continue on failure    User should be able to Go to Home page
@@ -213,6 +215,7 @@ TC-053 - User should be able to search by VIN2 to HK Retail Home Page
     run keyword and continue on failure    User should be albe to View Search VIN in HK Retail Home Page
     run keyword and continue on failure    User should be albe to Input Search VIN2 in HK Retail Home Page
     run keyword and continue on failure    User should be albe to Click Search VIN in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view All Parts Page
     run keyword and continue on failure    User should be able to Go to Home page
@@ -223,6 +226,7 @@ TC-053 - User should be able to search by VIN3 to HK Retail Home Page
     run keyword and continue on failure    User should be albe to View Search VIN in HK Retail Home Page
     run keyword and continue on failure    User should be albe to Input Search VIN3 in HK Retail Home Page
     run keyword and continue on failure    User should be albe to Click Search VIN in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view All Parts Page
     run keyword and continue on failure    User should be able to Go to Home page
@@ -233,6 +237,7 @@ TC-053 - User should be able to search by VIN4 to HK Retail Home Page
     run keyword and continue on failure    User should be albe to View Search VIN in HK Retail Home Page
     run keyword and continue on failure    User should be albe to Input Search VIN4 in HK Retail Home Page
     run keyword and continue on failure    User should be albe to Click Search VIN in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view All Parts Page
     run keyword and continue on failure    User should be able to Go to Home page
@@ -243,6 +248,7 @@ TC-053 - User should be able to search by VIN5 to HK Retail Home Page
     run keyword and continue on failure    User should be albe to View Search VIN in HK Retail Home Page
     run keyword and continue on failure    User should be albe to Input Search VIN5 in HK Retail Home Page
     run keyword and continue on failure    User should be albe to Click Search VIN in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view All Parts Page
     run keyword and continue on failure    User should be able to Go to Home page
@@ -305,119 +311,6 @@ TC-053 - User should be able to search by VIN5 to HK Retail Home Page
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-TC-083 - User should be able to add new vehicle in Retail Account Vehicle Listing Page
-    [Tags]    Vehicle Listing Page
-    run keyword and continue on failure    User should be able to click add new vehicle in Retail Account Vehicle Listing Page
-    run keyword and continue on failure    User should be able to view add vehicle in HK Retail Select Vehicle
-#    run keyword and continue on failure    User should be able to click add new vehicle in HK Retail Select Vehicle
-#    run keyword and continue on failure    User should be able to view add vehicle in HK Retail Select Vehicle
-    run keyword and continue on failure    User should be able to click model on manual search in Retail Select Vehicle
-    run keyword and continue on failure    User should be able to select model on manual search in Retail Select Vehicle
-    run keyword and continue on failure    User should be able to click year on manual search in Retail Select Vehicle
-    run keyword and continue on failure    User should be able to select year on manual search in Retail Select Vehicle
-    run keyword and continue on failure    User should be able to click series on manual search in Retail Select Vehicle
-    run keyword and continue on failure    User should be able to select series on manual search in Retail Select Vehicle
-    run keyword and continue on failure    User should be able to click Model ID on manual search in HK Retail Select Vehicle
-    run keyword and continue on failure    User should be able to select Model ID on manual search in HK Retail Select Vehicle
-    run keyword and continue on failure    User shoud be albe to click search this vehicle on manual seearh in Retail Select Vehicle
-    run keyword and continue on failure    User should be able to click select & save vehicle in Retail Select Vehicle
-    run keyword and continue on failure    TC Sleep
-    run keyword and continue on failure    reload page
-    run keyword and continue on failure    TC Sleep
-
-TC-009 - User should be able to click shop this vehicle in Retail Account Vehicle Listing Page
-    [Tags]    Vehicle Listing Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
-    run keyword and continue on failure    User should be able to view account vehicle listing page
-    run keyword and continue on failure    User should be able to click shop this vehicle in HK Retail Account Vehicle Listing Page
-    run keyword and continue on failure    TC Sleep
-    run keyword and continue on failure    TC Sleep
-    run keyword and continue on failure    TC Sleep
-    run keyword and continue on failure    reload page
-    run keyword and continue on failure    TC Sleep
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #TC-000000 - TC Sleep
 #    [Tags]    TC-000000   TC Sleep
 #    run keyword and continue on failure    TC Sleep
@@ -426,10 +319,10 @@ TC-009 - User should be able to click shop this vehicle in Retail Account Vehicl
 #    [Tags]    TC-000000   Browser Back
 #    run keyword and continue on failure    Browse Back Button
 
-
-TC-000000 - User should be able to logout
-    [Tags]    TC009    Logout
-    run keyword and continue on failure    User should be able to logout
+#
+#TC-000000 - User should be able to logout
+#    [Tags]    TC009    Logout
+#    run keyword and continue on failure    User should be able to logout
 
 #Test Teardown
 #    Run Keywords  Close Browser
