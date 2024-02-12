@@ -4,7 +4,7 @@ Documentation    Suite description
 Library  SeleniumLibrary
 Library    String
 
-Resource  ../../../Resource/testdata/config.robot
+#Resource  ../../../Resource/testdata/config.robot
 Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../Resource/testdata/credentials.robot
 

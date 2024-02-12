@@ -5,9 +5,9 @@ Library  SeleniumLibrary
 Library    Process
 #Library  FakerLibrary
 
-Resource  ../../../Resource/testdata/config.robot
-Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
-Resource  ../../../Resource/testdata/Retail/Retail_Resource.robot
+Resource  ../../../../../Resource/testdata/Retail/AU_Config/S1_Config.robot
+Resource  ../../../../../Resource/testdata/Retail/Retail_Variable.robot
+Resource  ../../../../../Resource/testdata/Retail/Retail_Resource.robot
 
 *** Test Cases ***
 Test Setup  Run Keywords   Open Chrome Browser

@@ -4,9 +4,9 @@ Documentation    Suite description
 Library  SeleniumLibrary
 Library    Process
 
-Resource  ../../../Resource/testdata/config.robot
-Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
-Resource  ../../../Resource/testdata/Retail/Retail_Resource.robot
+Resource  ../../../../../Resource/testdata/Retail/HK_Config/P1_Config.robot
+Resource  ../../../../../Resource/testdata/Retail/Retail_Variable.robot
+Resource  ../../../../../Resource/testdata/Retail/Retail_Resource.robot
 
 *** Test Cases ***
 Test Setup  Run Keywords   Open Chrome Browser

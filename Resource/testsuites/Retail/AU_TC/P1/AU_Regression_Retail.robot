@@ -6,9 +6,9 @@ Library    Process
 Library    String
 
 
-Resource  ../../../Resource/testdata/config.robot
-Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
-Resource  ../../../Resource/testdata/Retail/Retail_Resource.robot
+Resource  ../../../../../Resource/testdata/Retail/AU_Config/P1_Config.robot
+Resource  ../../../../../Resource/testdata/Retail/Retail_Variable.robot
+Resource  ../../../../../Resource/testdata/Retail/Retail_Resource.robot
 
 
 *** Test Cases ***

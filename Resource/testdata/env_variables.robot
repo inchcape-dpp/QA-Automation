@@ -8,6 +8,9 @@ ${d1BE}             https://backoffice.coyzchwfjr-inchcaped2-d1-public.model-t.c
 ${d1Retail}         https://retail.coyzchwfjr-inchcaped2-d1-public.model-t.cc.commerce.ondemand.com/
 ${d1Dealer}         https://dealer.coyzchwfjr-inchcaped2-d1-public.model-t.cc.commerce.ondemand.com/dppdealer/login/register
 
+${d1HKRetail}    https://hkretail.coyzchwfjr-inchcaped2-d1-public.model-t.cc.commerce.ondemand.com/hkretail/login/register
+${d1HKDealer}    https://hkdealer.coyzchwfjr-inchcaped2-d1-public.model-t.cc.commerce.ondemand.com/hkdealer/login
+
 #------------------------D2------------------------
 ${d2BE}             https://backoffice.coyzchwfjr-inchcaped3-d1-public.model-t.cc.commerce.ondemand.com/backoffice/
 ${d2Retail}         https://retail.coyzchwfjr-inchcaped3-d1-public.model-t.cc.commerce.ondemand.com/dppretail/
