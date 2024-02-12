@@ -33,12 +33,12 @@ ${ExcelFile_HK_Product_List_Path}    C:\\Users\\Ericson.Tinana\Pictures\\Files\\
 #${Username}    hktestric3@yopmail.com
 #${Password}    Pass@12345
 
-${Username}    ${Ric_S2_HKUser_GOLD}
-${Password}    ${Ric_S2_HKPass_GOLD}
+${Username}    ${AUSeller_P1_UID}
+${Password}    ${AUSeller_P1_PWD}
 
 *** Keywords ***
 Open Chrome Browser
-    SeleniumLibrary.Open Browser    ${s2HKRetail}    Chrome  executable_path=${driver_path}
+    SeleniumLibrary.Open Browser    ${PartsLane}       Chrome  executable_path=${driver_path}
     maximize browser window
 #    press keys    none    ctrl + t
 ##    ${test1}    get window titles

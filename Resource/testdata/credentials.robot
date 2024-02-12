@@ -252,3 +252,15 @@ ${HK_S2_Automation_Gold_PWD}    HK_Auto@12345!
                                                                         #------------------------Inboxes----------------
 ${HK_D1_Automation_Bronze_UID}    hk_automation1retaild1_bronze@robot-mail.com
 ${HK_D1_Automation_Bronze_PWD}    HK_Auto@12345!
+
+${AU_S2_UID}    rictestemail31@yopmail.com
+${AU_S2_PWD}    Pass@12345
+
+${AUSeller_S2_UID}    seller1.admin@test.com
+${AUSeller_S2_PWD}    AUPass@12345
+
+${AUCustomer_P1_UID}    ericson.tinana@inchcape.com
+${AUCustomer_P1_PWD}    Carloakos1!
+
+${AUSeller_P1_UID}    testp1seller@yopmail.com
+${AUSeller_P1_PWD}    dealNTG07.
