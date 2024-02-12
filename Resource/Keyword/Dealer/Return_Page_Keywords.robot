@@ -4,7 +4,7 @@ Documentation    Suite description
 Library    SeleniumLibrary
 
 
-Resource  ../../../Resource/testdata/config.robot
+#Resource  ../../../Resource/testdata/config.robot
 Resource  ../../../Resource/testdata/Dealer/Dealer_Variable.robot
 Resource  ../../../Resource/testdata/credentials.robot
 
