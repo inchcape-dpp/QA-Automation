@@ -38,8 +38,8 @@ Open Chrome Browser
 
 Dealer Screent Shot DIR
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
-    create directory    ${Dealer_screenshot_path}/${currentdate}
-    ${LogDIR}=    convert to string    ${Dealer_screenshot_path}/${currentdate}
+    create directory    ${Dealer_screenshot_path}/AU_${currentdate}
+    ${LogDIR}=    convert to string    ${Dealer_screenshot_path}/AU_${currentdate}
     set screenshot directory    ${LogDIR}
     set global variable    ${LogDIR}
 

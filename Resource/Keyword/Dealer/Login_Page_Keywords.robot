@@ -147,6 +147,14 @@ User should be able to click create account in Dealer Reset Password Page
     click element    ${ResetPassCreateAccount}
     sleep    2
 
-#Get Text Sample
-#    ${TesGetText}=    get text    ${CreateAccount}
-#    Log    Element get ${CreateAccount}
+User should be able to click Translate to English Button
+    wait until element is visible    ${Dealer_HK_LoginPage_English_Button}    10
+    capture element screenshot    ${Dealer_HK_LoginPage_English_Button}
+    click element    ${Dealer_HK_LoginPage_English_Button}
+    sleep    2
+
+User should be able to click Translate to Chinese Button
+    wait until element is visible    ${Dealer_HK_LoginPage_Chinese_Button}    10
+    capture element screenshot    ${Dealer_HK_LoginPage_Chinese_Button}
+    click element    ${Dealer_HK_LoginPage_Chinese_Button}
+    sleep    2

@@ -42,8 +42,8 @@ Open Chrome Browser
 
 Retail Screent Shot DIR
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
-    create directory    ${Retail_screenshot_path}/${currentdate}
-    ${LogDIR}=    convert to string    ${Retail_screenshot_path}/${currentdate}
+    create directory    ${Retail_screenshot_path}/HK_${currentdate}
+    ${LogDIR}=    convert to string    ${Retail_screenshot_path}/HK_${currentdate}
     set screenshot directory    ${LogDIR}
     set global variable    ${LogDIR}
 
