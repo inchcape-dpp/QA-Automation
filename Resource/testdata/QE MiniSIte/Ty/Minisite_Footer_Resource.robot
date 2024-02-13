@@ -5,5 +5,7 @@ Library    SeleniumLibrary
 Library    Process
 #Library    FakerLibrary
 
-Resource    ../../../Resource/Keyword/QE MiniSite/Ty/Minisite.Robot
+Resource    ../../../../Resource/Keyword/QE MiniSite/Ty/Minisite_Footer.robot
+
+
 

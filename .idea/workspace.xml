@@ -4,9 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="Commit Feb 7">
+    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="Commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/D1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/D1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/P1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/S1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/S1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/S2_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/S2_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/Dealer_Variable.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/Dealer_Variable.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/D1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/D1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/P1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S2_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S2_Config.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testdata/QE MiniSIte/Dan/MiniSite_Variable.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/QE MiniSIte/Dan/MiniSite_Variable.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/QE MiniSIte/Ty/Minisite_Footer_Resource.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/QE MiniSIte/Ty/Minisite_Footer_Resource.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/QE MiniSIte/Ty/Minisite_Footer_Variable.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/QE MiniSIte/Ty/Minisite_Footer_Variable.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/D1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/D1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/P1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/S1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/S1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/S2_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/S2_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/D1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/D1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/P1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S2_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S2_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/Retail_Variable.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/Retail_Variable.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,7 +91,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707283678166</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1707286666223</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707286666223</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,8 +142,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="TestC" />
-    <MESSAGE value="Commit" />
     <MESSAGE value="Commit Feb 7" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit Feb 7" />
+    <MESSAGE value="Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
 </project>
