@@ -5,7 +5,7 @@ Library    SeleniumLibrary
 Library    String
 Library    ExcelLibrary
 
-Resource  ../../../Resource/testdata/config.robot
+#Resource  ../../../Resource/testdata/config.robot
 Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../Resource/testdata/Retail/Retail_Resource.robot
 Resource  ../../../Resource/testdata/credentials.robot
@@ -971,16 +971,16 @@ Product Price Check
 
 
 User should be able to Check Product Stock
-    open excel document    ${ExcelFile_AU_Stock_List_Path}    Parex_SU_AU
+    open excel document    ${ExcelFile_AU_Stock_List_Path}    Titan SUB Geerex
     ${sheets}=    get list sheet names
-    ${PartNum}=    read excel cell    row_num=2    col_num=1    sheet_name=Liver100
+    ${PartNum}=    read excel cell    row_num=2    col_num=1    sheet_name=Test
 
     FOR    ${StockCheck}    IN RANGE    1    100
 
       log    ${Part_Num_Index}
 
-      @{Part_Num_Column}=    read excel column    col_num=1    max_num=100    sheet_name=Liver100
-      @{Stock_Column}=    read excel column    col_num=3    max_num=100    sheet_name=Liver100
+      @{Part_Num_Column}=    read excel column    col_num=1    max_num=100    sheet_name=Test
+      @{Stock_Column}=    read excel column    col_num=3    max_num=100    sheet_name=Test
 
       ${Part_Num}=    convert to string    ${Part_Num_Column}[${Part_Num_Index}]
       ${Stock_Num}=    convert to string    ${Stock_Column}[${Part_Num_Index}]
@@ -989,14 +989,14 @@ User should be able to Check Product Stock
       run keyword and continue on failure    click element    ${HomePageSearhProduct}
       run keyword and continue on failure    clear element text    ${HomePageSearhProduct}
       run keyword and continue on failure    input text    ${HomePageSearhProduct}    ${Part_Num}
-      sleep    10
+      sleep    7
 
       run keyword and continue on failure    wait until element is visible    ${HomePageSearchSuggestionList1}    10
     #  ${Prod_Price}  get text   ${SearchProdPrice}
     #  ${Prod_Search_RemoveString}    remove string    ${Prod_Price}    $    ,    .0
       run keyword and continue on failure    click element    ${HomePageSearchSuggestionList1}
       run keyword and continue on failure    mouse over    ${HomePageLogo}
-      sleep    10
+      sleep    7
 
       run keyword and continue on failure    wait until element is visible    ${ProductDeatilsPageProductInStock}    10
       ${Part_Detail_Stock}    run keyword and continue on failure    get text    ${ProductDeatilsPageProductInStock}
@@ -1014,7 +1014,7 @@ User should be able to Check Product Stock
 
       ${Part_Num_Index}    evaluate    ${Part_Num_Index}+1
 
-      sleep    5
+      sleep    2
     END
 
     close all excel documents

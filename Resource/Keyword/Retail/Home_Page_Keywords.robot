@@ -4,7 +4,7 @@ Documentation    Suite description
 Library  SeleniumLibrary
 Library    Collections
 
-Resource  ../../../Resource/testdata/config.robot
+#Resource  ../../../Resource/testdata/config.robot
 Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../Resource/testdata/credentials.robot
 
@@ -618,6 +618,26 @@ User should be albe to Click Search VIN in HK Retail Home Page
     click element    ${Retail_HK_HomePage_SearchVIN_Button}
     sleep    10
 
+User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
+    wait until element is visible    ${Retail_HK_HomePage_SearchVIN_PopUp_Container}    10
+    wait until element is visible    ${Retail_HK_HomePage_SearchVIN_PopUp_ShopVehicle_Button}    10
+    capture element screenshot    ${Retail_HK_HomePage_SearchVIN_PopUp_ShopVehicle_Button}
+    click element    ${Retail_HK_HomePage_SearchVIN_PopUp_ShopVehicle_Button}
+    sleep    2
+
+User should be able to click save this vehicle in Pop up Vehicle Search in HK Retail Home Page
+    wait until element is visible    ${Retail_HK_HomePage_SearchVIN_PopUp_Container}    10
+    wait until element is visible    ${Retail_HK_HomePage_SearchVIN_PopUp_SaveVehicle_Button}    10
+    capture element screenshot    ${Retail_HK_HomePage_SearchVIN_PopUp_SaveVehicle_Button}
+    click element    ${Retail_HK_HomePage_SearchVIN_PopUp_SaveVehicle_Button}
+    sleep    2
+
+User should be able to click search again in Pop up Vehicle Search in HK Retail Home Page
+    wait until element is visible    ${Retail_HK_HomePage_SearchVIN_PopUp_Container}    10
+    wait until element is visible    ${Retail_HK_HomePage_SearchVIN_PopUp_Search_Button}    10
+    capture element screenshot    ${Retail_HK_HomePage_SearchVIN_PopUp_Search_Button}
+    click element    ${Retail_HK_HomePage_SearchVIN_PopUp_Search_Button}
+    sleep    2
 
 
 

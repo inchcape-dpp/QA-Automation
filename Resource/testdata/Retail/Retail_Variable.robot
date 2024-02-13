@@ -419,6 +419,11 @@ ${Retail_HK_HomePage_SearchVIN_Container}    //dpp-hk-search-by-vin//div[@class=
 ${Retail_HK_HomePage_SearchVIN_TextBox}    //dpp-hk-search-by-vin//div[@class='main-box main-box--padding']//input
 ${Retail_HK_HomePage_SearchVIN_Button}    //dpp-hk-search-by-vin//div[@class='main-box main-box--padding']//button
 
+${Retail_HK_HomePage_SearchVIN_PopUp_Container}    //dpp-hk-vehicle-results
+${Retail_HK_HomePage_SearchVIN_PopUp_ShopVehicle_Button}    //dpp-hk-vehicle-results//div/button[@class='btn btn-sm btn-block btn-default mt-2 p-1 select-this-vehicle-btn']
+${Retail_HK_HomePage_SearchVIN_PopUp_SaveVehicle_Button}    //dpp-hk-vehicle-results//div/button[@class='btn btn-sm btn-primary btn-block p-1 select-this-vehicle-btn vehicleListing-btn']
+${Retail_HK_HomePage_SearchVIN_PopUp_Search_Button}    //dpp-hk-vehicle-results//div[@class='button-wrapper d-flex justify-content-center mt-3']//button
+
 ${Retail_HK_HomePage_SearchVIN_TextBox_Value1}    JTNBF4FK403021435
 ${Retail_HK_HomePage_SearchVIN_TextBox_Value2}    JTMBH31V10D017606
 ${Retail_HK_HomePage_SearchVIN_TextBox_Value3}    JT711MP1000052922
@@ -1190,6 +1195,18 @@ ${Retail_AccountReturnPageOrderDetailsRetReqDateValue}    (//div[@class='col']//
 ${Retail_AccountReturnPageOrderReturnHeader}    //h2[@class='returned']
 ${Retail_AccountReturnPageReturnReturnContainer}    //table/..
 ${Retail_AccountReturnPageOrderReturnItemList}    //table[@class='return-request-detail-table']
+
+${Retail_AccountReturnPageOrderReturnItemList_Desc_Label}    //table[@class='return-request-detail-table']//tr//th[contains(text(),'Description')]
+${Retail_AccountReturnPageOrderReturnItemList_Price_Label}    //table[@class='return-request-detail-table']//tr//th[contains(text(),'Price')]
+${Retail_AccountReturnPageOrderReturnItemList_RRP_Label}    //table[@class='return-request-detail-table']//tr//th[contains(text(),'RRP')]
+${Retail_AccountReturnPageOrderReturnItemList_Qty_Label}    //table[@class='return-request-detail-table']//tr//th[contains(text(),'Qty')]
+${Retail_AccountReturnPageOrderReturnItemList_Total_Label}    //table[@class='return-request-detail-table']//tr//th[contains(text(),'Total')]
+
+${Retail_AccountReturnPageOrderReturnItemList_Desc_Value1}    (//table[@class='return-request-detail-table']//tbody//td)[1]
+${Retail_AccountReturnPageOrderReturnItemList_Price_Value1}    (//table[@class='return-request-detail-table']//tbody//td)[2]
+${Retail_AccountReturnPageOrderReturnItemList_RRP_Value1}    (//table[@class='return-request-detail-table']//tbody//td)[3]
+${Retail_AccountReturnPageOrderReturnItemList_Qty_Value1}    (//table[@class='return-request-detail-table']//tbody//td)[4]
+${Retail_AccountReturnPageOrderReturnItemList_Total_Value1}    (//table[@class='return-request-detail-table']//tbody//td)[5]
 
 ${Retail_AccountReturnPageOrderReturnDataSectionContainer}    //div[@class='return-request-data-section' or @class='cancel-order-container']
 ${Retail_AccountReturnPageOrderReturnDataSectionReasonLabel}    //div[@class='form-group']//span[@class='label-content']

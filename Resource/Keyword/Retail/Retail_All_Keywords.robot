@@ -174,6 +174,9 @@ User should be albe to Input Search VIN3 in HK Retail Home Page
 User should be albe to Input Search VIN4 in HK Retail Home Page
 User should be albe to Input Search VIN5 in HK Retail Home Page
 User should be albe to Click Search VIN in HK Retail Home Page
+User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
+User should be able to click save this vehicle in Pop up Vehicle Search in HK Retail Home Page
+User should be able to click search again in Pop up Vehicle Search in HK Retail Home Page
 
 #-----------------------------------------------------Retail Search Bar-------------------------------------------------
 User should be able to input text on search bar
