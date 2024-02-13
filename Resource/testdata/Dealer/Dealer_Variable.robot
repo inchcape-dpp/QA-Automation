@@ -6,18 +6,18 @@ Resource  ../../../Resource/testdata/config.robot
 *** Variables ***
 #-----------------------------------------------------Dealer Login Page-------------------------------------------------
 ${Logo}    //dpp-login-form//cx-media[@format='logo']
-${Header}    //div[@class='heading' and contains(text(),'Login')]
+${Header}    //div[@class='heading' and (contains(text(),'Login') or contains(text(),'供應商登入'))]
 ${Email}    //*[@type='email']
 ${Pass}    //*[@type='password']
 ${Remember}    //div[@class='remember-me-checkbox']
 ${RememberCheck}    //input[@type='checkbox']
-${Forgot}    //a[contains(text(),'Forgot Password')]
+${Forgot}    //a[contains(text(),'Forgot Password') or contains(text(),'忘記密碼')]
 ${LoginButton}    //button[@type='submit']
 ${NoAccount}    //div[@class='not-having-account']
 ${CreateAccount}    //a[@class='create-account']
 ${FooterLogo}    //div[@class='footer-logo']
-${PN}    //*[contains(text(),' Privacy Policy ')]
-${TnC}    //*[contains(text(),' Terms & Conditions ')]
+${PN}    //*[contains(text(),' Privacy Policy ') or contains(text(),'私隱條款')]
+${TnC}    //*[contains(text(),' Terms & Conditions ') or contains(text(),'條款及細則')]
 ${CopyRight}    (//div[@class='wrapper'])[3]
 
 ${InvalidEmailMessage}    //div[@class='form-errors']
@@ -25,6 +25,10 @@ ${InvalidEmailPassMessage}    //div[@class='alert alert-danger']
 
 ${SuccessfulLogoutMessage}    //div[@class='alert alert-success']
 ${SessionExpiredMessage}    //div[@class='alert alert-danger']//span[contains(text(),'Your session has expired.')]
+
+${Dealer_HK_LoginPage_English_Button}    //dpp-language-toggle//span[contains(text(),'EN')]
+${Dealer_HK_LoginPage_Chinese_Button}    //dpp-language-toggle//span[contains(text(),'中文')]
+
 
 #-----------------------------------------------------Dealer Forgot Password Page---------------------------------------
 ${ResetPassHeader}    //div[contains(text(),'Reset Password')]
@@ -55,10 +59,10 @@ ${HomepageOrdersMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text
 ${HomepageReturnMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Return ')]
 ${HomepageCustomerMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Customer ')]
 ${HomepageCustomerNewReg}    //div[@class='tab-data has-child']//a[contains(text(),'New Registration Request')]
-${HomepageCustomerBuyerRelation}    //div[@class='tab-data has-child']//a[contains(text(),'Customer Relationship')]
+${HomepageCustomerBuyerRelation}    //div[@class='tab-data has-child']//a[contains(text(),'Customer Relationship') or contains(text(),'Buyer Relationship')]
 ${HomepageCustomerDropdownClosed}    (//ul[@class='vertical-menu tab-level']//div[@class='dropdown-icon'])[1]
 ${HomepageCustomerDropdownOpen}    (//ul[@class='vertical-menu tab-level']//div[@class='dropdown-icon opened'])[1]
-${HomepageMessagesMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Messages ')]
+${HomepageMessagesMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Messages ') or contains(text(),'Inbox')]
 ${HomepageProfileMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Profile ')]
 ${HomepageProfileDropdownClosed}    (//ul[@class='vertical-menu tab-level']//div[@class='dropdown-icon'])[2]
 ${HomepageProfileDropdownOpen}    (//ul[@class='vertical-menu tab-level']//div[@class='dropdown-icon opened'])[2]
@@ -129,7 +133,7 @@ ${OrderPageDetailsTotalLabel}    //th[@class='total']
 ${OrderPageDetailsStatusLabel}    //th[@class='status']
 ${OrderPageDetailsReturnLabel}    //th[@class='return-icon']
 
-${OrderPageHistory1}    (//tr//td[@class='cx-order-history-code']//a[@class='cx-order-history-value'])[1]    #${variable 1-15}
+${OrderPageHistory1}    (//tr//td[@class='cx-order-history-code']//a[@class='cx-order-history-value'])[1]|(//tr//td[@class='cx-order-history-code'])[1]    #${variable 1-15}
 
 #-----------------------------------------------------Dealer Order Page Received
 ${OrderPageReceivedContainer}    (//tr[.//td[@class='cx-order-history-total' and contains(text(),'Received')]])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Received')]])[1]
@@ -188,7 +192,7 @@ ${OrderDetailsReturnContainer}    //div[@class='order-details-items-table return
 ${OrderDetailsReturnHeader}    //div[@class='row header return-request-header']
 ${OrderDetailsReturnDescription}    //span[@class='order-table-heading' and (contains(text(),'Description'))]
 ${OrderDetailsReturnPrice}    //span[@class='order-table-heading' and (contains(text(),'Price'))]
-${OrderDetailsReturnRRP}    //span[@class='order-table-heading' and (contains(text(),'RRP'))]
+${OrderDetailsReturnRRP}    //span[@class='order-table-heading' and (contains(text(),'RRP') or contains(text(),'Retail Price'))]
 ${OrderDetailsReturnOrder}    //span[@class='order-table-heading' and (contains(text(),'Order'))]
 ${OrderDetailsReturnShipped}    //span[@class='order-table-heading' and (contains(text(),'Shipped'))]
 ${OrderDetailsReturnPending}    //span[@class='order-table-heading' and (contains(text(),'Pending'))]
@@ -469,8 +473,8 @@ ${NewRegReqPageBuyerDetailsAcceptButton}    //button[@class='btn btn-secondary m
 
 
 #-----------------------------------------------------Dealer Customer Rel Page------------------------------------------
-${BuyerRelPagePanelContainer}    //dpp-buyer-relationship
-${BuyerRelPagePanelHeader}    //dpp-buyer-relationship//h3
+${BuyerRelPagePanelContainer}    //dpp-buyer-relationship|//dpp-hk-buyer-relationship
+${BuyerRelPagePanelHeader}    //dpp-buyer-relationship//h3|//dpp-hk-buyer-relationship//h3
 ${CustRelPageDesc}    //p[@class='description']
 ${CustRelPageBuyerLabel}    //th[@class='item']
 ${CustRelPageActiveLabel}    //th[contains(text(),'Active')]
@@ -632,8 +636,8 @@ ${ProfileAccountsDetailsLandlineLabel}    //dpp-account-details[@class='user-for
 ${ProfileAccountsDetailsFirstNameTextBox}    //dpp-account-details[@class='user-form']//input[@formcontrolname='firstName']
 ${ProfileAccountsDetailsLastNameTextBox}    //dpp-account-details[@class='user-form']//input[@formcontrolname='lastName']
 ${ProfileAccountsDetailsEmailTextBox}    //dpp-account-details[@class='user-form']//input[@formcontrolname='email']
-${ProfileAccountsDetailsPhoneTextBox}    //dpp-account-details[@class='user-form']//input[@formcontrolname='contactNumber']
-${ProfileAccountsDetailsLandlineTextBox}    //dpp-account-details[@class='user-form']//input[@formcontrolname='landlineNumber']
+${ProfileAccountsDetailsPhoneTextBox}    //dpp-account-details[@class='user-form']//input[@formcontrolname='contactNumber']|//dpp-account-details[@class='user-form']//span[@class='label-content' and (contains(text(),'Phone') or contains(text(),'電話號碼*'))]/following-sibling::dpp-input-contact-number//input
+${ProfileAccountsDetailsLandlineTextBox}    //dpp-account-details[@class='user-form']//input[@formcontrolname='landlineNumber']|//dpp-account-details[@class='user-form']//span[@class='label-content' and (contains(text(),'Landline') or contains(text(),'住宅電話號碼 (選填)'))]/following-sibling::dpp-input-contact-number//input
 
 ${ProfileAccountsDetailsCancelButton}    //dpp-account-details[@class='user-form']//button[@type='button']
 ${ProfileAccountsDetailsUpdateButton}    //dpp-account-details[@class='user-form']//button[@type='submit']
@@ -693,8 +697,8 @@ ${ProfileChangePassNewPassInvalidValue}    Test1
 ${ProfileChangePassConfirmPassInvalidValue}    Test
 
 #-----------------------------------------------------Dealer Company Details Page---------------------------------------
-${CompanyDetailsPagePanelContainer}    //dpp-company-details
-${CompanyDetailsPagePanelHeader}    //dpp-company-details//h2
+${CompanyDetailsPagePanelContainer}    //dpp-company-details|//dpp-hk-company-details
+${CompanyDetailsPagePanelHeader}    //dpp-company-details//h2|//dpp-hk-company-details//h2
 
 #-----------------------------------------------------Dealer Company Details Page Labels
 ${CompanyDetailsPageCompanyNameLabel}    //dpp-company-details//span[@class='label-content' and contains(text(),'Company Name')]
@@ -740,7 +744,7 @@ ${CompanyDetailsPageContLNTextBox}    //dpp-company-details//input[@formcontroln
 ${CompanyDetailsPageABNTextBox}    //dpp-company-details//input[@formcontrolname='number']
 
 #-----------------------------------------------------Dealer Company Details Page CheckBox
-${CompanyDetailsPageDelSameAsPostalCheckBox}    //dpp-company-details//input[@type='checkbox']
+${CompanyDetailsPageDelSameAsPostalCheckBox}    //dpp-company-details//input[@type='checkbox']|//dpp-hk-company-details//input[@type='checkbox']
 
 #-----------------------------------------------------Dealer Company Details Page DropDownList
 ${CompanyDetailsPagePostalStateComboBox}    (//dpp-company-details//ng-select[@formcontrolname='region']//div[@class='ng-value-container'])[1]

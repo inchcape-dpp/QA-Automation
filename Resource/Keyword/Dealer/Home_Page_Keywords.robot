@@ -3,7 +3,7 @@ Documentation    Suite description
 
 Library  SeleniumLibrary
 
-Resource  ../../../Resource/testdata/config.robot
+#Resource  ../../../Resource/testdata/config.robot
 Resource  ../../../Resource/testdata/Dealer/Dealer_Variable.robot
 Resource  ../../../Resource/testdata/credentials.robot
 
@@ -64,6 +64,18 @@ User should be able to view top navigation
     capture element screenshot    ${HomepageOrders}
     capture element screenshot    ${HomepageReturn}
     capture element screenshot    ${HomepageNewBuyer}
+    capture element screenshot    ${HomepageMessage}
+
+User should be able to view top navigation in HK Dealer Home Page
+    wait until element is visible    ${HomepageUserAccount}    10
+    wait until element is visible    ${HomepageOrders}    10
+    wait until element is visible    ${HomepageReturn}    10
+    wait until element is visible    ${HomepageMessage}    10
+
+    capture element screenshot    ${HomepageLogo}
+    capture element screenshot    ${HomepageUserAccount}
+    capture element screenshot    ${HomepageOrders}
+    capture element screenshot    ${HomepageReturn}
     capture element screenshot    ${HomepageMessage}
 
 User should be able to click account from top navigation

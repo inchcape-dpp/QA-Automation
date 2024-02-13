@@ -5,8 +5,11 @@ Documentation       Suite description
 #-----------------------------------------------------URLS--------------------------------------------------------------
 #------------------------D1------------------------
 ${d1BE}             https://backoffice.coyzchwfjr-inchcaped2-d1-public.model-t.cc.commerce.ondemand.com/backoffice/
-${d1Retail}         https://retail.coyzchwfjr-inchcaped2-d1-public.model-t.cc.commerce.ondemand.com/
-${d1Dealer}         https://dealer.coyzchwfjr-inchcaped2-d1-public.model-t.cc.commerce.ondemand.com/dppdealer/login/register
+${d1Retail}         https://retail.coyzchwfjr-inchcaped2-d1-public.model-t.cc.commerce.ondemand.com/dppretail/login
+${d1Dealer}         https://dealer.coyzchwfjr-inchcaped2-d1-public.model-t.cc.commerce.ondemand.com/dppdealer/login
+
+${d1HKRetail}    https://hkretail.coyzchwfjr-inchcaped2-d1-public.model-t.cc.commerce.ondemand.com/hkretail/login
+${d1HKDealer}    https://hkdealer.coyzchwfjr-inchcaped2-d1-public.model-t.cc.commerce.ondemand.com/hkdealer/login
 
 #------------------------D2------------------------
 ${d2BE}             https://backoffice.coyzchwfjr-inchcaped3-d1-public.model-t.cc.commerce.ondemand.com/backoffice/
@@ -15,7 +18,7 @@ ${d2Dealer}         https://dealer.coyzchwfjr-inchcaped3-d1-public.model-t.cc.co
 
 #------------------------S1------------------------
 ${s1BE}             https://backoffice.coyzchwfjr-inchcaped2-s1-public.model-t.cc.commerce.ondemand.com/backoffice
-${s1Retail}         https://retail.coyzchwfjr-inchcaped2-s1-public.model-t.cc.commerce.ondemand.com/
+${s1Retail}         https://retail.coyzchwfjr-inchcaped2-s1-public.model-t.cc.commerce.ondemand.com/dppretail/login
 ${s1Dealer}         https://dealer.coyzchwfjr-inchcaped2-s1-public.model-t.cc.commerce.ondemand.com/dppdealer/login
 
 ${s1HKRetail}    https://hkretail.coyzchwfjr-inchcaped2-s1-public.model-t.cc.commerce.ondemand.com/hkretail
