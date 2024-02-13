@@ -374,6 +374,178 @@ User should be able to view error messages in Dealer Company Details Page
     sleep    2
 
 
+User should be able to view company details in HK Company Details Page
+    wait until element is visible    ${CompanyDetailsPagePanelContainer}    10
+    wait until element is visible    ${CompanyDetailsPagePanelHeader}    10
+#    wait until element is visible    ${CompanyDetailsPageCompanyNameLabel}    10
+#    wait until element is visible    ${CompanyDetailsPageTradingNameLabel}    10
+#	wait until element is visible    ${CompanyDetailsPagePostalAddressLabel}    10
+#    wait until element is visible    ${CompanyDetailsPagePostalAddressAddLine1Label}    10
+#    wait until element is visible    ${CompanyDetailsPagePostalAddressAddLine2Label}    10
+#
+#    wait until element is visible    ${CompanyDetailsPageCompanyNameTextBox}    10
+#    wait until element is visible    ${CompanyDetailsPageTradingNameTextBox}    10
+#    wait until element is visible    ${CompanyDetailsPagePostalAddressAddLine1TextBox}    10
+#    wait until element is visible    ${CompanyDetailsPagePostalAddressAddLine2TextBox}    10
+#
+#    capture element screenshot    ${CompanyDetailsPageCompanyNameLabel}
+#    capture element screenshot    ${CompanyDetailsPageTradingNameLabel}
+#    capture element screenshot    ${CompanyDetailsPagePostalAddressLabel}
+#    capture element screenshot    ${CompanyDetailsPagePostalAddressAddLine1Label}
+#    capture element screenshot    ${CompanyDetailsPagePostalAddressAddLine2Label}
+#
+#    capture element screenshot    ${CompanyDetailsPageCompanyNameTextBox}
+#    capture element screenshot    ${CompanyDetailsPageTradingNameTextBox}
+#    capture element screenshot    ${CompanyDetailsPagePostalAddressAddLine1TextBox}
+#    capture element screenshot    ${CompanyDetailsPagePostalAddressAddLine2TextBox}
+#
+#    capture page screenshot
+#
+#    scroll element into view    ${CompanyDetailsPageEmailAddLabel}
+##    run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Dealer Company Details Page
+#
+#    wait until element is visible    ${CompanyDetailsPagePostalAddressSuburbLabel}    10
+#    wait until element is visible    ${CompanyDetailsPagePostalAddressPostalCodeLabel}    10
+#    wait until element is visible    ${CompanyDetailsPagePostalAddressStateLabel}    10
+#    wait until element is visible    ${CompanyDetailsPageDelSameAsPostalLabel}    10
+#    wait until element is visible    ${CompanyDetailsPageDelAddressLabel}    10
+#    wait until element is visible    ${CompanyDetailsPageDelAddressAddLine1Label}    10
+#    wait until element is visible    ${CompanyDetailsPageDelAddressAddLine2Label}    10
+#    wait until element is visible    ${CompanyDetailsPageDelAddressSuburbLabel}    10
+#    wait until element is visible    ${CompanyDetailsPageDelAddressPostalCodeLabel}    10
+#    wait until element is visible    ${CompanyDetailsPageDelAddressStateLabel}    10
+#
+#    wait until element is visible    ${CompanyDetailsPagePostalAddressSuburbTextBox}    10
+#    wait until element is visible    ${CompanyDetailsPagePostalAddressPostalCodeTextBox}    10
+#    wait until element is visible    ${CompanyDetailsPageDelAddressAddLine1TextBox}    10
+#    wait until element is visible    ${CompanyDetailsPageDelAddressAddLine2TextBox}    10
+#    wait until element is visible    ${CompanyDetailsPageDelAddressSuburbTextBox}    10
+#    wait until element is visible    ${CompanyDetailsPageDelAddressPostalCodeTextBox}    10
+#
+#    wait until element is visible    ${CompanyDetailsPageDelSameAsPostalCheckBox}    10
+#
+#
+#    wait until element is visible    ${CompanyDetailsPagePostalStateComboBox}    10
+#    wait until element is visible    ${CompanyDetailsPagePostalStateComboBoxArrow}    10
+#
+#    wait until element is visible    ${CompanyDetailsPageDelStateComboBox}    10
+#    wait until element is visible    ${CompanyDetailsPageDelStateComboBoxArrow}    10
+#
+#    capture element screenshot    ${CompanyDetailsPagePostalAddressSuburbLabel}
+#    capture element screenshot    ${CompanyDetailsPagePostalAddressPostalCodeLabel}
+#    capture element screenshot    ${CompanyDetailsPagePostalAddressStateLabel}
+#    capture element screenshot    ${CompanyDetailsPageDelSameAsPostalLabel}
+#    capture element screenshot    ${CompanyDetailsPageDelAddressLabel}
+#    capture element screenshot    ${CompanyDetailsPageDelAddressAddLine1Label}
+#    capture element screenshot    ${CompanyDetailsPageDelAddressAddLine2Label}
+#    capture element screenshot    ${CompanyDetailsPageDelAddressSuburbLabel}
+#    capture element screenshot    ${CompanyDetailsPageDelAddressPostalCodeLabel}
+#    capture element screenshot    ${CompanyDetailsPageDelAddressStateLabel}
+#
+#    capture element screenshot    ${CompanyDetailsPagePostalAddressSuburbTextBox}
+#    capture element screenshot    ${CompanyDetailsPagePostalAddressPostalCodeTextBox}
+#    capture element screenshot    ${CompanyDetailsPageDelAddressAddLine1TextBox}
+#    capture element screenshot    ${CompanyDetailsPageDelAddressAddLine2TextBox}
+#    capture element screenshot    ${CompanyDetailsPageDelAddressSuburbTextBox}
+#    capture element screenshot    ${CompanyDetailsPageDelAddressPostalCodeTextBox}
+#
+#    capture element screenshot    ${CompanyDetailsPageDelSameAsPostalCheckBox}
+#
+#    capture element screenshot    ${CompanyDetailsPagePostalStateComboBox}
+#    capture element screenshot    ${CompanyDetailsPagePostalStateComboBoxArrow}
+#
+#    capture element screenshot    ${CompanyDetailsPageDelStateComboBox}
+#    capture element screenshot    ${CompanyDetailsPageDelStateComboBoxArrow}
+#
+#    capture page screenshot
+#
+#    scroll element into view    ${CompanyDetailsPageClosingHoursComboBox}
+#
+#    wait until element is visible    ${CompanyDetailsPageEmailAddLabel}    10
+#    wait until element is visible    ${CompanyDetailsPageCompPhoneNumLabel}    10
+#    wait until element is visible    ${CompanyDetailsPageContFNLabel}    10
+#    wait until element is visible    ${CompanyDetailsPageContLNLabel}    10
+#    wait until element is visible    ${CompanyDetailsPageRadioABNLabel}    10
+#    wait until element is visible    ${CompanyDetailsPageRadioACNLabel}    10
+#    wait until element is visible    ${CompanyDetailsPageABNLabel}    10
+#    wait until element is visible    ${CompanyDetailsPageOpeningLabel}    10
+#    wait until element is visible    ${CompanyDetailsPageClosingLabel}    10
+#
+#    wait until element is visible    ${CompanyDetailsPageEmailAddTextBox}    10
+#    wait until element is visible    ${CompanyDetailsPageCompPhoneNumTextBox}    10
+#    wait until element is visible    ${CompanyDetailsPageContFNTextBox}    10
+#    wait until element is visible    ${CompanyDetailsPageContLNTextBox}    10
+#    wait until element is visible    ${CompanyDetailsPageABNTextBox}    10
+#
+#    wait until element is visible    ${CompanyDetailsPageRadioABNRadioButton}    10
+#    wait until element is visible    ${CompanyDetailsPageRadioACNRadioButton}    10
+#
+#    wait until element is visible    ${CompanyDetailsPageCancelButton}    10
+#    wait until element is visible    ${CompanyDetailsPageSubmitButton}    10
+#
+#    capture element screenshot    ${CompanyDetailsPageEmailAddLabel}
+#    capture element screenshot    ${CompanyDetailsPageCompPhoneNumLabel}
+#    capture element screenshot    ${CompanyDetailsPageContFNLabel}
+#    capture element screenshot    ${CompanyDetailsPageContLNLabel}
+#    capture element screenshot    ${CompanyDetailsPageRadioABNLabel}
+#    capture element screenshot    ${CompanyDetailsPageRadioACNLabel}
+#    capture element screenshot    ${CompanyDetailsPageABNLabel}
+#    capture element screenshot    ${CompanyDetailsPageOpeningLabel}
+#    capture element screenshot    ${CompanyDetailsPageClosingLabel}
+#
+#    capture element screenshot    ${CompanyDetailsPageEmailAddTextBox}
+#    capture element screenshot    ${CompanyDetailsPageCompPhoneNumTextBox}
+#    capture element screenshot    ${CompanyDetailsPageContFNTextBox}
+#    capture element screenshot    ${CompanyDetailsPageContLNTextBox}
+#    capture element screenshot    ${CompanyDetailsPageABNTextBox}
+#
+#    capture element screenshot    ${CompanyDetailsPageRadioABNRadioButton}
+#    capture element screenshot    ${CompanyDetailsPageRadioACNRadioButton}
+#
+#    capture element screenshot    ${CompanyDetailsPageCancelButton}
+#    capture element screenshot    ${CompanyDetailsPageSubmitButton}
+
+    capture page screenshot
+
+    sleep    2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -23,6 +23,9 @@ Admin User should be able to Login
 User should be able to check/uncheck Remember me
 User should be able to Click Forgot Password
 
+User should be able to click Translate to English Button
+User should be able to click Translate to Chinese Button
+
 #-----------------------------------------------------Dealer Login Page Reset Password
 User should be able to view Reset Password Page
 User should be able input valid email in Dealer Reset Password Page
@@ -38,6 +41,8 @@ User should be able to click orders from top navigation
 User should be able to click return from top navigation
 User should be able to click new buyer from top navigation
 User should be able to click messages from top navigation
+
+User should be able to view top navigation in HK Dealer Home Page
 
 #-----------------------------------------------------Dealer Home Page Left Navigation
 User should be able to click orders from left navigation
@@ -60,7 +65,7 @@ TC Move to Top
 User should be able to view Cutomer Orders Panel
 User should be able to select one order from the list
 User should be able to view order details
-
+User should be able to view order details in HK Order Details Page
 #-----------------------------------------------------Dealer Order Page Filter By Status
 User should be able to click filter by status in Order Page
 User should be able to filter status by ALL in Order Page
@@ -117,6 +122,7 @@ User should be able to return to first page in Dealer Orders Page
 User should be able to view Return Request Panel
 User should be able to select one return from the list
 User should be able to view Return details
+User should be able to view Return details in HK Return Details Page
 
 #-----------------------------------------------------Dealer Retrun Page Filter By Status
 User should be able to click filter by status in Retrun Page
@@ -341,6 +347,8 @@ User should be able to click save button in Dealer Company Details Page
 User should be able to click no on update cofirmation modal in Dealer Company Details Page
 User should be able to click yes on update cofirmation modal in Dealer Company Details Page
 User should be able to view error messages in Dealer Company Details Page
+
+User should be able to view company details in HK Company Details Page
 
 #-----------------------------------------------------Dealer Staff Page-------------------------------------------------
 User should be able to view staff page

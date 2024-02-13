@@ -41,7 +41,7 @@ TC-060 - User should be able to view account orders page
     run keyword and continue on failure    User should be able to access account from top navigaton
     run keyword and continue on failure    User should be able to view account orders page
 
-TC-066 - User should be able to view and message order with Submitted Status in Retail Account Orders Page
+TC-066 - User should be able to view order Retail Account Orders Page
     [Tags]    Order Page
     run keyword and continue on failure    User should be able to view order with Submitted Status in Retail Account Orders Page
     run keyword and continue on failure    User should be able to click order with Submitted Status in Retail Account Orders Page

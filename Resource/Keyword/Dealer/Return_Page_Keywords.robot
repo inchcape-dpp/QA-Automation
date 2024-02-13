@@ -111,6 +111,95 @@ User should be able to view Return details
 
 #    wait until element is visible    ${ReturnPageOrderReturnConfirmButton}    10
 #    capture element screenshot    ${ReturnPageOrderReturnConfirmButton}
+    sleep    2
+
+User should be able to view Return details in HK Return Details Page
+    wait until element is visible    ${ReturnPageOrderDetailsHeader}    20
+    wait until element is visible    ${ReturnPageOrderDetailsStatus}    10
+    capture element screenshot    ${ReturnPageOrderDetailsHeader}
+    capture element screenshot    ${ReturnPageOrderDetailsStatus}
+
+    wait until element is visible    ${ReturnPageOrderDetailsContainer}    10
+    wait until element is visible    ${ReturnPageOrderDetailsPartsRefLabel}    20
+    wait until element is visible    ${ReturnPageOrderDetailsCustNameLabel}    10
+    wait until element is visible    ${ReturnPageOrderDetailsOrderDateLabel}    10
+    wait until element is visible    ${ReturnPageOrderDetailsRetReqDateLabel}    10
+    wait until element is visible    ${ReturnPageOrderDetailsPartsRefValue}    10
+    wait until element is visible    ${ReturnPageOrderDetailsCustOrderNumValue}    10
+    wait until element is visible    ${ReturnPageOrderDetailsCustNameValue}    10
+    wait until element is visible    ${ReturnPageOrderDetailsSupRefValue}    10
+    wait until element is visible    ${ReturnPageOrderDetailsSupValue}    10
+    wait until element is visible    ${ReturnPageOrderDetailsOrderDateValue}    10
+
+
+    capture element screenshot    ${ReturnPageOrderDetailsContainer}
+#    capture element screenshot    ${ReturnPageOrderDetailsPartsRefLabel}
+#    capture element screenshot    ${ReturnPageOrderDetailsCustOrderNumLabel}
+#    capture element screenshot    ${ReturnPageOrderDetailsCustNameLabel}
+#    capture element screenshot    ${ReturnPageOrderDetailsSupRefLabel}
+#    capture element screenshot    ${ReturnPageOrderDetailsSupLabel}
+#    capture element screenshot    ${ReturnPageOrderDetailsOrderDateLabel}
+#    capture element screenshot    ${ReturnPageOrderDetailsRetReqDateLabel}
+#    capture element screenshot    ${ReturnPageOrderDetailsPartsRefValue}
+#    capture element screenshot    ${ReturnPageOrderDetailsCustOrderNumValue}
+#    capture element screenshot    ${ReturnPageOrderDetailsCustNameValue}
+#    capture element screenshot    ${ReturnPageOrderDetailsSupRefValue}
+#    capture element screenshot    ${ReturnPageOrderDetailsSupValue}
+#    capture element screenshot    ${ReturnPageOrderDetailsOrderDateValue}
+#    capture element screenshot    ${ReturnPageOrderDetailsRetReqDateValue}
+
+    scroll element into view    ${ReturnPageOrderReturnContainer}
+    wait until element is visible    ${ReturnPageOrderReturnHeader}    10
+#    wait until element is visible    ${ReturnPageOrderReturnItemList}    10
+#    capture element screenshot    ${ReturnPageOrderReturnContainer}
+#    capture element screenshot    ${ReturnPageOrderReturnHeader}
+#    capture element screenshot    ${ReturnPageOrderReturnItemList}
+
+    scroll element into view    ${ReturnPageOrderReturnDataSectionContainer}
+#    wait until element is visible    ${ReturnPageOrderReturnDataSectionReasonLabel}    10
+#    wait until element is visible    ${ReturnPageOrderReturnDataSectionReasonSelection}    10
+#    wait until element is visible    ${ReturnPageOrderReturnDataSectionQtyLabel}    10
+#    wait until element is visible    ${ReturnPageOrderReturnDataSectionQtyValue}    10
+#    wait until element is visible    ${ReturnPageOrderReturnDataSectionNoteLabel}    10
+#    wait until element is visible    ${ReturnPageOrderReturnDataSectionNoteTextField}    10
+#    wait until element is visible    ${ReturnPageOrderReturnDataSectionImageLabel}    10
+#    wait until element is visible    ${ReturnPageOrderReturnDataSectionImageField}    10
+
+    capture element screenshot    ${ReturnPageOrderReturnDataSectionContainer}
+#    capture element screenshot    ${ReturnPageOrderReturnDataSectionReasonLabel}
+#    capture element screenshot    ${ReturnPageOrderReturnDataSectionReasonSelection}
+#    capture element screenshot    ${ReturnPageOrderReturnDataSectionQtyLabel}
+#    capture element screenshot    ${ReturnPageOrderReturnDataSectionQtyValue}
+#    capture element screenshot    ${ReturnPageOrderReturnDataSectionNoteLabel}
+#    capture element screenshot    ${ReturnPageOrderReturnDataSectionNoteTextField}
+#    capture element screenshot    ${ReturnPageOrderReturnDataSectionImageLabel}
+#    capture element screenshot    ${ReturnPageOrderReturnDataSectionImageField}
+
+    scroll element into view    ${ReturnPageOrderReturnApproveRejectContainer}
+#    wait until element is visible    ${ReturnPageOrderReturnApproveButton}    10
+#    wait until element is visible    ${ReturnPageOrderReturnApproveLabel}    10
+#    wait until element is visible    ${ReturnPageOrderReturnRejectButton}    10
+#    wait until element is visible    ${ReturnPageOrderReturnRejectLabel}    10
+#    wait until element is visible    ${ReturnPageOrderReturnNoteLabel}    10
+#    wait until element is visible    ${ReturnPageOrderReturnApproveRejectNoteTextField}    10
+
+    capture element screenshot    ${ReturnPageOrderReturnApproveRejectContainer}
+#    capture element screenshot    ${ReturnPageOrderReturnApproveButton}
+#    capture element screenshot    ${ReturnPageOrderReturnApproveLabel}
+#    capture element screenshot    ${ReturnPageOrderReturnRejectButton}
+#    capture element screenshot    ${ReturnPageOrderReturnRejectLabel}
+#    capture element screenshot    ${ReturnPageOrderReturnNoteLabel}
+#    capture element screenshot    ${ReturnPageOrderReturnApproveRejectNoteTextField}
+
+    scroll element into view    ${ReturnPageOrderReturnMessageContainer}
+    wait until element is visible    ${ReturnPageOrderReturnMessageSupplierButton}    10
+
+    capture element screenshot    ${ReturnPageOrderReturnMessageContainer}
+    capture element screenshot    ${ReturnPageOrderReturnMessageSupplierButton}
+
+#    wait until element is visible    ${ReturnPageOrderReturnConfirmButton}    10
+#    capture element screenshot    ${ReturnPageOrderReturnConfirmButton}
+    sleep    2
 
 User should be able to click filter by status in Retrun Page
     wait until element is visible    ${ReturnPageStatusFilter}    10
