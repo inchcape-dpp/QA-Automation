@@ -5,7 +5,7 @@ Library  SeleniumLibrary
 Library    Process
 #Library  FakerLibrary
 
-Resource  ../../../../Resource/testdata/config.robot
+Resource  ../../../../Resource/testdata/QEMiniSIte/Ric/MiniSite_Config.robot
 Resource  ../../../../Resource/testdata/QEMiniSIte/Ric/MiniSite_Variable.robot
 Resource  ../../../../Resource/testdata/QEMiniSIte/Ric/MiniSite_resource.robot
 

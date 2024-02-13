@@ -1,7 +1,9 @@
 *** Settings ***
 Documentation       Suite description
 
-Resource  ../../../../Resource/testdata/config.robot
+Resource  ../../../../Resource/testdata/QEMiniSIte/Ric/MiniSite_resource.robot
+
+
 
 *** Variables ***
 #-----------------------------------------------------Why Choose Us------------------------------------------------

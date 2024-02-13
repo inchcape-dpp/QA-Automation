@@ -18,7 +18,7 @@ ${SafariBrowser}    Safari
 ${driver_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject1\\Resource\\chromedriver.exe
 #${driver_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\geckodriver.exe
 
-${Retail_screenshot_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject1\\Resource\\testsuites\\Retail\\Screenshots\\S2
+${Retail_screenshot_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject1\\Resource\\testsuites\\QEMiniSIte\\RIc\\Screenshots
 #${Retail_screenshot_path}    C:\\Users\\Danielouie.Estopace\\OneDrive - Inchcape\\06.Dev\\Dan\\Retail Screenshots
 
 ${UploadPhoto_Path_Value}    C:\\Users\\Ericson.Tinana\\Pictures\\SampleImage\\Image.jpg
@@ -30,14 +30,14 @@ ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files
 #${Username}    retailtitanp1@yopmail.com
 #${Password}    Welcom3@NT
 
-${Username}    ${HK_S2_Automation_Bronze_UID}
-${Password}    ${HK_S2_Automation_Bronze_PWD}
+${Username}    ${AU_S2_Automation_UID}
+${Password}    ${AU_S2_Automation_PWD}
 
-${YopMailEmail}    ${HK_S2_Automation_Bronze_UID}
+${YopMailEmail}    ${AU_S2_Automation_UID}
 
 *** Keywords ***
 Open Chrome Browser
-    SeleniumLibrary.Open Browser    ${s2HKRetail}    Chrome  executable_path=${driver_path}
+    SeleniumLibrary.Open Browser    ${PartsLane}    Chrome  executable_path=${driver_path}
     maximize browser window
 
 Retail Screent Shot DIR
