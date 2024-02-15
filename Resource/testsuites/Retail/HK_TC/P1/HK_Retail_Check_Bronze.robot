@@ -4,7 +4,7 @@ Documentation    Suite description
 Library  SeleniumLibrary
 Library    Process
 
-Resource  ../../../../../Resource/testdata/Retail/HK_Config/P1_Config.robot
+Resource  ../../../../../Resource/testdata/Retail/HK_Config/HK_P1_Config.robot
 Resource  ../../../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../../../Resource/testdata/Retail/Retail_Resource.robot
 
