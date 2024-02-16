@@ -466,27 +466,27 @@ TC-077 - User should be able to edit po number in Retail Checkout Page
     run keyword and continue on failure    User should be able to click save po number in Retail Checkout Page
     run keyword and continue on failure    User should be able to click reset po number in Retail Checkout Page
 
-#TC-078 - User should be able to place order in Retail Checkout Page
-#    [Tags]    Checkout Page
-#    run keyword and continue on failure    User should be able to click place order button in Retail Checkout Page
-#    run keyword and continue on failure    User should be able to view place order in Retail Place Order Page
-#    run keyword and continue on failure    User should be able to click back to home button in Retail Place Order Page
+TC-078 - User should be able to place order in Retail Checkout Page
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be able to click place order button in Retail Checkout Page
+    run keyword and continue on failure    User should be able to view place order in Retail Place Order Page
+    run keyword and continue on failure    User should be able to click back to home button in Retail Place Order Page
 
-#TC-079 - User should be able to process Re-Order in Retail Account Order Details Page
-#    [Tags]    Re-Order Process
-#    run keyword and continue on failure    User should be able to Go to Home page
-#    run keyword and continue on failure    User should be able to view shopping cart pop up modal
-#    run keyword and continue on failure    User should be albe to delete all items from shopping cart pop up modal
-#    run keyword and continue on failure    User should be able to access account from top navigaton
-#    run keyword and continue on failure    User should be able to view account orders page
-#    run keyword and continue on failure    User should be able to click orders with $0.25 spent in Retail Account Order Details Page
-#    run keyword and continue on failure    User should be able to click Re-Order button in Retail Account Order Details Page
-#    run keyword and continue on failure    User should be able to view shopping cart in Retail Shopping Cart Page
-#    run keyword and continue on failure    User should be able to click checkout button in Retail Shopping Cart Page
-#    run keyword and continue on failure    User should be able to view checkout in Retail Checkout Page
-#    run keyword and continue on failure    User should be able to click place order button in Retail Checkout Page
-#    run keyword and continue on failure    User should be able to view place order in Retail Place Order Page
-#    run keyword and continue on failure    User should be able to click back to home button in Retail Place Order Page
+TC-079 - User should be able to process Re-Order in Retail Account Order Details Page
+    [Tags]    Re-Order Process
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to view shopping cart pop up modal
+    run keyword and continue on failure    User should be albe to delete all items from shopping cart pop up modal
+    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to view account orders page
+    run keyword and continue on failure    User should be able to click orders with $0.25 spent in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to click Re-Order button in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to view shopping cart in Retail Shopping Cart Page
+    run keyword and continue on failure    User should be able to click checkout button in Retail Shopping Cart Page
+    run keyword and continue on failure    User should be able to view checkout in Retail Checkout Page
+    run keyword and continue on failure    User should be able to click place order button in Retail Checkout Page
+    run keyword and continue on failure    User should be able to view place order in Retail Place Order Page
+    run keyword and continue on failure    User should be able to click back to home button in Retail Place Order Page
 
 #TC-080 - User should be able to view account orders page
 #    [Tags]    Order Page

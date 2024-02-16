@@ -27,8 +27,8 @@ ${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\
 ${ExcelFile_AU_Stock_List_Path}    C:\\\Users\\\Danielouie.Estopace\\\Documents\\\Files\\Titan SUB Geerex.xlsx
 ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\You left something behind (ENG).txt
 
-${Username}    ${admin1_d2_dealer_UID}
-${Password}    ${admin1_d2_dealer_UID}
+${Username}    ${AU_D1_UID}
+${Password}    ${AU_D1_PWD}
 
 ${YopMailEmail}    ${admin1_d2_dealer_UID}
 
