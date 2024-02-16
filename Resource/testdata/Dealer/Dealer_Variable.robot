@@ -1,7 +1,8 @@
 *** Settings ***
 Documentation       Suite description
 
-Resource  ../../../Resource/testdata/config.robot
+Resource  ../../../Resource/testdata/Dealer/AU_Config/AU_S2_Config.robot
+
 
 *** Variables ***
 #-----------------------------------------------------Dealer Login Page-------------------------------------------------

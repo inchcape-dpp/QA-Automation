@@ -5,6 +5,7 @@ Library    OperatingSystem
 Library    DateTime
 #Library    String
 
+
 Resource  ../../../../Resource/testdata/env_variables.robot
 Resource  ../../../../Resource/testdata/credentials.robot
 
@@ -14,26 +15,25 @@ ${FirefoxBrowser}    Firefox
 ${EdgeBrowser}    Edge
 ${SafariBrowser}    Safari
 
-${driver_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject1\\Resource\\chromedriver.exe
+${driver_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\chromedriver.exe
 #${driver_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\geckodriver.exe
 
-${Retail_screenshot_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject1\\Resource\\testsuites\\Dealer\\Screenshots\\P1
-#${Retail_screenshot_path}    C:\\Users\\Danielouie.Estopace\\OneDrive - Inchcape\\06.Dev\\Dan\\Retail Screenshots
+${Dealer_screenshot_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Dealer\\Screenshots\\AU\\D1
 
-${UploadPhoto_Path_Value}    C:\\Users\\Ericson.Tinana\\Pictures\\SampleImage\\Image.jpg
+${UploadPhoto_Path_Value}    C:\\Users\\Danielouie.Estopace\\Pictures\\Sample Image\\Image.jpg
 
 ${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\HKProductReportView.
-${ExcelFile_AU_Stock_List_Path}    C:\\\Users\\\Danielouie.Estopace\\\Documents\\\Files\\Titan SUB Geerex.xlsx
+${ExcelFile_AU_Stock_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\Titan SUB Geerex.xlsx
 ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\You left something behind (ENG).txt
 
-${Username}    ${AUSeller_P1_UID}
-${Password}    ${AUSeller_P1_PWD}
+${Username}    ${admin1_d2_dealer_UID}
+${Password}    ${admin1_d2_dealer_PWD}
 
-${YopMailEmail}    ${admin1_s2_dealer_UID}
+${YopMailEmail}    ${admin1_d2_dealer_UID}
 
 *** Keywords ***
 Open Chrome Browser
-    SeleniumLibrary.Open Browser    ${p1Dealer}    Chrome  executable_path=${driver_path}
+    SeleniumLibrary.Open Browser    ${d1Dealer}    Chrome  executable_path=${driver_path}
     maximize browser window
 
 Dealer Screent Shot DIR
