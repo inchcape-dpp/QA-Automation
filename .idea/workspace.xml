@@ -14,6 +14,7 @@
       <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/P1_Config.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S1_Config.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S2_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S2_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/QE MiniSIte/Ty/Minisite_Footer_Variable.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/QE MiniSIte/Ty/Minisite_Footer_Variable.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/D1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/D1_Config.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/P1_Config.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/S1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/S1_Config.robot" afterDir="false" />
@@ -22,7 +23,6 @@
       <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/P1_Config.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S1_Config.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S2_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S2_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/AU_Retail_Check.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/AU_Retail_Check.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/output.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -104,7 +104,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707807331814</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Commit Feb 13">
+      <option name="closed" value="true" />
+      <created>1707809716430</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707809716430</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
