@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Suite description
 
-Resource  ../../../Resource/testdata/Retail/HK_Config/S2_Config.robot
+Resource  ../../../Resource/testdata/Retail/AU_Config/AU_S2_Config.robot
 
 *** Variables ***
 #-----------------------------------------------------Retail Login Page-------------------------------------------------

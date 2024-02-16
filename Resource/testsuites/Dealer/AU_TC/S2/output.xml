@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20240216 08:21:16.777" rpa="false" schemaversion="4">
+<suite id="s1" name="AU Dealer Check" source="C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Dealer\AU_TC\S2\AU_Dealer_Check.robot">
+<test id="s1-t1" name="Test Setup" line="15">
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Open Chrome Browser</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Chrome Browser" library="AU_S2_Config">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${s2Dealer}</arg>
+<arg>Chrome</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240216 08:21:17.154" level="INFO">Opening browser 'Chrome' to base url 'https://dealer.coyzchwfjr-inchcaped2-s2-public.model-t.cc.commerce.ondemand.com/'.</msg>
+<status status="PASS" starttime="20240216 08:21:17.154" endtime="20240216 08:21:21.151"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<msg timestamp="20240216 08:21:21.151" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.141)
+Stacktrace:
+	GetHandleVerifier [0x00007FF72B115E42+3538674]
+	(No symbol) [0x00007FF72AD34C02]
+	(No symbol) [0x00007FF72ABE5AEB]
+	(No symbol) [0x00007FF72ABC288C]
+	(No symbol) [0x00007FF72AC55DD7]
+	(No symbol) [0x00007FF72AC6B40F]
+	(No symbol) [0x00007FF72AC4EE53]
+	(No symbol) [0x00007FF72AC1F514]
+	(No symbol) [0x00007FF72AC20631]
+	GetHandleVerifier [0x00007FF72B146CAD+3738973]
+	GetHandleVerifier [0x00007FF72B19C506+4089270]
+	GetHandleVerifier [0x00007FF72B194823+4057299]
+	GetHandleVerifier [0x00007FF72AE65C49+720121]
+	(No symbol) [0x00007FF72AD4126F]
+	(No symbol) [0x00007FF72AD3C304]
+	(No symbol) [0x00007FF72AD3C432]
+	(No symbol) [0x00007FF72AD2BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<msg timestamp="20240216 08:21:21.151" level="FAIL">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.141)
+Stacktrace:
+	GetHandleVerifier [0x00007FF72B115E42+3538674]
+	(No symbol) [0x00007FF72AD34C02]
+	(No symbol) [0x00007FF72ABE5AEB]
+	(No symbol) [0x00007FF72ABC288C]
+	(No symbol) [0x00007FF72AC55DD7]
+	(No symbol) [0x00007FF72AC6B40F]
+	(No symbol) [0x00007FF72AC4EE53]
+	(No symbol) [0x00007FF72AC1F514]
+	(No symbol) [0x00007FF72AC20631]
+	GetHandleVerifier [0x00007FF72B146CAD+3738973]
+	GetHandleVerifier [0x00007FF72B19C506+4089270]
+	GetHandleVerifier [0x00007FF72B194823+4057299]
+	GetHandleVerifier [0x00007FF72AE65C49+720121]
+	(No symbol) [0x00007FF72AD4126F]
+	(No symbol) [0x00007FF72AD3C304]
+	(No symbol) [0x00007FF72AD3C432]
+	(No symbol) [0x00007FF72AD2BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</msg>
+<status status="FAIL" starttime="20240216 08:21:21.151" endtime="20240216 08:21:21.166"/>
+</kw>
+<status status="FAIL" starttime="20240216 08:21:17.154" endtime="20240216 08:21:21.167"/>
+</kw>
+<status status="FAIL" starttime="20240216 08:21:17.154" endtime="20240216 08:21:21.167"/>
+</kw>
+<status status="FAIL" starttime="20240216 08:21:17.154" endtime="20240216 08:21:21.167">NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=121.0.6167.141)
+Stacktrace:
+	GetHandleVerifier [0x00007FF72B115E42+3538674]
+	(No symbol) [0x00007FF72AD34C02]
+	(No symbol) [0x00007FF72ABE5AEB]
+	(No symbol) [0x00007FF72ABC288C]
+	(No symbol) [0x00007FF72AC55DD7]
+	(No symbol) [0x00007FF72AC6B40F]
+	(No symbol) [0x00007FF72AC4EE53]
+	(No symbol) [0x00007FF72AC1F514]
+	(No symbol) [0x00007FF72AC20631]
+	GetHandleVerifier [0x00007FF72B146CAD+3738973]
+	GetHandleVerifier [0x00007FF72B19C506+4089270]
+	GetHandleVerifier [0x00007FF72B194823+4057299]
+	GetHandleVerifier [0x00007FF72AE65C49+720121]
+	(No symbol) [0x00007FF72AD4126F]
+	(No symbol) [0x00007FF72AD3C304]
+	(No symbol) [0x00007FF72AD3C432]
+	(No symbol) [0x00007FF72AD2BD04]
+	(No symbol) [0x00007FFAD861257D]
+	RtlUserThreadStart [0x00007FFADA10AA58+40]
+</status>
+</test>
+<test id="s1-t2" name="Screen Shot DIR" line="16">
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Dealer Screent Shot DIR</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Dealer Screent Shot DIR" library="AU_S2_Config">
+<kw name="Get Current Date" library="DateTime">
+<var>${currentdate}</var>
+<arg>result_format=%m-%d-%y %H-%M</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20240216 08:21:21.170" level="INFO">${currentdate} = 02-16-24 08-21</msg>
+<status status="PASS" starttime="20240216 08:21:21.170" endtime="20240216 08:21:21.170"/>
+</kw>
+<kw name="Create Directory" library="OperatingSystem">
+<arg>${Dealer_screenshot_path}/AU_${currentdate}</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20240216 08:21:21.172" level="INFO" html="true">Created directory '&lt;a href="file://C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Dealer\Screenshots\AU\S2\AU_02-16-24 08-21"&gt;C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Dealer\Screenshots\AU\S2\AU_02-16-24 08-21&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20240216 08:21:21.170" endtime="20240216 08:21:21.172"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${LogDIR}</var>
+<arg>${Dealer_screenshot_path}/AU_${currentdate}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20240216 08:21:21.172" level="INFO">${LogDIR} = C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Dealer\Screenshots\AU\S2/AU_02-16-24 08-21</msg>
+<status status="PASS" starttime="20240216 08:21:21.172" endtime="20240216 08:21:21.172"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${LogDIR}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20240216 08:21:21.173" endtime="20240216 08:21:21.174"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${LogDIR}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20240216 08:21:21.174" level="INFO">${LogDIR} = C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Dealer\Screenshots\AU\S2/AU_02-16-24 08-21</msg>
+<status status="PASS" starttime="20240216 08:21:21.174" endtime="20240216 08:21:21.174"/>
+</kw>
+<status status="PASS" starttime="20240216 08:21:21.170" endtime="20240216 08:21:21.174"/>
+</kw>
+<status status="PASS" starttime="20240216 08:21:21.169" endtime="20240216 08:21:21.174"/>
+</kw>
+<status status="PASS" starttime="20240216 08:21:21.169" endtime="20240216 08:21:21.174"/>
+</test>
+<test id="s1-t3" name="TC Sleep" line="18">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>TC Sleep</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="TC Sleep" library="AU_S2_Config">
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240216 08:21:31.174" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240216 08:21:21.174" endtime="20240216 08:21:31.174"/>
+</kw>
+<status status="PASS" starttime="20240216 08:21:21.174" endtime="20240216 08:21:31.174"/>
+</kw>
+<status status="PASS" starttime="20240216 08:21:21.174" endtime="20240216 08:21:31.174"/>
+</kw>
+<tag>Sleep</tag>
+<tag>TC Sleep</tag>
+<status status="PASS" starttime="20240216 08:21:21.174" endtime="20240216 08:21:31.174"/>
+</test>
+<test id="s1-t4" name="TC-001 - Input Valid Email" line="22">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>

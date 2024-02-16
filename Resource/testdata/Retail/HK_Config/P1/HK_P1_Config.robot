@@ -18,25 +18,25 @@ ${SafariBrowser}    Safari
 ${driver_path}    C:\\Users\\Tyron.Demate\\PycharmProjects\\pythonProject2\\Resource\\chromedriver.exe
 #${driver_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\geckodriver.exe
 
-${Dealer_screenshot_path}    C:\\Users\\Tyron.Demate\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Dealer\\Screenshots\\HK\\D1
+${Dealer_screenshot_path}    C:\\Users\\Tyron.Demate\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Dealer\\Screenshots\\HK\\P1
 
 ${UploadPhoto_Path_Value}    C:\\Users\\Tyron.Demate\\Pictures\\Sample Image\\Image.png
 
 ${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\HKProductReportView.
-${ExcelFile_AU_Stock_List_Path}    C:\\\Users\\\Danielouie.Estopace\\\Documents\\\Files\\Titan SUB Geerex.xlsx
+${ExcelFile_AU_Stock_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\Titan SUB Geerex.xlsx
 ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\You left something behind (ENG).txt
 
 #${Username}    retailtitanp1@yopmail.com
 #${Password}    Welcom3@NT
 
-${Username}    ${HK_D1_Automation_Bronze_UID}
-${Password}    ${HK_D1_Automation_Bronze_PWD}
+${Username}    ${HK_P1_Automation_Bronze_UID}
+${Password}    ${HK_P1_Automation_Bronze_PWD}
 
-${YopMailEmail}    ${HK_D1_Automation_Bronze_UID}
+${YopMailEmail}    ${HK_P1_Automation_Bronze_UID}
 
 *** Keywords ***
 Open Chrome Browser
-    SeleniumLibrary.Open Browser    ${d1HKRetail}    Chrome  executable_path=${driver_path}
+    SeleniumLibrary.Open Browser    ${p1HKRetail}    Chrome  executable_path=${driver_path}
     maximize browser window
 
 Retail Screent Shot DIR

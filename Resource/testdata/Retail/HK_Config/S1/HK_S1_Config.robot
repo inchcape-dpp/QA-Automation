@@ -23,25 +23,32 @@ ${Dealer_screenshot_path}    C:\\Users\\Tyron.Demate\\PycharmProjects\\pythonPro
 ${UploadPhoto_Path_Value}    C:\\Users\\Tyron.Demate\\Pictures\\Sample Image\\Image.png
 
 ${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\HKProductReportView.
-${ExcelFile_AU_Stock_List_Path}    C:\\\Users\\\Danielouie.Estopace\\\Documents\\\Files\\Titan SUB Geerex.xlsx
+${ExcelFile_AU_Stock_List_Path}    C:\\\Users\\Danielouie.Estopace\\Documents\\Files\\Titan SUB Geerex.xlsx
 ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\You left something behind (ENG).txt
 
-${Username}    ${admin1_s2_HKdealer_UID}
-${Password}    ${admin1_s2_HKdealer_UID}
+#${Username}    retailtitanp1@yopmail.com
+#${Password}    Welcom3@NT
 
-${YopMailEmail}    ${admin1_s2_HKdealer_UID}
+${Username}    ${HK_S2_Automation_Bronze_UID}
+${Password}    ${HK_S2_Automation_Bronze_PWD}
+
+${YopMailEmail}    ${HK_S2_Automation_Bronze_UID}
 
 *** Keywords ***
 Open Chrome Browser
-    SeleniumLibrary.Open Browser    ${s1HKDealer}    Chrome  executable_path=${driver_path}
+    SeleniumLibrary.Open Browser    ${s1HKRetail}    Chrome  executable_path=${driver_path}
     maximize browser window
 
-Dealer Screent Shot DIR
+Retail Screent Shot DIR
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
-    create directory    ${Dealer_screenshot_path}/HK_${currentdate}
-    ${LogDIR}=    convert to string    ${Dealer_screenshot_path}/HK_${currentdate}
+    create directory    ${Retail_screenshot_path}/HK_${currentdate}
+    ${LogDIR}=    convert to string    ${Retail_screenshot_path}/HK_${currentdate}
     set screenshot directory    ${LogDIR}
     set global variable    ${LogDIR}
+
+Save Log DIR
+    copy file    log.html    ${LogDIR}
+ ### Test
 
 #-----------------------------------------------------Browser Commands--------------------------------------------------
 Browse Back Button

@@ -6,7 +6,7 @@ Library    Process
 #Library    FakerLibrary
 
 
-Resource  ../../../../../Resource/testdata/Dealer/HK_Config/S2_Config.robot
+Resource  ../../../../../Resource/testdata/Dealer/HK_Config/S2/HK_S2_Config.robot
 Resource  ../../../../../Resource/testdata/Dealer/Dealer_Variable.robot
 Resource  ../../../../../Resource/testdata/Dealer/Dealer_Resource.robot
 

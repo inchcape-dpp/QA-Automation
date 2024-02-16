@@ -5,7 +5,6 @@ Library    OperatingSystem
 Library    DateTime
 #Library    String
 
-
 Resource  ../../../../Resource/testdata/env_variables.robot
 Resource  ../../../../Resource/testdata/credentials.robot
 
@@ -18,37 +17,30 @@ ${SafariBrowser}    Safari
 ${driver_path}    C:\\Users\\Tyron.Demate\\PycharmProjects\\pythonProject2\\Resource\\chromedriver.exe
 #${driver_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\geckodriver.exe
 
-${Dealer_screenshot_path}    C:\\Users\\Tyron.Demate\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Dealer\\Screenshots\\AU\\S1
+${Dealer_screenshot_path}    C:\\Users\\Tyron.Demate\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Dealer\\Screenshots\\AU\\P1
 
 ${UploadPhoto_Path_Value}    C:\\Users\\Tyron.Demate\\Pictures\\Sample Image\\Image.png
 
 ${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\HKProductReportView.
-${ExcelFile_AU_Stock_List_Path}    C:\\\Users\\\Danielouie.Estopace\\\Documents\\\Files\\Titan SUB Geerex.xlsx
+${ExcelFile_AU_Stock_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\Titan SUB Geerex.xlsx
 ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\You left something behind (ENG).txt
 
-#${Username}    retailtitanp1@yopmail.com
-#${Password}    Welcom3@NT
+${Username}    seller1.admin@test.com
+${Password}    sellEr@dm!n1
 
-${Username}    ${AU_S2_Automation_UID}
-${Password}    ${AU_S2_Automation_PWD}
-
-${YopMailEmail}    ${AU_S2_Automation_UID}
+${YopMailEmail}    ${admin1_s2_dealer_UID}
 
 *** Keywords ***
 Open Chrome Browser
-    SeleniumLibrary.Open Browser    ${s1Retail}    Chrome  executable_path=${driver_path}
+    SeleniumLibrary.Open Browser    ${p1Dealer}    Chrome  executable_path=${driver_path}
     maximize browser window
 
-Retail Screent Shot DIR
+Dealer Screent Shot DIR
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
-    create directory    ${Retail_screenshot_path}/AU_${currentdate}
-    ${LogDIR}=    convert to string    ${Retail_screenshot_path}/AU_${currentdate}
+    create directory    ${Dealer_screenshot_path}/AU_${currentdate}
+    ${LogDIR}=    convert to string    ${Dealer_screenshot_path}/AU_${currentdate}
     set screenshot directory    ${LogDIR}
     set global variable    ${LogDIR}
-
-Save Log DIR
-    copy file    log.html    ${LogDIR}
- ### Test
 
 #-----------------------------------------------------Browser Commands--------------------------------------------------
 Browse Back Button

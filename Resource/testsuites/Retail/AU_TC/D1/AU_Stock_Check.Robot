@@ -5,7 +5,7 @@ Library  SeleniumLibrary
 Library    Process
 #Library  FakerLibrary
 
-Resource  ../../../../../Resource/testdata/Retail/AU_Config/D1_Config.robot
+Resource  ../../../../../Resource/testdata/Retail/AU_Config/D1/AU_D1_Config.robot
 Resource  ../../../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../../../Resource/testdata/Retail/Retail_Resource.robot
 
