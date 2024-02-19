@@ -5,8 +5,8 @@ Library    OperatingSystem
 Library    DateTime
 #Library    String
 
-Resource  ../../../../Resource/testdata/env_variables.robot
-Resource  ../../../../Resource/testdata/credentials.robot
+Resource    ../../../../../Resource/testdata/env_variables.robot
+Resource    ../../../../../Resource/testdata/credentials.robot
 
 *** Variables ***
 ${ChromeBrowser}    Chrome

@@ -1,17 +1,17 @@
 *** Settings ***
 Documentation    Suite description
 
-Library  SeleniumLibrary
+Library    SeleniumLibrary
 Library    Process
-#Library  FakerLibrary
+#Library    FakerLibrary
 
-Resource  ../../../../../Resource/testdata/Retail/HK_Config/S2/HK_S2_Config.robot
-Resource  ../../../../../Resource/testdata/Retail/Retail_Variable.robot
-Resource  ../../../../../Resource/testdata/Retail/Retail_Resource.robot
+Resource    ../../../../../Resource/testdata/Retail/HK_Config/S2/HK_S2_Config.robot
+Resource    ../../../../../Resource/testdata/Retail/Retail_Variable.robot
+Resource    ../../../../../Resource/testdata/Retail/Retail_Resource.robot
 
 *** Test Cases ***
-Test Setup  Run Keywords   Open Chrome Browser
-Screen Shot DIR  Run Keywords    Retail Screent Shot DIR
+Test Setup    Run Keywords    Open Chrome Browser
+Screen Shot DIR    Run Keywords    Retail Screent Shot DIR
 
 TC-001 - Verify Login Page
     [Tags]    TC001    Login Page

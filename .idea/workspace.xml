@@ -4,26 +4,69 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="Commit Feb 13">
+    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="Commit Feb 16">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/D1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/D1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/P1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/S1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/S1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/S2_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/S2_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/D1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/D1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/P1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S2_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S2_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/QE MiniSIte/Ty/Minisite_Footer_Variable.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/QE MiniSIte/Ty/Minisite_Footer_Variable.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/D1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/D1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/P1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/S1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/S1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/S2_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/S2_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/D1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/D1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/P1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S2_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S2_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Dealer/Account_Details_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Dealer/Account_Details_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Dealer/BuyerRel_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Dealer/BuyerRel_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Dealer/Change_Pass_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Dealer/Change_Pass_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Dealer/Company_Details_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Dealer/Company_Details_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Dealer/Dealer_All_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Dealer/Dealer_All_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Dealer/Home_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Dealer/Home_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Dealer/Login_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Dealer/Login_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Dealer/Message_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Dealer/Message_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Dealer/NewRegReq_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Dealer/NewRegReq_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Dealer/Orders_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Dealer/Orders_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Dealer/Return_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Dealer/Return_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Dealer/Settings_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Dealer/Settings_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Dealer/Staff_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Dealer/Staff_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Dealer/Training.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Dealer/Training.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Account_Account_Details_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Account_Account_Details_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Account_Change_Pass_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Account_Change_Pass_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Account_Company_Details_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Account_Company_Details_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Account_Message_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Account_Message_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Account_Orders_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Account_Orders_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Account_Return_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Account_Return_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Account_Saved_Carts_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Account_Saved_Carts_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Account_Staff_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Account_Staff_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Account_Vehicle_Listing_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Account_Vehicle_Listing_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/All_Parts_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/All_Parts_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Checkout_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Checkout_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Email.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Email.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Home_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Home_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/D1/AU_D1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/D1/AU_D1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/P1/AU_P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/P1/AU_P1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/S1/AU_S1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/S1/AU_S1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/S2/AU_S2_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/S2/AU_S2_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/Dealer_Variable.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/Dealer_Variable.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/D1/HK_D1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/D1/HK_D1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/P1/HK_P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/P1/HK_P1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S1/HK_S1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S1/HK_S1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S2/HK_S2_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S2/HK_S2_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/D1/AU_D1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/D1/AU_D1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/P1/AU_P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/P1/AU_P1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/S1/AU_S1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/S1/AU_S1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/S2/AU_S2_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/S2/AU_S2_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/D1/HK_D1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/D1/HK_D1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/P1/HK_P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/P1/HK_P1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S1/HK_S1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S1/HK_S1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S2/HK_S2_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S2/HK_S2_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/Retail_Variable.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/Retail_Variable.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/env_variables.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/env_variables.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/D1/AU_Dealer_Check.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/D1/AU_Dealer_Check.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/D1/AU_egression_Dealer.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/D1/AU_egression_Dealer.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/AU_egression_Dealer.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/AU_egression_Dealer.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/S1/AU_Dealer_Check.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/S1/AU_Dealer_Check.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/S1/AU_egression_Dealer.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/S1/AU_egression_Dealer.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/HK_TC/S2/HK_Dealer_Check.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/HK_TC/S2/HK_Dealer_Check.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/D1/AU_Regression_Retail.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/D1/AU_Regression_Retail.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/D1/AU_Retail_Check.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/D1/AU_Retail_Check.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/D1/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/D1/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/D1/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/D1/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/D1/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/D1/report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/HK_Regression_Bronze.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/HK_Regression_Bronze.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/HK_Regression_Gold.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/HK_Regression_Gold.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/output.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +155,15 @@
       <option name="project" value="LOCAL" />
       <updated>1707809716430</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Commit Feb 16">
+      <option name="closed" value="true" />
+      <created>1708050959178</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708050959178</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -158,6 +209,7 @@
     <MESSAGE value="Commit Feb 7" />
     <MESSAGE value="Commit" />
     <MESSAGE value="Commit Feb 13" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit Feb 13" />
+    <MESSAGE value="Commit Feb 16" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit Feb 16" />
   </component>
 </project>

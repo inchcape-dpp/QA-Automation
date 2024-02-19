@@ -5,10 +5,10 @@ Library    SeleniumLibrary
 Library    String
 Library    ExcelLibrary
 
-#Resource  ../../../Resource/testdata/config.robot
-Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
-Resource  ../../../Resource/testdata/Retail/Retail_Resource.robot
-Resource  ../../../Resource/testdata/credentials.robot
+#Resource    ../../../Resource/testdata/config.robot
+Resource    ../../../Resource/testdata/Retail/Retail_Variable.robot
+Resource    ../../../Resource/testdata/Retail/Retail_Resource.robot
+Resource    ../../../Resource/testdata/credentials.robot
 
 
 *** Keywords ***

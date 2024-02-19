@@ -6,8 +6,8 @@ Library    DateTime
 #Library    String
 
 
-Resource  ../../../../Resource/testdata/env_variables.robot
-Resource  ../../../../Resource/testdata/credentials.robot
+Resource  ../../../../../Resource/testdata/env_variables.robot
+Resource  ../../../../../Resource/testdata/credentials.robot
 
 *** Variables ***
 ${ChromeBrowser}    Chrome
@@ -18,7 +18,7 @@ ${SafariBrowser}    Safari
 ${driver_path}    C:\\Users\\Tyron.Demate\\PycharmProjects\\pythonProject2\\Resource\\chromedriver.exe
 #${driver_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\geckodriver.exe
 
-${Dealer_screenshot_path}    C:\\Users\\Tyron.Demate\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Dealer\\Screenshots\\HK\\P1
+${Retail_screenshot_path}    C:\\Users\\Tyron.Demate\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Retail\\Screenshots\\HK\\S1
 
 ${UploadPhoto_Path_Value}    C:\\Users\\Tyron.Demate\\Pictures\\Sample Image\\Image.png
 
