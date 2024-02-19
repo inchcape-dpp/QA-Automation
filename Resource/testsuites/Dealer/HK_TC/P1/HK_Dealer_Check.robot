@@ -6,14 +6,14 @@ Library    Process
 #Library    FakerLibrary
 
 
-Resource    ../../../../../Resource/testdata/Dealer/HK_Config/S2/HK_S2_Config.robot
-Resource    ../../../../../Resource/testdata/Dealer/Dealer_Variable.robot
-Resource    ../../../../../Resource/testdata/Dealer/Dealer_Resource.robot
+Resource  ../../../../../Resource/testdata/Dealer/HK_Config/P1/HK_P1_Config.robot
+Resource  ../../../../../Resource/testdata/Dealer/Dealer_Variable.robot
+Resource  ../../../../../Resource/testdata/Dealer/Dealer_Resource.robot
 
 
 *** Test Cases ***
-Test Setup    Run Keywords    Open Chrome Browser
-Screen Shot DIR    Run Keywords    Dealer Screent Shot DIR
+Test Setup  Run Keywords   Open Chrome Browser
+Screen Shot DIR  Run Keywords    Dealer Screent Shot DIR
 
 TC Sleep
     [Tags]    Sleep    TC Sleep
@@ -23,6 +23,7 @@ TC-001 - Input Valid Email
     [Tags]    TC006    Valid Account
     run keyword and continue on failure    User should be able to click Translate to English Button
     run keyword and continue on failure    Input Valid Username
+
 
 TC-002 - Input Valid Password
     [Tags]    TC007    Valid Account
