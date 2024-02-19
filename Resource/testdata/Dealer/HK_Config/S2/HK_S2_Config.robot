@@ -6,8 +6,8 @@ Library    DateTime
 #Library    String
 
 
-Resource  ../../../../Resource/testdata/env_variables.robot
-Resource  ../../../../Resource/testdata/credentials.robot
+Resource  ../../../../../Resource/testdata/env_variables.robot
+Resource  ../../../../../Resource/testdata/credentials.robot
 
 *** Variables ***
 ${ChromeBrowser}    Chrome
@@ -32,11 +32,11 @@ ${Password}    ${admin1_s2_HKdealer_PWD}
 ${YopMailEmail}    ${admin1_s2_HKdealer_UID}
 
 *** Keywords ***
-Open Chrome Browser
+Open Chrome Browser HK
     SeleniumLibrary.Open Browser    ${s2HKDealer}    Chrome  executable_path=${driver_path}
     maximize browser window
 
-Dealer Screent Shot DIR
+Dealer Screent Shot DIR HK
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
     create directory    ${Dealer_screenshot_path}/HK_${currentdate}
     ${LogDIR}=    convert to string    ${Dealer_screenshot_path}/HK_${currentdate}

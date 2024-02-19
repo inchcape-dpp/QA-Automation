@@ -10,8 +10,8 @@ Resource  ../../../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../../../Resource/testdata/Retail/Retail_Resource.robot
 
 *** Test Cases ***
-Test Setup  Run Keywords   Open Chrome Browser
-Screen Shot DIR  Run Keywords    Retail Screent Shot DIR
+Test Setup  Run Keywords   Open Chrome Browser HK
+Screen Shot DIR  Run Keywords    Retail Screent Shot DIR HK
 
 TC-001 - Verify Login Page
     [Tags]    TC001    Login Page
