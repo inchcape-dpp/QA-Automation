@@ -6,8 +6,8 @@ Library    DateTime
 #Library    String
 
 
-Resource  ../../../../Resource/testdata/env_variables.robot
-Resource  ../../../../Resource/testdata/credentials.robot
+Resource  ../../../../../Resource/testdata/env_variables.robot
+Resource  ../../../../../Resource/testdata/credentials.robot
 
 *** Variables ***
 ${ChromeBrowser}    Chrome
@@ -18,7 +18,7 @@ ${SafariBrowser}    Safari
 ${driver_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\chromedriver.exe
 #${driver_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\geckodriver.exe
 
-${Retail_screenshot_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Retail\\Screenshots\\HK\\D1
+${Retail_screenshot_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Retail\\Screenshots\\HK\\S2
 #${Retail_screenshot_path}    C:\\Users\\Danielouie.Estopace\\OneDrive - Inchcape\\06.Dev\\Dan\\Retail Screenshots
 
 ${UploadPhoto_Path_Value}    C:\\Users\\Danielouie.Estopace\\Pictures\\Sample Image\\Image.jpg
@@ -30,14 +30,14 @@ ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files
 #${Username}    retailtitanp1@yopmail.com
 #${Password}    Welcom3@NT
 
-${Username}    ${HK_D1_Automation_Bronze_UID}
-${Password}    ${HK_D1_Automation_Bronze_PWD}
+${Username}    ${HK_S2_Automation_Gold_UID}
+${Password}    ${HK_S2_Automation_Gold_PWD}
 
-${YopMailEmail}    ${HK_D1_Automation_Bronze_UID}
+${YopMailEmail}    ${HK_S2_Automation_Bronze_UID}
 
 *** Keywords ***
 Open Chrome Browser
-    SeleniumLibrary.Open Browser    ${d1HKRetail}    Chrome  executable_path=${driver_path}
+    SeleniumLibrary.Open Browser    ${s2HKRetail}    Chrome  executable_path=${driver_path}
     maximize browser window
 
 Retail Screent Shot DIR

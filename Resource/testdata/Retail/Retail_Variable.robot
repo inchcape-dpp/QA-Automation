@@ -242,8 +242,8 @@ ${HomePageLogo}    //cx-page-slot[@position='SiteLogo']
 ${HomePageSelectVehicle}    (//div[@class='custom-header-vehicle'])[1]
 ${HomePageSearhProduct}    //div[@role='search']//input[@type='text']
 ${HomePageSearhProductIcon}    //div[@role='presentation']
-${HomePageProfileIcon}     //dpp-navigation//cx-icon[@class='cx-icon fas fa-angle-down']
-${HomePageProfileAccount}   (//li//a[@href='/dppretail/my-account/orders']|//dpp-navigation-ui[@class='accNavComponent flyout']//div[@class='wrapper']//a[contains(text(),'My Account') or contains(text(),'我的帳戶')])[1]
+${HomePageProfileIcon}     //dpp-navigation//cx-icon[@class='cx-icon fas fa-angle-down']|//cx-icon[@class='header-account-icon cx-icon dpp-icons__user-circle']
+${HomePageProfileAccount}    (//div[@class='header-account-label']//span[contains(text(),'My Account')]|//dpp-navigation-ui[@class='accNavComponent flyout']//div[@class='wrapper']//a[contains(text(),'My Account') or contains(text(),'我的帳戶')])[1]
 ${HomePageProfileLogout}    //li//a[@href='/dppretail/logout']
 
 ${HomePageMessageIcon}    //dpp-message-notification//cx-icon
@@ -251,7 +251,7 @@ ${HomePageCartIcon}    //dpp-mini-cart//cx-icon
 ${HomePageCartCountIcon}    (//dpp-mini-cart//div[@class='mini-cart--info']//span[@class='count'])[1]
 ${HomePageSellerInfo}    //div[@class='mini-cart--seller-info']
 
-${ProdductSearchValue}    8521458030
+${ProdductSearchValue}    037018200
 #8521458030
 #26296SG011
 #-----------------------------------------------------Retail Home Page Filters & Oil
@@ -617,12 +617,12 @@ ${Retail_CheckoutCartPageGSTToggle}     //div[@class='custom-control custom-swit
 
 
 ${Retail_CheckoutPageCustomerDetailsContainer}    //div[@class='basic-details-container']
-${Retail_CheckoutPageCustomerDetailsMethodofPaymetLabel}    //div[@class='col-md-6 col-sm-12 custom-divider']//div[@class='col-12']//p
-${Retail_CheckoutPageCustomerDetailsMethodofPaymetValue}    //div[@class='col-md-6 col-sm-12 custom-divider']//div[@class='col-12']//span
-${Retail_CheckoutPageCustomerDetailsAccountNameLabel}    (//div[@class='col-md-6 col-sm-12 custom-divider']//div[@class='col-12 mt-4']//p)[1]
-${Retail_CheckoutPageCustomerDetailsAccountNameValue}    (//div[@class='col-md-6 col-sm-12 custom-divider']//div[@class='col-12 mt-4']//span)[1]
-${Retail_CheckoutPageCustomerDetailsSupplierLabel}    (//div[@class='col-md-6 col-sm-12 custom-divider']//div[@class='col-12 mt-4']//p)[2]
-${Retail_CheckoutPageCustomerDetailsSupplierValue}    (//div[@class='col-md-6 col-sm-12 custom-divider']//div[@class='col-12 mt-4']//span)[2]
+${Retail_CheckoutPageCustomerDetailsMethodofPaymetLabel}    //div[@class='col-sm-12 col-md-6 col-lg-6 custom-divider']//div[@class='col-12 p-0 px-lg-3']//p
+${Retail_CheckoutPageCustomerDetailsMethodofPaymetValue}    //div[@class='col-sm-12 col-md-6 col-lg-6 custom-divider']//div[@class='col-12 p-0 px-lg-3']//span
+${Retail_CheckoutPageCustomerDetailsAccountNameLabel}    (//div[@class='col-sm-12 col-md-6 col-lg-6 custom-divider']//div[@class='col-12 mt-3 p-0 px-lg-3']//p)[1]
+${Retail_CheckoutPageCustomerDetailsAccountNameValue}    (//div[@class='col-sm-12 col-md-6 col-lg-6 custom-divider']//div[@class='col-12 mt-3 p-0 px-lg-3']//span)[1]
+${Retail_CheckoutPageCustomerDetailsSupplierLabel}    (//div[@class='col-sm-12 col-md-6 col-lg-6 custom-divider']//div[@class='col-12 mt-3 p-0 px-lg-3']//p)[2]
+${Retail_CheckoutPageCustomerDetailsSupplierValue}    (//div[@class='col-sm-12 col-md-6 col-lg-6 custom-divider']//div[@class='col-12 mt-3 p-0 px-lg-3']//span)[2]
 
 ${Retail_CheckoutPageCustomerDetailsPONumberLabel}    //div[@class='column ml-lg-4']//div[@class='col-12 p-0 px-lg-3']//p[@class='po-number']
 ${Retail_CheckoutPageCustomerDetailsPONumberInfoButton}    //div[@class='column ml-lg-4']//dpp-popover-info//cx-icon

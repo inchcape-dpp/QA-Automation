@@ -5,7 +5,7 @@ Library  SeleniumLibrary
 Library    Process
 #Library  FakerLibrary
 
-Resource  ../../../../../Resource/testdata/Retail/HK_Config/S2/HK_S2_Config.robot
+Resource  ../../../../../Resource/testdata/Retail/HK_Config/S2/HK_S2_Bronze_Config.robot
 Resource  ../../../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../../../Resource/testdata/Retail/Retail_Resource.robot
 
@@ -403,43 +403,43 @@ TC-053 - User should be able to view checkout in Retail Checkout Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view checkout in HK Retail Checkout Page
 
-#TC-054 - User should be able to view payment method in HK Retail Checkout Page
-#    [Tags]    Checkout Page
-#    run keyword and continue on failure    User should be able to view payment method in HK Retail Checkout Page
-#    run keyword and continue on failure    Select Credit Card Frame
-#
-#TC-055 - User should be able to input card details
-#    [Tags]    Checkout Page
-#    run keyword and continue on failure    User should be able to input jcb card number
-#    run keyword and continue on failure    User should be albe to input Exp Date
-#    run keyword and continue on failure    User should be albe to input CVV
-#    run keyword and continue on failure    User should be albe to input Card Holders Name
-#    run keyword and continue on failure    User should be albe to input Email
+TC-054 - User should be able to view payment method in HK Retail Checkout Page
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be able to view payment method in HK Retail Checkout Page
+    run keyword and continue on failure    Select Credit Card Frame
 
-#TC-056 - User should be able to click continue payment
-#    [Tags]    Checkout Page
-#    run keyword and continue on failure    User should be able to click continue payment button
-#    run keyword and continue on failure    User should be able to view 2C2P Modal
-#
-#TC-057 - User should be able to input otp
-#    [Tags]    Checkout Page
-#    run keyword and continue on failure    User should be able to Input OTP
+TC-055 - User should be able to input card details
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be able to input jcb card number
+    run keyword and continue on failure    User should be albe to input Exp Date
+    run keyword and continue on failure    User should be albe to input CVV
+    run keyword and continue on failure    User should be albe to input Card Holders Name
+    run keyword and continue on failure    User should be albe to input Email
 
-#TC-058 - User should be able to click Submit button on 2C2P
-#    [Tags]    Checkout Page
-#    run keyword and continue on failure    User should be able to click Submit button on 2C2P
-#    run keyword and continue on failure    TC Sleep
+TC-056 - User should be able to click continue payment
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be able to click continue payment button
+    run keyword and continue on failure    User should be able to view 2C2P Modal
 
-##TC-057 - User should be able to view confirmation
-##    [Tags]    Checkout Page
-##    run keyword and continue on failure    User should be able to view 2C2P Confirmation
+TC-057 - User should be able to input otp
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be able to Input OTP
 
-#TC-059 - User should be able to view place order in HK Retail Place Order Page
+TC-058 - User should be able to click Submit button on 2C2P
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be able to click Submit button on 2C2P
+    run keyword and continue on failure    TC Sleep
+
+#TC-057 - User should be able to view confirmation
 #    [Tags]    Checkout Page
-#    run keyword and continue on failure    Unselect Credit Card Frame
-#    run keyword and continue on failure    TC Sleep
-#    run keyword and continue on failure    User should be able to view place order in HK Retail Place Order Page
-#    run keyword and continue on failure    User should be able to click back to home button in Retail Place Order Page
+#    run keyword and continue on failure    User should be able to view 2C2P Confirmation
+
+TC-059 - User should be able to view place order in HK Retail Place Order Page
+    [Tags]    Checkout Page
+    run keyword and continue on failure    Unselect Credit Card Frame
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User should be able to view place order in HK Retail Place Order Page
+    run keyword and continue on failure    User should be able to click back to home button in Retail Place Order Page
 
 TC-060 - User should be able to view account orders page
     [Tags]    Order Page
