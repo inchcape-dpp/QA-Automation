@@ -243,15 +243,40 @@ ${HomePageSelectVehicle}    (//div[@class='custom-header-vehicle'])[1]
 ${HomePageSearhProduct}    //div[@role='search']//input[@type='text']
 ${HomePageSearhProductIcon}    //div[@role='presentation']
 ${HomePageProfileIcon}     //dpp-navigation//cx-icon[@class='cx-icon fas fa-angle-down']
-${HomePageProfileAccount}   (//li//a[@href='/dppretail/my-account/orders']|//dpp-navigation-ui[@class='accNavComponent flyout']//div[@class='wrapper']//a[contains(text(),'My Account') or contains(text(),'我的帳戶')])[1]
+${HomePageProfileAccount}    (//div[@class='header-account-label']//span[contains(text(),'My Account')]|//dpp-navigation-ui[@class='accNavComponent flyout']//div[@class='wrapper']//a[contains(text(),'My Account') or contains(text(),'我的帳戶')])[1]
 ${HomePageProfileLogout}    //li//a[@href='/dppretail/logout']
+
+${HomePage_DoubleHeader}    //div[@class='double-header--relative']
+${HomePage_DoubleHeader_SellerName}    //div[@class='double-header--relative']//div[@class='seller-container']//p[@class='seller-name']
+${HomePage_DoubleHeader_MyAccount_Button}    //div[@class='double-header--relative']//cx-generic-link//a[@class='header-account']
+${HomePage_DoubleHeader_DropDown_Button}    //div[@class='double-header--relative']//div[@class='header-account-menu']//cx-icon
+
+${HomePage_DoubleHeader_Menu_Greet_Label}    //div[@class='menu-content']//div[@class='menu-content__greet']
+
+${HomePage_DoubleHeader_Menu_Order_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab']//*[contains(text(),'Order')]
+${HomePage_DoubleHeader_Menu_ReturnRequest_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab']//*[contains(text(),'Return Request')]
+${HomePage_DoubleHeader_Menu_SavedCarts_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab']//*[contains(text(),'Saved Carts')]
+${HomePage_DoubleHeader_Menu_VehicleListing_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab']//*[contains(text(),'Vehicle Listing')]
+${HomePage_DoubleHeader_Menu_Inbox_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab']//*[contains(text(),'Inbox') or contains(text(),'Messages')]
+${HomePage_DoubleHeader_Menu_Profile_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab']//*[contains(text(),'Profile')]
+${HomePage_DoubleHeader_Menu_Company_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab']//*[contains(text(),'Company')]
+
+${HomePage_DoubleHeader_Menu_Profile_AccountDetails_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab__sub-acc show-item']//*[contains(text(),'Account Details')]
+${HomePage_DoubleHeader_Menu_Profile_ChangePassword_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab__sub-acc show-item']//*[contains(text(),'Change Password')]
+${HomePage_DoubleHeader_Menu_Company_CompanyDetails_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab__sub-acc show-item']//*[contains(text(),'Company Details')]
+${HomePage_DoubleHeader_Menu_Company_Relationship_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab__sub-acc show-item']//*[contains(text(),'Supplier Relationships')]
+
+${HomePage_DoubleHeader_Menu_Logout_Button}    //div[@class='menu-content']//div[@class='menu-content__logout']
+
+
+
 
 ${HomePageMessageIcon}    //dpp-message-notification//cx-icon
 ${HomePageCartIcon}    //dpp-mini-cart//cx-icon
 ${HomePageCartCountIcon}    (//dpp-mini-cart//div[@class='mini-cart--info']//span[@class='count'])[1]
 ${HomePageSellerInfo}    //div[@class='mini-cart--seller-info']
 
-${ProdductSearchValue}    8521458030
+${ProdductSearchValue}    037018200
 #8521458030
 #26296SG011
 #-----------------------------------------------------Retail Home Page Filters & Oil
@@ -617,12 +642,12 @@ ${Retail_CheckoutCartPageGSTToggle}     //div[@class='custom-control custom-swit
 
 
 ${Retail_CheckoutPageCustomerDetailsContainer}    //div[@class='basic-details-container']
-${Retail_CheckoutPageCustomerDetailsMethodofPaymetLabel}    //div[@class='col-md-6 col-sm-12 custom-divider']//div[@class='col-12']//p
-${Retail_CheckoutPageCustomerDetailsMethodofPaymetValue}    //div[@class='col-md-6 col-sm-12 custom-divider']//div[@class='col-12']//span
-${Retail_CheckoutPageCustomerDetailsAccountNameLabel}    (//div[@class='col-md-6 col-sm-12 custom-divider']//div[@class='col-12 mt-4']//p)[1]
-${Retail_CheckoutPageCustomerDetailsAccountNameValue}    (//div[@class='col-md-6 col-sm-12 custom-divider']//div[@class='col-12 mt-4']//span)[1]
-${Retail_CheckoutPageCustomerDetailsSupplierLabel}    (//div[@class='col-md-6 col-sm-12 custom-divider']//div[@class='col-12 mt-4']//p)[2]
-${Retail_CheckoutPageCustomerDetailsSupplierValue}    (//div[@class='col-md-6 col-sm-12 custom-divider']//div[@class='col-12 mt-4']//span)[2]
+${Retail_CheckoutPageCustomerDetailsMethodofPaymetLabel}    //div[@class='col-sm-12 col-md-6 col-lg-6 custom-divider']//div[@class='col-12 p-0 px-lg-3']//p
+${Retail_CheckoutPageCustomerDetailsMethodofPaymetValue}    //div[@class='col-sm-12 col-md-6 col-lg-6 custom-divider']//div[@class='col-12 p-0 px-lg-3']//span
+${Retail_CheckoutPageCustomerDetailsAccountNameLabel}    (//div[@class='col-sm-12 col-md-6 col-lg-6 custom-divider']//div[@class='col-12 mt-3 p-0 px-lg-3']//p)[1]
+${Retail_CheckoutPageCustomerDetailsAccountNameValue}    (//div[@class='col-sm-12 col-md-6 col-lg-6 custom-divider']//div[@class='col-12 mt-3 p-0 px-lg-3']//span)[1]
+${Retail_CheckoutPageCustomerDetailsSupplierLabel}    (//div[@class='col-sm-12 col-md-6 col-lg-6 custom-divider']//div[@class='col-12 mt-3 p-0 px-lg-3']//p)[2]
+${Retail_CheckoutPageCustomerDetailsSupplierValue}    (//div[@class='col-sm-12 col-md-6 col-lg-6 custom-divider']//div[@class='col-12 mt-3 p-0 px-lg-3']//span)[2]
 
 ${Retail_CheckoutPageCustomerDetailsPONumberLabel}    //div[@class='column ml-lg-4']//div[@class='col-12 p-0 px-lg-3']//p[@class='po-number']
 ${Retail_CheckoutPageCustomerDetailsPONumberInfoButton}    //div[@class='column ml-lg-4']//dpp-popover-info//cx-icon
@@ -754,7 +779,7 @@ ${Retail_HK_CheckoutPage_PaymentMethod_Frame_Cancel_Button}    //div[@class='acc
 ${Retail_HK_CheckoutPage_PaymentMethod_Frame_ContinuePayment_Button}    //div[@class='accordion__content']//button[@class='btn btn-primary']
 
 ${Retail_HK_CheckoutPage_PaymentMethod_Frame_2C2P_Container}    //div[@class='acs-challenge-modal']
-${Retail_HK_CheckoutPage_PaymentMethod_Frame_2C2P_VerifyOTP_Label}    //div[@class='acs-challenge-modal']//*[contains(text(),'Verify OTP')]
+${Retail_HK_CheckoutPage_PaymentMethod_Frame_2C2P_VerifyOTP_Label}    //div[@class='acs-challenge-modal']//h3
 
 ${Retail_HK_CheckoutPage_PaymentMethod_Frame_2C2P_MerchantName_Label}    //div[@class='acs-challenge-modal']//li[@class='acs-challenge-date-item'][1]//div[@class='date title']
 ${Retail_HK_CheckoutPage_PaymentMethod_Frame_2C2P_MerchantName_Value}    //div[@class='acs-challenge-modal']//li[@class='acs-challenge-date-item'][1]//div[@class='date value']
@@ -795,6 +820,22 @@ ${Retail_CheckoutPageCustomerDetailsOrderSummaryOrderTotalValue}    //div[@class
 
 ${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryShippingFeeLabel}    //div[@class='row order-summary']//div[@class='details mt-2 col-6']
 ${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryShippingFeeValue}    //div[@class='row order-summary']//div[@class='total-wrapper row w-100']//div[4]
+
+${Retail_HK_CheckoutPage_CustomerDetails_OrderSummary_Discounnt_Label}    (//div[@class='row order-summary']//div[@class='details mt-2 col-6'])[2]
+${Retail_HK_CheckoutPage_CustomerDetails_OrderSummary_Discounnt_Value}    //div[@class='row order-summary']//div[@class='total-wrapper row w-100']//div[6]
+
+${Retail_HK_CheckoutPage_PromoCode_Container}    //div[@class='promotion-container']
+${Retail_HK_CheckoutPage_PromoCode_Label}    //div[@class='promotion-container']//span
+${Retail_HK_CheckoutPage_PromoCode_TextBox}    //div[@class='promotion-container']//input
+${Retail_HK_CheckoutPage_PromoCode_Apply_Button}    //div[@class='promotion-container']//button
+${Retail_HK_CheckoutPage_PromoCode_Desc}    //div[@class='promotion-container']//div[@class='description']
+${Retail_HK_CheckoutPage_PromoCode_Code}    //div[@class='promotion-container']//div[@class='promo-code']
+${Retail_HK_CheckoutPage_PromoCode_Remove_Button}    //div[@class='promotion-container']//a
+${Retail_HK_CheckoutPage_PromoCode_Value}    PRTSLNPROMO
+
+${100}    100.0
+${200}    200.0
+${300}    300.0
 
 ${Retail_CheckoutPageCustomerDetailsOrderSummaryRRPTotal}    //div[@class='order-cart-totals']//div[@class='cart-rrp mx-0']
 
@@ -1387,19 +1428,19 @@ ${Retail_AccountVehicleListingPageSelectVehicleSearchNoResultSearchAgainButton} 
 
 ${Retail_AccountVehicleListingPageSelectVehicleSearchManualContainer}    //dpp-manual-vehicle-search//div[@class='row custom-vehicle-search']
 ${Retail_AccountVehicleListingPageSelectVehicleSearchManualMakerComboBox}    //dpp-manual-vehicle-search//ng-select[@formcontrolname='make']//div[@class='ng-select-container ng-has-value']
-${Retail_AccountVehicleListingPageSelectVehicleSearchManualModelComboBox}    //dpp-manual-vehicle-search//ng-select[@formcontrolname='model']//div[@class='ng-select-container']
-${Retail_AccountVehicleListingPageSelectVehicleSearchManualYearComboBox}    //dpp-manual-vehicle-search//ng-select[@formcontrolname='year']//div[@class='ng-select-container']
-${Retail_AccountVehicleListingPageSelectVehicleSearchManualSeriesComboBox}    //dpp-manual-vehicle-search//ng-select[@formcontrolname='series']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
-${Retail_AccountVehicleListingPageSelectVehicleSearchManualEngineComboBox}    //dpp-manual-vehicle-search//ng-select[@formcontrolname='engine']//div[@class='ng-select-container']
-${Retail_AccountVehicleListingPageSelectVehicleSearchManualDetailsComboBox}    //dpp-manual-vehicle-search//ng-select[@formcontrolname='details']//div[@class='ng-select-container']
+${Retail_AccountVehicleListingPageSelectVehicleSearchManualModelComboBox}    //div[@class='cx-dialog-body modal-body d-flex flex-column']//ng-select[@formcontrolname='model']//div[@class='ng-select-container']|//div[@class='cx-dialog-body modal-body flex-layout']//ng-select[@formcontrolname='model']//div[@class='ng-select-container']
+${Retail_AccountVehicleListingPageSelectVehicleSearchManualYearComboBox}    //div[@class='cx-dialog-body modal-body d-flex flex-column']//ng-select[@formcontrolname='year']//div[@class='ng-select-container']|//div[@class='cx-dialog-body modal-body flex-layout']//ng-select[@formcontrolname='year']//div[@class='ng-select-container']
+${Retail_AccountVehicleListingPageSelectVehicleSearchManualSeriesComboBox}    //div[@class='cx-dialog-body modal-body d-flex flex-column']//ng-select[@formcontrolname='series']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']|//div[@class='cx-dialog-body modal-body flex-layout']//ng-select[@formcontrolname='series']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
+${Retail_AccountVehicleListingPageSelectVehicleSearchManualEngineComboBox}    //div[@class='cx-dialog-body modal-body d-flex flex-column']//ng-select[@formcontrolname='engine']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']|//div[@class='cx-dialog-body modal-body flex-layout']//ng-select[@formcontrolname='engine']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
+${Retail_AccountVehicleListingPageSelectVehicleSearchManualDetailsComboBox}    //div[@class='cx-dialog-body modal-body d-flex flex-column']//ng-select[@formcontrolname='details']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']|//div[@class='cx-dialog-body modal-body flex-layout']//ng-select[@formcontrolname='details']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
 
-${Retail_HK_AccountVehicleListingPage_SelectVehicle_SearchManual_ModelID_ComboBox}    //dpp-manual-vehicle-search//ng-select[@formcontrolname='modelId']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
+${Retail_HK_AccountVehicleListingPage_SelectVehicle_SearchManual_ModelID_ComboBox}    //div[@class='cx-dialog-body modal-body flex-layout']//ng-select[@formcontrolname='modelId']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
 
-${Retail_AccountVehicleListingPageSelectVehicleSearchManualSearchButton}    //dpp-manual-vehicle-search//button[@class='btn btn-block btn-primary search-btn' or @class='btn btn-block btn-secondary search-btn']|//div[@class='col-md-6']//button
+${Retail_AccountVehicleListingPageSelectVehicleSearchManualSearchButton}    //button[@class='btn btn-block btn-primary search-btn' or @class='btn btn-block btn-secondary search-btn']|//div[@class='col-md-6']//button
 ${Retail_AccountVehicleListingPageSelectVehicleSearchManualSearchRegoButton}    //dpp-manual-vehicle-search//p/a
 
-${Retail_AccountVehicleListingPageSelectVehicleSearchManualModelListOpt1}    (//div[@class='ng-dropdown-panel-items scroll-host']//span[@title!='---Popular Models---' and @title!='----All Models----' ])[1]
-${Retail_AccountVehicleListingPageSelectVehicleSearchManualModelListOpt}    (//div[@class='ng-dropdown-panel-items scroll-host']//span[@title!='---Popular Models---' and @title!='----All Models----' ])
+${Retail_AccountVehicleListingPageSelectVehicleSearchManualModelListOpt1}    (//div[@class='ng-dropdown-panel-items scroll-host']//span[@title!='---Popular Models---' and @title!='----All Models----' ])[1]|(//div[@class='ng-dropdown-panel-items scroll-host']//span[@class!='---Popular Models---' and @class!='----All Models----' ])[1]
+${Retail_AccountVehicleListingPageSelectVehicleSearchManualModelListOpt}    (//div[@class='ng-dropdown-panel-items scroll-host']//span[@title!='---Popular Models---' and @title!='----All Models----' ])|(//div[@class='ng-dropdown-panel-items scroll-host']//span[@class!='---Popular Models---' and @class!='----All Models----' ])
 
 ${Retail_AccountVehicleListingPageSelectVehicleSearchManualYearListOpt1}    (//ng-dropdown-panel//div[@role='option'])[1]
 ${Retail_AccountVehicleListingPageSelectVehicleSearchManualYearListOpt}    (//ng-dropdown-panel//div[@role='option'])

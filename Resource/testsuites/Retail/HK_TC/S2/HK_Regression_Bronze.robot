@@ -5,13 +5,13 @@ Library  SeleniumLibrary
 Library    Process
 #Library  FakerLibrary
 
-Resource  ../../../../../Resource/testdata/Retail/HK_Config/S2/HK_S2_Config.robot
+Resource  ../../../../../Resource/testdata/Retail/HK_Config/S2/HK_S2_Bronze_Config.robot
 Resource  ../../../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../../../Resource/testdata/Retail/Retail_Resource.robot
 
 *** Test Cases ***
-Test Setup  Run Keywords   Open Chrome Browser
-Screen Shot DIR  Run Keywords    Retail Screent Shot DIR
+Test Setup  Run Keywords   Open Chrome Browser HK
+Screen Shot DIR  Run Keywords    Retail Screent Shot DIR HK
 
 TC-001 - Verify Login Page
     [Tags]    TC001    Login Page
@@ -306,6 +306,51 @@ TC-040 - User should be able to click searched text
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to click searched text
 
+TC-041 - User should be able to access Order page using double header in Retail Homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to access Order page using double header in Retail Homepage
+
+TC-041 - User should be able to access Retrun page using double header in Retail Homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to access Retrun page using double header in Retail Homepage
+
+TC-041 - User should be able to access Save carts page using double header in Retail Homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to access Save carts page using double header in Retail Homepage
+
+TC-041 - User should be able to access Vehicle Listing page using double header in Retail Homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to access Vehicle Listing page using double header in Retail Homepage
+
+TC-041 - User should be able to access Inbox page using double header in Retail Homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to access Inbox page using double header in Retail Homepage
+
+TC-041 - User should be able to access Account Details page using double header in Retail Homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to access Account Details page using double header in Retail Homepage
+
+TC-041 - User should be able to access Change Pass page using double header in Retail Homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to access Change Pass page using double header in Retail Homepage
+
+TC-041 - User should be able to access Company Details page using double header in Retail Homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to access Company Details page using double header in Retail Homepage
+
+TC-041 - User should be able to access Relationship page using double header in Retail Homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to access Relationship page using double header in Retail Homepage
+
 TC-041 - User should be able to view All Products Page in HK Retail Home Page
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to view All products
@@ -403,47 +448,47 @@ TC-053 - User should be able to view checkout in Retail Checkout Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view checkout in HK Retail Checkout Page
 
-#TC-054 - User should be able to view payment method in HK Retail Checkout Page
-#    [Tags]    Checkout Page
-#    run keyword and continue on failure    User should be able to view payment method in HK Retail Checkout Page
-#    run keyword and continue on failure    Select Credit Card Frame
-#
-#TC-055 - User should be able to input card details
-#    [Tags]    Checkout Page
-#    run keyword and continue on failure    User should be able to input jcb card number
-#    run keyword and continue on failure    User should be albe to input Exp Date
-#    run keyword and continue on failure    User should be albe to input CVV
-#    run keyword and continue on failure    User should be albe to input Card Holders Name
-#    run keyword and continue on failure    User should be albe to input Email
+TC-054 - User should be able to view payment method in HK Retail Checkout Page
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be able to view payment method in HK Retail Checkout Page
+    run keyword and continue on failure    Select Credit Card Frame
 
-#TC-056 - User should be able to click continue payment
-#    [Tags]    Checkout Page
-#    run keyword and continue on failure    User should be able to click continue payment button
-#    run keyword and continue on failure    User should be able to view 2C2P Modal
-#
-#TC-057 - User should be able to input otp
-#    [Tags]    Checkout Page
-#    run keyword and continue on failure    User should be able to Input OTP
+TC-055 - User should be able to input card details
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be able to input jcb card number
+    run keyword and continue on failure    User should be albe to input Exp Date
+    run keyword and continue on failure    User should be albe to input CVV
+    run keyword and continue on failure    User should be albe to input Card Holders Name
+    run keyword and continue on failure    User should be albe to input Email
 
-#TC-058 - User should be able to click Submit button on 2C2P
-#    [Tags]    Checkout Page
-#    run keyword and continue on failure    User should be able to click Submit button on 2C2P
-#    run keyword and continue on failure    TC Sleep
+TC-056 - User should be able to click continue payment
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be able to click continue payment button
+    run keyword and continue on failure    User should be able to view 2C2P Modal
 
-##TC-057 - User should be able to view confirmation
-##    [Tags]    Checkout Page
-##    run keyword and continue on failure    User should be able to view 2C2P Confirmation
+TC-057 - User should be able to input otp
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be able to Input OTP
 
-#TC-059 - User should be able to view place order in HK Retail Place Order Page
+TC-058 - User should be able to click Submit button on 2C2P
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be able to click Submit button on 2C2P
+    run keyword and continue on failure    TC Sleep
+
+#TC-057 - User should be able to view confirmation
 #    [Tags]    Checkout Page
-#    run keyword and continue on failure    Unselect Credit Card Frame
-#    run keyword and continue on failure    TC Sleep
-#    run keyword and continue on failure    User should be able to view place order in HK Retail Place Order Page
-#    run keyword and continue on failure    User should be able to click back to home button in Retail Place Order Page
+#    run keyword and continue on failure    User should be able to view 2C2P Confirmation
+
+TC-059 - User should be able to view place order in HK Retail Place Order Page
+    [Tags]    Checkout Page
+    run keyword and continue on failure    Unselect Credit Card Frame
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User should be able to view place order in HK Retail Place Order Page
+    run keyword and continue on failure    User should be able to click back to home button in Retail Place Order Page
 
 TC-060 - User should be able to view account orders page
     [Tags]    Order Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account orders page
 
 TC-061 - User should be able to apply filter status in Retail Account Orders Page
@@ -525,20 +570,20 @@ TC-066 - User should be able to view and message order with Submitted Status in 
     run keyword and continue on failure    User should be able to click back to order details in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click Back to Customer Orders in Retail Account Order Details Page
 
-#TC-067 - User should be able to view and message order with Dispatched Status in Retail Account Orders Page
-#    [Tags]    Order Page
-#    run keyword and continue on failure    User should be able to view order with Dispatched Status in Retail Account Orders Page
-#    run keyword and continue on failure    User should be able to click order with Dispatched Status in Retail Account Orders Page
-#    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
-#    run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Order Details Page
-#    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
-#    run keyword and continue on failure    User should be able to view message supplier pop up in Retail Account Order Details Page
-#    run keyword and continue on failure    User should be able to input text on message pop up text field in Retail Account Order Details Page
-#    run keyword and continue on failure    User should be able to upload photo on message pop in Retail Account Order Details Page
-#    run keyword and continue on failure    User should be able to send on message pop in Retail Account Order Details Page
-#    run keyword and continue on failure    User should be able to click back to order details in Retail Account Order Details Page
-#    run keyword and continue on failure    User should be able to click Back to Customer Orders in Retail Account Order Details Page
-#
+TC-067 - User should be able to view and message order with Dispatched Status in Retail Account Orders Page
+    [Tags]    Order Page
+    run keyword and continue on failure    User should be able to view order with Dispatched Status in Retail Account Orders Page
+    run keyword and continue on failure    User should be able to click order with Dispatched Status in Retail Account Orders Page
+    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to view message supplier pop up in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to input text on message pop up text field in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to upload photo on message pop in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to send on message pop in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to click back to order details in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to click Back to Customer Orders in Retail Account Order Details Page
+
 ##TC-068 - User should be able to view and message order with Partially Dispatched Status in Retail Account Orders Page
 ##    [Tags]    Order Page
 ##    run keyword and continue on failure    User should be able to view order with Partially Dispatched Status in Retail Account Orders Page
@@ -553,23 +598,23 @@ TC-066 - User should be able to view and message order with Submitted Status in 
 ##    run keyword and continue on failure    User should be able to click back to order details in Retail Account Order Details Page
 ##    run keyword and continue on failure    User should be able to click Back to Customer Orders in Retail Account Order Details Page
 
-#TC-069 - User should be able to view and message order with Orders with Returns Status in Retail Account Orders Page
-#    [Tags]    Order Page
-#    run keyword and continue on failure    User should be able to view order with Orders with Returns Status in Retail Account Orders Page
-#    run keyword and continue on failure    User should be able to click order with Orders with Returns Status in Retail Account Orders Page
-#    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
-#    run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Order Details Page
-#    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
-#    run keyword and continue on failure    User should be able to view message supplier pop up in Retail Account Order Details Page
-#    run keyword and continue on failure    User should be able to input text on message pop up text field in Retail Account Order Details Page
-#    run keyword and continue on failure    User should be able to upload photo on message pop in Retail Account Order Details Page
-#    run keyword and continue on failure    User should be able to send on message pop in Retail Account Order Details Page
-#    run keyword and continue on failure    User should be able to click back to order details in Retail Account Order Details Page
-#    run keyword and continue on failure    User should be able to click Back to Customer Orders in Retail Account Order Details Page
+TC-069 - User should be able to view and message order with Orders with Returns Status in Retail Account Orders Page
+    [Tags]    Order Page
+    run keyword and continue on failure    User should be able to view order with Orders with Returns Status in Retail Account Orders Page
+    run keyword and continue on failure    User should be able to click order with Orders with Returns Status in Retail Account Orders Page
+    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to view message supplier pop up in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to input text on message pop up text field in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to upload photo on message pop in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to send on message pop in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to click back to order details in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to click Back to Customer Orders in Retail Account Order Details Page
 
 TC-067 - User should be able to view account return request page
     [Tags]    Return Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account return request page
     run keyword and continue on failure    User should be able to view Return Request Panel
 
@@ -622,26 +667,52 @@ TC-073 - User should be able to arrange filter in Account Return Page
     run keyword and continue on failure    User should be able to click Arrage Filter in Account Return Page
     run keyword and continue on failure    User should be able to Filter by New to Old in Account Return Page
 
-##TC-077 - User should be able to view and message order with Accepted Status in Retail Account Return Page
-##    [Tags]    Return Page
-##    run keyword and continue on failure    User should be able to view order with Accepted Status in Retail Account Return Page
-##    run keyword and continue on failure    User should be able to click order with Accepted Status in Retail Account Return Page
-##    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Return Details Page
-##    run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Return Details Page
-##    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Return Details Page
-##    run keyword and continue on failure    User should be able to view message supplier pop up in Retail Account Return Details Page
-##    run keyword and continue on failure    User should be able to input text on message pop up text field in Retail Account Return Details Page
-##    run keyword and continue on failure    User should be able to upload photo on message pop in Retail Account Return Details Page
-##    run keyword and continue on failure    User should be able to send on message pop in Retail Account Return Details Page
-##    run keyword and continue on failure    User should be able to click back to order details in Retail Account Return Details Page
-##    run keyword and continue on failure    User should be able to click Back to Return Request in Retail Account Return Details Page
+TC-077 - User should be able to view and message order with Accepted Status in Retail Account Return Page
+    [Tags]    Return Page
+    run keyword and continue on failure    User should be able to view order with Accepted Status in Retail Account Return Page
+    run keyword and continue on failure    User should be able to click order with Accepted Status in Retail Account Return Page
+    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to view message supplier pop up in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to input text on message pop up text field in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to upload photo on message pop in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to send on message pop in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to click back to order details in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to click Back to Return Request in Retail Account Return Details Page
 
 TC-078 - User should be able to view account saved carts page
     [Tags]    Saved Carts Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account saved carts page
     run keyword and continue on failure    User should be able to view Saved Carts Panel
     run keyword and continue on failure    User should be able to view Saved Carts List in Retail Account Saved Carts Page
+
+TC-079 - User should be able to Saved Carts in Retail Account Saved Carts Page
+    [Tags]    Saved Carts Page
+    run keyword and continue on failure    User should be able to view All products
+    run keyword and continue on failure    User should be able to Filter Products by Stocks
+    run keyword and continue on failure    User should be able to add to cart random item in Retail Product Page
+    run keyword and continue on failure    User should be able to view shopping cart pop up modal
+    run keyword and continue on failure    User should be able to click view cart button from shopping cart pop up modal
+    run keyword and continue on failure    User should be able to click save cart button in Retail Shopping Cart Page
+    run keyword and continue on failure    User should be able to edit Name for Edit Pop Up in Retail Account Saved Carts Details Page
+    run keyword and continue on failure    User should be able to edit Description for Edit Pop Up in Retail Account Saved Carts Details Page
+    run keyword and continue on failure    User shoulld be albe to click Update for Edit Pop Up in Retail Account Saved Carts Details Page
+    run keyword and continue on failure    TC Sleep
+
+TC-079 - User should be able to Saved Carts in Retail Account Saved Carts Page
+    [Tags]    Saved Carts Page
+    run keyword and continue on failure    User should be able to view All products
+    run keyword and continue on failure    User should be able to Filter Products by Stocks
+    run keyword and continue on failure    User should be able to add to cart random item in Retail Product Page
+    run keyword and continue on failure    User should be able to view shopping cart pop up modal
+    run keyword and continue on failure    User should be able to click view cart button from shopping cart pop up modal
+    run keyword and continue on failure    User should be able to click save cart button in Retail Shopping Cart Page
+    run keyword and continue on failure    User should be able to edit Name for Edit Pop Up in Retail Account Saved Carts Details Page
+    run keyword and continue on failure    User should be able to edit Description for Edit Pop Up in Retail Account Saved Carts Details Page
+    run keyword and continue on failure    User shoulld be albe to click Update for Edit Pop Up in Retail Account Saved Carts Details Page
+    run keyword and continue on failure    TC Sleep
 
 TC-079 - User should be able to select one Saved Carts in Retail Account Saved Carts Page
     [Tags]    Saved Carts Page
@@ -673,7 +744,7 @@ TC-082 - User should be able to click Delete in Retail Account Saved Carts Page
 
 TC-083 - User should be able to view account vehicle listing page
     [Tags]    Vehicle Listing Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account vehicle listing page
     run keyword and continue on failure    User should be able to view HK vehicle listing Panel
 
@@ -699,7 +770,7 @@ TC-083 - User should be able to add new vehicle in Retail Account Vehicle Listin
 
 TC-009 - User should be able to click shop this vehicle in Retail Account Vehicle Listing Page
     [Tags]    Vehicle Listing Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account vehicle listing page
     run keyword and continue on failure    User should be able to click shop this vehicle in HK Retail Account Vehicle Listing Page
     run keyword and continue on failure    TC Sleep
@@ -710,7 +781,7 @@ TC-009 - User should be able to click shop this vehicle in Retail Account Vehicl
 
 TC-010 - User should be able to click delete in Retail Account Vehicle Listing Page
     [Tags]    Vehicle Listing Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account vehicle listing page
     run keyword and continue on failure    User should be able to click delete in HK Retail Account Vehicle Listing Page
     run keyword and continue on failure    User should be able to click no on confirm deletion in Retail Account Vehicle Listing Page
@@ -719,7 +790,7 @@ TC-010 - User should be able to click delete in Retail Account Vehicle Listing P
 
 TC-084 - User should be able to view message page
     [Tags]    Message Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view message page
 
 TC-085 - User should be able to filter message in message page
@@ -781,7 +852,7 @@ TC-090 - User should be able to view and message read Product Enquiry in Retail 
 
 TC-091 - User should be able to view Account Details page
     [Tags]    Account Details Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account details page
 
 TC-092 - User should be able to edit account details in Retail Account Details Page
@@ -796,7 +867,7 @@ TC-092 - User should be able to edit account details in Retail Account Details P
 
 TC-093 - User should be able to view change password page
     [Tags]    Change Password Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view change password page
 
 TC-094 - User should be able to edit password in Retail Account Details Page
@@ -822,7 +893,7 @@ TC-095 - User should be able to view password error messages in Retail Account D
 
 TC-096 - User should be able to view company details page
     [Tags]    Company Details Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view HK company details page
 
 TC-097 - User should be able to edit company details page
@@ -856,29 +927,29 @@ TC-097 - User should be able to edit company details page
     run keyword and continue on failure    User should be able to click save button in Retail Account Company Details Page
     run keyword and continue on failure    User should be able to click no on update cofirmation modal in Retail Account Company Details Page
 
-TC-098 - User should be able to view staff page
-    [Tags]    Staff Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
-    run keyword and continue on failure    User should be able to view staff page
-
-TC-099 - User should be able to add new staff in Retail Account Staff Page
-    [Tags]    Staff Page
-    run keyword and continue on failure    User should be able to click add new staff in Retail Account Staff Page
-    run keyword and continue on failure    User should be able to add new staff details in HK Retail Account Staff Page
-    run keyword and continue on failure    User should be able to click active checkbox at add new staff in Retail Account Staff Page
-    run keyword and continue on failure    User should be able to click active checkbox at add new staff in Retail Account Staff Page
-    run keyword and continue on failure    User should be able to click cancel add new staff in Retail Account Staff Page
-
-TC-100 - User should be able to edit staff button in Retail Account Staff Page
-    [Tags]    Staff Page
-    run keyword and continue on failure    User should be able to click edit staff button in Retail Account Staff Page
-    run keyword and continue on failure    User should be able to edit First Name in Retail Account Staff Page
-    run keyword and continue on failure    User should be able to edit Last Name in Retail Account Staff Page
-    run keyword and continue on failure    User should be able to edit Phone Number in HK Retail Account Staff Page
-    run keyword and continue on failure    User should be able to click active checkbox in Retail Account Staff Page
-    run keyword and continue on failure    User should be able to click active checkbox in Retail Account Staff Page
-    run keyword and continue on failure    User should ba able to click save in Retail Account Staff Page
-    run keyword and continue on failure    User should be able to click no in the confirmation in Retail Account Staff Page
+#TC-098 - User should be able to view staff page
+#    [Tags]    Staff Page
+#    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
+#    run keyword and continue on failure    User should be able to view staff page
+#
+#TC-099 - User should be able to add new staff in Retail Account Staff Page
+#    [Tags]    Staff Page
+#    run keyword and continue on failure    User should be able to click add new staff in Retail Account Staff Page
+#    run keyword and continue on failure    User should be able to add new staff details in HK Retail Account Staff Page
+#    run keyword and continue on failure    User should be able to click active checkbox at add new staff in Retail Account Staff Page
+#    run keyword and continue on failure    User should be able to click active checkbox at add new staff in Retail Account Staff Page
+#    run keyword and continue on failure    User should be able to click cancel add new staff in Retail Account Staff Page
+#
+#TC-100 - User should be able to edit staff button in Retail Account Staff Page
+#    [Tags]    Staff Page
+#    run keyword and continue on failure    User should be able to click edit staff button in Retail Account Staff Page
+#    run keyword and continue on failure    User should be able to edit First Name in Retail Account Staff Page
+#    run keyword and continue on failure    User should be able to edit Last Name in Retail Account Staff Page
+#    run keyword and continue on failure    User should be able to edit Phone Number in HK Retail Account Staff Page
+#    run keyword and continue on failure    User should be able to click active checkbox in Retail Account Staff Page
+#    run keyword and continue on failure    User should be able to click active checkbox in Retail Account Staff Page
+#    run keyword and continue on failure    User should ba able to click save in Retail Account Staff Page
+#    run keyword and continue on failure    User should be able to click no in the confirmation in Retail Account Staff Page
 
 
 
