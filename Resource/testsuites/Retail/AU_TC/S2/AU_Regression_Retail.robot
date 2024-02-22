@@ -109,10 +109,6 @@ TC-016 - User should be able to input valid registration details
     run keyword and continue on failure    User should be able to input Company Phone Number
     run keyword and continue on failure    User should be able to input Landline Number
 
-TC-010 - User should be able to view Error Messages
-    [Tags]    Login Page    Registration
-    run keyword and continue on failure    User should be able to view Error Messages
-
 TC-017 - User should be able to click Back to Login Button
     [Tags]    Login Page    Registration
     run keyword and continue on failure    User should be able to click Back to Login Button
@@ -293,6 +289,51 @@ TC-054 - User should be able to input text on search bar
 TC-055 - User should be able to click searched text
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to click searched text
+
+TC-041 - User should be able to access Order page using double header in Retail Homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to access Order page using double header in Retail Homepage
+
+TC-041 - User should be able to access Retrun page using double header in Retail Homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to access Retrun page using double header in Retail Homepage
+
+TC-041 - User should be able to access Save carts page using double header in Retail Homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to access Save carts page using double header in Retail Homepage
+
+TC-041 - User should be able to access Vehicle Listing page using double header in Retail Homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to access Vehicle Listing page using double header in Retail Homepage
+
+TC-041 - User should be able to access Inbox page using double header in Retail Homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to access Inbox page using double header in Retail Homepage
+
+TC-041 - User should be able to access Account Details page using double header in Retail Homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to access Account Details page using double header in Retail Homepage
+
+TC-041 - User should be able to access Change Pass page using double header in Retail Homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to access Change Pass page using double header in Retail Homepage
+
+TC-041 - User should be able to access Company Details page using double header in Retail Homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to access Company Details page using double header in Retail Homepage
+
+TC-041 - User should be able to access Relationship page using double header in Retail Homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to access Relationship page using double header in Retail Homepage
 
 TC-056 - User should be able to view All Parts Page
     [Tags]    All Products Page
@@ -477,7 +518,7 @@ TC-079 - User should be able to process Re-Order in Retail Account Order Details
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to view shopping cart pop up modal
     run keyword and continue on failure    User should be albe to delete all items from shopping cart pop up modal
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account orders page
     run keyword and continue on failure    User should be able to click orders with $0.25 spent in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click Re-Order button in Retail Account Order Details Page
@@ -490,7 +531,7 @@ TC-079 - User should be able to process Re-Order in Retail Account Order Details
 
 TC-080 - User should be able to view account orders page
     [Tags]    Order Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account orders page
 
 TC-081 - User should be able to apply filter status in Retail Account Orders Page
@@ -616,7 +657,7 @@ TC-090 - User should be able to view and message order with Orders with Returns 
 
 TC-091 - User should be able to view account return request page
     [Tags]    Return Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account return request page
     run keyword and continue on failure    User should be able to view Return Request Panel
 
@@ -714,7 +755,7 @@ TC-099 - User should be able to view and message order with Declined Status in R
 
 TC-100 - User should be able to view account saved carts page
     [Tags]    Saved Carts Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account saved carts page
     run keyword and continue on failure    reload page
     run keyword and continue on failure    TC Sleep
@@ -801,7 +842,7 @@ TC-107 - User should be able to add new vehicle using Manual Search in Retail Ac
 
 TC-108 - User should be able to view account vehicle listing page
     [Tags]    Vehicle Listing Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account vehicle listing page
     run keyword and continue on failure    User should be able to view vehicle listing Panel
 
@@ -826,7 +867,7 @@ TC-111 - User should be able to click delete in Retail Account Vehicle Listing P
 
 TC-112 - User should be able to view message page
     [Tags]    Message Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view message page
 
 TC-113 - User should be able to filter message in message page
@@ -961,7 +1002,7 @@ TC-125 - User should be able to view and message unread Product Enquiry in Retai
 
 TC-126 - User should be able to view Account Details page
     [Tags]    Account Details Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account details page
 
 TC-127 - User should be able to edit account details in Retail Account Details Page
@@ -976,7 +1017,7 @@ TC-127 - User should be able to edit account details in Retail Account Details P
 
 TC-128 - User should be able to view change password page
     [Tags]    Change Password Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view change password page
 
 TC-129 - User should be able to edit password in Retail Account Details Page
@@ -1002,7 +1043,7 @@ TC-130 - User should be able to view password error messages in Retail Account D
 
 TC-131 - User should be able to view company details page
     [Tags]    Company Details Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view company details page
 
 TC-132 - User should be able to edit company details page
@@ -1037,7 +1078,7 @@ TC-132 - User should be able to edit company details page
 
 TC-133 - User should be able to view staff page
     [Tags]    Staff Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view staff page
 
 #TC-134 - User should be able to add new staff in Retail Account Staff Page

@@ -443,11 +443,6 @@ User should be able to click place order button in Retail Checkout Page
     sleep    20
 
 
-
-
-
-
-
 User should be able to click place order button in HK Retail Checkout Page
     wait until element is visible    ${Retail_CheckoutPageCustomerDetailsOrderSummaryPlaceOrderButton}    10
     capture element screenshot    ${Retail_CheckoutPageCustomerDetailsOrderSummaryPlaceOrderButton}
@@ -707,8 +702,6 @@ User should be able to view place order in HK Retail Place Order Page
     wait until element is visible    ${Retail_HK_PlaceOrderPage_CofirmationDetails_OrderDate_Value}    10
     wait until element is visible    ${Retail_HK_PlaceOrderPage_CofirmationDetails_EstDelDate_Label}    10
     wait until element is visible    ${Retail_HK_PlaceOrderPage_CofirmationDetails_EstDelDate_Value}    10
-    wait until element is visible    ${Retail_HK_PlaceOrderPage_CofirmationDetails_PONumer_Label}    10
-    wait until element is visible    ${Retail_HK_PlaceOrderPage_CofirmationDetails_PONumer_Value}    10
     wait until element is visible    ${Retail_PlaceOrderPageBacktoHomeButton}    10
     wait until element is visible    ${Retail_PlaceOrderPageViewOrderButton}    10
 
@@ -720,12 +713,95 @@ User should be able to view place order in HK Retail Place Order Page
     capture element screenshot    ${Retail_HK_PlaceOrderPage_CofirmationDetails_OrderDate_Value}
     capture element screenshot    ${Retail_HK_PlaceOrderPage_CofirmationDetails_EstDelDate_Label}
     capture element screenshot    ${Retail_HK_PlaceOrderPage_CofirmationDetails_EstDelDate_Value}
-    capture element screenshot    ${Retail_HK_PlaceOrderPage_CofirmationDetails_PONumer_Label}
-    capture element screenshot    ${Retail_HK_PlaceOrderPage_CofirmationDetails_PONumer_Value}
     capture element screenshot    ${Retail_PlaceOrderPageBacktoHomeButton}
     capture element screenshot    ${Retail_PlaceOrderPageViewOrderButton}
 
     sleep    2
+
+User should be able to view Promo Code in HK Retail Checkout Page
+    wait until element is visible    ${Retail_HK_CheckoutPage_PromoCode_Container}    10
+    wait until element is visible    ${Retail_HK_CheckoutPage_PromoCode_Label}    10
+    wait until element is visible    ${Retail_HK_CheckoutPage_PromoCode_TextBox}    10
+    wait until element is visible    ${Retail_HK_CheckoutPage_PromoCode_Apply_Button}    10
+
+    capture element screenshot    ${Retail_HK_CheckoutPage_PromoCode_Container}
+    capture element screenshot    ${Retail_HK_CheckoutPage_PromoCode_Label}
+    capture element screenshot    ${Retail_HK_CheckoutPage_PromoCode_TextBox}
+    capture element screenshot    ${Retail_HK_CheckoutPage_PromoCode_Apply_Button}
+    sleep    2
+
+User should be able to input Promo Code in HK Retail Checkout Page
+    wait until element is visible    ${Retail_HK_CheckoutPage_PromoCode_TextBox}    10
+    input text    ${Retail_HK_CheckoutPage_PromoCode_TextBox}    ${Retail_HK_CheckoutPage_PromoCode_Value}
+    capture element screenshot    ${Retail_HK_CheckoutPage_PromoCode_TextBox}
+    click element    ${Retail_HK_CheckoutPage_PromoCode_Apply_Button}
+    sleep    5
+    capture element screenshot    ${Retail_HK_CheckoutPage_PromoCode_Container}
+    sleep    2
+
+User should be able to remove Promo Code in HK Retail Checkout Page
+    scroll element into view    ${FooterLogo}
+    wait until element is visible    ${Retail_HK_CheckoutPage_PromoCode_Remove_Button}    10
+    capture element screenshot    ${Retail_HK_CheckoutPage_PromoCode_Remove_Button}
+    click element    ${Retail_HK_CheckoutPage_PromoCode_Remove_Button}
+    sleep    5
+
+Get Promo code used
+    wait until element is visible    ${Retail_HK_CheckoutPage_PromoCode_Code}    10
+    ${PromoCode}    get text    ${Retail_HK_CheckoutPage_PromoCode_Code}
+    log to console    ${PromoCode}
+    log    ${PromoCode}
+
+Validate Promo Code
+    ${100DiscountMin}    set variable    2000
+    ${100DiscountMax}    set variable    3999.9
+    ${200DiscountMin}    set variable    4000
+    ${200DiscountMax}    set variable    5999.9
+    ${300DiscountMin}    set variable    6000
+
+    ${SubtotalText}    get text    ${Retail_CheckoutPageCustomerDetailsOrderSummarySubTotalValue}
+    ${ShippingFeeText}    get text    ${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryShippingFeeValue}
+    ${DiscountText}    get text    ${Retail_HK_CheckoutPage_CustomerDetails_OrderSummary_Discounnt_Value}
+    ${OrderTotalText}    get text    ${Retail_CheckoutPageCustomerDetailsOrderSummaryOrderTotalValue}
+
+#    ${SubtotalString}    convert to string    ${SubtotalText}
+#    ${ShippingString}    convert to string    ${ShippingFeeText}
+#    ${DiscountString}    convert to string    ${DiscountText}
+#    ${OrderTotalString}    convert to string    ${OrderTotalText}
+
+    ${RemoveSubTotalString}    remove string    ${SubtotalText}    $    ,
+    ${RemoveShippingString}    remove string   ${ShippingFeeText}    Free    $    ,
+    ${RemoveDiscountString}    remove string    ${DiscountText}    $    ,
+    ${RemoveOrderTotalString}    remove string    ${OrderTotalText}    $    ,
+
+    ${SubTotal}    convert to number    ${RemoveSubTotalString}
+    ${Shipping}    convert to number    ${RemoveShippingString}
+    ${Discount}    convert to number    ${RemoveDiscountString}
+    ${OrderTotal}  convert to number    ${RemoveOrderTotalString}
+
+    ${SubTotalPrice}    evaluate    ${RemoveSubTotalString}+${RemoveShippingString}
+    ${OrderTotalPrice}    evaluate    ${SubTotalPrice}-${RemoveDiscountString}
+    run keyword and continue on failure    should be equal    ${OrderTotal}    ${OrderTotalPrice}
+
+    run keyword if    ${RemoveSubTotalString} > ${100DiscountMin} and ${RemoveSubTotalString} < ${100DiscountMax}    Set Discount to 100
+    run keyword if    ${RemoveSubTotalString} > ${200DiscountMin} and ${RemoveSubTotalString} < ${200DiscountMax}    Set Discount to 200
+    run keyword if    ${RemoveSubTotalString} > ${300DiscountMin}    Set Discount to 300
+
+    run keyword and continue on failure    should be equal    ${DiscountValue}    ${RemoveDiscountString}
+
+
+Set Discount to 100
+    ${DiscountValue}  set variable    ${100}
+    set global variable    ${DiscountValue}
+
+Set Discount to 200
+    ${DiscountValue}  set variable    ${200}
+    set global variable    ${DiscountValue}
+
+Set Discount to 300
+    ${DiscountValue}  set variable    ${300}
+    set global variable    ${DiscountValue}
+
 
 
 

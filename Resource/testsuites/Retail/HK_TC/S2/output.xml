@@ -1,0 +1,1142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20240222 12:33:19.205" rpa="false" schemaversion="4">
+<suite id="s1" name="Test Retail Smoke1" source="C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\HK_TC\S2\Test_Retail_Smoke1.robot">
+<test id="s1-t1" name="Test Setup" line="13">
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Open Chrome Browser HK</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Chrome Browser HK" library="HK_S2_Bronze_Config">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${s2HKRetail}</arg>
+<arg>Chrome</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240222 12:33:20.037" level="INFO">Opening browser 'Chrome' to base url 'https://hkretail.coyzchwfjr-inchcaped2-s2-public.model-t.cc.commerce.ondemand.com/hkretail/'.</msg>
+<status status="PASS" starttime="20240222 12:33:20.037" endtime="20240222 12:33:26.404"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240222 12:33:26.404" endtime="20240222 12:33:26.529"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:20.037" endtime="20240222 12:33:26.529"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:20.037" endtime="20240222 12:33:26.529"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:20.037" endtime="20240222 12:33:26.530"/>
+</test>
+<test id="s1-t2" name="Screen Shot DIR" line="14">
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Retail Screent Shot DIR HK</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Retail Screent Shot DIR HK" library="HK_S2_Bronze_Config">
+<kw name="Get Current Date" library="DateTime">
+<var>${currentdate}</var>
+<arg>result_format=%m-%d-%y %H-%M</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20240222 12:33:26.532" level="INFO">${currentdate} = 02-22-24 12-33</msg>
+<status status="PASS" starttime="20240222 12:33:26.531" endtime="20240222 12:33:26.532"/>
+</kw>
+<kw name="Create Directory" library="OperatingSystem">
+<arg>${Retail_screenshot_path}/HK_${currentdate}</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20240222 12:33:26.532" level="INFO" html="true">Created directory '&lt;a href="file://C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots\HK\S2\HK_02-22-24 12-33"&gt;C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots\HK\S2\HK_02-22-24 12-33&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20240222 12:33:26.532" endtime="20240222 12:33:26.533"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${LogDIR}</var>
+<arg>${Retail_screenshot_path}/HK_${currentdate}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20240222 12:33:26.533" level="INFO">${LogDIR} = C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots\HK\S2/HK_02-22-24 12-33</msg>
+<status status="PASS" starttime="20240222 12:33:26.533" endtime="20240222 12:33:26.533"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${LogDIR}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20240222 12:33:26.533" endtime="20240222 12:33:26.533"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${LogDIR}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20240222 12:33:26.534" level="INFO">${LogDIR} = C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Screenshots\HK\S2/HK_02-22-24 12-33</msg>
+<status status="PASS" starttime="20240222 12:33:26.534" endtime="20240222 12:33:26.534"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:26.531" endtime="20240222 12:33:26.534"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:26.531" endtime="20240222 12:33:26.534"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:26.530" endtime="20240222 12:33:26.535"/>
+</test>
+<test id="s1-t3" name="TC-001 - Verify Login Page" line="16">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Verify Login Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Verify Login Page" library="Login_Page_Keywords">
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240222 12:33:36.537" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240222 12:33:26.536" endtime="20240222 12:33:36.537"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240222 12:33:36.908" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-screenshot-1.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:33:36.537" endtime="20240222 12:33:36.908"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:26.536" endtime="20240222 12:33:36.908"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:26.536" endtime="20240222 12:33:36.908"/>
+</kw>
+<tag>Login Page</tag>
+<tag>TC001</tag>
+<status status="PASS" starttime="20240222 12:33:26.535" endtime="20240222 12:33:36.908"/>
+</test>
+<test id="s1-t4" name="TC-002 - Input Valid Username" line="37">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Input Valid Username</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Input Valid Username" library="Login_Page_Keywords">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20240222 12:33:36.908" endtime="20240222 12:33:36.955"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240222 12:33:36.955" level="INFO">Typing text 'hk_automation1retails2_bronze@yopmail.com' into text field '//*[@type='email']'.</msg>
+<status status="PASS" starttime="20240222 12:33:36.955" endtime="20240222 12:33:37.044"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Email}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:33:37.161" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-1.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-1.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:33:37.044" endtime="20240222 12:33:37.161"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240222 12:33:39.163" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240222 12:33:37.162" endtime="20240222 12:33:39.163"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:36.908" endtime="20240222 12:33:39.163"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:36.908" endtime="20240222 12:33:39.163"/>
+</kw>
+<tag>Login Page</tag>
+<status status="PASS" starttime="20240222 12:33:36.908" endtime="20240222 12:33:39.163"/>
+</test>
+<test id="s1-t5" name="TC-003 - Input Valid Password" line="41">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Input Valid Password</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Input Valid Password" library="Login_Page_Keywords">
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>${Pass}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20240222 12:33:39.163" endtime="20240222 12:33:39.193"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Pass}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20240222 12:33:39.193" level="INFO">Typing text 'HK_Auto@12345!' into text field '//*[@type='password']'.</msg>
+<status status="PASS" starttime="20240222 12:33:39.193" endtime="20240222 12:33:39.250"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Pass}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:33:39.364" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-2.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-2.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:33:39.250" endtime="20240222 12:33:39.364"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240222 12:33:41.364" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240222 12:33:39.364" endtime="20240222 12:33:41.364"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:39.163" endtime="20240222 12:33:41.364"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:39.163" endtime="20240222 12:33:41.364"/>
+</kw>
+<tag>Login Page</tag>
+<status status="PASS" starttime="20240222 12:33:39.163" endtime="20240222 12:33:41.364"/>
+</test>
+<test id="s1-t6" name="TC-004 - User should be able to click Login Button" line="45">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to click Login Button</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to click Login Button" library="Login_Page_Keywords">
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${LoginButton}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:33:41.459" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-3.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-3.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:33:41.364" endtime="20240222 12:33:41.459"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LoginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240222 12:33:41.460" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<status status="PASS" starttime="20240222 12:33:41.459" endtime="20240222 12:33:41.508"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240222 12:33:43.509" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240222 12:33:41.508" endtime="20240222 12:33:43.509"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:41.364" endtime="20240222 12:33:43.509"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:41.364" endtime="20240222 12:33:43.509"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>TC Sleep</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="TC Sleep" library="HK_S2_Bronze_Config">
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240222 12:33:53.512" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240222 12:33:43.509" endtime="20240222 12:33:53.512"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:43.509" endtime="20240222 12:33:53.512"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:43.509" endtime="20240222 12:33:53.512"/>
+</kw>
+<tag>Login Page</tag>
+<status status="PASS" starttime="20240222 12:33:41.364" endtime="20240222 12:33:53.512"/>
+</test>
+<test id="s1-t7" name="TC-005 - User should be able to filter product" line="50">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to view All Products Page in HK Retail Home Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to view All Products Page in HK Retail Home Page" library="Home_Page_Keywords">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${s2HKRetailAllProducts}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20240222 12:33:53.523" level="INFO">Opening url 'https://hkretail.coyzchwfjr-inchcaped2-s2-public.model-t.cc.commerce.ondemand.com/hkretail/c/0'</msg>
+<status status="PASS" starttime="20240222 12:33:53.523" endtime="20240222 12:33:54.266"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:53.512" endtime="20240222 12:33:54.266"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:53.512" endtime="20240222 12:33:54.266"/>
+</kw>
+<tag>All Products Page</tag>
+<status status="PASS" starttime="20240222 12:33:53.512" endtime="20240222 12:33:54.266"/>
+</test>
+<test id="s1-t8" name="TC-007 - User should be able to view shopping cart pop up modal" line="62">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to view shopping cart pop up modal</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to view shopping cart pop up modal" library="Home_Page_Keywords">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<arg>wait until element is visible</arg>
+<arg>${HomePageCartCountIcon}</arg>
+<arg>10</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HomePageCartCountIcon}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:33:54.268" endtime="20240222 12:33:56.712"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:54.268" endtime="20240222 12:33:56.712"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HomePageCartIcon}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:33:56.712" endtime="20240222 12:33:56.744"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${HomePageCartIcon}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240222 12:33:56.744" level="INFO">Clicking element '//dpp-mini-cart//cx-icon'.</msg>
+<status status="PASS" starttime="20240222 12:33:56.744" endtime="20240222 12:33:56.815"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ShopCartPopHeader}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:33:56.815" endtime="20240222 12:33:56.842"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${ShopCartPopContainer}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:33:57.085" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-4.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-4.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:33:56.842" endtime="20240222 12:33:57.085"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240222 12:33:59.086" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240222 12:33:57.086" endtime="20240222 12:33:59.086"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:54.268" endtime="20240222 12:33:59.086"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:54.268" endtime="20240222 12:33:59.086"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to click view cart button from shopping cart pop up modal</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to click view cart button from shopping cart pop up modal" library="Home_Page_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ShopCartPopCheckOutButton}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:33:59.086" endtime="20240222 12:33:59.099"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${ShopCartPopCheckOutButton}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:33:59.225" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-5.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-5.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:33:59.099" endtime="20240222 12:33:59.226"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ShopCartPopCheckOutButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240222 12:33:59.228" level="INFO">Clicking element '//div[@class='price-container']//button[contains(text(),'View cart &amp; checkout') or contains(text(),'查看購物車及結帳')]'.</msg>
+<status status="PASS" starttime="20240222 12:33:59.226" endtime="20240222 12:33:59.266"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240222 12:34:09.267" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240222 12:33:59.266" endtime="20240222 12:34:09.267"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:59.086" endtime="20240222 12:34:09.267"/>
+</kw>
+<status status="PASS" starttime="20240222 12:33:59.086" endtime="20240222 12:34:09.267"/>
+</kw>
+<tag>Shopping Cart Page</tag>
+<status status="PASS" starttime="20240222 12:33:54.267" endtime="20240222 12:34:09.267"/>
+</test>
+<test id="s1-t9" name="TC-007 - User should be able to view shopping cart in Retail Shopping Cart Page" line="67">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to view shopping cart in HK Retail Shopping Cart Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to view shopping cart in HK Retail Shopping Cart Page" library="Shopping_Cart_Page_Keywords">
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<var>${ShoppingCartPageStatus}</var>
+<arg>wait until element is visible</arg>
+<arg>${Retail_ShoppingCartPageItemList}</arg>
+<arg>10</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageItemList}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:09.267" endtime="20240222 12:34:09.281"/>
+</kw>
+<msg timestamp="20240222 12:34:09.281" level="INFO">${ShoppingCartPageStatus} = True</msg>
+<status status="PASS" starttime="20240222 12:34:09.267" endtime="20240222 12:34:09.281"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${ShoppingCartPageStatus}' == 'True'</arg>
+<arg>Shopping Cart with Items for HK</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Shopping Cart with Items for HK" library="Shopping_Cart_Page_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageHeader}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:09.281" endtime="20240222 12:34:09.297"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageDescriptionLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:09.297" endtime="20240222 12:34:09.297"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPagePriceLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:09.297" endtime="20240222 12:34:09.313"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageRRPLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:09.313" endtime="20240222 12:34:09.328"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageQtyLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:09.328" endtime="20240222 12:34:09.344"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageSaveCartButton}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:09.344" endtime="20240222 12:34:09.360"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageItemList}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:09.360" endtime="20240222 12:34:09.360"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageHeader}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:09.496" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-6.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-6.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:09.360" endtime="20240222 12:34:09.496"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageDescriptionLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:09.587" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-7.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-7.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:09.496" endtime="20240222 12:34:09.587"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPagePriceLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:09.681" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-8.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-8.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:09.588" endtime="20240222 12:34:09.681"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageRRPLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:09.767" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-9.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-9.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:09.681" endtime="20240222 12:34:09.767"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageQtyLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:09.872" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-10.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-10.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:09.767" endtime="20240222 12:34:09.872"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageSaveCartButton}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:09.962" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-11.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-11.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:09.872" endtime="20240222 12:34:09.962"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageItemList}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:10.069" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-12.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-12.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:09.962" endtime="20240222 12:34:10.069"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageOrderSummaryContainer}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:10.069" endtime="20240222 12:34:10.087"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageOrderSummaryHeader}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:10.088" endtime="20240222 12:34:10.101"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageOrderSummaryOrderTotalLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:10.102" endtime="20240222 12:34:10.109"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageOrderSummaryOrderTotalValueLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:10.109" endtime="20240222 12:34:10.124"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageOrderSummaryRRPTotalLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:10.124" endtime="20240222 12:34:10.140"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageOrderSummaryCheckoutButton}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:10.140" endtime="20240222 12:34:10.144"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageOrderSummaryContinueShoppingButton}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:10.144" endtime="20240222 12:34:10.156"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageOrderSummaryContainer}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:10.268" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-13.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-13.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:10.156" endtime="20240222 12:34:10.268"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageOrderSummaryHeader}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:10.363" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-14.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-14.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:10.268" endtime="20240222 12:34:10.363"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageOrderSummaryOrderTotalLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:10.461" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-15.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-15.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:10.363" endtime="20240222 12:34:10.461"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageOrderSummaryOrderTotalValueLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:10.554" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-16.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-16.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:10.462" endtime="20240222 12:34:10.555"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageOrderSummaryRRPTotalLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:10.658" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-17.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-17.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:10.555" endtime="20240222 12:34:10.658"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageOrderSummaryCheckoutButton}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:10.756" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-18.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-18.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:10.658" endtime="20240222 12:34:10.756"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageOrderSummaryContinueShoppingButton}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:10.855" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-19.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-19.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:10.757" endtime="20240222 12:34:10.855"/>
+</kw>
+<status status="PASS" starttime="20240222 12:34:09.281" endtime="20240222 12:34:10.855"/>
+</kw>
+<status status="PASS" starttime="20240222 12:34:09.281" endtime="20240222 12:34:10.855"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>'${ShoppingCartPageStatus}' == 'False'</arg>
+<arg>Empty Shopping Cart</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240222 12:34:10.855" endtime="20240222 12:34:10.856"/>
+</kw>
+<status status="PASS" starttime="20240222 12:34:09.267" endtime="20240222 12:34:10.856"/>
+</kw>
+<status status="PASS" starttime="20240222 12:34:09.267" endtime="20240222 12:34:10.856"/>
+</kw>
+<tag>Shopping Cart Page</tag>
+<status status="PASS" starttime="20240222 12:34:09.267" endtime="20240222 12:34:10.856"/>
+</test>
+<test id="s1-t10" name="TC-009 - User should be able to click checkout button in Retail Shopping Cart Page" line="71">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to click checkout button in Retail Shopping Cart Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to click checkout button in Retail Shopping Cart Page" library="Shopping_Cart_Page_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageOrderSummaryCheckoutButton}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:10.858" endtime="20240222 12:34:10.861"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageOrderSummaryCheckoutButton}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:10.946" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-20.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-20.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:10.861" endtime="20240222 12:34:10.946"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Retail_ShoppingCartPageOrderSummaryCheckoutButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240222 12:34:10.946" level="INFO">Clicking element '//div[@class='cart-total-container']//button[@class='btn btn-secondary w-100 mt-3 text-capitalize']'.</msg>
+<status status="PASS" starttime="20240222 12:34:10.946" endtime="20240222 12:34:10.979"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240222 12:34:12.979" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240222 12:34:10.979" endtime="20240222 12:34:12.979"/>
+</kw>
+<status status="PASS" starttime="20240222 12:34:10.858" endtime="20240222 12:34:12.979"/>
+</kw>
+<status status="PASS" starttime="20240222 12:34:10.858" endtime="20240222 12:34:12.979"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>TC Sleep</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="TC Sleep" library="HK_S2_Bronze_Config">
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240222 12:34:22.980" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240222 12:34:12.979" endtime="20240222 12:34:22.980"/>
+</kw>
+<status status="PASS" starttime="20240222 12:34:12.979" endtime="20240222 12:34:22.980"/>
+</kw>
+<status status="PASS" starttime="20240222 12:34:12.979" endtime="20240222 12:34:22.980"/>
+</kw>
+<tag>Shopping Cart Page</tag>
+<status status="PASS" starttime="20240222 12:34:10.857" endtime="20240222 12:34:22.980"/>
+</test>
+<test id="s1-t11" name="TC-010 - User should be able to view checkout in Retail Checkout Page" line="76">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>TC Sleep</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="TC Sleep" library="HK_S2_Bronze_Config">
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240222 12:34:32.981" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240222 12:34:22.980" endtime="20240222 12:34:32.981"/>
+</kw>
+<status status="PASS" starttime="20240222 12:34:22.980" endtime="20240222 12:34:32.981"/>
+</kw>
+<status status="PASS" starttime="20240222 12:34:22.980" endtime="20240222 12:34:32.981"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to view checkout in HK Retail Checkout Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to view checkout in HK Retail Checkout Page" library="Checkout_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_CheckoutPageHeader}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:32.981" endtime="20240222 12:34:32.991"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_CheckoutPageHeader}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:33.106" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-21.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-21.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:32.991" endtime="20240222 12:34:33.106"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPageReviewItemsContainer}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:33.106" endtime="20240222 12:34:33.124"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPageReviewItemsHeader}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:33.124" endtime="20240222 12:34:33.140"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPageReviewItemsDeliveryDate}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:33.140" endtime="20240222 12:34:33.154"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${DelData}</var>
+<arg>${Retail_HK_CheckoutPageReviewItemsDeliveryDate}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240222 12:34:33.168" level="INFO">${DelData} = Delivery: February 22, 2024</msg>
+<status status="PASS" starttime="20240222 12:34:33.154" endtime="20240222 12:34:33.168"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${RemoveStringDelDate}</var>
+<arg>${DelData}</arg>
+<arg>Delivery:</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20240222 12:34:33.169" level="INFO">${RemoveStringDelDate} =  February 22, 2024</msg>
+<status status="PASS" starttime="20240222 12:34:33.168" endtime="20240222 12:34:33.169"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${RemoveStringDelDate}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20240222 12:34:33.169" level="INFO"> February 22, 2024</msg>
+<status status="PASS" starttime="20240222 12:34:33.169" endtime="20240222 12:34:33.169"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPageReviewItemsList}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:33.169" endtime="20240222 12:34:33.174"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPageReviewItemsContainer}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:33.307" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-22.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-22.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:33.174" endtime="20240222 12:34:33.307"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPageReviewItemsHeader}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:33.403" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-23.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-23.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:33.307" endtime="20240222 12:34:33.403"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPageReviewItemsDeliveryDate}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:33.497" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-24.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-24.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:33.404" endtime="20240222 12:34:33.497"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPageReviewItemsDeliveryDate}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:33.591" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-25.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-25.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:33.497" endtime="20240222 12:34:33.591"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPageReviewItemsList}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:33.687" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-26.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-26.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:33.592" endtime="20240222 12:34:33.687"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_CheckoutPageCustomerDetailsOrderSummaryContainer}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:33.688" endtime="20240222 12:34:33.692"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_CheckoutPageCustomerDetailsOrderSummaryHeader}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:33.692" endtime="20240222 12:34:33.718"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_CheckoutPageCustomerDetailsOrderSummarySubTotalLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:33.718" endtime="20240222 12:34:33.732"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_CheckoutPageCustomerDetailsOrderSummarySubTotalValue}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:33.732" endtime="20240222 12:34:33.757"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryShippingFeeLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:33.757" endtime="20240222 12:34:33.772"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryShippingFeeValue}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:33.772" endtime="20240222 12:34:33.788"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_CheckoutPageCustomerDetailsOrderSummaryOrderTotalLabel}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:33.788" endtime="20240222 12:34:33.805"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_CheckoutPageCustomerDetailsOrderSummaryOrderTotalValue}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:33.805" endtime="20240222 12:34:33.805"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryContinuePaymentButton}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:33.805" endtime="20240222 12:34:33.820"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryBacktoCartButton}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:33.820" endtime="20240222 12:34:33.835"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_CheckoutPageCustomerDetailsOrderSummaryContainer}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:33.950" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-27.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-27.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:33.835" endtime="20240222 12:34:33.950"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_CheckoutPageCustomerDetailsOrderSummaryHeader}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:34.046" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-28.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-28.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:33.950" endtime="20240222 12:34:34.046"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_CheckoutPageCustomerDetailsOrderSummarySubTotalLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:34.140" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-29.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-29.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:34.046" endtime="20240222 12:34:34.141"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_CheckoutPageCustomerDetailsOrderSummarySubTotalValue}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:34.232" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-30.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-30.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:34.141" endtime="20240222 12:34:34.232"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryShippingFeeLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:34.328" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-31.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-31.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:34.233" endtime="20240222 12:34:34.328"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryShippingFeeValue}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:34.409" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-32.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-32.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:34.328" endtime="20240222 12:34:34.410"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_CheckoutPageCustomerDetailsOrderSummaryOrderTotalLabel}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:34.501" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-33.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-33.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:34.410" endtime="20240222 12:34:34.501"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_CheckoutPageCustomerDetailsOrderSummaryOrderTotalValue}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:34.604" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-34.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-34.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:34.501" endtime="20240222 12:34:34.605"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryContinuePaymentButton}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:34.709" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-35.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-35.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:34.606" endtime="20240222 12:34:34.710"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_CheckoutPageCustomerDetailsOrderSummaryBacktoCartButton}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:34.794" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-36.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-36.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:34.710" endtime="20240222 12:34:34.794"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${currentshippingfee}</var>
+<arg>${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryShippingFeeValue}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240222 12:34:34.806" level="INFO">${currentshippingfee} = $88.0</msg>
+<status status="PASS" starttime="20240222 12:34:34.795" endtime="20240222 12:34:34.806"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${currentshippingvalue}</var>
+<arg>${currentshippingfee}</arg>
+<arg>$</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20240222 12:34:34.806" level="INFO">${currentshippingvalue} = 88.0</msg>
+<status status="PASS" starttime="20240222 12:34:34.806" endtime="20240222 12:34:34.806"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${currentshippingvalue}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20240222 12:34:34.806" level="INFO">${currentshippingvalue} = 88.0</msg>
+<status status="PASS" starttime="20240222 12:34:34.806" endtime="20240222 12:34:34.806"/>
+</kw>
+<status status="PASS" starttime="20240222 12:34:32.981" endtime="20240222 12:34:34.806"/>
+</kw>
+<status status="PASS" starttime="20240222 12:34:32.981" endtime="20240222 12:34:34.806"/>
+</kw>
+<tag>Checkout Page</tag>
+<status status="PASS" starttime="20240222 12:34:22.980" endtime="20240222 12:34:34.806"/>
+</test>
+<test id="s1-t12" name="TC-010 - User should be able to view Promo Code in HK Retail Checkout Page" line="81">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>User should be able to view Promo Code in HK Retail Checkout Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="User should be able to view Promo Code in HK Retail Checkout Page" library="Checkout_Keywords">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPage_PromoCode_Container}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:34.808" endtime="20240222 12:34:34.808"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPage_PromoCode_Label}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:34.808" endtime="20240222 12:34:34.837"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPage_PromoCode_TextBox}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:34.837" endtime="20240222 12:34:34.858"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPage_PromoCode_Apply_Button}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240222 12:34:34.858" endtime="20240222 12:34:34.873"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPage_PromoCode_Container}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:34.980" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-37.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-37.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:34.873" endtime="20240222 12:34:34.980"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPage_PromoCode_Label}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:35.087" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-38.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-38.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:34.980" endtime="20240222 12:34:35.087"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPage_PromoCode_TextBox}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:35.186" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-39.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-39.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:35.087" endtime="20240222 12:34:35.186"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Retail_HK_CheckoutPage_PromoCode_Apply_Button}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240222 12:34:35.277" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-40.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_02-22-24%2012-33/selenium-element-screenshot-40.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240222 12:34:35.186" endtime="20240222 12:34:35.277"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240222 12:34:37.278" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20240222 12:34:35.277" endtime="20240222 12:34:37.278"/>
+</kw>
+<status status="PASS" starttime="20240222 12:34:34.808" endtime="20240222 12:34:37.278"/>
+</kw>
+<status status="PASS" starttime="20240222 12:34:34.807" endtime="20240222 12:34:37.278"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>TC Sleep</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="TC Sleep" library="HK_S2_Bronze_Config">
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240222 12:34:47.279" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240222 12:34:37.278" endtime="20240222 12:34:47.279"/>
+</kw>
+<status status="PASS" starttime="20240222 12:34:37.278" endtime="20240222 12:34:47.279"/>
+</kw>
+<status status="PASS" starttime="20240222 12:34:37.278" endtime="20240222 12:34:47.279"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Validate Promo Code</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Validate Promo Code" library="Checkout_Keywords">
+<kw name="Set Variable" library="BuiltIn">
+<var>${100DiscountMin}</var>
+<arg>2000</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240222 12:34:47.279" level="INFO">${100DiscountMin} = 2000</msg>
+<status status="PASS" starttime="20240222 12:34:47.279" endtime="20240222 12:34:47.279"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${100DiscountMax}</var>
+<arg>3999.9</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240222 12:34:47.279" level="INFO">${100DiscountMax} = 3999.9</msg>
+<status status="PASS" starttime="20240222 12:34:47.279" endtime="20240222 12:34:47.279"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${200DiscountMin}</var>
+<arg>4000</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240222 12:34:47.279" level="INFO">${200DiscountMin} = 4000</msg>
+<status status="PASS" starttime="20240222 12:34:47.279" endtime="20240222 12:34:47.279"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${200DiscountMax}</var>
+<arg>5999.9</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240222 12:34:47.279" level="INFO">${200DiscountMax} = 5999.9</msg>
+<status status="PASS" starttime="20240222 12:34:47.279" endtime="20240222 12:34:47.279"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${300DiscountMin}</var>
+<arg>6000</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240222 12:34:47.279" level="INFO">${300DiscountMin} = 6000</msg>
+<status status="PASS" starttime="20240222 12:34:47.279" endtime="20240222 12:34:47.279"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${SubtotalText}</var>
+<arg>${Retail_CheckoutPageCustomerDetailsOrderSummarySubTotalValue}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240222 12:34:47.293" level="INFO">${SubtotalText} = $2,952.9</msg>
+<status status="PASS" starttime="20240222 12:34:47.279" endtime="20240222 12:34:47.293"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${ShippingFeeText}</var>
+<arg>${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryShippingFeeValue}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240222 12:34:47.308" level="INFO">${ShippingFeeText} = $88.0</msg>
+<status status="PASS" starttime="20240222 12:34:47.293" endtime="20240222 12:34:47.308"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${DiscountText}</var>
+<arg>${Retail_HK_CheckoutPage_CustomerDetails_OrderSummary_Discounnt_Value}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240222 12:34:47.308" level="INFO">${DiscountText} = $100.0</msg>
+<status status="PASS" starttime="20240222 12:34:47.308" endtime="20240222 12:34:47.308"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${OrderTotalText}</var>
+<arg>${Retail_CheckoutPageCustomerDetailsOrderSummaryOrderTotalValue}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20240222 12:34:47.324" level="INFO">${OrderTotalText} = $2,940.9</msg>
+<status status="PASS" starttime="20240222 12:34:47.308" endtime="20240222 12:34:47.324"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${RemoveSubTotalString}</var>
+<arg>${SubtotalText}</arg>
+<arg>$</arg>
+<arg>,</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20240222 12:34:47.324" level="INFO">${RemoveSubTotalString} = 2952.9</msg>
+<status status="PASS" starttime="20240222 12:34:47.324" endtime="20240222 12:34:47.324"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${RemoveShippingString}</var>
+<arg>${ShippingFeeText}</arg>
+<arg>Free</arg>
+<arg>$</arg>
+<arg>,</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20240222 12:34:47.324" level="INFO">${RemoveShippingString} = 88.0</msg>
+<status status="PASS" starttime="20240222 12:34:47.324" endtime="20240222 12:34:47.324"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${RemoveDiscountString}</var>
+<arg>${DiscountText}</arg>
+<arg>$</arg>
+<arg>,</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20240222 12:34:47.324" level="INFO">${RemoveDiscountString} = 100.0</msg>
+<status status="PASS" starttime="20240222 12:34:47.324" endtime="20240222 12:34:47.324"/>
+</kw>
+<kw name="Remove String" library="String">
+<var>${RemoveOrderTotalString}</var>
+<arg>${OrderTotalText}</arg>
+<arg>$</arg>
+<arg>,</arg>
+<doc>Removes all ``removables`` from the given ``string``.</doc>
+<msg timestamp="20240222 12:34:47.324" level="INFO">${RemoveOrderTotalString} = 2940.9</msg>
+<status status="PASS" starttime="20240222 12:34:47.324" endtime="20240222 12:34:47.324"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${SubTotal}</var>
+<arg>${RemoveSubTotalString}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20240222 12:34:47.324" level="INFO">${SubTotal} = 2952.9</msg>
+<status status="PASS" starttime="20240222 12:34:47.324" endtime="20240222 12:34:47.324"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${Shipping}</var>
+<arg>${RemoveShippingString}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20240222 12:34:47.324" level="INFO">${Shipping} = 88.0</msg>
+<status status="PASS" starttime="20240222 12:34:47.324" endtime="20240222 12:34:47.324"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${Discount}</var>
+<arg>${RemoveDiscountString}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20240222 12:34:47.324" level="INFO">${Discount} = 100.0</msg>
+<status status="PASS" starttime="20240222 12:34:47.324" endtime="20240222 12:34:47.324"/>
+</kw>
+<kw name="Convert To Number" library="BuiltIn">
+<var>${OrderTotal}</var>
+<arg>${RemoveOrderTotalString}</arg>
+<doc>Converts the given item to a floating point number.</doc>
+<msg timestamp="20240222 12:34:47.324" level="INFO">${OrderTotal} = 2940.9</msg>
+<status status="PASS" starttime="20240222 12:34:47.324" endtime="20240222 12:34:47.324"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${SubTotalPrice}</var>
+<arg>${RemoveSubTotalString}+${RemoveShippingString}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240222 12:34:47.336" level="INFO">${SubTotalPrice} = 3040.9</msg>
+<status status="PASS" starttime="20240222 12:34:47.324" endtime="20240222 12:34:47.336"/>
+</kw>
+<kw name="Evaluate" library="BuiltIn">
+<var>${OrderTotalPrice}</var>
+<arg>${SubTotalPrice}-${RemoveDiscountString}</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<msg timestamp="20240222 12:34:47.336" level="INFO">${OrderTotalPrice} = 2940.9</msg>
+<status status="PASS" starttime="20240222 12:34:47.336" endtime="20240222 12:34:47.336"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>should be equal</arg>
+<arg>${OrderTotal}</arg>
+<arg>${OrderTotalPrice}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${OrderTotal}</arg>
+<arg>${OrderTotalPrice}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20240222 12:34:47.336" endtime="20240222 12:34:47.336"/>
+</kw>
+<status status="PASS" starttime="20240222 12:34:47.336" endtime="20240222 12:34:47.336"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${RemoveSubTotalString} &gt; ${100DiscountMin} and ${RemoveSubTotalString} &lt; ${100DiscountMax}</arg>
+<arg>Set Discount to 100</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Set Discount to 100" library="Checkout_Keywords">
+<kw name="Set Variable" library="BuiltIn">
+<var>${DiscountValue}</var>
+<arg>${100}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20240222 12:34:47.336" level="INFO">${DiscountValue} = 100.0</msg>
+<status status="PASS" starttime="20240222 12:34:47.336" endtime="20240222 12:34:47.336"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${DiscountValue}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20240222 12:34:47.336" level="INFO">${DiscountValue} = 100.0</msg>
+<status status="PASS" starttime="20240222 12:34:47.336" endtime="20240222 12:34:47.336"/>
+</kw>
+<status status="PASS" starttime="20240222 12:34:47.336" endtime="20240222 12:34:47.336"/>
+</kw>
+<status status="PASS" starttime="20240222 12:34:47.336" endtime="20240222 12:34:47.336"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${RemoveSubTotalString} &gt; ${200DiscountMin} and ${RemoveSubTotalString} &lt; ${200DiscountMax}</arg>
+<arg>Set Discount to 200</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240222 12:34:47.336" endtime="20240222 12:34:47.336"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<arg>${RemoveSubTotalString} &gt; ${300DiscountMin}</arg>
+<arg>Set Discount to 300</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" starttime="20240222 12:34:47.336" endtime="20240222 12:34:47.336"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>should be equal</arg>
+<arg>${DiscountValue}</arg>
+<arg>${RemoveDiscountString}</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Should Be Equal" library="BuiltIn">
+<arg>${DiscountValue}</arg>
+<arg>${RemoveDiscountString}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" starttime="20240222 12:34:47.336" endtime="20240222 12:34:47.336"/>
+</kw>
+<status status="PASS" starttime="20240222 12:34:47.336" endtime="20240222 12:34:47.336"/>
+</kw>
+<status status="PASS" starttime="20240222 12:34:47.279" endtime="20240222 12:34:47.336"/>
+</kw>
+<status status="PASS" starttime="20240222 12:34:47.279" endtime="20240222 12:34:47.336"/>
+</kw>
+<tag>Checkout Page</tag>
+<status status="PASS" starttime="20240222 12:34:34.807" endtime="20240222 12:34:47.336"/>
+</test>
+<doc>Suite description</doc>
+<status status="PASS" starttime="20240222 12:33:19.205" endtime="20240222 12:34:47.336"/>
+</suite>
+<statistics>
+<total>
+<stat pass="12" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">All Products Page</stat>
+<stat pass="2" fail="0" skip="0">Checkout Page</stat>
+<stat pass="4" fail="0" skip="0">Login Page</stat>
+<stat pass="3" fail="0" skip="0">Shopping Cart Page</stat>
+<stat pass="1" fail="0" skip="0">TC001</stat>
+</tag>
+<suite>
+<stat pass="12" fail="0" skip="0" id="s1" name="Test Retail Smoke1">Test Retail Smoke1</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240222 12:33:19.518" level="ERROR">Error in file 'C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testdata\Retail\Retail_Variable.robot' on line 2198: Setting variable '//tbody//tbody//tr//td//a//font[contains(text(),'Contact Us')]' failed: Invalid variable name '//tbody//tbody//tr//td//a//font[contains(text(),'Contact Us')]'.</msg>
+<msg timestamp="20240222 12:33:19.518" level="ERROR">Error in file 'C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testdata\Retail\Retail_Variable.robot' on line 4: Resource file '..\..\..\Resource\testdata\Retail\AU_Config\AU_S2_Config.robot' does not exist.</msg>
+<msg timestamp="20240222 12:33:19.582" level="ERROR">Error in file 'C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\Keyword\Retail\Account_Orders_Page_Keywords.robot' on line 543: Creating keyword 'User should be able to click orders with $129.0 spent in HK Retail Account Order Details Page' failed: Keyword with same name defined multiple times.</msg>
+<msg timestamp="20240222 12:33:20.021" level="ERROR">Error in file 'C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testdata\Retail\Retail_Variable.robot' on line 432: Setting variable '${Retail_FilterListSubElements}' failed: Variable '${RandomFilterIndex}' not found.</msg>
+</errors>
+</robot>

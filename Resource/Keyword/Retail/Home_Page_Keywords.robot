@@ -639,13 +639,123 @@ User should be able to click search again in Pop up Vehicle Search in HK Retail 
     click element    ${Retail_HK_HomePage_SearchVIN_PopUp_Search_Button}
     sleep    2
 
+User should be able to view double header in Retail Home page
+    wait until element is visible    ${HomePage_DoubleHeader}    10
+    wait until element is visible    ${HomePage_DoubleHeader_SellerName}    10
+    wait until element is visible    ${HomePage_DoubleHeader_MyAccount_Button}    10
+    wait until element is visible    ${HomePage_DoubleHeader_MyAccount_Button}    10
 
+    capture element screenshot    ${HomePage_DoubleHeader}
+    capture element screenshot    ${HomePage_DoubleHeader_SellerName}
+    capture element screenshot    ${HomePage_DoubleHeader_MyAccount_Button}
+    capture element screenshot    ${HomePage_DoubleHeader_MyAccount_Button}
 
+    sleep    2
 
+User should be able to access Account page using double header in Retail Home page
+    wait until element is visible    ${HomePage_DoubleHeader_MyAccount_Button}    10
+    click element    ${HomePage_DoubleHeader_MyAccount_Button}
+    sleep    5
+    capture page screenshot
+    sleep    2
 
+User should be able to access Order page using double header in Retail Homepage
+    wait until element is visible    ${HomePage_DoubleHeader_DropDown_Button}    10
+    click element    ${HomePage_DoubleHeader_DropDown_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_Order_Button}    10
+    capture element screenshot    ${HomePage_DoubleHeader_Menu_Order_Button}
+    click element    ${HomePage_DoubleHeader_Menu_Order_Button}
+    sleep    5
+    capture page screenshot
+    sleep    2
 
+User should be able to access Retrun page using double header in Retail Homepage
+    wait until element is visible    ${HomePage_DoubleHeader_DropDown_Button}    10
+    click element    ${HomePage_DoubleHeader_DropDown_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_ReturnRequest_Button}    10
+    capture element screenshot    ${HomePage_DoubleHeader_Menu_ReturnRequest_Button}
+    click element    ${HomePage_DoubleHeader_Menu_ReturnRequest_Button}
+    sleep    5
+    capture page screenshot
+    sleep    2
 
+User should be able to access Save carts page using double header in Retail Homepage
+    wait until element is visible    ${HomePage_DoubleHeader_DropDown_Button}    10
+    click element    ${HomePage_DoubleHeader_DropDown_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_SavedCarts_Button}    10
+    capture element screenshot    ${HomePage_DoubleHeader_Menu_SavedCarts_Button}
+    click element    ${HomePage_DoubleHeader_Menu_SavedCarts_Button}
+    sleep    5
+    capture page screenshot
+    sleep    2
 
+User should be able to access Vehicle Listing page using double header in Retail Homepage
+    wait until element is visible    ${HomePage_DoubleHeader_DropDown_Button}    10
+    click element    ${HomePage_DoubleHeader_DropDown_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_VehicleListing_Button}    10
+    capture element screenshot    ${HomePage_DoubleHeader_Menu_VehicleListing_Button}
+    click element    ${HomePage_DoubleHeader_Menu_VehicleListing_Button}
+    sleep    5
+    capture page screenshot
+    sleep    2
+
+User should be able to access Inbox page using double header in Retail Homepage
+    wait until element is visible    ${HomePage_DoubleHeader_DropDown_Button}    10
+    click element    ${HomePage_DoubleHeader_DropDown_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_Inbox_Button}    10
+    capture element screenshot    ${HomePage_DoubleHeader_Menu_Inbox_Button}
+    click element    ${HomePage_DoubleHeader_Menu_Inbox_Button}
+    sleep    5
+    capture page screenshot
+    sleep    2
+
+User should be able to access Account Details page using double header in Retail Homepage
+    wait until element is visible    ${HomePage_DoubleHeader_DropDown_Button}    10
+    click element    ${HomePage_DoubleHeader_DropDown_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_Profile_Button}    10
+    click element    ${HomePage_DoubleHeader_Menu_Profile_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_Profile_AccountDetails_Button}    10
+    capture element screenshot    ${HomePage_DoubleHeader_Menu_Profile_AccountDetails_Button}
+    click element    ${HomePage_DoubleHeader_Menu_Profile_AccountDetails_Button}
+    sleep    5
+    capture page screenshot
+    sleep    2
+
+User should be able to access Change Pass page using double header in Retail Homepage
+    wait until element is visible    ${HomePage_DoubleHeader_DropDown_Button}    10
+    click element    ${HomePage_DoubleHeader_DropDown_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_Profile_Button}    10
+    click element    ${HomePage_DoubleHeader_Menu_Profile_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_Profile_ChangePassword_Button}    10
+    capture element screenshot    ${HomePage_DoubleHeader_Menu_Profile_ChangePassword_Button}
+    click element    ${HomePage_DoubleHeader_Menu_Profile_ChangePassword_Button}
+    sleep    5
+    capture page screenshot
+    sleep    2
+
+User should be able to access Company Details page using double header in Retail Homepage
+    wait until element is visible    ${HomePage_DoubleHeader_DropDown_Button}    10
+    click element    ${HomePage_DoubleHeader_DropDown_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_Company_Button}    10
+    click element    ${HomePage_DoubleHeader_Menu_Company_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_Company_CompanyDetails_Button}    10
+    capture element screenshot    ${HomePage_DoubleHeader_Menu_Company_CompanyDetails_Button}
+    click element    ${HomePage_DoubleHeader_Menu_Company_CompanyDetails_Button}
+    sleep    5
+    capture page screenshot
+    sleep    2
+
+User should be able to access Relationship page using double header in Retail Homepage
+    wait until element is visible    ${HomePage_DoubleHeader_DropDown_Button}    10
+    click element    ${HomePage_DoubleHeader_DropDown_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_Company_Button}    10
+    click element    ${HomePage_DoubleHeader_Menu_Company_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_Company_Relationship_Button}    10
+    capture element screenshot    ${HomePage_DoubleHeader_Menu_Company_Relationship_Button}
+    click element    ${HomePage_DoubleHeader_Menu_Company_Relationship_Button}
+    sleep    5
+    capture page screenshot
+    sleep    2
 
 
 
