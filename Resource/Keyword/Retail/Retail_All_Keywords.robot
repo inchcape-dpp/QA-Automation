@@ -95,6 +95,20 @@ User should be able to input Landline Number for HK Registration Form
 #-----------------------------------------------------Retail Home Page-------------------------------------------------
 Admin User should be able to Login
 User should be able to view home page
+
+User should be able to view double header in Retail Home page
+User should be able to access Account page using double header in Retail Home page
+User should be able to access Order page using double header in Retail Homepage
+User should be able to access Retrun page using double header in Retail Homepage
+User should be able to access Save carts page using double header in Retail Homepage
+User should be able to access Vehicle Listing page using double header in Retail Homepage
+User should be able to access Inbox page using double header in Retail Homepage
+User should be able to access Account Details page using double header in Retail Homepage
+User should be able to access Change Pass page using double header in Retail Homepage
+User should be able to access Company Details page using double header in Retail Homepage
+User should be able to access Relationship page using double header in Retail Homepage
+
+
 User should be able to view All products
 User should be able to view shopping cart pop up modal
 User should be able to close shopping cart pop up modal

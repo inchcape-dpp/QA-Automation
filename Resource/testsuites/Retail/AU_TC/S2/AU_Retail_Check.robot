@@ -5,7 +5,7 @@ Library  SeleniumLibrary
 Library    Process
 #Library  FakerLibrary
 
-Resource  ../../../../../Resource/testdata/Retail/AU_Config/S2_Config.robot
+Resource  ../../../../../Resource/testdata/Retail/AU_Config/S2/AU_S2_Config.robot
 Resource  ../../../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../../../Resource/testdata/Retail/Retail_Resource.robot
 
@@ -41,7 +41,7 @@ TC-006 - Admin User should be able to Login
 
 TC-007 - User should be able to view account orders page
     [Tags]    TC011    Account Page    Order Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account orders page
 
 TC-008 - User should be able to select one order from the list
@@ -55,7 +55,7 @@ TC-009 - User should be able to view order details
 
 TC-010 - User should be able to view account return request page
     [Tags]    TC015    Account Page    Return Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account return request page
 
 TC-011 - User should be able to view Return Request Panel
@@ -73,7 +73,7 @@ TC-013 - User should be able to view Return details
 
 TC-014 - User should be able to view account saved carts page
     [Tags]    TC018    Account Page    Saved Cart Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account saved carts page
 
 TC-015 - User should be able to view Saved Carts Panel
@@ -82,7 +82,7 @@ TC-015 - User should be able to view Saved Carts Panel
 
 TC-016 - User should be able to view account vehicle listing page
     [Tags]    TC020    Account Page    Vehicle Listing Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account vehicle listing page
 
 TC-017 - User should be able to view vehicle listing Panel
@@ -91,27 +91,27 @@ TC-017 - User should be able to view vehicle listing Panel
 
 TC-018 - User should be able to view message page
     [Tags]    TC022    Account Page    Messages Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view message page
 
 TC-019 - User should be able to view account details page
     [Tags]    TC023    Account Page    Account Details Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account details page
 
 TC-020 - User should be able to view change password page
     [Tags]    TC024    Account Page    Change Pass Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view change password page
 
 TC-021 - User should be able to view company details page
     [Tags]    TC025    Account Page    Company Details Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view company details page
 
 #TC-022 - User should be able to view staff page
 #    [Tags]    TC026    Account Page    Staff Page
-#    run keyword and continue on failure    User should be able to access account from top navigaton
+#    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
 #    run keyword and continue on failure    User should be able to view staff page
 
 TC-023 - User should be able to view All Parts Page

@@ -4,13 +4,13 @@ Documentation    Suite description
 Library  SeleniumLibrary
 Library    Process
 
-Resource  ../../../../../Resource/testdata/Retail/HK_Config/S1_Config.robot
+Resource  ../../../../../Resource/testdata/Retail/HK_Config/S1/HK_S1_Bronze_Config.robot
 Resource  ../../../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../../../Resource/testdata/Retail/Retail_Resource.robot
 
 *** Test Cases ***
-Test Setup  Run Keywords   Open Chrome Browser
-Screen Shot DIR  Run Keywords    Retail Screent Shot DIR
+Test Setup  Run Keywords   Open Chrome Browser HK
+Screen Shot DIR  Run Keywords    Retail Screent Shot DIR HK
 
 TC-001 - Verify Login Page
     [Tags]    TC001    Login Page

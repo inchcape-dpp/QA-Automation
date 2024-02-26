@@ -5,13 +5,13 @@ Library  SeleniumLibrary
 Library    Process
 #Library  FakerLibrary
 
-Resource  ../../../../../Resource/testdata/Retail/HK_Config/S2_Config.robot
+Resource  ../../../../../Resource/testdata/Retail/HK_Config/S2/HK_S2_Gold_Config.robot
 Resource  ../../../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../../../Resource/testdata/Retail/Retail_Resource.robot
 
 *** Test Cases ***
-Test Setup  Run Keywords   Open Chrome Browser
-Screen Shot DIR  Run Keywords    Retail Screent Shot DIR
+Test Setup  Run Keywords   Open Chrome Browser HK
+Screen Shot DIR  Run Keywords    Retail Screent Shot DIR HK
 
 TC-001 - Verify Login Page
     [Tags]    TC001    Login Page
@@ -47,7 +47,7 @@ TC-007 - User should be able to process Re-Order in Retail Account Order Details
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to view shopping cart pop up modal
     run keyword and continue on failure    User should be albe to delete all items from shopping cart pop up modal
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account orders page
     run keyword and continue on failure    User should be able to click orders with $129.0 spent in HK Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click Re-Order button in Retail Account Order Details Page
@@ -109,7 +109,7 @@ TC-017 - User should be able to process Re-Order in Retail Account Order Details
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to view shopping cart pop up modal
     run keyword and continue on failure    User should be albe to delete all items from shopping cart pop up modal
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account orders page
     run keyword and continue on failure    User should be able to click orders with $129.0 spent in HK Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click Re-Order button in Retail Account Order Details Page

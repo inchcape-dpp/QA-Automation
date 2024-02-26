@@ -72,7 +72,6 @@ User should be able to view top navigation in HK Dealer Home Page
     wait until element is visible    ${HomepageReturn}    10
     wait until element is visible    ${HomepageMessage}    10
 
-    capture element screenshot    ${HomepageLogo}
     capture element screenshot    ${HomepageUserAccount}
     capture element screenshot    ${HomepageOrders}
     capture element screenshot    ${HomepageReturn}

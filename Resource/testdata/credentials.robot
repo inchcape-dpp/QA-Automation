@@ -254,8 +254,6 @@ ${HK_P1_Automation_Bronze_PWD}    HK_Auto@12345!
 ${HK_P1_Automation_Gold_UID}    hk_automation1retailp1_gold@yopmail.com
 ${HK_P1_Automation_Gold_PWD}    HK_Auto@12345!
 
-
-
                                                                         #------------------------Inboxes----------------
 ${HK_D1_Automation_Bronze_UID}    hk_automation1retaild1_bronze@robot-mail.com
 ${HK_D1_Automation_Bronze_PWD}    HK_Auto@12345!
