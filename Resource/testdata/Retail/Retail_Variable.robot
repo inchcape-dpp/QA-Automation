@@ -269,6 +269,37 @@ ${HomePage_DoubleHeader_Menu_Company_Relationship_Button}    //div[@class='menu-
 ${HomePage_DoubleHeader_Menu_Logout_Button}    //div[@class='menu-content']//div[@class='menu-content__logout']
 
 
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Container}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_VIN_Value}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div//span[@class='vin-value']
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Model}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-header']
+
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ModelCode_Label}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[contains(text(),'Model Code') or contains(text(),'型號代碼')]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ModelCode_Value}    (//dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[1]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Transmission_Label}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[contains(text(),'Transmission') or contains(text(),'傳染')]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Transmission_Value}    (//dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[2]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Period_Label}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[contains(text(),'Period') or contains(text(),'時期')]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Period_Value}    (//dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[3]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Engine_Label}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[contains(text(),'Engine') or contains(text(),'引擎')]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Engine_Value}    (//dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[4]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ProductionDate_Label}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[contains(text(),'Production Date') or contains(text(),'生產日期')]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ProductionDate_Value}    (//dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[5]
+
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_ShowMore_button}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='show-more-details']//span[contains(text(),'顯示更多詳情') or contains(text(),'Show More Details')]
+
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Body_Label}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[contains(text(),'Body') or contains(text(),'身體')]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Body_Value}    (//dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[6]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Doors_Label}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[contains(text(),'Doors #') or contains(text(),'門 ＃')]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Doors_Value}    (//dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[7]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_SeatingCapacity_Label}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[contains(text(),'Seating Capacity') or contains(text(),'座位數')]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_SeatingCapacity_Value}    (//dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[8]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Grade_Label}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[contains(text(),'Grade') or contains(text(),'年級')]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Grade_Value}    (//dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[9]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Driverosition_Label}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[contains(text(),'Driver's Position') or contains(text(),'駕駛員位置')]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Driverosition_Value}    (//dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[10]
+
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SaveShop_button}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//button[@class='btn btn-primary btn-sm btn-block p-1 select-this-vehicle-btn vehicleListing-btn']
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_ShopThisVehicle_button}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//button[@class='btn btn-default btn-sm btn-block p-1 select-this-vehicle-btn']
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SearchAgain_button}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//button[@class='btn btn-block btn-default vehicleListing-btn-sm']
 
 
 ${HomePageMessageIcon}    //dpp-message-notification//cx-icon
@@ -1487,6 +1518,40 @@ ${Retail_HK_AccountVehicleListingPage_Container}    //dpp-hk-vehicle-listing//di
 ${Retail_HK_AccountVehicleListingPage_Add New Vehicle_Button}    //dpp-hk-vehicle-listing//div[@class='header-container d-flex align-items-center justify-content-between']//button
 ${Retail_HK_AccountVehicleListingPage_VehicleCard_List}    //dpp-hk-vehicle-listing//div[@class='row px-0 px-md-2']//div[@class='col-12 col-md-6 col-lg-4 align-self-lg-center card-content selected' or @class='col-12 col-md-6 col-lg-4 align-self-lg-center card-content']
 
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Container}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_VIN_Value}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div//span[@class='vin-value']
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Model}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-header']
+
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_ModelCode_Label}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[contains(text(),'Model Code') or contains(text(),'型號代碼')]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_ModelCode_Value}    (//dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[1]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Transmission_Label}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[contains(text(),'Transmission') or contains(text(),'傳染')]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Transmission_Value}    (//dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[2]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Period_Label}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[contains(text(),'Period') or contains(text(),'時期')]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Period_Value}    (//dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[3]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Engine_Label}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[contains(text(),'Engine') or contains(text(),'引擎')]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Engine_Value}    (//dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[4]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_ProductionDate_Label}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[contains(text(),'Production Date') or contains(text(),'生產日期')]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_ProductionDate_Value}    (//dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[5]
+
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_ShowMore_button}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='show-more-details']//span[contains(text(),'顯示更多詳情') or contains(text(),'Show More Details')]
+
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Body_Label}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[contains(text(),'Body') or contains(text(),'身體')]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Body_Value}    (//dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[6]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Doors_Label}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[contains(text(),'Doors #') or contains(text(),'門 ＃')]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Doors_Value}    (//dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[7]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_SeatingCapacity_Label}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[contains(text(),'Seating Capacity') or contains(text(),'座位數')]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_SeatingCapacity_Value}    (//dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[8]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Grade_Label}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[contains(text(),'Grade') or contains(text(),'年級')]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Grade_Value}    (//dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[9]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Driverosition_Label}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[contains(text(),'Driver's Position') or contains(text(),'駕駛員位置')]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Driverosition_Value}    (//dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[10]
+
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_SaveShop_button}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//button[@class='btn btn-primary btn-sm btn-block p-1 select-this-vehicle-btn vehicleListing-btn']
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_ShopThisVehicle_button}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//button[@class='btn btn-default btn-sm btn-block p-1 select-this-vehicle-btn']
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_SearchAgain_button}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//button[@class='btn btn-block btn-default vehicleListing-btn-sm']
+
+
+
 
 
 #-----------------------------------------------------Retail Account Vehicle Listing Page
@@ -2135,6 +2200,225 @@ ${ProductDeatilsPageProductYourPriceToggleDisabled}    //div[@class='custom-cont
 ${ProductDeatilsPageProductGSTToggleDisabled}    //div[@class='ml-5 custom-control custom-switch']|//div[@class='custom-control custom-switch custom-switch--ml'][.//input[@disabled]]
 
 
+#-----------------------------------------------------EPC Page----------------------------------------------------------
+#-----------------------------------------------------EPC Page L1
+${Retail_HK_EPC_L1_Container}    //cx-page-layout[@class='EPCLevel1PageTemplate']
+${Retail_HK_EPC_L1_ElectronicParts_Container}    //cx-page-slot[@class='Section2A has-components']
+${Retail_HK_EPC_L1_ElectronicParts_Cards_Container}    //cx-page-slot[@class='Section2A has-components']//div[@class='epc-cards row m-0']
+${Retail_HK_EPC_L1_ElectronicParts_Cards_Header}    //cx-page-slot[@class='Section2A has-components']//div[@class='epc-title mb-3']
+
+${Retail_HK_EPC_L1_ElectronicParts_Cards_EngineFuelSystem}    //cx-page-slot[@class='Section2A has-components']//div[@class='epc-cards row m-0']//div[@class='epc-card-title pt-3 text-center' and contains(text(),'Engine, fuel system, and tools')]//parent::div[@class='epc-card d-flex flex-column justify-content-start align-items-center']
+${Retail_HK_EPC_L1_ElectronicParts_Cards_TransmissionChasis}    //cx-page-slot[@class='Section2A has-components']//div[@class='epc-cards row m-0']//div[@class='epc-card-title pt-3 text-center' and contains(text(),'Transmission and chassis')]//parent::div[@class='epc-card d-flex flex-column justify-content-start align-items-center']
+${Retail_HK_EPC_L1_ElectronicParts_Cards_BodyInterior}    //cx-page-slot[@class='Section2A has-components']//div[@class='epc-cards row m-0']//div[@class='epc-card-title pt-3 text-center' and contains(text(),'Body and interior')]//parent::div[@class='epc-card d-flex flex-column justify-content-start align-items-center']
+${Retail_HK_EPC_L1_ElectronicParts_Cards_Electrics}    //cx-page-slot[@class='Section2A has-components']//div[@class='epc-cards row m-0']//div[@class='epc-card-title pt-3 text-center' and contains(text(),'Electrics')]//parent::div[@class='epc-card d-flex flex-column justify-content-start align-items-center']
+
+${Retail_HK_EPC_L1_MaintenanceParts_Container}    //cx-page-slot[@class='Section2B has-components']
+${Retail_HK_EPC_L1_MaintenanceParts_Card_Container}    //cx-page-slot[@class='Section2B has-components']//div[@class='top-sellers d-flex flex-column align-items-center justify-content-between']
+${Retail_HK_EPC_L1_MaintenanceParts_Header}    //cx-page-slot[@class='Section2B has-components']//div[@class='maintenance-parts-title mb-4 mt-3 mt-md-0']
+${Retail_HK_EPC_L1_MaintenanceParts_Card_ShopNow_Button}    //cx-page-slot[@class='Section2B has-components']//div[@class='top-sellers d-flex flex-column align-items-center justify-content-between']//button
+
+
+
+#-----------------------------------------------------EPC Page L2
+${Retail_HK_EPC_L2_SelectedCar_Container}    //div[@class='epc-selected-car-container']
+${Retail_HK_EPC_L2_SelectedCar_Header_Label}    //div[@class='epc-selected-car-container']//div[@class='col-12 d-flex']
+${Retail_HK_EPC_L2_SelectedCar_CarModel_Label}    //div[@class='epc-selected-car-container']//div[@class='row pt-2']
+${Retail_HK_EPC_L2_SelectedCar_CarModelCode_Value}    (//div[@class='epc-selected-car-container']//div[@class='col-2']//span[@class='car-detail'])[1]
+${Retail_HK_EPC_L2_SelectedCar_CarModelCode_Label}    (//div[@class='epc-selected-car-container']//div[@class='col-2']//span[@class='car-label'])[1]
+${Retail_HK_EPC_L2_SelectedCar_CarEngine_Value}    (//div[@class='epc-selected-car-container']//div[@class='col-2']//span[@class='car-detail'])[2]
+${Retail_HK_EPC_L2_SelectedCar_CarEngine_Label}    (//div[@class='epc-selected-car-container']//div[@class='col-2']//span[@class='car-label'])[2]
+${Retail_HK_EPC_L2_SelectedCar_CarYear_Value}     //div[@class='epc-selected-car-container']//div[@class='col-1']//span[@class='car-detail']
+${Retail_HK_EPC_L2_SelectedCar_CarYear_Label}    //div[@class='epc-selected-car-container']//div[@class='col-1']//span[@class='car-label']
+${Retail_HK_EPC_L2_SelectedCar_CarTransmission_Value}    //div[@class='epc-selected-car-container']//div[@class='col-3']//span[@class='car-detail']
+${Retail_HK_EPC_L2_SelectedCar_CarTransmission_Label}    //div[@class='epc-selected-car-container']//div[@class='col-3']//span[@class='car-label']
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Button}    //div[@class='epc-selected-car-container']//button
+${Retail_HK_EPC_L2_SelectedCar_ChangeCar_Button}    //div[@class='epc-selected-car-container']//div[@class='row pt-1']
+
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Container}    //div[@class='cx-modal-content']
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Header}    //div[@class='cx-modal-content']//div[@class='cx-dialog-header d-flex justify-content-between flex-column']
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Close_Button}     //div[@class='cx-modal-content']//cx-icon
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Body_Label}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][1]//span[1]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Body_Value}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][1]//span[2]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_ProdDate_Label}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][2]//span[1]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_ProdDate_Value}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][2]//span[2]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Year_Label}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][3]//span[1]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Year_Value}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][3]//span[2]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Doors_Label}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][4]//span[1]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Doors_Value}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][4]//span[2]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Seating_Label}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][5]//span[1]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Seating_Value}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][5]//span[2]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Grade_Label}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][6]//span[1]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Grade_Value}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][6]//span[2]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_DriverPos_Label}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][7]//span[1]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_DriverPos_Value}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][7]//span[2]
+
+${Retail_HK_EPC_L2_PartsGroup_Header}    //dpp-epc-parts-group-facet-navigation//div[@class='epc-parts-group-title']
+${Retail_HK_EPC_L2_PartsGroup_EngingFuelSystem_Button}    //dpp-epc-parts-group-facet-navigation//a[@class='col-12 p-0 my-1' and contains(text(),' Engine, fuel system, and tools')]
+${Retail_HK_EPC_L2_PartsGroup_TransmissionChasis_Button}    //dpp-epc-parts-group-facet-navigation//a[@class='col-12 p-0 my-1' and contains(text(),'Transmission and chassis')]
+${Retail_HK_EPC_L2_PartsGroup_BodyInterior_Button}    //dpp-epc-parts-group-facet-navigation//a[@class='col-12 p-0 my-1' and contains(text(),'Body and interior')]
+${Retail_HK_EPC_L2_PartsGroup_Electrics_Button}    //dpp-epc-parts-group-facet-navigation//a[@class='col-12 p-0 my-1' and contains(text(),'Electrics')]
+${Retail_HK_EPC_L2_PartsGroup_All_Button}    //dpp-epc-parts-group-facet-navigation//a[@class='col-12 p-0 my-1' and contains(text(),'All')]
+
+${Retail_HK_EPC_L2_SearchBar_TextBox}    //dpp-input-search//input
+
+#-----------------------------------------------------EPC Page L2 Engine, fuel system, and tools
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_Header}    //dpp-epc-parts-schema-list//div[@class='epc-schema-header pb-4 row m-0']//span
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList}    (//dpp-epc-parts-schema-list//div[@class='epc-schema-card col-12 col-md-3 my-2 mx-0 px-2'])
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_StandardTool}    //dpp-epc-parts-schema-list//div[contains(text(),'STANDARD TOOL')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_PartialEngineAssembly}    //dpp-epc-parts-schema-list//div[contains(text(),'PARTIAL ENGINE ASSEMBLY')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ShortBlockAssembly}    //dpp-epc-parts-schema-list//div[contains(text(),'SHORT BLOCK ASSEMBLY')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOverhaulGasketKit}    //dpp-epc-parts-schema-list//div[contains(text(),'ENGINE OVERHAUL GASKET KIT')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CylinderHead}    //dpp-epc-parts-schema-list//div[contains(text(),'CYLINDER HEAD')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CylinderBlock}    //dpp-epc-parts-schema-list//div[contains(text(),'CYLINDER BLOCK')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_TimingGearCoverReadEndPlate}    //dpp-epc-parts-schema-list//div[contains(text(),'TIMING GEAR COVER & REAR END PLATE')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Mounting}    //dpp-epc-parts-schema-list//div[contains(text(),'MOUNTING')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VentilationHose}    //dpp-epc-parts-schema-list//div[contains(text(),'VENTILATION HOSE')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CrankshaftPiston}    //dpp-epc-parts-schema-list//div[contains(text(),'CRANKSHAFT & PISTON')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CamshaftValve}    //dpp-epc-parts-schema-list//div[contains(text(),'CAMSHAFT & VALVE')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOilPump}    //dpp-epc-parts-schema-list//div[contains(text(),'ENGINE OIL PUMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_OilFilter}    //dpp-epc-parts-schema-list//div[contains(text(),'OIL FILTER')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOilCooler}    //dpp-epc-parts-schema-list//div[contains(text(),'ENGINE OIL COOLER')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_WaterPump}    //dpp-epc-parts-schema-list//div[contains(text(),'WATER PUMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_RadiatorWterOutlet}    //dpp-epc-parts-schema-list//div[contains(text(),'RADIATOR & WATER OUTLET')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VBelt}    //dpp-epc-parts-schema-list//div[contains(text(),'V-BELT')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Manifold}    //dpp-epc-parts-schema-list//div[contains(text(),'MANIFOLD')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ExhaustPipe}    //dpp-epc-parts-schema-list//div[contains(text(),'EXHAUST PIPE')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_AirCleaner}    //dpp-epc-parts-schema-list//div[contains(text(),'AIR CLEANER')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VaccumPiping}    //dpp-epc-parts-schema-list//div[contains(text(),'VACUUM PIPING')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CautionPlateNamePlate}    //dpp-epc-parts-schema-list//div[contains(text(),'CAUTION PLATE & NAME PLATE (ENGINE)')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_IgnitionCoilSparkPlug}    //dpp-epc-parts-schema-list//div[contains(text(),'IGNITION COIL & SPARK PLUG / GLOW PLUG')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Distributor}    //dpp-epc-parts-schema-list//div[contains(text(),'DISTRIBUTOR')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Alternator}    //dpp-epc-parts-schema-list//div[contains(text(),'ALTERNATOR')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Starter}    //dpp-epc-parts-schema-list//div[contains(text(),'STARTER')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_FuelInjectionSystem}    //dpp-epc-parts-schema-list//div[contains(text(),'FUEL INJECTION SYSTEM')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ExhaustGasReciructionSystem}    //dpp-epc-parts-schema-list//div[contains(text(),'EXHAUST GAS RECIRCULATION SYSTEM')]/parent::div
+
+
+#-----------------------------------------------------EPC Page L2 Transmission and chassis
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchReleaseFork}    //dpp-epc-parts-schema-list//div[contains(text(),'CLUTCH & RELEASE FORK')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchPedalFlexibleHose}    //dpp-epc-parts-schema-list//div[contains(text(),'CLUTCH PEDAL & FLEXIBLE HOSE')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchMasterCylinder}    //dpp-epc-parts-schema-list//div[contains(text(),'CLUTCH MASTER CYLINDER')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchReleaseCylinder}    //dpp-epc-parts-schema-list//div[contains(text(),'CLUTCH RELEASE CYLINDER')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransaxleTransmissionAssyGasketKitMTM}    //dpp-epc-parts-schema-list//div[contains(text(),'TRANSAXLE OR TRANSMISSION ASSY & GASKET KIT (MTM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchHousingTransmissionCaseMTM}    //dpp-epc-parts-schema-list//div[contains(text(),'CLUTCH HOUSING & TRANSMISSION CASE (MTM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SpeedmeterDrivenGearMTM}    //dpp-epc-parts-schema-list//div[contains(text(),'SPEEDOMETER DRIVEN GEAR (MTM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransmissionGearMTM}    //dpp-epc-parts-schema-list//div[contains(text(),'TRANSMISSION GEAR (MTM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_GearShiftForkLeverShaftMTM}    //dpp-epc-parts-schema-list//div[contains(text(),'GEAR SHIFT FORK & LEVER SHAFT (MTM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ShiftLeverRetainer}    //dpp-epc-parts-schema-list//div[contains(text(),'SHIFT LEVER & RETAINER')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransaxleTransmissionAssyGasketKitATM}    //dpp-epc-parts-schema-list//div[contains(text(),'TRANSAXLE OR TRANSMISSION ASSY & GASKET KIT (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TorqueConverterFrontOilPumpChainATM}    //dpp-epc-parts-schema-list//div[contains(text(),'TORQUE CONVERTER, FRONT OIL PUMP & CHAIN (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransmissionCaseOilPanATM}    //dpp-epc-parts-schema-list//div[contains(text(),'TRANSMISSION CASE & OIL PAN (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SpeedometerDrivenGearATM}    //dpp-epc-parts-schema-list//div[contains(text(),'SPEEDOMETER DRIVEN GEAR (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_OverdriveGearATM}    //dpp-epc-parts-schema-list//div[contains(text(),'OVERDRIVE GEAR (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BreakBandMultipleDiscClutch}    //dpp-epc-parts-schema-list//div[contains(text(),'BRAKE BAND & MULTIPLE DISC CLUTCH (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_CenterSupportPlanetarySunGearATM}    //dpp-epc-parts-schema-list//div[contains(text(),'CENTER SUPPORT & PLANETARY SUN GEAR (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeReverseBrakeATM}    //dpp-epc-parts-schema-list//div[contains(text(),'BRAKE NO.3, 1ST & REVERSE BRAKE (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_PlanetaryGearReversePistonCounterGearATM}    //dpp-epc-parts-schema-list//div[contains(text(),'PLANETARY GEAR, REVERSE PISTON & COUNTER GEAR(ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearOilStrainer}    //dpp-epc-parts-schema-list//div[contains(text(),'REAR OIL PUMP & GOVERNOR (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ValveBodyOilStrainerATM}    //dpp-epc-parts-schema-list//div[contains(text(),'VALVE BODY & OIL STRAINER (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ThrottleLinkValveLever}    //dpp-epc-parts-schema-list//div[contains(text(),'THROTTLE LINK & VALVE LEVER (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_OilCoolerTubeATM}    //dpp-epc-parts-schema-list//div[contains(text(),'OIL COOLER & TUBE (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearAxleHousingDifferential}    //dpp-epc-parts-schema-list//div[contains(text(),'REAR AXLE HOUSING & DIFFERENTIAL')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearAxleShaftHub}    //dpp-epc-parts-schema-list//div[contains(text(),'REAR AXLE SHAFT & HUB')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_DiscWheelWheelCap}    //dpp-epc-parts-schema-list//div[contains(text(),'DISC WHEEL & WHEEL CAP')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontAxleHub}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT AXLE HUB')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SteeringColumnShaft}    //dpp-epc-parts-schema-list//div[contains(text(),'STEERING COLUMN & SHAFT')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_VanePumpReservoirPowerSteering}    //dpp-epc-parts-schema-list//div[contains(text(),'VANE PUMP & RESERVOIR (POWER STEERING)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_PowerSteeringTube}    //dpp-epc-parts-schema-list//div[contains(text(),'POWER STEERING TUBE')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SteeringWheel}    //dpp-epc-parts-schema-list//div[contains(text(),'STEERING WHEEL')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontSteeringGearLink}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT STEERING GEAR & LINK')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ParkingBrakeCable}    //dpp-epc-parts-schema-list//div[contains(text(),'PARKING BRAKE & CABLE')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakePedalBracket}    //dpp-epc-parts-schema-list//div[contains(text(),'BRAKE PEDAL & BRACKET')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BreakMasterCylinder}    //dpp-epc-parts-schema-list//div[contains(text(),'BRAKE MASTER CYLINDER')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeBoosterVacuumTube}    //dpp-epc-parts-schema-list//div[contains(text(),'BRAKE BOOSTER & VACUUM TUBE')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontDiscBrakeCaliperDustCover}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT DISC BRAKE CALIPER & DUST COVER')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearDiscBrakeCaliperDustCover}    //dpp-epc-parts-schema-list//div[contains(text(),'REAR DISC BRAKE CALIPER & DUST COVER')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeTubeClamp}    //dpp-epc-parts-schema-list//div[contains(text(),'BRAKE TUBE & CLAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontAxleArmSteeringKnuckle}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT AXLE ARM & STEERING KNUCKLE')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontSpringShockAbsorber}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT SPRING & SHOCK ABSORBER')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearSpringShockAbsorber}    //dpp-epc-parts-schema-list//div[contains(text(),'REAR SPRING & SHOCK ABSORBER')]/parent::div
+
+#-----------------------------------------------------EPC Page L2 Body and interior
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SuspensionCrossmemberUnderCover}    //dpp-epc-parts-schema-list//div[contains(text(),'SUSPENSION CROSSMEMBER & UNDER COVER')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SpareWheelCarrier}    //dpp-epc-parts-schema-list//div[contains(text(),'SPARE WHEEL CARRIER')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT BUMPER & BUMPER STAY')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'REAR BUMPER & BUMPER STAY')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'RADIATOR GRILLE')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'HOOD & FRONT FENDER')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'HOOD LOCK & HINGE')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT FENDER APRON & DASH PANEL')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'FLOOR SIDE MEMBER')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'INSTRUMENT PANEL & GLOVE COMPARTMENT')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'COWL PANEL & WINDSHIELD GLASS')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'FLOOR PAN & LOWER BACK PANEL')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'FLOOR INSULATOR')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'MAT & CARPET')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'CONSOLE BOX & BRACKET')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'SIDE MEMBER')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'ROOF SIDE VENTILATOR')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'QUARTER WINDOW')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'ROOF PANEL & BACK WINDOW GLASS')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'LUGGAGE COMPARTMENT DOOR & LOCK')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'ENGINE HOOD & LOCK')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'INSIDE TRIM BOARD & DOOR OPENING TRIM MOULDING')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'ROOF HEADLINING & SILENCER PAD')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'PACKAGE TRAY PANEL & LUGGAGE COMPARTMENT MAT')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT DOOR PANEL & GLASS')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT DOOR LOCK & HANDLE')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT DOOR WINDOW REGULATOR & HINGE')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'LOCK CYLINDER SET')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT SEAT & SEAT TRACK')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'SEAT BELT & CHILD RESTRAINT SEAT')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'ARMREST & VISOR')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'BATTERY CARRIER')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'CAUTION PLATE (EXTERIOR & INTERIOR)')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'ASH RECEPTACLE')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'EMBLEM & NAME PLATE (EXTERIOR & INTERIOR)')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT MOULDING')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'SIDE MOULDING')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'REAR MOULDING')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'MUDGUARD & SPOILER')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'FUEL TANK & TUBE')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'ACCELERATOR LINK')]/parent::div
+
+
+#-----------------------------------------------------EPC Page L2 Electrics
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'HEADLAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'FOG LAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT TURN SIGNAL LAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'SIDE TURN SIGNAL LAMP & OUTER MIRROR LAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'REAR COMBINATION LAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'BACK UP LAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'REAR LICENSE PLATE LAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'REAR SIDE MARKER LAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'CENTER STOP LAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'INTERIOR LAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'BATTERY & BATTERY CABLE')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'WIRING & CLAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'METER')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'INDICATOR')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'SWITCH & RELAY & COMPUTER')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'ELECTRONIC FUEL INJECTION SYSTEM')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'CRUISE CONTROL (AUTO DRIVE)')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'OVERDRIVE & ELECTRONIC CONTROLLED TRANSMISSION')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'ABS & VSC')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'ANTI-THEFT DEVICE')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'WINDSHIELD WIPER')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'WINDSHIELD WASHER')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'DOOR MOTOR & DOOR SOLENOID')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'RADIO RECEIVER & AMPLIFIER & CONDENSER')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'SPEAKER')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'ANTENNA')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'HORN')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'MIRROR')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'HEATING & AIR CONDITIONING - SET')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'HEATING & AIR CONDITIONING - HEATER UNIT & BLOWER')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'HEATING & AIR CONDITIONING - COOLER UNIT')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'HEATING & AIR CONDITIONING - CONTROL & AIR DUCT')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'HEATING & AIR CONDITIONING - WATER PIPING')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'HEATING & AIR CONDITIONING - VACUUM PIPING')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'HEATING & AIR CONDITIONING - COOLER PIPING')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_}    //dpp-epc-parts-schema-list//div[contains(text(),'HEATING & AIR CONDITIONING - COMPRESSOR')]/parent::div
 
 #------------------------YopMail------------------------
 ${YopMail}    https://yopmail.com/en/

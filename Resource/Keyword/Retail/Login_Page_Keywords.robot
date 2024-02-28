@@ -151,13 +151,21 @@ User should be albe to click Submit Button in Retail Forgot Password Page
     sleep    2
 
 User should be able to click Translate to English Button
+    ${EN}    run keyword and return status    element should be visible    ${Retail_HK_LoginPage_English_Button}
+    run keyword if    ${EN}    Translate to English
+
+User should be able to click Translate to Chinese Button
+    ${CN}    run keyword and return status    element should be visible    ${Retail_HK_LoginPage_Chinese_Button}
+    run keyword if    ${CN}    Translate to Chinese
+
+Translate to English
     wait until element is visible    ${Retail_HK_LoginPage_English_Button}    10
     capture element screenshot    ${Retail_HK_LoginPage_English_Button}
     click element    ${Retail_HK_LoginPage_English_Button}
     sleep    2
 
-User should be able to click Translate to Chinese Button
-    wait until element is visible    ${Retail_HK_LoginPage_Chinese_Button}    10
+Translate to Chinese
+   wait until element is visible    ${Retail_HK_LoginPage_Chinese_Button}    10
     capture element screenshot    ${Retail_HK_LoginPage_Chinese_Button}
     click element    ${Retail_HK_LoginPage_Chinese_Button}
     sleep    2

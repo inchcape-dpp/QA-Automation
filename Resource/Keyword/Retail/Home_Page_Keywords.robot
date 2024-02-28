@@ -13,7 +13,7 @@ Resource  ../../../Resource/testdata/credentials.robot
 #-----------------------------------------------------Retail Home Page-------------------------------------------------
 Admin User should be able to Login
     wait until element is visible    ${HomePageLogo}    10
-    wait until element is visible    ${HomePageSellerInfo}    10
+    wait until element is visible    ${HomePage_DoubleHeader_SellerName}    10
     capture page screenshot
     sleep     2
 
@@ -757,23 +757,91 @@ User should be able to access Relationship page using double header in Retail Ho
     capture page screenshot
     sleep    2
 
+User should be able to view EPC Search Result Pop Up Modal in HK Retail Home Page
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Container}    10
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Container}
+    sleep    2
 
+User should be able to view EPC Search Result Pop Up Modal Elements in HK Retail Home Page
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_VIN_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Model}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ModelCode_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ModelCode_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Transmission_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Transmission_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Period_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Period_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Engine_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Engine_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ProductionDate_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ProductionDate_Value}    10
 
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Body_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Body_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Doors_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Doors_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_SeatingCapacity_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_SeatingCapacity_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Grade_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Grade_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Driverosition_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Driverosition_Value}    10
 
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_VIN_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Model}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ModelCode_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ModelCode_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Transmission_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Transmission_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Period_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Period_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Engine_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Engine_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ProductionDate_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ProductionDate_Value}
 
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Body_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Body_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Doors_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Doors_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_SeatingCapacity_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_SeatingCapacity_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Grade_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Grade_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Driverosition_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Driverosition_Value}
 
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SaveShop_button}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_ShopThisVehicle_button}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SearchAgain_button}    10
 
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SaveShop_button}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_ShopThisVehicle_button}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SearchAgain_button}
 
+User should be able to click Show More button in EPC Search Result Pop Up Modal in HK Retail Home Page
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_ShowMore_button}    10
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_ShowMore_button}
+    click element    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_ShowMore_button}
+    sleep    2
 
+User should be able to click Save and Shop in EPC Search Result Pop Up Modal in HK Retail Home Page
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SaveShop_button}    10
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SaveShop_button}
+    click element    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SaveShop_button}
+    sleep    5
 
+User should be able to click Shop this vehicle in EPC Search Result Pop Up Modal in HK Retail Home Page
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_ShopThisVehicle_button}    10
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_ShopThisVehicle_button}
+    click element    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_ShopThisVehicle_button}
+    sleep    5
 
-
-
-
-
-
-
-
+User should be able to click Search Again in EPC Search Result Pop Up Modal in HK Retail Home Page
+    wait until element is visible   ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SearchAgain_button}    10
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SearchAgain_button}
+    click element    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SearchAgain_button}
+    sleep    5
 
 
 

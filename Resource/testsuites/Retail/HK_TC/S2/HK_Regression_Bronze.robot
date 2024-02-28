@@ -448,6 +448,24 @@ TC-053 - User should be able to view checkout in Retail Checkout Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view checkout in HK Retail Checkout Page
 
+TC-053 - User should be able to view Promo Code in HK Retail Checkout Page
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be able to view Promo Code in HK Retail Checkout Page
+
+TC-053 - User should be able to input Promo Code in HK Retail Checkout Page
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be able to input Promo Code in HK Retail Checkout Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User should be able to remove Promo Code in HK Retail Checkout Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User should be able to input Promo Code in HK Retail Checkout Page
+    run keyword and continue on failure    TC Sleep
+
+TC-053 - User should be able to check Promo Code in HK Retail Checkout Page
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be able to check Promo Code in HK Retail Checkout Page
+    run keyword and continue on failure    TC Sleep
+
 TC-054 - User should be able to view payment method in HK Retail Checkout Page
     [Tags]    Checkout Page
     run keyword and continue on failure    User should be able to view payment method in HK Retail Checkout Page
@@ -752,8 +770,8 @@ TC-083 - User should be able to add new vehicle in Retail Account Vehicle Listin
     [Tags]    Vehicle Listing Page
     run keyword and continue on failure    User should be able to click add new vehicle in Retail Account Vehicle Listing Page
     run keyword and continue on failure    User should be able to view add vehicle in HK Retail Select Vehicle
-#    run keyword and continue on failure    User should be able to click add new vehicle in HK Retail Select Vehicle
-#    run keyword and continue on failure    User should be able to view add vehicle in HK Retail Select Vehicle
+    run keyword and continue on failure    User should be able to click add new vehicle in HK Retail Select Vehicle
+    run keyword and continue on failure    User should be able to view add vehicle in HK Retail Select Vehicle
     run keyword and continue on failure    User should be able to click model on manual search in Retail Select Vehicle
     run keyword and continue on failure    User should be able to select model on manual search in Retail Select Vehicle
     run keyword and continue on failure    User should be able to click year on manual search in Retail Select Vehicle

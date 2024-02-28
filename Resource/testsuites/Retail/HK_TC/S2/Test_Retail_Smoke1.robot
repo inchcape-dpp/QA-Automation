@@ -81,12 +81,12 @@ TC-010 - User should be able to view checkout in Retail Checkout Page
 TC-010 - User should be able to view Promo Code in HK Retail Checkout Page
     [Tags]    Checkout Page
     run keyword and continue on failure    User should be able to view Promo Code in HK Retail Checkout Page
-#    run keyword and continue on failure    User should be able to input Promo Code in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to input Promo Code in HK Retail Checkout Page
     run keyword and continue on failure    TC Sleep
 #    run keyword and continue on failure    User should be able to remove Promo Code in HK Retail Checkout Page
 #    run keyword and continue on failure    TC Sleep
 #    run keyword and continue on failure    User should be able to input Promo Code in HK Retail Checkout Page
-    run keyword and continue on failure    Validate Promo Code
+    run keyword and continue on failure    User should be able to check Promo Code in HK Retail Checkout Page
 
 #TC-011 - User should be able to view checkout in Retail Checkout Page
 #    [Tags]    Checkout Page
