@@ -3,7 +3,6 @@ Documentation    Suite description
 
 Library    SeleniumLibrary
 Library    Process
-#Library    FakerLibrary
 
 Resource  ../../../Resource/Keyword/Retail/Login_Page_Keywords.robot
 Resource  ../../../Resource/Keyword/Retail/Registration_Keywords.robot
@@ -22,7 +21,6 @@ Resource  ../../../Resource/Keyword/Retail/Shopping_Cart_Page_Keywords.robot
 Resource  ../../../Resource/Keyword/Retail/Checkout_Keywords.robot
 
 Resource  ../../../Resource/Keyword/Retail/All_Parts_Page_Keywords.robot
-
 
 Resource  ../../../Resource/Keyword/Retail/Search_Bar_Keywords.robot
 Resource  ../../../Resource/Keyword/Retail/Email.robot
