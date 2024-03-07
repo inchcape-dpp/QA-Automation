@@ -1,21 +1,21 @@
 *** Settings ***
 Documentation    Suite description
 
-Library  SeleniumLibrary
+Library    SeleniumLibrary
 Library    Process
 #Library  FakerLibrary
 
-Resource  ../../../../../Resource/testdata/Retail/HK_Config/S2/HK_S2_Bronze_Config.robot
-Resource  ../../../../../Resource/testdata/Retail/Retail_Variable.robot
-Resource  ../../../../../Resource/testdata/Retail/Retail_Resource.robot
+Resource    ../../../../../Resource/testdata/Retail/HK_Config/S2/HK_S2_Bronze_Config.robot
+Resource    ../../../../../Resource/testdata/Retail/Retail_Variable.robot
+Resource    ../../../../../Resource/testdata/Retail/Retail_Resource.robot
 
 *** Test Cases ***
-Test Setup  Run Keywords   Open Chrome Browser
-Screen Shot DIR  Run Keywords    Retail Screent Shot DIR
+Test Setup    Run Keywords    Open Chrome Browser HK
+Screen Shot DIR    Run Keywords    Retail Screent Shot DIR HK
 
 TC-001 - Verify Login Page
     [Tags]    TC001    Login Page
-    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep HK
     run keyword and continue on failure    User should be able to click Translate to English Button
     run keyword and continue on failure    Verify Login Page
     run keyword and continue on failure    Verify Login Page Elements
@@ -109,7 +109,7 @@ TC-015 - Input Valid Password
 TC-016 - User should be able to click Login Button
     [Tags]    Login Page
     run keyword and continue on failure    User should be able to click Login Button
-    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep HK
 
 TC-017 - User should be able to view home page
     [Tags]    Home Page
@@ -309,7 +309,7 @@ TC-040 - User should be able to click searched text
 TC-041 - User should be able to view All Products Page in HK Retail Home Page
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to view All products
-    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep HK
 
 TC-042 - User should be able to side filter product
     [Tags]    All Products Page
@@ -372,7 +372,7 @@ TC-046 - User should be able to click save cart button in Retail Shopping Cart P
     run keyword and continue on failure    User should be able to edit Name for Edit Pop Up in Retail Account Saved Carts Details Page
     run keyword and continue on failure    User should be able to edit Description for Edit Pop Up in Retail Account Saved Carts Details Page
     run keyword and continue on failure    User shoulld be albe to click Update for Edit Pop Up in Retail Account Saved Carts Details Page
-    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep HK
     run keyword and continue on failure    User should be able to click Restore in Retail Account Saved Carts Page
 
 TC-050 - User should be able to edit shopping cart items in Retail Shopping Cart Page
@@ -396,11 +396,11 @@ TC-051 - User should be able to click continue shopping button in Retail Shoppin
 TC-052 - User should be able to click checkout button in Retail Shopping Cart Page
     [Tags]    Shopping Cart Page
     run keyword and continue on failure    User should be able to click checkout button in Retail Shopping Cart Page
-    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep HK
 
 TC-053 - User should be able to view checkout in Retail Checkout Page
     [Tags]    Checkout Page
-    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep HK
     run keyword and continue on failure    User should be able to view checkout in HK Retail Checkout Page
 
 TC-054 - User should be able to view payment method in HK Retail Checkout Page
@@ -428,7 +428,7 @@ TC-057 - User should be able to input otp
 TC-058 - User should be able to click Submit button on 2C2P
     [Tags]    Checkout Page
     run keyword and continue on failure    User should be able to click Submit button on 2C2P
-    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep HK
 
 #TC-057 - User should be able to view confirmation
 #    [Tags]    Checkout Page
@@ -437,7 +437,7 @@ TC-058 - User should be able to click Submit button on 2C2P
 TC-059 - User should be able to view place order in HK Retail Place Order Page
     [Tags]    Checkout Page
     run keyword and continue on failure    Unselect Credit Card Frame
-    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep HK
     run keyword and continue on failure    User should be able to view place order in HK Retail Place Order Page
     run keyword and continue on failure    User should be able to click back to home button in Retail Place Order Page
 
@@ -693,20 +693,20 @@ TC-083 - User should be able to add new vehicle in Retail Account Vehicle Listin
     run keyword and continue on failure    User should be able to select Model ID on manual search in HK Retail Select Vehicle
     run keyword and continue on failure    User shoud be albe to click search this vehicle on manual seearh in Retail Select Vehicle
     run keyword and continue on failure    User should be able to click select & save vehicle in Retail Select Vehicle
-    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep HK
     run keyword and continue on failure    reload page
-    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep HK
 
 TC-009 - User should be able to click shop this vehicle in Retail Account Vehicle Listing Page
     [Tags]    Vehicle Listing Page
     run keyword and continue on failure    User should be able to access account from top navigaton
     run keyword and continue on failure    User should be able to view account vehicle listing page
     run keyword and continue on failure    User should be able to click shop this vehicle in HK Retail Account Vehicle Listing Page
-    run keyword and continue on failure    TC Sleep
-    run keyword and continue on failure    TC Sleep
-    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep HK
+    run keyword and continue on failure    TC Sleep HK
+    run keyword and continue on failure    TC Sleep HK
     run keyword and continue on failure    reload page
-    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep HK
 
 TC-010 - User should be able to click delete in Retail Account Vehicle Listing Page
     [Tags]    Vehicle Listing Page

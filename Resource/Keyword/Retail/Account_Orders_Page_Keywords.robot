@@ -554,6 +554,10 @@ User should be able to click orders with $129.0 spent in HK Retail Account Order
     click element    (//tr[.//td[@class='cx-order-history-total' and contains(text(),'$129.0')]]//td[@class='cx-order-history-code'])|(//tr[.//td[@class='cx-order-history-total' and contains(text(),'$41.0')]]//td[@class='cx-order-history-code'])[${Orderwith$129.0RandomIndex}]
     sleep    2
 
+User should be able to count number of text input in Note for Supplier in Return Request creation
+    ${Length}    get text    #Xpath ng return request textbox
+    ${TextboxLength}    get length    ${Length}
+
 #-----------------------------------------------------Retail Move to Top------------------------------------------------
 TC Move to Top
     scroll element into view    ${Retail_AccountAccountpageMyAccountLabel}

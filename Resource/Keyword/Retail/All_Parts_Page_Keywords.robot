@@ -1018,3 +1018,13 @@ User should be able to Check Product Stock
     END
 
     close all excel documents
+
+User should be able to view Results per page filter on top
+
+User should be able to click Results per page filter on top
+
+User should be able to select 20 Results per page filter on top
+
+User should be able to select 50 Results per page filter on top
+
+User should be able to select 100 Results per page filter on top

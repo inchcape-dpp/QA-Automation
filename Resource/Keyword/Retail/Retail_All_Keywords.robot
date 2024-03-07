@@ -594,6 +594,12 @@ Get Number of InStock DCStock
 Get Number of InStockOnly
 Get Number of DCStock
 
+User should be able to view Results per page filter on top
+User should be able to click Results per page filter on top
+User should be able to select 20 Results per page filter on top
+User should be able to select 50 Results per page filter on top
+User should be able to select 100 Results per page filter on top
+
 #-----------------------------------------------------Retail Shopping Cart Page-----------------------------------------
 User should be able to view shopping cart in Retail Shopping Cart Page
 User should be able to view shopping cart in HK Retail Shopping Cart Page

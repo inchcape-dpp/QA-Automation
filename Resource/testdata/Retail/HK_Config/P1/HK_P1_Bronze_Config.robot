@@ -18,7 +18,7 @@ ${SafariBrowser}    Safari
 ${driver_path}    C:\\Users\\Tyron.Demate\\PycharmProjects\\pythonProject2\\Resource\\chromedriver.exe
 #${driver_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\geckodriver.exe
 
-${Retail_screenshot_path}    C:\\Users\\Tyron.Demate\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Retail\\Screenshots\\HK\\S1
+${Retail_screenshot_path}    C:\\Users\\Tyron.Demate\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Retail\\Screenshots\\HK\\P1
 
 ${UploadPhoto_Path_Value}    C:\\Users\\Tyron.Demate\\Pictures\\Sample Image\\Image.png
 
@@ -35,11 +35,11 @@ ${Password}    ${HK_P1_Automation_Bronze_PWD}
 ${YopMailEmail}    ${HK_P1_Automation_Bronze_UID}
 
 *** Keywords ***
-Open Chrome Browser
+Open Chrome Browser HK
     SeleniumLibrary.Open Browser    ${p1HKRetail}    Chrome  executable_path=${driver_path}
     maximize browser window
 
-Retail Screent Shot DIR
+Retail Screent Shot DIR HK
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
     create directory    ${Retail_screenshot_path}/HK_${currentdate}
     ${LogDIR}=    convert to string    ${Retail_screenshot_path}/HK_${currentdate}

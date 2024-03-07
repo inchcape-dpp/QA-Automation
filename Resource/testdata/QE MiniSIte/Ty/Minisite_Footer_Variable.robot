@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Suite description
 
-Resource  ../../../../Resource/testdata/Retail/AU_Config/S2_Config.robot
+Resource  ../../../../../Resource/testdata/Retail/AU_Config/S2_Config.robot
 
 
 *** Variables ***
@@ -22,3 +22,18 @@ ${vonBibra_AutoGroup}    //div/img[@src='https://cdn.partslane.com.au/sys-master
 ${LetUsTalk}    //section//p[contains(text(), 'PartsLane is the way to go. So, let’s talk!')]
 ${ContactUs_Image}    //section//img[@src='https://cdn.partslane.com.au/sys-master-images/minisite/contactus-car.jpg']
 ${LetUsTalk_Subtext}    //div//sub
+${Form_FirstName}    //form//label[@for='firstName']
+${Form_LastName}    //form//label[@for='lastName']
+${Form_EmailAddress}    //form//label[@for='emailAddress']
+${Form_Message}    //form//label[@for='message']
+${Form_P}    //form//p
+${Form_TermsOfUse}    //form//a[@href='https://www.partslane.com.au/dppretail/termsandconditions']
+${Form_PrivacyPolicy}    //form//a[@href='https://www.partslane.com.au/dppretail/privacypolicy']
+${Form_Submit}    //form//button
+
+${Footer_Logo}    //footer//img
+${Footer_PP}    //footer//a[@href="https://www.partslane.com.au/dppretail/privacypolicy"]
+${Footer_TNC}    //footer//a[@href="https://www.partslane.com.au/dppretail/termsandconditions"]
+${Footer_Copyright}    //footer//p[contains(text(), '© 2023 PartsLane. All Rights Reserved.')]
+
+

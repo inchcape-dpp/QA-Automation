@@ -31,11 +31,11 @@ ${Password}    sellEr@dm!n1
 ${YopMailEmail}    ${admin1_s2_dealer_UID}
 
 *** Keywords ***
-Open Chrome Browser
+Open Chrome Browser AU
     SeleniumLibrary.Open Browser    ${p1Dealer}    Chrome  executable_path=${driver_path}
     maximize browser window
 
-Dealer Screent Shot DIR
+Dealer Screent Shot DIR AU
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
     create directory    ${Dealer_screenshot_path}/AU_${currentdate}
     ${LogDIR}=    convert to string    ${Dealer_screenshot_path}/AU_${currentdate}
@@ -43,12 +43,12 @@ Dealer Screent Shot DIR
     set global variable    ${LogDIR}
 
 #-----------------------------------------------------Browser Commands--------------------------------------------------
-Browse Back Button
+Browse Back Button AU
     go back
     sleep    5
 #    capture page screenshot
 
 #-----------------------------------------------------Dealer Sleep------------------------------------------------------
 
-TC Sleep
+TC Sleep AU
     sleep    10
