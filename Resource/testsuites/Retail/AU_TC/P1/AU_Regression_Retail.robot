@@ -165,8 +165,7 @@ TC-029 - User should be able to select 1 filter from selected category in Retail
 TC-030 - User should be able to click 1 sub filter from selected category in Retail Home Page
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to click 1 sub filter from selected category in Retail Home Page
-    run keyword and continue on failure    Browse Back Button
-
+    run keyword and continue on failure    User should be able to Go to Home page
 
 TC-035 - User should be able to click shop by category accessories & audio in Retail Home Page
     [Tags]    Home Page
@@ -228,40 +227,40 @@ TC-046 - User should be able to click shop by category fuel system in Retail Hom
     run keyword and continue on failure    User should be able to click shop by category fuel system in Retail Home Page
     run keyword and continue on failure    User should be able to Go to Home page
 
-#TC-047 - User should be able to click shop by category gasket in Retail Home Page
-#    [Tags]    Home Page
-#    run keyword and continue on failure    User should be able to click shop by category gasket in Retail Home Page
-#    run keyword and continue on failure    User should be able to Go to Home page
-#
-#TC-048 - User should be able to click shop by category ignition, start & charge in Retail Home Page
-#    [Tags]    Home Page
-#    run keyword and continue on failure    User should be able to click shop by category ignition, start & charge in Retail Home Page
-#    run keyword and continue on failure    User should be able to Go to Home page
-#
-#TC-049 - User should be able to click shop by category service parts in Retail Home Page
-#    [Tags]    Home Page
-#    run keyword and continue on failure    User should be able to click shop by category service parts in Retail Home Page
-#    run keyword and continue on failure    User should be able to Go to Home page
-#
-#TC-050 - User should be able to click shop by category shafts axles & wheels in Retail Home Page
-#    [Tags]    Home Page
-#    run keyword and continue on failure    User should be able to click shop by category shafts axles & wheels in Retail Home Page
-#    run keyword and continue on failure    User should be able to Go to Home page
-#
-#TC-051 - User should be able to click shop by category steering in Retail Home Page
-#    [Tags]    Home Page
-#    run keyword and continue on failure    User should be able to click shop by category steering in Retail Home Page
-#    run keyword and continue on failure    User should be able to Go to Home page
-#
-#TC-052 - User should be able to click shop by category suspension in Retail Home Page
-#    [Tags]    Home Page
-#    run keyword and continue on failure    User should be able to click shop by category suspension in Retail Home Page
-#    run keyword and continue on failure    User should be able to Go to Home page
-#
-#TC-053 - User should be able to click shop by category all in Retail Home Page
-#    [Tags]    Home Page
-#    run keyword and continue on failure    User should be able to click shop by category all in Retail Home Page
-#    run keyword and continue on failure    User should be able to Go to Home page
+TC-047 - User should be able to click shop by category gasket in Retail Home Page
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to click shop by category gasket in Retail Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+
+TC-048 - User should be able to click shop by category ignition, start & charge in Retail Home Page
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to click shop by category ignition, start & charge in Retail Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+
+TC-049 - User should be able to click shop by category service parts in Retail Home Page
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to click shop by category service parts in Retail Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+
+TC-050 - User should be able to click shop by category shafts axles & wheels in Retail Home Page
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to click shop by category shafts axles & wheels in Retail Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+
+TC-051 - User should be able to click shop by category steering in Retail Home Page
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to click shop by category steering in Retail Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+
+TC-052 - User should be able to click shop by category suspension in Retail Home Page
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to click shop by category suspension in Retail Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+
+TC-053 - User should be able to click shop by category all in Retail Home Page
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to click shop by category all in Retail Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
 
 TC-054 - User should be able to input text on search bar
     [Tags]    Home Page
@@ -270,6 +269,49 @@ TC-054 - User should be able to input text on search bar
 TC-055 - User should be able to click searched text
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to click searched text
+    run keyword and continue on failure    User should be able to Go to Home page
+
+TC-055 - User should be able to view Vehicle Search in AU Retail Home Page
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to view Vehicle Search in AU Retail Home Page
+
+TC-055 - User should be able to Select and Save Vehicle using Home Page manual Search in AU Retail Home Page
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to click model on manual search in AU Retail Home Page
+    run keyword and continue on failure    User should be able to select model on manual search in AU Retail Home Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User should be able to click year on manual search in AU Retail Home Page
+    run keyword and continue on failure    User should be able to select year on manual search in AU Retail Home Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User should be able to click series on manual search in AU Retail Home Page
+    run keyword and continue on failure    User should be able to select series on manual search in AU Retail Home Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User should be able to click engine on manual search in AU Retail Home Page
+    run keyword and continue on failure    User should be able to select engine on manual search in AU Retail Home Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User should be able to click details on manual search in AU Retail Home Page
+    run keyword and continue on failure    User should be able to select details on manual search in AU Retail Home Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User shoud be albe to click search this vehicle on manual seearh in AU Retail Home Page
+    run keyword and continue on failure    User should be able to click Select and Save Vehicle button on Search Popup in AU Retail Home Page
+    run keyword and continue on failure    TC Sleep
+
+TC-055 - User should be able to Search by Rego in AU Retail Home Page
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to select state in AU Retail Home Page
+    run keyword and continue on failure    User should be able to input rego in AU Retail Home Page
+    run keyword and continue on failure    User should be albe to click search button in AU Retail Home Page
+    run keyword and continue on failure    User should be able to click Select Vehicle button on Search Popup in AU Retail Home Page
+    run keyword and continue on failure    TC Sleep
+
+TC-055 - User should be able to Search by VIN in AU Retail Home Page
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be albe to input vin in AU Retail Home Page
+    run keyword and continue on failure    User should be albe to click search button in AU Retail Home Page
+    run keyword and continue on failure    User should be able to click Select Vehicle button on Search Popup in AU Retail Home Page
+    run keyword and continue on failure    TC Sleep
 
 TC-041 - User should be able to access Order page using double header in Retail Homepage
     [Tags]    Home Page
@@ -310,6 +352,12 @@ TC-041 - User should be able to access Company Details page using double header 
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to access Company Details page using double header in Retail Homepage
+
+TC-041 - User should be able to clear vehicle selection
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to click Select Your Vehicle
+    run keyword and continue on failure    User should be able to click clear vehicle on selected vehicle in Retail Select Vehicle
 
 TC-056 - User should be able to view All Parts Page
     [Tags]    All Products Page
@@ -378,17 +426,6 @@ TC-063 - User should be able to view product In Stock Only
     run keyword and continue on failure    User should be able to view product details In Stock Only
     run keyword and continue on failure    Browse Back Button
     run keyword and continue on failure    Return to first page
-
-TC-064 - User should be able to add car in Retail Products Page
-    [Tags]    All Products Page
-    run keyword and continue on failure    User should be able to click add car in Retail Products Page
-    run keyword and continue on failure    User should be able to view add vehicle in Retail Select Vehicle
-    run keyword and continue on failure    User should be able to click add new vehicle in Retail Select Vehicle
-    run keyword and continue on failure    User should be able to view add vehicle in Retail Select Vehicle
-    run keyword and continue on failure    User should be able to select state in Retail Select Vehicle
-    run keyword and continue on failure    User should be able to input rego in Retail Select Vehicle
-    run keyword and continue on failure    User should be albe to click search button in Retail Select Vehicle
-    run keyword and continue on failure    User should be able to click select this vehicle in Retail Select Vehicle
 
 TC-065 - User should be able to click add to cart button for out of stock and dc stock in Retail Product Page
     [Tags]    All Products Page
@@ -482,28 +519,6 @@ TC-077 - User should be able to edit po number in Retail Checkout Page
     run keyword and continue on failure    User should be able to edit valid po number in Retail Checkout Page
     run keyword and continue on failure    User should be able to click save po number in Retail Checkout Page
     run keyword and continue on failure    User should be able to click reset po number in Retail Checkout Page
-
-#TC-078 - User should be able to place order in Retail Checkout Page
-#    [Tags]    Checkout Page
-#    run keyword and continue on failure    User should be able to click place order button in Retail Checkout Page
-#    run keyword and continue on failure    User should be able to view place order in Retail Place Order Page
-#    run keyword and continue on failure    User should be able to click back to home button in Retail Place Order Page
-#
-#TC-079 - User should be able to process Re-Order in Retail Account Order Details Page
-#    [Tags]    Re-Order Process
-#    run keyword and continue on failure    User should be able to Go to Home page
-#    run keyword and continue on failure    User should be able to view shopping cart pop up modal
-#    run keyword and continue on failure    User should be albe to delete all items from shopping cart pop up modal
-#    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
-#    run keyword and continue on failure    User should be able to view account orders page
-#    run keyword and continue on failure    User should be able to click orders with $0.25 spent in Retail Account Order Details Page
-#    run keyword and continue on failure    User should be able to click Re-Order button in Retail Account Order Details Page
-#    run keyword and continue on failure    User should be able to view shopping cart in Retail Shopping Cart Page
-#    run keyword and continue on failure    User should be able to click checkout button in Retail Shopping Cart Page
-#    run keyword and continue on failure    User should be able to view checkout in Retail Checkout Page
-#    run keyword and continue on failure    User should be able to click place order button in Retail Checkout Page
-#    run keyword and continue on failure    User should be able to view place order in Retail Place Order Page
-#    run keyword and continue on failure    User should be able to click back to home button in Retail Place Order Page
 
 TC-080 - User should be able to view account orders page
     [Tags]    Order Page
@@ -715,19 +730,19 @@ TC-099 - User should be able to view and message order with Declined Status in R
     run keyword and continue on failure    User should be able to click back to order details in Retail Account Return Details Page
     run keyword and continue on failure    User should be able to click Back to Return Request in Retail Account Return Details Page
 
-#TC-100 - User should be able to view and message order with In Progress Status in Retail Account Return Page
-#    [Tags]    Return Page
-#    run keyword and continue on failure    User should be able to view order with In Progress Status in Retail Account Return Page
-#    run keyword and continue on failure    User should be able to click order with In Progress Status in Retail Account Return Page
-#    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Return Details Page
-#    run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Return Details Page
-#    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Return Details Page
-#    run keyword and continue on failure    User should be able to view message supplier pop up in Retail Account Return Details Page
-#    run keyword and continue on failure    User should be able to input text on message pop up text field in Retail Account Return Details Page
-#    run keyword and continue on failure    User should be able to upload photo on message pop in Retail Account Return Details Page
-#    run keyword and continue on failure    User should be able to send on message pop in Retail Account Return Details Page
-#    run keyword and continue on failure    User should be able to click back to order details in Retail Account Return Details Page
-#    run keyword and continue on failure    User should be able to click Back to Return Request in Retail Account Return Details Page
+TC-100 - User should be able to view and message order with In Progress Status in Retail Account Return Page
+    [Tags]    Return Page
+    run keyword and continue on failure    User should be able to view order with In Progress Status in Retail Account Return Page
+    run keyword and continue on failure    User should be able to click order with In Progress Status in Retail Account Return Page
+    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to view message supplier pop up in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to input text on message pop up text field in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to upload photo on message pop in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to send on message pop in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to click back to order details in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to click Back to Return Request in Retail Account Return Details Page
 
 TC-100 - User should be able to view account saved carts page
     [Tags]    Saved Carts Page
@@ -1051,30 +1066,6 @@ TC-131 - User should be able to view company details page
 #    run keyword and continue on failure    User should be able to select closing hours value in Retail Account Company Details Page
 ##    run keyword and continue on failure    User should be able to click save button in Retail Account Company Details Page
 ##    run keyword and continue on failure    User should be able to click no on update cofirmation modal in Retail Account Company Details Page
-#
-#TC-133 - User should be able to view staff page
-#    [Tags]    Staff Page
-#    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
-#    run keyword and continue on failure    User should be able to view staff page
-
-#TC-134 - User should be able to add new staff in Retail Account Staff Page
-#    [Tags]    Staff Page
-#    run keyword and continue on failure    User should be able to click add new staff in Retail Account Staff Page
-#    run keyword and continue on failure    User should be able to add new staff details in Retail Account Staff Page
-#    run keyword and continue on failure    User should be able to click active checkbox at add new staff in Retail Account Staff Page
-#    run keyword and continue on failure    User should be able to click active checkbox at add new staff in Retail Account Staff Page
-#    run keyword and continue on failure    User should be able to click cancel add new staff in Retail Account Staff Page
-#
-#TC-135 - User should be able to edit staff button in Retail Account Staff Page
-#    [Tags]    Staff Page
-#    run keyword and continue on failure    User should be able to click edit staff button in Retail Account Staff Page
-#    run keyword and continue on failure    User should be able to edit First Name in Retail Account Staff Page
-#    run keyword and continue on failure    User should be able to edit Last Name in Retail Account Staff Page
-#    run keyword and continue on failure    User should be able to edit Phone Number in Retail Account Staff Page
-#    run keyword and continue on failure    User should be able to click active checkbox in Retail Account Staff Page
-#    run keyword and continue on failure    User should be able to click active checkbox in Retail Account Staff Page
-#    run keyword and continue on failure    User should ba able to click save in Retail Account Staff Page
-#    run keyword and continue on failure    User should be able to click yes in the confirmation in Retail Account Staff Page
 
 
 #TC-136 - User should be able to logout

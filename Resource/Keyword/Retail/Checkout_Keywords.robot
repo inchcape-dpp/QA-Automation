@@ -752,7 +752,8 @@ Get Promo code used
     log to console    ${PromoCode}
     log    ${PromoCode}
 
-Validate Promo Code
+
+User should be able to check Promo Code in HK Retail Checkout Page
     ${100DiscountMin}    set variable    2000
     ${100DiscountMax}    set variable    3999.9
     ${200DiscountMin}    set variable    4000
@@ -770,24 +771,28 @@ Validate Promo Code
 #    ${OrderTotalString}    convert to string    ${OrderTotalText}
 
     ${RemoveSubTotalString}    remove string    ${SubtotalText}    $    ,
-    ${RemoveShippingString}    remove string   ${ShippingFeeText}    Free    $    ,
+    ${RemoveShippingString}    remove string   ${ShippingFeeText}    Free    $    ,    FREE
     ${RemoveDiscountString}    remove string    ${DiscountText}    $    ,
     ${RemoveOrderTotalString}    remove string    ${OrderTotalText}    $    ,
+    set global variable    ${RemoveDiscountString}
+
+    ${RemoveShippingString}    run keyword if    '${RemoveShippingString}' == ''    set variable    0    ELSE    set variable    ${RemoveShippingString}
 
     ${SubTotal}    convert to number    ${RemoveSubTotalString}
     ${Shipping}    convert to number    ${RemoveShippingString}
     ${Discount}    convert to number    ${RemoveDiscountString}
     ${OrderTotal}  convert to number    ${RemoveOrderTotalString}
+    set global variable    ${OrderTotal}
 
     ${SubTotalPrice}    evaluate    ${RemoveSubTotalString}+${RemoveShippingString}
     ${OrderTotalPrice}    evaluate    ${SubTotalPrice}-${RemoveDiscountString}
-    run keyword and continue on failure    should be equal    ${OrderTotal}    ${OrderTotalPrice}
+    set global variable    ${OrderTotalPrice}
 
+    run keyword if    ${RemoveSubTotalString} < ${100DiscountMin}    Invalid Promo Code
     run keyword if    ${RemoveSubTotalString} > ${100DiscountMin} and ${RemoveSubTotalString} < ${100DiscountMax}    Set Discount to 100
     run keyword if    ${RemoveSubTotalString} > ${200DiscountMin} and ${RemoveSubTotalString} < ${200DiscountMax}    Set Discount to 200
     run keyword if    ${RemoveSubTotalString} > ${300DiscountMin}    Set Discount to 300
-
-    run keyword and continue on failure    should be equal    ${DiscountValue}    ${RemoveDiscountString}
+    run keyword if    ${RemoveSubTotalString} > ${100DiscountMin}    Compare Promo Code
 
 
 Set Discount to 100
@@ -802,6 +807,11 @@ Set Discount to 300
     ${DiscountValue}  set variable    ${300}
     set global variable    ${DiscountValue}
 
+Invalid Promo Code
+    log to console    Invalid Promo code or Below Min Ammount
+    log    Invalid Promo code or Below Min Ammount
 
-
+Compare Promo Code
+    run keyword and continue on failure    should be equal    ${OrderTotal}    ${OrderTotalPrice}
+    run keyword and continue on failure    should be equal    ${DiscountValue}    ${RemoveDiscountString}
 

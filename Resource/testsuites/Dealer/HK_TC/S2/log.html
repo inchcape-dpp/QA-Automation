@@ -5,16 +5,60 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Robot Framework 6.1.1 (Python 3.11.4 on win32)" name="Generator">
+<meta content="Robot Framework 7.0 (Python 3.11.4 on win32)" name="Generator">
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
-<style media="all" type="text/css">
+<style media="all">
+:root {
+    --text-color: black;
+    --background-color: white;
+    --primary-color: #ddd;
+    --secondary-color: #ccc;
+    --link-color: #15c;
+    --link-hover-color: #61c;
+    --highlight-color: #eee;
+    --target-color: #f9f9f9;
+    --pass-color: #97bd61;
+    --fail-color: #ce3e01;
+    --warn-color: #fed84f;
+    --pass-link-color: #098a09;
+    --warn-link-color: #927201;
+    --fail-link-color: #ce3e01;
+    --ascending-icon: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==);
+    --descending-icon: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==);
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
+}
+[data-theme="dark"] {
+    --text-color: #e2e1d7;
+    --background-color: #1c2227;
+    --primary-color: #26373b;
+    --secondary-color: #424f5a;
+    --link-color: #8cc4ff;
+    --link-hover-color: #bb86fc;
+    --highlight-color: #002b36;
+    --target-color: #1a252e;
+    --pass-link-color: #97bd61;
+    --warn-link-color: #fed84f;
+    --fail-link-color: #ff9b8f;
+    --ascending-icon: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJAgMAAACZCj6+AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAlQTFRFAAAAfn5+////f/cqYgAAAAN0Uk5TAP//RFDWIQAAACdJREFUeJxjYHBgYGAMYGBgDWFgEA1lAAOtVQwMXCsYGJgWADkNDAA78QP9oKr7vwAAAABJRU5ErkJggg==);
+    --descending-icon: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJAgMAAACZCj6+AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAlQTFRFAAAA////fn5+K6jOaAAAAAN0Uk5TAP//RFDWIQAAACdJREFUeJxjYHBgYGAMYGBgDWFgEA1lAAOtVQwMXCsYGJgWADkNDAA78QP9oKr7vwAAAABJRU5ErkJggg==);
+}
 /* Generic and misc styles */
 body {
     font-family: Helvetica, sans-serif;
     font-size: 0.8em;
-    color: black;
+    color: black; /* Fallback value */
+    color: var(--text-color);
     padding: 6px;
-    background: white;
+    background: white; /* Fallback value */
+    background: var(--background-color);
+    margin-left: 15px;
+}
+body[theme-toggled] {
+    transition: background 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 table {
     table-layout: fixed;
@@ -29,20 +73,37 @@ br {
     mso-data-placement: same-cell; /* maintain line breaks in Excel */
 }
 hr {
-    background: #ccc;
+    background: #ccc; /* Fallback value */
+    background: var(--secondary-color);
     height: 1px;
     border: 0;
 }
 a, a:link, a:visited {
     text-decoration: none;
-    color: #15c;
+    color: #15c; /* Fallback value */
+    color: var(--link-color);
 }
 a > img {
-    border: 1px solid #15c !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: #15c !important; /* Fallback value */
+    border-color: var(--link-color) !important;
 }
 a:hover, a:active {
     text-decoration: underline;
-    color: #61c;
+    color: #61c; /* Fallback value */
+    color: var(--link-hover-color);
+}
+select {
+    background-color: white; /* Fallback value */
+    background-color: var(--background-color);
+    color: black; /* Fallback value */
+    color: var(--text-color);
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
+    border-radius: 4px;
 }
 .parent-name {
     font-size: 0.7em;
@@ -55,7 +116,7 @@ a:hover, a:active {
 #header {
     width: 65em;
     height: 3em;
-    margin: 6px 0;
+    margin: 20px 0 6px 0;
 }
 h1 {
     float: left;
@@ -83,14 +144,17 @@ h2 {
 }
 /* Status text colors -- !important allows using them in links */
 .fail {
-    color: #ce3e01 !important;
+    color: #ce3e01 !important; /* Fallback value */
+    color: var(--fail-link-color) !important;
     font-weight: bold;
 }
 .pass {
-    color: #098a09 !important;
+    color: #098a09 !important; /* Fallback value */
+    color: var(--pass-link-color) !important;
 }
 .skip {
-    color: #927201 !important;
+    color: #927201 !important; /* Fallback value */
+    color: var(--warn-link-color) !important;
     font-weight: bold;
 }
 .label {
@@ -98,8 +162,10 @@ h2 {
     font-size: 0.75em;
     letter-spacing: 1px;
     white-space: nowrap;
-    color: black;
-    background-color: #ddd;
+    color: black; /* Fallback value */
+    color: var(--text-color);
+    background-color: #ddd; /* Fallback value */
+    background-color: var(--primary-color);
     border-radius: 3px;
 }
 .label.debug, .label.trace, .label.error, .label.keyword {
@@ -109,15 +175,18 @@ h2 {
     font-weight: bold;
 }
 .label.pass {
-    background-color: #97bd61;
+    background-color: #97bd61; /* Fallback value */
+    background-color: var(--pass-color);
     color: #000 !important;
 }
 .label.fail, .label.error {
-    background-color: #ce3e01;
+    background-color: #ce3e01; /* Fallback value */
+    background-color: var(--fail-color);
     color: #fff !important;
 }
 .label.skip, .label.warn {
-    background-color: #fed84f;
+    background-color: #fed84f; /* Fallback value */
+    background-color: var(--warn-color);
     color: #000 !important;
 }
 /* Top right header */
@@ -146,7 +215,8 @@ h2 {
     padding: 0.3em 0;
     font-size: 0.9em;
     border-bottom-left-radius: 4px;
-    background: #ddd;
+    background: #ddd; /* Fallback value */
+    background: var(--primary-color);
 }
 /* Statistics table */
 .statistics {
@@ -156,15 +226,20 @@ h2 {
     margin-bottom: 1em;
 }
 .statistics tr:hover {
-    background: #f4f4f4;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
     cursor: pointer;
 }
 .statistics th, .statistics td {
-    border: 1px solid #ccc;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
     padding: 0.1em 0.3em;
 }
 .statistics th {
-    background-color: #ddd;
+    background-color: #ddd; /* Fallback value */
+    background-color: var(--primary-color);
     padding: 0.2em 0.3em;
 }
 .statistics td {
@@ -200,27 +275,33 @@ th.stats-col-graph:hover {
 }
 /* Statistics graph */
 .graph, .empty-graph {
-    border: 1px solid #ccc;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
     width: auto;
     height: 7px;
     padding: 0;
-    background: #aaa;
 }
 .empty-graph {
-    background: #eee;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
 }
 .pass-bar, .fail-bar, .skip-bar {
     float: left;
     height: 100%;
 }
 .fail-bar {
-    background: #ce3e01;
+    background: #ce3e01; /* Fallback value */
+    background: var(--fail-color);
 }
 .pass-bar {
-    background: #97bd61;
+    background: #97bd61; /* Fallback value */
+    background: var(--pass-color);
 }
 .skip-bar {
-    background: #fed84f;
+    background: #fed84f; /* Fallback value */
+    background: var(--warn-color);
 }
 /* Tablesorter - adapted from provided Blue Skin */
 .tablesorter-header {
@@ -230,30 +311,84 @@ th.stats-col-graph:hover {
     cursor: pointer;
 }
 .tablesorter-header:hover {
-    background-color: #ccc;
+    background-color: #ccc; /* Fallback value */
+    background-color: var(--secondary-color);
 }
 .tablesorter-headerAsc {
-    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==);
-    background-color: #ccc !important;
+    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==); /* Fallback value */
+    background-image: var(--ascending-icon);
+    background-color: #ccc !important; /* Fallback value */
+    background-color: var(--secondary-color) !important;
 }
 .tablesorter-headerDesc {
-    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==);
-    background-color: #ccc !important;
+    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==); /* Fallback value */
+    background-image: var(--descending-icon);
+    background-color: #ccc !important; /* Fallback value */
+    background-color: var(--secondary-color) !important;
 }
 .sorter-false {
     background-image: none;
     cursor: default;
 }
 .sorter-false:hover {
-    background-color: #ddd;
+    background-color: #ddd; /* Fallback value */
+    background-color: var(--primary-color);
+}
+#theme-toggle {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 28px;
+    height: 28px;
+    border: none;
+    padding: 4px;
+    z-index: 1000;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background: var(--highlight-color);
+}
+[data-theme="dark"] .dark-mode-icon,
+[data-theme="light"] .light-mode-icon {
+    display: none;
+}
+[data-theme="dark"] .light-mode-icon,
+[data-theme="light"] .dark-mode-icon {
+    display: block;
+}
+@keyframes highlight {
+    0% {
+        background: var(--primary-color)
+    }
+    100% {
+        background: var(--target-color);
+    }
+}
+:target {
+    background: var(--target-color);
+    transition: background 0.3s;
+    animation: highlight 4s;
 }
 </style>
-<style media="all" type="text/css">
+<style media="all">
 /* Icons are from Open Iconic <https://useiconic.com/open/>.
    Licensed under the MIT License. */
+:root {
+    --icon-filter: invert(0);
+    --icon-highlight: var(--secondary-color);
+    --elapsed-color: #666;
+}
+/* @media (prefers-color-scheme: dark) { */
+[data-theme="dark"] {
+    --icon-filter: invert(1);
+    --icon-highlight: #a39990;
+    --elapsed-color: #999;
+}
 /* Containers */
 .suite, .test, #errors {
-    border: 1px solid #ccc;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
+    border-width: 1px;
+    border-style: solid;
     padding: 0.3em 0.2em;
     margin: 0.2em 0;
 }
@@ -282,8 +417,10 @@ th.stats-col-graph:hover {
 }
 .element-header:hover {
     cursor: pointer;
-    background-color: #eee;
-    border-color: #ccc;
+    background-color: #eee; /* Fallback value */
+    background-color: var(--highlight-color);
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
 }
 .element-header-toggle {
     position: absolute;
@@ -293,10 +430,14 @@ th.stats-col-graph:hover {
     background-position: center;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfeCR0JChSkZz20AAAAGklEQVQI12NgQAKMDKzInP8IDhOqMk4G7AAANQwBE427PYUAAAAASUVORK5CYII=);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0wIDB2Mmg4di0yaC04eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAzKSIgLz4KPC9zdmc+), none;
+    filter: var(--icon-filter);
     height: 10px;
     width: 10px;
     background-size: 6px 6px;
-    border: 1px solid #ccc;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--icon-highlight);
+    border-width: 1px;
+    border-style: solid;
     border-radius: 2px;
 }
 .closed > .element-header-toggle {
@@ -304,7 +445,8 @@ th.stats-col-graph:hover {
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0zIDB2M2gtM3YyaDN2M2gydi0zaDN2LTJoLTN2LTNoLTJ6IiAvPgo8L3N2Zz4=), none;
 }
 .element-header:hover > .element-header-toggle {
-    background-color: #ccc;
+    background-color: #ccc; /* Fallback value */
+    background-color: var(--icon-highlight);
 }
 .element-header-right:hover ~ .element-header-toggle {
     background-color: transparent;
@@ -324,23 +466,31 @@ th.stats-col-graph:hover {
 }
 .name {
     font-weight: bold;
+    white-space: pre-wrap;
+}
+.arg, .assign {
+    white-space: pre-wrap;
 }
 .elapsed {
     float: right;
-    color: #666;
+    color: #666; /* Fallback value */
+    color: var(--elapsed-color);
     padding-left: 1em;
 }
 .link {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAHlJREFUGJVtzrEJwmAQBtCn6ASuIKTIBhY2gmghBiJYB1udwk10B8FJbKMBcQFbtbkfJHrVwfu+4/idJR64Y9H7E3higj5O3S8Y44ApLnjhnXCNGhV2yNGggDJwiC02gavUbpDFvscRo4QdXOMKDHBufz3HLYKzNn4AbSkV3fncGQYAAAAASUVORK5CYII=);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik01Ljg4LjAzYy0uMTguMDEtLjM2LjAzLS41My4wOS0uMjcuMS0uNTMuMjUtLjc1LjQ3YS41LjUgMCAxIDAgLjY5LjY5Yy4xMS0uMTEuMjQtLjE3LjM4LS4yMi4zNS0uMTIuNzgtLjA3IDEuMDYuMjIuMzkuMzkuMzkgMS4wNCAwIDEuNDRsLTEuNSAxLjVjLS40NC40NC0uOC40OC0xLjA2LjQ3LS4yNi0uMDEtLjQxLS4xMy0uNDEtLjEzYS41LjUgMCAxIDAtLjUuODhzLjM0LjIyLjg0LjI1Yy41LjAzIDEuMi0uMTYgMS44MS0uNzhsMS41LTEuNWMuNzgtLjc4Ljc4LTIuMDQgMC0yLjgxLS4yOC0uMjgtLjYxLS40NS0uOTctLjUzLS4xOC0uMDQtLjM4LS4wNC0uNTYtLjAzem0tMiAyLjMxYy0uNS0uMDItMS4xOS4xNS0xLjc4Ljc1bC0xLjUgMS41Yy0uNzguNzgtLjc4IDIuMDQgMCAyLjgxLjU2LjU2IDEuMzYuNzIgMi4wNi40Ny4yNy0uMS41My0uMjUuNzUtLjQ3YS41LjUgMCAxIDAtLjY5LS42OWMtLjExLjExLS4yNC4xNy0uMzguMjItLjM1LjEyLS43OC4wNy0xLjA2LS4yMi0uMzktLjM5LS4zOS0xLjA0IDAtMS40NGwxLjUtMS41Yy40LS40Ljc1LS40NSAxLjAzLS40NC4yOC4wMS40Ny4wOS40Ny4wOWEuNS41IDAgMSAwIC40NC0uODhzLS4zNC0uMi0uODQtLjIyeiIKICAvPgo8L3N2Zz4=), none;
+    filter: var(--icon-filter);
 }
 .expand {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUGJVjYCACKDAwMByA0ljFDjAwMPxnYGB4ABVQgLL/Q+VQBB6gseGmIivCkERXhFUSWRFOSawAAEl7E3uv1iMcAAAAAElFTkSuQmCC);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0xLjUgMGwtMS41IDEuNSA0IDQgNC00LTEuNS0xLjUtMi41IDIuNS0yLjUtMi41eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAxKSIgLz4KPC9zdmc+), none;
+    filter: var(--icon-filter);
 }
 .collapse {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAC5JREFUGJVjYCARNEAxTsn/UIyhCFkSQxG6ThQ+C5IpjWhG1yNb4YDFTdjEMAEACi8Q++9Y9TAAAAAASUVORK5CYII=);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik00IDBsLTQgNCAxLjUgMS41IDIuNS0yLjUgMi41IDIuNSAxLjUtMS41LTQtNHoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMSkiIC8+Cjwvc3ZnPg==), none;
+    filter: var(--icon-filter);
 }
 .expand, .collapse, .link {
     float: left;
@@ -352,7 +502,10 @@ th.stats-col-graph:hover {
     background-size: 8px 8px;
     background-repeat: no-repeat;
     background-position: center;
-    border: 1px solid #ccc;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--icon-highlight);
+    border-width: 1px;
+    border-style: solid;
     border-radius: 2px;
 }
 .link {
@@ -362,7 +515,8 @@ th.stats-col-graph:hover {
     visibility: visible;
 }
 .expand:hover, .collapse:hover, .link:hover {
-    background-color: #ccc;
+    background-color: #ccc; /* Fallback value */
+    background-color: var(--icon-highlight);
 }
 /* Messages and errors */
 .messages .time, .messages .message {
@@ -403,11 +557,16 @@ th.stats-col-graph:hover {
 .message-row:hover .select-message div {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfeCR0MOzhWKZQOAAAASUlEQVQY032PsRHAIAwDX9BkicD+W8UMEqegAQJWKZ/+3sLZJhFGQEZzNaIa4ibh66En867VNaIeoP5WppNuIGoAlOm3g5VC1AdYeQv1BZPRSgAAAABJRU5ErkJggg==);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0wIDB2MWg4di0xaC04em0wIDJ2MWg2di0xaC02em0wIDJ2MWg4di0xaC04em0wIDJ2MWg2di0xaC02eiIgLz4KPC9zdmc+), none;
-    border: 1px solid #ccc;
+    filter: var(--icon-filter);
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--icon-highlight);
+    border-width: 1px;
+    border-style: solid;
     border-radius: 2px;
 }
 .select-message:hover div {
-    background-color: #ccc;
+    background-color: #ccc; /* Fallback value */
+    background-color: var(--icon-highlight);
     cursor: pointer;
 }
 /* Message tables - these MUST NOT be combined together because otherwise
@@ -439,7 +598,7 @@ th.stats-col-graph:hover {
     cursor: default;
 }
 </style>
-<style media="print" type="text/css">
+<style media="print">
 body {
     background: white !important;
     padding: 0;
@@ -479,7 +638,7 @@ a:link, a:visited {
     background: #ddd !important;
 }
 </style>
-<style media="all" type="text/css">
+<style media="all">
 #javascript-disabled {
     width: 600px;
     margin: 100px auto 0 auto;
@@ -502,7 +661,7 @@ a:link, a:visited {
     font-style: italic;
 }
 </style>
-<style media="all" type="text/css">
+<style media="all">
 .doc > * {
     margin: 0.7em 1em 0.1em 1em;
     padding: 0;
@@ -514,14 +673,12 @@ a:link, a:visited {
     margin-top: 0.1em;
 }
 .doc table {
-    border: 1px solid #ccc;
     background: transparent;
     border-collapse: collapse;
     empty-cells: show;
     font-size: 0.9em;
 }
 .doc table th, .doc table td {
-    border: 1px solid #ccc;
     background: transparent;
     padding: 0.1em 0.3em;
     height: 1.2em;
@@ -531,24 +688,32 @@ a:link, a:visited {
     letter-spacing: 0.1em;
 }
 .doc pre {
+    border-radius: 2px;
     font-size: 1.1em;
     letter-spacing: 0.05em;
-    background: #f4f4f4;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
 }
 .doc code {
+    border-radius: 2px;
     padding: 0 0.2em;
     letter-spacing: 0.05em;
-    background: #eee;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
 }
 .doc li {
     list-style-position: inside;
     list-style-type: square;
 }
-.doc img {
-    border: 1px solid #ccc;
+.doc img, .doc table, .doc table th, .doc table td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
 }
 .doc hr {
-    background: #ccc;
+    background: #ccc; /* Fallback value */
+    background: var(--secondary-color);
     height: 1px;
     border: 0;
 }
@@ -850,7 +1015,6 @@ window.model = (function () {
         suite.populateSuites = createIterablePopulator('Suite');
         suite.childrenNames = ['keyword', 'suite', 'test'];
         suite.callWhenChildrenReady = function (callable) { callable(); };
-        suite.message = data.message;
         suite.children = function () {
             return suite.keywords().concat(suite.tests()).concat(suite.suites());
         };
@@ -941,6 +1105,7 @@ window.model = (function () {
             name: data.name,
             doc: data.doc,
             status: data.status,
+            message: data.message,
             times: data.times,
             id: data.parent ? data.parent.id + '-' + data.id : data.id
         };
@@ -961,7 +1126,6 @@ window.model = (function () {
                 return test.keywords();
         };
         test.tags = data.tags;
-        test.message = data.message;
         test.matchesTagPattern = function (pattern) {
             return containsTagPattern(test.tags, pattern);
         };
@@ -972,13 +1136,12 @@ window.model = (function () {
     }
     function Keyword(data) {
         var kw = createModelObject(data);
-        var flatTypes = ['RETURN', 'BREAK', 'CONTINUE'];
         kw.libname = data.libname;
         kw.fullName = (kw.libname ? kw.libname + '.' : '') + kw.name;
         kw.type = data.type;
         kw.template = 'keywordTemplate';
         kw.arguments = data.args;
-        kw.assign = data.assign + (data.assign ? ' =' : '');
+        kw.assign = data.assign + (data.assign ? ' =  ' : '');
         kw.tags = data.tags;
         kw.timeout = data.timeout;
         kw.populateKeywords = createIterablePopulator('Keyword');
@@ -1357,8 +1520,9 @@ window.testdata = function () {
     var _statistics = null;
     var LEVELS = ['TRACE', 'DEBUG', 'INFO', 'WARN', 'ERROR', 'FAIL', 'SKIP'];
     var STATUSES = ['FAIL', 'PASS', 'SKIP', 'NOT RUN'];
-    var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'ITERATION', 'IF', 'ELSE IF', 'ELSE', 'RETURN',
-                         'TRY', 'EXCEPT', 'FINALLY', 'WHILE', 'CONTINUE', 'BREAK', 'ERROR'];
+    var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'ITERATION', 'IF',
+                         'ELSE IF', 'ELSE', 'RETURN', 'VAR', 'TRY', 'EXCEPT', 'FINALLY',
+                         'WHILE', 'CONTINUE', 'BREAK', 'ERROR'];
     function addElement(elem) {
         if (!elem.id)
             elem.id = uniqueId();
@@ -1401,6 +1565,7 @@ window.testdata = function () {
         return createKeyword(parent, element, strings, index - messages.length);
     }
     function createKeyword(parent, element, strings, index) {
+        var status = element[8];
         var kw = model.Keyword({
             parent: parent,
             type: KEYWORD_TYPES[element[0]],
@@ -1416,7 +1581,12 @@ window.testdata = function () {
                 this.doc = function () { return doc; };
                 return doc;
             },
-            status: parseStatus(element[8], strings),
+            status: parseStatus(status),
+            message: function () {
+                var msg = status.length == 4 ? strings.get(status[3]) : '';
+                this.message = function () { return msg; };
+                return msg;
+            },
             times: model.Times(times(element[8])),
             isChildrenLoaded: typeof(element[9]) !== 'number'
         });
@@ -1627,6 +1797,20 @@ window.testdata = function () {
 }();
 </script>
 <script type="text/javascript">
+const lightModeIcon = `
+<svg class="light-mode-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+    viewBox="0 0 24 24" fill="var(--text-color)">
+    <rect fill="none" height="24" width="24" />
+    <path
+        d="M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0 c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2 c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1 C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06 c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41 l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41 c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36 c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z" />
+</svg>`
+const darkModeIcon = `
+<svg class="dark-mode-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+    viewBox="0 0 24 24" fill="var(--text-color)">
+    <rect fill="none" height="24" width="24" />
+    <path
+        d="M11.01,3.05C6.51,3.54,3,7.36,3,12c0,4.97,4.03,9,9,9c4.63,0,8.45-3.5,8.95-8c0.09-0.79-0.78-1.42-1.54-0.95 c-0.84,0.54-1.84,0.85-2.91,0.85c-2.98,0-5.4-2.42-5.4-5.4c0-1.06,0.31-2.06,0.84-2.89C12.39,3.94,11.9,2.98,11.01,3.05z" />
+</svg>`
 function removeJavaScriptDisabledWarning() {
     // Not using jQuery here for maximum speed
     document.getElementById('javascript-disabled').style.display = 'none';
@@ -1662,6 +1846,10 @@ function setTitle(suiteName, type) {
 function addHeader() {
     var generated = util.timestamp(window.output.generated);
     $.tmpl('<h1>${title}</h1>' +
+           '<button id=theme-toggle>' +
+             lightModeIcon +
+             darkModeIcon +
+           '</button>' +
            '<div id="generated">' +
              '<span>Generated<br>${generated}</span><br>' +
              '<span id="generated-ago">${ago} ago</span>' +
@@ -1673,6 +1861,7 @@ function addHeader() {
         ago: util.createGeneratedAgoString(generated),
         title: document.title
     }).appendTo($('#header'));
+    document.getElementById('theme-toggle')?.addEventListener('click', theme.onClick);
 }
 function addReportOrLogLink(myType) {
     var url;
@@ -1801,30 +1990,116 @@ function stopPropagation(event) {
     if (event.stopPropagation)
         event.stopPropagation();
 }
+const theme = function () {
+    const storageKey = 'theme-preference';
+    const urlParams = new URLSearchParams(window.location.search);
+    var storage;
+    var theme;
+    function init(givenStorage) {
+        storage = givenStorage;
+        theme = { value: getPreference() };
+        document.body.setAttribute('data-theme', theme.value);
+        reflectPreference();
+        window.matchMedia('(prefers-color-scheme: dark)')
+            .addEventListener('change', ({matches:isDark}) => {
+                theme.value = isDark ? 'dark' : 'light';
+                setPreference();
+            });
+        window.addEventListener('storage', ({key, newValue}) => {
+            if (key === storage.fullKey(storageKey)) {
+                theme.value = newValue === 'dark' ? 'dark' : 'light';
+                setPreference();
+            }
+        });
+    }
+    function getPreference() {
+        if (urlParams.has('theme')) {
+            var urlTheme = urlParams.get('theme') === 'dark' ? 'dark' : 'light';
+            storage.set(storageKey, urlTheme);
+            urlParams.delete('theme');
+            return urlTheme;
+        }
+        if (storage.get(storageKey))
+            return storage.get(storageKey) === 'dark' ? 'dark' : 'light';
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    function setPreference() {
+        storage.set(storageKey, theme.value);
+        reflectPreference();
+    }
+    function reflectPreference() {
+        document.body.setAttribute('data-theme', theme.value);
+        document.querySelector('#theme-toggle')?.setAttribute('aria-label', theme.value);
+        const event = new Event('theme-change', {value: theme.value});
+        document.dispatchEvent(event);
+    }
+    function onClick() {
+        theme.value = theme.value === 'light' ? 'dark' : 'light';
+        document.body.setAttribute('theme-toggled', "");
+        setPreference();
+    }
+    return {init: init, getPreference: getPreference, setPreference: setPreference,
+        reflectPreference: reflectPreference, onClick: onClick};
+}();
+</script>
+<script type="text/javascript">
+storage = function () {
+    var prefix = 'robot-framework-';
+    var storage;
+    function init(user) {
+        if (user)
+            prefix += user + '-';
+        storage = getStorage();
+    }
+    function getStorage() {
+        // Use localStorage if it's accessible, normal object otherwise.
+        // Inspired by https://stackoverflow.com/questions/11214404
+        try {
+            localStorage.setItem(prefix, prefix);
+            localStorage.removeItem(prefix);
+            return localStorage;
+        } catch (exception) {
+            return {};
+        }
+    }
+    function get(key, defaultValue) {
+        var value = storage[fullKey(key)];
+        if (typeof value === 'undefined')
+            return defaultValue;
+        return value;
+    }
+    function set(key, value) {
+        storage[fullKey(key)] = value;
+    }
+    function fullKey(key) {
+        return prefix + key;
+    }
+    return {init: init, get: get, set: set, fullKey: fullKey};
+}();
 </script>
 <script type="text/javascript">
 window.output = {};
 </script>
 <script type="text/javascript">
-window.output["suite"] = [1,2,3,4,[],[1,0,154642],[],[[5,0,0,[],[1,344,4328],[[0,6,7,0,8,9,0,0,[1,344,4328],[[0,9,10,0,0,0,0,0,[1,344,4328],[[0,11,12,0,13,14,0,0,[1,344,4218],[[344,2,15]]],[0,16,12,0,17,0,0,0,[1,4562,110],[]]]]]]]],[18,0,0,[],[1,4672,18],[[0,6,7,0,8,19,0,0,[1,4672,17],[[0,19,10,0,0,0,0,0,[1,4672,17],[[0,20,21,0,22,23,24,0,[1,4672,0],[[4672,2,25]]],[0,26,27,0,28,29,0,0,[1,4672,14],[[4686,2,30]]],[0,31,7,0,32,29,33,0,[1,4687,0],[[4687,2,34]]],[0,35,12,0,36,33,0,0,[1,4687,1],[]],[0,37,7,0,38,33,0,0,[1,4688,1],[[4689,2,34]]]]]]]]],[39,0,0,[40,39],[1,4691,10002],[[0,41,7,0,42,39,0,0,[1,4691,10002],[[0,39,10,0,0,0,0,0,[1,4691,10002],[[0,40,7,0,43,44,0,0,[1,4691,10002],[[14693,2,45]]]]]]]]],[46,0,0,[47,48],[1,14693,3408],[[0,41,7,0,42,49,0,0,[1,14693,2171],[[0,49,50,0,0,0,0,0,[1,14693,2171],[[0,51,12,0,52,53,0,0,[1,14693,22],[]],[0,54,12,0,55,56,0,0,[1,14715,90],[[14805,2,57]]],[0,58,12,0,59,56,0,0,[1,14805,59],[[14805,2,60]]],[0,40,7,0,43,61,0,0,[1,14864,2000],[[16864,2,62]]]]]]],[0,41,7,0,42,63,0,0,[1,16864,1237],[[0,63,50,0,0,0,0,0,[1,16864,1237],[[0,64,12,0,65,66,0,0,[1,16864,29],[]],[0,67,12,0,68,69,0,0,[1,16893,96],[[16893,2,70]]],[0,54,12,0,55,66,0,0,[1,16989,111],[[17100,2,71]]],[0,40,7,0,43,72,0,0,[1,17100,1001],[[18101,2,73]]]]]]]]],[74,0,0,[75,48],[1,18101,1196],[[0,41,7,0,42,76,0,0,[1,18101,1196],[[0,76,50,0,0,0,0,0,[1,18101,1196],[[0,64,12,0,65,77,0,0,[1,18101,47],[]],[0,67,12,0,68,78,0,0,[1,18148,59],[[18148,2,79]]],[0,54,12,0,55,77,0,0,[1,18207,89],[[18296,2,80]]],[0,40,7,0,43,72,0,0,[1,18296,1001],[[19297,2,73]]]]]]]]],[81,0,0,[82,83],[1,19297,12154],[[0,41,7,0,42,84,0,0,[1,19297,2153],[[0,84,50,0,0,0,0,0,[1,19297,2153],[[0,54,12,0,55,85,0,0,[1,19297,104],[[19401,2,86]]],[0,58,12,0,59,85,0,0,[1,19402,47],[[19403,2,87]]],[0,40,7,0,43,61,0,0,[1,19449,2001],[[21450,2,62]]]]]]],[0,41,7,0,42,39,0,0,[1,21450,10001],[[0,39,10,0,0,0,0,0,[1,21450,10001],[[0,40,7,0,43,44,0,0,[1,21451,10000],[[31451,2,45]]]]]]]]],[88,0,0,[89,90],[1,31451,454],[[0,41,7,0,42,91,0,0,[1,31451,453],[[0,91,92,0,0,0,0,0,[1,31451,453],[[0,51,12,0,52,93,0,0,[1,31451,24],[]],[0,51,12,0,52,94,0,0,[1,31475,0],[]],[0,51,12,0,52,95,0,0,[1,31475,16],[]],[0,51,12,0,52,96,0,0,[1,31491,15],[]],[0,54,12,0,55,97,0,0,[1,31506,99],[[31605,2,98]]],[0,54,12,0,55,99,0,0,[1,31605,133],[[31737,2,100]]],[0,54,12,0,55,101,0,0,[1,31738,83],[[31821,2,102]]],[0,54,12,0,55,103,0,0,[1,31822,82],[[31904,2,104]]]]]]]]],[105,0,0,[106,90],[1,31905,5212],[[0,41,7,0,42,107,0,0,[1,31906,5211],[[0,107,92,0,0,0,0,0,[1,31906,5211],[[0,58,12,0,59,97,0,0,[1,31906,34],[[31906,2,108]]],[0,40,7,0,43,109,0,0,[1,31940,5001],[[36941,2,110]]],[0,111,12,0,112,0,0,0,[1,36941,176],[[37117,2,113]]]]]]]]],[114,0,0,[115,90],[1,37117,5199],[[0,41,7,0,42,116,0,0,[1,37117,5199],[[0,116,92,0,0,0,0,0,[1,37117,5199],[[0,58,12,0,59,99,0,0,[1,37117,52],[[37117,2,117]]],[0,40,7,0,43,109,0,0,[1,37169,5001],[[42170,2,110]]],[0,111,12,0,112,0,0,0,[1,42170,146],[[42316,2,118]]]]]]]]],[119,0,0,[120,90],[1,42316,5173],[[0,41,7,0,42,121,0,0,[1,42316,5173],[[0,121,92,0,0,0,0,0,[1,42316,5173],[[0,51,12,0,52,101,0,0,[1,42316,16],[]],[0,58,12,0,59,101,0,0,[1,42332,43],[[42332,2,122]]],[0,40,7,0,43,109,0,0,[1,42375,5000],[[47375,2,110]]],[0,111,12,0,112,0,0,0,[1,47375,114],[[47489,2,123]]]]]]]]],[124,0,0,[125,90],[1,47489,5159],[[0,41,7,0,42,126,0,0,[1,47489,5159],[[0,126,92,0,0,0,0,0,[1,47489,5159],[[0,51,12,0,52,96,0,0,[1,47489,10],[]],[0,58,12,0,59,103,0,0,[1,47499,36],[[47499,2,127]]],[0,40,7,0,43,109,0,0,[1,47535,5000],[[52535,2,110]]],[0,111,12,0,112,0,0,0,[1,52535,113],[[52648,2,128]]]]]]]]],[129,0,0,[130,131],[1,52648,5451],[[0,41,7,0,42,132,0,0,[1,52648,5451],[[0,132,92,0,0,0,0,0,[1,52648,5451],[[0,51,12,0,52,133,0,0,[1,52648,32],[]],[0,134,12,0,135,136,0,0,[1,52680,271],[]],[0,58,12,0,59,136,0,0,[1,52951,40],[[52952,2,137]]],[0,40,7,0,43,109,0,0,[1,52991,5001],[[57992,2,110]]],[0,111,12,0,112,0,0,0,[1,57992,107],[[58099,2,138]]]]]]]]],[139,0,0,[140,141],[1,58099,3838],[[0,41,7,0,42,142,0,0,[1,58099,3838],[[0,142,143,0,0,0,0,0,[1,58099,3838],[[0,51,12,0,52,133,0,0,[1,58099,15],[]],[0,58,12,0,59,136,0,0,[1,58114,28],[[58114,2,137]]],[0,51,12,0,52,144,0,0,[1,58142,14],[]],[0,111,12,0,112,0,0,0,[1,58156,157],[[58313,2,145]]],[0,51,12,0,52,133,0,0,[1,58313,16],[]],[0,51,12,0,52,146,0,0,[1,58329,16],[]],[0,51,12,0,52,147,0,0,[1,58345,15],[]],[0,51,12,0,52,148,0,0,[1,58360,19],[]],[0,51,12,0,52,149,0,0,[1,58379,17],[]],[0,51,12,0,52,150,0,0,[1,58396,12],[]],[0,51,12,0,52,151,0,0,[1,58408,16],[]],[0,51,12,0,52,152,0,0,[1,58424,0],[]],[0,51,12,0,52,153,0,0,[1,58424,15],[]],[0,54,12,0,55,136,0,0,[1,58439,104],[[58543,2,154]]],[0,54,12,0,55,155,0,0,[1,58543,127],[[58669,2,156]]],[0,54,12,0,55,157,0,0,[1,58670,103],[[58773,2,158]]],[0,54,12,0,55,159,0,0,[1,58773,92],[[58864,2,160]]],[0,54,12,0,55,161,0,0,[1,58865,98],[[58963,2,162]]],[0,54,12,0,55,163,0,0,[1,58964,120],[[59084,2,164]]],[0,54,12,0,55,165,0,0,[1,59085,87],[[59172,2,166]]],[0,54,12,0,55,167,0,0,[1,59172,93],[[59265,2,168]]],[0,54,12,0,55,169,0,0,[1,59266,95],[[59361,2,170]]],[0,134,12,0,135,171,0,0,[1,59361,290],[]],[0,54,12,0,55,171,0,0,[1,59651,123],[[59774,2,172]]],[0,54,12,0,55,173,0,0,[1,59774,79],[[59853,2,174]]],[0,54,12,0,55,175,0,0,[1,59854,83],[[59937,2,176]]],[0,40,7,0,43,61,0,0,[1,59937,2000],[[61937,2,62]]]]]]]]],[177,0,0,[140,178],[1,61937,2470],[[0,41,7,0,42,179,0,0,[1,61937,2469],[[0,179,143,0,0,0,0,0,[1,61937,2469],[[0,51,12,0,52,180,0,0,[1,61937,23],[]],[0,134,12,0,135,181,0,0,[1,61960,281],[]],[0,58,12,0,59,181,0,0,[1,62241,37],[[62241,2,182]]],[0,40,7,0,43,61,0,0,[1,62279,2000],[[64279,2,62]]],[0,111,12,0,112,0,0,0,[1,64279,127],[[64406,2,183]]]]]]]]],[184,0,0,[140,185],[1,64408,10571],[[0,41,7,0,42,186,0,0,[1,64408,7281],[[0,186,143,0,0,0,0,0,[1,64409,7280],[[0,51,12,0,52,187,0,0,[1,64409,1074],[]],[0,51,12,0,52,188,0,0,[1,65483,16],[]],[0,51,12,0,52,189,0,0,[1,65499,0],[]],[0,54,12,0,55,190,0,0,[1,65499,109],[[65608,2,191]]],[0,51,12,0,52,192,0,0,[1,65608,15],[]],[0,51,12,0,52,193,0,0,[1,65623,13],[]],[0,51,12,0,52,194,0,0,[1,65636,13],[]],[0,54,12,0,55,195,0,0,[1,65649,93],[[65742,2,196]]],[0,54,12,0,55,197,0,0,[1,65742,77],[[65819,2,198]]],[0,54,12,0,55,199,0,0,[1,65819,102],[[65920,2,200]]],[0,51,12,0,52,201,0,0,[1,65921,17],[]],[0,51,12,0,52,202,0,0,[1,65938,21],[]],[0,51,12,0,52,203,0,0,[1,65959,15],[]],[0,51,12,0,52,204,0,0,[1,65974,16],[]],[0,54,12,0,55,205,0,0,[1,65990,97],[[66087,2,206]]],[0,54,12,0,55,207,0,0,[1,66087,88],[[66175,2,208]]],[0,54,12,0,55,209,0,0,[1,66175,106],[[66281,2,210]]],[0,54,12,0,55,211,0,0,[1,66282,79],[[66361,2,212]]],[0,134,12,0,135,213,0,0,[1,66361,284],[]],[0,54,12,0,55,213,0,0,[1,66645,122],[[66767,2,214]]],[0,51,12,0,52,215,0,0,[1,66767,5],[]],[0,51,12,0,52,216,0,0,[1,66783,13],[]],[0,51,12,0,52,217,0,0,[1,66796,13],[]],[0,51,12,0,52,218,0,0,[1,66809,8],[]],[0,51,12,0,52,219,0,0,[1,66817,16],[]],[0,51,12,0,52,220,0,0,[1,66833,0],[]],[0,51,12,0,52,221,0,0,[1,66849,0],[]],[0,51,12,0,52,222,0,0,[1,66849,15],[]],[0,54,12,0,55,223,0,0,[1,66864,125],[[66989,2,224]]],[0,54,12,0,55,225,0,0,[1,66989,91],[[67079,2,226]]],[0,54,12,0,55,227,0,0,[1,67080,88],[[67168,2,228]]],[0,54,12,0,55,229,0,0,[1,67169,94],[[67263,2,230]]],[0,54,12,0,55,231,0,0,[1,67264,103],[[67366,2,232]]],[0,54,12,0,55,233,0,0,[1,67368,93],[[67461,2,234]]],[0,54,12,0,55,235,0,0,[1,67462,102],[[67564,2,236]]],[0,54,12,0,55,237,0,0,[1,67564,102],[[67666,2,238]]],[0,134,12,0,135,239,0,0,[1,67667,292],[]],[0,54,12,0,55,239,0,0,[1,67959,125],[[68084,2,240]]],[0,51,12,0,52,241,0,0,[1,68084,18],[]],[0,51,12,0,52,242,0,0,[1,68102,14],[]],[0,51,12,0,52,243,0,0,[1,68116,15],[]],[0,51,12,0,52,244,0,0,[1,68131,2],[]],[0,51,12,0,52,245,0,0,[1,68133,16],[]],[0,54,12,0,55,246,0,0,[1,68149,132],[[68281,2,247]]],[0,54,12,0,55,248,0,0,[1,68281,100],[[68381,2,249]]],[0,54,12,0,55,250,0,0,[1,68382,122],[[68504,2,251]]],[0,54,12,0,55,252,0,0,[1,68504,101],[[68605,2,253]]],[0,54,12,0,55,254,0,0,[1,68605,83],[[68688,2,255]]],[0,40,7,0,43,256,0,0,[1,68688,3001],[[71689,2,257]]]]]]],[0,41,7,0,42,258,0,0,[1,71689,3290],[[0,258,92,0,0,0,0,0,[1,71689,3290],[[0,134,12,0,135,259,0,0,[1,71689,290],[]],[0,40,7,0,43,256,0,0,[1,71979,3000],[[74979,2,257]]]]]]]]],[260,0,0,[130,261],[1,74979,5452],[[0,41,7,0,42,262,0,0,[1,74983,5448],[[0,262,92,0,0,0,0,0,[1,74983,5448],[[0,51,12,0,52,263,0,0,[1,74983,15],[]],[0,134,12,0,135,264,0,0,[1,74999,270],[]],[0,58,12,0,59,264,0,0,[1,75269,43],[[75270,2,265]]],[0,40,7,0,43,109,0,0,[1,75312,5000],[[80312,2,110]]],[0,111,12,0,112,0,0,0,[1,80312,119],[[80431,2,266]]]]]]]]],[267,0,0,[268,269],[1,80431,3167],[[0,41,7,0,42,270,0,0,[1,80431,3167],[[0,270,271,0,0,0,0,0,[1,80431,3167],[[0,51,12,0,52,272,0,0,[1,80431,16],[]],[0,58,12,0,59,273,0,0,[1,80447,37],[[80447,2,274]]],[0,40,7,0,43,256,0,0,[1,80484,3001],[[83485,2,257]]],[0,111,12,0,112,0,0,0,[1,83485,113],[[83598,2,275]]]]]]]]],[276,0,0,[268,277],[1,83614,7397],[[0,41,7,0,42,278,0,0,[1,83614,4110],[[0,278,271,0,0,0,0,0,[1,83614,4110],[[0,51,12,0,52,279,0,0,[1,83614,16],[]],[0,51,12,0,52,280,0,0,[1,83630,6],[]],[0,54,12,0,55,281,0,0,[1,83636,114],[[83750,2,282]]],[0,54,12,0,55,283,0,0,[1,83751,94],[[83844,2,284]]],[0,51,12,0,52,285,0,0,[1,83845,20],[]],[0,51,12,0,52,286,0,0,[1,83866,14],[]],[0,51,12,0,52,287,0,0,[1,83880,14],[]],[0,51,12,0,52,288,0,0,[1,83894,5],[]],[0,51,12,0,52,289,0,0,[1,83899,16],[]],[0,51,12,0,52,290,0,0,[1,83915,16],[]],[0,51,12,0,52,291,0,0,[1,83931,16],[]],[0,51,12,0,52,292,0,0,[1,83947,0],[]],[0,51,12,0,52,293,0,0,[1,83947,15],[]],[0,51,12,0,52,294,0,0,[1,83962,26],[]],[0,51,12,0,52,295,0,0,[1,83988,14],[]],[0,54,12,0,55,296,0,0,[1,84002,109],[[84111,2,297]]],[0,134,12,0,135,298,0,0,[1,84111,274],[]],[0,51,12,0,52,299,0,0,[1,84385,31],[]],[0,134,12,0,135,300,0,0,[1,84416,276],[]],[0,54,12,0,55,300,0,0,[1,84692,104],[[84796,2,301]]],[0,134,12,0,135,302,0,0,[1,84797,300],[]],[0,54,12,0,55,302,0,0,[1,85097,119],[[85216,2,303]]],[0,134,12,0,135,304,0,0,[1,85216,284],[]],[0,51,12,0,52,305,0,0,[1,85500,16],[]],[0,54,12,0,55,304,0,0,[1,85516,121],[[85637,2,306]]],[0,54,12,0,55,307,0,0,[1,85637,86],[[85723,2,308]]],[0,40,7,0,43,61,0,0,[1,85723,2001],[[87724,2,62]]]]]]],[0,41,7,0,42,258,0,0,[1,87725,3286],[[0,258,92,0,0,0,0,0,[1,87725,3286],[[0,134,12,0,135,259,0,0,[1,87725,286],[]],[0,40,7,0,43,256,0,0,[1,88011,3000],[[91011,2,257]]]]]]]]],[309,0,0,[130,310],[1,91014,5327],[[0,41,7,0,42,311,0,0,[1,91014,5327],[[0,311,92,0,0,0,0,0,[1,91014,5327],[[0,51,12,0,52,312,0,0,[1,91014,16],[]],[0,134,12,0,135,313,0,0,[1,91030,264],[]],[0,58,12,0,59,313,0,0,[1,91294,47],[[91294,2,314]]],[0,40,7,0,43,109,0,0,[1,91341,5000],[[96341,2,110]]]]]]]]],[315,0,0,[130,316],[1,96345,5451],[[0,41,7,0,42,317,0,0,[1,96345,5448],[[0,317,92,0,0,0,0,0,[1,96345,5448],[[0,51,12,0,52,318,0,0,[1,96345,16],[]],[0,134,12,0,135,319,0,0,[1,96361,275],[]],[0,58,12,0,59,319,0,0,[1,96636,33],[[96636,2,320]]],[0,40,7,0,43,109,0,0,[1,96669,5001],[[101670,2,110]]],[0,111,12,0,112,0,0,0,[1,101670,123],[[101793,2,321]]]]]]]]],[322,0,0,[323,324],[1,101796,5435],[[0,41,7,0,42,325,0,0,[1,101796,2151],[[0,325,326,0,0,0,0,0,[1,101796,2151],[[0,51,12,0,52,327,0,0,[1,101796,16],[]],[0,51,12,0,52,328,0,0,[1,101812,15],[]],[0,111,12,0,112,0,0,0,[1,101827,119],[[101946,2,329]]],[0,40,7,0,43,61,0,0,[1,101946,2001],[[103947,2,62]]]]]]],[0,41,7,0,42,258,0,0,[1,103947,3284],[[0,258,92,0,0,0,0,0,[1,103947,3284],[[0,134,12,0,135,259,0,0,[1,103947,283],[]],[0,40,7,0,43,256,0,0,[1,104230,3001],[[107231,2,257]]]]]]]]],[330,0,0,[130,331],[1,107231,5471],[[0,41,7,0,42,332,0,0,[1,107239,5463],[[0,332,92,0,0,0,0,0,[1,107239,5463],[[0,51,12,0,52,333,0,0,[1,107239,16],[]],[0,134,12,0,135,334,0,0,[1,107255,279],[]],[0,58,12,0,59,334,0,0,[1,107534,44],[[107535,2,335]]],[0,40,7,0,43,109,0,0,[1,107578,5001],[[112579,2,110]]],[0,111,12,0,112,0,0,0,[1,112579,123],[[112702,2,336]]]]]]]]],[337,0,0,[338,339],[1,112702,5447],[[0,41,7,0,42,340,0,0,[1,112702,2182],[[0,340,341,0,0,0,0,0,[1,112702,2182],[[0,51,12,0,52,342,0,0,[1,112702,10],[]],[0,51,12,0,52,343,0,0,[1,112712,16],[]],[0,111,12,0,112,0,0,0,[1,112728,156],[[112884,2,344]]],[0,40,7,0,43,61,0,0,[1,112884,2000],[[114884,2,62]]]]]]],[0,41,7,0,42,258,0,0,[1,114884,3265],[[0,258,92,0,0,0,0,0,[1,114884,3265],[[0,134,12,0,135,259,0,0,[1,114884,265],[]],[0,40,7,0,43,256,0,0,[1,115149,3000],[[118149,2,257]]]]]]]]],[345,0,0,[130,346],[1,118154,5333],[[0,41,7,0,42,347,0,0,[1,118154,5333],[[0,347,92,0,0,0,0,0,[1,118154,5333],[[0,51,12,0,52,348,0,0,[1,118154,15],[]],[0,134,12,0,135,349,0,0,[1,118169,282],[]],[0,58,12,0,59,349,0,0,[1,118451,36],[[118451,2,350]]],[0,40,7,0,43,109,0,0,[1,118487,5000],[[123487,2,110]]]]]]]]],[351,0,0,[130,352],[1,123487,5495],[[0,41,7,0,42,353,0,0,[1,123487,5495],[[0,353,92,0,0,0,0,0,[1,123490,5492],[[0,51,12,0,52,354,0,0,[1,123490,0],[]],[0,134,12,0,135,355,0,0,[1,123490,287],[]],[0,58,12,0,59,355,0,0,[1,123777,45],[[123777,2,356]]],[0,111,12,0,112,0,0,0,[1,123822,159],[[123981,2,357]]],[0,40,7,0,43,109,0,0,[1,123981,5001],[[128982,2,110]]]]]]]]],[358,0,0,[359,360],[1,128982,1537],[[0,41,7,0,42,361,0,0,[1,128982,1537],[[0,361,362,0,0,0,0,0,[1,128982,1536],[[0,51,12,0,52,363,0,0,[1,128982,32],[]],[0,51,12,0,52,364,0,0,[1,129014,16],[]],[0,51,12,0,52,365,0,0,[1,129030,22],[]],[0,51,12,0,52,366,0,0,[1,129052,13],[]],[0,51,12,0,52,367,0,0,[1,129065,13],[]],[0,51,12,0,52,368,0,0,[1,129078,3],[]],[0,51,12,0,52,369,0,0,[1,129081,16],[]],[0,51,12,0,52,370,0,0,[1,129097,15],[]],[0,51,12,0,52,371,0,0,[1,129112,16],[]],[0,51,12,0,52,372,0,0,[1,129128,15],[]],[0,51,12,0,52,373,0,0,[1,129143,1],[]],[0,51,12,0,52,374,0,0,[1,129144,16],[]],[0,51,12,0,52,375,0,0,[1,129160,31],[]],[0,51,12,0,52,376,0,0,[1,129191,16],[]],[0,54,12,0,55,377,0,0,[1,129207,126],[[129333,2,378]]],[0,54,12,0,55,379,0,0,[1,129333,86],[[129419,2,380]]],[0,54,12,0,55,381,0,0,[1,129419,111],[[129529,2,382]]],[0,54,12,0,55,383,0,0,[1,129530,102],[[129631,2,384]]],[0,54,12,0,55,385,0,0,[1,129632,86],[[129718,2,386]]],[0,54,12,0,55,387,0,0,[1,129718,84],[[129802,2,388]]],[0,54,12,0,55,389,0,0,[1,129802,89],[[129891,2,390]]],[0,54,12,0,55,391,0,0,[1,129891,97],[[129988,2,392]]],[0,54,12,0,55,393,0,0,[1,129988,112],[[130100,2,394]]],[0,54,12,0,55,395,0,0,[1,130100,102],[[130202,2,396]]],[0,54,12,0,55,397,0,0,[1,130202,94],[[130295,2,398]]],[0,54,12,0,55,399,0,0,[1,130296,116],[[130412,2,400]]],[0,54,12,0,55,401,0,0,[1,130412,106],[[130518,2,402]]]]]]]]],[403,0,0,[130,404],[1,130519,5493],[[0,41,7,0,42,405,0,0,[1,130519,5493],[[0,405,92,0,0,0,0,0,[1,130519,5492],[[0,51,12,0,52,406,0,0,[1,130519,21],[]],[0,134,12,0,135,407,0,0,[1,130540,282],[]],[0,58,12,0,59,407,0,0,[1,130822,28],[[130822,2,408]]],[0,111,12,0,112,0,0,0,[1,130850,160],[[131010,2,409]]],[0,40,7,0,43,109,0,0,[1,131010,5001],[[136011,2,110]]]]]]]]],[410,0,0,[359,411],[1,136012,185],[[0,41,7,0,42,412,0,0,[1,136012,185],[[0,412,413,0,0,0,0,0,[1,136012,185],[[0,51,12,0,52,414,0,0,[1,136012,47],[]],[0,51,12,0,52,415,0,0,[1,136059,0],[]],[0,54,12,0,55,416,0,0,[1,136059,138],[[136197,2,417]]]]]]]]],[418,0,0,[130,419],[1,136197,5363],[[0,41,7,0,42,420,0,0,[1,136197,5363],[[0,420,92,0,0,0,0,0,[1,136197,5363],[[0,51,12,0,52,421,0,0,[1,136197,19],[]],[0,134,12,0,135,422,0,0,[1,136216,269],[]],[0,58,12,0,59,422,0,0,[1,136486,74],[[136487,2,423]]],[0,40,7,0,43,109,0,0,[1,136560,5000],[[141560,2,110]]]]]]]]],[424,0,0,[130,425],[1,141560,5489],[[0,41,7,0,42,426,0,0,[1,141560,5489],[[0,426,92,0,0,0,0,0,[1,141560,5489],[[0,51,12,0,52,427,0,0,[1,141566,16],[]],[0,134,12,0,135,428,0,0,[1,141582,290],[]],[0,58,12,0,59,428,0,0,[1,141872,33],[[141874,2,429]]],[0,111,12,0,112,0,0,0,[1,141905,144],[[142049,2,430]]],[0,40,7,0,43,109,0,0,[1,142049,5000],[[147049,2,110]]]]]]]]],[431,0,0,[432,433],[1,147050,7592],[[0,41,7,0,42,434,0,0,[1,147051,2157],[[0,434,435,0,0,0,0,0,[1,147051,2157],[[0,51,12,0,52,436,0,0,[1,147051,17],[]],[0,58,12,0,59,437,0,0,[1,147068,41],[[147068,2,438]]],[0,54,12,0,55,437,0,0,[1,147109,98],[[147207,2,439]]],[0,40,7,0,43,61,0,0,[1,147207,2001],[[149208,2,62]]]]]]],[0,41,7,0,42,440,0,0,[1,149209,2161],[[0,440,435,0,0,0,0,0,[1,149210,2160],[[0,51,12,0,52,441,0,0,[1,149210,20],[]],[0,51,12,0,52,442,0,0,[1,149230,0],[]],[0,111,12,0,112,0,0,0,[1,149230,140],[[149370,2,443]]],[0,40,7,0,43,61,0,0,[1,149370,2000],[[151370,2,62]]]]]]],[0,41,7,0,42,258,0,0,[1,151370,3272],[[0,258,92,0,0,0,0,0,[1,151370,3272],[[0,134,12,0,135,259,0,0,[1,151370,271],[]],[0,40,7,0,43,256,0,0,[1,151641,3001],[[154642,2,257]]]]]]]]]],[],[31,31,0,0]];
+window.output["suite"] = [1,2,3,4,[],[0,0,172963],[],[[5,0,0,[],[1,472,11037],[[0,6,7,0,8,9,0,0,[1,472,11037],[[0,9,10,0,0,0,0,0,[1,472,11037],[[0,11,12,0,13,14,0,0,[1,472,10916],[[472,2,15]]],[0,16,12,0,17,0,0,0,[1,11388,121],[]]]]]]]],[18,0,0,[],[1,11510,4],[[0,6,7,0,8,19,0,0,[1,11510,3],[[0,19,10,0,0,0,0,0,[1,11511,2],[[0,20,21,0,22,23,24,0,[1,11511,0],[[11511,2,25]]],[0,26,27,0,28,29,0,0,[1,11512,0],[[11512,2,30]]],[0,31,7,0,32,29,33,0,[1,11512,0],[[11512,2,34]]],[0,35,12,0,36,33,0,0,[1,11513,0],[]],[0,37,7,0,38,33,0,0,[1,11513,0],[[11513,2,34]]]]]]]]],[39,0,0,[40,39],[1,11514,10001],[[0,41,7,0,42,39,0,0,[1,11514,10001],[[0,39,10,0,0,0,0,0,[1,11514,10001],[[0,40,7,0,43,44,0,0,[1,11515,10000],[[21515,2,45]]]]]]]]],[46,0,0,[47,48],[1,21515,3426],[[0,41,7,0,42,49,0,0,[1,21515,2191],[[0,49,50,0,0,0,0,0,[1,21515,2191],[[0,51,7,0,52,53,54,0,[1,21515,13],[[0,55,12,0,56,57,0,0,[1,21515,13],[[21528,2,58]]],[21528,2,59]]],[0,60,7,0,61,62,0,0,[1,21528,2178],[[0,63,50,0,0,0,0,0,[1,21528,2178],[[0,64,12,0,65,66,0,0,[1,21528,16],[]],[0,67,12,0,68,57,0,0,[1,21543,97],[[21641,2,69]]],[0,70,12,0,71,57,0,0,[1,21641,64],[[21641,2,72]]],[0,40,7,0,43,73,0,0,[1,21706,2000],[[23706,2,74]]]]]]]]]]],[0,41,7,0,42,75,0,0,[1,23706,1235],[[0,75,50,0,0,0,0,0,[1,23706,1235],[[0,76,12,0,77,78,0,0,[1,23706,30],[]],[0,79,12,0,80,81,0,0,[1,23736,89],[[23736,2,82]]],[0,67,12,0,68,78,0,0,[1,23825,116],[[23941,2,83]]],[0,40,7,0,43,84,0,0,[1,23941,1000],[[24941,2,85]]]]]]]]],[86,0,0,[87,48],[1,24941,1174],[[0,41,7,0,42,88,0,0,[1,24941,1174],[[0,88,50,0,0,0,0,0,[1,24941,1174],[[0,76,12,0,77,89,0,0,[1,24941,29],[]],[0,79,12,0,80,90,0,0,[1,24970,50],[[24970,2,91]]],[0,67,12,0,68,89,0,0,[1,25020,94],[[25114,2,92]]],[0,40,7,0,43,84,0,0,[1,25114,1001],[[26115,2,85]]]]]]]]],[93,0,0,[94,95],[1,26117,12122],[[0,41,7,0,42,96,0,0,[1,26117,2122],[[0,96,50,0,0,0,0,0,[1,26117,2122],[[0,67,12,0,68,97,0,0,[1,26117,83],[[26200,2,98]]],[0,70,12,0,71,97,0,0,[1,26200,38],[[26200,2,99]]],[0,40,7,0,43,73,0,0,[1,26238,2001],[[28238,2,74]]]]]]],[0,41,7,0,42,39,0,0,[1,28238,10000],[[0,39,10,0,0,0,0,0,[1,28238,10000],[[0,40,7,0,43,44,0,0,[1,28238,10000],[[38239,2,45]]]]]]]]],[100,0,0,[101,102],[1,38239,452],[[0,41,7,0,42,103,0,0,[1,38239,451],[[0,103,104,0,0,0,0,0,[1,38239,451],[[0,64,12,0,65,105,0,0,[1,38239,14],[]],[0,64,12,0,65,106,0,0,[1,38253,22],[]],[0,64,12,0,65,107,0,0,[1,38274,15],[]],[0,64,12,0,65,108,0,0,[1,38290,12],[]],[0,67,12,0,68,109,0,0,[1,38303,88],[[38389,2,110]]],[0,67,12,0,68,111,0,0,[1,38390,133],[[38523,2,112]]],[0,67,12,0,68,113,0,0,[1,38523,84],[[38607,2,114]]],[0,67,12,0,68,115,0,0,[1,38607,83],[[38690,2,116]]]]]]]]],[117,0,0,[118,102],[1,38692,5162],[[0,41,7,0,42,119,0,0,[1,38692,5162],[[0,119,104,0,0,0,0,0,[1,38692,5162],[[0,70,12,0,71,109,0,0,[1,38693,35],[[38693,2,120]]],[0,40,7,0,43,121,0,0,[1,38728,5000],[[43728,2,122]]],[0,123,12,0,124,0,0,0,[1,43728,125],[[43854,2,125]]]]]]]]],[126,0,0,[127,102],[1,43854,5183],[[0,41,7,0,42,128,0,0,[1,43854,5183],[[0,128,104,0,0,0,0,0,[1,43854,5183],[[0,70,12,0,71,111,0,0,[1,43854,46],[[43854,2,129]]],[0,40,7,0,43,121,0,0,[1,43899,5001],[[48901,2,122]]],[0,123,12,0,124,0,0,0,[1,48901,136],[[49037,2,130]]]]]]]]],[131,0,0,[132,102],[1,49037,5173],[[0,41,7,0,42,133,0,0,[1,49037,5173],[[0,133,104,0,0,0,0,0,[1,49037,5173],[[0,64,12,0,65,113,0,0,[1,49037,15],[]],[0,70,12,0,71,113,0,0,[1,49052,40],[[49052,2,134]]],[0,40,7,0,43,121,0,0,[1,49092,5000],[[54092,2,122]]],[0,123,12,0,124,0,0,0,[1,54092,118],[[54209,2,135]]]]]]]]],[136,0,0,[137,102],[1,54211,5175],[[0,41,7,0,42,138,0,0,[1,54211,5175],[[0,138,104,0,0,0,0,0,[1,54212,5174],[[0,64,12,0,65,108,0,0,[1,54212,13],[]],[0,70,12,0,71,115,0,0,[1,54226,31],[[54226,2,139]]],[0,40,7,0,43,121,0,0,[1,54257,5001],[[59258,2,122]]],[0,123,12,0,124,0,0,0,[1,59258,127],[[59385,2,140]]]]]]]]],[141,0,0,[142,143],[1,59385,5451],[[0,41,7,0,42,144,0,0,[1,59385,5451],[[0,144,104,0,0,0,0,0,[1,59385,5451],[[0,64,12,0,65,145,0,0,[1,59385,19],[]],[0,146,12,0,147,148,0,0,[1,59404,266],[]],[0,70,12,0,71,148,0,0,[1,59671,40],[[59671,2,149]]],[0,40,7,0,43,121,0,0,[1,59711,5001],[[64712,2,122]]],[0,123,12,0,124,0,0,0,[1,64712,124],[[64836,2,150]]]]]]]]],[151,0,0,[152,153],[1,64836,3786],[[0,41,7,0,42,154,0,0,[1,64836,3786],[[0,154,155,0,0,0,0,0,[1,64836,3786],[[0,64,12,0,65,145,0,0,[1,64836,16],[]],[0,70,12,0,71,148,0,0,[1,64852,29],[[64852,2,149]]],[0,64,12,0,65,156,0,0,[1,64881,14],[]],[0,123,12,0,124,0,0,0,[1,64896,123],[[65019,2,157]]],[0,64,12,0,65,145,0,0,[1,65019,0],[]],[0,64,12,0,65,158,0,0,[1,65019,18],[]],[0,64,12,0,65,159,0,0,[1,65036,15],[]],[0,64,12,0,65,160,0,0,[1,65052,17],[]],[0,64,12,0,65,161,0,0,[1,65068,16],[]],[0,64,12,0,65,162,0,0,[1,65085,17],[]],[0,64,12,0,65,163,0,0,[1,65102,17],[]],[0,64,12,0,65,164,0,0,[1,65118,0],[]],[0,64,12,0,65,165,0,0,[1,65118,18],[]],[0,67,12,0,68,148,0,0,[1,65137,121],[[65257,2,166]]],[0,67,12,0,68,167,0,0,[1,65257,120],[[65377,2,168]]],[0,67,12,0,68,169,0,0,[1,65377,99],[[65476,2,170]]],[0,67,12,0,68,171,0,0,[1,65476,97],[[65573,2,172]]],[0,67,12,0,68,173,0,0,[1,65573,100],[[65673,2,174]]],[0,67,12,0,68,175,0,0,[1,65673,103],[[65777,2,176]]],[0,67,12,0,68,177,0,0,[1,65778,95],[[65872,2,178]]],[0,67,12,0,68,179,0,0,[1,65872,83],[[65955,2,180]]],[0,67,12,0,68,181,0,0,[1,65956,86],[[66043,2,182]]],[0,146,12,0,147,183,0,0,[1,66044,276],[]],[0,67,12,0,68,183,0,0,[1,66321,136],[[66457,2,184]]],[0,67,12,0,68,185,0,0,[1,66457,85],[[66542,2,186]]],[0,67,12,0,68,187,0,0,[1,66542,79],[[66621,2,188]]],[0,40,7,0,43,73,0,0,[1,66621,2001],[[68622,2,74]]]]]]]]],[189,0,0,[152,190],[0,68622,1497,191],[[0,41,7,0,42,192,0,0,[0,68622,1497],[[0,192,155,0,0,0,0,0,[0,68622,1497],[[0,64,12,0,65,193,0,0,[1,68622,18],[]],[0,146,12,0,147,194,0,0,[1,68640,276],[]],[0,70,12,0,71,194,0,0,[0,68916,1203],[[68916,2,195],[70119,2,196],[70119,5,191]]],[0,40,7,0,43,73,0,0,[3,70119,0],[]],[0,123,12,0,124,0,0,0,[3,70119,0],[]]]]]]]],[197,0,0,[152,198],[0,70135,23581,199],[[0,41,7,0,42,200,0,0,[0,70135,20291],[[0,200,155,0,0,0,0,0,[0,70135,20291],[[0,64,12,0,65,201,0,0,[0,70135,20291],[[90426,2,202],[90426,5,199]]],[0,64,12,0,65,203,0,0,[3,90426,0],[]],[0,64,12,0,65,204,0,0,[3,90426,0],[]],[0,67,12,0,68,205,0,0,[3,90426,0],[]],[0,64,12,0,65,206,0,0,[3,90426,0],[]],[0,64,12,0,65,207,0,0,[3,90426,0],[]],[0,64,12,0,65,208,0,0,[3,90426,0],[]],[0,67,12,0,68,209,0,0,[3,90426,0],[]],[0,67,12,0,68,210,0,0,[3,90426,0],[]],[0,67,12,0,68,211,0,0,[3,90426,0],[]],[0,64,12,0,65,212,0,0,[3,90426,0],[]],[0,64,12,0,65,213,0,0,[3,90426,0],[]],[0,64,12,0,65,214,0,0,[3,90426,0],[]],[0,64,12,0,65,215,0,0,[3,90426,0],[]],[0,67,12,0,68,216,0,0,[3,90426,0],[]],[0,67,12,0,68,217,0,0,[3,90426,0],[]],[0,67,12,0,68,218,0,0,[3,90426,0],[]],[0,67,12,0,68,219,0,0,[3,90426,0],[]],[0,146,12,0,147,220,0,0,[3,90426,0],[]],[0,67,12,0,68,220,0,0,[3,90426,0],[]],[0,64,12,0,65,221,0,0,[3,90426,0],[]],[0,64,12,0,65,222,0,0,[3,90426,0],[]],[0,64,12,0,65,223,0,0,[3,90426,0],[]],[0,64,12,0,65,224,0,0,[3,90426,0],[]],[0,64,12,0,65,225,0,0,[3,90426,0],[]],[0,64,12,0,65,226,0,0,[3,90426,0],[]],[0,64,12,0,65,227,0,0,[3,90426,0],[]],[0,64,12,0,65,228,0,0,[3,90426,0],[]],[0,67,12,0,68,229,0,0,[3,90426,0],[]],[0,67,12,0,68,230,0,0,[3,90426,0],[]],[0,67,12,0,68,231,0,0,[3,90426,0],[]],[0,67,12,0,68,232,0,0,[3,90426,0],[]],[0,67,12,0,68,233,0,0,[3,90426,0],[]],[0,67,12,0,68,234,0,0,[3,90426,0],[]],[0,67,12,0,68,235,0,0,[3,90426,0],[]],[0,67,12,0,68,236,0,0,[3,90426,0],[]],[0,146,12,0,147,237,0,0,[3,90426,0],[]],[0,67,12,0,68,237,0,0,[3,90426,0],[]],[0,64,12,0,65,238,0,0,[3,90426,0],[]],[0,64,12,0,65,239,0,0,[3,90426,0],[]],[0,64,12,0,65,240,0,0,[3,90426,0],[]],[0,64,12,0,65,241,0,0,[3,90426,0],[]],[0,64,12,0,65,242,0,0,[3,90426,0],[]],[0,67,12,0,68,243,0,0,[3,90426,0],[]],[0,67,12,0,68,244,0,0,[3,90426,0],[]],[0,67,12,0,68,245,0,0,[3,90426,0],[]],[0,67,12,0,68,246,0,0,[3,90426,0],[]],[0,67,12,0,68,247,0,0,[3,90426,0],[]],[0,40,7,0,43,248,0,0,[3,90426,0],[]]]]]],[0,41,7,0,42,249,0,0,[1,90426,3290],[[0,249,104,0,0,0,0,0,[1,90426,3290],[[0,146,12,0,147,250,0,0,[1,90426,289],[]],[0,40,7,0,43,248,0,0,[1,90716,3000],[[93716,2,251]]]]]]]]],[252,0,0,[142,253],[1,93716,5465],[[0,41,7,0,42,254,0,0,[1,93716,5465],[[0,254,104,0,0,0,0,0,[1,93716,5465],[[0,64,12,0,65,255,0,0,[1,93716,16],[]],[0,146,12,0,147,256,0,0,[1,93732,268],[]],[0,70,12,0,71,256,0,0,[1,94000,44],[[94000,2,257]]],[0,40,7,0,43,121,0,0,[1,94044,5001],[[99045,2,122]]],[0,123,12,0,124,0,0,0,[1,99045,137],[[99182,2,258]]]]]]]]],[259,0,0,[260,261],[1,99182,3166],[[0,41,7,0,42,262,0,0,[1,99182,3166],[[0,262,263,0,0,0,0,0,[1,99182,3166],[[0,64,12,0,65,264,0,0,[1,99182,16],[]],[0,70,12,0,71,265,0,0,[1,99197,44],[[99197,2,266]]],[0,40,7,0,43,248,0,0,[1,99243,3000],[[102243,2,251]]],[0,123,12,0,124,0,0,0,[1,102243,105],[[102348,2,267]]]]]]]]],[268,0,0,[260,269],[1,102348,7328],[[0,41,7,0,42,270,0,0,[1,102348,4040],[[0,270,263,0,0,0,0,0,[1,102348,4040],[[0,64,12,0,65,271,0,0,[1,102348,16],[]],[0,64,12,0,65,272,0,0,[1,102363,18],[]],[0,67,12,0,68,273,0,0,[1,102381,91],[[102472,2,274]]],[0,67,12,0,68,275,0,0,[1,102472,98],[[102570,2,276]]],[0,64,12,0,65,277,0,0,[1,102570,16],[]],[0,64,12,0,65,278,0,0,[1,102585,18],[]],[0,64,12,0,65,279,0,0,[1,102604,14],[]],[0,64,12,0,65,280,0,0,[1,102617,14],[]],[0,64,12,0,65,281,0,0,[1,102631,2],[]],[0,64,12,0,65,282,0,0,[1,102633,16],[]],[0,64,12,0,65,283,0,0,[1,102649,16],[]],[0,64,12,0,65,284,0,0,[1,102665,21],[]],[0,64,12,0,65,285,0,0,[1,102685,11],[]],[0,64,12,0,65,286,0,0,[1,102696,16],[]],[0,64,12,0,65,287,0,0,[1,102712,16],[]],[0,67,12,0,68,288,0,0,[1,102727,101],[[102829,2,289]]],[0,146,12,0,147,290,0,0,[1,102829,282],[]],[0,64,12,0,65,291,0,0,[1,103110,16],[]],[0,146,12,0,147,292,0,0,[1,103126,266],[]],[0,67,12,0,68,292,0,0,[1,103392,95],[[103487,2,293]]],[0,146,12,0,147,294,0,0,[1,103487,301],[]],[0,67,12,0,68,294,0,0,[1,103788,111],[[103899,2,295]]],[0,146,12,0,147,296,0,0,[1,103900,273],[]],[0,64,12,0,65,297,0,0,[1,104173,16],[]],[0,67,12,0,68,296,0,0,[1,104189,109],[[104298,2,298]]],[0,67,12,0,68,299,0,0,[1,104298,88],[[104386,2,300]]],[0,40,7,0,43,73,0,0,[1,104388,2000],[[106388,2,74]]]]]]],[0,41,7,0,42,249,0,0,[1,106388,3288],[[0,249,104,0,0,0,0,0,[1,106388,3288],[[0,146,12,0,147,250,0,0,[1,106388,287],[]],[0,40,7,0,43,248,0,0,[1,106675,3001],[[109675,2,251]]]]]]]]],[301,0,0,[142,302],[1,109675,5334],[[0,41,7,0,42,303,0,0,[1,109675,5334],[[0,303,104,0,0,0,0,0,[1,109675,5334],[[0,64,12,0,65,304,0,0,[1,109675,15],[]],[0,146,12,0,147,305,0,0,[1,109690,280],[]],[0,70,12,0,71,305,0,0,[1,109970,38],[[109970,2,306]]],[0,40,7,0,43,121,0,0,[1,110008,5001],[[115009,2,122]]]]]]]]],[307,0,0,[142,308],[1,115009,5454],[[0,41,7,0,42,309,0,0,[1,115009,5454],[[0,309,104,0,0,0,0,0,[1,115009,5454],[[0,64,12,0,65,310,0,0,[1,115009,13],[]],[0,146,12,0,147,311,0,0,[1,115022,278],[]],[0,70,12,0,71,311,0,0,[1,115300,35],[[115300,2,312]]],[0,40,7,0,43,121,0,0,[1,115335,5000],[[120335,2,122]]],[0,123,12,0,124,0,0,0,[1,120335,128],[[120463,2,313]]]]]]]]],[314,0,0,[315,316],[1,120463,5421],[[0,41,7,0,42,317,0,0,[1,120463,2151],[[0,317,318,0,0,0,0,0,[1,120463,2151],[[0,64,12,0,65,319,0,0,[1,120463,16],[]],[0,64,12,0,65,320,0,0,[1,120479,16],[]],[0,123,12,0,124,0,0,0,[1,120495,120],[[120614,2,321]]],[0,40,7,0,43,73,0,0,[1,120614,2000],[[122614,2,74]]]]]]],[0,41,7,0,42,249,0,0,[1,122614,3269],[[0,249,104,0,0,0,0,0,[1,122614,3269],[[0,146,12,0,147,250,0,0,[1,122616,267],[]],[0,40,7,0,43,248,0,0,[1,122883,3000],[[125884,2,251]]]]]]]]],[322,0,0,[142,323],[1,125884,5463],[[0,41,7,0,42,324,0,0,[1,125884,5463],[[0,324,104,0,0,0,0,0,[1,125884,5463],[[0,64,12,0,65,325,0,0,[1,125884,8],[]],[0,146,12,0,147,326,0,0,[1,125892,291],[]],[0,70,12,0,71,326,0,0,[1,126183,53],[[126183,2,327]]],[0,40,7,0,43,121,0,0,[1,126235,5000],[[131236,2,122]]],[0,123,12,0,124,0,0,0,[1,131236,112],[[131347,2,328]]]]]]]]],[329,0,0,[330,331],[1,131347,5418],[[0,41,7,0,42,332,0,0,[1,131347,2150],[[0,332,333,0,0,0,0,0,[1,131347,2150],[[0,64,12,0,65,334,0,0,[1,131347,21],[]],[0,64,12,0,65,335,0,0,[1,131368,16],[]],[0,123,12,0,124,0,0,0,[1,131384,113],[[131497,2,336]]],[0,40,7,0,43,73,0,0,[1,131497,2000],[[133497,2,74]]]]]]],[0,41,7,0,42,249,0,0,[1,133497,3268],[[0,249,104,0,0,0,0,0,[1,133497,3268],[[0,146,12,0,147,250,0,0,[1,133497,268],[]],[0,40,7,0,43,248,0,0,[1,133765,3000],[[136765,2,251]]]]]]]]],[337,0,0,[142,338],[1,136765,5323],[[0,41,7,0,42,339,0,0,[1,136765,5323],[[0,339,104,0,0,0,0,0,[1,136765,5323],[[0,64,12,0,65,340,0,0,[1,136765,5],[]],[0,146,12,0,147,341,0,0,[1,136770,282],[]],[0,70,12,0,71,341,0,0,[1,137052,36],[[137052,2,342]]],[0,40,7,0,43,121,0,0,[1,137088,5000],[[142088,2,122]]]]]]]]],[343,0,0,[142,344],[1,142091,5474],[[0,41,7,0,42,345,0,0,[1,142091,5474],[[0,345,104,0,0,0,0,0,[1,142091,5474],[[0,64,12,0,65,346,0,0,[1,142091,2],[]],[0,146,12,0,147,347,0,0,[1,142093,290],[]],[0,70,12,0,71,347,0,0,[1,142384,36],[[142384,2,348]]],[0,123,12,0,124,0,0,0,[1,142420,145],[[142565,2,349]]],[0,40,7,0,43,121,0,0,[1,142565,5000],[[147565,2,122]]]]]]]]],[350,0,0,[351,352],[1,147565,1376],[[0,41,7,0,42,353,0,0,[1,147565,1375],[[0,353,354,0,0,0,0,0,[1,147565,1375],[[0,64,12,0,65,355,0,0,[1,147565,16],[]],[0,64,12,0,65,356,0,0,[1,147581,19],[]],[0,64,12,0,65,357,0,0,[1,147600,0],[]],[0,64,12,0,65,358,0,0,[1,147600,26],[]],[0,64,12,0,65,359,0,0,[1,147626,6],[]],[0,64,12,0,65,360,0,0,[1,147632,16],[]],[0,64,12,0,65,361,0,0,[1,147648,16],[]],[0,64,12,0,65,362,0,0,[1,147663,16],[]],[0,64,12,0,65,363,0,0,[1,147679,16],[]],[0,64,12,0,65,364,0,0,[1,147694,0],[]],[0,64,12,0,65,365,0,0,[1,147694,16],[]],[0,64,12,0,65,366,0,0,[1,147710,17],[]],[0,64,12,0,65,367,0,0,[1,147727,15],[]],[0,64,12,0,65,368,0,0,[1,147742,16],[]],[0,67,12,0,68,369,0,0,[1,147757,161],[[147918,2,370]]],[0,67,12,0,68,371,0,0,[1,147918,84],[[148002,2,372]]],[0,67,12,0,68,373,0,0,[1,148002,84],[[148086,2,374]]],[0,67,12,0,68,375,0,0,[1,148086,84],[[148169,2,376]]],[0,67,12,0,68,377,0,0,[1,148169,83],[[148252,2,378]]],[0,67,12,0,68,379,0,0,[1,148252,84],[[148336,2,380]]],[0,67,12,0,68,381,0,0,[1,148336,83],[[148419,2,382]]],[0,67,12,0,68,383,0,0,[1,148419,83],[[148502,2,384]]],[0,67,12,0,68,385,0,0,[1,148502,83],[[148586,2,386]]],[0,67,12,0,68,387,0,0,[1,148587,100],[[148687,2,388]]],[0,67,12,0,68,389,0,0,[1,148687,82],[[148768,2,390]]],[0,67,12,0,68,391,0,0,[1,148768,84],[[148852,2,392]]],[0,67,12,0,68,393,0,0,[1,148853,87],[[148940,2,394]]]]]]]]],[395,0,0,[142,396],[1,148941,5491],[[0,41,7,0,42,397,0,0,[1,148942,5490],[[0,397,104,0,0,0,0,0,[1,148942,5490],[[0,64,12,0,65,398,0,0,[1,148942,11],[]],[0,146,12,0,147,399,0,0,[1,148953,285],[]],[0,70,12,0,71,399,0,0,[1,149238,33],[[149238,2,400]]],[0,123,12,0,124,0,0,0,[1,149271,160],[[149431,2,401]]],[0,40,7,0,43,121,0,0,[1,149431,5001],[[154432,2,122]]]]]]]]],[402,0,0,[351,403],[1,154433,153],[[0,41,7,0,42,404,0,0,[1,154433,152],[[0,404,405,0,0,0,0,0,[1,154433,152],[[0,64,12,0,65,406,0,0,[1,154434,20],[]],[0,64,12,0,65,407,0,0,[1,154455,16],[]],[0,67,12,0,68,408,0,0,[1,154471,115],[[154585,2,409]]]]]]]]],[410,0,0,[142,411],[1,154586,5342],[[0,41,7,0,42,412,0,0,[1,154587,5341],[[0,412,104,0,0,0,0,0,[1,154587,5341],[[0,64,12,0,65,413,0,0,[1,154587,21],[]],[0,146,12,0,147,414,0,0,[1,154608,278],[]],[0,70,12,0,71,414,0,0,[1,154886,41],[[154887,2,415]]],[0,40,7,0,43,121,0,0,[1,154928,5000],[[159928,2,122]]]]]]]]],[416,0,0,[142,417],[1,159928,5487],[[0,41,7,0,42,418,0,0,[1,159930,5485],[[0,418,104,0,0,0,0,0,[1,159930,5485],[[0,64,12,0,65,419,0,0,[1,159930,16],[]],[0,146,12,0,147,420,0,0,[1,159946,286],[]],[0,70,12,0,71,420,0,0,[1,160232,33],[[160232,2,421]]],[0,123,12,0,124,0,0,0,[1,160265,148],[[160414,2,422]]],[0,40,7,0,43,121,0,0,[1,160415,5000],[[165415,2,122]]]]]]]]],[423,0,0,[424,425],[1,165415,7548],[[0,41,7,0,42,426,0,0,[1,165415,2135],[[0,426,427,0,0,0,0,0,[1,165415,2135],[[0,64,12,0,65,428,0,0,[1,165415,6],[]],[0,70,12,0,71,429,0,0,[1,165421,51],[[165421,2,430]]],[0,67,12,0,68,429,0,0,[1,165471,79],[[165550,2,431]]],[0,40,7,0,43,73,0,0,[1,165550,2000],[[167550,2,74]]]]]]],[0,41,7,0,42,432,0,0,[1,167550,2149],[[0,432,427,0,0,0,0,0,[1,167550,2149],[[0,64,12,0,65,433,0,0,[1,167550,18],[]],[0,64,12,0,65,434,0,0,[1,167568,0],[]],[0,123,12,0,124,0,0,0,[1,167568,131],[[167699,2,435]]],[0,40,7,0,43,73,0,0,[1,167699,2000],[[169699,2,74]]]]]]],[0,41,7,0,42,249,0,0,[1,169699,3264],[[0,249,104,0,0,0,0,0,[1,169699,3264],[[0,146,12,0,147,250,0,0,[1,169699,263],[]],[0,40,7,0,43,248,0,0,[1,169962,3000],[[172963,2,251]]]]]]]]]],[],[31,29,2,0]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*HK Dealer Check","*C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Dealer\\HK_TC\\S2\\HK_Dealer_Check.robot","*HK_Dealer_Check.robot","*<p>Suite description\x3c/p>","*Test Setup","*Run Keywords","*BuiltIn","*<p>Executes all the given keywords in a sequence.\x3c/p>","*Open Chrome Browser","*HK_S2_Config","*Open Browser","*SeleniumLibrary","*<p>Opens a new browser instance to the optional <code>url\x3c/code>.\x3c/p>","*${s2HKDealer}, Chrome, executable_path=${driver_path}","eNq1zD0OwjAMQOGrWF0yJZE6otKFA3AGx3FJIH9yUlVwemDhBqxPT9+1cYnlBk7q0VlAXYLUzApGBYedYZcEakEIwtt5CmO0frI2PDxjYjFUny8Kx3YXHQsFwsZ+1n3WbXcpksnVc9LDEH3WnFmITS2eMxb/LT9pWv9nLxZXZd4TSlTv","*Maximize Browser Window","*<p>Maximizes current browser window.\x3c/p>","*Screen Shot DIR","*Dealer Screent Shot DIR","*Get Current Date","*DateTime","*<p>Returns current local or UTC time with an optional increment.\x3c/p>","*result_format=%m-%d-%y %H-%M","*${currentdate}","*${currentdate} = 02-16-24 13-14","*Create Directory","*OperatingSystem","*<p>Creates the specified directory.\x3c/p>","*${Dealer_screenshot_path}/HK_${currentdate}","eNrFjbEKg0AQRH/lsEmlxoukEGOjgUAaiaRbCMe5cheMK7tn4d/nivxDmhkG3mNaRhNwVKNntIF4V4faKMc4XZLJz1jleVvBU5AFOrN4nGnzmF0l0GosQr9bZ/jTM72jL7DuwdHymxoeKLRx5AJKkM3Hgg7NjAyDZcRFHEXrdodBx3wddVqcU12q4pQWZdL877vOTXPIvn+rZ18=","*Convert To String","*<p>Converts the given item to a Unicode string.\x3c/p>","*${LogDIR}","*${LogDIR} = C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Dealer\\Screenshots\\HK\\S2/HK_02-16-24 13-14","*Set Screenshot Directory","*<p>Sets the directory for captured screenshots.\x3c/p>","*Set Global Variable","*<p>Makes a variable available globally in all tests and suites.\x3c/p>","*TC Sleep","*Sleep","*Run Keyword And Continue On Failure","*<p>Runs the keyword and continues execution even if a failure occurs.\x3c/p>","*<p>Pauses the test executed for the given time.\x3c/p>","*10","*Slept 10 seconds","*TC-001 - Input Valid Email","*TC006","*Valid Account","*User should be able to click Translate to English Button","*Login_Page_Keywords","*Wait Until Element Is Visible","*<p>Waits until the element <code>locator\x3c/code> is visible.\x3c/p>","*${Dealer_HK_LoginPage_English_Button}, 10","*Capture Element Screenshot","*<p>Captures a screenshot from the element identified by <code>locator\x3c/code> and embeds it into log file.\x3c/p>","*${Dealer_HK_LoginPage_English_Button}","eNqtjTsKAyEYhK8iQkr91ZVUar2Qcg8QRM0qrK6oITl+JEVOEJhHNd8oGN4oGM2orz1y59GrLRov2CiLYgsPjSmFqc21EEqP5+iw3mATM+9MEH4lQl4E4wvhEno4QknPTGbnUAbpvxnhtJZ9clPeUW/u32D0Sn5EjSVj9T1vwJoPqW5F3w==","*Click Element","*<p>Click the element identified by <code>locator\x3c/code>.\x3c/p>","*Clicking element '//dpp-language-toggle//span[contains(text(),'EN')]'.","*2","*Slept 2 seconds","*Input Valid Username","*Clear Element Text","*<p>Clears the value of the text-input-element identified by <code>locator\x3c/code>.\x3c/p>","*${Email}","*Input Text","*<p>Types the given <code>text\x3c/code> into the text field identified by <code>locator\x3c/code>.\x3c/p>","*${Email}, ${Username}","*Typing text 'hk.seller1.admin@test.com' into text field '//*[@type='email']'.","eNqtjTsKAyEYhK8iQkr91ZVUar2Qcg8QRM0qrK6oITl+JEVOEJhHNd8oGN4oGM2orz1y59GrLRov2CiLYgsPjSmFqc21EEqP5+iw3mATM+9MEH4lQl4E4wvhEno4QknPTGbnUAbpvxkRtJZ9clPeUW/u32D0Sn5EjSVj9T1vwJoPqflF4Q==","*1","*Slept 1 second","*TC-002 - Input Valid Password","*TC007","*Input Valid Password","*${Pass}","*${Pass}, ${Password}","*Typing text 'HKPass@12345' into text field '//*[@type='password']'.","eNqtjTsKAyEYhK8iQkr9fZFKrRdS7gGCqFmFXVfUkBw/kiInCMyjmm80jGA1jGb11wH5c+/VFYMlttqh1OLDYEphavUtxtLTOTosN1jFzDsThF+JUBfBuCRcQY97LPl5kNlHLIP034xIWss2ufnYUG/+32D0ymEkgxVj9T1vwNkPqoRF4w==","*TC-003 - User should be able to click Login Button","*Login Button","*TC008","*User should be able to click Login Button","*${LoginButton}","eNqtjTsKAyEYhK8iQkr91ZVUar2Qcg8QRM0qrK6oITl+JEVOEJhHNd8oGN4oGM2orz1y59GrLRov2CiLYgsPjSmFqc21EEqP5+iw3mATM+9MEH4lQl4E4wvhEno4QknPTGbnUAbpvxmRtJZ9clPeUW/u32D0Sn5EjSVj9T1vwJoPqw9F5Q==","*Clicking element '//button[@type='submit']'.","*TC-004 - User should be able to view top navigation","*TC014","*Top Navigation","*User should be able to view top navigation in HK Dealer Home Page","*Home_Page_Keywords","*${HomepageUserAccount}, 10","*${HomepageOrders}, 10","*${HomepageReturn}, 10","*${HomepageMessage}, 10","*${HomepageUserAccount}","eNqtjU0KAiEcxa8iQkv9q2Ot1HXQcg4QojYKoyNq1PGTFp0geB+r93sKhjcKRjPqa4/csfdqi8YLNsqi2MJDY0phanUthNLjMTpcb7CKmXcmCL8QIU+C8YVwCT3soaRnJrNzKIP034ycaS3b5Ka8od7cv8HolfyIGkvG6nvegDUfq5pF5w==","*${HomepageOrders}","eNqtjTsKAyEYhK8iQkr91ZWt1DqQcg8QRM0qrK6oITl+JEVOEJhHNd8oGN4oGM2orz1y59GrLRov2CiLYgsPjSmFqc21EEqP5+hwvcEmZt6ZIHwlQl4E4wvhEno4QknPTGbnUAbpvxlZaS375Ka8o97cv8HolfyIGkvG6nvegDUfrCVF6Q==","*${HomepageReturn}","eNqtjU0KAiEcxa8iQkv9qyO1UddByzlAiNoojI6oUcdPWnSC4H2s3u8pGN4oGM2orz1yx96rLRov2CiLYgsPjSmFqdW1EEqPx+hwvcEqZt6ZIPxMhDwJxhfCJfSwh5KemczOoQzSfzNyobVsk5vyhnpz/wajV/IjaiwZq+95A9Z8AKywRes=","*${HomepageMessage}","eNqtjU0KAiEcxa8iQkv9qyPRQl0HLecAIWqjMDqiRh0/adEJgvexer+nYHijYDSjvvbIHXuvtmi8YKMsii08NKYUplbXQig9HqPD9QarmHlngvAzEfIkGF8Il9DDHkp6ZjI7hzJI/83IhdayTW7KG+rN/RuMXsmPqLFkrL7nDVjzAa07Re0=","*TC-005 - User should be able to click account from top navigation","*TC015","*User should be able to click account from top navigation","*Clicking element '//dpp-login//button|(//dpp-login//button)[1]'.","*5","*Slept 5 seconds","*Capture Page Screenshot","*<p>Takes a screenshot of the current page and embeds it into a log file.\x3c/p>","eNqtzEEKwyAUBNCriNClfjWhdKGuC13mAEXURiEx4re0x6900RMUZmY1PA09WA29Wf1tIP7YsLpi6EStdiS1+DCUcxhZfIuxYDo6wvUGixp7F4rJM1PzSQk5MTkDxi2W/NwZ/u5M8lrW4eV9Jdj8v0DyyqEnQy9C1PfgwdkPIKM/tQ==","*TC-006 - User should be able to click orders from top navigation","*TC016","*User should be able to click orders from top navigation","*Clicking element '//dpp-order-notification//cx-icon[@class='cx-icon dpp-icons__header-orders']'.","eNqtzEEKwyAUBNCriNClfjWhdKGuC13mAEXURiEx4re0x6900RMUZmY1PA09WA29Wf1tIP7YsLpi6EStdiS1+DCUcxhZfIuxYDo6wvUGixp7F4rJM1PzSQk5MTkDxi2W/NwZ/u5M8VrW4eV9Jdj8v0DyyqEnQy9C1PfgwdkPISY/tw==","*TC-007 - User should be able to click return from top navigation","*TC017","*User should be able to click return from top navigation","*Clicking element '//dpp-return-notification//cx-icon[@class='cx-icon dpp-icons__header-returns']'.","eNqtzE0KwyAUBOCriNClPn9C6cK4LnSZAxRRG4XEiM/SHr/SRU9QmJnV8BnowRrozZpvA/HHhtWVmWpqjSOpxcdMOYeRxbcYC6ajI1xvsKixd6GYPDM1nZSQmskJMG6x5OfO8HdnmteyDi/vK8Hm/wWSVw49zfQiRH0PHpz9ACGpP7k=","*TC-009 - User should be able to click messages from top navigation","*TC019","*User should be able to click messages from top navigation","*Clicking element '//dpp-message-notification//cx-icon[@class='cx-icon dpp-icons__message-header']'.","eNqtzEEKwyAUBNCriNClfjVSujCuC13mAEXURiEx4re0x6900RMUZmY1PAM9WAO9WfNtIP7YsLoy04la40hq8TFTzmFk8S3GgunoCNcbLGrsXSgmz0zpkxJyYlIDxi2W/NwZ/u5M81rW4eV9Jdj8v0DyyqGnmV6EqO/Bg7MfIiw/uw==","*TC-010 - User should be able to click orders from left navigation","*Left Navigation","*TC020","*User should be able to click orders from left navigation","*${HomepageOrdersMenu}, 10","*Scroll Element Into View","*<p>Scrolls the element identified by <code>locator\x3c/code> into view.\x3c/p>","*${HomepageOrdersMenu}","*Clicking element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Orders ')]'.","eNqtzEEKwyAUBNCriNClfjVp6UJdB7rMAYqojYHEiN/SHr/SRU9QmJnV8DS0YDW0avW3gfhjw+KyoQO12pFU48NQzqFn9jXGjOloCNMNZtX3LhSTF6bGkxJyYHIEjFvM63Nn+LuzMy956d66LwSr/xdIXmtoydCrEOXdeXD2AyKvP70=","*TC-011 - User should be able to view Cutomer Orders Panel","*Order Page","*TC033","*User should be able to view Cutomer Orders Panel","*Orders_Page_Keywords","*${OrderPagePanelContainer}, 10","eNqtzEEKwyAUBNCriNClfjUhdGFcB7rMAYqojUJixG9pj1/poicozMxqeBqaNxpaNfpbT9y5Y7F5pgM12pJYw2OmnEPP6moIGePZEJYbrKrvXSgmJ6bGixJyYHIEDHvI6Xkw/N3ZxEveupeOjWB1/wLJK/kWZ3oVorw7D9Z8ACMyP78=","*${OrderPageTotalOrders}, 10","*${OrderPageSortBar}, 10","*${OrderPageStatusFilter}, 10","*${OrderPageDateFilter}, 10","*${OrderPageSearchBox}, 10","*${OrderPageSearchButton}, 10","*${OrderPageArrangeFilter}, 10","*${OrderPageDetailsColumn}, 10","eNqtjU0KAiEcxa8iQkv9qyNBoK6DlnOAELVRGB1Ro46ftOgEwftYvd9TMLxRMJpRX3vkjr1XWzResFEWxRYeGlMKU6trIZQej9HheoNVzLwzQfiZCHkSjC+ES+hhDyU9M5mdQxmk/2bkQmvZJjflDfXm/g1Gr+RH1FgyVt/zBqz5AK3GRe8=","*${OrderPageTotalOrders}","eNqtjTsKAyEYhK8iQkr91ZVUar2Qcg8QRM0qrK6oITl+JEVOEJhHNd8oGN4oGM2orz1y59GrLRov2CiLYgsPjSmFqc21EEqP5+iw3mATM+9MEH4lQl4E4wvhEno4QknPTGbnUAbpvxnhjNayT3DKO+rN/Z2MXsmPqLFkrL7nD1jzASV/Rj8=","*${OrderPageSortBar}","eNqtjTsKAyEYhK8iQkr91ZVUar2Qcg8QRM0qrK6oITl+JEVOEJhHNd8oGN4oGM2orz1y59GrLRov2CiLYgsPjSmFqc21EEqP5+iw3mATM+9MEH4lQl4E4wvhEno4QknPTGbnUAbpvxnhnNayT3DKO+rN/Z2MXsmPqLFkrL7nD1jzASYLRkE=","*${OrderPageStatusFilter}","eNqtjTsKAyEYhK8iQkr91ZVUar2Qcg8QRM0qrK6oITl+JEVOEJhHNd8oGN4oGM2orz1y59GrLRov2CiLYgsPjSmFqc21EEqP5+iw3mATM+9MEH4lQl4E4wvhEno4QknPTGbnUAbpvxnhgtayT3DKO+rN/Z2MXsmPqLFkrL7nD1jzASaXRkM=","*${OrderPageDateFilter}","eNqtjTsKAyEYhK8iQkr9fZFKrRdS7gGCqFmFXVfUkBw/kiInCMyjmm80jGA1jGb11wH5c+/VFYMlttqh1OLDYEphavUtxtLTOTosN1jFzDsThF+JUBfBuCRcQY97LPl5kNlHLIP034xwSWvZJjgfG+rN/52MXjmMZLBirL7nDzj7AScjRkU=","*${OrderPageSearchBox}","eNqtTTsKAyEUvIoIKfWpK6nUeiHlHiCImlVYXVFDcvxIipwgMJ9imBkFwxsFoxn1pUfuPHq1ReMFG2VRbOGhMaUwsbkWQunxHB3WG2xi6p0Jwq9EyItgfCFcQg9HKOmZyfQcyiD9V5sxrWWfwynvqDf392X0Sn5EjSVj9T1/wJoPJ69GRw==","*${OrderPageSearchButton}","eNqtjU0KAiEcxa8iQkv9q2Ot1HXQcg4QojYKoyNq1PGTFp0geB+r93sKhjcKRjPqa4/csfdqi8YLNsqi2MJDY0phanUthNLjMTpcb7CKmXcmCL8QIU+C8YVwCT3soaRnJrNzKIP034zwM61lm+CUN9Sb+zsZvZIfUWPJWH3PH7DmAyg7Rkk=","*${OrderPageArrangeFilter}","eNqtTT0KwyAYvYoIHfVTI53UOdAxByiiNgrRiFra41c69ASF97O8HwXDGwWjGfWlR+48erVF4wUbZVFs4aExpTCxuRZC6fEcHdYbbGLqnQnCr0TIi2B8IVxCD0co6ZnJ9BzKIP1Xm0layz6HU95Rb+7vy+iV/IgaS8bqe/6ANR8ox0ZL","*${OrderPageDetailsColumn}","eNqtjU0KAiEcxa8iQkv9qyO1UddByzlAiNoojI6oUcdPWnSC4H2s3u8pGN4oGM2orz1yx96rLRov2CiLYgsPjSmFqdW1EEqPx+hwvcEqZt6ZIPxMhDwJxhfCJfSwh5KemczOoQzSfzPCL7SWbYJT3lBv7u9k9Ep+RI0lY/U9f8CaDylTRk0=","*${OrderPageDetailsPreviousPageButton}","eNqtjU0KAiEcxa8iQkv9qyPRQl0HLecAIWqjMDqiRh0/adEJgvexer+nYHijYDSjvvbIHXuvtmi8YKMsii08NKYUplbXQig9HqPD9QarmHlngvAzEfIkGF8Il9DDHkp6ZjI7hzJI/80Iv9BatglOeUO9ub+T0Sv5ETWWjNX3/AFrPinfRk8=","*${OrderPageDetailsNextPageButton}","eNqtjU0KAiEcxa8iQkv9qyNBoK6DlnOAELVRGB1Ro46ftOgEwftYvd9TMLxRMJpRX3vkjr1XWzResFEWxRYeGlMKU6trIZQej9HheoNVzLwzQfiZCHkSjC+ES+hhDyU9M5mdQxmk/2aEX2gt2wSnvKHe3N/J6JX8iBpLxup7/oA1HyprRlE=","*${OrderPageDetailsPage1Button}","eNqtjTsKAyEYhK8iQkr91ZVUar2Qcg8QRM0qrK6oITl+JEVOEJhHNd8oGN4oGM2orz1y59GrLRov2CiLYgsPjSmFqc21EEqP5+iw3mATM+9MEH4lQl4E4wvhEno4QknPTGbnUAbpvxkRjNayT3DKO+rN/Z2MXsmPqLFkrL7nD1jzASYNRkE=","*TC-012 - User should be able to select one order from the list","*TC034","*User should be able to select one order from the list","*${OrderPageHistory1}, 10","*${OrderPageHistory1}","eNpzzslMzs7MS1dIzUnNTc0rUVDX0NcvKQLilGiH5JzE4mJb9eQK3fyilNQi3YzM4pL8okrd5PyUVPVYff1E3ErKEnNKgWo0ow1ja4g2EaRaXQ8A7UkzPA==","eNqtzEEKwyAUBNCriNClfjWh7UJdB7rMAYqojYHEiN/SHr/SRU9QmJnV8DS0YDW0avW3gfhjw+KyoQO12pFU48NQzqFn9jXGjOloCNMNZtX3LhSTZ6bGkxJyYHIEjFvM63Nn+LuzCy956d66LwSr/xdIXmtoydCrEOXdeXD2AyO1P8E=","*TC-013 - User should be able to view order details","*TC035","*User should be able to view order details in HK Order Details Page","*${OrderDetailsOrderHeader}, 20","*${OrderDetailsOrderStatus}, 10","*${OrderDetailsContainer}, 10","*${OrderDetailsContainer}","eNqtjTsKAyEYhK8iQkr91ZVUar2Qcg8QRM0qrK6oITl+JEVOEJhHNd8oGN4oGM2orz1y59GrLRov2CiLYgsPjSmFqc21EEqP5+iw3mATM+9MEH4lQl4E4wvhEno4QknPTGbnUAbpvxkRnNayT3DKO+rN/Z2MXsmPqLFkrL7nD1jzASaZRkM=","*${OrderDetailsContainerRefNumLabel}, 10","*${OrderDetailsContainerCustNameLabel}, 10","*${OrderDetailsContainerCustAccLabel}, 10","*${OrderDetailsContainerRefNumLabel}","eNqtjTsKAyEYhK8iQkr91ZVUar2Qcg8QRM0qrK6oITl+JEVOEJhHNd8oGN4oGM2orz1y59GrLRov2CiLYgsPjSmFqc21EEqP5+iw3mATM+9MEH4lQl4E4wvhEno4QknPTGbnUAbpvxkRgtayT3DKO+rN/Z2MXsmPqLFkrL7nD1jzASclRkU=","*${OrderDetailsContainerCustNameLabel}","eNqtjTsKAyEYhK8iQkr9fZFKrRdS7gGCqFmFXVfUkBw/kiInCMyjmm80jGA1jGb11wH5c+/VFYMlttqh1OLDYEphavUtxtLTOTosN1jFzDsThF+JUBfBuCRcQY97LPl5kNlHLIP034wISWvZJjgfG+rN/52MXjmMZLBirL7nDzj7ASexRkc=","*${OrderDetailsContainerCustAccLabel}","eNqtTT0KwyAYvYoIHfVTI53UOdAxByiiNgrRiFra41c69ASF97O8HwXDGwWjGfWlR+48erVF4wUbZVFs4aExpTCxuRZC6fEcHdYbbGLqnQnCr0TIi2B8IVxCD0co6ZnJ9BzKIP1XmzFayz6HU95Rb+7vy+iV/IgaS8bqe/6ANR8oPUZJ","*${OrderDetailsContainerRefNumValue}, 10","*${OrderDetailsContainerCustNameValue}, 10","*${OrderDetailsContainerCustAccValue}, 10","*${OrderDetailsContainerCustOrderNumValue}, 10","*${OrderDetailsContainerRefNumValue}","eNqtjU0KAiEcxa8iQkv9q2Ot1HXQcg4QojYKoyNq1PGTFp0geB+r93sKhjcKRjPqa4/csfdqi8YLNsqi2MJDY0phanUthNLjMTpcb7CKmXcmCL8QIU+C8YVwCT3soaRnJrNzKIP034yIM61lm+CUN9Sb+zsZvZIfUWPJWH3PH7DmAyjJRks=","*${OrderDetailsContainerCustNameValue}","eNqtjTsKAyEYhK8iQkr91ZWt1DqQcg8QRM0qrK6oITl+JEVOEJhHNd8oGN4oGM2orz1y59GrLRov2CiLYgsPjSmFqc21EEqP5+hwvcEmZt6ZIHwlQl4E4wvhEno4QknPTGbnUAbpvxkRK61ln+CUd9Sb+zsZvZIfUWPJWH3PH7DmAylVRk0=","*${OrderDetailsContainerCustAccValue}","eNqtjU0KAiEcxa8iQkv9qyO1UddByzlAiNoojI6oUcdPWnSC4H2s3u8pGN4oGM2orz1yx96rLRov2CiLYgsPjSmFqdW1EEqPx+hwvcEqZt6ZIPxMhDwJxhfCJfSwh5KemczOoQzSfzMiLrSWbYJT3lBv7u9k9Ep+RI0lY/U9f8CaDynhRk8=","*${OrderDetailsContainerCustOrderNumValue}","eNqtjU0KAiEcxa8iQkv9qyPRQl0HLecAIWqjMDqiRh0/adEJgvexer+nYHijYDSjvvbIHXuvtmi8YKMsii08NKYUplbXQig9HqPD9QarmHlngvAzEfIkGF8Il9DDHkp6ZjI7hzJI/82IuNBatglOeUO9ub+T0Sv5ETWWjNX3/AFrPiptRlE=","*${OrderDetailsReturnContainer}","eNqtjU0KAiEcxa8iQkv9qyNBoK6DlnOAELVRGB1Ro46ftOgEwftYvd9TMLxRMJpRX3vkjr1XWzResFEWxRYeGlMKU6trIZQej9HheoNVzLwzQfiZCHkSjC+ES+hhDyU9M5mdQxmk/2ZEXGgt2wSnvKHe3N/J6JX8iBpLxup7/oA1Hyr5RlM=","*${OrderDetailsReturnHeader}, 10","*${OrderDetailsReturnDescription}, 10","*${OrderDetailsReturnPrice}, 10","*${OrderDetailsReturnRRP}, 10","*${OrderDetailsReturnOrder}, 10","*${OrderDetailsReturnShipped}, 10","*${OrderDetailsReturnPending}, 10","*${OrderDetailsReturnTotal}, 10","*${OrderDetailsReturnHeader}","eNqtjTsKAyEYhK8iQkr9fZFKrRdS7gGCqFmFXVfUkBw/kiInCMyjmm80jGA1jGb11wH5c+/VFYMlttqh1OLDYEphavUtxtLTOTosN1jFzDsThF+JUBfBuCRcQY97LPl5kNlHLIP034xIRmvZJjgfG+rN/52MXjmMZLBirL7nDzj7ASabRkM=","*${OrderDetailsReturnDescription}","eNqtjTsKAyEYhK8iQkr9fZFKrRdS7gGCqFmFXVfUkBw/kiInCMyjmm80jGA1jGb11wH5c+/VFYMlttqh1OLDYEphavUtxtLTOTosN1jFzDsThF+JUBfBuCRcQY97LPl5kNlHLIP034xITmvZJjgfG+rN/52MXjmMZLBirL7nDzj7AScnRkU=","*${OrderDetailsReturnPrice}","eNqtjTsKAyEYhK8iQkr9fZFKrRdS7gGCqFmFXVfUkBw/kiInCMyjmm80jGA1jGb11wH5c+/VFYMlttqh1OLDYEphavUtxtLTOTosN1jFzDsThF+JUBfBuCRcQY97LPl5kNlHLIP034xIQWvZJjgfG+rN/52MXjmMZLBirL7nDzj7ASezRkc=","*${OrderDetailsReturnRRP}","eNqtjTsKAyEYhK8iQkr9fZFKrRdS7gGCqFmFXVfUkBw/kiInCMyjmm80jGA1jGb11wH5c+/VFYMlttqh1OLDYEphavUtxtLTOTosN1jFzDsThF+JUBfBuCRcQY97LPl5kNlHLIP034xISWvZJjgfG+rN/52MXjmMZLBirL7nDzj7ASg/Rkk=","*${OrderDetailsReturnOrder}","eNqtjTsKAyEYhK8iQkr9fZFKrRdS7gGCqFmFXVfUkBw/kiInCMyjmm80jGA1jGb11wH5c+/VFYMlttqh1OLDYEphavUtxtLTOTosN1jFzDsThF+JUBfBuCRcQY97LPl5kNlHLIP034xIRWvZJjgfG+rN/52MXjmMZLBirL7nDzj7ASjLRks=","*${OrderDetailsReturnShipped}","eNqtjcsKAiEYhV9FhJb6e6uV4zpoOQ8QojYKoyNq1OMnLXqC4FxW5zsahjcaRjP6a4/csfdqy4IlNtqi2MJjwZTC1OpaCKXHY3S43mAVM+9MEH4hQp0E45JwBT3soaRnJrNzKIP034zIM61lm+CUN9Sb+zsZvZIfccGKsfqeP2DNBylXRk0=","*${OrderDetailsReturnPending}","eNqtjTsKAyEYhK8iQkr9fbGVWgdS7gGCrGYVVlfUkBw/kiInCMyjmm80DG81jGb11x5t59GrKwZLbLVDsYWHwZTC1Lq1EEqP5+hwvcEqZt6ZIHwhQl0E45JwBT0coaRnJrNzKIP034zIhdayT3DKO+pt+zsZvZIf0WDFWH3PH3D2AynjRk8=","*${OrderDetailsReturnTotal}","eNqtjcsKAiEYhV9FhJb6e6M2juug5TxAiNoojI6oUY+ftOgJgnNZne9oGN5oGM3orz1yx96rLQuW2GiLYguPBVMKU6trIZQej9HheoNVzLwzQfiZCHUSjEvCFfSwh5KemczOoQzSfzMiL7SWbYJT3lBv7u9k9Ep+xAUrxup7/oA1HypvRlE=","*${OrderDetailsBillingContainer}","eNqtjcsKAiEYhV9FhJb6eyNaOK6DlvMAIWqjMDqiRj1+0qInCM5ldb6jYXijYTSjv/bIHXuvtixYYqMtii08FkwpTK2uhVB6PEaH6w1WMfPOBOFnItRJMC4JV9DDHkp6ZjI7hzJI/82IvNBatglOeUO9ub+T0Sv5EResGKvv+QPWfAAq+0ZT","*${OrderDetailsBillingLabel}, 10","*${OrderDetailsOrderSummaryLabel}, 10","*${OrderDetailsBillingDetailsAndTotal}, 10","*${OrderDetailsAddressField}, 10","*${OrderDetailsPriceField}, 10","*${OrderDetailsBillingLabel}","eNqtjcsKAiEYhV9FhJb6eyMIHNdBy3mAELVRGB1Rox4/adETBOeyOt/RMLzRMJrRX3vkjr1XWxYssdEWxRYeC6YUplbXQig9HqPD9QarmHlngvAzEeokGJeEK+hhDyU9M5mdQxmk/2ZEXmgt2wSnvKHe3N/J6JX8iAtWjNX3/AFrPiuHRlU=","*${OrderDetailsOrderSummaryLabel}","eNqtjTsKAyEYhK8iQkr91ZVUar2Qcg8QRM0qrK6oITl+JEVOEJhHNd8oGN4oGM2orz1y59GrLRov2CiLYgsPjSmFqc21EEqP5+iw3mATM+9MEH4lQl4E4wvhEno4QknPTGbnUAbpvxmRjNayT3DKO+rN/Z2MXsmPqLFkrL7nD1jzAScpRkU=","*${OrderDetailsBillingDetailsAndTotal}","eNqtjTsKAyEYhK8iQkr91ZVUar2Qcg8QRM0qrK6oITl+JEVOEJhHNd8oGN4oGM2orz1y59GrLRov2CiLYgsPjSmFqc21EEqP5+iw3mATM+9MEH4lQl4E4wvhEno4QknPTGbnUAbpvxmRnNayT3DKO+rN/Z2MXsmPqLFkrL7nD1jzASe1Rkc=","*${OrderDetailsAddressField}","eNqtjTsKAyEYhK8iQkr91ZVUar2Qcg8QRM0qrK6oITl+JEVOEJhHNd8oGN4oGM2orz1y59GrLRov2CiLYgsPjSmFqc21EEqP5+iw3mATM+9MEH4lQl4E4wvhEno4QknPTGbnUAbpvxmRgtayT3DKO+rN/Z2MXsmPqLFkrL7nD1jzAShBRkk=","*${OrderDetailsPriceField}","eNqtjTsKAyEYhK8iQkr9fZFKrRdS7gGCqFmFXVfUkBw/kiInCMyjmm80jGA1jGb11wH5c+/VFYMlttqh1OLDYEphavUtxtLTOTosN1jFzDsThF+JUBfBuCRcQY97LPl5kNlHLIP034woSWvZJjgfG+rN/52MXjmMZLBirL7nDzj7ASjNRks=","*3","*Slept 3 seconds","*TC Move to Top","*${HomepageMyAccountLabel}","*TC-014 - User should be able to click Return from left navigation","*TC021","*User should be able to click Return from left navigation","*${HomepageReturnMenu}, 10","*${HomepageReturnMenu}","*Clicking element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Return ')]'.","eNqtzEEKwyAUBNCriNClfjWhZGFcB7rMAYqojUJixG9pj1/poicozMxqeBqaNxpaNfpbT9y5Y7F5pgM12pJYw2OmnEPP6moIGePZEJYbrKrvXSgmr0yNFyXkwOQIGPaQ0/Ng+LuziZe8dS8dG8Hq/gWSV/ItznQSorw7D9Z8ACQ4P8M=","*TC-015 - User should be able to select one return from the list","*Return Page","*TC037","*User should be able to select one return from the list","*Return_Page_Keywords","*${ReturnPageHistory1}, 10","*${ReturnPageHistory1}","*Clicking element '(//td//a[@class='cx-return-requests-value'])[1]|(//div//a[@class='cx-return-requests-value'])[1]'.","eNqtzEEKwyAUBNCriNClfjWhtKCuA13mAEXUxkBixG9pj1/poicozMxqeBpasBpatfrbQPyxYXHZ0IFa7Uiq8WEo59Az+xpjxnQ0hOkGs+p7F4rJM1PjSQk5MDkCxi3m9bkz/N3ZlZe8dG/dF4LV/wskrzW0ZOhFiPLuPDj7ASS7P8U=","*TC-016 - User should be able to view Return details","*TC038","*User should be able to view Return details in HK Return Details Page","*${ReturnPageOrderDetailsHeader}, 20","*${ReturnPageOrderDetailsStatus}, 10","*${ReturnPageOrderDetailsHeader}","eNqtjTsKAyEYhK8iQkr91ZVUar2Qcg8QRM0qrK6oITl+JEVOEJhHNd8oGN4oGM2orz1y59GrLRov2CiLYgsPjSmFqc21EEqP5+iw3mATM+9MEH4lQl4E4wvhEno4QknPTGbnUAbpvxmRktayT3DKO+rN/Z2MXsmPqLFkrL7nD1jzASlZRk0=","*${ReturnPageOrderDetailsStatus}","eNqtjU0KAiEcxa8iQkv9q2Ot1HXQcg4QojYKoyNq1PGTFp0geB+r93sKhjcKRjPqa4/csfdqi8YLNsqi2MJDY0phanUthNLjMTpcb7CKmXcmCL8QIU+C8YVwCT3soaRnJrNzKIP034zIM61lm+CUN9Sb+zsZvZIfUWPJWH3PH7DmAynlRk8=","*${ReturnPageOrderDetailsContainer}, 10","*${ReturnPageOrderDetailsPartsRefLabel}, 20","*${ReturnPageOrderDetailsCustNameLabel}, 10","*${ReturnPageOrderDetailsOrderDateLabel}, 10","*${ReturnPageOrderDetailsRetReqDateLabel}, 10","*${ReturnPageOrderDetailsPartsRefValue}, 10","*${ReturnPageOrderDetailsCustOrderNumValue}, 10","*${ReturnPageOrderDetailsCustNameValue}, 10","*${ReturnPageOrderDetailsSupRefValue}, 10","*${ReturnPageOrderDetailsSupValue}, 10","*${ReturnPageOrderDetailsOrderDateValue}, 10","*${ReturnPageOrderDetailsContainer}","eNqtjTsKAyEYhK8iQkr91ZWt1DqQcg8QRM0qrK6oITl+JEVOEJhHNd8oGN4oGM2orz1y59GrLRov2CiLYgsPjSmFqc21EEqP5+hwvcEmZt6ZIHwlQl4E4wvhEno4QknPTGbnUAbpvxmRK61ln+CUd9Sb+zsZvZIfUWPJWH3PH7DmAypxRlE=","*${ReturnPageOrderReturnContainer}","*${ReturnPageOrderReturnHeader}, 10","*${ReturnPageOrderReturnDataSectionContainer}","eNqtjU0KAiEcxa8iQkv9qyO1UddByzlAiNoojI6oUcdPWnSC4H2s3u8pGN4oGM2orz1yx96rLRov2CiLYgsPjSmFqdW1EEqPx+hwvcEqZt6ZIPxMhDwJxhfCJfSwh5KemczOoQzSfzMiL7SWbYJT3lBv7u9k9Ep+RI0lY/U9f8CaDyr9RlM=","*${ReturnPageOrderReturnApproveRejectContainer}","eNqtjU0KAiEcxa8iQkv9qyPRQl0HLecAIWqjMDqiRh0/adEJgvexer+nYHijYDSjvvbIHXuvtmi8YKMsii08NKYUplbXQig9HqPD9QarmHlngvAzEfIkGF8Il9DDHkp6ZjI7hzJI/82IvNBatglOeUO9ub+T0Sv5ETWWjNX3/AFrPiuJRlU=","*${ReturnPageOrderReturnMessageContainer}","*${ReturnPageOrderReturnMessageSupplierButton}, 10","eNqtjU0KAiEcxa8iQkv9qyNBoK6DlnOAELVRGB1Ro46ftOgEwftYvd9TMLxRMJpRX3vkjr1XWzResFEWxRYeGlMKU6trIZQej9HheoNVzLwzQfiZCHkSjC+ES+hhDyU9M5mdQxmk/2ZEXmgt2wSnvKHe3N/J6JX8iBpLxup7/oA1HywVRlc=","*${ReturnPageOrderReturnMessageSupplierButton}","eNqtjU0KAiEcxa8iQkv9q2Ot1HXQcg4QojYKoyNq1PGTFp0geB+r93sKhjcKRjPqa4/csfdqi8YLNsqi2MJDY0phanUthNLjMTpcb7CKmXcmCL8QIU+C8YVwCT3soaRnJrNzKIP034ycGa1lm+CUN9Sb+zsZvZIfUWPJWH3PH7DmAye3Rkc=","*TC-022 - User should be able to click and expand Customer Management","*TC022","*User should be able to click and expand Customer Management","*${HomepageCustomerMenu}, 10","*${HomepageCustomerMenu}","*Clicking element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Customer ')]'.","*TC-023 - User should be able to click Customer Manegement - Buyer Rel from left navigation","*TC024","*User should be able to click Customer Manegement - Buyer Rel from left navigation","*${HomepageCustomerBuyerRelation}, 10","*${HomepageCustomerBuyerRelation}","*Clicking element '//div[@class='tab-data has-child']//a[contains(text(),'Customer Relationship') or contains(text(),'Buyer Relationship')]'.","eNqtzEEKwyAUBNCriNClfjWhdKGuC13mAEXURiEx4re0x6900RMUZmY1PA09WA29Wf1tIP7YsLpi6EStdiS1+DCUcxhZfIuxYDo6wvUGixp7F4rJM1PzSQk5MTkDxi2W/NwZ/u5MCl7LOsC8rwSb/5tIXjn0ZOhFiPoePjj7AZHgQBU=","*TC-024 - User should be able to view Buyer Rel Page","*New RegReq Page","*TC043","*User should be able to view Buyer Rel Page","*BuyerRel_Page_Keywords","*${BuyerRelPagePanelContainer}, 10","*${BuyerRelPagePanelHeader}, 10","eNqtzEEKwyAUBNCriNClfjWhdKGuC13mAEXURiEx4re0x6900RMUZmY1PA09WA29Wf1tIP7YsLpi6EStdiS1+DCUcxhZfIuxYDo6wvUGixp7F4rJM1PzSQk5MTkDxi2W/NwZ/u5MSl7LOsC8rwSb/5tIXjn0ZOhFiPoePjj7AZJkQBc=","*TC-025 - User should be able to click Messages from left navigation","*TC025","*User should be able to click Messages from left navigation","*${HomepageMessagesMenu}, 10","*${HomepageMessagesMenu}","*Clicking element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Messages ') or contains(text(),'Inbox')]'.","eNqtzEEKwyAUBNCriNClfjWhdKGuC13mAEXURiEx4re0x6900RMUZmY1PA09WA29Wf1tIP7YsLpi6EStdiS1+DCUcxhZfIuxYDo6wvUGixp7F4rJM1PzSQk5MTkDxi2W/NwZ/u5MKl7LOsC8rwSb/5tIXjn0ZOhFiPoePjj7AZLoQBk=","*TC-026 - User should be able to view message page","*Message Page","*TC044","*User should be able to view message page","*Message_Page_Keywords","*${MessagePagePanelContainer}, 10","*${MessagePagePanelHeader}, 10","eNqtzE0KwyAUBOCriNClPn9C6cK4LnSZAxRRG4XEiM/SHr/SRU9QmJnV8BnowRrozZpvA/HHhtWVmWpqjSOpxcdMOYeRxbcYC6ajI1xvsKixd6GYPDM1nZSQmskJMG6x5OfO8HdnUvNa1gHmfSXY/N9E8sqhp5lehKjv4YOzH5NsQBs=","*TC-027 - User should be able to click and expand Profile","*TC026","*User should be able to click and expand Profile","*${HomepageProfileMenu}, 10","*${HomepageProfileMenu}","*Clicking element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Profile ')]'.","*TC-028 - User should be able to click Profile - Account Details from left navigation","*TC027","*User should be able to click Profile - Account Details from left navigation","*${HomepageProfileAccountDetails}, 10","*${HomepageProfileAccountDetails}","*Clicking element '//div[@class='tab-data has-child']//a[contains(text(),'Account Details')]'.","eNqtjEEKwyAURK8iQpf61YTShboudJkDFFEbhcSI39Iev9JFT1CYmcVjeBp6sBp6s/rbQPyxYXXF0Ila7Uhq8WEo5zCy+BZjwXR0hOsNFjX2LhSTZ6bmkxJyYnIGjFss+bkz/N0H5rWsQ5j3lWDzfzOSVw49GXoRor6HH5z9AJPwQB0=","*TC-029 - User should be able to view account details page","*Profile","*TC045","*User should be able to view account details page","*Account_Details_Page_Keywords","*${ProfileAccountsDetailsPanelContainer}, 10","*${ProfileAccountsDetailsPanelHeader}, 10","*${ProfileAccountsDetailsFirstNameLabel}, 10","*${ProfileAccountsDetailsLastNameLabel}, 10","*${ProfileAccountsDetailsEmailLabel}, 10","*${ProfileAccountsDetailsPhoneLabel}, 10","*${ProfileAccountsDetailsLandlineLabel}, 10","*${ProfileAccountsDetailsFirstNameTextBox}, 10","*${ProfileAccountsDetailsLastNameTextBox}, 10","*${ProfileAccountsDetailsEmailTextBox}, 10","*${ProfileAccountsDetailsPhoneTextBox}, 10","*${ProfileAccountsDetailsLandlineTextBox}, 10","*${ProfileAccountsDetailsCancelButton}, 10","*${ProfileAccountsDetailsUpdateButton}, 10","*${ProfileAccountsDetailsPanelContainer}","eNqtjU0KAiEcxa8iQkv9q2Ot1HXQcg4QojYKoyNq1PGTFp0geB+r93sKhjcKRjPqa4/csfdqi8YLNsqi2MJDY0phanUthNLjMTpcb7CKmXcmCL8QIU+C8YVwCT3soaRnJrNzKIP034ycOa1lm+CUN9Sb+zsZvZIfUWPJWH3PH7DmAyhDRkk=","*${ProfileAccountsDetailsFirstNameLabel}","eNqtjU0KAiEcxa8iQkv9q2Ot1HXQcg4QojYKoyNq1PGTFp0geB+r93sKhjcKRjPqa4/csfdqi8YLNsqi2MJDY0phanUthNLjMTpcb7CKmXcmCL8QIU+C8YVwCT3soaRnJrNzKIP034ycBa1lm+CUN9Sb+zsZvZIfUWPJWH3PH7DmAyjPRks=","*${ProfileAccountsDetailsLastNameLabel}","eNqtjcsKAiEYhV9FhJb6e6uV4zpoOQ8QojYKoyNq1OMnLXqC4FxW5zsahjcaRjP6a4/csfdqy4IlNtqi2MJjwZTC1OpaCKXHY3S43mAVM+9MEH4hQp0E45JwBT3soaRnJrNzKIP034ycJa1lm+CUN9Sb+zsZvZIfccGKsfqeP2DNBylbRk0=","*${ProfileAccountsDetailsEmailLabel}","eNqtjU0KAiEcxa8iQkv9q2Ot1HXQcg4QojYKoyNq1PGTFp0geB+r93sKhjcKRjPqa4/csfdqi8YLNsqi2MJDY0phanUthNLjMTpcb7CKmXcmCL8QIU+C8YVwCT3soaRnJrNzKIP034ycJa1lm+CUN9Sb+zsZvZIfUWPJWH3PH7DmAynnRk8=","*${ProfileAccountsDetailsPhoneLabel}","eNqtjUsKwyAYhK8iQpf6qzFdGdeBLnOAImqjEI2opT1+pYueoDCP1XyjoDutoFetvnbInkcrJi94wloZFKp/LJhSGNps9T63cPYG6w02MfLOBOFXIuRFMD4RLqH5w+f4TGR08rmT9puReaYl7wMc045atX8no1d0PSxYMlbe4weM/gAqc0ZR","*${ProfileAccountsDetailsLandlineLabel}","eNqtjUsKwyAYhK8iQpf6q7FZGdeBLnOAImqjEI2opT1+pYueoDCP1XyjoDutoFetvnbInkcrJi94wloZFKp/LJhSGNps9T63cPYG6w02MfLOBOEzEfIiGJ8Il9D84XN8JjI6+dxJ+83IdaYl7wMc045atX8no1d0PSxYMlbe4weM/gAq/0ZT","*${ProfileAccountsDetailsFirstNameTextBox}","eNqtjU0KAiEcxa8iQkv9q2O1UdcDLecAIWqjMOOIGnX8pEUnCN7H6v2egu6Ngl6N+tojd2yt2KzxhI2yKNbw0JhSGFpcDSG3ePQG8w0WMfLOBOEXIuRJMD4RLqGFLeT03MnoPeRO2m9Gzlda8jrAaV9Rq+7vZPRKvkeNJWPlPX7Amg8ri0ZV","*${ProfileAccountsDetailsLastNameTextBox}","eNqtjU0KAiEcxa8iQkv9q2PRQl0PtJwDhKiNwowjatTxkxadIHgfq/d7Cro3Cno16muP3LG1YrPGEzbKoljDQ2NKYWhxNYTc4tEbzDdYxMg7E4RfiJAnwfhEuIQWtpDTcyej95A7ab8ZOV9pyesAp31Frbq/k9Er+R41loyV9/gBaz4sF0ZX","*${ProfileAccountsDetailsEmailTextBox}","eNqtjU0KAiEcxa8iQkv9q2NBoK4HWs4BQtRGYcYRNer4SYtOELyP1fs9Bd0bBb0a9bVH7thasVnjCRtlUazhoTGlMLS4GkJu8egN5hssYuSdCcIvRMiTYHwiXEILW8jpuZPRe8idtN+MnK+05HWA076iVt3fyeiVfI8aS8bKe/yANR8so0ZZ","*${ProfileAccountsDetailsPhoneTextBox}","eNqtjTsKAyEYhK8iQkr91ZWt1DqQcg8QRM0qrK6oITl+JEVOEJhHNd8oGN4oGM2orz1y59GrLRov2CiLYgsPjSmFqc21EEqP5+hwvcEmZt6ZIHwlQl4E4wvhEno4QknPTGbnUAbpvxlZGa1ln+CUd9Sb+zsZvZIfUWPJWH3PH7DmAyhFRkk=","*${ProfileAccountsDetailsLandlineTextBox}","eNqtjTsKAyEYhK8iQkr91ZWt1DqQcg8QRM0qrK6oITl+JEVOEJhHNd8oGN4oGM2orz1y59GrLRov2CiLYgsPjSmFqc21EEqP5+hwvcEmZt6ZIHwlQl4E4wvhEno4QknPTGbnUAbpvxlZOa1ln+CUd9Sb+zsZvZIfUWPJWH3PH7DmAyjRRks=","*${ProfileAccountsDetailsCancelButton}","eNqtjTsKAyEYhK8iQkr91ZWt1DqQcg8QRM0qrK6oITl+JEVOEJhHNd8oGN4oGM2orz1y59GrLRov2CiLYgsPjSmFqc21EEqP5+hwvcEmZt6ZIHwlQl4E4wvhEno4QknPTGbnUAbpvxlZBa1ln+CUd9Sb+zsZvZIfUWPJWH3PH7DmAyldRk0=","*${ProfileAccountsDetailsUpdateButton}","eNqtjTsKAyEYhK8iQkr9fbGVWgdS7gGCrGYVVlfUkBw/kiInCMyjmm80DG81jGb11x5t59GrKwZLbLVDsYWHwZTC1Lq1EEqP5+hwvcEqZt6ZIHwhQl0E45JwBT0coaRnJrNzKIP034wsktayT3DKO+pt+zsZvZIf0WDFWH3PH3D2AynpRk8=","*TC-030 - User should be able to click Profile - Change Pass from left navigation","*TC028","*User should be able to click Profile - Change Pass from left navigation","*${HomepageProfileChangePass}, 10","*${HomepageProfileChangePass}","*Clicking element '//div[@class='tab-data has-child']//a[contains(text(),'Change Password')]'.","eNqtzEEKwyAUBNCriNClfjVp6UJdB7rMAYqojYHEiN/SHr/SRU9QmJnV8DS0YDW0avW3gfhjw+KyoQO12pFU48NQzqFn9jXGjOloCNMNZtX3LhSTF6bGkxJyYHIEjFvM63Nn+LszeeYlLx1c94Vg9X8TyWsNLRl6FaK8uw/OfgCUdEAf","*TC-031 - User should be able to view change password page","*TC046","*User should be able to view change password page","*Change_Pass_Page_Keywords","*${ProfileChangePassPanelContainer}, 10","*${ProfileChangePassPanelHeader}, 10","*${ProfileChangePassPanelContainer}","eNqtjTsKAyEYhK8iQkr91ZWt1DqQcg8QRM0qrK6oITl+JEVOEJhHNd8oGN4oGM2orz1y59GrLRov2CiLYgsPjSmFqc21EEqP5+hwvcEmZt6ZIHwlQl4E4wvhEno4QknPTGbnUAbpvxlZJa1ln+CUd9Sb+zsZvZIfUWPJWH3PH7DmAyp1RlE=","*TC-032 - User should be able to click and expand Company","*TC029","*User should be able to click and expand Company","*${HomepageCompanyMenu}, 10","*${HomepageCompanyMenu}","*Clicking element '//ul[@class='vertical-menu tab-level']//a[@class='has-nochild'][contains(text(),' Company ')]'.","*TC-033 - User should be able to click Company - Company Details from left navigation","*TC030","*User should be able to click Company - Company Details from left navigation","*${HomepageCompanyDetails}, 10","*${HomepageCompanyDetails}","*Clicking element '//div[@class='tab-data has-child']//a[contains(text(),'Company Details')]'.","eNqtjEEKwyAUBa8iQpf61YTShboudJkDFFEbhcSI39Iev9JFT1B481bDaOjBaujN6i+B+GPD6oqhE7XakdTiw1DOYWzxLcaC6egI1xssavxdKCbPTM0nJeTE5AwYt1jyc2f404fBa1lHMO8rweb/ViSvHHoy9CJEfY8+OPsBlPhAIQ==","*TC-034 - User should be able to view company details page","*Company Details","*TC047","*User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Dealer Company Details Page","*Company_Details_Page_Keywords","*${CompanyDetailsPageDelSameAsPostalCheckBox}, 10","*${CompanyDetailsPageDelSameAsPostalCheckBox}","*Clicking element '//dpp-company-details//input[@type='checkbox']|//dpp-hk-company-details//input[@type='checkbox']'.","eNqtjUsKwyAYhK8iQpf6q7FZGdeBLnOAImqjEI2opT1+pYueoDCP1XyjoDutoFetvnbInkcrJi94wloZFKp/LJhSGNps9T63cPYG6w02MfLOBOEzEfIiGJ8Il9D84XN8JjI6+dxJ+83IfKUl7wMc045atX8no1d0PSxYMlbe4weM/gArAUZT","*User should be able to view company details in HK Company Details Page","*${CompanyDetailsPagePanelContainer}, 10","*${CompanyDetailsPagePanelHeader}, 10","eNqtzEEKwyAUBNCriNClfjWh7UJdB7rMAYqojYHEiN/SHr/SRU9QmJnV8DS0YDW0avW3gfhjw+KyoQO12pFU48NQzqFn9jXGjOloCNMNZtX3LhSTZ6bGkxJyYHIEjFvM63Nn+LszeeElLx1c94Vg9X8TyWsNLRl6FaK8uw/OfgCVfEAj","eNp1TrEKg1AQ+5Xb3N4gndyKukuLnR7IqWd95fWd3J1Q/74t1bEQSAJJSC3CAiHBFCJBVha+VRL1FaZAkddArlbjBQfyzTbMKM9G+EGDqV82mzntNvcXUl7lkzNSG9HQV4SRZKfuhhKwj+SEe7YMOEEMieBUwFHdXzjnf/g7eW67ktMU7l91zXdzLI9MCokN6BXU3BsFjFPT","*Imported resource file 'C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\testdata\\config.robot' is empty."]);
+window.output["strings"] = window.output["strings"].concat(["*","*HK Dealer Check","*C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Dealer\\HK_TC\\S2\\HK_Dealer_Check.robot","*HK_Dealer_Check.robot","*<p>Suite description\x3c/p>","*Test Setup","*Run Keywords","*BuiltIn","*<p>Executes all the given keywords in a sequence.\x3c/p>","*Open Chrome Browser HK","*HK_S2_Config","*Open Browser","*SeleniumLibrary","*<p>Opens a new browser instance to the optional <code>url\x3c/code>.\x3c/p>","*${s2HKDealer}    Chrome    executable_path=${driver_path}","eNq1zD0OwjAMQOGrWF0yJZE6otKFA3AGx3FJIH9yUlVwemDhBqxPT9+1cYnlBk7q0VlAXYLUzApGBYedYZcEakEIwtt5CmO0frI2PDxjYjFUny8Kx3YXHQsFwsZ+1n3WbXcpksnVc9LDEH3WnFmITS2eMxb/LT9pWv9nLxZXZd4TSlTv","*Maximize Browser Window","*<p>Maximizes current browser window.\x3c/p>","*Screen Shot DIR","*Dealer Screent Shot DIR HK","*Get Current Date","*DateTime","*<p>Returns current local or UTC time with an optional increment.\x3c/p>","*result_format=%m-%d-%y %H-%M","*${currentdate}","*${currentdate} = 03-05-24 11-00","*Create Directory","*OperatingSystem","*<p>Creates the specified directory.\x3c/p>","*${Dealer_screenshot_path}/HK_${currentdate}","eNrFjbEKg0AQRH/lsEmlniZpxNhoIJBGIukWwnGu3AXjyu5Z+Pe5Iv+QZoaB95iW0QQc1egZbSDe1aE2yjFOl2TyM1Z53lbwFGSBziweZ9o8ZlcJtBqL0O/WGf70TO/oC6x7cLT8ZgkPFNo4cgElyOZjQYdmRobBMuIijqJ1u8NQxnzpY6rPaXlSRZFqnTT/+65z0xyyL3s/Z08=","*Convert To String","*<p>Converts the given item to a Unicode string.\x3c/p>","*${LogDIR}","*${LogDIR} = C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Dealer\\Screenshots\\HK\\S2/HK_03-05-24 11-00","*Set Screenshot Directory","*<p>Sets the directory for captured screenshots.\x3c/p>","*Set Global Variable","*<p>Makes a variable available globally in all tests and suites.\x3c/p>","*TC Sleep","*Sleep","*Run Keyword And Continue On Failure","*<p>Runs the keyword and continues execution even if a failure occurs.\x3c/p>","*<p>Pauses the test executed for the given time.\x3c/p>","*10","*Slept 10 seconds.","*TC-001 - Input Valid Email","*TC006","*Valid Account","*User should be able to click Translate to English Button","*Login_Page_Keywords","*Run Keyword And Return Status","*<p>Runs the given keyword with given arguments and returns the status as a Boolean value.\x3c/p>","*element should be visible    ${Dealer_HK_LoginPage_English_Button}","*${EN}","*Element Should Be Visible","*<p>Verifies that the element identified by <code>locator\x3c/code> is visible.\x3c/p>","*${Dealer_HK_LoginPage_English_Button}","*Element '//dpp-language-toggle//span[contains(text(),'EN')]' is displayed.","*${EN} = True","*Run Keyword If","*<p>Runs the given keyword with the given arguments, if <code>condition\x3c/code> is true.\x3c/p>","*${EN}    Translate to English","*Translate to English","*Wait Until Element Is Visible","*<p>Waits until the element <code>locator\x3c/code> is visible.\x3c/p>","*${Dealer_HK_LoginPage_English_Button}    10","*Capture Element Screenshot","*<p>Captures a screenshot from the element identified by <code>locator\x3c/code> and embeds it into log file.\x3c/p>","eNqtjU0KwyAUhK8iQpf6nibdqetAlzlAEbVRSIyopT1+pYueoDA/q/lGQfdGQa9Gfe2JO/dWbNZ0okZZEmt4aMo5DK2uhpBbPHuD5QarHHnHieGVyfkiUQiGCC3sIafnwUYfIXfWfjMmeMnb4KZjI626f4PJK/keNZ0Ry3vcgDUfoxZFzw==","*Click Element","*<p>Click the element identified by <code>locator\x3c/code>.\x3c/p>","*Clicking element '//dpp-language-toggle//span[contains(text(),'EN')]'.","*2","*Slept 2 seconds.","*Input Valid Username","*Clear Element Text","*<p>Clears the value of the text-input-element identified by <code>locator\x3c/code>.\x3c/p>","*${Email}","*Input Text","*<p>Types the given <code>text\x3c/code> into the text field identified by <code>locator\x3c/code>.\x3c/p>","*${Email}    ${Username}","*Typing text 'hk.seller1.admin@test.com' into text field '//*[@type='email']'.","eNqtjU0KwyAUhK8iQpf6Xky6U9eBLnOAImqjEI2opT1+pYueoDA/q/lGQndaQq9afu2IPY9WTFZ0ploaEqp/KMo5DG22ep9bOHuD9QabGHnHmeGVieUicJoYIjR/+ByfiY1OPnfWfjMmeMn74Ma0k1btv8HkFV0Pii6I5T1uwOgPo6FF0Q==","*1","*Slept 1 second.","*TC-002 - Input Valid Password","*TC007","*Input Valid Password","*${Pass}","*${Pass}    ${Password}","*Typing text 'HKPass@12345' into text field '//*[@type='password']'.","eNqtjU0KwyAUhK8iQpf6XjTdqetAlzlAEbVRSIyopT1+pYueoDA/q/lGQfdGQa9Gfe2JO/dWbNZUUqMsiTU8NOUchlZXQ8gtnr3BcoNVjLyjZHhlYr4InCaGCC3sIafnwUYfIXfWfjMmecnb4KZjI626f4PJK/keNZ0Ry3vcgDUfpCxF0w==","*TC-003 - User should be able to click Login Button","*Login Button","*TC008","*User should be able to click Login Button","*${LoginButton}","eNqtjU0KwyAUhK8iQpf6XozdqetAlzlAEbVRSIyopT1+pYueoDA/q/lGQfdGQa9Gfe2JO/dWbNZ0pkZZEmt4aMo5DK2uhpBbPHuD5QarGHnHmeGVCXkROE0MEVrYQ07Pg40+Qu6s/WZM8pK3wU3HRlp1/waTV/I9aioRy3vcgDUfpLdF1Q==","*Clicking element '//button[@type='submit']'.","*TC-004 - User should be able to view top navigation","*TC014","*Top Navigation","*User should be able to view top navigation in HK Dealer Home Page","*Home_Page_Keywords","*${HomepageUserAccount}    10","*${HomepageOrders}    10","*${HomepageReturn}    10","*${HomepageMessage}    10","*${HomepageUserAccount}","eNqtjU0KwyAUhK8iQpf6XkyyU9eFLnOAImqjEI2opT1+pYueoDA/q/lGQndaQq9afu2IPY9WTFZ0ploaEqp/KMo5DG22ep9bOHuD6w02MfKOM8OVieUicJoYIjR/+ByfiY1OPnfWfjO28pL3wY1pJ63af4PJK7oeFF0Qy3vcgNEfpUJF1w==","*${HomepageOrders}","eNqtjU0KwyAUhK8iQpf6XkzalboudJkDFFEbhWhELe3xK130BIX5Wc03ErrTEnrV8mtH7LG3YrKiM9XSkFD9Q1HOYWi11fvcwtEbXG+wipF3nBmemVhOAqeJIULzu8/xmdjo5HNn7TdjF17yNrgxbaRV+28weUXXg6ILYnmPGzD6A6XNRdk=","*${HomepageReturn}","eNqtjU0KwyAUhK8iQpf6XkxKN+q60GUOUERtFKIRtbTHr3TRExTmZzXfSOhOS+hVy68dscfeismKzlRLQ0L1D0U5h6HVVu9zC0dvcL3BKkbecWZ4ZmI5CZwmhgjN7z7HZ2Kjk8+dtd+MXXjJ2+DGtJFW7b/B5BVdD4ouiOU9bsDoD6ZYRds=","*${HomepageMessage}","eNqtjU0KwyAUhK8iQpf6XkwKXajrQpc5QBG1UYhG1NIev9JFT1CYn9V8I6E7LaFXLb92xB57KyYrOlMtDQnVPxTlHIZWW73PLRy9wfUGqxh5x5nhmYnlJHCaGCI0v/scn4mNTj531n4zduElb4Mb00Zatf8Gk1d0PSi6IJb3uAGjP6bjRd0=","*TC-005 - User should be able to click account from top navigation","*TC015","*User should be able to click account from top navigation","*Clicking element '//dpp-login//button|(//dpp-login//button)[1]'.","*5","*Slept 5 seconds.","*Capture Page Screenshot","*<p>Takes a screenshot of the current page and embeds it into a log file.\x3c/p>","eNqtzEEKwyAUBNCriNCl/q9poQt1HegyByiiNgqJEbW0x6900RMUZmY1PAXdGwW9GvWtJ+7YWrFZ04kaZUms4aEp5zCyuBpCbvHoDeYbLHLsHSeGFybPJ4lCMERoYQs5PXfWfncmeMnr8NK+klbdv0DySr5HTa+I5T14sOYDGws/pQ==","*TC-006 - User should be able to click orders from top navigation","*TC016","*User should be able to click orders from top navigation","*Clicking element '//dpp-order-notification//cx-icon[@class='cx-icon dpp-icons__header-orders']'.","eNqtzEEKwyAUBNCriNCl/h/TQhfGdaDLHKCI2igkRvyW9viVLnqCwsyshqeheaOhVaO/9cwdGxWbJz5yoy2LNTwmLiX0LK6GkCkejWC+waL63nEUeBHqfFI4DAIRKGwhp+cu6HcXSpa8di/tK6Pq/gWyV/ItTvyKWN6dB2s+G44/pw==","*TC-007 - User should be able to click return from top navigation","*TC017","*User should be able to click return from top navigation","*Clicking element '//dpp-return-notification//cx-icon[@class='cx-icon dpp-icons__header-returns']'.","eNqtzEEKwyAUBNCriNCl/h9toQt1HegyByiiNgqJEbW0x6900RMUZmY1PAXdGwW9GvWtJ+7YWrFZU0mNsiTW8NCUcxhZXA0ht3j0BvMNFjH2jpLhhYnzSeA0MURoYQs5PXfWfncmecnr8NK+klbdv0DySr5HTa+I5T14sOYDHBE/qQ==","*TC-009 - User should be able to click messages from top navigation","*TC019","*User should be able to click messages from top navigation","*Clicking element '//dpp-message-notification//cx-icon[@class='cx-icon dpp-icons__message-header']'.","eNqtzEEKwyAUBNCriNCl/h+TQhfGdaHLHKCI2igkRvyW9viVLnqCwsyshqeheaOhVaO/9cwdGxWbZz5yoy2LNTxmLiX0LK6GkCkejeB6g0X1veMo8CzUdFI4DAIRKGwhp+cu6HcXkyx57V7aV0bV/Qtkr+RbnPkFsbw7D9Z8AByUP6s=","*TC-010 - User should be able to click orders from left navigation","*Left Navigation","*TC020","*User should be able to click orders from left navigation","*${HomepageOrdersMenu}    10","*Scroll Element Into View","*<p>Scrolls the element identified by <code>locator\x3c/code> into view.\x3c/p>","*${HomepageOrdersMenu}","*Clicking element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Orders ')]'.","eNqtzEEKwyAUBNCriNCl/h/TQBfGdaHLHKCI2igkRvyW9viVLnqCwsyshqeheaOhVaO/9cwdGxWbZz5yoy2LNTxmLiX0LK6GkCkejeB6g0X1veMocBLqfFI4DAIRKGwhp+cu6HcXkyx57V7aV0bV/Qtkr+RbnPkFsbw7D9Z8AB0XP60=","*TC-011 - User should be able to view Cutomer Orders Panel","*Order Page","*TC033","*User should be able to view Cutomer Orders Panel","*Orders_Page_Keywords","*${OrderPagePanelContainer}    10","eNqtzEEKwyAUBNCriNCl/h/Tli7UdaHLHKCI2hhIjPgt7fErXfQEhZlZDU9DC1ZDq1Z/G5jfVyouGz5yqx1LNT4MlxJ6Jl9jzJT2RnC9waT63nEUeBLqeFA4DAIRKK4xL89N0O8uzrLkuXvLNjOq/l8gey2hJcMviOXdeXD2Ax2aP68=","*${OrderPageTotalOrders}    10","*${OrderPageSortBar}    10","*${OrderPageStatusFilter}    10","*${OrderPageDateFilter}    10","*${OrderPageSearchBox}    10","*${OrderPageSearchButton}    10","*${OrderPageArrangeFilter}    10","*${OrderPageDetailsColumn}    10","eNqtjU0KwyAUhK8iQpf6Xky6KKjrQpc5QBG1UYhG1NIev9JFT1CYn9V8I6E7LaFXLb92xB57KyYrOlMtDQnVPxTlHIZWW73PLRy9wfUGqxh5x5nhmYnlJHCaGCI0v/scn4mNTj531n4zduElb4Mb00Zatf8Gk1d0PSi6IJb3uAGjP6duRd8=","*${OrderPageTotalOrders}","eNqtjU0KwyAUhK8iQpf6nibdqetAlzlAEbVRSIyopT1+pYueoDA/q/lGQfdGQa9Gfe2JO/dWbNZ0okZZEmt4aMo5DK2uhpBbPHuD5QarHHnHieGVyfkiUQiGCC3sIafnwUYfIXfWfjMmkJe8DXA6NtKq+zuZvJLvUdMZsbzHD1jzAR8PRi8=","*${OrderPageSortBar}","eNqtjU0KwyAUhK8iQpf6nibdqetAlzlAEbVRSIyopT1+pYueoDA/q/lGQfdGQa9Gfe2JO/dWbNZ0okZZEmt4aMo5DK2uhpBbPHuD5QarHHnHieGVyfkiUQiGCC3sIafnwUYfIXfWfjMmBC95G+B0bKRV93cyeSXfo6YzYnmPH7DmAx+bRjE=","*${OrderPageStatusFilter}","eNqtjU0KwyAUhK8iQpf6nibdqetAlzlAEbVRSIyopT1+pYueoDA/q/lGQfdGQa9Gfe2JO/dWbNZ0okZZEmt4aMo5DK2uhpBbPHuD5QarHHnHieGVyfkiUQiGCC3sIafnwUYfIXfWfjMmJC95G+B0bKRV93cyeSXfo6YzYnmPH7DmAyAnRjM=","*${OrderPageDateFilter}","eNqtjU0KwyAUhK8iQpf6XjTdqetAlzlAEbVRiCaopT1+pYueoDA/q/lGQfdGQa9Gfe2JO/Z22qKppEZZEmt4aMo5DK2uhlBaPHqD5QarGHlHyfDKxHwROE0MEVrYQ0nPzEbnUDprvxmbJD/LNsApb6RV93cyeSXfo6Yz4vkeP2DNByCzRjU=","*${OrderPageSearchBox}","eNqtjU0KwyAUhK8iQpf6XozdqetAlzlAEbVRiCaopT1+pYueoDA/q/lGQfdGQa9Gfe2JO/Z22qLpTI2yJNbw0JRzGFpdDaG0ePQGyw1WMfKOM8MrE/IicJoYIrSwh5KemY3OoXTWfjM2SX6WbYBT3kir7u9k8kq+R00l4vkeP2DNByE/Rjc=","*${OrderPageSearchButton}","eNqtjU0KwyAUhK8iQpf6nibZqetClzlAkWijEI2opT1+pYueoDA/q/lGQXdGQa9Gfe3Idh6t2KzpRI2yJFT/0JRzGFq36n1u4ewNrjdY5cg7TgwXJueLRCEYIjR/+ByfiY1OPnfWfjMmFl7yPsAx7aTV7e9k8oquB01nxPIeP2DNByHLRjk=","*${OrderPageArrangeFilter}","eNqtjU0KwyAUhK8iQpf6nibtSl0XuswBSlAbhWhELe3xK130BIX5Wc03CrozCno16mtH7LG3smZNJ2rUSkL1D005h6HFVu9zC0dvcL3BIkfecWJ4ZnI+SRSCIULzu8/xmdjo5HNn7Tdj4sJL3gY4po20av9OJq/oetB0Rizv8QOr+QAiV0Y7","*${OrderPageDetailsColumn}","eNqtjU0KwyAUhK8iQpf6nialG3Vd6DIHKEFtFKIRtbTHr3TRExTmZzXfKOjOKOjVqK8dscfeypo1nahRKwnVPzTlHIYWW73PLRy9wfUGixx5x4nhmcn5JFEIhgjN7z7HZ2Kjk8+dtd+MiQsveRvgmDbSqv07mbyi60HTGbG8xw+s5gMi40Y9","*${OrderPageDetailsPreviousPageButton}","eNqtjU0KwyAUhK8iQpf6niaFLtR1ocscoAS1UYhG1NIev9JFT1CYn9V8o6A7o6BXo752xB57K2vWdKJGrSRU/9CUcxhabPU+t3D0BtcbLHLkHSeGZybnk0QhGCI0v/scn4mNTj531n4zJi685G2AY9pIq/bvZPKKrgdNZ8TyHj+wmg8jb0Y/","*${OrderPageDetailsNextPageButton}","eNqtjU0KwyAUhK8iQpf6niZdFNR1ocscoAS1UYhG1NIev9JFT1CYn9V8o6A7o6BXo752xB57K2vWdKJGrSRU/9CUcxhabPU+t3D0BtcbLHLkHSeGZybnk0QhGCI0v/scn4mNTj531n4zJi685G2AY9pIq/bvZPKKrgdNZ8TyHj+wmg8j+0ZB","*${OrderPageDetailsPage1Button}","eNqtjU0KwyAUhK8iQpf6Xky6U9eBLnOAImqjEI2opT1+pYueoDA/q/lGQndaQq9afu2IPY9WTFZ0ploaEqp/KMo5DG22ep9bOHuD9QabGHnHmeGVieUicJoYIjR/+ByfiY1OPnfWfjMmkJe8D3BMO2nV/p1MXtH1oOiCWN7jB4z+AB+dRjE=","*TC-012 - User should be able to select one order from the list","*TC034","eNqNk0lv2zAQhc/xryB8CGy4UrlqC3zQ2vbQFGjaXgofFGkcCaZNg2Ia+9+XytLWF6q8CNR8fO9xMCwl7OFgctk3u08HA7qBo4G2PI3fXh0S9BmGoX6ABMELipqRRf1fOEHla+lamhvTWqIehvW8OXlKt6C9rh+M0mevUS3Mrx/Mje/7I/retOMO9QM6qFfh+l4Cqg06KuuAFhHh7xBZ+uiL6UD/yfCkHmWLNDTQ/wJkSy+Hk+cE1vdoE3uyPqtHgwZoxpus5x3UNk0BtQQ9fwvZelsJJ9Tt2uf/aOjUk9fCsDPqiC5O/Bv80mKszBBa3NlWWSfbm61KUNNptYc1odTHfkAD4gfxcnZn6mZndN1AMrv6AOZjfWgl/ADdb3tr/xOfsF1hVYVxwFNRcrpigkVByDezq8WtQsN5f6/k8pLEOc8xdRCiCkVaZk4iZ6zkboLY2ziJrIwit0ZWiDR2EyQW2EkUFU7TCQ3K0wkNmrtdbNSSuTXKUriJtBJkoh84YGQzPQtFkKfFioUsikM2zQuaCxysOI5iGuL/4XlEmeVFSON4mieVyHm8CikmlDhHsyA0qNzDmzM8Md45Z9RJZFnh0EjLMMupCAtLfDXy+wD6W6ft67bPUZsLMMI8TUVkO7GZ/QZBJ3vm","*User should be able to select one order from the list","*${OrderPageHistory1}    10","*${OrderPageHistory1}","eNpzzslMzs7MS1dIzUnNTc0rUVDX0NcvKQLilGiH5JzE4mJb9eQK3fyilNQi3YzM4pL8okrd5PyUVPVYff1E3ErKEnNKgWo0ow1ja4g2EaRaXQ8A7UkzPA==","eNqtzEEKwyAUBNCriNCl/h/T0i7UdaHLHKCI2hhIjPgt7fErXfQEhZlZDU9DC1ZDq1Z/G5jfVyouGz5yqx1LNT4MlxJ6Jl9jzJT2RnC9waT63nEUeBLqeFA4DAIRKK4xL89N0O8uzrLkuXvLNjOq/l8gey2hJcMviOXdeXD2Ax4dP7E=","*TC-013 - User should be able to view order details","*TC035","*Element '//div[@class='order-header col-12 col-md-9 pl-0' or @class='order-header col-9 pl-0']' not visible after 20 seconds.","*User should be able to view order details in HK Order Details Page","*${OrderDetailsOrderHeader}    20","eNqtzEEKwyAUBNCriNCl/h/TQhbGdaHLHKCI2igkRvyW9viVLnqCwsyshqeheaOhVaO/9cwdGxWbZz5yoy2LNTxmLiX0LK6GkCkejeB6g0X1veMo8CLU+aRwGAQiUNhCTs9d0O8uJlny2r20r4yq+xfIXsm3OPMJsbw7D9Z8AB6gP7M=","*${OrderDetailsOrderStatus}    10","*${OrderDetailsContainer}    10","*${OrderDetailsContainer}","*${OrderDetailsContainerRefNumLabel}    10","*${OrderDetailsContainerCustNameLabel}    10","*${OrderDetailsContainerCustAccLabel}    10","*${OrderDetailsContainerRefNumLabel}","*${OrderDetailsContainerCustNameLabel}","*${OrderDetailsContainerCustAccLabel}","*${OrderDetailsContainerRefNumValue}    10","*${OrderDetailsContainerCustNameValue}    10","*${OrderDetailsContainerCustAccValue}    10","*${OrderDetailsContainerCustOrderNumValue}    10","*${OrderDetailsContainerRefNumValue}","*${OrderDetailsContainerCustNameValue}","*${OrderDetailsContainerCustAccValue}","*${OrderDetailsContainerCustOrderNumValue}","*${OrderDetailsReturnContainer}","*${OrderDetailsReturnHeader}    10","*${OrderDetailsReturnDescription}    10","*${OrderDetailsReturnPrice}    10","*${OrderDetailsReturnRRP}    10","*${OrderDetailsReturnOrder}    10","*${OrderDetailsReturnShipped}    10","*${OrderDetailsReturnPending}    10","*${OrderDetailsReturnTotal}    10","*${OrderDetailsReturnHeader}","*${OrderDetailsReturnDescription}","*${OrderDetailsReturnPrice}","*${OrderDetailsReturnRRP}","*${OrderDetailsReturnOrder}","*${OrderDetailsReturnShipped}","*${OrderDetailsReturnPending}","*${OrderDetailsReturnTotal}","*${OrderDetailsBillingContainer}","*${OrderDetailsBillingLabel}    10","*${OrderDetailsOrderSummaryLabel}    10","*${OrderDetailsBillingDetailsAndTotal}    10","*${OrderDetailsAddressField}    10","*${OrderDetailsPriceField}    10","*${OrderDetailsBillingLabel}","*${OrderDetailsOrderSummaryLabel}","*${OrderDetailsBillingDetailsAndTotal}","*${OrderDetailsAddressField}","*${OrderDetailsPriceField}","*3","*TC Move to Top","*${HomepageMyAccountLabel}","*Slept 3 seconds.","*TC-014 - User should be able to click Return from left navigation","*TC021","*User should be able to click Return from left navigation","*${HomepageReturnMenu}    10","*${HomepageReturnMenu}","*Clicking element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Return ')]'.","eNqtzEEKwyAUBNCriNCl/h/TQgvqutBlDlBEbQwkRvyW9viVLnqCwsyshqehBauhVau/DczvKxWXDR+51Y6lGh+GSwk9k68xZkp7I7jeYFJ97zgKPAl1PCgcBoEIFNeYl+cm6HcXF1ny3L1lmxlV/y+QvZbQkuFnxPLuPDj7AR8jP7U=","*TC-015 - User should be able to select one return from the list","*Return Page","*TC037","*User should be able to select one return from the list","*Return_Page_Keywords","*${ReturnPageHistory1}    10","*${ReturnPageHistory1}","*Clicking element '(//td//a[@class='cx-return-requests-value'])[1]|(//div//a[@class='cx-return-requests-value'])[1]'.","eNqtzEEKwyAUBNCriNCl/q9poQt1HegyByiiNgqJEbW0x6900RMUZmY1PAXdGwW9GvWtJ+7YWrFZ04kaZUms4aEp5zCyuBpCbvHoDeYbLHLsHSeGFybPJ4lCMERoYQs5PXfWfncmkJe8DjDtK2nV/U0kr+R71PSKWN7DB2s+jDBABQ==","*TC-016 - User should be able to view Return details","*TC038","*User should be able to view Return details in HK Return Details Page","*${ReturnPageOrderDetailsHeader}    20","*${ReturnPageOrderDetailsStatus}    10","*${ReturnPageOrderDetailsHeader}","eNqtjU0KwyAUhK8iQpf6nibdqetAlzlAEbVRSIyopT1+pYueoDA/q/lGQfdGQa9Gfe2JO/dWbNZ0okZZEmt4aMo5DK2uhpBbPHuD5QarHHnHieGVyfkiUQiGCC3sIafnwUYfIXfWfjMmBS95G+B0bKRV93cyeSXfo6YzYnmPH7DmAyApRjM=","*${ReturnPageOrderDetailsStatus}","eNqtjU0KwyAUhK8iQpf6Xky6U9eBLnOAImqjEI2opT1+pYueoDA/q/lGQndaQq9afu2IPY9WTFZ0ploaEqp/KMo5DG22ep9bOHuD9QabGHnHmeGVieUicJoYIjR/+ByfiY1OPnfWfjMmBC95H+CYdtKq/TuZvKLrQdEFsbzHDxj9ASC1RjU=","*${ReturnPageOrderDetailsContainer}    10","*${ReturnPageOrderDetailsPartsRefLabel}    20","*${ReturnPageOrderDetailsCustNameLabel}    10","*${ReturnPageOrderDetailsOrderDateLabel}    10","*${ReturnPageOrderDetailsRetReqDateLabel}    10","*${ReturnPageOrderDetailsPartsRefValue}    10","*${ReturnPageOrderDetailsCustOrderNumValue}    10","*${ReturnPageOrderDetailsCustNameValue}    10","*${ReturnPageOrderDetailsSupRefValue}    10","*${ReturnPageOrderDetailsSupValue}    10","*${ReturnPageOrderDetailsOrderDateValue}    10","*${ReturnPageOrderDetailsContainer}","eNqtjU0KwyAUhK8iQpf6XjTdqetAlzlAEbVRSIyopT1+pYueoDA/q/lGQfdGQa9Gfe2JO/dWbNZUUqMsiTU8NOUchlZXQ8gtnr3BcoNVjLyjZHhlYr4InCaGCC3sIafnwUYfIXfWfjMmJC95G+B0bKRV93cyeSXfo6YzYnmPH7DmAyFBRjc=","*${ReturnPageOrderReturnContainer}","*${ReturnPageOrderReturnHeader}    10","*${ReturnPageOrderReturnDataSectionContainer}","eNqtTUsKwyAUvIoIXep7MelOXQe6zAGKqI1CNKKW9viVLnqCwnw285HQnZbQq5ZfOmLPoxWTFZ2ploaE6h+Kcg4Dm63e5xbO3mC9wSaG3nFmeGViuQicJoYIzR8+x2diw5PPnbVfbcR4yfsYjmknrdq/L5NXdD0ouiCW9/gBoz8hzUY5","*${ReturnPageOrderReturnApproveRejectContainer}","eNqtjU0KwyAUhK8iQpf6XkyyU9eFLnOAImqjEI2opT1+pYueoDA/q/lGQndaQq9afu2IPY9WTFZ0ploaEqp/KMo5DG22ep9bOHuD6w02MfKOM8OVieUicJoYIjR/+ByfiY1OPnfWfjMmVl7yPsAx7aRV+3cyeUXXg6ILYnmPHzD6AyJZRjs=","*${ReturnPageOrderReturnMessageContainer}","*${ReturnPageOrderReturnMessageSupplierButton}    10","eNqtjU0KwyAUhK8iQpf6XkzalboudJkDFFEbhWhELe3xK130BIX5Wc03ErrTEnrV8mtH7LG3YrKiM9XSkFD9Q1HOYWi11fvcwtEbXG+wipF3nBmemVhOAqeJIULzu8/xmdjo5HNn7Tdj4sJL3gY4po20av9OJq/oelB0QSzv8QNGfwAi5UY9","*${ReturnPageOrderReturnMessageSupplierButton}","eNqtjU0KwyAUhK8iQpf6XkxKN+q60GUOUERtFKIRtbTHr3TRExTmZzXfSOhOS+hVy68dscfeismKzlRLQ0L1D0U5h6HVVu9zC0dvcL3BKkbecWZ4ZmI5CZwmhgjN7z7HZ2Kjk8+dtd+MiQsveRvgmDbSqv07mbyi60HRBbG8xw8Y/QEjcUY/","*TC-022 - User should be able to click and expand Customer Management","*TC022","*User should be able to click and expand Customer Management","*${HomepageCustomerMenu}    10","*${HomepageCustomerMenu}","*Clicking element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Customer ')]'.","*TC-023 - User should be able to click Customer Manegement - Buyer Rel from left navigation","*TC024","*User should be able to click Customer Manegement - Buyer Rel from left navigation","*${HomepageCustomerBuyerRelation}    10","*${HomepageCustomerBuyerRelation}","*Clicking element '//div[@class='tab-data has-child']//a[contains(text(),'Customer Relationship') or contains(text(),'Buyer Relationship')]'.","eNqtzEEKwyAUBNCriNCl/q9poQt1HegyByiiNgqJEbW0x6900RMUZmY1PAXdGwW9GvWtJ+7YWrFZ04kaZUms4aEp5zCyuBpCbvHoDeYbLHLsHSeGFybPJ4lCMERoYQs5PXfWfncmBC95HWDaV9Kq+5tIXsn3qOkVsbyHD9Z8AIy0QAc=","*TC-024 - User should be able to view Buyer Rel Page","*New RegReq Page","*TC043","*User should be able to view Buyer Rel Page","*BuyerRel_Page_Keywords","*${BuyerRelPagePanelContainer}    10","*${BuyerRelPagePanelHeader}    10","eNqtzEEKwyAUBNCriNCl/q9poQt1HegyByiiNgqJEbW0x6900RMUZmY1PAXdGwW9GvWtJ+7YWrFZ04kaZUms4aEp5zCyuBpCbvHoDeYbLHLsHSeGFybPJ4lCMERoYQs5PXfWfncmJC95HWDaV9Kq+5tIXsn3qOkVsbyHD9Z8AI04QAk=","*TC-025 - User should be able to click Messages from left navigation","*TC025","*User should be able to click Messages from left navigation","*${HomepageMessagesMenu}    10","*${HomepageMessagesMenu}","*Clicking element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Messages ') or contains(text(),'Inbox')]'.","eNqtzEEKwyAUBNCriNCl/q+20IVxHegyByiiNgqJEbW0x6900RMUZmY1PA3dGw29Gv2tJ+7YWrF5oooabUms4TFRzmFkcTWE3OLRG8w3WOTYOyqGFybPJ4lCMERoYQs5PXfWfncmFC95HWDaV9Kq+5tIXsn3ONErYnkPH6z5AI28QAs=","*TC-026 - User should be able to view message page","*Message Page","*TC044","*User should be able to view message page","*Message_Page_Keywords","*${MessagePagePanelContainer}    10","*${MessagePagePanelHeader}    10","eNqtzEEKwyAUBNCriNCl/q9JoQt1XegyByiiNgqJEbW0x6900RMUZmY1PAXdGwW9GvWtJ+7YWrFZ04kaZUms4aEp5zCyuBpCbvHoDa43WOTYO04Mz0zOJ4lCMERoYQs5PXfWfncmZl7yOsC0r6RV9zeRvJLvUdMLYnkPH6z5AI5AQA0=","*TC-027 - User should be able to click and expand Profile","*TC026","*User should be able to click and expand Profile","*${HomepageProfileMenu}    10","*${HomepageProfileMenu}","*Clicking element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Profile ')]'.","*TC-028 - User should be able to click Profile - Account Details from left navigation","*TC027","*User should be able to click Profile - Account Details from left navigation","*${HomepageProfileAccountDetails}    10","*${HomepageProfileAccountDetails}","*Clicking element '//div[@class='tab-data has-child']//a[contains(text(),'Account Details')]'.","eNqtzEEKwyAUBNCriNCl/q9poAt1XegyByiiNgqJEbW0x6900RMUZmY1PAXdGwW9GvWtJ+7YWrFZ04kaZUms4aEp5zCyuBpCbvHoDa43WOTYO04MZybPJ4lCMERoYQs5PXfWfncmZl7yOsC0r6RV9zeRvJLvUdMLYnkPH6z5AI7EQA8=","*TC-029 - User should be able to view account details page","*Profile","*TC045","*User should be able to view account details page","*Account_Details_Page_Keywords","*${ProfileAccountsDetailsPanelContainer}    10","*${ProfileAccountsDetailsPanelHeader}    10","*${ProfileAccountsDetailsFirstNameLabel}    10","*${ProfileAccountsDetailsLastNameLabel}    10","*${ProfileAccountsDetailsEmailLabel}    10","*${ProfileAccountsDetailsPhoneLabel}    10","*${ProfileAccountsDetailsLandlineLabel}    10","*${ProfileAccountsDetailsFirstNameTextBox}    10","*${ProfileAccountsDetailsLastNameTextBox}    10","*${ProfileAccountsDetailsEmailTextBox}    10","*${ProfileAccountsDetailsPhoneTextBox}    10","*${ProfileAccountsDetailsLandlineTextBox}    10","*${ProfileAccountsDetailsCancelButton}    10","*${ProfileAccountsDetailsUpdateButton}    10","*${ProfileAccountsDetailsPanelContainer}","eNqtjU0KwyAUhK8iQpf6XkwKXajrQpc5QBG1UYhG1NIev9JFT1CYn9V8I6E7LaFXLb92xB57KyYrOlMtDQnVPxTlHIZWW73PLRy9wfUGqxh5x5nhmYnlJHCaGCI0v/scn4mNTj531n4zJi685G2AY9pIq/bvZPKKrgdFF8TyHj9g9Acj/UZB","*${ProfileAccountsDetailsFirstNameLabel}","eNqtjU0KwyAUhK8iQpf6Xky6KKjrQpc5QBG1UYhG1NIev9JFT1CYn9V8I6E7LaFXLb92xB57KyYrOlMtDQnVPxTlHIZWW73PLRy9wfUGqxh5x5nhmYnlJHCaGCI0v/scn4mNTj531n4zJi685G2AY9pIq/bvZPKKrgdFF8TyHj9g9AckiUZD","*${ProfileAccountsDetailsLastNameLabel}","eNqtjU0KwyAUhK8iQpf6XjTdqetAlzlAEbVRSIyopT1+pYueoDA/q/lGQfdGQa9Gfe2JO/dWbNZUUqMsiTU8NOUchlZXQ8gtnr3BcoNVjLyjZHhlYr4InCaGCC3sIafnwUYfIXfWfjMmkZe8DXA6NtKq+zuZvJLvUdMZsbzHD1jzASArRjM=","*${ProfileAccountsDetailsEmailLabel}","eNqtjU0KwyAUhK8iQpf6XjTdqetAlzlAEbVRiCaopT1+pYueoDA/q/lGQfdGQa9Gfe2JO/Z22qKppEZZEmt4aMo5DK2uhlBaPHqD5QarGHlHyfDKxHwROE0MEVrYQ0nPzEbnUDprvxmTEz/LNsApb6RV93cyeSXfo6Yz4vkeP2DNByC3RjU=","*${ProfileAccountsDetailsPhoneLabel}","eNqtjU0KwyAUhK8iQpf6XjTdqetAlzlAEbVRSIyopT1+pYueoDA/q/lGQfdGQa9Gfe2JO/dWbNZUUqMsiTU8NOUchlZXQ8gtnr3BcoNVjLyjZHhlYr4InCaGCC3sIafnwUYfIXfWfjMmBS95G+B0bKRV93cyeSXfo6YzYnmPH7DmAyFDRjc=","*${ProfileAccountsDetailsLandlineLabel}","eNqtjU0KwyAUhK8iQpf6XjTdqetAlzlAEbVRSIyopT1+pYueoDA/q/lGQfdGQa9Gfe2JO/dWbNZUUqMsiTU8NOUchlZXQ8gtnr3BcoNVjLyjZHhlYr4InCaGCC3sIafnwUYfIXfWfjMmJS95G+B0bKRV93cyeSXfo6YzYnmPH7DmAyHPRjk=","*${ProfileAccountsDetailsFirstNameTextBox}","eNqtjU0KgzAQha8SAl1OZox2F7MWuvQAJehUBY0hk9Iev6GLnqDwflbvew7L7B2W7N3Xs5rOXVKIvW61d0GtmR+9NgarxikzR1nPIjjccLQ179QCXcF2F0tNA0QovHPcngfUPjgWkN8M2s6kuFTwdixK8vR3snptc1l73RGld/3B4D8iW0Y7","*${ProfileAccountsDetailsLastNameTextBox}","eNqtjU0KwyAUhK8iQpf6XjTZqetClzlAkWijEI2opT1+pYueoDA/q/lGQXdGQa9Gfe3Idh6t2KyppEZZEqp/aMo5DK1b9T63cPYG1xusYuQdJcOFifkicJoYIjR/+ByfiY1OPnfWfjMmF17yPsAx7aTV7e9k8oquB01nxPIeP2DNByLnRj0=","*${ProfileAccountsDetailsEmailTextBox}","eNqtjU0KwyAUhK8iQpf6XjTtyrgudJkDFFEbhWhELe3xK130BIX5Wc03CrrTCnrV6mtH7LG3YvJCJdXKkFD9Y6Gcw9Bqq/e5haM3uN5gFSPvKBmemZhPAqeJIULzu8/xmdjo5HNn7Tdj8sJL3gY4po20av9OJq/oeljojFje4weM/gAjc0Y/","*${ProfileAccountsDetailsPhoneTextBox}","eNqtjU0KwyAUhK8iQpf6XjSlG+O60GUOUERtFKIRtbTHr3TRExTmZzXfKOhOK+hVq68dscfeiskLlVQrQ0L1j4VyDkOrrd7nFo7e4HqDVYy8o2R4ZmI+CZwmhgjN7z7HZ2Kjk8+dtd+MyQsveRvgmDbSqv07mbyi62GhM2J5jx8w+gMj/0ZB","*${ProfileAccountsDetailsLandlineTextBox}","eNqtjU0KwyAUhK8iQpf6XjSFLozrQpc5QBG1UYhG1NIev9JFT1CYn9V8o6A7raBXrb52xB57KyYvVFKtDAnVPxbKOQyttnqfWzh6g+sNVjHyjpLhmYn5JHCaGCI0v/scn4mNTj531n4zJi+85G2AY9pIq/bvZPKKroeFzojlPX7A6A8ki0ZD","*${ProfileAccountsDetailsCancelButton}","eNqtjU0KwyAUhK8iQpf6XjRdFIzrQpc5QBG1UYhG1NIev9JFT1CYn9V8o6A7raBXrb52xB57KyYvVFKtDAnVPxbKOQyttnqfWzh6g+sNVjHyjpLhmYn5JHCaGCI0v/scn4mNTj531n4zJi+85G2AY9pIq/bvZPKKroeFzojlPX7A6A8lF0ZF","*${ProfileAccountsDetailsUpdateButton}","eNqtjU0KwyAUhK8iQpf6XozdqetAlzlAEbVRSIyopT1+pYueoDA/q/lGQfdGQa9Gfe2JO/dWbNZ0pkZZEmt4aMo5DK2uhpBbPHuD5QarGHnHmeGVCXkROE0MEVrYQ07Pg40+Qu6s/WZMIi95G+B0bKRV93cyeSXfo6YSsbzHD1jzASC5RjU=","*TC-030 - User should be able to click Profile - Change Pass from left navigation","*TC028","*User should be able to click Profile - Change Pass from left navigation","*${HomepageProfileChangePass}    10","*${HomepageProfileChangePass}","*Clicking element '//div[@class='tab-data has-child']//a[contains(text(),'Change Password')]'.","eNqtzEEKAiEYBeCriNBS/1+nooW6DlrOAULURmHGETXq+EmLThC891aPT0H3RkGvRn3ridvXVmzWdKJGWRJreGjKOYzMroaQW9x7g+sNZjn2jhPDE5PHg0QhGCK0sIacnhtrvzsTZ17yMsC0LaRV9zeRvJLvUdMLYnkPH6z5AI9IQBE=","*TC-031 - User should be able to view change password page","*TC046","*User should be able to view change password page","*Change_Pass_Page_Keywords","*${ProfileChangePassPanelContainer}    10","*${ProfileChangePassPanelHeader}    10","*${ProfileChangePassPanelContainer}","eNqtjU0KwyAUhK8iQpf6XozdqetAlzlAEbVRiCaopT1+pYueoDA/q/lGQfdGQa9Gfe2JO/Z22qLpTI2yJNbw0JRzGFpdDaG0ePQGyw1WMfKOM8MrE/IicJoYIrSwh5KemY3OoXTWfjMmJ36WbYBT3kir7u9k8kq+R00l4vkeP2DNByFFRjc=","*TC-032 - User should be able to click and expand Company","*TC029","*User should be able to click and expand Company","*${HomepageCompanyMenu}    10","*${HomepageCompanyMenu}","*Clicking element '//ul[@class='vertical-menu tab-level']//a[@class='has-nochild'][contains(text(),' Company ')]'.","*TC-033 - User should be able to click Company - Company Details from left navigation","*TC030","*User should be able to click Company - Company Details from left navigation","*${HomepageCompanyDetails}    10","*${HomepageCompanyDetails}","*Clicking element '//div[@class='tab-data has-child']//a[contains(text(),'Company Details')]'.","eNqtzEEKAiEYBeCriNBS/1+nqIW6DlrOAULURmHGETXq+EmLThC891aPT0H3RkGvRn3ridvXVmzWdKJGWRJreGjKOYzMroaQW9x7g+sNZjn2jhPDE5PHg0QhGCK0sIacnhtrvzsTZ17yMsC0LaRV9zeRvJLvUdMLYnkPH6z5AI/MQBM=","*TC-034 - User should be able to view company details page","*Company Details","*TC047","*User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Dealer Company Details Page","*Company_Details_Page_Keywords","*${CompanyDetailsPageDelSameAsPostalCheckBox}    10","*${CompanyDetailsPageDelSameAsPostalCheckBox}","*Clicking element '//dpp-company-details//input[@type='checkbox']|//dpp-hk-company-details//input[@type='checkbox']'.","eNqtjU0KwyAUhK8iQpf6XozdqetAlzlAEbVRSIyopT1+pYueoDA/q/lGQfdGQa9Gfe2JO/dWbNZ0pkZZEmt4aMo5DK2uhpBbPHuD5QarGHnHmeGVCXkROE0MEVrYQ07Pg40+Qu6s/WZMCl7yNsDp2Eir7u9k8kq+R00lYnmPH7DmAyHRRjk=","*User should be able to view company details in HK Company Details Page","*${CompanyDetailsPagePanelContainer}    10","*${CompanyDetailsPagePanelHeader}    10","eNqtzEEKwyAUBNCriNCl/q9pIQt1XegyByiiNgqJEbW0x6900RMUZmY1PAXdGwW9GvWtJ+7YWrFZ04kaZUms4aEp5zCyuBpCbvHoDa43WOTYO04ML0yeTxKFYIjQwhZyeu6s/e5MzLzkdYBpX0mr7m8ieSXfo6YzYnkPH6z5AJBQQBU=","eNp1TrEKg1AQ+5Xb3N4gndyKukuLnR7IqWd95fWd3J1Q/74t1bEQSAJJSC3CAiHBFCJBVha+VRL1FaZAkddArlbjBQfyzTbMKM9G+EGDqV82mzntNvcXUl7lkzNSG9HQV4SRZKfuhhKwj+SEe7YMOEEMieBUwFHdXzjnf/g7eW67ktMU7l91zXdzLI9MCokN6BXU3BsFjFPT","*Imported resource file 'C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\testdata\\config.robot' is empty."]);
 </script>
 <script type="text/javascript">
-window.output["stats"] = [[{"elapsed":"00:02:34","fail":0,"label":"All Tests","pass":31,"skip":0}],[{"elapsed":"00:00:08","fail":0,"label":"Company Details","pass":1,"skip":0},{"elapsed":"00:00:54","fail":0,"label":"Left Navigation","pass":10,"skip":0},{"elapsed":"00:00:12","fail":0,"label":"Login Button","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"Message Page","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"New RegReq Page","pass":1,"skip":0},{"elapsed":"00:00:17","fail":0,"label":"Order Page","pass":3,"skip":0},{"elapsed":"00:00:02","fail":0,"label":"Profile","pass":2,"skip":0},{"elapsed":"00:00:11","fail":0,"label":"Return Page","pass":2,"skip":0},{"elapsed":"00:00:10","fail":0,"label":"Sleep","pass":1,"skip":0},{"elapsed":"00:00:03","fail":0,"label":"TC006","pass":1,"skip":0},{"elapsed":"00:00:01","fail":0,"label":"TC007","pass":1,"skip":0},{"elapsed":"00:00:12","fail":0,"label":"TC008","pass":1,"skip":0},{"elapsed":"00:00:00","fail":0,"label":"TC014","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC015","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC016","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC017","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC019","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC020","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC021","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC022","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC024","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC025","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC026","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC027","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC028","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC029","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC030","pass":1,"skip":0},{"elapsed":"00:00:04","fail":0,"label":"TC033","pass":1,"skip":0},{"elapsed":"00:00:02","fail":0,"label":"TC034","pass":1,"skip":0},{"elapsed":"00:00:11","fail":0,"label":"TC035","pass":1,"skip":0},{"elapsed":"00:00:03","fail":0,"label":"TC037","pass":1,"skip":0},{"elapsed":"00:00:07","fail":0,"label":"TC038","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC043","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC044","pass":1,"skip":0},{"elapsed":"00:00:02","fail":0,"label":"TC045","pass":1,"skip":0},{"elapsed":"00:00:00","fail":0,"label":"TC046","pass":1,"skip":0},{"elapsed":"00:00:08","fail":0,"label":"TC047","pass":1,"skip":0},{"elapsed":"00:00:10","fail":0,"label":"TC Sleep","pass":1,"skip":0},{"elapsed":"00:00:21","fail":0,"label":"Top Navigation","pass":5,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"Valid Account","pass":2,"skip":0}],[{"elapsed":"00:02:35","fail":0,"id":"s1","label":"HK Dealer Check","name":"HK Dealer Check","pass":31,"skip":0}]];
+window.output["stats"] = [[{"elapsed":"00:02:52","fail":2,"label":"All Tests","pass":29,"skip":0}],[{"elapsed":"00:00:08","fail":0,"label":"Company Details","pass":1,"skip":0},{"elapsed":"00:00:54","fail":0,"label":"Left Navigation","pass":10,"skip":0},{"elapsed":"00:00:12","fail":0,"label":"Login Button","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"Message Page","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"New RegReq Page","pass":1,"skip":0},{"elapsed":"00:00:29","fail":2,"label":"Order Page","pass":1,"skip":0},{"elapsed":"00:00:02","fail":0,"label":"Profile","pass":2,"skip":0},{"elapsed":"00:00:10","fail":0,"label":"Return Page","pass":2,"skip":0},{"elapsed":"00:00:10","fail":0,"label":"Sleep","pass":1,"skip":0},{"elapsed":"00:00:03","fail":0,"label":"TC006","pass":1,"skip":0},{"elapsed":"00:00:01","fail":0,"label":"TC007","pass":1,"skip":0},{"elapsed":"00:00:12","fail":0,"label":"TC008","pass":1,"skip":0},{"elapsed":"00:00:00","fail":0,"label":"TC014","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC015","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC016","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC017","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC019","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC020","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC021","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC022","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC024","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC025","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC026","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC027","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC028","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC029","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC030","pass":1,"skip":0},{"elapsed":"00:00:04","fail":0,"label":"TC033","pass":1,"skip":0},{"elapsed":"00:00:01","fail":1,"label":"TC034","pass":0,"skip":0},{"elapsed":"00:00:24","fail":1,"label":"TC035","pass":0,"skip":0},{"elapsed":"00:00:03","fail":0,"label":"TC037","pass":1,"skip":0},{"elapsed":"00:00:07","fail":0,"label":"TC038","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC043","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC044","pass":1,"skip":0},{"elapsed":"00:00:01","fail":0,"label":"TC045","pass":1,"skip":0},{"elapsed":"00:00:00","fail":0,"label":"TC046","pass":1,"skip":0},{"elapsed":"00:00:08","fail":0,"label":"TC047","pass":1,"skip":0},{"elapsed":"00:00:10","fail":0,"label":"TC Sleep","pass":1,"skip":0},{"elapsed":"00:00:21","fail":0,"label":"Top Navigation","pass":5,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"Valid Account","pass":2,"skip":0}],[{"elapsed":"00:02:53","fail":2,"id":"s1","label":"HK Dealer Check","name":"HK Dealer Check","pass":29,"skip":0}]];
 </script>
 <script type="text/javascript">
-window.output["errors"] = [[219,4,444],[344,3,445]];
+window.output["errors"] = [[317,4,436],[459,3,437]];
 </script>
 <script type="text/javascript">
-window.output["baseMillis"] = 1708060449193;
+window.output["baseMillis"] = 1709607608861;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 154677;
+window.output["generated"] = 172980;
 </script>
 <script type="text/javascript">
 window.output["expand_keywords"] = null;
@@ -1834,7 +2109,7 @@ window.settings = {"defaultLevel":"INFO","minLevel":"INFO","reportURL":"report.h
 </script>
 <title></title>
 </head>
-<body>
+<body data-theme="dark">
 <div id="javascript-disabled">
   <h1>Opening Robot Framework log failed</h1>
   <ul>
@@ -1844,12 +2119,13 @@ window.settings = {"defaultLevel":"INFO","minLevel":"INFO","reportURL":"report.h
   </ul>
 </div>
 <script type="text/javascript">removeJavaScriptDisabledWarning();</script>
-
 <div id="header"></div>
 <div id="statistics-container"></div>
 
 <script type="text/javascript">
 $(document).ready(function() {
+    storage.init();
+    theme.init(storage);
     try {
         var topsuite = window.testdata.suite();
     } catch (error) {
@@ -1857,6 +2133,7 @@ $(document).ready(function() {
         return;
     }
     initLayout(topsuite.name, 'Log');
+    theme.reflectPreference();
     addStatistics();
     addErrors();
     addExecutionLog(topsuite);
@@ -1897,25 +2174,6 @@ function drawErrorsRecursively(errors, target) {
         // Errors may have moved scroll position. Resetting location re-scrolls.
         if (window.location.hash)
             window.location.replace(window.location.hash);
-        highlightLinkTarget();
-    }
-}
-
-function highlightLinkTarget() {
-    if (window.location.hash) {
-        var target = $(window.location.hash);
-        highlight(target);
-    }
-}
-
-function highlight(element, color) {
-    if (color === undefined)
-        color = 242;
-    if (color < 255) {
-        element.css({'background-color': 'rgb('+color+','+color+','+color+')'});
-        setTimeout(function () { highlight(element, color+1); }, 300);
-    } else {
-        element.css({'background-color': ''});
     }
 }
 
@@ -1933,7 +2191,6 @@ function makeElementVisible(id) {
             expandFailed(window.testdata.findLoaded(util.last(ids)));
             window.location.hash = id;
             document.getElementById(id).scrollIntoView();
-            highlightLinkTarget();
         }
     });
 }
@@ -2131,8 +2388,9 @@ function addExecutionLog(main) {
       <div class="element-header-left" title="${type}  {{if name}}{{html fullName}}  {{/if}}[${status}]">
         <span class="elapsed" title="Elapsed time">${times.elapsedTime}</span>
         <span class="label ${status.toLowerCase()}">${type}</span>
-        <span>{{html assign}}</span>
+        <span class="assign">{{html assign}}</span>
         <span class="name"><span class="parent-name">{{html libname}}{{if libname}} . {{/if}}</span>{{html name}}</span>
+        &nbsp;
         <span class="arg">{{html arguments}}</span>
       </div>
       <div class="element-header-right" onclick="stopPropagation(event)">
@@ -2166,6 +2424,12 @@ function addExecutionLog(main) {
           <th>Start / End / Elapsed:</th>
           <td>${times.startTime} / ${times.endTime} / ${times.elapsedTime}</td>
         </tr>
+        {{if message()}}
+        <tr>
+          <th>Message:</th>
+          <td class="message">{{html message()}}</td>
+        </tr>
+        {{/if}}
       </table>
     </div>
   </div>
@@ -2188,6 +2452,7 @@ function addExecutionLog(main) {
   <div id="log-level-selector">
   Log level:
     <select onchange="logLevelSelected(this.options[selectedIndex].value)">
+      <option value="3">WARN</option>
       <option value="2">INFO</option>
       <option value="1">DEBUG</option>
       {{if showTrace()}}<option value="0">TRACE</option>{{/if}}
