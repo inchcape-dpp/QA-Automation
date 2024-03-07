@@ -35,6 +35,9 @@ ${Password}    ${HK_D1_Automation_Bronze_PWD}
 
 ${YopMailEmail}    ${HK_D1_Automation_Bronze_UID}
 
+#Testing Values
+${ProdductSearchValue}    037018200
+
 *** Keywords ***
 Open Chrome Browser HK
     SeleniumLibrary.Open Browser    ${d1HKRetail}    Chrome  executable_path=${driver_path}

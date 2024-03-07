@@ -35,6 +35,9 @@ ${Password}    ${DanProdRetailPWD}
 
 ${YopMailEmail}    ${AU_S2_Automation_UID}
 
+#Testing Values
+${ProdductSearchValue}    037018200
+
 *** Keywords ***
 Open Chrome Browser
     SeleniumLibrary.Open Browser    ${p1Retail}    Chrome  executable_path=${driver_path}
