@@ -349,8 +349,9 @@ TC-055 - User should be able to input card details
     run keyword and continue on failure    User should be albe to input CVV
     run keyword and continue on failure    User should be albe to input Card Holders Name
     run keyword and continue on failure    User should be albe to input Email
+    run keyword and continue on failure    Unselect Credit Card Frame
 
-TC-060 - User should be able to view account orders page
+C-060 - User should be able to view account orders page
     [Tags]    Order Page
     run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account orders page
@@ -591,6 +592,7 @@ TC-082 - User should be able to click Delete in Retail Account Saved Carts Page
     [Tags]    Saved Carts Page
     run keyword and continue on failure    User should be able to click Delete in Retail Account Saved Carts Page
     run keyword and continue on failure    User should be able to click No for Delete Pop Up in Retail Account Saved Carts Page
+
 
 TC-083 - User should be able to view account vehicle listing page
     [Tags]    Vehicle Listing Page

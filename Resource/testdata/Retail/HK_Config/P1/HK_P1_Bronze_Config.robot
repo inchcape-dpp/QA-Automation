@@ -36,7 +36,7 @@ ${Password}    ${HK_P1_Automation_Bronze_PWD}
 ${YopMailEmail}    ${HK_P1_Automation_Bronze_UID}
 
 #Testing Values
-${ProdductSearchValue}    037018200
+${ProdductSearchValue}    1780121060
 
 *** Keywords ***
 Open Chrome Browser HK

@@ -1443,7 +1443,7 @@ ${Retail_AccountVehicleListingPagePanelHeader}    //dpp-vehicle-listing//h3
 ${Retail_AccountVehicleListingPageAddVehicleButton}    //button[@class='btn btn-sm btn-primary mb-0']
 ${Retail_AccountVehicleListingPageShopThisVehicleButton}    (//dpp-vehicle-listing-for-dialog//div[@class='card p-4 my-2' or @class='card p-4 my-2 last-item']//button)[1]
 ${Retail_AccountVehicleListingPageSelectedVehicleShopThisVehicleButton}    //div[@class='selected-vehicle-modal']//div[@class='row selected-vehicle-info align-items-center']//button[@class='btn btn-sm btn-primary']
-${Retail_AccountVehicleListingPageSelectedVehicleClearVehicleButton}    //div[@class='selected-vehicle-modal']//div[@class='row selected-vehicle-info align-items-center']//button[@class='btn mt-3 btn-sm btn-default clear-vehicle']
+${Retail_AccountVehicleListingPageSelectedVehicleClearVehicleButton}    //button[@class='btn mt-2 btn-outline-secondary clear-vehicle w-100']|//button[@class='btn mt-2 btn-sm btn-default clear-vehicle']
 
 ${Retail_AccountVehicleListingPageSelectVehicleAddVehicleButton}    //dpp-vehicle-box-list//div[@class='vehicle-box last-box-container p-3 d-flex flex-column text-center align-items-center justify-content-center']|//dpp-vehicle-box-list//div[@class='vehicle-box last-box-container p-3 d-flex flex-column text-center align-items-center']
 ${Retail_HK_AccountVehicleListingPage_SelectVehicleAddVehicle_Button}    //div[@class='cx-dialog-body modal-body flex-layout']//button[@class='btn btn-secondary']
