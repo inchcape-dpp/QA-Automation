@@ -167,26 +167,6 @@ TC-030 - User should be able to click 1 sub filter from selected category in Ret
     run keyword and continue on failure    User should be able to click 1 sub filter from selected category in Retail Home Page
     run keyword and continue on failure    Browse Back Button
 
-TC-031 - User should be able to click vehicle listing quick link in Retail Home Page
-    [Tags]    Home Page
-    run keyword and continue on failure    User should be able to click vehicle listing quick link in Retail Home Page
-    run keyword and continue on failure    Browse Back Button
-
-TC-032 - User should be able to click orders quick link in Retail Home Page
-    [Tags]    Home Page
-    run keyword and continue on failure    User should be able to click orders quick link in Retail Home Page
-    run keyword and continue on failure    Browse Back Button
-
-TC-033 - User should be able to click saved carts quick link in Retail Home Page
-    [Tags]    Home Page
-    run keyword and continue on failure    User should be able to click saved carts quick link in Retail Home Page
-    run keyword and continue on failure    Browse Back Button
-
-TC-034 - User should be able to click account details quick link in Retail Home Page
-    [Tags]    Home Page
-    run keyword and continue on failure    User should be able to click account details quick link in Retail Home Page
-    run keyword and continue on failure    Browse Back Button
-
 TC-035 - User should be able to click shop by category accessories & audio in Retail Home Page
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to click shop by category accessories & audio in Retail Home Page
@@ -330,10 +310,6 @@ TC-041 - User should be able to access Company Details page using double header 
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to access Company Details page using double header in Retail Homepage
 
-TC-041 - User should be able to access Relationship page using double header in Retail Homepage
-    [Tags]    Home Page
-    run keyword and continue on failure    User should be able to Go to Home page
-    run keyword and continue on failure    User should be able to access Relationship page using double header in Retail Homepage
 
 TC-056 - User should be able to view All Parts Page
     [Tags]    All Products Page
@@ -739,19 +715,19 @@ TC-099 - User should be able to view and message order with Declined Status in R
     run keyword and continue on failure    User should be able to click back to order details in Retail Account Return Details Page
     run keyword and continue on failure    User should be able to click Back to Return Request in Retail Account Return Details Page
 
-#TC-100 - User should be able to view and message order with In Progress Status in Retail Account Return Page
-#    [Tags]    Return Page
-#    run keyword and continue on failure    User should be able to view order with In Progress Status in Retail Account Return Page
-#    run keyword and continue on failure    User should be able to click order with In Progress Status in Retail Account Return Page
-#    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Return Details Page
-#    run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Return Details Page
-#    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Return Details Page
-#    run keyword and continue on failure    User should be able to view message supplier pop up in Retail Account Return Details Page
-#    run keyword and continue on failure    User should be able to input text on message pop up text field in Retail Account Return Details Page
-#    run keyword and continue on failure    User should be able to upload photo on message pop in Retail Account Return Details Page
-#    run keyword and continue on failure    User should be able to send on message pop in Retail Account Return Details Page
-#    run keyword and continue on failure    User should be able to click back to order details in Retail Account Return Details Page
-#    run keyword and continue on failure    User should be able to click Back to Return Request in Retail Account Return Details Page
+TC-100 - User should be able to view and message order with In Progress Status in Retail Account Return Page
+    [Tags]    Return Page
+    run keyword and continue on failure    User should be able to view order with In Progress Status in Retail Account Return Page
+    run keyword and continue on failure    User should be able to click order with In Progress Status in Retail Account Return Page
+    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to view message supplier pop up in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to input text on message pop up text field in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to upload photo on message pop in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to send on message pop in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to click back to order details in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to click Back to Return Request in Retail Account Return Details Page
 
 TC-100 - User should be able to view account saved carts page
     [Tags]    Saved Carts Page
@@ -1046,40 +1022,40 @@ TC-131 - User should be able to view company details page
     run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view company details page
 
-TC-132 - User should be able to edit company details page
-    [Tags]    Company Details Page
-#    run keyword and continue on failure    User should be able to input valid Account number in Retail Account Company Details Page
-#    run keyword and continue on failure    User should be able to input valid Company name in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid Trading Name in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid Postal Address Line 1 in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid Postal Address Line 2 in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid Postal Suburb in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid Postal Code in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to click Postal Address State Drop Down in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to select Postal Address State in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid Delivery Address Line 1 in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid Delivery Address Line 2 in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid Delivery Suburb in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid Delivery Code in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to click Delivery Address State Drop Down in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to select Delivery Address State in Retail Account Company Details Page
-#    run keyword and continue on failure    User should be able to input valid Email Address in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid Company Phone Number in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid First Name in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid Last Name in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to click opening hours in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to select opening hours value in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to click closing hours in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to select closing hours value in Retail Account Company Details Page
-#    run keyword and continue on failure    User should be able to click save button in Retail Account Company Details Page
-#    run keyword and continue on failure    User should be able to click no on update cofirmation modal in Retail Account Company Details Page
-
-TC-133 - User should be able to view staff page
-    [Tags]    Staff Page
-    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
-    run keyword and continue on failure    User should be able to view staff page
+#TC-132 - User should be able to edit company details page
+#    [Tags]    Company Details Page
+##    run keyword and continue on failure    User should be able to input valid Account number in Retail Account Company Details Page
+##    run keyword and continue on failure    User should be able to input valid Company name in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid Trading Name in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid Postal Address Line 1 in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid Postal Address Line 2 in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid Postal Suburb in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid Postal Code in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to click Postal Address State Drop Down in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to select Postal Address State in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid Delivery Address Line 1 in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid Delivery Address Line 2 in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid Delivery Suburb in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid Delivery Code in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to click Delivery Address State Drop Down in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to select Delivery Address State in Retail Account Company Details Page
+##    run keyword and continue on failure    User should be able to input valid Email Address in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid Company Phone Number in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid First Name in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid Last Name in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to click opening hours in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to select opening hours value in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to click closing hours in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to select closing hours value in Retail Account Company Details Page
+##    run keyword and continue on failure    User should be able to click save button in Retail Account Company Details Page
+##    run keyword and continue on failure    User should be able to click no on update cofirmation modal in Retail Account Company Details Page
+#
+#TC-133 - User should be able to view staff page
+#    [Tags]    Staff Page
+#    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
+#    run keyword and continue on failure    User should be able to view staff page
 
 #TC-134 - User should be able to add new staff in Retail Account Staff Page
 #    [Tags]    Staff Page

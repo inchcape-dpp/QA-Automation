@@ -38,7 +38,7 @@ TC-017 - User should be able to view home page
 
 TC-060 - User should be able to view account orders page
     [Tags]    Order Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account orders page
 
 TC-066 - User should be able to view and message order with Submitted Status in Retail Account Orders Page
@@ -49,7 +49,7 @@ TC-066 - User should be able to view and message order with Submitted Status in 
 
 TC-067 - User should be able to view account return request page
     [Tags]    Return Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account return request page
     run keyword and continue on failure    User should be able to view Return Request Panel
 
@@ -61,34 +61,34 @@ TC-067 - User should be able to view account return request page
 
 TC-078 - User should be able to view account saved carts page
     [Tags]    Saved Carts Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account saved carts page
     run keyword and continue on failure    User should be able to view Saved Carts Panel
 
 TC-083 - User should be able to view account vehicle listing page
     [Tags]    Vehicle Listing Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account vehicle listing page
     run keyword and continue on failure    User should be able to view HK vehicle listing Panel
 
 TC-084 - User should be able to view message page
     [Tags]    Message Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view message page
 
 TC-091 - User should be able to view Account Details page
     [Tags]    Account Details Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account details page
 
 TC-093 - User should be able to view change password page
     [Tags]    Change Password Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view change password page
 
 TC-096 - User should be able to view company details page
     [Tags]    Company Details Page
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view HK company details page
 
 TC-041 - User should be able to view All Products Page in HK Retail Home Page

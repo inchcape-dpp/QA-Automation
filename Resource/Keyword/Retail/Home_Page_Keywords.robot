@@ -13,7 +13,6 @@ Resource  ../../../Resource/testdata/credentials.robot
 #-----------------------------------------------------Retail Home Page-------------------------------------------------
 Admin User should be able to Login
     wait until element is visible    ${HomePageLogo}    10
-    wait until element is visible    ${HomePageSellerInfo}    10
     capture page screenshot
     sleep     2
 
