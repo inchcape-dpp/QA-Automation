@@ -205,7 +205,7 @@ ${OrderDetailsBillingLabel}    //p[(contains(text(),'Billing Address'))]
 ${OrderDetailsOrderSummaryLabel}    //p[(contains(text(),'Order Summary'))]
 ${OrderDetailsBillingDetailsAndTotal}    //div[@class='row mt-2 content']
 ${OrderDetailsAddressField}    //p[@class='address-field']
-${OrderDetailsPriceField}    //div[@class='col-md-4 col-sm-12 px-0 px-md-3' or @class='col-md-4 col-sm-12']
+${OrderDetailsPriceField}    //div[@class='col-md-4 col-sm-12' or @class='col-md-4 col-sm-12 px-0 px-md-3' or @class='col-12 col-md-6 col-lg-5 px-0 px-md-3']
 
 
 #-----------------------------------------------------Dealer Retrun Page------------------------------------------------
@@ -646,9 +646,9 @@ ${ProfileAccountsDetailsUpdateButton}    //dpp-account-details[@class='user-form
 ${ProfileAccountsDetailsPhoneError}    //div[@class='form-errors']//p[contains(text(),'Enter a valid Phone Number')]
 ${ProfileAccountsDetailsLandlineError}    //div[@class='form-errors']//p[contains(text(),'Landline Number must begin with a 0 followed by 9 digits')]
 
-${ProfileAccountsDetailsConfirmationContainer}    //div[@class='cx-dialog-body modal-body pt-5']
-${ProfileAccountsDetailsConfirmationYesButton}    //button[@class='btn btn-block btn-secondary backToHomepage-button']
-${ProfileAccountsDetailsConfirmationNoButton}    //div[@class='col-sm-12 cta py-2']//button[@class='btn btn-block btn-outline-secondary']
+${ProfileAccountsDetailsConfirmationContainer}    //div[@class='cx-dialog-body modal-body']
+${ProfileAccountsDetailsConfirmationYesButton}    //div[@class='col-sm-12 mt-2 p-0']//button[@class='btn btn-secondary btn-block']
+${ProfileAccountsDetailsConfirmationNoButton}    //div[@class='col-sm-12 mt-3 p-0']//button[@class='btn btn-block btn-outline-secondary']
 
 ${ProfileAccountsDetailsFirstNameValue}    Test FN
 ${ProfileAccountsDetailsLastNameValue}    Test LN

@@ -1095,9 +1095,9 @@ TC-143 - User should be able to edit company details page
 
 
 
-#TC-144 - User should be able to logout
-#    [Tags]    Logout
-#    run keyword and continue on failure    User should be able to logout
+TC-144 - User should be able to logout
+    [Tags]    Logout
+    run keyword and continue on failure    User should be able to logout using double header
 
 Test Teardown
     Run Keywords    Close Browser

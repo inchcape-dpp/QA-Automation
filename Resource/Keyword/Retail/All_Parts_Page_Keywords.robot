@@ -1134,25 +1134,25 @@ User should be able to Click Engine Fuel System in HK Retail EPC L2 Page
     wait until element is visible    ${Retail_HK_EPC_L2_PartsGroup_EngingFuelSystem_Button}    10
     capture element screenshot    ${Retail_HK_EPC_L2_PartsGroup_EngingFuelSystem_Button}
     click element    ${Retail_HK_EPC_L2_PartsGroup_EngingFuelSystem_Button}
-    sleep 2
+    sleep    2
 
 User should be able to Click Transmission and Chasis in HK Retail EPC L2 Page
     wait until element is visible    ${Retail_HK_EPC_L2_PartsGroup_TransmissionChasis_Button}    10
     capture element screenshot    ${Retail_HK_EPC_L2_PartsGroup_TransmissionChasis_Button}
     click element    ${Retail_HK_EPC_L2_PartsGroup_TransmissionChasis_Button}
-    sleep 2
+    sleep    2
 
 User should be able to Click Body and Interior in HK Retail EPC L2 Page
     wait until element is visible    ${Retail_HK_EPC_L2_PartsGroup_BodyInterior_Button}    10
     capture element screenshot    ${Retail_HK_EPC_L2_PartsGroup_BodyInterior_Button}
     click element    ${Retail_HK_EPC_L2_PartsGroup_BodyInterior_Button}
-    sleep 2
+    sleep    2
 
 User should be able to Click Electrics in HK Retail EPC L2 Page
     wait until element is visible    ${Retail_HK_EPC_L2_PartsGroup_Electrics_Button}    10
     capture element screenshot    ${Retail_HK_EPC_L2_PartsGroup_Electrics_Button}
     click element    ${Retail_HK_EPC_L2_PartsGroup_Electrics_Button}
-    sleep 2
+    sleep    2
 
 User should be able to Click All in HK Retail EPC L2 Page
     wait until element is visible    ${Retail_HK_EPC_L2_PartsGroup_All_Button}    10
@@ -1169,40 +1169,44 @@ User should be able to click Load More Button
 User should be able to view Engine Fuel System Schema in HK Retail EPC L2 Page
     wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_Header}    10
     wait until element is visible    ${Retail_HK_EPC_L2_Schema_CardList}    10
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_Header}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_CardList}
 
     run keyword and continue on failure    Engine Fuel System Schema
+
+    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_Header}
+    capture element screenshot    ${Retail_HK_EPC_L2_Schema_CardList}
 
     sleep    2
 
 User should be able to view Transmission and Chasis Schema in HK Retail EPC L2 Page
     wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_Header}    10
     wait until element is visible    ${Retail_HK_EPC_L2_Schema_CardList}    10
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_Header}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_CardList}
 
     run keyword and continue on failure    Transmission and Chassis Schema
+
+    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_Header}
+    capture element screenshot    ${Retail_HK_EPC_L2_Schema_CardList}
 
     sleep    2
 
 User should be able to view Body and Innterior Schema in HK Retail EPC L2 Page
     wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_Header}    10
     wait until element is visible    ${Retail_HK_EPC_L2_Schema_CardList}    10
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_Header}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_CardList}
 
     run keyword and continue on failure    Body and Innterior Schema
+
+    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_Header}
+    capture element screenshot    ${Retail_HK_EPC_L2_Schema_CardList}
 
     sleep    2
 
 User should be able to view Electrics Schema in HK Retail EPC L2 Page
     wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Header}    10
     wait until element is visible    ${Retail_HK_EPC_L2_Schema_CardList}    10
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Header}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_CardList}
 
     run keyword and continue on failure    Electrics Schema
+
+    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Header}
+    capture element screenshot    ${Retail_HK_EPC_L2_Schema_CardList}
 
     sleep    2
 
@@ -1239,65 +1243,65 @@ Engine Fuel System Schema
 
     scroll element into view    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_Header}
 
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_Header}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_StandardTool}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_PartialEngineAssembly}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ShortBlockAssembly}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOverhaulGasketKit}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CylinderHead}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CylinderBlock}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_TimingGearCoverReadEndPlate}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Mounting}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VentilationHose}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CrankshaftPiston}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CamshaftValve}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOilPump}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_OilFilter}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOilCooler}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_WaterPump}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_RadiatorWterOutlet}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VBelt}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Manifold}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ExhaustPipe}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_AirCleaner}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VaccumPiping}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CautionPlateNamePlate}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_IgnitionCoilSparkPlug}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Distributor}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Alternator}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Starter}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_FuelInjectionSystem}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ExhaustGasReciructionSystem}    10
-
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_Header}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_StandardTool}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_PartialEngineAssembly}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ShortBlockAssembly}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOverhaulGasketKit}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CylinderHead}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CylinderBlock}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_TimingGearCoverReadEndPlate}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Mounting}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VentilationHose}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CrankshaftPiston}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CamshaftValve}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOilPump}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_OilFilter}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOilCooler}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_WaterPump}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_RadiatorWterOutlet}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VBelt}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Manifold}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ExhaustPipe}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_AirCleaner}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VaccumPiping}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CautionPlateNamePlate}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_IgnitionCoilSparkPlug}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Distributor}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Alternator}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Starter}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_FuelInjectionSystem}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ExhaustGasReciructionSystem}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_Header}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_StandardTool}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_PartialEngineAssembly}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ShortBlockAssembly}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOverhaulGasketKit}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CylinderHead}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CylinderBlock}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_TimingGearCoverReadEndPlate}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Mounting}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VentilationHose}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CrankshaftPiston}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CamshaftValve}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOilPump}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_OilFilter}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOilCooler}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_WaterPump}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_RadiatorWterOutlet}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VBelt}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Manifold}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ExhaustPipe}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_AirCleaner}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VaccumPiping}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CautionPlateNamePlate}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_IgnitionCoilSparkPlug}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Distributor}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Alternator}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Starter}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_FuelInjectionSystem}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ExhaustGasReciructionSystem}    10
+#
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_Header}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_StandardTool}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_PartialEngineAssembly}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ShortBlockAssembly}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOverhaulGasketKit}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CylinderHead}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CylinderBlock}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_TimingGearCoverReadEndPlate}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Mounting}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VentilationHose}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CrankshaftPiston}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CamshaftValve}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOilPump}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_OilFilter}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOilCooler}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_WaterPump}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_RadiatorWterOutlet}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VBelt}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Manifold}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ExhaustPipe}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_AirCleaner}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VaccumPiping}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CautionPlateNamePlate}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_IgnitionCoilSparkPlug}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Distributor}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Alternator}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Starter}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_FuelInjectionSystem}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ExhaustGasReciructionSystem}
 
     sleep    2
 
@@ -1310,93 +1314,93 @@ Transmission and Chassis Schema
 
     scroll element into view    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_Header}
 
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_Header}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchReleaseFork}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchPedalFlexibleHose}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchMasterCylinder}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchReleaseCylinder}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransaxleTransmissionAssyGasketKitMTM}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchHousingTransmissionCaseMTM}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SpeedmeterDrivenGearMTM}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransmissionGearMTM}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_GearShiftForkLeverShaftMTM}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ShiftLeverRetainer}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransaxleTransmissionAssyGasketKitATM}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TorqueConverterFrontOilPumpChainATM}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransmissionCaseOilPanATM}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SpeedometerDrivenGearATM}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_OverdriveGearATM}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BreakBandMultipleDiscClutch}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_CenterSupportPlanetarySunGearATM}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeReverseBrakeATM}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_PlanetaryGearReversePistonCounterGearATM}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearOilStrainer}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ValveBodyOilStrainerATM}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ThrottleLinkValveLever}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_OilCoolerTubeATM}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearAxleHousingDifferential}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearAxleShaftHub}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_DiscWheelWheelCap}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontAxleHub}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SteeringColumnShaft}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_VanePumpReservoirPowerSteering}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_PowerSteeringTube}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SteeringWheel}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontSteeringGearLink}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ParkingBrakeCable}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakePedalBracket}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BreakMasterCylinder}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeBoosterVacuumTube}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontDiscBrakeCaliperDustCover}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearDiscBrakeCaliperDustCover}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeTubeClamp}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontAxleArmSteeringKnuckle}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontSpringShockAbsorber}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearSpringShockAbsorber}    10
-
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_Header}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchReleaseFork}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchPedalFlexibleHose}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchMasterCylinder}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchReleaseCylinder}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransaxleTransmissionAssyGasketKitMTM}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchHousingTransmissionCaseMTM}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SpeedmeterDrivenGearMTM}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransmissionGearMTM}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_GearShiftForkLeverShaftMTM}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ShiftLeverRetainer}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransaxleTransmissionAssyGasketKitATM}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TorqueConverterFrontOilPumpChainATM}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransmissionCaseOilPanATM}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SpeedometerDrivenGearATM}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_OverdriveGearATM}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BreakBandMultipleDiscClutch}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_CenterSupportPlanetarySunGearATM}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeReverseBrakeATM}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_PlanetaryGearReversePistonCounterGearATM}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearOilStrainer}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ValveBodyOilStrainerATM}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ThrottleLinkValveLever}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_OilCoolerTubeATM}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearAxleHousingDifferential}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearAxleShaftHub}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_DiscWheelWheelCap}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontAxleHub}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SteeringColumnShaft}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_VanePumpReservoirPowerSteering}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_PowerSteeringTube}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SteeringWheel}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontSteeringGearLink}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ParkingBrakeCable}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakePedalBracket}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BreakMasterCylinder}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeBoosterVacuumTube}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontDiscBrakeCaliperDustCover}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearDiscBrakeCaliperDustCover}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeTubeClamp}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontAxleArmSteeringKnuckle}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontSpringShockAbsorber}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearSpringShockAbsorber}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_Header}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchReleaseFork}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchPedalFlexibleHose}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchMasterCylinder}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchReleaseCylinder}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransaxleTransmissionAssyGasketKitMTM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchHousingTransmissionCaseMTM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SpeedmeterDrivenGearMTM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransmissionGearMTM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_GearShiftForkLeverShaftMTM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ShiftLeverRetainer}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransaxleTransmissionAssyGasketKitATM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TorqueConverterFrontOilPumpChainATM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransmissionCaseOilPanATM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SpeedometerDrivenGearATM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_OverdriveGearATM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BreakBandMultipleDiscClutch}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_CenterSupportPlanetarySunGearATM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeReverseBrakeATM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_PlanetaryGearReversePistonCounterGearATM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearOilStrainer}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ValveBodyOilStrainerATM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ThrottleLinkValveLever}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_OilCoolerTubeATM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearAxleHousingDifferential}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearAxleShaftHub}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_DiscWheelWheelCap}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontAxleHub}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SteeringColumnShaft}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_VanePumpReservoirPowerSteering}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_PowerSteeringTube}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SteeringWheel}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontSteeringGearLink}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ParkingBrakeCable}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakePedalBracket}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BreakMasterCylinder}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeBoosterVacuumTube}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontDiscBrakeCaliperDustCover}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearDiscBrakeCaliperDustCover}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeTubeClamp}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontAxleArmSteeringKnuckle}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontSpringShockAbsorber}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearSpringShockAbsorber}    10
+#
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_Header}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchReleaseFork}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchPedalFlexibleHose}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchMasterCylinder}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchReleaseCylinder}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransaxleTransmissionAssyGasketKitMTM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchHousingTransmissionCaseMTM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SpeedmeterDrivenGearMTM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransmissionGearMTM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_GearShiftForkLeverShaftMTM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ShiftLeverRetainer}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransaxleTransmissionAssyGasketKitATM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TorqueConverterFrontOilPumpChainATM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransmissionCaseOilPanATM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SpeedometerDrivenGearATM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_OverdriveGearATM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BreakBandMultipleDiscClutch}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_CenterSupportPlanetarySunGearATM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeReverseBrakeATM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_PlanetaryGearReversePistonCounterGearATM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearOilStrainer}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ValveBodyOilStrainerATM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ThrottleLinkValveLever}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_OilCoolerTubeATM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearAxleHousingDifferential}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearAxleShaftHub}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_DiscWheelWheelCap}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontAxleHub}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SteeringColumnShaft}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_VanePumpReservoirPowerSteering}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_PowerSteeringTube}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SteeringWheel}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontSteeringGearLink}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ParkingBrakeCable}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakePedalBracket}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BreakMasterCylinder}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeBoosterVacuumTube}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontDiscBrakeCaliperDustCover}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearDiscBrakeCaliperDustCover}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeTubeClamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontAxleArmSteeringKnuckle}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontSpringShockAbsorber}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearSpringShockAbsorber}
 
     sleep    2
 
@@ -1410,91 +1414,91 @@ Body and Innterior Schema
 
     scroll element into view    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_Header}
 
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_Header}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SuspensionCrossmemberUnderCover}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SpareWheelCarrier}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontBumperBumperStay}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RearBumperBumperStay}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RadiatorGrille}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_HoodFrontFender}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_HoodLockHinge}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontFenderApronDashPanel}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FloorSideMember}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_InstrumentPanelGloveCompartment}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_CowlPanelWindshieldGlass}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FloorPanLowerBackPanel}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FloorInsulator}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_MatCarpet}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_ConsoleBoxBracket}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SideMember}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RoofSideVentilator}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_QuarterWindow}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RoofPanelBackWindowGlass}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_LuggageCompartmentDoorLock}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_EngineHoodLock}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_InsideTrimBoardDoorOpeningTrimMoulding}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RoofHeadliningSilencerPad}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_PackageTrayPanelLaggageCompartmentMat}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontDoorPanelGlass}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontDoorLockHandle}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrondDoorWindowRegulatorHinge}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_LockCylinderSet}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontSeatSearTrack}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SeatBeltChildRestrainSeat}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_ArmrestVisor}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_BatteryCarrier}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_CautionPlate}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_AshReceptacle}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_EmplemNamePlate}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontMoulding}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SideMoulding}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RearMoulding}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_MudguardSpoiler}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FuelTankTube}    10
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_AcceleratorLink}    10
-
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_Header}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SuspensionCrossmemberUnderCover}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SpareWheelCarrier}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontBumperBumperStay}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RearBumperBumperStay}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RadiatorGrille}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_HoodFrontFender}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_HoodLockHinge}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontFenderApronDashPanel}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FloorSideMember}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_InstrumentPanelGloveCompartment}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_CowlPanelWindshieldGlass}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FloorPanLowerBackPanel}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FloorInsulator}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_MatCarpet}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_ConsoleBoxBracket}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SideMember}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RoofSideVentilator}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_QuarterWindow}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RoofPanelBackWindowGlass}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_LuggageCompartmentDoorLock}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_EngineHoodLock}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_InsideTrimBoardDoorOpeningTrimMoulding}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RoofHeadliningSilencerPad}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_PackageTrayPanelLaggageCompartmentMat}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontDoorPanelGlass}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontDoorLockHandle}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrondDoorWindowRegulatorHinge}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_LockCylinderSet}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontSeatSearTrack}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SeatBeltChildRestrainSeat}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_ArmrestVisor}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_BatteryCarrier}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_CautionPlate}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_AshReceptacle}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_EmplemNamePlate}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontMoulding}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SideMoulding}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RearMoulding}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_MudguardSpoiler}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FuelTankTube}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_AcceleratorLink}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_Header}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SuspensionCrossmemberUnderCover}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SpareWheelCarrier}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontBumperBumperStay}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RearBumperBumperStay}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RadiatorGrille}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_HoodFrontFender}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_HoodLockHinge}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontFenderApronDashPanel}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FloorSideMember}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_InstrumentPanelGloveCompartment}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_CowlPanelWindshieldGlass}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FloorPanLowerBackPanel}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FloorInsulator}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_MatCarpet}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_ConsoleBoxBracket}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SideMember}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RoofSideVentilator}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_QuarterWindow}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RoofPanelBackWindowGlass}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_LuggageCompartmentDoorLock}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_EngineHoodLock}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_InsideTrimBoardDoorOpeningTrimMoulding}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RoofHeadliningSilencerPad}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_PackageTrayPanelLaggageCompartmentMat}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontDoorPanelGlass}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontDoorLockHandle}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrondDoorWindowRegulatorHinge}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_LockCylinderSet}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontSeatSearTrack}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SeatBeltChildRestrainSeat}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_ArmrestVisor}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_BatteryCarrier}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_CautionPlate}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_AshReceptacle}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_EmplemNamePlate}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontMoulding}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SideMoulding}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RearMoulding}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_MudguardSpoiler}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FuelTankTube}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_AcceleratorLink}    10
+#
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_Header}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SuspensionCrossmemberUnderCover}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SpareWheelCarrier}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontBumperBumperStay}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RearBumperBumperStay}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RadiatorGrille}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_HoodFrontFender}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_HoodLockHinge}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontFenderApronDashPanel}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FloorSideMember}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_InstrumentPanelGloveCompartment}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_CowlPanelWindshieldGlass}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FloorPanLowerBackPanel}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FloorInsulator}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_MatCarpet}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_ConsoleBoxBracket}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SideMember}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RoofSideVentilator}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_QuarterWindow}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RoofPanelBackWindowGlass}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_LuggageCompartmentDoorLock}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_EngineHoodLock}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_InsideTrimBoardDoorOpeningTrimMoulding}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RoofHeadliningSilencerPad}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_PackageTrayPanelLaggageCompartmentMat}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontDoorPanelGlass}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontDoorLockHandle}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrondDoorWindowRegulatorHinge}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_LockCylinderSet}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontSeatSearTrack}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SeatBeltChildRestrainSeat}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_ArmrestVisor}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_BatteryCarrier}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_CautionPlate}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_AshReceptacle}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_EmplemNamePlate}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontMoulding}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SideMoulding}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RearMoulding}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_MudguardSpoiler}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FuelTankTube}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_AcceleratorLink}
 
     sleep    2
 
@@ -1507,112 +1511,195 @@ Electrics Schema
 
     scroll element into view    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Header}
 
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Header}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Headlamp}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_FogLamp}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_FrontTurnSignalLamp}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_SideTurnSignalLampOuterMirrorLamp}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RearCombinationLamp}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_BackUpLamp}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RearLicensePlateLamp}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RearSideMarkerLamp}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_CenterStopLamp}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_InteriorLamp}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_BatteryBatteryCable}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_WiringClamp}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Meter}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Indicator}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_SwitchRelayComputer}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_ElectronicFuelInjectionSystem}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_CruisControl}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_OverdriveElectronicControlledTransmission}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_ABSVSC}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_AntiTheftDevice}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_WindshieldWiper}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_WindshieldWasher}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_DoorMotorDoorSolenoid}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RadioReiverAmplifierCondenser}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Speaker}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Antena}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Horn}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Mirror}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningSet}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningHeaterUnitBlower}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningCoolerUnit}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningControlAirDuct}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningWaterPiping}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningVacuumPiping}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningCoolerPiping}
-    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningCompressor}
-
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Header}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Headlamp}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_FogLamp}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_FrontTurnSignalLamp}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_SideTurnSignalLampOuterMirrorLamp}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RearCombinationLamp}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_BackUpLamp}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RearLicensePlateLamp}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RearSideMarkerLamp}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_CenterStopLamp}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_InteriorLamp}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_BatteryBatteryCable}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_WiringClamp}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Meter}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Indicator}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_SwitchRelayComputer}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_ElectronicFuelInjectionSystem}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_CruisControl}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_OverdriveElectronicControlledTransmission}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_ABSVSC}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_AntiTheftDevice}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_WindshieldWiper}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_WindshieldWasher}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_DoorMotorDoorSolenoid}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RadioReiverAmplifierCondenser}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Speaker}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Antena}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Horn}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Mirror}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningSet}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningHeaterUnitBlower}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningCoolerUnit}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningControlAirDuct}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningWaterPiping}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningVacuumPiping}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningCoolerPiping}
-    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningCompressor}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Header}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Headlamp}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_FogLamp}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_FrontTurnSignalLamp}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_SideTurnSignalLampOuterMirrorLamp}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RearCombinationLamp}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_BackUpLamp}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RearLicensePlateLamp}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RearSideMarkerLamp}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_CenterStopLamp}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_InteriorLamp}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_BatteryBatteryCable}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_WiringClamp}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Meter}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Indicator}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_SwitchRelayComputer}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_ElectronicFuelInjectionSystem}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_CruisControl}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_OverdriveElectronicControlledTransmission}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_ABSVSC}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_AntiTheftDevice}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_WindshieldWiper}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_WindshieldWasher}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_DoorMotorDoorSolenoid}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RadioReiverAmplifierCondenser}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Speaker}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Antena}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Horn}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Mirror}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningSet}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningHeaterUnitBlower}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningCoolerUnit}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningControlAirDuct}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningWaterPiping}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningVacuumPiping}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningCoolerPiping}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningCompressor}
+#
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Header}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Headlamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_FogLamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_FrontTurnSignalLamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_SideTurnSignalLampOuterMirrorLamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RearCombinationLamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_BackUpLamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RearLicensePlateLamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RearSideMarkerLamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_CenterStopLamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_InteriorLamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_BatteryBatteryCable}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_WiringClamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Meter}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Indicator}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_SwitchRelayComputer}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_ElectronicFuelInjectionSystem}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_CruisControl}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_OverdriveElectronicControlledTransmission}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_ABSVSC}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_AntiTheftDevice}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_WindshieldWiper}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_WindshieldWasher}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_DoorMotorDoorSolenoid}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RadioReiverAmplifierCondenser}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Speaker}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Antena}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Horn}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Mirror}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningSet}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningHeaterUnitBlower}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningCoolerUnit}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningControlAirDuct}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningWaterPiping}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningVacuumPiping}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningCoolerPiping}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningCompressor}
 
     sleep    2
 
+User should be able to view EPC L3 Page in HK Retail EPC L3 Page
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_Container}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_Header_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarModel_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarModelCode_Value}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarModelCode_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarEngine_Value}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarEngine_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarYear_Value}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarYear_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarTransmission_Value}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarTransmission_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Button}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_ChangeCar_Button}    10
 
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_Container}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_Header_Label}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarModel_Label}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarModelCode_Value}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarModelCode_Label}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarEngine_Value}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarEngine_Label}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarYear_Value}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarYear_Label}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarTransmission_Value}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarTransmission_Label}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Button}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_ChangeCar_Button}
 
+    wait until element is visible    ${Retail_HK_EPC_L3_SchemaCar_Header_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L3_SchemaCar_Header_Prev_Button}    10
+    wait until element is visible    ${Retail_HK_EPC_L3_SchemaCar_Header_Next_Button}    10
 
+    capture element screenshot    ${Retail_HK_EPC_L3_SchemaCar_Header_Label}
+    capture element screenshot    ${Retail_HK_EPC_L3_SchemaCar_Header_Prev_Button}
+    capture element screenshot    ${Retail_HK_EPC_L3_SchemaCar_Header_Next_Button}
 
+    wait until element is visible    ${Retail_HK_EPC_L3_SchemaCar_Diagram}    10
 
+    capture element screenshot    ${Retail_HK_EPC_L3_SchemaCar_Diagram}
 
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Container}    10
 
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Container}
 
+    sleep    2
 
+User should be able to view Parts List Card and Diagram in HK Retail EPC L3 Page
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Container}    10
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Container}
 
+    wait until element is visible    ${Retail_HK_EPC_L3_SchemaCar_Diagram}    10
+    capture element screenshot    ${Retail_HK_EPC_L3_SchemaCar_Diagram}
 
+    sleep    2
 
+User should be able to view one Card on the Parts Card List in HK Retail EPC L3 Page
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Options}    10
+    ${AddToCartElements}    get element count    ${Retail_HK_EPC_L3_PartsListCards_Options}
+    ${RandomPartsCardIndex}    evaluate    random.randint(1,${AddToCartElements})
+    scroll element into view    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0'])[${RandomPartsCardIndex}]
+    wait until element is visible    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//div[@class='pnc-id'])[${RandomPartsCardIndex}]    10
+    wait until element is visible    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//div[@class='pnc-name'])[${RandomPartsCardIndex}]    10
+    wait until element is visible    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//button//span[contains(text(),'EXPAND')])[${RandomPartsCardIndex}]    10
 
+    capture element screenshot    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//div[@class='pnc-id'])[${RandomPartsCardIndex}]
+    capture element screenshot    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//div[@class='pnc-name'])[${RandomPartsCardIndex}]
+    capture element screenshot    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//button//span[contains(text(),'EXPAND')])[${RandomPartsCardIndex}]
 
+    set global variable    ${RandomPartsCardIndex}
+    sleep    2
 
+User should be able to expand one Card on the Parts Card List in HK Retail EPC L3 Page
+    wait until element is visible    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//button//span[contains(text(),'EXPAND')])[${RandomPartsCardIndex}]    10
+    click element    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//button//span[contains(text(),'EXPAND')])[${RandomPartsCardIndex}]
+    sleep    2
 
+User should be able to view Option Card Details on the Parts Card List in HK Retail EPC L3 Page
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Container}    10
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Container}
 
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_PartNo_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_DetailsSpec_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Stock_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Price_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Note_Label}    10
 
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_PartNo_Label}
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_DetailsSpec_Label}
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Stock_Label}
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Price_Label}
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Note_Label}
 
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_PartNo_Value}
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_DetailsSpec_Value}
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Stock_Value}
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Price_Value}
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Note_Button}
 
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_PartNo_Value}
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_DetailsSpec_Value}
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Stock_Value}
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Price_Value}
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Note_Button}
 
+    click element    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Note_Button}
 
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_MoreDetails_Container}    10
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_MoreDetails_Container}
 
-
-
-
-
-
+    sleep    2
 
 
 

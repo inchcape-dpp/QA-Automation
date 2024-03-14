@@ -1068,9 +1068,9 @@ TC-131 - User should be able to view company details page
 ##    run keyword and continue on failure    User should be able to click no on update cofirmation modal in Retail Account Company Details Page
 
 
-#TC-136 - User should be able to logout
-#    [Tags]    Logout
-#    run keyword and continue on failure    User should be able to logout
+TC-136 - User should be able to logout
+    [Tags]    Logout
+    run keyword and continue on failure    User should be able to logout using double header
 
 Test Teardown
     Run Keywords    Close Browser

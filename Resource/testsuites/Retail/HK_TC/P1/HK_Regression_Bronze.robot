@@ -796,9 +796,9 @@ TC-097 - User should be able to edit company details page
 #    run keyword and continue on failure    Browse Back Button
 
 
-#TC-000000 - User should be able to logout
-#    [Tags]    TC009    Logout
-#    run keyword and continue on failure    User should be able to logout
+TC-000000 - User should be able to logout
+    [Tags]    TC009    Logout
+    run keyword and continue on failure    User should be able to logout using double header
 #
 #Test Teardown
 #    Run Keywords  Close Browser

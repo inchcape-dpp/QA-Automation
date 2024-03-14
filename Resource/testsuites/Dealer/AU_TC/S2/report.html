@@ -5,16 +5,60 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Robot Framework 6.1.1 (Python 3.11.4 on win32)" name="Generator">
+<meta content="Robot Framework 7.0 (Python 3.11.4 on win32)" name="Generator">
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
-<style media="all" type="text/css">
+<style media="all">
+:root {
+    --text-color: black;
+    --background-color: white;
+    --primary-color: #ddd;
+    --secondary-color: #ccc;
+    --link-color: #15c;
+    --link-hover-color: #61c;
+    --highlight-color: #eee;
+    --target-color: #f9f9f9;
+    --pass-color: #97bd61;
+    --fail-color: #ce3e01;
+    --warn-color: #fed84f;
+    --pass-link-color: #098a09;
+    --warn-link-color: #927201;
+    --fail-link-color: #ce3e01;
+    --ascending-icon: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==);
+    --descending-icon: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==);
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
+}
+[data-theme="dark"] {
+    --text-color: #e2e1d7;
+    --background-color: #1c2227;
+    --primary-color: #26373b;
+    --secondary-color: #424f5a;
+    --link-color: #8cc4ff;
+    --link-hover-color: #bb86fc;
+    --highlight-color: #002b36;
+    --target-color: #1a252e;
+    --pass-link-color: #97bd61;
+    --warn-link-color: #fed84f;
+    --fail-link-color: #ff9b8f;
+    --ascending-icon: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJAgMAAACZCj6+AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAlQTFRFAAAAfn5+////f/cqYgAAAAN0Uk5TAP//RFDWIQAAACdJREFUeJxjYHBgYGAMYGBgDWFgEA1lAAOtVQwMXCsYGJgWADkNDAA78QP9oKr7vwAAAABJRU5ErkJggg==);
+    --descending-icon: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJAgMAAACZCj6+AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAlQTFRFAAAA////fn5+K6jOaAAAAAN0Uk5TAP//RFDWIQAAACdJREFUeJxjYHBgYGAMYGBgDWFgEA1lAAOtVQwMXCsYGJgWADkNDAA78QP9oKr7vwAAAABJRU5ErkJggg==);
+}
 /* Generic and misc styles */
 body {
     font-family: Helvetica, sans-serif;
     font-size: 0.8em;
-    color: black;
+    color: black; /* Fallback value */
+    color: var(--text-color);
     padding: 6px;
-    background: white;
+    background: white; /* Fallback value */
+    background: var(--background-color);
+    margin-left: 15px;
+}
+body[theme-toggled] {
+    transition: background 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 table {
     table-layout: fixed;
@@ -29,20 +73,37 @@ br {
     mso-data-placement: same-cell; /* maintain line breaks in Excel */
 }
 hr {
-    background: #ccc;
+    background: #ccc; /* Fallback value */
+    background: var(--secondary-color);
     height: 1px;
     border: 0;
 }
 a, a:link, a:visited {
     text-decoration: none;
-    color: #15c;
+    color: #15c; /* Fallback value */
+    color: var(--link-color);
 }
 a > img {
-    border: 1px solid #15c !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: #15c !important; /* Fallback value */
+    border-color: var(--link-color) !important;
 }
 a:hover, a:active {
     text-decoration: underline;
-    color: #61c;
+    color: #61c; /* Fallback value */
+    color: var(--link-hover-color);
+}
+select {
+    background-color: white; /* Fallback value */
+    background-color: var(--background-color);
+    color: black; /* Fallback value */
+    color: var(--text-color);
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
+    border-radius: 4px;
 }
 .parent-name {
     font-size: 0.7em;
@@ -55,7 +116,7 @@ a:hover, a:active {
 #header {
     width: 65em;
     height: 3em;
-    margin: 6px 0;
+    margin: 20px 0 6px 0;
 }
 h1 {
     float: left;
@@ -83,14 +144,17 @@ h2 {
 }
 /* Status text colors -- !important allows using them in links */
 .fail {
-    color: #ce3e01 !important;
+    color: #ce3e01 !important; /* Fallback value */
+    color: var(--fail-link-color) !important;
     font-weight: bold;
 }
 .pass {
-    color: #098a09 !important;
+    color: #098a09 !important; /* Fallback value */
+    color: var(--pass-link-color) !important;
 }
 .skip {
-    color: #927201 !important;
+    color: #927201 !important; /* Fallback value */
+    color: var(--warn-link-color) !important;
     font-weight: bold;
 }
 .label {
@@ -98,8 +162,10 @@ h2 {
     font-size: 0.75em;
     letter-spacing: 1px;
     white-space: nowrap;
-    color: black;
-    background-color: #ddd;
+    color: black; /* Fallback value */
+    color: var(--text-color);
+    background-color: #ddd; /* Fallback value */
+    background-color: var(--primary-color);
     border-radius: 3px;
 }
 .label.debug, .label.trace, .label.error, .label.keyword {
@@ -109,15 +175,18 @@ h2 {
     font-weight: bold;
 }
 .label.pass {
-    background-color: #97bd61;
+    background-color: #97bd61; /* Fallback value */
+    background-color: var(--pass-color);
     color: #000 !important;
 }
 .label.fail, .label.error {
-    background-color: #ce3e01;
+    background-color: #ce3e01; /* Fallback value */
+    background-color: var(--fail-color);
     color: #fff !important;
 }
 .label.skip, .label.warn {
-    background-color: #fed84f;
+    background-color: #fed84f; /* Fallback value */
+    background-color: var(--warn-color);
     color: #000 !important;
 }
 /* Top right header */
@@ -146,7 +215,8 @@ h2 {
     padding: 0.3em 0;
     font-size: 0.9em;
     border-bottom-left-radius: 4px;
-    background: #ddd;
+    background: #ddd; /* Fallback value */
+    background: var(--primary-color);
 }
 /* Statistics table */
 .statistics {
@@ -156,15 +226,20 @@ h2 {
     margin-bottom: 1em;
 }
 .statistics tr:hover {
-    background: #f4f4f4;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
     cursor: pointer;
 }
 .statistics th, .statistics td {
-    border: 1px solid #ccc;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
     padding: 0.1em 0.3em;
 }
 .statistics th {
-    background-color: #ddd;
+    background-color: #ddd; /* Fallback value */
+    background-color: var(--primary-color);
     padding: 0.2em 0.3em;
 }
 .statistics td {
@@ -200,27 +275,33 @@ th.stats-col-graph:hover {
 }
 /* Statistics graph */
 .graph, .empty-graph {
-    border: 1px solid #ccc;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
     width: auto;
     height: 7px;
     padding: 0;
-    background: #aaa;
 }
 .empty-graph {
-    background: #eee;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
 }
 .pass-bar, .fail-bar, .skip-bar {
     float: left;
     height: 100%;
 }
 .fail-bar {
-    background: #ce3e01;
+    background: #ce3e01; /* Fallback value */
+    background: var(--fail-color);
 }
 .pass-bar {
-    background: #97bd61;
+    background: #97bd61; /* Fallback value */
+    background: var(--pass-color);
 }
 .skip-bar {
-    background: #fed84f;
+    background: #fed84f; /* Fallback value */
+    background: var(--warn-color);
 }
 /* Tablesorter - adapted from provided Blue Skin */
 .tablesorter-header {
@@ -230,47 +311,103 @@ th.stats-col-graph:hover {
     cursor: pointer;
 }
 .tablesorter-header:hover {
-    background-color: #ccc;
+    background-color: #ccc; /* Fallback value */
+    background-color: var(--secondary-color);
 }
 .tablesorter-headerAsc {
-    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==);
-    background-color: #ccc !important;
+    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==); /* Fallback value */
+    background-image: var(--ascending-icon);
+    background-color: #ccc !important; /* Fallback value */
+    background-color: var(--secondary-color) !important;
 }
 .tablesorter-headerDesc {
-    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==);
-    background-color: #ccc !important;
+    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==); /* Fallback value */
+    background-image: var(--descending-icon);
+    background-color: #ccc !important; /* Fallback value */
+    background-color: var(--secondary-color) !important;
 }
 .sorter-false {
     background-image: none;
     cursor: default;
 }
 .sorter-false:hover {
-    background-color: #ddd;
+    background-color: #ddd; /* Fallback value */
+    background-color: var(--primary-color);
+}
+#theme-toggle {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 28px;
+    height: 28px;
+    border: none;
+    padding: 4px;
+    z-index: 1000;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background: var(--highlight-color);
+}
+[data-theme="dark"] .dark-mode-icon,
+[data-theme="light"] .light-mode-icon {
+    display: none;
+}
+[data-theme="dark"] .light-mode-icon,
+[data-theme="light"] .dark-mode-icon {
+    display: block;
+}
+@keyframes highlight {
+    0% {
+        background: var(--primary-color)
+    }
+    100% {
+        background: var(--target-color);
+    }
+}
+:target {
+    background: var(--target-color);
+    transition: background 0.3s;
+    animation: highlight 4s;
 }
 </style>
-<style media="all" type="text/css">
+<style media="all">
+:root {
+    --col-toggle-color: #6c6c6c; /* same as in sort icon */
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --col-toggle-color: #adadad;
+    }
+}
 /* Generic table styles */
 table {
     margin: 0 1px;
-    background: white;
+    background: white; /* Fallback value */
+    background: var(--background-color);
 }
 tr {
-    background: white;
+    background: white; /* Fallback value */
+    background: var(--background-color);
 }
 th {
-    background: #ddd;
-    color: black;
+    background: #ddd; /* Fallback value */
+    background: var(--primary-color);
+    color: black; /* Fallback value */
+    color: var(--text-color);
 }
 /* Summary and total/tag/suite details */
 .details {
-    border: 1px solid #ccc;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
+    border-width: 1px;
+    border-style: solid;
     border-spacing: 0.2em;
     clear: both;
     width: 65em;
     margin-bottom: 1em;
 }
 .details th {
-    background: white;
+    background: white; /* Fallback value */
+    background: var(--background-color);
     width: 11em;
     text-align: left;
     vertical-align: top;
@@ -297,8 +434,30 @@ th {
     display: none;
 }
 /* Search */
+input[type='submit'], input[type='button'] {
+    background-color: #ddd; /* Fallback value */
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    border: 0;
+    padding: 4px 6px 4px 6px;
+    color: black; /* Fallback value */
+    color: var(--text-color);
+}
+input[type='submit']:hover, input[type='button']:hover {
+    background-color: #ccc; /* Fallback value */
+    background-color: var(--secondary-color);
+}
 #search-suite, #search-test, #search-include, #search-exclude {
     width: 25em;
+    background-color: white; /* Fallback value */
+    background-color: var(--background-color);
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 2px;
+    color: black; /* Fallback value */
+    color: var(--text-color);
 }
 #search a:hover {
     text-decoration: none;
@@ -306,8 +465,12 @@ th {
 #search-help div {
     margin: 0.5em 0.5em 0.7em 0;
     padding: 0.7em;
-    background: #eee;
-    border: 1px solid #ccc;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
+    border-width: 1px;
+    border-style: solid;
     border-radius: 3px;
 }
 #search-help h3, #search-help p {
@@ -342,18 +505,24 @@ th {
 }
 .detail-tab {
     float: left;
-    background: #ddd;
-    border: 1px solid #ccc;
+    background: #ddd; /* Fallback value */
+    background: var(--primary-color);
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
+    border-width: 1px;
+    border-style: solid;
     border-bottom-width: 0;
     margin: 0 0.5em 0 0;
     padding-top: 0.1em;
     border-radius: 3px 3px 0 0;
 }
 .detail-tab:hover {
-    background: #ccc;
+    background: #ccc; /* Fallback value */
+    background: var(--secondary-color);
 }
 .detail-tab a {
-    color: black;
+    color: black; /* Fallback value */
+    color: var(--text-color);
     text-decoration: none;
     font-weight: bold;
     padding: 0 1em;
@@ -361,19 +530,23 @@ th {
 .detail-tab-selected {
     position: relative;
     top: 1px;
-    background: white;
+    background: white; /* Fallback value */
+    background: var(--background-color);
 }
 .detail-tab-selected:hover {
-    background: white;
+    background: white; /* Fallback value */
+    background: var(--background-color);
 }
 /* Test details table */
 #test-details {
     width: 100%;
     border-spacing: 1px;
-    background-color: #ccc;
+    background-color: #ccc; /* Fallback value */
+    background-color: var(--secondary-color);
 }
 #test-details > tbody > tr:hover {
-    background: #f4f4f4;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
     cursor: pointer;
 }
 #test-details th, #test-details td {
@@ -388,11 +561,13 @@ th {
 }
 .details-col-toggle {
     float: left;
-    color: #6c6c6c; /* same as in sort icon */
+    color: #6c6c6c; /* Fallback value */
+    color: var(--col-toggle-color);
     cursor: pointer;
 }
 .details-col-toggle:hover {
-    color: black;
+    color: black; /* Fallback value */
+    color: var(--text-color);
 }
 .details-col-name {
     min-width: 20em;
@@ -433,10 +608,18 @@ th {
     background-image: none;
 }
 th.hidden:hover {
-    background-color: #ccc;
+    background-color: #ddd; /* Fallback value */
+    background-color: var(--primary-color);
+}
+#status-bar {
+    height: 100%;
+    width: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 </style>
-<style media="print" type="text/css">
+<style media="print">
 body {
     background: white !important;
     padding: 0;
@@ -476,7 +659,7 @@ a:link, a:visited {
     background: #ddd !important;
 }
 </style>
-<style media="all" type="text/css">
+<style media="all">
 #javascript-disabled {
     width: 600px;
     margin: 100px auto 0 auto;
@@ -499,7 +682,7 @@ a:link, a:visited {
     font-style: italic;
 }
 </style>
-<style media="all" type="text/css">
+<style media="all">
 .doc > * {
     margin: 0.7em 1em 0.1em 1em;
     padding: 0;
@@ -511,14 +694,12 @@ a:link, a:visited {
     margin-top: 0.1em;
 }
 .doc table {
-    border: 1px solid #ccc;
     background: transparent;
     border-collapse: collapse;
     empty-cells: show;
     font-size: 0.9em;
 }
 .doc table th, .doc table td {
-    border: 1px solid #ccc;
     background: transparent;
     padding: 0.1em 0.3em;
     height: 1.2em;
@@ -528,24 +709,32 @@ a:link, a:visited {
     letter-spacing: 0.1em;
 }
 .doc pre {
+    border-radius: 2px;
     font-size: 1.1em;
     letter-spacing: 0.05em;
-    background: #f4f4f4;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
 }
 .doc code {
+    border-radius: 2px;
     padding: 0 0.2em;
     letter-spacing: 0.05em;
-    background: #eee;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
 }
 .doc li {
     list-style-position: inside;
     list-style-type: square;
 }
-.doc img {
-    border: 1px solid #ccc;
+.doc img, .doc table, .doc table th, .doc table td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
 }
 .doc hr {
-    background: #ccc;
+    background: #ccc; /* Fallback value */
+    background: var(--secondary-color);
     height: 1px;
     border: 0;
 }
@@ -642,7 +831,6 @@ window.model = (function () {
         suite.populateSuites = createIterablePopulator('Suite');
         suite.childrenNames = ['keyword', 'suite', 'test'];
         suite.callWhenChildrenReady = function (callable) { callable(); };
-        suite.message = data.message;
         suite.children = function () {
             return suite.keywords().concat(suite.tests()).concat(suite.suites());
         };
@@ -733,6 +921,7 @@ window.model = (function () {
             name: data.name,
             doc: data.doc,
             status: data.status,
+            message: data.message,
             times: data.times,
             id: data.parent ? data.parent.id + '-' + data.id : data.id
         };
@@ -753,7 +942,6 @@ window.model = (function () {
                 return test.keywords();
         };
         test.tags = data.tags;
-        test.message = data.message;
         test.matchesTagPattern = function (pattern) {
             return containsTagPattern(test.tags, pattern);
         };
@@ -764,13 +952,12 @@ window.model = (function () {
     }
     function Keyword(data) {
         var kw = createModelObject(data);
-        var flatTypes = ['RETURN', 'BREAK', 'CONTINUE'];
         kw.libname = data.libname;
         kw.fullName = (kw.libname ? kw.libname + '.' : '') + kw.name;
         kw.type = data.type;
         kw.template = 'keywordTemplate';
         kw.arguments = data.args;
-        kw.assign = data.assign + (data.assign ? ' =' : '');
+        kw.assign = data.assign + (data.assign ? ' =  ' : '');
         kw.tags = data.tags;
         kw.timeout = data.timeout;
         kw.populateKeywords = createIterablePopulator('Keyword');
@@ -1149,8 +1336,9 @@ window.testdata = function () {
     var _statistics = null;
     var LEVELS = ['TRACE', 'DEBUG', 'INFO', 'WARN', 'ERROR', 'FAIL', 'SKIP'];
     var STATUSES = ['FAIL', 'PASS', 'SKIP', 'NOT RUN'];
-    var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'ITERATION', 'IF', 'ELSE IF', 'ELSE', 'RETURN',
-                         'TRY', 'EXCEPT', 'FINALLY', 'WHILE', 'CONTINUE', 'BREAK', 'ERROR'];
+    var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'ITERATION', 'IF',
+                         'ELSE IF', 'ELSE', 'RETURN', 'VAR', 'TRY', 'EXCEPT', 'FINALLY',
+                         'WHILE', 'CONTINUE', 'BREAK', 'ERROR'];
     function addElement(elem) {
         if (!elem.id)
             elem.id = uniqueId();
@@ -1193,6 +1381,7 @@ window.testdata = function () {
         return createKeyword(parent, element, strings, index - messages.length);
     }
     function createKeyword(parent, element, strings, index) {
+        var status = element[8];
         var kw = model.Keyword({
             parent: parent,
             type: KEYWORD_TYPES[element[0]],
@@ -1208,7 +1397,12 @@ window.testdata = function () {
                 this.doc = function () { return doc; };
                 return doc;
             },
-            status: parseStatus(element[8], strings),
+            status: parseStatus(status),
+            message: function () {
+                var msg = status.length == 4 ? strings.get(status[3]) : '';
+                this.message = function () { return msg; };
+                return msg;
+            },
             times: model.Times(times(element[8])),
             isChildrenLoaded: typeof(element[9]) !== 'number'
         });
@@ -1419,6 +1613,20 @@ window.testdata = function () {
 }();
 </script>
 <script type="text/javascript">
+const lightModeIcon = `
+<svg class="light-mode-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+    viewBox="0 0 24 24" fill="var(--text-color)">
+    <rect fill="none" height="24" width="24" />
+    <path
+        d="M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0 c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2 c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1 C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06 c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41 l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41 c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36 c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z" />
+</svg>`
+const darkModeIcon = `
+<svg class="dark-mode-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+    viewBox="0 0 24 24" fill="var(--text-color)">
+    <rect fill="none" height="24" width="24" />
+    <path
+        d="M11.01,3.05C6.51,3.54,3,7.36,3,12c0,4.97,4.03,9,9,9c4.63,0,8.45-3.5,8.95-8c0.09-0.79-0.78-1.42-1.54-0.95 c-0.84,0.54-1.84,0.85-2.91,0.85c-2.98,0-5.4-2.42-5.4-5.4c0-1.06,0.31-2.06,0.84-2.89C12.39,3.94,11.9,2.98,11.01,3.05z" />
+</svg>`
 function removeJavaScriptDisabledWarning() {
     // Not using jQuery here for maximum speed
     document.getElementById('javascript-disabled').style.display = 'none';
@@ -1454,6 +1662,10 @@ function setTitle(suiteName, type) {
 function addHeader() {
     var generated = util.timestamp(window.output.generated);
     $.tmpl('<h1>${title}</h1>' +
+           '<button id=theme-toggle>' +
+             lightModeIcon +
+             darkModeIcon +
+           '</button>' +
            '<div id="generated">' +
              '<span>Generated<br>${generated}</span><br>' +
              '<span id="generated-ago">${ago} ago</span>' +
@@ -1465,6 +1677,7 @@ function addHeader() {
         ago: util.createGeneratedAgoString(generated),
         title: document.title
     }).appendTo($('#header'));
+    document.getElementById('theme-toggle')?.addEventListener('click', theme.onClick);
 }
 function addReportOrLogLink(myType) {
     var url;
@@ -1593,13 +1806,65 @@ function stopPropagation(event) {
     if (event.stopPropagation)
         event.stopPropagation();
 }
+const theme = function () {
+    const storageKey = 'theme-preference';
+    const urlParams = new URLSearchParams(window.location.search);
+    var storage;
+    var theme;
+    function init(givenStorage) {
+        storage = givenStorage;
+        theme = { value: getPreference() };
+        document.body.setAttribute('data-theme', theme.value);
+        reflectPreference();
+        window.matchMedia('(prefers-color-scheme: dark)')
+            .addEventListener('change', ({matches:isDark}) => {
+                theme.value = isDark ? 'dark' : 'light';
+                setPreference();
+            });
+        window.addEventListener('storage', ({key, newValue}) => {
+            if (key === storage.fullKey(storageKey)) {
+                theme.value = newValue === 'dark' ? 'dark' : 'light';
+                setPreference();
+            }
+        });
+    }
+    function getPreference() {
+        if (urlParams.has('theme')) {
+            var urlTheme = urlParams.get('theme') === 'dark' ? 'dark' : 'light';
+            storage.set(storageKey, urlTheme);
+            urlParams.delete('theme');
+            return urlTheme;
+        }
+        if (storage.get(storageKey))
+            return storage.get(storageKey) === 'dark' ? 'dark' : 'light';
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    function setPreference() {
+        storage.set(storageKey, theme.value);
+        reflectPreference();
+    }
+    function reflectPreference() {
+        document.body.setAttribute('data-theme', theme.value);
+        document.querySelector('#theme-toggle')?.setAttribute('aria-label', theme.value);
+        const event = new Event('theme-change', {value: theme.value});
+        document.dispatchEvent(event);
+    }
+    function onClick() {
+        theme.value = theme.value === 'light' ? 'dark' : 'light';
+        document.body.setAttribute('theme-toggled', "");
+        setPreference();
+    }
+    return {init: init, getPreference: getPreference, setPreference: setPreference,
+        reflectPreference: reflectPreference, onClick: onClick};
+}();
 </script>
 <script type="text/javascript">
 storage = function () {
     var prefix = 'robot-framework-';
     var storage;
     function init(user) {
-        prefix += user + '-';
+        if (user)
+            prefix += user + '-';
         storage = getStorage();
     }
     function getStorage() {
@@ -1613,38 +1878,41 @@ storage = function () {
             return {};
         }
     }
-    function get(name, defaultValue) {
-        var value = storage[prefix + name];
+    function get(key, defaultValue) {
+        var value = storage[fullKey(key)];
         if (typeof value === 'undefined')
             return defaultValue;
         return value;
     }
-    function set(name, value) {
-        storage[prefix + name] = value;
+    function set(key, value) {
+        storage[fullKey(key)] = value;
     }
-    return {init: init, get: get, set: set};
+    function fullKey(key) {
+        return prefix + key;
+    }
+    return {init: init, get: get, set: set, fullKey: fullKey};
 }();
 </script>
 <script type="text/javascript">
 window.output = {};
 </script>
 <script type="text/javascript">
-window.output["suite"] = [1,2,0,3,[],[0,0,1115533],[],[[4,0,0,[],[1,388,4498],[]],[5,0,0,[],[1,4887,3],[]],[6,0,0,[7],[1,4891,10517],[]],[8,0,0,[7],[1,15408,2198],[]],[9,0,0,[7],[1,17608,1284],[]],[10,0,0,[7],[1,18892,1167],[]],[11,0,0,[7],[1,20060,2401],[]],[12,0,0,[7],[1,22461,1260],[]],[13,0,0,[14,7],[1,23721,5056],[]],[15,0,0,[14,7],[1,28777,1929],[]],[16,0,0,[14,7],[1,30707,2201],[]],[17,0,0,[14,7],[1,32909,2180],[]],[18,0,0,[14,7],[1,35089,7168],[]],[19,0,0,[7],[1,42257,1173],[]],[20,0,0,[7],[1,43430,1161],[]],[21,0,0,[7],[1,44593,2132],[]],[22,0,0,[23],[1,46727,8078],[]],[24,0,0,[23,25],[1,54806,608],[]],[26,0,0,[23,25],[1,55414,5177],[]],[27,0,0,[23,25],[1,60592,5158],[]],[28,0,0,[23,25],[1,65750,5198],[]],[29,0,0,[23,25],[1,70949,5166],[]],[30,0,0,[23,25],[1,76115,5177],[]],[31,0,0,[23,32],[1,81293,5469],[]],[33,0,0,[23,32],[1,86762,5437],[]],[34,0,0,[23,32],[1,92199,5343],[]],[35,0,0,[23,32],[1,97542,5437],[]],[36,0,0,[23,32],[1,102979,5450],[]],[37,0,0,[23,32],[1,108429,5443],[]],[38,0,0,[23,32],[1,113872,5320],[]],[39,0,0,[23,32],[1,119192,5489],[]],[40,0,0,[23,32],[1,124682,5482],[]],[41,0,0,[23,32],[1,130164,5326],[]],[42,0,0,[23,32],[1,135490,5507],[]],[43,0,0,[23,32],[1,140997,5453],[]],[44,0,0,[23,32],[1,146450,8721],[]],[45,0,0,[23,46],[1,155172,9311],[]],[47,0,0,[23,46],[1,164485,4602],[]],[48,0,0,[23,46],[1,169087,4569],[]],[49,0,0,[23,46],[1,173656,4562],[]],[50,0,0,[23,46],[1,178218,4590],[]],[51,0,0,[23,46],[1,182808,4545],[]],[52,0,0,[23,46],[1,187353,4609],[]],[53,0,0,[23,46],[1,191962,2528],[]],[54,0,0,[23,46],[1,194490,2184],[]],[55,0,0,[23,46],[1,196674,2152],[]],[56,0,0,[23,46],[1,198826,4215],[]],[57,0,0,[23,46],[1,203041,4243],[]],[58,0,0,[23,46],[1,207284,2163],[]],[59,0,0,[23,46],[1,209447,2162],[]],[60,0,0,[23,46],[1,211610,2169],[]],[61,0,0,[23,46],[1,213779,7004],[]],[62,0,0,[23,46],[1,220783,2417],[]],[63,0,0,[23,46],[1,223202,2180],[]],[64,0,0,[23,46],[1,225383,2153],[]],[65,0,0,[23,46],[1,227536,4601],[]],[66,0,0,[23,46],[1,232137,4587],[]],[67,0,0,[23,46],[1,236724,4592],[]],[68,0,0,[23,46],[1,241316,19653],[]],[69,0,0,[23,46],[0,260969,20158,70],[]],[71,0,0,[23,46],[1,281127,27527],[]],[72,0,0,[23,46],[1,308654,36894],[]],[73,0,0,[23,46],[1,345548,27351],[]],[74,0,0,[23,75],[1,372899,5656],[]],[76,0,0,[23,75],[1,378556,4356],[]],[77,0,0,[23,75],[1,382912,4320],[]],[78,0,0,[23,75],[1,387232,4335],[]],[79,0,0,[23,75],[1,391567,4354],[]],[80,0,0,[23,75],[1,395921,2267],[]],[81,0,0,[23,75],[1,398188,2187],[]],[82,0,0,[23,75],[1,400375,2171],[]],[83,0,0,[23,75],[1,402546,4238],[]],[84,0,0,[23,75],[1,406786,4215],[]],[85,0,0,[23,75],[1,411001,2170],[]],[86,0,0,[23,75],[1,413171,2173],[]],[87,0,0,[23,75],[1,415344,2171],[]],[88,0,0,[23,75],[1,417517,6523],[]],[89,0,0,[23,75],[1,424041,2170],[]],[90,0,0,[23,75],[1,426212,2196],[]],[91,0,0,[23,75],[1,428409,2174],[]],[92,0,0,[23,75],[1,430585,4381],[]],[93,0,0,[23,75],[1,434969,4322],[]],[94,0,0,[23,75],[1,439291,17655],[]],[95,0,0,[23,75],[1,456946,28300],[]],[96,0,0,[23,75],[1,485247,16908],[]],[97,0,0,[23,75],[1,502155,27452],[]],[98,0,0,[23,75],[1,529607,17185],[]],[99,0,0,[23,75],[1,546794,27557],[]],[100,0,0,[23,101],[1,574351,12690],[]],[102,0,0,[23,101],[1,587041,4362],[]],[103,0,0,[23,101],[1,591403,4348],[]],[104,0,0,[23,101],[1,595751,4350],[]],[105,0,0,[23,101],[1,600101,4336],[]],[106,0,0,[23,101],[1,604437,15284],[]],[107,0,0,[23,101],[0,619721,21607,108],[]],[109,0,0,[110,23],[1,641328,7597],[]],[111,0,0,[110,23],[1,648925,4470],[]],[112,0,0,[110,23],[1,653396,4432],[]],[113,0,0,[23,114],[1,657828,7646],[]],[115,0,0,[23,114],[1,665474,4414],[]],[116,0,0,[23,114],[1,669888,4352],[]],[117,0,0,[23,114],[1,674240,4373],[]],[118,0,0,[23,114],[1,678613,4371],[]],[119,0,0,[23,114],[1,682984,4357],[]],[120,0,0,[23,114],[1,687341,2310],[]],[121,0,0,[23,114],[1,689651,2189],[]],[122,0,0,[23,114],[1,691840,2180],[]],[123,0,0,[23,114],[1,694020,4249],[]],[124,0,0,[23,114],[1,698269,4269],[]],[125,0,0,[23,114],[1,702538,2192],[]],[126,0,0,[23,114],[1,704730,2211],[]],[127,0,0,[23,114],[1,706941,2197],[]],[128,0,0,[23,114],[1,709138,6538],[]],[129,0,0,[23,114],[1,715676,2169],[]],[130,0,0,[23,114],[1,717845,2211],[]],[131,0,0,[23,114],[1,720058,2192],[]],[132,0,0,[23,114],[1,722250,24889],[]],[133,0,0,[23,114],[1,747139,25028],[]],[134,0,0,[23,114],[1,772167,24665],[]],[135,0,0,[23,114],[1,796832,25387],[]],[136,0,0,[23,114],[1,822219,25030],[]],[137,0,0,[23,114],[1,847251,24828],[]],[138,0,0,[23,114],[1,872081,24829],[]],[139,0,0,[23,114],[1,896910,24952],[]],[140,0,0,[141,23],[1,921862,12806],[]],[142,0,0,[141,23],[1,934669,2251],[]],[143,0,0,[141,23],[1,936921,2234],[]],[144,0,0,[141,23],[1,939156,2216],[]],[145,0,0,[141,23],[1,941372,2216],[]],[146,0,0,[141,23],[1,943588,2199],[]],[147,0,0,[141,23],[1,945787,4372],[]],[148,0,0,[141,23],[1,950159,2176],[]],[149,0,0,[141,23],[1,952335,2251],[]],[150,0,0,[141,23],[1,954587,2249],[]],[151,0,0,[152,23],[1,956837,5665],[]],[153,0,0,[152,23],[1,962502,2233],[]],[154,0,0,[152,23],[1,964737,6616],[]],[155,0,0,[152,23],[1,971353,6677],[]],[156,0,0,[152,23],[1,978030,2204],[]],[157,0,0,[152,23],[1,980234,4357],[]],[158,0,0,[152,23],[1,984591,2213],[]],[159,0,0,[152,23],[1,986805,2213],[]],[160,0,0,[152,23],[1,989018,2200],[]],[161,0,0,[152,23],[1,991218,2233],[]],[162,0,0,[152,23],[1,993452,2249],[]],[163,0,0,[164,23],[1,995702,21408],[]],[165,0,0,[164,23],[1,1017110,53570],[]],[166,0,0,[23,167],[1,1070680,7644],[]],[168,0,0,[23,167],[1,1078324,5141],[]],[169,0,0,[23,167],[1,1083465,2185],[]],[170,0,0,[23,167],[1,1085650,2195],[]],[171,0,0,[23,167],[1,1087845,15255],[]],[172,0,0,[23,173],[1,1103100,10085],[]],[174,0,0,[23,173],[1,1113185,2348],[]]],[],[154,152,2,0]];
+window.output["suite"] = [1,2,3,4,[],[0,0,1443799],[],[[5,0,0,[],[1,432,6708],[]],[6,0,0,[],[1,7140,0],[]],[7,0,0,[8],[1,7140,10473],[]],[9,0,0,[8],[1,17613,2177],[]],[10,0,0,[8],[1,19790,1285],[]],[11,0,0,[8],[1,21075,1163],[]],[12,0,0,[8],[1,22238,2447],[]],[13,0,0,[8],[1,24685,1303],[]],[14,0,0,[15,8],[1,25994,5063],[]],[16,0,0,[15,8],[1,31057,1924],[]],[17,0,0,[15,8],[1,32991,2183],[]],[18,0,0,[15,8],[1,35174,2188],[]],[19,0,0,[15,8],[1,37363,7194],[]],[20,0,0,[8],[1,44556,1183],[]],[21,0,0,[8],[1,45741,1166],[]],[22,0,0,[8],[1,46908,2114],[]],[23,0,0,[24],[1,49021,8170],[]],[25,0,0,[24,26],[1,57191,634],[]],[27,0,0,[24,26],[1,57825,5159],[]],[28,0,0,[24,26],[1,62983,5166],[]],[29,0,0,[24,26],[1,68149,5167],[]],[30,0,0,[24,26],[1,73316,5166],[]],[31,0,0,[24,26],[1,78482,5167],[]],[32,0,0,[24,33],[1,83649,5483],[]],[34,0,0,[24,33],[1,89132,5450],[]],[35,0,0,[24,33],[1,94582,5365],[]],[36,0,0,[24,33],[1,99947,5452],[]],[37,0,0,[24,33],[1,105414,5487],[]],[38,0,0,[24,33],[1,110913,5446],[]],[39,0,0,[24,33],[1,116359,5344],[]],[40,0,0,[24,33],[1,121703,5513],[]],[41,0,0,[24,33],[1,127216,5483],[]],[42,0,0,[24,33],[1,132700,5339],[]],[43,0,0,[24,33],[1,138045,5487],[]],[44,0,0,[24,33],[1,143532,5467],[]],[45,0,0,[24,33],[1,148999,8740],[]],[46,0,0,[24,47],[1,157743,9329],[]],[48,0,0,[24,47],[1,167073,4608],[]],[49,0,0,[24,47],[1,171681,4582],[]],[50,0,0,[24,47],[1,176263,4608],[]],[51,0,0,[24,47],[1,180870,4620],[]],[52,0,0,[24,47],[1,185490,4593],[]],[53,0,0,[24,47],[1,190085,4576],[]],[54,0,0,[24,47],[1,194661,2511],[]],[55,0,0,[24,47],[1,197172,2175],[]],[56,0,0,[24,47],[1,199348,2177],[]],[57,0,0,[24,47],[1,201525,4236],[]],[58,0,0,[24,47],[1,205760,4248],[]],[59,0,0,[24,47],[1,210008,2168],[]],[60,0,0,[24,47],[1,212176,2151],[]],[61,0,0,[24,47],[1,214333,2165],[]],[62,0,0,[24,47],[1,216499,7082],[]],[63,0,0,[24,47],[1,223581,2417],[]],[64,0,0,[24,47],[1,225999,2171],[]],[65,0,0,[24,47],[1,228170,2163],[]],[66,0,0,[24,47],[1,230332,4600],[]],[67,0,0,[24,47],[1,234932,4602],[]],[68,0,0,[24,47],[1,239534,4585],[]],[69,0,0,[24,47],[1,244120,17818],[]],[70,0,0,[24,47],[0,261938,30238,71],[]],[72,0,0,[24,47],[1,292176,18579],[]],[73,0,0,[24,47],[1,310756,44264],[]],[74,0,0,[24,47],[1,355020,35771],[]],[75,0,0,[24,76],[1,390791,5631],[]],[77,0,0,[24,76],[1,396423,4372],[]],[78,0,0,[24,76],[1,400795,4362],[]],[79,0,0,[24,76],[1,405159,4327],[]],[80,0,0,[24,76],[1,409485,4321],[]],[81,0,0,[24,76],[1,413808,2260],[]],[82,0,0,[24,76],[1,416068,2166],[]],[83,0,0,[24,76],[1,418235,2160],[]],[84,0,0,[24,76],[1,420395,4242],[]],[85,0,0,[24,76],[1,424637,4240],[]],[86,0,0,[24,76],[1,428876,2188],[]],[87,0,0,[24,76],[1,431065,2176],[]],[88,0,0,[24,76],[1,433241,2167],[]],[89,0,0,[24,76],[1,435408,6503],[]],[90,0,0,[24,76],[1,441911,2164],[]],[91,0,0,[24,76],[1,444079,2209],[]],[92,0,0,[24,76],[1,446288,2170],[]],[93,0,0,[24,76],[1,448458,4342],[]],[94,0,0,[24,76],[1,452799,4344],[]],[95,0,0,[24,76],[1,457143,19046],[]],[96,0,0,[24,76],[0,476189,115110,97],[]],[98,0,0,[24,76],[0,591299,46567,99],[]],[100,0,0,[24,76],[1,637866,31155],[]],[101,0,0,[24,76],[1,669021,17152],[]],[102,0,0,[24,76],[1,686174,27978],[]],[103,0,0,[24,104],[1,714152,12778],[]],[105,0,0,[24,104],[1,726929,4346],[]],[106,0,0,[24,104],[1,731276,4347],[]],[107,0,0,[24,104],[1,735623,4373],[]],[108,0,0,[24,104],[1,739997,4351],[]],[109,0,0,[24,104],[1,744347,15738],[]],[110,0,0,[24,104],[1,760089,15253],[]],[111,0,0,[112,24],[1,775342,7634],[]],[113,0,0,[112,24],[1,782976,4464],[]],[114,0,0,[112,24],[1,787445,4468],[]],[115,0,0,[24,116],[1,791915,7705],[]],[117,0,0,[24,116],[1,799620,4387],[]],[118,0,0,[24,116],[1,804007,4366],[]],[119,0,0,[24,116],[1,808375,4365],[]],[120,0,0,[24,116],[1,812739,4359],[]],[121,0,0,[24,116],[1,817098,4392],[]],[122,0,0,[24,116],[1,821490,2297],[]],[123,0,0,[24,116],[1,823787,2207],[]],[124,0,0,[24,116],[1,825994,2182],[]],[125,0,0,[24,116],[1,828179,4256],[]],[126,0,0,[24,116],[1,832435,4248],[]],[127,0,0,[24,116],[1,836683,2196],[]],[128,0,0,[24,116],[1,838879,2196],[]],[129,0,0,[24,116],[1,841075,2205],[]],[130,0,0,[24,116],[1,843280,6582],[]],[131,0,0,[24,116],[1,849866,2194],[]],[132,0,0,[24,116],[1,852059,2206],[]],[133,0,0,[24,116],[1,854265,2182],[]],[134,0,0,[24,116],[1,856447,25248],[]],[135,0,0,[24,116],[1,881695,25133],[]],[136,0,0,[24,116],[1,906828,25304],[]],[137,0,0,[24,116],[1,932134,25089],[]],[138,0,0,[24,116],[0,957223,66406,139],[]],[140,0,0,[24,116],[0,1023630,65131,141],[]],[142,0,0,[24,116],[0,1088777,85064,143],[]],[144,0,0,[24,116],[0,1173841,60162,145],[]],[146,0,0,[147,24],[1,1234003,12806],[]],[148,0,0,[147,24],[1,1246809,2245],[]],[149,0,0,[147,24],[1,1249058,2199],[]],[150,0,0,[147,24],[1,1251257,2243],[]],[151,0,0,[147,24],[1,1253500,2226],[]],[152,0,0,[147,24],[1,1255727,2172],[]],[153,0,0,[147,24],[0,1257899,20454,154],[]],[155,0,0,[147,24],[1,1278353,2183],[]],[156,0,0,[147,24],[1,1280536,2245],[]],[157,0,0,[147,24],[1,1282783,2258],[]],[158,0,0,[159,24],[1,1285045,5709],[]],[160,0,0,[159,24],[1,1290770,2233],[]],[161,0,0,[159,24],[1,1293004,6613],[]],[162,0,0,[159,24],[1,1299617,6605],[]],[163,0,0,[159,24],[1,1306222,2202],[]],[164,0,0,[159,24],[1,1308424,4410],[]],[165,0,0,[159,24],[1,1312835,2225],[]],[166,0,0,[159,24],[1,1315062,2219],[]],[167,0,0,[159,24],[1,1317280,2175],[]],[168,0,0,[159,24],[1,1319455,2236],[]],[169,0,0,[159,24],[1,1321695,2193],[]],[170,0,0,[171,24],[1,1323888,21465],[]],[172,0,0,[171,24],[1,1345358,53529],[]],[173,0,0,[24,174],[1,1398887,7681],[]],[175,0,0,[24,174],[1,1406569,5152],[]],[176,0,0,[24,174],[1,1411721,2225],[]],[177,0,0,[24,174],[1,1413946,2199],[]],[178,0,0,[24,174],[1,1416144,15260],[]],[179,0,0,[24,180],[1,1431405,10031],[]],[181,0,0,[24,180],[1,1441435,2357],[]]],[],[154,146,8,0]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*AU egression Dealer","*C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Dealer\\AU_TC\\S2\\AU_egression_Dealer.robot","*<p>Suite description\x3c/p>","*Test Setup","*Screen Shot DIR","*TC-001 - Verify Login Page","*Login Page","*TC-002 - Verify Login Page Elements","*TC-003 - Input Invalid Username","*TC-004 - Input Invalid Password","*TC-005 - Login Invalid Email and Pass","*TC-006 - User should be able to check/uncheck Remember me","*TC-007 - User should be able to Click Forgot Password","*Forgot Password","*TC-008 - User should be able to view Reset Password Page","*TC-009 - User should be able to view email error messsage in Dealer Reset Password Page","*TC-010 - User should be able input valid email in Dealer Reset Password Page","*TC-011 - User should be able to click submit button in Dealer Reset Password Page","*TC-012 - Input Valid Username","*TC-013 - Input Valid Password","*TC-014 - User should be able to click Login Button","*TC-015 - Verify Home Page Elements","*Home Page","*TC-016 - User should be able to view top navigation","*Top Navigation","*TC-017 - User should be able to click account from top navigation","*TC-018 - User should be able to click orders from top navigation","*TC-019 - User should be able to click return from top navigation","*TC-020 - User should be able to click new buyer from top navigation","*TC-021 - User should be able to click messages from top navigation","*TC-022 - User should be able to click orders from left navigation","*Left Navigation","*TC-023 - User should be able to click Return from left navigation","*TC-024 - User should be able to click and expand Customer Management","*TC-025 - User should be able to click Customer Manegement - New Reg from left navigation","*TC-026 - User should be able to click Customer Manegement - Buyer Rel from left navigation","*TC-027 - User should be able to click Messages from left navigation","*TC-028 - User should be able to click and expand Profile","*TC-029 - User should be able to click Profile - Account Details from left navigation","*TC-030 - User should be able to click Profile - Change Pass from left navigation","*TC-031 - User should be able to click and expand Company","*TC-032 - User should be able to click Company - Company Details from left navigation","*TC-033 - User should be able to click Company - Staff Pass from left navigation","*TC-034 - User should be able to click Settings from left navigation","*TC-035 - User should be able to view Cutomer Orders Panel","*Orders Page","*TC-036 - User should be able to filter status by Received in Order Page","*TC-037 - User should be able to filter status by Submitted in Order Page","*TC-038 - User should be able to filter status by Dispatched in Order Page","*TC-039 - User should be able to filter status by Dispatched in Order Page","*TC-040 - User should be able to filter status by Order with Returns in Order Page","*TC-041 - User should be able to filter status by ALL in Order Page","*TC-042 - User should be able to view Date Filter Elements in Order Page","*TC-043 - User should be able to click Previous Month Button in Order Page","*TC-044 - User should be able to click Next Month Button in Order Page","*TC-045 - User should be able to select month from drop down in Order Page","*TC-046 - User should be able to select year from drop down in Order Page","*TC-047 - User should be able to select From Date in Order Page","*TC-048 - User should be able to select To Date in Order Page","*TC-049 - User should be able to click Date Filter Submit Button in Order Page","*TC-050 - User should be able to click Date Filter Clear Button in Order Page","*TC-051 - User should be able to click Search Box in Order Page","*TC-052 - User should be able to Input Text in Search Box in Order Page","*TC-053 - User should be able to click clear button from Search Box in Order Page","*TC-054 - User should be able to Filter by Order Number in Order Page","*TC-055 - User should be able to Filter by Old to New in Order Page","*TC-056 - User should be able to Filter by New to Old in Order Page","*TC-057 - User should be able to view and click order with Recieved Status in Dealer Orders Page","*TC-058 - User should be able to view and click order with Submitted Status in Dealer Orders Page","eNqN0ztv1TAYBuC5+RVWplYHjny/RGJInAQWOlCgA+qQJl9JdM6xK8fQIsR/r0vF0MVhsiw/eX3Rm2u4bcPyE0L3OMJ9XLyr0EdY1+E7VOiHOzj/4BCE4MPzdB7cdIQJLW69hzH68G/pdzn6CcrqLaMY4zfl6SWirEo7OOcjisMB0DoGALfOaf6wxBnhNExx3pd/CoTOr9I3af8UfucrNM7Bn+AdoWSP95JItSdaXBRXcRgPMQwjVMXZe4gf/p7oK4TlboGAvuHHtD9Wfa+Eslp0nO6YYFoqflOcnV96tP463frjxWupa24xzQklRN01WcGZqm1eENaTDdGJPiskJU1emBqrOiuaHtd5YQjlWxnU4qxom7Zj+YyuE3mhe0F4/qRYsuc33epCI23d7phi2ii27VtsBZY7jrWhCv+P55qy5IWixmx70wrLzU5RnBqerWZDqOzz5bUMb9TbcpattzZNm8moWy0JTbdM4lM8flkhfJ4DDFP6HUN8BWuSuiV0eomb4gl+ADbU","*TC-059 - User should be able to view and click order with Dispatched Status in Dealer Orders Page","*TC-060 - User should be able to view and click order with Partially Dispatched Status in Dealer Orders Page","*TC-061 - User should be able to view and click order with Orders with Returns Status in Dealer Orders Page","*TC-062 - User should be able to view Return Request Panel","*Return Page","*TC-063 - User should be able to filter status by In Progress in Return Page","*TC-064 - User should be able to filter status by Declined in Return Page","*TC-065 - User should be able to filter status by Accepted in Return Page","*TC-066 - User should be able to filter status by ALL in Return Page","*TC-067 - User should be able to view Date Filter Elements in Return Page","*TC-068 - User should be able to click Previous Month Button in Return Page","*TC-069 - User should be able to click Next Month Button in Return Page","*TC-070 - User should be able to select month from drop down in Return Page","*TC-071 - User should be able to select year from drop down in Return Page","*TC-072 - User should be able to select From Date in Return Page","*TC-073 - User should be able to select To Date in Return Page","*TC-074 - User should be able to click Date Filter Submit Button in Return Page","*TC-075 - User should be able to click Date Filter Clear Button in Return Page","*TC-076 - User should be able to click Search Box in Return Page","*TC-077 - User should be able to Input Text in Search Box in Return Page","*TC-078 - User should be able to click clear button from Search Box in Return Page","*TC-079 - User should be able to Filter by Old to New in Return Page","*TC-080 - User should be able to Filter by New to Old in Return Page","*TC-081 - User should be able to view and click order with Accepted Status in Dealer Return Page","*TC-082 - User should be able to message supplier on order with Accepted Status in Dealer Return Page","*TC-083 - User should be able to view and click order with Declined Status in Dealer Return Page","*TC-084 - User should be able to message supplier on order with Declined Status in Dealer Return Page","*TC-085 - User should be able to view and click order with In Progress Status in Dealer Return Page","*TC-086 - User should be able to message supplier on order with In Progress Status in Dealer Return Page","*TC-089 - User should be able to view New Reg Req Panel","*New Reg Req","*TC-090 - User should be able to filter status by Rejected in Dealer New Registration Request","*TC-091 - User should be able to filter status by Approved in Dealer New Registration Request","*TC-092 - User should be able to filter status by In Progress in Dealer New Registration Request","*TC-093 - User should be able to filter status by All in Dealer New Registration Request","*TC-095 - User should be able to view and click Registration Request with Approved Status in Dealer New Registration Request Page","*TC-096 - User should be able to view and click Registration Request with Rejected Status in Dealer New Registration Request Page","*Element '//span[@class='label-content'][contains(text(),'ABN')]' not visible after 10 seconds.","*TC-097 - User should be able to view Buyer Rel Page","*Cust Rel","*TC-098 - User should be able to Click No Check/Uncheck Status","*TC-099 - User should be able to Click Yes Check/Uncheck Status","*TC-100 - User should be able to view message page","*Messages","*TC-101 - User should be able to select General Enquiry filter in Dealer Messages Page","*TC-102 - User should be able to select Return Enquiry filter in Dealer Messages Page","*TC-103 - User should be able to select Order Enquiry filter in Dealer Messages Page","*TC-104 - User should be able to select Product Enquiry filter in Dealer Messages Page","*TC-105 - User should be able to select All filter in Dealer Messages Page","*TC-106 - User should be able to view Date Filter Elements in Dealer Messages Page","*TC-107 - User should be able to click Previous Month Button in Dealer Messages Page","*TC-108 - User should be able to click Previous Month Button in Dealer Messages Page","*TC-109 - User should be able to select month from drop down in Dealer Messages Page","*TC-110 - User should be able to select year from drop down in Dealer Messages Page","*TC-111 - User should be able to select From Date in Dealer Messages Page","*TC-112 - User should be able to select To Date in Dealer Messages Page","*TC-113 - User should be able to click Date Filter Submit Button in Dealer Messages Page","*TC-114 - User should be able to click Date Filter Clear Button in Dealer Messages Page","*TC-115 - User should be able to click Search Box in Dealer Messages Page","*TC-116 - User should be able to Input Text in Search Box in Dealer Messages Page","*TC-117 - User should be able to click clear button from Search Box in Dealer Messages Page","*TC-118 - User should be able to click and send message on read General Enquiry in Dealer Message Page","*TC-119 - User should be able to click and send message on read Order Enquiry in Dealer Message Page","*TC-120 - User should be able to click and send message on read Return Enquiry in Dealer Message Page","*TC-121 - User should be able to click and send message on read Product Enquiry in Dealer Message Page","*TC-122 - User should be able to click and send message on unread General Enquiry in Dealer Message Page","*TC-123 - User should be able to click and send message on unread Order Enquiry in Dealer Message Page","*TC-124 - User should be able to click and send message on unread Return Enquiry in Dealer Message Page","*TC-125 - User should be able to click and send message on unread Product Enquiry in Dealer Message Page","*TC-126 - User should be able to view account details page","*Acc Details","*TC-127 - User should be able to edit First name in Dealer Account Details Page","*TC-128 - User should be able to edit Last name in Dealer Account Details Page","*TC-129 - User should be able to edit Phone Number in Dealer Account Details Page","*TC-130 - User should be able to edit Landline Number in Dealer Account Details Page","*TC-131 - User should be able to click Update in Dealer Account Details Page","*TC-132 - User should be able to view update confirmation modal in Dealer Account Details Page","*TC-133 - User should be able to click Cancel in Dealer Account Details Page","*TC-134 - User should be able to view invalid phone number error in Dealer Account Details Page","*TC-135 - User should be able to view invalid landline number error in Dealer Account Details Page","*TC-136 - User should be able to view change password page","*Change Pass","*TC-137 - User should be ablle to edit current password in Dealer Change Pass Page","*TC-138 - User should be ablle to edit new password in Dealer Change Pass Page","*TC-139 - User should be ablle to edit confirm password in Dealer Change Pass Page","*TC-140 - User should be able to click Update button in Dealer Change Pass Page","*TC-141 - User should be able to view update confirmation modal in Dealer Change Pass Page","*TC-142 - User should be able to view current pass required error in Dealer Change Pass Page","*TC-143 - User should be able to view new pass required error in Dealer Change Pass Page","*TC-144 - User should be able to view confirm pass required error in Dealer Change Pass Page","*TC-145 - User should be able to view new pass not match error in Dealer Change Pass Page","*TC-146 - User should be able to view confirm pass not match error in Dealer Change Pass Page","*TC-147 - User should be able to view company details page","*Comp Details","*TC-148 - User should be able to input and save company details in Dealer Company Details Page","*TC-150 - User should be able to view staff page","*Staff","*TC-151 - User should be able to click add new staff in Dealer Staff Page","*TC-152 - User should be able to click active checkbox at add new staff in Dealer Staff Page","*TC-153 - User should be able to click cancel add new staff in Dealer Staff Page","*TC-154 - User should be able to click and edit staff button in Dealer Staff Page","*TC-156 - User should be able to view settings page","*Settings","*TC-190 - User should be able to Logout"]);
+window.output["strings"] = window.output["strings"].concat(["*","*AU Regression Dealer","*C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Dealer\\AU_TC\\S2\\AU_Regression_Dealer.robot","*AU_Regression_Dealer.robot","*<p>Suite description\x3c/p>","*Test Setup","*Screen Shot DIR","*TC-001 - Verify Login Page","*Login Page","*TC-002 - Verify Login Page Elements","*TC-003 - Input Invalid Username","*TC-004 - Input Invalid Password","*TC-005 - Login Invalid Email and Pass","*TC-006 - User should be able to check/uncheck Remember me","*TC-007 - User should be able to Click Forgot Password","*Forgot Password","*TC-008 - User should be able to view Reset Password Page","*TC-009 - User should be able to view email error messsage in Dealer Reset Password Page","*TC-010 - User should be able input valid email in Dealer Reset Password Page","*TC-011 - User should be able to click submit button in Dealer Reset Password Page","*TC-012 - Input Valid Username","*TC-013 - Input Valid Password","*TC-014 - User should be able to click Login Button","*TC-015 - Verify Home Page Elements","*Home Page","*TC-016 - User should be able to view top navigation","*Top Navigation","*TC-017 - User should be able to click account from top navigation","*TC-018 - User should be able to click orders from top navigation","*TC-019 - User should be able to click return from top navigation","*TC-020 - User should be able to click new buyer from top navigation","*TC-021 - User should be able to click messages from top navigation","*TC-022 - User should be able to click orders from left navigation","*Left Navigation","*TC-023 - User should be able to click Return from left navigation","*TC-024 - User should be able to click and expand Customer Management","*TC-025 - User should be able to click Customer Manegement - New Reg from left navigation","*TC-026 - User should be able to click Customer Manegement - Buyer Rel from left navigation","*TC-027 - User should be able to click Messages from left navigation","*TC-028 - User should be able to click and expand Profile","*TC-029 - User should be able to click Profile - Account Details from left navigation","*TC-030 - User should be able to click Profile - Change Pass from left navigation","*TC-031 - User should be able to click and expand Company","*TC-032 - User should be able to click Company - Company Details from left navigation","*TC-033 - User should be able to click Company - Staff Pass from left navigation","*TC-034 - User should be able to click Settings from left navigation","*TC-035 - User should be able to view Cutomer Orders Panel","*Orders Page","*TC-036 - User should be able to filter status by Received in Order Page","*TC-037 - User should be able to filter status by Submitted in Order Page","*TC-038 - User should be able to filter status by Dispatched in Order Page","*TC-039 - User should be able to filter status by Dispatched in Order Page","*TC-040 - User should be able to filter status by Order with Returns in Order Page","*TC-041 - User should be able to filter status by ALL in Order Page","*TC-042 - User should be able to view Date Filter Elements in Order Page","*TC-043 - User should be able to click Previous Month Button in Order Page","*TC-044 - User should be able to click Next Month Button in Order Page","*TC-045 - User should be able to select month from drop down in Order Page","*TC-046 - User should be able to select year from drop down in Order Page","*TC-047 - User should be able to select From Date in Order Page","*TC-048 - User should be able to select To Date in Order Page","*TC-049 - User should be able to click Date Filter Submit Button in Order Page","*TC-050 - User should be able to click Date Filter Clear Button in Order Page","*TC-051 - User should be able to click Search Box in Order Page","*TC-052 - User should be able to Input Text in Search Box in Order Page","*TC-053 - User should be able to click clear button from Search Box in Order Page","*TC-054 - User should be able to Filter by Order Number in Order Page","*TC-055 - User should be able to Filter by Old to New in Order Page","*TC-056 - User should be able to Filter by New to Old in Order Page","*TC-057 - User should be able to view and click order with Recieved Status in Dealer Orders Page","*TC-058 - User should be able to view and click order with Submitted Status in Dealer Orders Page","eNqN0z1vnTAUBuA5/AqLKdFtr46PbQxIHcBAu7RD04+hykDgpKB7L46M26SK+t/rpMqQxWSyLD+8to5evtN14+bf5Nr7gW79bJeSfaR17X9SyX4th8XeLYycs+5xO/XLeKSRzct6S4O37vnoIR3sSGn5ViAAvElP/yPSMjX9sljPfH8gtg6OaFmnsL+b/cQgLKOf9unfhLHzy/BNuD+E39iSDZOzJ3rHEfewzzDje87FRXLp++HgXT9QmZy9J//h6UXfyM03Mzn2A+7D/aC7TkulO9VK3Akl8kzLq+Ts/JNl65/TtT1evJSSSwMYE2hU1dZRUQtdmbjgouMbolVdVDTI66gQUIGuogI7qOICOMqtDDQQFbJuWhHPaFsVFdh1isv4SyETjzPd6EKOmamandAiL7R4hddGQbaTkBeo4TVe5iiCVxqLYtsrqYwsdhrDpKOVkMgx6+LlNQI26m2kiNZbQt1EMqpW1waVboL47I9fV3JfJkf9GH5H51/AHGRVqTxM4ir5B7reNcY=","*TC-059 - User should be able to view and click order with Dispatched Status in Dealer Orders Page","*TC-060 - User should be able to view and click order with Partially Dispatched Status in Dealer Orders Page","*TC-061 - User should be able to view and click order with Orders with Returns Status in Dealer Orders Page","*TC-062 - User should be able to view Return Request Panel","*Return Page","*TC-063 - User should be able to filter status by In Progress in Return Page","*TC-064 - User should be able to filter status by Declined in Return Page","*TC-065 - User should be able to filter status by Accepted in Return Page","*TC-066 - User should be able to filter status by ALL in Return Page","*TC-067 - User should be able to view Date Filter Elements in Return Page","*TC-068 - User should be able to click Previous Month Button in Return Page","*TC-069 - User should be able to click Next Month Button in Return Page","*TC-070 - User should be able to select month from drop down in Return Page","*TC-071 - User should be able to select year from drop down in Return Page","*TC-072 - User should be able to select From Date in Return Page","*TC-073 - User should be able to select To Date in Return Page","*TC-074 - User should be able to click Date Filter Submit Button in Return Page","*TC-075 - User should be able to click Date Filter Clear Button in Return Page","*TC-076 - User should be able to click Search Box in Return Page","*TC-077 - User should be able to Input Text in Search Box in Return Page","*TC-078 - User should be able to click clear button from Search Box in Return Page","*TC-079 - User should be able to Filter by Old to New in Return Page","*TC-080 - User should be able to Filter by New to Old in Return Page","*TC-081 - User should be able to view and click order with Accepted Status in Dealer Return Page","*TC-082 - User should be able to message supplier on order with Accepted Status in Dealer Return Page","eNq1lMFOGzEQhu95Ct+cSDXLpgXaSpHgwBNwXO1h1p6AVdsTPOM0SH34OlAiIlR2QeKwXh9mv/n1zz97g1vMENQafCgZWZG1JWd0P2ezdqGuA0ZMonTTQHcJ2YMJMGBY6YQ7URu4Rd1rlUjU1rMfAipYC2bVnipGS8nxyWy2fAGaN43k7qSerru0AZhX2u5MRik51dd9QRY2QlJVsYAUNpaC2UIoqBUkpypWwCeeS9UwX3zRV9biRtDpRd+PgS25KrmBRdf2f6oY57eH8ky/1b/6fY+qV/d7qbWmaXgDqRtp/RJWRT/3GTXo65HTQxGhdAANklR9DBUJPqF5+gzywwTnv00Bc/ww/+yzhJ8fgY983RnnIdCtGcg9qEgOwuN1AvXi/9QaMY6mXep9gupwIWNN/Jpy3M88U0gQcaUjMk8L/fcxa3ysIFM2gcBN4P14xygPTqsYzHICvD19y+8njw8rMU579ed4lgn2V11tQ9lhNneehSak4S/UfJQd","*TC-083 - User should be able to view and click order with Declined Status in Dealer Return Page","eNrNT7sOwjAM3PsV3tJKBFrYkJAY4AsYUYeQGIjkJlWcVnw+CY+hCImVxWed7s6+A44YFMFZWRoCMnithxDQrIuiqWBP2KGLIBYLY8fjVpNi3gjtSTYNZOiMXEEfJF1knbHJI5EJKTNPhQAfYOKuH27u3ttnTv09p50+4i6SkVBHqb2LyjoMkLirYjkqGlC0ApyPMFq2J0JQ55gU6SRjMhieF8Xyj1sGT7gRvo/Wu0xyr9zx1ZTLiLdYVjOxQ02puRHVr7Z3MO+dFw==","*TC-084 - User should be able to message supplier on order with Declined Status in Dealer Return Page","*TC-085 - User should be able to view and click order with In Progress Status in Dealer Return Page","*TC-086 - User should be able to message supplier on order with In Progress Status in Dealer Return Page","*TC-089 - User should be able to view New Reg Req Panel","*New Reg Req","*TC-090 - User should be able to filter status by Rejected in Dealer New Registration Request","*TC-091 - User should be able to filter status by Approved in Dealer New Registration Request","*TC-092 - User should be able to filter status by In Progress in Dealer New Registration Request","*TC-093 - User should be able to filter status by All in Dealer New Registration Request","*TC-095 - User should be able to view and click Registration Request with Approved Status in Dealer New Registration Request Page","*TC-096 - User should be able to view and click Registration Request with Rejected Status in Dealer New Registration Request Page","*TC-097 - User should be able to view Buyer Rel Page","*Cust Rel","*TC-098 - User should be able to Click No Check/Uncheck Status","*TC-099 - User should be able to Click Yes Check/Uncheck Status","*TC-100 - User should be able to view message page","*Messages","*TC-101 - User should be able to select General Enquiry filter in Dealer Messages Page","*TC-102 - User should be able to select Return Enquiry filter in Dealer Messages Page","*TC-103 - User should be able to select Order Enquiry filter in Dealer Messages Page","*TC-104 - User should be able to select Product Enquiry filter in Dealer Messages Page","*TC-105 - User should be able to select All filter in Dealer Messages Page","*TC-106 - User should be able to view Date Filter Elements in Dealer Messages Page","*TC-107 - User should be able to click Previous Month Button in Dealer Messages Page","*TC-108 - User should be able to click Previous Month Button in Dealer Messages Page","*TC-109 - User should be able to select month from drop down in Dealer Messages Page","*TC-110 - User should be able to select year from drop down in Dealer Messages Page","*TC-111 - User should be able to select From Date in Dealer Messages Page","*TC-112 - User should be able to select To Date in Dealer Messages Page","*TC-113 - User should be able to click Date Filter Submit Button in Dealer Messages Page","*TC-114 - User should be able to click Date Filter Clear Button in Dealer Messages Page","*TC-115 - User should be able to click Search Box in Dealer Messages Page","*TC-116 - User should be able to Input Text in Search Box in Dealer Messages Page","*TC-117 - User should be able to click clear button from Search Box in Dealer Messages Page","*TC-118 - User should be able to click and send message on read General Enquiry in Dealer Message Page","*TC-119 - User should be able to click and send message on read Order Enquiry in Dealer Message Page","*TC-120 - User should be able to click and send message on read Return Enquiry in Dealer Message Page","*TC-121 - User should be able to click and send message on read Product Enquiry in Dealer Message Page","*TC-122 - User should be able to click and send message on unread General Enquiry in Dealer Message Page","eNqtklFLwzAQx9/7Ke4tK9jVqVMRChMpIsjAyR6k9OHaXjWYJiW5bvrtTbHTDYfzwceQu9/9/pc80oosKqhRqs6SA1OWnbVUXQXBJIRUUUOaQcQxZjO0EiOFBalEaHpjaPGZRC5AG4aVdLJQBFgzWZgcg6PS6MqNg+BkCzSK40quslmp0LlEWLOGhpzzoMiXM0rtuz0vsoSVyLNxHLsWdTZcuhH7waPwSNym83RxfQ/p/GF5t3gSYZ4PpRs2v7f0BWf0clHfLPIwmxyWPt1J3zeiV8pmtbFNL2ON0thQIoYJf9jD2Q6y6JiNt+01E/F58oF/BL1BXZLy+fbxp1v46f8bn+81HvZbsAbZ9MvtWmX61zrIu/hlA64rGsniYMzLb8Za8gsoUyIbO/zRjRuWrxGbaIjqNtjadLoafwDVMgEz","*TC-123 - User should be able to click and send message on unread Order Enquiry in Dealer Message Page","eNqtVE1v2kAQPce/YsQhBjX+toEQIYUS0+bQRE3UShXyYW0PYZW1F60XQv59ZwPkQ43Mpb5Yq3375s3se3uPG1RMwIJxsVbYgCyKtVJYjiwr6EEqsMJaTwUvHq9rjarAlcYy3Zo/l/UIfmDTsAccAe6gUBgs8Dfw6MACp0JfMAKwphl3atxqKHnDcoFlBzTLeV3idtxxgg4wxZkjWI5iD1xRjQ4sFS7GHa9crUpkApVXPTusKOS61l61E9J0Th/0heu6ppjHzAJ4A7XcKzPlgBGhJInQDfwgPIP+sN9z4VYvUb328STXogSFBfINAm3tzo9euij55tCHUebUbMMfmJnIh/IEM0sLoHtP8mibBrOQIyiWSlY4DsLQ9d1+2A/cIIh61r1mxaNWrMCRdfIN9XdWlwJ/o+ILTtLm/tanbzCbDeJkMEvSOPwSJdGwP4gz66R7I6F5rnIpeh+RcRBP/bANEU6TSfq1DREFUZTG7YiA2mlF+Olw2M7hXyWT83ZEcJ74rYhw5k8mRzjCeHKEI5y2V4m/XqVRRjcLMD+EAApJtifvSArVi2UEr7iGJWsgR6zJTRVtlS5klmWFr/ECu+sZr8wvd56ylXyCvZ8dw8l4TYTkYUchK+1s7npes2L1fL/ZdDWFpNs7s2/vrtI7SG9+/rq++2P3smwPPDDr5xW+UmsTBscctbPePMjsl5hseMNfQrKgCEPgQ4NUpmxcy4reSfY8c5CRoPnlQqrKSFFS1Ix8be8r2Mcp4w+U+VprSWqNzLG9W1G7/7Q5ZXWBgvr7jD95R5/8f8X9TxXv55trinhlhrteCWnu6ijfoGUCzTonA9lH2xy+cTxxvQQhC6alMoTsTRs9Lo6WzuGlPNAu6P0s3b8ybuqe","*TC-124 - User should be able to click and send message on unread Return Enquiry in Dealer Message Page","eNqtVE1v2kAQPde/YsQhBjU2trGBECGFEtPm0FRNmkoV4rDYQ7Cy9lq7ayD/vrN8JKBG5lJfkJk3b94M7/GIK5SMw4JlvJKoQCRJJSWmA8vyWxBzzLHQY54lL3eFRplgqTGNN+YzE8UAvqNS7BkHgDsoJAYL2Tt4cGCBC66v02xFEKbUsFE8O4q6Eu0kotAsK1ACfbdkylkxXmHj4llfu65r2trUZ14hU1CI/RQ25whMQyloHDS7oX8JQdhy4YdeEtdB0VpUPAWJCWYrBCrtugdbPcnGKUm/w9mrqDQokkN7DRtLZCnKW2QcZeOgOHUWHDeQlmW6LYBairWTonrRooSTlmPtpzNMxQJoPtLlaBSdaiEGkCylyHHoB4Hrud2g67u+32lZj5olL1qyBAfWp6+ov7Ei5fgbZbbIaP7U23j09CaTXhj1JlEcBp87Uaff7YUz61PzXoB6zeeCt06RoR+OvaAOEYyjUfylDtHxO504rEf4tE4twov7/XoO7zYaXdUj/KvIq0UEE280OsMRhKMzHMGYpgA904PpwfjWOExQiLbG4lmeaSAHwxyxIM/lVEpdmFmW1XmLE9jNtjH09GbnK1uKNeQ7zuMsCO1I8pQ9m7rttipZMd0XVVPjRjdbl/ZD/Ovp4R7i+59Pdw9/7NZstkceqPVriW/c2iTGMb32rDX1Z/Y2S6tMZdskLSiz4HsmBKJIlWtZ4ZHmdts0MlI0vVkImRstUvCCkW3t/QT7PGV0QjmvtBak1sgc2rs32vefPcesSJDTfh/xR0f03f+vuPeh4v1955oSnJvjViUX5sc6y9evuYCq5uQg++yaV+8c60wvgYuEaSENIXvXRv8djhbOflV1oF2Iqkjdvxz06xQ=","*TC-125 - User should be able to click and send message on unread Product Enquiry in Dealer Message Page","eNqtVE1v2kAQPce/YsQhBjX+toEQIYUQ0+bQpE2aShXyYbGHsMrai9YLIf++swHyoUbmUl+s1b5982b2vb3DNSomYM64WCmsQeb5SiksBpYVdCAVWGKlx4Lnj1eVRpXjUmORbsyfy2oA37Gu2QMOALdQyA0W+Bt4sGeBY6HPGAFYXQ9bFW40FLxmM4FFCzSb8arAzbDlBC1gijNHsBmKHXBJNVqwUDgftrxiuSyQCVRe+eywPJerSnvlVkjdOn7QZ67rmmIeMwvgNVRyp8yUA0aEkiRC+7TXP4Fuv9tx4UYvUL228SRXogCFOfI1Am1tjw9emij4et+GEeZUbM0fmBnIh+oEM0sLoH1H6mib5jKXA8gXSpY4DMLQ9d1u2A3cIIg61p1m+aNWLMeBdfQV9TdWFQJ/o+JzTtKm/sanrzeZ9OKkN0nSOPwSJVG/24sz66h9LaF+LmdSdD4i4yAe+2ETIhwno/SiCREFUZTGzYiA2mlE+Gm/38zhXyaj02ZEcJr4jYhw4o9GBzjCeHSAIxw3V4kvLtMoo5sFmO4zALkk15N3JGXqxTKCl1zDgtUwQ6zITSVtFS5klmWFr+kCu+0Zr0zPt56ylXyCnZ0dw8l4RYRkYUchK+xs6npevWTVdLdZtzVlpN05sX/c3lzej39Bev3z/ur2j93Jsh10z62fl/hKrk0aHHPYzjrTILNfcrLmNX9JyZwyDIEPNVKhonYtK3on2vPMQUaSpudzqUojRklRMXK2vatgH6aMP1DOVlpLUmtkDu3tihr+p9Exq3IU1N9n/Mk7+uT/K+5+qng335mmkJdmuKulkOa2DvL1GiZQr2ZkIftgm/03jieuFyBkzrRUhpC9aaPnxdHS2T+Ve9o5PaCF+xcNpesn","*TC-126 - User should be able to view account details page","*Acc Details","*TC-127 - User should be able to edit First name in Dealer Account Details Page","*TC-128 - User should be able to edit Last name in Dealer Account Details Page","*TC-129 - User should be able to edit Phone Number in Dealer Account Details Page","*TC-130 - User should be able to edit Landline Number in Dealer Account Details Page","*TC-131 - User should be able to click Update in Dealer Account Details Page","*TC-132 - User should be able to view update confirmation modal in Dealer Account Details Page","eNqFjr0KAjEQhPs8xXbBIsY7sBEEG5/AUq7IzyrBveyRbA7v7RUP7MRi4CuGb+aCMxZHcHOJWsEKHEIrBeNBqW4DZ8IRs4C2Nqb5egrkaj3q8DQxOeK78RwXGDk6WnESs9eDhswCc6rJE4K7CRbodlAxcI51q1T/W81k6mi6HoI4mBbT68Fa30Q4f0teMrxjPHF4fIibUMpo1glXlr8nXowdVTM=","*TC-133 - User should be able to click Cancel in Dealer Account Details Page","*TC-134 - User should be able to view invalid phone number error in Dealer Account Details Page","*TC-135 - User should be able to view invalid landline number error in Dealer Account Details Page","*TC-136 - User should be able to view change password page","*Change Pass","*TC-137 - User should be ablle to edit current password in Dealer Change Pass Page","*TC-138 - User should be ablle to edit new password in Dealer Change Pass Page","*TC-139 - User should be ablle to edit confirm password in Dealer Change Pass Page","*TC-140 - User should be able to click Update button in Dealer Change Pass Page","*TC-141 - User should be able to view update confirmation modal in Dealer Change Pass Page","*TC-142 - User should be able to view current pass required error in Dealer Change Pass Page","*TC-143 - User should be able to view new pass required error in Dealer Change Pass Page","*TC-144 - User should be able to view confirm pass required error in Dealer Change Pass Page","*TC-145 - User should be able to view new pass not match error in Dealer Change Pass Page","*TC-146 - User should be able to view confirm pass not match error in Dealer Change Pass Page","*TC-147 - User should be able to view company details page","*Comp Details","*TC-148 - User should be able to input and save company details in Dealer Company Details Page","*TC-150 - User should be able to view staff page","*Staff","*TC-151 - User should be able to click add new staff in Dealer Staff Page","*TC-152 - User should be able to click active checkbox at add new staff in Dealer Staff Page","*TC-153 - User should be able to click cancel add new staff in Dealer Staff Page","*TC-154 - User should be able to click and edit staff button in Dealer Staff Page","*TC-156 - User should be able to view settings page","*Settings","*TC-190 - User should be able to Logout"]);
 </script>
 <script type="text/javascript">
-window.output["stats"] = [[{"elapsed":"00:18:35","fail":2,"label":"All Tests","pass":152,"skip":0}],[{"elapsed":"00:00:35","fail":0,"label":"Acc Details","pass":10,"skip":0},{"elapsed":"00:00:39","fail":0,"label":"Change Pass","pass":11,"skip":0},{"elapsed":"00:01:15","fail":0,"label":"Comp Details","pass":2,"skip":0},{"elapsed":"00:00:16","fail":0,"label":"Cust Rel","pass":3,"skip":0},{"elapsed":"00:00:19","fail":0,"label":"Forgot Password","pass":5,"skip":0},{"elapsed":"00:17:49","fail":2,"label":"Home Page","pass":136,"skip":0},{"elapsed":"00:01:14","fail":0,"label":"Left Navigation","pass":13,"skip":0},{"elapsed":"00:00:42","fail":0,"label":"Login Page","pass":14,"skip":0},{"elapsed":"00:04:24","fail":0,"label":"Messages","pass":26,"skip":0},{"elapsed":"00:01:07","fail":1,"label":"New Reg Req","pass":6,"skip":0},{"elapsed":"00:03:38","fail":1,"label":"Orders Page","pass":26,"skip":0},{"elapsed":"00:03:21","fail":0,"label":"Return Page","pass":25,"skip":0},{"elapsed":"00:00:12","fail":0,"label":"Settings","pass":2,"skip":0},{"elapsed":"00:00:32","fail":0,"label":"Staff","pass":5,"skip":0},{"elapsed":"00:00:26","fail":0,"label":"Top Navigation","pass":6,"skip":0}],[{"elapsed":"00:18:36","fail":2,"id":"s1","label":"AU egression Dealer","name":"AU egression Dealer","pass":152,"skip":0}]];
+window.output["stats"] = [[{"elapsed":"00:24:03","fail":8,"label":"All Tests","pass":146,"skip":0}],[{"elapsed":"00:00:51","fail":1,"label":"Acc Details","pass":9,"skip":0},{"elapsed":"00:00:39","fail":0,"label":"Change Pass","pass":11,"skip":0},{"elapsed":"00:01:15","fail":0,"label":"Comp Details","pass":2,"skip":0},{"elapsed":"00:00:17","fail":0,"label":"Cust Rel","pass":3,"skip":0},{"elapsed":"00:00:19","fail":0,"label":"Forgot Password","pass":5,"skip":0},{"elapsed":"00:23:15","fail":8,"label":"Home Page","pass":130,"skip":0},{"elapsed":"00:01:14","fail":0,"label":"Left Navigation","pass":13,"skip":0},{"elapsed":"00:00:42","fail":0,"label":"Login Page","pass":14,"skip":0},{"elapsed":"00:07:22","fail":4,"label":"Messages","pass":22,"skip":0},{"elapsed":"00:01:01","fail":0,"label":"New Reg Req","pass":7,"skip":0},{"elapsed":"00:03:53","fail":1,"label":"Orders Page","pass":26,"skip":0},{"elapsed":"00:05:23","fail":2,"label":"Return Page","pass":23,"skip":0},{"elapsed":"00:00:12","fail":0,"label":"Settings","pass":2,"skip":0},{"elapsed":"00:00:33","fail":0,"label":"Staff","pass":5,"skip":0},{"elapsed":"00:00:26","fail":0,"label":"Top Navigation","pass":6,"skip":0}],[{"elapsed":"00:24:04","fail":8,"id":"s1","label":"AU Regression Dealer","name":"AU Regression Dealer","pass":146,"skip":0}]];
 </script>
 <script type="text/javascript">
-window.output["baseMillis"] = 1708339900133;
+window.output["baseMillis"] = 1710318090303;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 1115748;
+window.output["generated"] = 1443966;
 </script>
 <script type="text/javascript">
 window.output["expand_keywords"] = null;
@@ -1654,7 +1922,7 @@ window.settings = {"background":{"fail":"#f66","pass":"#9e9","skip":"#fed84f"},"
 </script>
 <title></title>
 </head>
-<body>
+<body data-theme="dark">
 <div id="javascript-disabled">
   <h1>Opening Robot Framework report failed</h1>
   <ul>
@@ -1664,13 +1932,15 @@ window.settings = {"background":{"fail":"#f66","pass":"#9e9","skip":"#fed84f"},"
   </ul>
 </div>
 <script type="text/javascript">removeJavaScriptDisabledWarning();</script>
-
+<div id="status-bar"></div>
 <div id="header"></div>
 <div id="statistics-container"></div>
 <div id="test-details-container"></div>
 
 <script type="text/javascript">
 $(document).ready(function () {
+    storage.init();
+    theme.init(storage);
     try {
         var topsuite = window.testdata.suite();
     } catch (error) {
@@ -1678,24 +1948,37 @@ $(document).ready(function () {
         return;
     }
     window.prevLocationHash = '';
-    setBackground(topsuite);
     initLayout(topsuite.name, 'Report');
-    storage.init('report');
+    setStatusColor(topsuite);
     addSummary(topsuite);
     addStatistics();
     addDetails();
     window.onhashchange = showDetailsByHash;
+    document.addEventListener("theme-change", () => {
+        setStatusColor(topsuite);
+    });
 });
 
-function setBackground(topsuite) {
+function setStatusColor(topsuite) {
     var color;
-    if (topsuite.fail)
+    let fail = Boolean(topsuite.fail);
+    let pass = Boolean(!topsuite.fail && topsuite.pass);
+    let skip = Boolean(!topsuite.fail && !topsuite.pass);
+    if (theme.getPreference() === 'dark') {
+        $('#status-bar').toggleClass("fail-bar", fail);
+        $('#status-bar').toggleClass("pass-bar", pass);
+        $('#status-bar').toggleClass("skip-bar", skip);
+        $('body').css('background-color', "#1c2227");
+        return;
+    }
+    if (fail)
         color = window.settings.background.fail;
-    else if (topsuite.pass)
+    else if (pass)
         color = window.settings.background.pass;
     else
         color = window.settings.background.skip;
     $('body').css('background-color', color);
+    $('#status-bar').toggleClass("fail-bar pass-bar skip-bar", false);
 }
 
 function addSummary(topsuite) {
