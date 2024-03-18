@@ -1005,9 +1005,10 @@ ${Retail_AccountOrderPageArrangeFilterOrderNum}    //cx-sorting//div[@role='opti
 ${Retail_AccountOrderPageNoOrdersMessage}    //div[@class='noOrders']
 
 ${Retail_AccountOrderPageStartShoppingButton}    //a[@class='btn btn-primary btn-block start-shopping active']
+#__________________________________________________________________AU___________________________________________________
 
 ${Retail_AccountOrderPageDetailsColumn}    //thead
-${Retail_AccountOrderPageDetailsPartslaneRefLabel}    //th[@class='partslane-reference']
+${Retail_AccountOrderPageDetailsPartslaneRefLabel}   //th[@class='partslane-reference']//span[contains(text(),'PartsLane')]
 ${Retail_AccountOrderPageDetailsCustOrdNumLabel}    //th[@class='your-reference']
 ${Retail_AccountOrderPageDetailsCustRefLabel}    //th[@class='supplier-reference']
 ${Retail_AccountOrderPageDetailsCustAccNumLabel}    //th[@class='supplier']
@@ -1016,6 +1017,22 @@ ${Retail_AccountOrderPageDetailsOrderDateLabel}    //th[@class='order-date']
 ${Retail_AccountOrderPageDetailsTotalLabel}    //th[@class='total']
 ${Retail_AccountOrderPageDetailsStatusLabel}    //th[@class='status']
 ${Retail_AccountOrderPageDetailsReturnLabel}    //th[@class='return-icon']
+
+#__________________________________________________________________HK___________________________________________________
+${Retail_HK_AccountOrderPageDetailsColumn}    //thead
+${Retail_HK_AccountOrderPageDetailsPartslaneRefLabel}   //th[@class='partslane-reference']//span[contains(text(),'PartsLane')]
+${Retail_HK_AccountOrderPageDetailsCustAccNumLabel}    //th[@class='company-supplier-name']//span[contains(text(),'Supplier')]
+${Retail_HK_AccountOrderPageDetailsOrderDateLabel}    //th[@class='order-date']//span[contains(text(),'Order')]
+${Retail_HK_AccountOrderPageDetailsDeliveryMethod}    //th[@class='delivery-method']//span[contains(text(),'Delivery Method')]
+${Retail_HK_AccountOrderPageDetailsPaymentMethod}     //th[@class='payment-method']//span[contains(text(),'Payment')]
+${Retail_HK_AccountOrderPageDetailsTotalLabel}    //th[@class='total']//span[contains(text(),'Total')]
+${Retail_HK_AccountOrderPageDetailsStatusLabel}    //th[@class='status']//span[contains(text(),'Order Status')]
+${Retail_HK_AccountOrderPageDetailsReturnLabel}    //th[@class='return-icon']//span[contains(text(),'Returns')]
+${Retail_HK_AccountOrderPageDetailsSupplierLabel}   //thead//span[contains(text(),'Supplier')]
+
+${Retail_HK_AccountOrderPageDetailsReferenceNumber}    (//td[@class='cx-order-history-code'])[1]
+
+#_________________________________________________________________________________________________________________________________________________________________________________________________
 
 ${Retail_AccountOrderPageHistory1}    (//tr//td[@class='cx-order-history-code']//a[@class='cx-order-history-value'])[1]
 
@@ -1107,7 +1124,7 @@ ${Retail_AccountOrderDetailsBillingLabel}    //p[(contains(text(),'Billing Addre
 ${Retail_AccountOrderDetailsOrderSummaryLabel}    //p[(contains(text(),'Order Summary'))]
 ${Retail_AccountOrderDetailsBillingDetailsAndTotal}    //div[@class='row mt-2 content']
 ${Retail_AccountOrderDetailsAddressField}    //p[@class='address-field']
-${Retail_AccountOrderDetailsPriceField}    //div[@class='col-md-4 col-sm-12' or @class='col-md-4 col-sm-12 px-0 px-md-3']
+${Retail_AccountOrderDetailsPriceField}    //div[@class='col-12 col-md-6 col-lg-5 px-0 px-md-3']
 
 ${AccountOrderDetailsNewReturnRequestButton}    //div[@class='mt-3 text-right']//a
 
@@ -1182,6 +1199,63 @@ ${Retail_AccountOrderDetailsReturnRequestNumber}    //div[@class='d-flex mt-3'][
 
 
 ${Retail_AccountOrderDetailsRe-OrderButton}    //dpp-order-detail//div[@class='mt-3 button-container']//button[contains(text(),'Re-Order')]
+
+#-----------------------------------------------------HK Retail Account Order Details Page------------------------------
+
+${HK_Retail_AccountOrderDetailsOrderHeader}    //div[@class='order-header col-12 col-md-9 pl-0' or @class='order-header col-9 pl-0']
+${HK_AccountOrderDetailsOrderStatus}    //span[@class='status-value']
+
+${HK_Retail_AccountOrderDetailsContainer}    //div[@class='order-details-container']
+
+${HK_Retail_AccountOrderDetailsContainerRefNumLabel}    (//div[@class='details']//div[@class='col-4' or @class='col-12 col-md-5'])
+${HK_Retail_AccountOrderDetailsContainerCompanyNameLabel}    (//div[@class='details']//div[@class='col-4' or @class='col-12 col-md-5'])[2]
+${HK_Retail_AccountOrderDetailsContainerSupplierLabel}    (//div[@class='details']//div[@class='col-4' or @class='col-12 col-md-5'])[3]
+${HK_Retail_AccountOrderDetailsContainerOrderDateLabel}    (//div[@class='details']//div[@class='col-4' or @class='col-12 col-md-5'])[4]
+
+${HK_Retail_AccountOrderDetailsBackButton}    //span[contains(text(),'Back to Order History')]
+
+${HK_Retail_AccountOrderDetailsContainerRefNumValue}    (//div[@class='order-details-container']//span)[1]
+${HK_Retail_AccountOrderDetailsContainerCompanyNameValue}    (//div[@class='order-details-container']//span)[2]
+${HK_Retail_AccountOrderDetailsContainerSupplierValue}    (//div[@class='order-details-container']//span)[3]
+${HK_Retail_AccountOrderDetailsContainerOrderDateNumValue}    (//div[@class='order-details-container']//span)[4]
+${HK_Retail_AccountOrderDetailsContainerOrderTimeValue}    (//div[@class='order-details-container']//span)[5]
+
+
+${HK_Retail_AccountOrderDetailsReturnContainer}    //div[@class='order-details-items-table return-order-items']
+
+${HK_Retail_AccountOrderDetailsReturnHeader}    //div[@class='row header return-request-header']
+${HK_Retail_AccountOrderDetailsReturnDescription}    //span[@class='order-table-heading' and (contains(text(),'Description'))]
+${HK_Retail_AccountOrderDetailsReturnPrice}    (//span[@class='order-table-heading' and (contains(text(),'Price'))])[1]
+${HK_Retail_AccountOrderDetailsReturnRRP}    (//span[@class='order-table-heading' and (contains(text(),'Price'))])[2]
+${HK_Retail_AccountOrderDetailsReturnOrder}    //span[@class='order-table-heading' and (contains(text(),'Order'))]
+${HK_Retail_AccountOrderDetailsReturnShipped}    //span[@class='order-table-heading' and (contains(text(),'Shipped'))]
+${HK_Retail_AccountOrderDetailsReturnPending}    //span[@class='order-table-heading' and (contains(text(),'Pending'))]
+${HK_Retail_AccountOrderDetailsReturnTotal}    //span[@class='order-table-heading' and (contains(text(),'Total'))]
+
+${HK_etail_AccountOrderDetailsReturnProductList}    //div[@class='product-list-item return-order-item']
+${HK_Retail_AccountOrderDetailsReturnProductImage}    //div[@class='product-list-item return-order-item'][1]//cx-media
+${HK_Retail_AccountOrderDetailsReturnProductName}    //div[@class='product-list-item return-order-item'][1]//h3
+${HK_Retail_AccountOrderDetailsReturnProductPartNumber}    //div[@class='col-lg-auto pr-lg-0 part-no']
+${HK_Retail_AccountOrderDetailsReturnProductPrice}    //div[@class='product-list-item return-order-item'][1]//div[@class='col text-left pl-0']/span[1]
+${HK_Retail_AccountOrderDetailsReturnProductRRP}    //div[@class='product-list-item return-order-item'][1]//div[@class='col rrp-label text-left pl-0 pr-0']/span[1]
+${HK_Retail_AccountOrderDetailsReturnProductOrderQty}    //div[@class='product-list-item return-order-item'][1]//div[@class='col text-center pl-0 pr-0'][1]/span
+${HK_Retail_AccountOrderDetailsReturnProductShippedQty}    //div[@class='product-list-item return-order-item'][1]//div[@class='col text-center pl-0 pr-0'][2]/span
+${HK_Retail_AccountOrderDetailsReturnProductPendingQty}    //div[@class='product-list-item return-order-item'][1]//div[@class='col text-center pl-0 pr-0'][3]/span
+${HK_Retail_AccountOrderDetailsReturnProductTotal}    //div[@class='product-list-item return-order-item'][1]//div[@class='col text-right']/span[1]
+
+
+${HK_Retail_AccountOrderDetailsBillingContainer}    //div[@class='billing-address-order-summary-container mt-3']
+
+${HK_Retail_AccountOrderDetailsBillingLabel}    //p[(contains(text(),'Billing Address'))]
+${HK_Retail_AccountOrderDetailsOrderSummaryLabel}    //p[(contains(text(),'Order Summary'))]
+${HK_Retail_AccountOrderDetailsBillingDetailsAndTotal}    //div[@class='row mt-2 content']
+${HK_Retail_AccountOrderDetailsAddressField}    //p[@class='address-field']
+${HK_Retail_AccountOrderDetailsSummaryField}    //div[@class='col-12 col-md-6 col-lg-5 px-0 px-md-3']
+${HK_Retail_AccountOrderDetailsDeliveryInstructionField}    //div[@class='col-md-12 col-sm-12 px-0 px-md-3']
+${HK_Retail_AccountOrderDetailsMessageSupplierButton}    //button[@class='btn btn-outline-secondary']
+${HK_Retail_AccountOrderDetailsRe-orderButton}    //button[@class='btn btn-secondary']
+
+
 
 #-----------------------------------------------------Retail Account Retrun Page----------------------------------------
 ${Retail_AccountReturnPagePanelContainer}    //cx-page-slot[@position='BodyContent']

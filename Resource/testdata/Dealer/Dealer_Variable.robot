@@ -165,8 +165,23 @@ ${OrderPageDetailsFirstPageButton}    (//a[@aria-label='first page'])[2]
 ${OrderPageDetailsNextPageButtonDisabled}    //a[@class='next disabled']
 ${OrderPageDetailsPreviousPageButtonDisabled}    //a[@class='previous disabled']
 
+#-----------------------------------------------------HK Dealer Order Page-----------------------------------------
+${Retail_HK_AccountOrderPageDetailsColumn}    //thead
+${Retail_HK_AccountOrderPageDetailsPartslaneRefLabel}   //th[@class='partslane-reference']//span[contains(text(),'PartsLane')]
+${Retail_HK_AccountOrderPageDetailsCustAccNumLabel}    //th[@class='company-supplier-name']//span[contains(text(),'Company')]
+${Retail_HK_AccountOrderPageDetailsOrderDateLabel}    //th[@class='order-date']//span[contains(text(),'Order')]
+${Retail_HK_AccountOrderPageDetailsDeliveryMethod}    //th[@class='delivery-method']//span[contains(text(),'Delivery Method')]
+${Retail_HK_AccountOrderPageDetailsPaymentMethod}     //th[@class='payment-method']//span[contains(text(),'Payment')]
+${Retail_HK_AccountOrderPageDetailsTotalLabel}    //th[@class='total']//span[contains(text(),'Total')]
+${Retail_HK_AccountOrderPageDetailsStatusLabel}    //th[@class='status']//span[contains(text(),'Order Status')]
+${Retail_HK_AccountOrderPageDetailsReturnLabel}    //th[@class='return-icon']//span[contains(text(),'Returns')]
+${Retail_HK_AccountOrderPageDetailsSupplierLabel}   //thead//span[contains(text(),'Supplier')]
 
-#-----------------------------------------------------Dealer Order Details Page-----------------------------------------
+${Retail_HK_AccountOrderPageDetailsReferenceNumber}    (//td[@class='cx-order-history-code'])[1]
+${Retail_AccountpageOrdersMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Orders ')]|//ul[@class='vertical-menu tab-level']//*[contains(text(),' Order History ')]
+${Retail_AccountOrderPagePanelContainer}    //cx-page-slot[@position='BodyContent']
+#-----------------------------------------------------HK Dealer Order Details Page-----------------------------------------
+${OrderPageDetailsReferenceNumber}  (//td[@class='cx-order-history-code'])[1]
 ${OrderDetailsOrderHeader}    //div[@class='order-header col-12 col-md-9 pl-0' or @class='order-header col-9 pl-0']
 ${OrderDetailsOrderStatus}    //span[@class='status-value']
 
@@ -174,38 +189,44 @@ ${OrderDetailsContainer}    //div[@class='order-details-container']
 
 ${OrderDetailsContainerRefNumLabel}    (//div[@class='details']//div[@class='col-12 col-md-5' or @class='col-4'])[1]
 ${OrderDetailsContainerCustNameLabel}    (//div[@class='details']//div[@class='col-12 col-md-5' or @class='col-4'])[2]
-${OrderDetailsContainerCustAccLabel}    (//div[@class='details']//div[@class='col-12 col-md-5' or @class='col-4'])[3]
-${OrderDetailsContainerCustOrderNumLabel}    (//div[@class='details']//div[@class='col-12 col-md-5' or @class='col-4'])[4]
-${OrderDetailsContainerYourRefLabel}    (//div[@class='details']//div[@class='col-12 col-md-5' or @class='col-4'])[5]
-${OrderDetailsContainerOrderDateLabel}    (//div[@class='col-12 col-md-5' or @class='col-4'])[6]
+${OrderDetailsContainerComNameLabel}    (//div[@class='details']//div[@class='col-12 col-md-5' or @class='col-4'])[3]
+${OrderDetailsContainerADPLabel}    (//div[@class='details']//div[@class='col-12 col-md-5' or @class='col-4'])[4]
+${OrderDetailsContainerMembershipLabel}    (//div[@class='details']//div[@class='col-12 col-md-5' or @class='col-4'])[5]
+${OrderDetailsContainerOrderDateLabel}    (//div[@class='details']//div[@class='col-12 col-md-5' or @class='col-4'])[6]
+${OrderDetailsContainerPaymenMethodLabel}    (//div[@class='details']//div[@class='col-12 col-md-5' or @class='col-4'])[7]
+${OrderDetailsContainerDeliveryMethodLabel}    (//div[@class='details']//div[@class='col-12 col-md-5' or @class='col-4'])[8]
+
 
 ${OrderDetailsBackButton}    //span[contains(text(),'Back to Customer Orders')]
 
 ${OrderDetailsContainerRefNumValue}    (//div[@class='order-details-container']//span)[1]
 ${OrderDetailsContainerCustNameValue}    (//div[@class='order-details-container']//span)[2]
-${OrderDetailsContainerCustAccValue}    (//div[@class='order-details-container']//span)[3]
-${OrderDetailsContainerCustOrderNumValue}    (//div[@class='order-details-container']//span)[4]
-${OrderDetailsContainerYourRefValue}    (//div[@class='order-details-container']//span)[5]
+${OrderDetailsContainerComNameValue}    (//div[@class='order-details-container']//span)[3]
+${OrderDetailsContainerADPValue}    (//div[@class='order-details-container']//span)[4]
+${OrderDetailsContainerMembershipValue}    (//div[@class='order-details-container']//span)[5]
 ${OrderDetailsContainerOrderDateValue}    (//div[@class='order-details-container']//span)[6]
+${OrderDetailsContainerPaymenMethodValue}    (//div[@class='col-12 col-md-5' or @class='col-4'])[7]
+${OrderDetailsContainerDeliveryMethodValue}    (//div[@class='col-12 col-md-5' or @class='col-4'])[7]
 
 ${OrderDetailsReturnContainer}    //div[@class='order-details-items-table return-order-items']
 
 ${OrderDetailsReturnHeader}    //div[@class='row header return-request-header']
 ${OrderDetailsReturnDescription}    //span[@class='order-table-heading' and (contains(text(),'Description'))]
-${OrderDetailsReturnPrice}    //span[@class='order-table-heading' and (contains(text(),'Price'))]
-${OrderDetailsReturnRRP}    //span[@class='order-table-heading' and (contains(text(),'RRP') or contains(text(),'Retail Price'))]
+${OrderDetailsReturnPrice}    (//span[@class='order-table-heading' and (contains(text(),'Price'))])[1]
+${OrderDetailsReturnRRP}    //span[@class='order-table-heading' and (contains(text(),'RRP'))]
 ${OrderDetailsReturnOrder}    //span[@class='order-table-heading' and (contains(text(),'Order'))]
 ${OrderDetailsReturnShipped}    //span[@class='order-table-heading' and (contains(text(),'Shipped'))]
 ${OrderDetailsReturnPending}    //span[@class='order-table-heading' and (contains(text(),'Pending'))]
 ${OrderDetailsReturnTotal}    //span[@class='order-table-heading' and (contains(text(),'Total'))]
 
 ${OrderDetailsBillingContainer}    //div[@class='billing-address-order-summary-container mt-3']
-
 ${OrderDetailsBillingLabel}    //p[(contains(text(),'Billing Address'))]
 ${OrderDetailsOrderSummaryLabel}    //p[(contains(text(),'Order Summary'))]
 ${OrderDetailsBillingDetailsAndTotal}    //div[@class='row mt-2 content']
 ${OrderDetailsAddressField}    //p[@class='address-field']
-${OrderDetailsPriceField}    //div[@class='col-md-4 col-sm-12 px-0 px-md-3' or @class='col-md-4 col-sm-12']
+${OrderDetailsSummaryField}    //div[@class='col-12 col-md-6 col-lg-5 px-0 px-md-3']
+${OrderDetailsDeliveryInstructionField}    //div[@class='col-md-12 col-sm-12 px-0 px-md-3']
+
 
 
 #-----------------------------------------------------Dealer Retrun Page------------------------------------------------
