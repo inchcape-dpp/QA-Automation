@@ -4,49 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="Commit Feb 19">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/Keyword/QE MiniSIte/Ty/Minisite_Footer.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/QE MiniSIte/Ty/Minisite_Footer.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Account_Orders_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Account_Orders_Page_Keywords.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/All_Parts_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/All_Parts_Page_Keywords.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Retail_All_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Retail_All_Keywords.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/P1/AU_P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/P1/AU_P1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/D1/HK_D1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/D1/HK_D1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/P1/HK_P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/P1/HK_P1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S1/HK_S1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S1/HK_S1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S2/HK_S2_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S2/HK_S2_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/QE MiniSIte/Ty/Minisite_Footer_Variable.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/QE MiniSIte/Ty/Minisite_Footer_Variable.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/S2/AU_S2_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/S2/AU_S2_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/D1/HK_D1_Bronze_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/D1/HK_D1_Bronze_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/D1/HK_D1_Gold_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/D1/HK_D1_Gold_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/P1/HK_P1_Bronze_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/P1/HK_P1_Bronze_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/P1/HK_P1_Gold_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/P1/HK_P1_Gold_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S1/HK_S1_Bronze_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S1/HK_S1_Bronze_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S1/HK_S1_Gold_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S1/HK_S1_Gold_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S2/HK_S2_Bronze_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S2/HK_S2_Bronze_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S2/HK_S2_Gold_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S2/HK_S2_Gold_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/Retail_Variable.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/Retail_Variable.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/AU_Dealer_Check.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/AU_Dealer_Check.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/S2/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/S2/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/S2/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/S2/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/S2/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/S2/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/D1/HK_EndToEnd_CompleteOrder_Bronze.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/D1/HK_EndToEnd_CompleteOrder_Bronze.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/D1/HK_EndToEnd_CompleteOrder_Gold-SIlver.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/D1/HK_EndToEnd_CompleteOrder_Gold-SIlver.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/D1/HK_EndToEnd_Manual_Search_Vehicle.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/D1/HK_EndToEnd_Manual_Search_Vehicle.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/D1/HK_EndToEnd_PriceCheck_Bronze.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/D1/HK_EndToEnd_PriceCheck_Bronze.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/D1/HK_EndToEnd_Re-Order_Bronze.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/D1/HK_EndToEnd_Re-Order_Bronze.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/D1/HK_EndToEnd_Re-Order_Gold-Silver.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/D1/HK_EndToEnd_Re-Order_Gold-Silver.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/D1/HK_Regression_Bronze.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/D1/HK_Regression_Bronze.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/D1/HK_Regression_Gold.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/D1/HK_Regression_Gold.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/D1/HK_Retail_Check_Bronze.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/D1/HK_Retail_Check_Bronze.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/HK_Regression_Bronze.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/HK_Regression_Bronze.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/HK_Regression_Gold.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/HK_Regression_Gold.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/output.xml" afterDir="false" />
-    </list>
+    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="Commit Feb 19" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,14 +27,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Ty&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Merging Ty",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
