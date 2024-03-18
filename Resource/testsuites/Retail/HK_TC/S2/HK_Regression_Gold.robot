@@ -935,67 +935,6 @@ TC-100 - User should be able to edit staff button in Retail Account Staff Page
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #TC-000000 - TC Sleep
 #    [Tags]    TC-000000   TC Sleep
 #    run keyword and continue on failure    TC Sleep
@@ -1005,9 +944,9 @@ TC-100 - User should be able to edit staff button in Retail Account Staff Page
 #    run keyword and continue on failure    Browse Back Button
 
 
-#TC-000000 - User should be able to logout
-#    [Tags]    TC009    Logout
-#    run keyword and continue on failure    User should be able to logout
+TC-000000 - User should be able to logout
+    [Tags]    TC009    Logout
+    run keyword and continue on failure    User should be able to logout using double header
 #
 #Test Teardown
 #    Run Keywords  Close Browser

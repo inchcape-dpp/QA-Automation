@@ -95,6 +95,19 @@ User should be able to input Landline Number for HK Registration Form
 #-----------------------------------------------------Retail Home Page-------------------------------------------------
 Admin User should be able to Login
 User should be able to view home page
+
+User should be able to view double header in Retail Home page
+User should be able to access Account page using double header in Retail Home page
+User should be able to access Order page using double header in Retail Homepage
+User should be able to access Retrun page using double header in Retail Homepage
+User should be able to access Save carts page using double header in Retail Homepage
+User should be able to access Vehicle Listing page using double header in Retail Homepage
+User should be able to access Inbox page using double header in Retail Homepage
+User should be able to access Account Details page using double header in Retail Homepage
+User should be able to access Change Pass page using double header in Retail Homepage
+User should be able to access Company Details page using double header in Retail Homepage
+User should be able to access Relationship page using double header in Retail Homepage
+
 User should be able to view All products
 User should be able to view shopping cart pop up modal
 User should be able to close shopping cart pop up modal
@@ -148,6 +161,38 @@ User should be able to click shop by category suspension in Retail Home Page
 User should be able to click shop by category all in Retail Home Page
 User should be able to click show all categories in Retail Home Page
 
+User should be able to view Vehicle Search in AU Retail Home Page
+User should be able to click model on manual search in AU Retail Home Page
+User should be able to select model on manual search in AU Retail Home Page
+User should be able to click year on manual search in AU Retail Home Page
+User should be able to select year on manual search in AU Retail Home Page
+User should be able to click series on manual search in AU Retail Home Page
+User should be able to select series on manual search in AU Retail Home Page
+User should be able to click engine on manual search in AU Retail Home Page
+User should be able to select engine on manual search in AU Retail Home Page
+User should be able to click details on manual search in AU Retail Home Page
+User should be able to select details on manual search in AU Retail Home Page
+User shoud be albe to click search this vehicle on manual seearh in AU Retail Home Page
+User should be able to select state in AU Retail Home Page
+User should be able to input rego in AU Retail Home Page
+User should be albe to input vin in AU Retail Home Page
+User should be albe to click search button in AU Retail Home Page
+User should be able to click Select and Save Vehicle button on Search Popup in AU Retail Home Page
+User should be able to click Select Vehicle button on Search Popup in AU Retail Home Page
+User should be able to click Search Again button on Search Popup in AU Retail Home Page
+
+User should be able to click brand on manual search in HK Retail Home Page
+User should be able to select brand on manual search in HK Retail Home Page
+User should be able to click model on manual search in HK Retail Home Page
+User should be able to select model on manual search in HK Retail Home Page
+User should be able to click year on manual search in HK Retail Home Page
+User should be able to select year on manual search in HK Retail Home Page
+User should be able to click variant on manual search in HK Retail Home Page
+User should be able to select variant on manual search in HK Retail Home Page
+User should be able to click model id on manual search in HK Retail Home Page
+User should be able to select model id on manual search in HK Retail Home Page
+User shoud be albe to click search this vehicle on manual seearh in HK Retail Home Page
+
 #-----------------------------------------------------Retail Home Page HK
 User should be able to click shop by category parts & service in HK Retail Home Page
 User should be able to click shop by category paint & panel in HK Retail Home Page
@@ -177,6 +222,13 @@ User should be albe to Click Search VIN in HK Retail Home Page
 User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
 User should be able to click save this vehicle in Pop up Vehicle Search in HK Retail Home Page
 User should be able to click search again in Pop up Vehicle Search in HK Retail Home Page
+
+User should be able to view EPC Search Result Pop Up Modal in HK Retail Home Page
+User should be able to view EPC Search Result Pop Up Modal Elements in HK Retail Home Page
+User should be able to click Show More button in EPC Search Result Pop Up Modal in HK Retail Home Page
+User should be able to click Save and Shop in EPC Search Result Pop Up Modal in HK Retail Home Page
+User should be able to click Shop this vehicle in EPC Search Result Pop Up Modal in HK Retail Home Page
+User should be able to click Search Again in EPC Search Result Pop Up Modal in HK Retail Home Page
 
 #-----------------------------------------------------Retail Search Bar-------------------------------------------------
 User should be able to input text on search bar
@@ -356,6 +408,13 @@ User should be able to click search again in Retail Select Vehicle
 User should be able to click shop this vehicle on vehicle list in Retail Select Vehicle
 User should be able to click shop this vehicle on selected vehicle in Retail Select Vehicle
 User should be able to click clear vehicle on selected vehicle in Retail Select Vehicle
+
+User should be able to view EPC Search Result Drop Down in HK Retail Vehicle Listing Page
+User should be able to view EPC Search Result Drop Down Elements in HK Retail Vehicle Listing Page
+User should be able to click Show More button in EPC Search Result Drop Down in HK Retail Vehicle Listing Page
+User should be able to click Save and Shop in EPC Search Result Drop Down in HK Retail Vehicle Listing Page
+User should be able to click Shop this vehicle in EPC Search Result Drop Down in HK Retail Vehicle Listing Page
+User should be able to click Search Again in EPC Search Result Drop Down in HK Retail Vehicle Listing Page
 
 #-----------------------------------------------------Retail Account Messages Page--------------------------------------
 User should be able to view message page
@@ -594,11 +653,36 @@ Get Number of InStock DCStock
 Get Number of InStockOnly
 Get Number of DCStock
 
-User should be able to view Results per page filter on top
-User should be able to click Results per page filter on top
-User should be able to select 20 Results per page filter on top
-User should be able to select 50 Results per page filter on top
-User should be able to select 100 Results per page filter on top
+User should be able to view EPC L1 Page in HK Retail
+User should be able to click Shop Now in HK Retail EPC L1 Page
+
+User should be able to Click Engine Fuel System in HK Retail EPC L1 Page
+User should be able to Click Transmission and Chasis in HK Retail EPC L1 Page
+User should be able to Click Body and Interior in HK Retail EPC L1 Page
+User should be able to Click Electrics in HK Retail EPC L1 Page
+
+User should be able to view EPC L2 Page in HK Retail
+User should be able to Click Engine Fuel System in HK Retail EPC L2 Page
+User should be able to Click Transmission and Chasis in HK Retail EPC L2 Page
+User should be able to Click Body and Interior in HK Retail EPC L2 Page
+User should be able to Click Electrics in HK Retail EPC L2 Page
+User should be able to Click All in HK Retail EPC L2 Page
+User should be able to click Load More Button
+
+User should be able to view All Schema in HK Retail EPC L2 Page
+User should be able to view Engine Fuel System Schema in HK Retail EPC L2 Page
+User should be able to view Transmission and Chasis Schema in HK Retail EPC L2 Page
+User should be able to view Body and Innterior Schema in HK Retail EPC L2 Page
+User should be able to view Electrics Schema in HK Retail EPC L2 Page
+
+User should be able to select random Schema in HK Retail EPC L2 Page
+
+User should be able to view EPC L3 Page in HK Retail EPC L3 Page
+User should be able to view Parts List Card and Diagram in HK Retail EPC L3 Page
+User should be able to view one Card on the Parts Card List in HK Retail EPC L3 Page
+User should be able to expand one Card on the Parts Card List in HK Retail EPC L3 Page
+User should be able to view Option Card Details on the Parts Card List in HK Retail EPC L3 Page
+
 
 #-----------------------------------------------------Retail Shopping Cart Page-----------------------------------------
 User should be able to view shopping cart in Retail Shopping Cart Page
@@ -686,7 +770,7 @@ User should be able to view 2C2P Confirmation
 User should be able to view success transaction
 
 User should be able to logout
-
+User should be able to logout using double header
 
 
 
