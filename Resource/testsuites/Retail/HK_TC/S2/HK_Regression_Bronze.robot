@@ -495,7 +495,7 @@ TC-059 - User should be able to view place order in HK Retail Place Order Page
 TC-060 - User should be able to view account orders page
     [Tags]    Order Page
     run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
-    run keyword and continue on failure    User should be able to view account orders page
+    run keyword and continue on failure    User should be able to view account orders page HK
 
 TC-061 - User should be able to apply filter status in Retail Account Orders Page
     [Tags]    Order Page
@@ -552,6 +552,7 @@ TC-065 - User should be able to view and message order with Recieved Status in R
     [Tags]    Order Page
     run keyword and continue on failure    User should be able to view order with Recieved Status in Retail Account Orders Page
     run keyword and continue on failure    User should be able to click order with Recieved Status in Retail Account Orders Page
+    run keyword and continue on failure    User should be able to view order details HK
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
@@ -566,6 +567,7 @@ TC-066 - User should be able to view and message order with Submitted Status in 
     [Tags]    Order Page
     run keyword and continue on failure    User should be able to view order with Submitted Status in Retail Account Orders Page
     run keyword and continue on failure    User should be able to click order with Submitted Status in Retail Account Orders Page
+    run keyword and continue on failure    User should be able to view order details HK
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
@@ -580,6 +582,7 @@ TC-067 - User should be able to view and message order with Dispatched Status in
     [Tags]    Order Page
     run keyword and continue on failure    User should be able to view order with Dispatched Status in Retail Account Orders Page
     run keyword and continue on failure    User should be able to click order with Dispatched Status in Retail Account Orders Page
+    run keyword and continue on failure    User should be able to view order details HK
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
@@ -594,6 +597,7 @@ TC-069 - User should be able to view and message order with Orders with Returns 
     [Tags]    Order Page
     run keyword and continue on failure    User should be able to view order with Orders with Returns Status in Retail Account Orders Page
     run keyword and continue on failure    User should be able to click order with Orders with Returns Status in Retail Account Orders Page
+    run keyword and continue on failure    User should be able to view order details HK
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page

@@ -39,12 +39,13 @@ TC-017 - User should be able to view home page
 TC-060 - User should be able to view account orders page
     [Tags]    Order Page
     run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
-    run keyword and continue on failure    User should be able to view account orders page
+    run keyword and continue on failure    User should be able to view account orders page HK
 
 TC-066 - User should be able to view order Retail Account Orders Page
     [Tags]    Order Page
     run keyword and continue on failure    User should be able to view order with Submitted Status in Retail Account Orders Page
     run keyword and continue on failure    User should be able to click order with Submitted Status in Retail Account Orders Page
+    run keyword and continue on failure    User should be able to view order details HK
     run keyword and continue on failure    User should be able to click Back to Customer Orders in Retail Account Order Details Page
 
 TC-067 - User should be able to view account return request page
