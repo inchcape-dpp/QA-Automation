@@ -1,7 +1,8 @@
 *** Settings ***
 Documentation       Suite description
 
-Resource  ../../../Resource/testdata/Dealer/AU_Config/AU_S2_Config.robot
+
+Resource     ../../../Resource/testdata/Dealer/AU_Config/S2/AU_S2_Config.robot
 
 
 *** Variables ***

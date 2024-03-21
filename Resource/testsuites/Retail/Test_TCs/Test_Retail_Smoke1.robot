@@ -5,34 +5,42 @@ Library  SeleniumLibrary
 Library    Process
 #Library  FakerLibrary
 
-Resource  ../../../Resource/testdata/config.robot
-Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
-Resource  ../../../Resource/testdata/Retail/Retail_Resource.robot
+Resource  ../../../../Resource/testdata/Retail/HK_Config/D1/HK_D1_Bronze_Config.robot
+Resource  ../../../../Resource/testdata/Retail/Retail_Variable.robot
+Resource  ../../../../Resource/testdata/Retail/Retail_Resource.robot
+
 
 *** Test Cases ***
-Test Setup  Run Keywords   Open Chrome Browser
-Screen Shot DIR  Run Keywords    Retail Screent Shot DIR
+Test Setup  Run Keywords   Open Chrome Browser HK
+Retail Screent Shot DIR HK  Run Keywords    Retail Screent Shot DIR HK
 
 TC-001 - Verify Login Page
     [Tags]    TC001    Login Page
-    run keyword and continue on failure    Verify Login Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User should be able to click Translate to English Button
 
-TC-002 - Email
-    [Tags]    Get Email
-    run keyword and continue on failure    New browser tab
-    run keyword and continue on failure    Enter Yop Mail
-    run keyword and continue on failure    Switch to Inbox List Frame
-    run keyword and continue on failure    Click Inbox Messages
-    run keyword and continue on failure    Unselect Mail Frame
-    run keyword and continue on failure    Switch to Inbox Message Frame
-    run keyword and continue on failure    Read Message
-    run keyword and continue on failure    Get Sender Email
-    run keyword and continue on failure    Get Email Message
+TC-002 - Input Valid Username
+    [Tags]    TC002    Login Page
+    run keyword and continue on failure    Input Valid Username
 
-TC-003 - Read Text
-    [Tags]    Read Text
-    run keyword and continue on failure    Read Text File
+TC-003 - Input Valid Password
+    [Tags]   TC003    Login Page
+    run keyword and continue on failure    Input Valid Password
 
+TC-004 - User should be able to click Login Button
+    [Tags]    TC004    Login Page
+    run keyword and continue on failure    User should be able to click Login Button
+    run keyword and continue on failure    TC Sleep
+
+TC-005 - User should be able to view All Products Page in HK Retail Home Page
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to view All products
+    run keyword and continue on failure    TC Sleep
+
+TC-006 - Show number of product list
+    [Tags]    Home Page
+    run keyword and continue on failure    Show number of product list
+    run keyword and continue on failure    TC Sleep
 
 #TC-002 - Input Valid Username
 #    [Tags]    Login Page
