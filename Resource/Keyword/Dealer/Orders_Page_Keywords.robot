@@ -134,20 +134,38 @@ User should be able to view order details in HK Order Details Page
     wait until element is visible    ${OrderDetailsContainerRefNumLabel}    10
     wait until element is visible    ${OrderDetailsContainerCustNameLabel}    10
     wait until element is visible    ${OrderDetailsContainerCustAccLabel}    10
+    wait until element is visible    ${OrderDetailsContainerCustOrderNumLabel}    10
+    wait until element is visible    ${OrderDetailsContainerYourRefLabel}    10
+    wait until element is visible    ${OrderDetailsContainerOrderDateLabel}    10
+    wait until element is visible    ${OrderDetailsContainerPaymentMethondLabel}    10
+    wait until element is visible    ${OrderDetailsContainerDeliveryMethodLabel}    10
 
     capture element screenshot    ${OrderDetailsContainerRefNumLabel}
     capture element screenshot    ${OrderDetailsContainerCustNameLabel}
     capture element screenshot    ${OrderDetailsContainerCustAccLabel}
+    capture element screenshot    ${OrderDetailsContainerCustOrderNumLabel}
+    capture element screenshot    ${OrderDetailsContainerYourRefLabel}
+    capture element screenshot    ${OrderDetailsContainerOrderDateLabel}
+    capture element screenshot    ${OrderDetailsContainerPaymentMethondLabel}
+    capture element screenshot    ${OrderDetailsContainerDeliveryMethodLabel}
 
     wait until element is visible    ${OrderDetailsContainerRefNumValue}    10
     wait until element is visible    ${OrderDetailsContainerCustNameValue}    10
     wait until element is visible    ${OrderDetailsContainerCustAccValue}    10
     wait until element is visible    ${OrderDetailsContainerCustOrderNumValue}    10
+    wait until element is visible    ${OrderDetailsContainerYourRefValue}    10
+    wait until element is visible    ${OrderDetailsContainerOrderDateValue}    10
+    wait until element is visible    ${OrderDetailsContainerPaymentMethondValue}    10
+    wait until element is visible    ${OrderDetailsContainerDeliveryMethodValue}    10
 
     capture element screenshot    ${OrderDetailsContainerRefNumValue}
     capture element screenshot    ${OrderDetailsContainerCustNameValue}
     capture element screenshot    ${OrderDetailsContainerCustAccValue}
     capture element screenshot    ${OrderDetailsContainerCustOrderNumValue}
+    capture element screenshot    ${OrderDetailsContainerYourRefValue}
+    capture element screenshot    ${OrderDetailsContainerOrderDateValue}
+    capture element screenshot    ${OrderDetailsContainerPaymentMethondValue}
+    capture element screenshot    ${OrderDetailsContainerDeliveryMethodValue}
 
     scroll element into view    ${OrderDetailsReturnContainer}
     capture element screenshot    ${OrderDetailsReturnContainer}
@@ -230,6 +248,18 @@ User should be able to filter status by Order with Returns in Order Page
     wait until element is visible    ${OrderPageStatusFilterOrderwithReturns}    10
     capture element screenshot    ${OrderPageStatusFilterOrderwithReturns}
     click element    ${OrderPageStatusFilterOrderwithReturns}
+    sleep    2
+
+User should be able to filter status by Delivered in Order Page
+    wait until element is visible    ${OrderPageStatusFilterDelivered}    10
+    capture element screenshot    ${OrderPageStatusFilterDelivered}
+    click element    ${OrderPageStatusFilterDelivered}
+    sleep    2
+
+User should be able to filter status by Processing in Order Page
+    wait until element is visible    ${OrderPageStatusFilterProcessing}    10
+    capture element screenshot    ${OrderPageStatusFilterProcessing}
+    click element    ${OrderPageStatusFilterProcessing}
     sleep    2
 
 User should be able to click Date Filter in Order Page
@@ -440,12 +470,58 @@ User should be able to click order with Orders with Returns Status in Dealer Ord
     capture page screenshot
     sleep    2
 
+User should be able to view order with Delivered Status in Dealer Orders Page
+    FOR    ${Nextpage}    IN RANGE    1    500
+    ${DeliveredStatus}    run keyword and return status    element should be visible    ${OrderPageDeliveredContainer}
+    run keyword if    '${DeliveredStatus}' == 'False'    User should be able to click next page in Dealer Orders Page
+    exit for loop if    '${DeliveredStatus}' == 'True'
+    END
+    scroll element into view    ${OrderPageDeliveredContainer}
+    wait until element is visible    ${OrderPageDeliveredContainer}    10
+    capture element screenshot    ${OrderPageDeliveredContainer}
+    sleep    2
+
+User should be able to click order with Delivered Status in Dealer Orders Page
+    wait until element is visible    ${OrderPageDeliveredPartRef}    10
+    click element    ${OrderPageDeliveredPartRef}
+    wait until element is visible    ${OrderDetailsOrderHeader}
+    capture page screenshot
+    sleep    2
+
+User should be able to view order with Processing Status in Dealer Orders Page
+    FOR    ${Nextpage}    IN RANGE    1    500
+    ${ProcessingStatus}    run keyword and return status    element should be visible    ${OrderPageProcessingContainer}
+    run keyword if    '${ProcessingStatus}' == 'False'    User should be able to click next page in Dealer Orders Page
+    exit for loop if    '${ProcessingStatus}' == 'True'
+    END
+    scroll element into view    ${OrderPageProcessingContainer}
+    wait until element is visible    ${OrderPageProcessingContainer}    10
+    capture element screenshot    ${OrderPageProcessingContainer}
+    sleep    2
+
+User should be able to click order with Processing Status in Dealer Orders Page
+    wait until element is visible    ${OrderPageProcessingPartRef}    10
+    click element    ${OrderPageProcessingPartRef}
+    wait until element is visible    ${OrderDetailsOrderHeader}
+    capture page screenshot
+    sleep    2
+
+
+
+
+
+
+
+
+
+
+
 User should be able to click Back to Customer Orders in Dealer Order Details Page
     wait until element is visible    ${OrderDetailsBackButton}    10
     scroll element into view    ${OrderDetailsBackButton}
     capture element screenshot    ${OrderDetailsBackButton}
     click element    ${OrderDetailsBackButton}
-    sleep    2
+    sleep    3
 
 User should be able to click next page in Dealer Orders Page
     wait until element is visible    ${OrderPageDetailsNextPageButton}    10
@@ -479,3 +555,36 @@ Return to first page in Dealer Order Page
     run keyword if    '${firstpagestatus}' == 'True'    User should be able to return to first page in Dealer Orders Page
     scroll element into view    ${OrderPageCustomerOderHeader}
     sleep    3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

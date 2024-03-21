@@ -225,6 +225,7 @@ User should be able to click search again in Pop up Vehicle Search in HK Retail 
 
 User should be able to view EPC Search Result Pop Up Modal in HK Retail Home Page
 User should be able to view EPC Search Result Pop Up Modal Elements in HK Retail Home Page
+User should be able to view EPC VIN Search Result Pop Up Modal Elements in HK Retail Home Page
 User should be able to click Show More button in EPC Search Result Pop Up Modal in HK Retail Home Page
 User should be able to click Save and Shop in EPC Search Result Pop Up Modal in HK Retail Home Page
 User should be able to click Shop this vehicle in EPC Search Result Pop Up Modal in HK Retail Home Page

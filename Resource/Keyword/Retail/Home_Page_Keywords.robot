@@ -4,22 +4,24 @@ Documentation    Suite description
 Library    SeleniumLibrary
 Library    Collections
 
-#Resource    ../../../Resource/testdata/config.robot
-Resource    ../../../Resource/testdata/Retail/Retail_Variable.robot
-Resource    ../../../Resource/testdata/credentials.robot
+#Resource  ../../../Resource/testdata/config.robot
+Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
+Resource  ../../../Resource/testdata/credentials.robot
 
 
 *** Keywords ***
 #-----------------------------------------------------Retail Home Page-------------------------------------------------
 Admin User should be able to Login
     wait until element is visible    ${HomePageLogo}    10
-    wait until element is visible    ${HomePageSellerInfo}    10
+    wait until element is visible    ${HomePage_DoubleHeader_SellerName}    10
     capture page screenshot
     sleep     2
+
 
 User should be able to view home page
     wait until element is visible    ${HomePageLogo}    10
     wait until element is visible    ${HomePageSelectVehicleContainer}    10
+    wait until element is visible    ${Retail_HomePageShopByCategoryHeader}    10
     capture page screenshot
     scroll element into view    ${Retail_HomePageShopByCategoryHeader}
     capture page screenshot
@@ -564,9 +566,6 @@ User should be able to click shop by category Toyota Hybrid in HK Retail Home Pa
     capture page screenshot
     sleep    2
 
-
-
-
 User should be albe to View Search Vehicle in HK Retail Home Page
     wait until element is visible    ${Retail_HK_HomePage_SearchVehicle_Container}    10
     scroll element into view    ${Retail_HK_HomePage_SearchVehicle_Container}
@@ -584,6 +583,8 @@ User should be albe to Input Search VIN1 in HK Retail Home Page
     input text    ${Retail_HK_HomePage_SearchVIN_TextBox}    ${Retail_HK_HomePage_SearchVIN_TextBox_Value1}
     capture element screenshot    ${Retail_HK_HomePage_SearchVIN_TextBox}
     sleep    2
+
+    element should not be visible
 
 User should be albe to Input Search VIN2 in HK Retail Home Page
     wait until element is visible    ${Retail_HK_HomePage_SearchVIN_TextBox}    10
@@ -640,30 +641,392 @@ User should be able to click search again in Pop up Vehicle Search in HK Retail 
     click element    ${Retail_HK_HomePage_SearchVIN_PopUp_Search_Button}
     sleep    2
 
+User should be able to view double header in Retail Home page
+    wait until element is visible    ${HomePage_DoubleHeader}    10
+    wait until element is visible    ${HomePage_DoubleHeader_SellerName}    10
+    wait until element is visible    ${HomePage_DoubleHeader_MyAccount_Button}    10
+    wait until element is visible    ${HomePage_DoubleHeader_MyAccount_Button}    10
+
+    capture element screenshot    ${HomePage_DoubleHeader}
+    capture element screenshot    ${HomePage_DoubleHeader_SellerName}
+    capture element screenshot    ${HomePage_DoubleHeader_MyAccount_Button}
+    capture element screenshot    ${HomePage_DoubleHeader_MyAccount_Button}
+
+    sleep    2
+
+User should be able to access Account page using double header in Retail Home page
+    wait until element is visible    ${HomePage_DoubleHeader_MyAccount_Button}    10
+    click element    ${HomePage_DoubleHeader_MyAccount_Button}
+    sleep    5
+    capture page screenshot
+    sleep    2
+
+User should be able to access Order page using double header in Retail Homepage
+    wait until element is visible    ${HomePage_DoubleHeader_DropDown_Button}    10
+    click element    ${HomePage_DoubleHeader_DropDown_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_Order_Button}    10
+    capture element screenshot    ${HomePage_DoubleHeader_Menu_Order_Button}
+    click element    ${HomePage_DoubleHeader_Menu_Order_Button}
+    sleep    5
+    capture page screenshot
+    sleep    2
+
+User should be able to access Retrun page using double header in Retail Homepage
+    wait until element is visible    ${HomePage_DoubleHeader_DropDown_Button}    10
+    click element    ${HomePage_DoubleHeader_DropDown_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_ReturnRequest_Button}    10
+    capture element screenshot    ${HomePage_DoubleHeader_Menu_ReturnRequest_Button}
+    click element    ${HomePage_DoubleHeader_Menu_ReturnRequest_Button}
+    sleep    5
+    capture page screenshot
+    sleep    2
+
+User should be able to access Save carts page using double header in Retail Homepage
+    wait until element is visible    ${HomePage_DoubleHeader_DropDown_Button}    10
+    click element    ${HomePage_DoubleHeader_DropDown_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_SavedCarts_Button}    10
+    capture element screenshot    ${HomePage_DoubleHeader_Menu_SavedCarts_Button}
+    click element    ${HomePage_DoubleHeader_Menu_SavedCarts_Button}
+    sleep    5
+    capture page screenshot
+    sleep    2
+
+User should be able to access Vehicle Listing page using double header in Retail Homepage
+    wait until element is visible    ${HomePage_DoubleHeader_DropDown_Button}    10
+    click element    ${HomePage_DoubleHeader_DropDown_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_VehicleListing_Button}    10
+    capture element screenshot    ${HomePage_DoubleHeader_Menu_VehicleListing_Button}
+    click element    ${HomePage_DoubleHeader_Menu_VehicleListing_Button}
+    sleep    5
+    capture page screenshot
+    sleep    2
+
+User should be able to access Inbox page using double header in Retail Homepage
+    wait until element is visible    ${HomePage_DoubleHeader_DropDown_Button}    10
+    click element    ${HomePage_DoubleHeader_DropDown_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_Inbox_Button}    10
+    capture element screenshot    ${HomePage_DoubleHeader_Menu_Inbox_Button}
+    click element    ${HomePage_DoubleHeader_Menu_Inbox_Button}
+    sleep    5
+    capture page screenshot
+    sleep    2
+
+User should be able to access Account Details page using double header in Retail Homepage
+    wait until element is visible    ${HomePage_DoubleHeader_DropDown_Button}    10
+    click element    ${HomePage_DoubleHeader_DropDown_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_Profile_Button}    10
+    click element    ${HomePage_DoubleHeader_Menu_Profile_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_Profile_AccountDetails_Button}    10
+    capture element screenshot    ${HomePage_DoubleHeader_Menu_Profile_AccountDetails_Button}
+    click element    ${HomePage_DoubleHeader_Menu_Profile_AccountDetails_Button}
+    sleep    5
+    capture page screenshot
+    sleep    2
+
+User should be able to access Change Pass page using double header in Retail Homepage
+    wait until element is visible    ${HomePage_DoubleHeader_DropDown_Button}    10
+    click element    ${HomePage_DoubleHeader_DropDown_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_Profile_Button}    10
+    click element    ${HomePage_DoubleHeader_Menu_Profile_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_Profile_ChangePassword_Button}    10
+    capture element screenshot    ${HomePage_DoubleHeader_Menu_Profile_ChangePassword_Button}
+    click element    ${HomePage_DoubleHeader_Menu_Profile_ChangePassword_Button}
+    sleep    5
+    capture page screenshot
+    sleep    2
+
+User should be able to access Company Details page using double header in Retail Homepage
+    wait until element is visible    ${HomePage_DoubleHeader_DropDown_Button}    10
+    click element    ${HomePage_DoubleHeader_DropDown_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_Company_Button}    10
+    click element    ${HomePage_DoubleHeader_Menu_Company_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_Company_CompanyDetails_Button}    10
+    capture element screenshot    ${HomePage_DoubleHeader_Menu_Company_CompanyDetails_Button}
+    click element    ${HomePage_DoubleHeader_Menu_Company_CompanyDetails_Button}
+    sleep    5
+    capture page screenshot
+    sleep    2
+
+User should be able to access Relationship page using double header in Retail Homepage
+    wait until element is visible    ${HomePage_DoubleHeader_DropDown_Button}    10
+    click element    ${HomePage_DoubleHeader_DropDown_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_Company_Button}    10
+    click element    ${HomePage_DoubleHeader_Menu_Company_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_Company_Relationship_Button}    10
+    capture element screenshot    ${HomePage_DoubleHeader_Menu_Company_Relationship_Button}
+    click element    ${HomePage_DoubleHeader_Menu_Company_Relationship_Button}
+    sleep    5
+    capture page screenshot
+    sleep    2
+
+User should be able to view EPC Search Result Pop Up Modal in HK Retail Home Page
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Container}    10
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Container}
+    sleep    2
+
+User should be able to view EPC Search Result Pop Up Modal Elements in HK Retail Home Page
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Container}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Model}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ModelCode_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ModelCode_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Transmission_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Transmission_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Period_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Period_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Engine_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Engine_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ProductionDate_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ProductionDate_Value}    10
+
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Container}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Model}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ModelCode_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ModelCode_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Transmission_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Transmission_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Period_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Period_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Engine_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Engine_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ProductionDate_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ProductionDate_Value}
+
+User should be able to view EPC VIN Search Result Pop Up Modal Elements in HK Retail Home Page
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Container}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_VIN_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Model}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ModelCode_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ModelCode_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Transmission_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Transmission_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Period_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Period_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Engine_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Engine_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ProductionDate_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ProductionDate_Value}    10
+
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Container}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_VIN_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Model}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ModelCode_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ModelCode_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Transmission_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Transmission_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Period_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Period_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Engine_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Engine_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ProductionDate_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ProductionDate_Value}
+
+User should be able to view Show More Details in EPC Search Result Pop Up Modal Elements in HK Retail Home Page
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Container}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Body_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Body_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Doors_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Doors_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_SeatingCapacity_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_SeatingCapacity_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Grade_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Grade_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_DriverPosition_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_DriverPosition_Value}    10
+
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Container}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Body_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Body_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Doors_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Doors_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_SeatingCapacity_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_SeatingCapacity_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Grade_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Grade_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_DriverPosition_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_DriverPosition_Value}
+
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SaveShop_button}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_ShopThisVehicle_button}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SearchAgain_button}    10
+
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SaveShop_button}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_ShopThisVehicle_button}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SearchAgain_button}
+
+User should be able to click Show More button in EPC Search Result Pop Up Modal in HK Retail Home Page
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_ShowMore_button}    10
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_ShowMore_button}
+    click element    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_ShowMore_button}
+    sleep    2
+
+User should be able to click Save and Shop in EPC Search Result Pop Up Modal in HK Retail Home Page
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SaveShop_button}    10
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SaveShop_button}
+    click element    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SaveShop_button}
+    sleep    5
+
+User should be able to click Shop this vehicle in EPC Search Result Pop Up Modal in HK Retail Home Page
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_ShopThisVehicle_button}    10
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_ShopThisVehicle_button}
+    click element    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_ShopThisVehicle_button}
+    sleep    5
+
+User should be able to click Search Again in EPC Search Result Pop Up Modal in HK Retail Home Page
+    wait until element is visible   ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SearchAgain_button}    10
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SearchAgain_button}
+    click element    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SearchAgain_button}
+    sleep    5
 
 
+User should be able to view Vehicle Search in AU Retail Home Page
+    wait until element is visible    ${Retail_AU_HomePage_Manual_SearchVehicle_Container}    10
+    wait until element is visible    ${Retail_AU_HomePage_VINRego_SearchVehicle_Container}    10
+    scroll element into view    ${Retail_AU_HomePage_VINRego_SearchVehicle_Container}
+    capture element screenshot    ${Retail_AU_HomePage_VINRego_SearchVehicle_Container}
+    capture element screenshot    ${Retail_AU_HomePage_Manual_SearchVehicle_Container}
+    sleep    2
 
+User should be able to click model on manual search in AU Retail Home Page
+    wait until element is enabled    ${Retail_AU_HomePage_Manual_Model_Combobox}    10
+    wait until element is visible    ${Retail_AU_HomePage_Manual_Model_Combobox}    10
+    capture element screenshot    ${Retail_AU_HomePage_Manual_Model_Combobox}
+    click element    ${Retail_AU_HomePage_Manual_Model_Combobox}
+    sleep    2
 
+User should be able to select model on manual search in AU Retail Home Page
+    ${RandomModelIndexCount}    get element count    ${Retail_AccountVehicleListingPageSelectVehicleSearchManualModelListOpt}
+    ${RandomModelIndex}    evaluate    random.randint(1,${RandomModelIndexCount})
+    mouse over    ${Retail_AccountVehicleListingPageSelectVehicleSearchManualModelListOpt1}
+    wait until element is visible    (//div[@class='ng-dropdown-panel-items scroll-host']//span[@title!='---Popular Models---' and @title!='----All Models----' ])|(//div[@class='ng-dropdown-panel-items scroll-host']//span[@class!='---Popular Models---' and @class!='----All Models----' ])[${RandomModelIndex}]    10
+    scroll element into view    (//div[@class='ng-dropdown-panel-items scroll-host']//span[@title!='---Popular Models---' and @title!='----All Models----' ])|(//div[@class='ng-dropdown-panel-items scroll-host']//span[@class!='---Popular Models---' and @class!='----All Models----' ])[${RandomModelIndex}]
+    capture element screenshot    (//div[@class='ng-dropdown-panel-items scroll-host']//span[@title!='---Popular Models---' and @title!='----All Models----' ])|(//div[@class='ng-dropdown-panel-items scroll-host']//span[@class!='---Popular Models---' and @class!='----All Models----' ])[${RandomModelIndex}]
+    click element    (//div[@class='ng-dropdown-panel-items scroll-host']//span[@title!='---Popular Models---' and @title!='----All Models----' ])|(//div[@class='ng-dropdown-panel-items scroll-host']//span[@class!='---Popular Models---' and @class!='----All Models----' ])[${RandomModelIndex}]
+    sleep    5
 
+User should be able to click year on manual search in AU Retail Home Page
+    wait until element is enabled    ${Retail_AU_HomePage_Manual_Year_Combobox}    10
+    wait until element is visible    ${Retail_AU_HomePage_Manual_Year_Combobox}    10
+    capture element screenshot    ${Retail_AU_HomePage_Manual_Year_Combobox}
+    click element    ${Retail_AU_HomePage_Manual_Year_Combobox}
+    sleep    2
 
+User should be able to select year on manual search in AU Retail Home Page
+    ${RandomYearIndexCount}    get element count    ${Retail_AccountVehicleListingPageSelectVehicleSearchManualYearListOpt}
+    ${RandomYearIndex}    evaluate    random.randint(1,${RandomYearIndexCount})
+    mouse over    ${Retail_AccountVehicleListingPageSelectVehicleSearchManualYearListOpt1}
+    wait until element is visible    (//ng-dropdown-panel//div[@role='option'])[${RandomYearIndex}]    10
+    scroll element into view    (//ng-dropdown-panel//div[@role='option'])[${RandomYearIndex}]
+    capture element screenshot    (//ng-dropdown-panel//div[@role='option'])[${RandomYearIndex}]
+    click element    (//ng-dropdown-panel//div[@role='option'])[${RandomYearIndex}]
+    sleep    5
 
+User should be able to click series on manual search in AU Retail Home Page
+    wait until element is enabled    ${Retail_AU_HomePage_Manual_Series_Combobox}    10
+    wait until element is visible    ${Retail_AU_HomePage_Manual_Series_Combobox}    10
+    capture element screenshot    ${Retail_AU_HomePage_Manual_Series_Combobox}
+    click element    ${Retail_AU_HomePage_Manual_Series_Combobox}
+    sleep    2
 
+User should be able to select series on manual search in AU Retail Home Page
+    ${RandomSeriesIndexCount}    get element count    ${Retail_AccountVehicleListingPageSelectVehicleSearchManualSeriesListOpt}
+    ${RandomSeriesIndex}    evaluate    random.randint(1,${RandomSeriesIndexCount})
+    mouse over    ${Retail_AccountVehicleListingPageSelectVehicleSearchManualSeriesListOpt1}
+    wait until element is visible    (//ng-dropdown-panel//div[@role='option'])[${RandomSeriesIndex}]    10
+    scroll element into view    (//ng-dropdown-panel//div[@role='option'])[${RandomSeriesIndex}]
+    capture element screenshot    (//ng-dropdown-panel//div[@role='option'])[${RandomSeriesIndex}]
+    click element    (//ng-dropdown-panel//div[@role='option'])[${RandomSeriesIndex}]
+    sleep    5
 
+User should be able to click engine on manual search in AU Retail Home Page
+    wait until element is enabled    ${Retail_AU_HomePage_Manual_Engine_Combobox}    10
+    wait until element is enabled    ${Retail_AU_HomePage_Manual_Engine_Combobox}    10
+    wait until element is visible    ${Retail_AU_HomePage_Manual_Engine_Combobox}    10
+    capture element screenshot    ${Retail_AU_HomePage_Manual_Engine_Combobox}
+    click element    ${Retail_AU_HomePage_Manual_Engine_Combobox}
+    sleep    2
 
+User should be able to select engine on manual search in AU Retail Home Page
+    ${RandomEngineIndexCount}    get element count    ${Retail_AccountVehicleListingPageSelectVehicleSearchManualEngineListOpt}
+    ${RandomEngineIndex}    evaluate    random.randint(1,${RandomEngineIndexCount})
+    mouse over    ${Retail_AccountVehicleListingPageSelectVehicleSearchManualEngineListOpt1}
+    wait until element is visible    (//ng-dropdown-panel//div[@role='option'])[${RandomEngineIndex}]    10
+    scroll element into view    (//ng-dropdown-panel//div[@role='option'])[${RandomEngineIndex}]
+    capture element screenshot    (//ng-dropdown-panel//div[@role='option'])[${RandomEngineIndex}]
+    click element    (//ng-dropdown-panel//div[@role='option'])[${RandomEngineIndex}]
+    sleep    5
 
+User should be able to click details on manual search in AU Retail Home Page
+    wait until element is enabled    ${Retail_AU_HomePage_Manual_Details_Combobox}    10
+    wait until element is visible    ${Retail_AU_HomePage_Manual_Details_Combobox}    10
+    capture element screenshot    ${Retail_AU_HomePage_Manual_Details_Combobox}
+    click element    ${Retail_AU_HomePage_Manual_Details_Combobox}
+    sleep    2
 
+User should be able to select details on manual search in AU Retail Home Page
+    ${RandomDetailsIndexCount}    get element count    ${Retail_AccountVehicleListingPageSelectVehicleSearchManualDetailsListOpt}
+    ${RandomDetailsIndex}    evaluate    random.randint(1,${RandomDetailsIndexCount})
+    mouse over   ${Retail_AccountVehicleListingPageSelectVehicleSearchManualDetailsListOpt1}
+    wait until element is visible    (//ng-dropdown-panel//div[@role='option'])[${RandomDetailsIndex}]    10
+    scroll element into view    (//ng-dropdown-panel//div[@role='option'])[${RandomDetailsIndex}]
+    capture element screenshot    (//ng-dropdown-panel//div[@role='option'])[${RandomDetailsIndex}]
+    click element    (//ng-dropdown-panel//div[@role='option'])[${RandomDetailsIndex}]
+    sleep    5
 
+User shoud be albe to click search this vehicle on manual seearh in AU Retail Home Page
+    wait until element is visible    ${Retail_AU_HomePage_Manual_Search_Button}    10
+    capture element screenshot    ${Retail_AU_HomePage_Manual_Search_Button}
+    click element    ${Retail_AU_HomePage_Manual_Search_Button}
+    sleep    5
 
+User should be able to select state in AU Retail Home Page
+    wait until element is visible    ${Retail_AU_HomePage_VINRego_State_Combobox}    10
+    click element    ${Retail_AU_HomePage_VINRego_State_Combobox}
+    wait until element is visible    ${Retail_AccountVehicleListingPageSelectVehicleStateComboBoxList}    10
+    capture element screenshot    ${Retail_AccountVehicleListingPageSelectVehicleStateComboBoxList}
+    capture element screenshot    ${Retail_AccountVehicleListingPageSelectVehicleStateComboBoxListSouthWales}
+    click element    ${Retail_AccountVehicleListingPageSelectVehicleStateComboBoxListSouthWales}
+    sleep    2
 
+User should be able to input rego in AU Retail Home Page
+    wait until element is visible    ${Retail_AU_HomePage_VINRego_Rego_Textbox}    10
+    clear element text    ${Retail_AU_HomePage_VINRego_Rego_Textbox}
+    input text    ${Retail_AU_HomePage_VINRego_Rego_Textbox}    ${Retail_AccountVehicleListingPageSelectVehicleRegoValue}
+    capture element screenshot    ${Retail_AU_HomePage_VINRego_Rego_Textbox}
+    sleep    2
 
+User should be albe to input vin in AU Retail Home Page
+    wait until element is visible    ${Retail_AU_HomePage_VINRego_VIN_Textbox}    10
+    clear element text    ${Retail_AU_HomePage_VINRego_VIN_Textbox}
+    input text    ${Retail_AU_HomePage_VINRego_VIN_Textbox}    ${Retail_AccountVehicleListingPageSelectVehicleVINNumValue}
+    capture element screenshot    ${Retail_AU_HomePage_VINRego_VIN_Textbox}
+    sleep    2
 
+User should be albe to click search button in AU Retail Home Page
+    wait until element is visible    ${Retail_AU_HomePage_VINRego_Search_Button}    10
+    capture element screenshot    ${Retail_AU_HomePage_VINRego_Search_Button}
+    click element    ${Retail_AU_HomePage_VINRego_Search_Button}
+    sleep    5
 
+User should be able to click Select and Save Vehicle button on Search Popup in AU Retail Home Page
+    wait until element is visible    ${Retail_AU_HomePage_Search_PopUp_Container}    10
+    wait until element is visible    ${Retail_AU_HomePage_Search_PopUp_SelectSave_Button}    10
+    capture element screenshot    ${Retail_AU_HomePage_Search_PopUp_SelectSave_Button}
+    click element    ${Retail_AU_HomePage_Search_PopUp_SelectSave_Button}
+    sleep    2
 
+User should be able to click Select Vehicle button on Search Popup in AU Retail Home Page
+    wait until element is visible    ${Retail_AU_HomePage_Search_PopUp_Container}    10
+    wait until element is visible    ${Retail_AU_HomePage_Search_PopUp_SelectVehicle_Button}    10
+    capture element screenshot    ${Retail_AU_HomePage_Search_PopUp_SelectVehicle_Button}
+    click element    ${Retail_AU_HomePage_Search_PopUp_SelectVehicle_Button}
+    sleep    2
 
-
-
-
-
+User should be able to click Search Again button on Search Popup in AU Retail Home Page
+    wait until element is visible    ${Retail_AU_HomePage_Search_PopUp_Container}    10
+    wait until element is visible    ${Retail_AU_HomePage_Search_PopUp_SearchAgain_Button}    10
+    capture element screenshot    ${Retail_AU_HomePage_Search_PopUp_SearchAgain_Button}
+    click element    ${Retail_AU_HomePage_Search_PopUp_SearchAgain_Button}
+    sleep    2
 
 User should be able to click brand on manual search in HK Retail Home Page
     wait until element is enabled    ${Retail_HK_HomePage_Manula_Brand_Combobox}    10

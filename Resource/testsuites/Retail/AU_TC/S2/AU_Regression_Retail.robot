@@ -303,7 +303,6 @@ TC-054 - User should be able to Search by Rego in AU Retail Home Page
     run keyword and continue on failure    User should be able to select state in AU Retail Home Page
     run keyword and continue on failure    User should be able to input rego in AU Retail Home Page
     run keyword and continue on failure    User should be albe to click search button in AU Retail Home Page
-    run keyword and continue on failure    User shoud be albe to click search this vehicle on manual seearh in AU Retail Home Page
     run keyword and continue on failure    User should be able to click Select Vehicle button on Search Popup in AU Retail Home Page
     run keyword and continue on failure    TC Sleep
 
@@ -313,7 +312,6 @@ TC-055 - User should be able to Search by VIN in AU Retail Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be albe to input vin in AU Retail Home Page
     run keyword and continue on failure    User should be albe to click search button in AU Retail Home Page
-    run keyword and continue on failure    User shoud be albe to click search this vehicle on manual seearh in AU Retail Home Page
     run keyword and continue on failure    User should be able to click Select Vehicle button on Search Popup in AU Retail Home Page
     run keyword and continue on failure    TC Sleep
 
@@ -869,9 +867,9 @@ TC-120 - User should be able to click shop this vehicle in Retail Account Vehicl
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    Browse Back Button
 
-TC-121 - User should be able to click add new vehicle in Retail Account Vehicle Listing Page
-    [Tags]    Vehicle Listing Page
-    run keyword and continue on failure    User should be able to click add new vehicle in Retail Account Vehicle Listing Page
+#TC-121 - User should be able to click add new vehicle in Retail Account Vehicle Listing Page
+#    [Tags]    Vehicle Listing Page
+#    run keyword and continue on failure    User should be able to click add new vehicle in Retail Account Vehicle Listing Page
 #    run keyword and continue on failure    User should be able to click Select Your Vehicle
 
 TC-122 - User should be able to click delete in Retail Account Vehicle Listing Page

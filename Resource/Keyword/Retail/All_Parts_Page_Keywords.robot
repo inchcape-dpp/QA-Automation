@@ -17,8 +17,65 @@ User should be able to view All Parts Page
     click element    ${HomePageAllCategory}
     wait until element is visible    ${AllProdPageLabelFilter}    10
     wait until element is visible    ${AllProdPagePanelHeader}    10
-    capture page screenshot
+    ${AllProdPage_AllProd_Label}
+    ${AllProdPageSortProdDropdown}
+    ${AllProdPageInStockCheckBoxContainer}
+    ${AllProdPageInStockCheckBox}
+
+
     sleep    2
+
+User should be able to view All Parts Page with VIN
+    wait until element is visible    ${AllProdPage_CarSelected_Container}    10
+    wait until element is visible    ${AllProdPage_CarSelectedCar_Icon}    10
+    wait until element is visible    ${AllProdPage_CarSelectedCar_PartsforLabel}    10
+    wait until element is visible    ${AllProdPage_CarSelectedCar_CarModel_Label}    10
+    wait until element is visible    ${AllProdPage_CarSelectedCar_CarVIN_Label}    10
+    wait until element is visible    ${AllProdPageAddCar/ChangeCarButton}    10
+
+    capture element screenshot    ${AllProdPage_CarSelected_Container}
+    capture element screenshot    ${AllProdPage_CarSelectedCar_Icon}
+    capture element screenshot    ${AllProdPage_CarSelectedCar_PartsforLabel}
+    capture element screenshot    ${AllProdPage_CarSelectedCar_CarModel_Label}
+    capture element screenshot    ${AllProdPage_CarSelectedCar_CarVIN_Label}
+    capture element screenshot    ${AllProdPageAddCar/ChangeCarButton}
+
+    ${vintextvalue}    get text    ${AllProdPage_CarSelectedCar_CarVIN_Label}
+    ${RemoveVINString}    remove string    ${vintextvalue}    Vin Number:    ${SPACE}
+    run keyword and continue on failure    Should Be Equal As Strings    ${RemoveVINString}    ${Retail_HK_HomePage_SearchVIN_TextBox_Value1}
+
+User should be able to view All Parts Page with Manual Car Search
+    element should not be visible    ${AllProdPage_CarSelectedCar_CarVIN_Label}
+    wait until element is visible    ${AllProdPage_CarSelected_Container}    10
+    wait until element is visible    ${AllProdPage_CarSelectedCar_Icon}    10
+    wait until element is visible    ${AllProdPage_CarSelectedCar_PartsforLabel}    10
+    wait until element is visible    ${AllProdPage_CarSelectedCar_CarModel_Label}    10
+    wait until element is visible    ${AllProdPageAddCar/ChangeCarButton}    10
+
+    capture element screenshot    ${AllProdPage_CarSelected_Container}
+    capture element screenshot    ${AllProdPage_CarSelectedCar_Icon}
+    capture element screenshot    ${AllProdPage_CarSelectedCar_PartsforLabel}
+    capture element screenshot    ${AllProdPage_CarSelectedCar_CarModel_Label}
+    capture element screenshot    ${AllProdPageAddCar/ChangeCarButton}
+
+    ${allpartscarmodeltextvalue}    get text    ${AllProdPage_CarSelectedCar_CarModel_Label}
+    ${selectvehiclecarmodeltextvalue}    get text    ${HomePageSelectVehicle}
+    run keyword and continue on failure    Should Be Equal As Strings    ${allpartscarmodeltextvalue}    ${selectvehiclecarmodeltextvalue}
+
+
+User should be able to view All Parts Page with No Car Search
+    element should not be visible    ${AllProdPage_CarSelectedCar_CarVIN_Label}
+    wait until element is visible    ${AllProdPage_CarSelected_Container}    10
+    wait until element is visible    ${AllProdPage_CarSelectedCar_Icon}    10
+    wait until element is visible    ${AllProdPage_CarSelectedCar_PartsforLabel}    10
+    wait until element is visible    ${AllProdPage_CarSelectedCar_NoCar_Label}    10
+    wait until element is visible    ${AllProdPageAddCar/ChangeCarButton}    10
+
+    capture element screenshot    ${AllProdPage_CarSelected_Container}
+    capture element screenshot    ${AllProdPage_CarSelectedCar_Icon}
+    capture element screenshot    ${AllProdPage_CarSelectedCar_PartsforLabel}
+    capture element screenshot    ${AllProdPage_CarSelectedCar_NoCar_Label}
+    capture element screenshot    ${AllProdPageAddCar/ChangeCarButton}
 
 User should be able to filter product name from A to Z
     wait until element is visible    ${AllProdPageSortProdDropdown}    10

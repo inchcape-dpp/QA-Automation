@@ -68,8 +68,6 @@ TC-012 - User should be able to view HK Registration Form
 
 TC-013 - User should be able to input details in Registration Form Page
     [Tags]    Login Page    Registration
-#    run keyword and continue on failure    User should be able to click Preferred Supplier Dropdown for HK Registration Form
-#    run keyword and continue on failure    User should be able to select 1 Preferred Supplier from Dropdown for HK Registration Form
     run keyword and continue on failure    User should be able to input Company Name
     run keyword and continue on failure    User should be able to click Postal Address Dropdown for HK Registration Form
     run keyword and continue on failure    User should be able to input text in Postal Address for HK Registration Form
@@ -247,10 +245,10 @@ TC-041 - User should be able to view EPC Search Result Pop Up Modal in HK Retail
     run keyword and continue on failure    User should be able to click Shop this vehicle in EPC Search Result Pop Up Modal in HK Retail Home Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    TC Sleep
-    run keyword and continue on failure    User should be able to Go to Home page
 
 TC-041 - User should be able to VIN search vehicle in HK Retail Homepage
     [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be albe to View Search VIN in HK Retail Home Page
     run keyword and continue on failure    User should be albe to Input Search VIN1 in HK Retail Home Page
     run keyword and continue on failure    User should be albe to Click Search VIN in HK Retail Home Page
@@ -260,7 +258,7 @@ TC-041 - User should be able to VIN search vehicle in HK Retail Homepage
 TC-041 - User should be able to view EPC Search Result Pop Up Modal in HK Retail Home Page
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to view EPC Search Result Pop Up Modal in HK Retail Home Page
-    run keyword and continue on failure    User should be able to view EPC Search Result Pop Up Modal Elements in HK Retail Home Page
+    run keyword and continue on failure    User should be able to view EPC VIN Search Result Pop Up Modal Elements in HK Retail Home Page
     run keyword and continue on failure    User should be able to click Show More button in EPC Search Result Pop Up Modal in HK Retail Home Page
     run keyword and continue on failure    User should be able to click Shop this vehicle in EPC Search Result Pop Up Modal in HK Retail Home Page
     run keyword and continue on failure    TC Sleep

@@ -74,6 +74,8 @@ User should be able to filter status by Submitted in Order Page
 User should be able to filter status by Dispatched in Order Page
 User should be able to filter status by Partially Dispathed in Order Page
 User should be able to filter status by Order with Returns in Order Page
+User should be able to filter status by Delivered in Order Page
+User should be able to filter status by Processing in Order Page
 
 #-----------------------------------------------------Dealer Order Page Filter By Date
 User should be able to click Date Filter in Order Page
@@ -110,6 +112,10 @@ User should be able to view order with Partially Dispatched Status in Dealer Ord
 User should be able to click order with Partially Dispatched Status in Dealer Orders Page
 User should be able to view order with Orders with Returns Status in Dealer Orders Page
 User should be able to click order with Orders with Returns Status in Dealer Orders Page
+User should be able to view order with Delivered Status in Dealer Orders Page
+User should be able to click order with Delivered Status in Dealer Orders Page
+User should be able to view order with Processing Status in Dealer Orders Page
+User should be able to click order with Processing Status in Dealer Orders Page
 
 User should be able to click Back to Customer Orders in Dealer Order Details Page
 
