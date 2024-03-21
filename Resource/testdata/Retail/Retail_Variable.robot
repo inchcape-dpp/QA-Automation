@@ -2195,6 +2195,7 @@ ${Retail_AllProdPageMessagePopUpUpMessageValue}    Test
 #-----------------------------------------------------Retail Product Selection------------------------------------------
 ${Retail_HK_ProductSelectionProductlist}    //div[@class='custom-product-list' or @class='product-grid-list']
 ${Retail_HK_ProductSelectionProductResult}    //div[@class='showmore-result text-center mb-2']
+
 #-----------------------------------------------------Retail Product Selection In Stock and DC Stock
 ${ProductSelectionInStockDCStock}    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']])
 ${ProductSelectionInStockDCStockContainer}    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']])[1]
