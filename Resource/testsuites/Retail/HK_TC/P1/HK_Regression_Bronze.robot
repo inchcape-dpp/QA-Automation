@@ -68,8 +68,6 @@ TC-012 - User should be able to view HK Registration Form
 
 TC-013 - User should be able to input details in Registration Form Page
     [Tags]    Login Page    Registration
-#    run keyword and continue on failure    User should be able to click Preferred Supplier Dropdown for HK Registration Form
-#    run keyword and continue on failure    User should be able to select 1 Preferred Supplier from Dropdown for HK Registration Form
     run keyword and continue on failure    User should be able to input Company Name
     run keyword and continue on failure    User should be able to click Postal Address Dropdown for HK Registration Form
     run keyword and continue on failure    User should be able to input text in Postal Address for HK Registration Form
@@ -221,6 +219,46 @@ TC-041 - User should be able to access Relationship page using double header in 
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to access Relationship page using double header in Retail Homepage
+
+TC-041 - User should be able to manual search vehicle in HK Retail Homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be albe to View Search Vehicle in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click brand on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to select brand on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click model on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to select model on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click year on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to select year on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click variant on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to select variant on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click model id on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to select model id on manual search in HK Retail Home Page
+    run keyword and continue on failure    User shoud be albe to click search this vehicle on manual seearh in HK Retail Home Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep
+
+
+TC-041 - User should be able to VIN search vehicle in HK Retail Homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be albe to View Search VIN in HK Retail Home Page
+    run keyword and continue on failure    User should be albe to Input Search VIN1 in HK Retail Home Page
+    run keyword and continue on failure    User should be albe to Click Search VIN in HK Retail Home Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep
+
+
+TC-041 - User should be able to clear vehicle selection in HK Retail Home Page
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to click Select Your Vehicle
+    run keyword and continue on failure    User should be able to click clear vehicle on selected vehicle in Retail Select Vehicle
+    run keyword and continue on failure    User should be able to Go to Home page
 
 TC-041 - User should be able to view All Products Page in HK Retail Home Page
     [Tags]    Home Page

@@ -1780,7 +1780,8 @@ ${Retail_AccountProfileAccountsDetailsLandlineError}    //div[@class='form-error
 
 ${Retail_AccountProfileAccountsDetailsConfirmationContainer}    //div[@class='cx-dialog-body modal-body pt-5']|//div[@class='cx-dialog-body modal-body']
 ${Retail_AccountProfileAccountsDetailsConfirmationYesButton}    //button[@class='btn btn-block btn-secondary backToHomepage-button']|//button[@class='btn btn-secondary btn-block']
-${Retail_AccountProfileAccountsDetailsConfirmationNoButton}    //button[@class='btn btn-block btn-outline-secondary']
+${Retail_AccountProfileAccountsDetailsConfirmationNoButton}    //div[@class='cx-dialog-body modal-body']//button[@class='btn btn-block btn-outline-secondary']
+
 
 ${Retail_AccountProfileAccountsDetailsFirstNameValue}    Test FN
 ${Retail_AccountProfileAccountsDetailsLastNameValue}    Test LN
@@ -2064,21 +2065,26 @@ ${AllProdPageSortProdDropdownZtoA}    //div[@role='option']//span[contains(text(
 ${AllProdPageYourPriceToggle}    //div[@class='custom-control custom-switch']
 ${AllProdPageGSTToggle}     //div[@class='custom-control custom-switch custom-switch--ml']//label
 
+${AllProdPage_CarSelected_Container}    //dpp-car-selected//div[@class='car-selected-container']
+${AllProdPage_CarSelectedCar_Icon}    //dpp-car-selected//div[@class='car-selected-container']//cx-icon[@class='cx-icon dpp-icons__car']
+${AllProdPage_CarSelectedCar_PartsforLabel}    //dpp-car-selected//div[@class='car-selected-container']//span[contains(text(),'Parts for:')]
+${AllProdPage_CarSelectedCar_CarModel_Label}    //dpp-car-selected//div[@class='car-selected-container']//div[@class='col-12 pt-2']//span[@class='selected-vehicle']
+${AllProdPage_CarSelectedCar_NoCar_Label}    //dpp-car-selected//div[@class='car-selected-container']//div[@class='col-12 pt-2']//span[@class='selected-vehicle' and contains(text(),'No vehicle selected!')]
+${AllProdPage_CarSelectedCar_CarVIN_Label}    //dpp-car-selected//div[@class='car-selected-container']//div[@class='col-12']//p
 ${AllProdPageAddCar/ChangeCarButton}    //dpp-car-selected//div[@class='vehicle-container pt-2']//a|//dpp-car-selected//div[@class='col-12 pt-2']//a
 
+${AllProdPage_ProdFilter_List}    (//dpp-product-facet-navigation//ul[@class='facets-container']//ul[1]//li//div[@class='d-flex justify-content-between align-items-center'])
 ${AllProdPageProdFilterList1stBreakdownIcon}    (//dpp-product-facet-navigation//ul[@class='facets-container']//ul[1]//li//div[@class='d-flex justify-content-between align-items-center']//cx-icon)
 #${AllProdPageProdFilterList1stBreakdownIcon}    (//dpp-product-facet-navigation//ul[@class='facets-container']//ul//li//div//cx-icon)
 ${AllProdPageProdFilterList2ndBreakdownIcon}    (//dpp-product-facet-navigation//ul[@class='facets-container']//ul//li[@class='expanded']//ul//li//div[@class='d-flex justify-content-between']//cx-icon)
 ${AllProdPageProdFilterList3rdBreakdown}    (//dpp-product-facet-navigation//ul[@class='facets-container']//ul//li[@class='expanded']//ul//ul//li//div[@class='d-flex justify-content-start']//div)
 
-
+${AllProdPage_AllProd_Label}    //dpp-product-facet-navigation//li//div[@class='d-flex py-2 justify-content-between']//div[contains(text(),'All Products')]
 
 ${AllProdPageProdSelectedFilter}    //dpp-product-facet-navigation//li[@class='selected-filter']
 ${AllProdPageProdSelectedFilterCloseButton}    //dpp-product-facet-navigation//li[@class='selected-filter']//button
 
 ${AllProdPageProdSelectedFilterSubFilterCheckBox}    (//dpp-product-facet-navigation//ul[@class='facets-container']//ul//li//div//input[not(@id='inStock')]/ancestor::div[@class='d-flex justify-content-between align-items-center'])
-
-
 
 ${AllProdPageResultPerPageDropDown}    //div[@class='page-options input-group']//span[@class='ng-arrow-wrapper']
 ${AllProdPageResultPerPageDropDown20}    //div[@role='option']//span[contains(text(),'20')]
@@ -2107,6 +2113,10 @@ ${AllProdPageAddOneButton}    (//button[@aria-label='Add one more'])
 ${AllProdPageRemoveOneButton}    (//button[@aria-label='Remove one'])
 
 
+${AllProdPage_Product_Desc_Brand_Tag}    (//div[@class='custom-product-list' or @class='product-grid-list'])[1]//div[@class='list-item__brand' or @class='brand-name']
+${AllProdPage_Product_Desc_Img}    (//div[@class='custom-product-list' or @class='product-grid-list'])[1]//div[@class='list-item__img']|(//div[@class='custom-product-list' or @class='product-grid-list'])[1]//cx-media[@format='cartIcon']
+(//div[@class='custom-product-list' or @class='product-grid-list'])[1]//div[@class='list-item__desc' or @class='product-list-results']
+
 #-----------------------------------------------------Retail All Product Page Pop Up Message
 
 ${Retail_AllProdPagePopUpMessageContainer}    //div[@class='cx-modal-content']
@@ -2128,6 +2138,8 @@ ${Retail_AllProdPagePopUpMessageSendButton}    //div[@class='cx-modal-content']/
 ${Retail_AllProdPagePopUpMessageContinueButton}    //div[@class='cx-modal-content']//button
 
 ${Retail_AllProdPageMessagePopUpUpMessageValue}    Test
+
+
 
 
 

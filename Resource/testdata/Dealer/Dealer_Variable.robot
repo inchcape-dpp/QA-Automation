@@ -90,6 +90,8 @@ ${OrderPageStatusFilterSubmitted}    //div[@class='ng-dropdown-panel-items scrol
 ${OrderPageStatusFilterDispatched}    (//div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Dispatched')])[1]
 ${OrderPageStatusFilterPartiallyDispatched}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Partially Dispatched')]
 ${OrderPageStatusFilterOrderwithReturns}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Order with Returns')]
+${OrderPageStatusFilterDelivered}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Delivered')]
+${OrderPageStatusFilterProcessing}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Processing')]
 
 ${OrderPageDateFilter}    //div[@id='dateRangePicker']
 ${OrderPageDateFilterContainer}    //ngb-datepicker[@class='dropdown-menu show']
@@ -137,24 +139,32 @@ ${OrderPageDetailsReturnLabel}    //th[@class='return-icon']
 ${OrderPageHistory1}    (//tr//td[@class='cx-order-history-code']//a[@class='cx-order-history-value'])[1]|(//tr//td[@class='cx-order-history-code'])[1]    #${variable 1-15}
 
 #-----------------------------------------------------Dealer Order Page Received
-${OrderPageReceivedContainer}    (//tr[.//td[@class='cx-order-history-total' and contains(text(),'Received')]])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Received')]])[1]
-${OrderPageReceivedPartRef}    (//tr[.//td[@class='cx-order-history-total' and contains(text(),'Received')]]//td[@class='cx-order-history-code'])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Received')]]//td[@class='cx-order-history-code'])[1]
+${OrderPageReceivedContainer}    (//tr[.//td[@class='cx-order-history-status' and contains(text(),'Received')]])[1]|(//tr[.//td[@class='cx-order-history-total']][.//div[contains(text(),'Received') or contains(text(),'已收到')]])[1]
+${OrderPageReceivedPartRef}    (//tr[.//td[@class='cx-order-history-status' and contains(text(),'Received')]]//td[@class='cx-order-history-code'])[1]|(//tr[.//td[@class='cx-order-history-total']][.//div[contains(text(),'Received') or contains(text(),'已收到')]]//td[@class='cx-order-history-code'])[1]
 
 #-----------------------------------------------------Dealer Order Page Submitted
-${OrderPageSubmittedContainer}    (//tr[.//td[@class='cx-order-history-total' and contains(text(),'Submitted')]])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Submitted')]])[1]
-${OrderPageSubmittedPartRef}    (//tr[.//td[@class='cx-order-history-total' and contains(text(),'Submitted')]]//td[@class='cx-order-history-code'])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Submitted')]]//td[@class='cx-order-history-code'])[1]
+${OrderPageSubmittedContainer}    (//tr[.//td[@class='cx-order-history-status' and contains(text(),'Submitted')]])[1]|(//tr[.//td[@class='cx-order-history-total']][.//div[contains(text(),'Submitted') or contains(text(),'已提交')]])[1]
+${OrderPageSubmittedPartRef}    (//tr[.//td[@class='cx-order-history-status' and contains(text(),'Submitted')]]//td[@class='cx-order-history-code'])[1]|(//tr[.//td[@class='cx-order-history-total']][.//div[contains(text(),'Submitted') or contains(text(),'已提交')]]//td[@class='cx-order-history-code'])[1]
 
 #-----------------------------------------------------Dealer Order Page Dispatched
-${OrderPageDispatchedContainer}    (//tr[.//td[@class='cx-order-history-total' and starts-with(text(),' Dispatched ')]])[1]|(//tr[.//td[@class='cx-order-history-status' and starts-with(text(),' Dispatched ')]])[1]
-${OrderPageDispatchedPartRef}    (//tr[.//td[@class='cx-order-history-total' and starts-with(text(),' Dispatched ')]]//td[@class='cx-order-history-code'])[1]|(//tr[.//td[@class='cx-order-history-status' and starts-with(text(),' Dispatched ')]]//td[@class='cx-order-history-code'])[1]
+${OrderPageDispatchedContainer}    (//tr[.//td[@class='cx-order-history-status' and starts-with(text(),' Dispatched ')]])[1]|(//tr[.//td[@class='cx-order-history-total']][.//div[contains(text(),'Dispatched') or contains(text(),'已出貨')]])[1]
+${OrderPageDispatchedPartRef}    (//tr[.//td[@class='cx-order-history-status' and starts-with(text(),' Dispatched ')]]//td[@class='cx-order-history-code'])[1]|(//tr[.//td[@class='cx-order-history-total']][.//div[contains(text(),'Dispatched') or contains(text(),'已出貨')]]//td[@class='cx-order-history-code'])[1]
 
 #-----------------------------------------------------Dealer Order Page Partially Dispatched
-${OrderPagePartiallyDispatchedContainer}    (//tr[.//td[@class='cx-order-history-total' and starts-with(text(),' Partially Dispatched ')]])[1]|(//tr[.//td[@class='cx-order-history-status' and starts-with(text(),' Partially Dispatched ')]])[1]
-${OrderPagePartiallyDispatchedPartRef}    (//tr[.//td[@class='cx-order-history-total' and starts-with(text(),' Partially Dispatched ')]]//td[@class='cx-order-history-code'])[1]|(//tr[.//td[@class='cx-order-history-status' and starts-with(text(),' Partially Dispatched ')]]//td[@class='cx-order-history-code'])[1]
+${OrderPagePartiallyDispatchedContainer}    (//tr[.//td[@class='cx-order-history-status' and starts-with(text(),' Partially Dispatched ')]])[1]
+${OrderPagePartiallyDispatchedPartRef}    (//tr[.//td[@class='cx-order-history-status' and starts-with(text(),' Partially Dispatched ')]]//td[@class='cx-order-history-code'])[1]
 
 #-----------------------------------------------------Dealer Order Page Orders with Returns
-${OrderPageOrderwithReturnContainer}    (//tr[.//td[@class='cx-order-history-total']][.//cx-icon[@class='cx-icon dpp-icons__returns-request']])[1]|(//tr[.//td[@class='cx-order-history-status']][.//cx-icon[@class='cx-icon dpp-icons__returns-request']])[1]
-${OrderPageOrderwithReturnPartRef}    (//tr[.//td[@class='cx-order-history-total']][.//cx-icon[@class='cx-icon dpp-icons__returns-request']]//td[@class='cx-order-history-code'])[1]|(//tr[.//td[@class='cx-order-history-status']][.//cx-icon[@class='cx-icon dpp-icons__returns-request']]//td[@class='cx-order-history-code'])[1]
+${OrderPageOrderwithReturnContainer}    (//tr[.//td[@class='cx-order-history-status']][.//cx-icon[@class='cx-icon dpp-icons__returns-request']])[1]
+${OrderPageOrderwithReturnPartRef}    (//tr[.//td[@class='cx-order-history-status']][.//cx-icon[@class='cx-icon dpp-icons__returns-request']]//td[@class='cx-order-history-code'])[1]
+
+#-----------------------------------------------------Dealer Order Page Delivered
+${OrderPageDeliveredContainer}    (//tr[.//td[@class='cx-order-history-total']][.//div[contains(text(),'Delivered') or contains(text(),'已送達')]])[1]
+${OrderPageDeliveredPartRef}    (//tr[.//td[@class='cx-order-history-total']][.//div[contains(text(),'Delivered') or contains(text(),'已送達')]]//td[@class='cx-order-history-code'])[1]
+
+#-----------------------------------------------------Dealer Order Page Processing
+${OrderPageProcessingContainer}    (//tr[.//td[@class='cx-order-history-total']][.//div[contains(text(),'Processing') or contains(text(),'處理中')]])[1]
+${OrderPageProcessingPartRef}    (//tr[.//td[@class='cx-order-history-total']][.//div[contains(text(),'Processing') or contains(text(),'處理中')]]//td[@class='cx-order-history-code'])[1]
 
 
 ${OrderPageDetailsPreviousPageButton}    //a[@aria-label='previous page']
@@ -178,6 +188,9 @@ ${OrderDetailsContainerCustAccLabel}    (//div[@class='details']//div[@class='co
 ${OrderDetailsContainerCustOrderNumLabel}    (//div[@class='details']//div[@class='col-12 col-md-5' or @class='col-4'])[4]
 ${OrderDetailsContainerYourRefLabel}    (//div[@class='details']//div[@class='col-12 col-md-5' or @class='col-4'])[5]
 ${OrderDetailsContainerOrderDateLabel}    (//div[@class='col-12 col-md-5' or @class='col-4'])[6]
+${OrderDetailsContainerPaymentMethondLabel}    (//div[@class='details']//div[@class='col-12 col-md-5' or @class='col-4'])[7]
+${OrderDetailsContainerDeliveryMethodLabel}    (//div[@class='details']//div[@class='col-12 col-md-5' or @class='col-4'])[8]
+
 
 ${OrderDetailsBackButton}    //span[contains(text(),'Back to Customer Orders')]
 
@@ -187,6 +200,8 @@ ${OrderDetailsContainerCustAccValue}    (//div[@class='order-details-container']
 ${OrderDetailsContainerCustOrderNumValue}    (//div[@class='order-details-container']//span)[4]
 ${OrderDetailsContainerYourRefValue}    (//div[@class='order-details-container']//span)[5]
 ${OrderDetailsContainerOrderDateValue}    (//div[@class='order-details-container']//span)[6]
+${OrderDetailsContainerPaymentMethondValue}    (//div[@class='order-details-container']//span)[8]
+${OrderDetailsContainerDeliveryMethodValue}    (//div[@class='order-details-container']//span)[9]
 
 ${OrderDetailsReturnContainer}    //div[@class='order-details-items-table return-order-items']
 
@@ -216,7 +231,7 @@ ${ReturnPageTotalReturnRequests}    //h3[@class='return-requests-heading']//span
 ${ReturnPageFilterRow}    //dpp-return-request-list//div[@class='row']
 
 ${ReturnPageStatusFilter}    //div[@class='col-11 col-md-3 pr-lg-0 pr-1 pr-md-1 pl-0 pl-md-3' or @class='col-10 col-sm-10 col-md-3 pr-lg-0 pr-0 pr-md-1 pl-0 pl-md-3']//div[@class='ng-select-container ng-has-value']
-${RetrunPageStatusFilterALL}    //div[@class='col-11 col-md-3 pr-lg-0 pr-1 pr-md-1 pl-0 pl-md-3' or @class='col-10 col-sm-10 col-md-3 pr-lg-0 pr-0 pr-md-1 pl-0 pl-md-3']//div[@role='option']//span[contains(text(),'All')]
+${RetrunPageStatusFilterALL}    //div[@class='col-11 col-md-3 pr-lg-0 pr-1 pr-md-1 pl-0 pl-md-3' or @class='col-10 col-sm-10 col-md-3 pr-lg-0 pr-0 pr-md-1 pl-0 pl-md-3']//div[@role='option']//span[contains(text(),'All') or contains(text(),'ALL')]
 ${RetrunPageStatusFilterAccepted}    //div[@class='col-11 col-md-3 pr-lg-0 pr-1 pr-md-1 pl-0 pl-md-3' or @class='col-10 col-sm-10 col-md-3 pr-lg-0 pr-0 pr-md-1 pl-0 pl-md-3']//div[@role='option']//span[contains(text(),'Accepted')]
 ${RetrunPageStatusFilterDeclined}    //div[@class='col-11 col-md-3 pr-lg-0 pr-1 pr-md-1 pl-0 pl-md-3' or @class='col-10 col-sm-10 col-md-3 pr-lg-0 pr-0 pr-md-1 pl-0 pl-md-3']//div[@role='option']//span[contains(text(),'Declined')]
 ${RetrunPageStatusFilterInProgress}    //div[@class='col-11 col-md-3 pr-lg-0 pr-1 pr-md-1 pl-0 pl-md-3' or @class='col-10 col-sm-10 col-md-3 pr-lg-0 pr-0 pr-md-1 pl-0 pl-md-3']//div[@role='option']//span[contains(text(),'In Progress')]
@@ -311,10 +326,10 @@ ${ReturnPageOrderReturnDataSectionContainer}    //div[@class='cancel-order-conta
 ${ReturnPageOrderReturnDataSectionReasonLabel}    //div[@class='form-group']//span[@class='label-content']
 ${ReturnPageOrderReturnDataSectionReasonSelection}    //div[@class='ng-select-container ng-has-value']
 ${ReturnPageOrderReturnDataSectionQtyLabel}    //div[@class='form-group']//span[@class='label-content qty-return']
-${ReturnPageOrderReturnDataSectionQtyValue}    //div[@class='col-3 pl-0']//input
-${ReturnPageOrderReturnDataSectionNoteLabel}    //div[@class='form-group col-12']//span[@class='label-content']
-${ReturnPageOrderReturnDataSectionNoteTextField}    //div[@class='form-group col-12']//textarea
-${ReturnPageOrderReturnDataSectionImageLabel}    //div[@class='form-group pl-0 col-12']//label
+${ReturnPageOrderReturnDataSectionQtyValue}    //div[@class='col-md-3']//input
+${ReturnPageOrderReturnDataSectionNoteLabel}    //div[@class='col-md-6 pr-sm-0']//span[@class='label-content']
+${ReturnPageOrderReturnDataSectionNoteTextField}    //div[@class='col-md-6 pr-sm-0']//textarea
+${ReturnPageOrderReturnDataSectionImageLabel}    //div[@class='col-md-6']//label
 ${ReturnPageOrderReturnDataSectionImageField}    //div[@class='d-flex image-section']
 
 ${ReturnPageOrderReturnApproveRejectContainer}     //div[@class='approve-reject-contanier']
@@ -487,6 +502,21 @@ ${CustRelPageCheckbox}    (//td[@class='chkbox']//input[@type='checkbox'])[1]
 ${CustRelPageModal}    //div[@class='cx-modal-content']
 ${CustRelPageModalYes}    //div[@class='cx-dialog-row text-center']//button[contains(text(),'Yes')]
 ${CustRelPageModalNo}    //div[@class='cx-dialog-row text-center']//button[contains(text(),'No')]
+
+${Dealer_HK_BuyerRel_Details_Header}    //thead
+${Dealer_HK_BuyerRel_Details_Header_CutomerName_Label}    //thead//th//span[contains(text(),'Customer Name')]
+${Dealer_HK_BuyerRel_Details_Header_PartsClub_Label}    //thead//th//span[contains(text(),'Parts Club')]
+${Dealer_HK_BuyerRel_Details_Header_ADP_Label}    //thead//th//span[contains(text(),'ADP')]
+${Dealer_HK_BuyerRel_Details_Header_MemberTier_Label}    //thead//th//span[contains(text(),'Membership')]
+${Dealer_HK_BuyerRel_Details_Header_Active_Label}    //thead//th//span[contains(text(),'Active')]
+
+
+${Dealer_HK_BuyerRel_Edit_Button}    //tbody//tr[1]//td//input[@formcontrolname='active']
+
+${Dealer_HK_BuyerRel_Edit_Button}    //tbody//tr[1]//span[contains(text(),'Edit')]
+
+
+
 
 #-----------------------------------------------------Dealer Message Page-----------------------------------------------
 ${MessagePagePanelContainer}    //dpp-message-list

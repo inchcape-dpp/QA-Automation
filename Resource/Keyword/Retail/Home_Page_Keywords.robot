@@ -584,6 +584,8 @@ User should be albe to Input Search VIN1 in HK Retail Home Page
     capture element screenshot    ${Retail_HK_HomePage_SearchVIN_TextBox}
     sleep    2
 
+    element should not be visible
+
 User should be albe to Input Search VIN2 in HK Retail Home Page
     wait until element is visible    ${Retail_HK_HomePage_SearchVIN_TextBox}    10
     clear element text    ${Retail_HK_HomePage_SearchVIN_TextBox}
@@ -763,6 +765,33 @@ User should be able to view EPC Search Result Pop Up Modal in HK Retail Home Pag
     sleep    2
 
 User should be able to view EPC Search Result Pop Up Modal Elements in HK Retail Home Page
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Container}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Model}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ModelCode_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ModelCode_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Transmission_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Transmission_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Period_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Period_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Engine_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Engine_Value}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ProductionDate_Label}    10
+    wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ProductionDate_Value}    10
+
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Container}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Model}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ModelCode_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ModelCode_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Transmission_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Transmission_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Period_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Period_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Engine_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Engine_Value}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ProductionDate_Label}
+    capture element screenshot    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ProductionDate_Value}
+
+User should be able to view EPC VIN Search Result Pop Up Modal Elements in HK Retail Home Page
     wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Container}    10
     wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_VIN_Value}    10
     wait until element is visible    ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Model}    10
