@@ -113,6 +113,22 @@ TC0-042 - Show number of product list
 #    [Tags]    EPC    L2
 #    run keyword and continue on failure    User should be able to select random Schema in HK Retail EPC L2 Page
 
+TC-015 - User should be able to select random Schema in HK Retail EPC L2 Page
+    [Tags]    EPC    L3
+    run keyword and continue on failure    User should be able to view EPC L3 Page in HK Retail EPC L3 Page
+
+TC-016 - User should be able to view Parts List Card and Diagram in HK Retail EPC L3 Page
+    [Tags]    EPC    L3
+    run keyword and continue on failure    User should be able to view Parts List Card and Diagram in HK Retail EPC L3 Page
+
+TC-017 - User should be able to view Parts List Card and Diagram in HK Retail EPC L3 Page
+    [Tags]    EPC    L3
+    run keyword and continue on failure    User should be able to view one Card on the Parts Card List in HK Retail EPC L3 Page
+    run keyword and continue on failure    User should be able to expand one Card on the Parts Card List in HK Retail EPC L3 Page
+    run keyword and continue on failure    User should be able to view Option Card Details on the Parts Card List in HK Retail EPC L3 Page
+
+
+
 
 
 
@@ -126,9 +142,9 @@ TC0-042 - Show number of product list
 #    run keyword and continue on failure    Browse Back Button
 
 
-#TC-000000 - User should be able to logout
-#    [Tags]    TC009    Logout
-#    run keyword and continue on failure    User should be able to logout
+TC-000000 - User should be able to logout
+    [Tags]    TC009    Logout
+    run keyword and continue on failure    User should be able to logout using double header
 #
 #Test Teardown
 #    Run Keywords  Close Browser

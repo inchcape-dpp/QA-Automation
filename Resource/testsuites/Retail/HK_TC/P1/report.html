@@ -5,16 +5,60 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Robot Framework 6.1.1 (Python 3.11.4 on win32)" name="Generator">
+<meta content="Robot Framework 7.0 (Python 3.11.4 on win32)" name="Generator">
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
-<style media="all" type="text/css">
+<style media="all">
+:root {
+    --text-color: black;
+    --background-color: white;
+    --primary-color: #ddd;
+    --secondary-color: #ccc;
+    --link-color: #15c;
+    --link-hover-color: #61c;
+    --highlight-color: #eee;
+    --target-color: #f9f9f9;
+    --pass-color: #97bd61;
+    --fail-color: #ce3e01;
+    --warn-color: #fed84f;
+    --pass-link-color: #098a09;
+    --warn-link-color: #927201;
+    --fail-link-color: #ce3e01;
+    --ascending-icon: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==);
+    --descending-icon: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==);
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
+}
+[data-theme="dark"] {
+    --text-color: #e2e1d7;
+    --background-color: #1c2227;
+    --primary-color: #26373b;
+    --secondary-color: #424f5a;
+    --link-color: #8cc4ff;
+    --link-hover-color: #bb86fc;
+    --highlight-color: #002b36;
+    --target-color: #1a252e;
+    --pass-link-color: #97bd61;
+    --warn-link-color: #fed84f;
+    --fail-link-color: #ff9b8f;
+    --ascending-icon: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJAgMAAACZCj6+AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAlQTFRFAAAAfn5+////f/cqYgAAAAN0Uk5TAP//RFDWIQAAACdJREFUeJxjYHBgYGAMYGBgDWFgEA1lAAOtVQwMXCsYGJgWADkNDAA78QP9oKr7vwAAAABJRU5ErkJggg==);
+    --descending-icon: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJAgMAAACZCj6+AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAlQTFRFAAAA////fn5+K6jOaAAAAAN0Uk5TAP//RFDWIQAAACdJREFUeJxjYHBgYGAMYGBgDWFgEA1lAAOtVQwMXCsYGJgWADkNDAA78QP9oKr7vwAAAABJRU5ErkJggg==);
+}
 /* Generic and misc styles */
 body {
     font-family: Helvetica, sans-serif;
     font-size: 0.8em;
-    color: black;
+    color: black; /* Fallback value */
+    color: var(--text-color);
     padding: 6px;
-    background: white;
+    background: white; /* Fallback value */
+    background: var(--background-color);
+    margin-left: 15px;
+}
+body[theme-toggled] {
+    transition: background 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 table {
     table-layout: fixed;
@@ -29,20 +73,37 @@ br {
     mso-data-placement: same-cell; /* maintain line breaks in Excel */
 }
 hr {
-    background: #ccc;
+    background: #ccc; /* Fallback value */
+    background: var(--secondary-color);
     height: 1px;
     border: 0;
 }
 a, a:link, a:visited {
     text-decoration: none;
-    color: #15c;
+    color: #15c; /* Fallback value */
+    color: var(--link-color);
 }
 a > img {
-    border: 1px solid #15c !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: #15c !important; /* Fallback value */
+    border-color: var(--link-color) !important;
 }
 a:hover, a:active {
     text-decoration: underline;
-    color: #61c;
+    color: #61c; /* Fallback value */
+    color: var(--link-hover-color);
+}
+select {
+    background-color: white; /* Fallback value */
+    background-color: var(--background-color);
+    color: black; /* Fallback value */
+    color: var(--text-color);
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
+    border-radius: 4px;
 }
 .parent-name {
     font-size: 0.7em;
@@ -55,7 +116,7 @@ a:hover, a:active {
 #header {
     width: 65em;
     height: 3em;
-    margin: 6px 0;
+    margin: 20px 0 6px 0;
 }
 h1 {
     float: left;
@@ -83,14 +144,17 @@ h2 {
 }
 /* Status text colors -- !important allows using them in links */
 .fail {
-    color: #ce3e01 !important;
+    color: #ce3e01 !important; /* Fallback value */
+    color: var(--fail-link-color) !important;
     font-weight: bold;
 }
 .pass {
-    color: #098a09 !important;
+    color: #098a09 !important; /* Fallback value */
+    color: var(--pass-link-color) !important;
 }
 .skip {
-    color: #927201 !important;
+    color: #927201 !important; /* Fallback value */
+    color: var(--warn-link-color) !important;
     font-weight: bold;
 }
 .label {
@@ -98,8 +162,10 @@ h2 {
     font-size: 0.75em;
     letter-spacing: 1px;
     white-space: nowrap;
-    color: black;
-    background-color: #ddd;
+    color: black; /* Fallback value */
+    color: var(--text-color);
+    background-color: #ddd; /* Fallback value */
+    background-color: var(--primary-color);
     border-radius: 3px;
 }
 .label.debug, .label.trace, .label.error, .label.keyword {
@@ -109,15 +175,18 @@ h2 {
     font-weight: bold;
 }
 .label.pass {
-    background-color: #97bd61;
+    background-color: #97bd61; /* Fallback value */
+    background-color: var(--pass-color);
     color: #000 !important;
 }
 .label.fail, .label.error {
-    background-color: #ce3e01;
+    background-color: #ce3e01; /* Fallback value */
+    background-color: var(--fail-color);
     color: #fff !important;
 }
 .label.skip, .label.warn {
-    background-color: #fed84f;
+    background-color: #fed84f; /* Fallback value */
+    background-color: var(--warn-color);
     color: #000 !important;
 }
 /* Top right header */
@@ -146,7 +215,8 @@ h2 {
     padding: 0.3em 0;
     font-size: 0.9em;
     border-bottom-left-radius: 4px;
-    background: #ddd;
+    background: #ddd; /* Fallback value */
+    background: var(--primary-color);
 }
 /* Statistics table */
 .statistics {
@@ -156,15 +226,20 @@ h2 {
     margin-bottom: 1em;
 }
 .statistics tr:hover {
-    background: #f4f4f4;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
     cursor: pointer;
 }
 .statistics th, .statistics td {
-    border: 1px solid #ccc;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
     padding: 0.1em 0.3em;
 }
 .statistics th {
-    background-color: #ddd;
+    background-color: #ddd; /* Fallback value */
+    background-color: var(--primary-color);
     padding: 0.2em 0.3em;
 }
 .statistics td {
@@ -200,27 +275,33 @@ th.stats-col-graph:hover {
 }
 /* Statistics graph */
 .graph, .empty-graph {
-    border: 1px solid #ccc;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
     width: auto;
     height: 7px;
     padding: 0;
-    background: #aaa;
 }
 .empty-graph {
-    background: #eee;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
 }
 .pass-bar, .fail-bar, .skip-bar {
     float: left;
     height: 100%;
 }
 .fail-bar {
-    background: #ce3e01;
+    background: #ce3e01; /* Fallback value */
+    background: var(--fail-color);
 }
 .pass-bar {
-    background: #97bd61;
+    background: #97bd61; /* Fallback value */
+    background: var(--pass-color);
 }
 .skip-bar {
-    background: #fed84f;
+    background: #fed84f; /* Fallback value */
+    background: var(--warn-color);
 }
 /* Tablesorter - adapted from provided Blue Skin */
 .tablesorter-header {
@@ -230,47 +311,103 @@ th.stats-col-graph:hover {
     cursor: pointer;
 }
 .tablesorter-header:hover {
-    background-color: #ccc;
+    background-color: #ccc; /* Fallback value */
+    background-color: var(--secondary-color);
 }
 .tablesorter-headerAsc {
-    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==);
-    background-color: #ccc !important;
+    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==); /* Fallback value */
+    background-image: var(--ascending-icon);
+    background-color: #ccc !important; /* Fallback value */
+    background-color: var(--secondary-color) !important;
 }
 .tablesorter-headerDesc {
-    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==);
-    background-color: #ccc !important;
+    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==); /* Fallback value */
+    background-image: var(--descending-icon);
+    background-color: #ccc !important; /* Fallback value */
+    background-color: var(--secondary-color) !important;
 }
 .sorter-false {
     background-image: none;
     cursor: default;
 }
 .sorter-false:hover {
-    background-color: #ddd;
+    background-color: #ddd; /* Fallback value */
+    background-color: var(--primary-color);
+}
+#theme-toggle {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 28px;
+    height: 28px;
+    border: none;
+    padding: 4px;
+    z-index: 1000;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background: var(--highlight-color);
+}
+[data-theme="dark"] .dark-mode-icon,
+[data-theme="light"] .light-mode-icon {
+    display: none;
+}
+[data-theme="dark"] .light-mode-icon,
+[data-theme="light"] .dark-mode-icon {
+    display: block;
+}
+@keyframes highlight {
+    0% {
+        background: var(--primary-color)
+    }
+    100% {
+        background: var(--target-color);
+    }
+}
+:target {
+    background: var(--target-color);
+    transition: background 0.3s;
+    animation: highlight 4s;
 }
 </style>
-<style media="all" type="text/css">
+<style media="all">
+:root {
+    --col-toggle-color: #6c6c6c; /* same as in sort icon */
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --col-toggle-color: #adadad;
+    }
+}
 /* Generic table styles */
 table {
     margin: 0 1px;
-    background: white;
+    background: white; /* Fallback value */
+    background: var(--background-color);
 }
 tr {
-    background: white;
+    background: white; /* Fallback value */
+    background: var(--background-color);
 }
 th {
-    background: #ddd;
-    color: black;
+    background: #ddd; /* Fallback value */
+    background: var(--primary-color);
+    color: black; /* Fallback value */
+    color: var(--text-color);
 }
 /* Summary and total/tag/suite details */
 .details {
-    border: 1px solid #ccc;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
+    border-width: 1px;
+    border-style: solid;
     border-spacing: 0.2em;
     clear: both;
     width: 65em;
     margin-bottom: 1em;
 }
 .details th {
-    background: white;
+    background: white; /* Fallback value */
+    background: var(--background-color);
     width: 11em;
     text-align: left;
     vertical-align: top;
@@ -297,8 +434,30 @@ th {
     display: none;
 }
 /* Search */
+input[type='submit'], input[type='button'] {
+    background-color: #ddd; /* Fallback value */
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    border: 0;
+    padding: 4px 6px 4px 6px;
+    color: black; /* Fallback value */
+    color: var(--text-color);
+}
+input[type='submit']:hover, input[type='button']:hover {
+    background-color: #ccc; /* Fallback value */
+    background-color: var(--secondary-color);
+}
 #search-suite, #search-test, #search-include, #search-exclude {
     width: 25em;
+    background-color: white; /* Fallback value */
+    background-color: var(--background-color);
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 2px;
+    color: black; /* Fallback value */
+    color: var(--text-color);
 }
 #search a:hover {
     text-decoration: none;
@@ -306,8 +465,12 @@ th {
 #search-help div {
     margin: 0.5em 0.5em 0.7em 0;
     padding: 0.7em;
-    background: #eee;
-    border: 1px solid #ccc;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
+    border-width: 1px;
+    border-style: solid;
     border-radius: 3px;
 }
 #search-help h3, #search-help p {
@@ -342,18 +505,24 @@ th {
 }
 .detail-tab {
     float: left;
-    background: #ddd;
-    border: 1px solid #ccc;
+    background: #ddd; /* Fallback value */
+    background: var(--primary-color);
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
+    border-width: 1px;
+    border-style: solid;
     border-bottom-width: 0;
     margin: 0 0.5em 0 0;
     padding-top: 0.1em;
     border-radius: 3px 3px 0 0;
 }
 .detail-tab:hover {
-    background: #ccc;
+    background: #ccc; /* Fallback value */
+    background: var(--secondary-color);
 }
 .detail-tab a {
-    color: black;
+    color: black; /* Fallback value */
+    color: var(--text-color);
     text-decoration: none;
     font-weight: bold;
     padding: 0 1em;
@@ -361,19 +530,23 @@ th {
 .detail-tab-selected {
     position: relative;
     top: 1px;
-    background: white;
+    background: white; /* Fallback value */
+    background: var(--background-color);
 }
 .detail-tab-selected:hover {
-    background: white;
+    background: white; /* Fallback value */
+    background: var(--background-color);
 }
 /* Test details table */
 #test-details {
     width: 100%;
     border-spacing: 1px;
-    background-color: #ccc;
+    background-color: #ccc; /* Fallback value */
+    background-color: var(--secondary-color);
 }
 #test-details > tbody > tr:hover {
-    background: #f4f4f4;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
     cursor: pointer;
 }
 #test-details th, #test-details td {
@@ -388,11 +561,13 @@ th {
 }
 .details-col-toggle {
     float: left;
-    color: #6c6c6c; /* same as in sort icon */
+    color: #6c6c6c; /* Fallback value */
+    color: var(--col-toggle-color);
     cursor: pointer;
 }
 .details-col-toggle:hover {
-    color: black;
+    color: black; /* Fallback value */
+    color: var(--text-color);
 }
 .details-col-name {
     min-width: 20em;
@@ -433,10 +608,18 @@ th {
     background-image: none;
 }
 th.hidden:hover {
-    background-color: #ccc;
+    background-color: #ddd; /* Fallback value */
+    background-color: var(--primary-color);
+}
+#status-bar {
+    height: 100%;
+    width: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 </style>
-<style media="print" type="text/css">
+<style media="print">
 body {
     background: white !important;
     padding: 0;
@@ -476,7 +659,7 @@ a:link, a:visited {
     background: #ddd !important;
 }
 </style>
-<style media="all" type="text/css">
+<style media="all">
 #javascript-disabled {
     width: 600px;
     margin: 100px auto 0 auto;
@@ -499,7 +682,7 @@ a:link, a:visited {
     font-style: italic;
 }
 </style>
-<style media="all" type="text/css">
+<style media="all">
 .doc > * {
     margin: 0.7em 1em 0.1em 1em;
     padding: 0;
@@ -511,14 +694,12 @@ a:link, a:visited {
     margin-top: 0.1em;
 }
 .doc table {
-    border: 1px solid #ccc;
     background: transparent;
     border-collapse: collapse;
     empty-cells: show;
     font-size: 0.9em;
 }
 .doc table th, .doc table td {
-    border: 1px solid #ccc;
     background: transparent;
     padding: 0.1em 0.3em;
     height: 1.2em;
@@ -528,24 +709,32 @@ a:link, a:visited {
     letter-spacing: 0.1em;
 }
 .doc pre {
+    border-radius: 2px;
     font-size: 1.1em;
     letter-spacing: 0.05em;
-    background: #f4f4f4;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
 }
 .doc code {
+    border-radius: 2px;
     padding: 0 0.2em;
     letter-spacing: 0.05em;
-    background: #eee;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
 }
 .doc li {
     list-style-position: inside;
     list-style-type: square;
 }
-.doc img {
-    border: 1px solid #ccc;
+.doc img, .doc table, .doc table th, .doc table td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
 }
 .doc hr {
-    background: #ccc;
+    background: #ccc; /* Fallback value */
+    background: var(--secondary-color);
     height: 1px;
     border: 0;
 }
@@ -642,7 +831,6 @@ window.model = (function () {
         suite.populateSuites = createIterablePopulator('Suite');
         suite.childrenNames = ['keyword', 'suite', 'test'];
         suite.callWhenChildrenReady = function (callable) { callable(); };
-        suite.message = data.message;
         suite.children = function () {
             return suite.keywords().concat(suite.tests()).concat(suite.suites());
         };
@@ -733,6 +921,7 @@ window.model = (function () {
             name: data.name,
             doc: data.doc,
             status: data.status,
+            message: data.message,
             times: data.times,
             id: data.parent ? data.parent.id + '-' + data.id : data.id
         };
@@ -753,7 +942,6 @@ window.model = (function () {
                 return test.keywords();
         };
         test.tags = data.tags;
-        test.message = data.message;
         test.matchesTagPattern = function (pattern) {
             return containsTagPattern(test.tags, pattern);
         };
@@ -764,13 +952,12 @@ window.model = (function () {
     }
     function Keyword(data) {
         var kw = createModelObject(data);
-        var flatTypes = ['RETURN', 'BREAK', 'CONTINUE'];
         kw.libname = data.libname;
         kw.fullName = (kw.libname ? kw.libname + '.' : '') + kw.name;
         kw.type = data.type;
         kw.template = 'keywordTemplate';
         kw.arguments = data.args;
-        kw.assign = data.assign + (data.assign ? ' =' : '');
+        kw.assign = data.assign + (data.assign ? ' =  ' : '');
         kw.tags = data.tags;
         kw.timeout = data.timeout;
         kw.populateKeywords = createIterablePopulator('Keyword');
@@ -1149,8 +1336,9 @@ window.testdata = function () {
     var _statistics = null;
     var LEVELS = ['TRACE', 'DEBUG', 'INFO', 'WARN', 'ERROR', 'FAIL', 'SKIP'];
     var STATUSES = ['FAIL', 'PASS', 'SKIP', 'NOT RUN'];
-    var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'ITERATION', 'IF', 'ELSE IF', 'ELSE', 'RETURN',
-                         'TRY', 'EXCEPT', 'FINALLY', 'WHILE', 'CONTINUE', 'BREAK', 'ERROR'];
+    var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'ITERATION', 'IF',
+                         'ELSE IF', 'ELSE', 'RETURN', 'VAR', 'TRY', 'EXCEPT', 'FINALLY',
+                         'WHILE', 'CONTINUE', 'BREAK', 'ERROR'];
     function addElement(elem) {
         if (!elem.id)
             elem.id = uniqueId();
@@ -1193,6 +1381,7 @@ window.testdata = function () {
         return createKeyword(parent, element, strings, index - messages.length);
     }
     function createKeyword(parent, element, strings, index) {
+        var status = element[8];
         var kw = model.Keyword({
             parent: parent,
             type: KEYWORD_TYPES[element[0]],
@@ -1208,7 +1397,12 @@ window.testdata = function () {
                 this.doc = function () { return doc; };
                 return doc;
             },
-            status: parseStatus(element[8], strings),
+            status: parseStatus(status),
+            message: function () {
+                var msg = status.length == 4 ? strings.get(status[3]) : '';
+                this.message = function () { return msg; };
+                return msg;
+            },
             times: model.Times(times(element[8])),
             isChildrenLoaded: typeof(element[9]) !== 'number'
         });
@@ -1419,6 +1613,20 @@ window.testdata = function () {
 }();
 </script>
 <script type="text/javascript">
+const lightModeIcon = `
+<svg class="light-mode-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+    viewBox="0 0 24 24" fill="var(--text-color)">
+    <rect fill="none" height="24" width="24" />
+    <path
+        d="M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0 c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2 c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1 C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06 c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41 l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41 c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36 c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z" />
+</svg>`
+const darkModeIcon = `
+<svg class="dark-mode-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+    viewBox="0 0 24 24" fill="var(--text-color)">
+    <rect fill="none" height="24" width="24" />
+    <path
+        d="M11.01,3.05C6.51,3.54,3,7.36,3,12c0,4.97,4.03,9,9,9c4.63,0,8.45-3.5,8.95-8c0.09-0.79-0.78-1.42-1.54-0.95 c-0.84,0.54-1.84,0.85-2.91,0.85c-2.98,0-5.4-2.42-5.4-5.4c0-1.06,0.31-2.06,0.84-2.89C12.39,3.94,11.9,2.98,11.01,3.05z" />
+</svg>`
 function removeJavaScriptDisabledWarning() {
     // Not using jQuery here for maximum speed
     document.getElementById('javascript-disabled').style.display = 'none';
@@ -1454,6 +1662,10 @@ function setTitle(suiteName, type) {
 function addHeader() {
     var generated = util.timestamp(window.output.generated);
     $.tmpl('<h1>${title}</h1>' +
+           '<button id=theme-toggle>' +
+             lightModeIcon +
+             darkModeIcon +
+           '</button>' +
            '<div id="generated">' +
              '<span>Generated<br>${generated}</span><br>' +
              '<span id="generated-ago">${ago} ago</span>' +
@@ -1465,6 +1677,7 @@ function addHeader() {
         ago: util.createGeneratedAgoString(generated),
         title: document.title
     }).appendTo($('#header'));
+    document.getElementById('theme-toggle')?.addEventListener('click', theme.onClick);
 }
 function addReportOrLogLink(myType) {
     var url;
@@ -1593,13 +1806,65 @@ function stopPropagation(event) {
     if (event.stopPropagation)
         event.stopPropagation();
 }
+const theme = function () {
+    const storageKey = 'theme-preference';
+    const urlParams = new URLSearchParams(window.location.search);
+    var storage;
+    var theme;
+    function init(givenStorage) {
+        storage = givenStorage;
+        theme = { value: getPreference() };
+        document.body.setAttribute('data-theme', theme.value);
+        reflectPreference();
+        window.matchMedia('(prefers-color-scheme: dark)')
+            .addEventListener('change', ({matches:isDark}) => {
+                theme.value = isDark ? 'dark' : 'light';
+                setPreference();
+            });
+        window.addEventListener('storage', ({key, newValue}) => {
+            if (key === storage.fullKey(storageKey)) {
+                theme.value = newValue === 'dark' ? 'dark' : 'light';
+                setPreference();
+            }
+        });
+    }
+    function getPreference() {
+        if (urlParams.has('theme')) {
+            var urlTheme = urlParams.get('theme') === 'dark' ? 'dark' : 'light';
+            storage.set(storageKey, urlTheme);
+            urlParams.delete('theme');
+            return urlTheme;
+        }
+        if (storage.get(storageKey))
+            return storage.get(storageKey) === 'dark' ? 'dark' : 'light';
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    function setPreference() {
+        storage.set(storageKey, theme.value);
+        reflectPreference();
+    }
+    function reflectPreference() {
+        document.body.setAttribute('data-theme', theme.value);
+        document.querySelector('#theme-toggle')?.setAttribute('aria-label', theme.value);
+        const event = new Event('theme-change', {value: theme.value});
+        document.dispatchEvent(event);
+    }
+    function onClick() {
+        theme.value = theme.value === 'light' ? 'dark' : 'light';
+        document.body.setAttribute('theme-toggled', "");
+        setPreference();
+    }
+    return {init: init, getPreference: getPreference, setPreference: setPreference,
+        reflectPreference: reflectPreference, onClick: onClick};
+}();
 </script>
 <script type="text/javascript">
 storage = function () {
     var prefix = 'robot-framework-';
     var storage;
     function init(user) {
-        prefix += user + '-';
+        if (user)
+            prefix += user + '-';
         storage = getStorage();
     }
     function getStorage() {
@@ -1613,38 +1878,41 @@ storage = function () {
             return {};
         }
     }
-    function get(name, defaultValue) {
-        var value = storage[prefix + name];
+    function get(key, defaultValue) {
+        var value = storage[fullKey(key)];
         if (typeof value === 'undefined')
             return defaultValue;
         return value;
     }
-    function set(name, value) {
-        storage[prefix + name] = value;
+    function set(key, value) {
+        storage[fullKey(key)] = value;
     }
-    return {init: init, get: get, set: set};
+    function fullKey(key) {
+        return prefix + key;
+    }
+    return {init: init, get: get, set: set, fullKey: fullKey};
 }();
 </script>
 <script type="text/javascript">
 window.output = {};
 </script>
 <script type="text/javascript">
-window.output["suite"] = [1,2,3,4,[],[0,0,624679],[],[[5,0,0,[],[1,694,4364],[]],[6,0,0,[],[1,5059,6],[]],[7,0,0,[8,9],[1,5066,25674],[]],[10,0,0,[8],[1,30741,2220],[]],[11,0,0,[8],[1,32962,2161],[]],[12,0,0,[8],[1,35125,12094],[]],[13,0,0,[14],[1,47220,2952],[]],[15,0,0,[16],[0,50174,7334,17],[]],[18,0,0,[16],[1,57509,9857],[]],[19,0,0,[20],[1,67368,11545],[]],[21,0,0,[22],[1,78914,16124],[]],[23,0,0,[24],[1,95039,16403],[]],[25,0,0,[26],[1,111444,10617],[]],[27,0,0,[28],[1,122063,11681],[]],[29,0,0,[30],[1,133745,11417],[]],[31,0,0,[32],[0,145164,20338,33],[]],[34,0,0,[14],[1,165503,13452],[]],[35,0,0,[36],[1,178956,10826],[]],[37,0,0,[36],[1,189783,15317],[]],[38,0,0,[36],[1,205101,28254],[]],[39,0,0,[36],[1,233356,8625],[]],[40,0,0,[36],[1,241983,6996],[]],[41,0,0,[42],[1,248981,16453],[]],[43,0,0,[42],[1,265436,11327],[]],[44,0,0,[42],[1,276764,12148],[]],[45,0,0,[46],[1,288914,11371],[]],[47,0,0,[46],[1,300285,31931],[]],[48,0,0,[46],[1,332218,5039],[]],[49,0,0,[14],[1,337259,12345],[]],[50,0,0,[51],[0,349605,64173,52],[]],[49,0,0,[14],[1,413782,12332],[]],[53,0,0,[14],[0,426116,39089,54],[]],[55,0,0,[14],[0,465208,42499,56],[]],[57,0,0,[14],[0,507709,39216,54],[]],[58,0,0,[14],[0,546928,38566,59],[]],[60,0,0,[14],[0,585496,39181,54],[]]],[],[36,28,8,0]];
+window.output["suite"] = [1,2,3,4,[],[0,0,733044],[],[[5,0,0,[],[1,805,3369],[]],[6,0,0,[],[1,4174,0],[]],[7,0,0,[8,9],[1,4174,25933],[]],[10,0,0,[8],[1,30109,2231],[]],[11,0,0,[8],[1,32340,2196],[]],[12,0,0,[8],[1,34536,12133],[]],[13,0,0,[14],[1,46671,2850],[]],[15,0,0,[16],[0,49526,8374,17],[]],[18,0,0,[16],[1,57900,9426],[]],[19,0,0,[20],[1,67326,11540],[]],[21,0,0,[22],[1,78866,16250],[]],[23,0,0,[24],[1,95116,16456],[]],[25,0,0,[26],[1,111572,10445],[]],[27,0,0,[28],[1,122017,11990],[]],[29,0,0,[30],[1,134007,11659],[]],[31,0,0,[32],[1,145666,18078],[]],[33,0,0,[14],[1,163743,13313],[]],[34,0,0,[35],[1,177056,10991],[]],[36,0,0,[35],[1,188047,15118],[]],[37,0,0,[35],[1,203165,28299],[]],[38,0,0,[35],[1,231464,8989],[]],[39,0,0,[35],[1,240453,7093],[]],[40,0,0,[41],[1,247547,16590],[]],[42,0,0,[41],[1,264136,11660],[]],[43,0,0,[41],[1,275796,12148],[]],[44,0,0,[45],[1,287948,12077],[]],[46,0,0,[45],[1,300027,33134],[]],[47,0,0,[45],[1,333160,5028],[]],[48,0,0,[14],[1,338189,12358],[]],[49,0,0,[50],[1,350547,69304],[]],[48,0,0,[14],[1,419851,12323],[]],[51,0,0,[14],[1,432174,51350],[]],[52,0,0,[14],[0,483526,49310,53],[]],[54,0,0,[14],[0,532835,75615,55],[]],[56,0,0,[14],[0,608450,49247,53],[]],[57,0,0,[14],[0,657697,75347,55],[]]],[],[36,31,5,0]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*HK Retail Check Bronze","*C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject1\\Resource\\testsuites\\Retail\\HK_TC\\P1\\HK_Retail_Check_Bronze.robot","*HK_Retail_Check_Bronze.robot","*<p>Suite description\x3c/p>","*Test Setup","*Screen Shot DIR","*TC-001 - Verify Login Page","*Login Page","*TC001","*TC-014 - Input Valid Username","*TC-015 - Input Valid Password","*TC-016 - User should be able to click Login Button","*TC-017 - User should be able to view home page","*Home Page","*TC-060 - User should be able to view account orders page","*Order Page","*Keyword 'SeleniumLibrary.Wait Until Element Is Visible' expected 1 to 3 arguments, got 0.","*TC-066 - User should be able to view order Retail Account Orders Page","*TC-067 - User should be able to view account return request page","*Return Page","*TC-078 - User should be able to view account saved carts page","*Saved Carts Page","*TC-083 - User should be able to view account vehicle listing page","*Vehicle Listing Page","*TC-084 - User should be able to view message page","*Message Page","*TC-091 - User should be able to view Account Details page","*Account Details Page","*TC-093 - User should be able to view change password page","*Change Password Page","*TC-096 - User should be able to view company details page","*Company Details Page","*Element '//span[@class='label-content' and contains(text(),'Delivery Address')]' not visible after 10 seconds.","*TC-041 - User should be able to view All Products Page in HK Retail Home Page","*TC-043 - User should be able to filter product","*All Products Page","*TC-044 - User should be able to view product Out of Stock","*TC-045 - User should be able to view product In Stock Only","*TC-046 - User should be able to click add to cart button for in stock only in Retail Product Page","*TC-047 - User should be able to add to cart random item in Retail Product Page","*TC-048 - User should be able to view shopping cart pop up modal","*Shopping Cart Page","*TC-049 - User should be able to view shopping cart in Retail Shopping Cart Page","*TC-052 - User should be able to click checkout button in Retail Shopping Cart Page","*TC-053 - User should be able to view checkout in Retail Checkout Page","*Checkout Page","*TC-053 - User should be able to change Address","*TC-053 - User should be albe to Compare Shipping Fee in HK Retail Checkout Page","*TC-053 - User should be able to Go to Home Page in HK Retail","*TC-053 - User should be able to Search Vehicle in the home page","*Vehicle Search","eNrFlD9rwzAQxXd/itscQxUn/d9AIEuGzoUuIYMinW3Rs85IsptAP3zlBNpmKSltXBCWLN35Pf8e6Ak7dJKgkIZahx5YqdY51LMkmWawJKzRBng1oQJiJQM7SPNcm261UCS9n6dqK7SRxKXYsN5BzVrSYalFQbiF/iEUU1vbdJ3nthQeCVVYLQp2tWIbHJOVNc7T2IzUF30V+GgQfa00Fl26fjvVxF6d5I7b8HfqKVgOUHBr9ThJLiOoTlIrg7El4LaJIL1hC6mTVnM97idjw2h6McnSPesIGJ5jCy6dYzcDrJuwg1hXYvys61d6/zbKILZBHJMsSa6Gj2SH0v1bIieLHwdyPVggN8MH4tEZ9KdQgWjkm3OIe5X0oieF58nvXF6P474dLO6738b909voUZ8b3v1g8B4+4fW8mkZUL6LDyihCEVVbCv7grTPebAhBFiG6n07AY/wZ7cfvrRJXrA==","*TC-053 - User should be able to search by VIN1 to HK Retail Home Page","eNrllD1v2zAQhuf4VxwyBDFcy+KXvoIMsj7SDm2Bpu0SeKClcySENg2KdtJ/XzppWmQo1b1aCIEP3+O9vLtbPKKRCjayVweDA+imORiDbTaZkClUCre4s4Xqm4cPO4umwb3Ftno6rb3eZfARh0HeYwb4gkJzYqH/A2evKnCh7JWEzuDm+nzRPRi0LuqiWYTnF/f2KgiCE7CQpx/oB9jpX2pyrRCkhb12snBJCE/fAeFsGsBn26H5HftRH1QLBhvsjwhu6+V89hy53e/nR+z6RuHcZXpQdpi3vVT63lFyGK7P2/laaXf5jWwRtrp1vgydfnxzu7+rnKgJwOWtc8RZ4yzY6AyazugtXhNKgzCIaEQCQuh0cmtl82CNbDCbnN2gfS93rcLvaPpN7xK6C59C98V1HYskLUTF6YwJlkQxX03OLj9pGH5s11pN35KOK0LqI3gq8mrpJSrGKu4nXAr+KGWVJH6NshR56idIKkIvUddhno9oUJ6PaNDCG0WQZVmxlXtZgLvXcodGuwJ3Fadd+zwXmuq3vYVODrBG3Lka3LqtNoD/zSafRlUJP1HUgoz4EUaMrMZbpo6KvJyxmCVpzMb5nBcijGY8TFIah//C84Qyx4uYpuk4HxNR8HQW05BQ4rWxJjSq/T1esHBkChSceftTlMvSo1EXZUQFq05GfLHq24Dmq5vasnVTy9g3YEUpT8RyxtnqJ2qCzIo=","*TC-053 - User should be able to search by VIN2 to HK Retail Home Page","eNqNlE1vm0AQhs/lV4xyiGO5YHaX5SuKVJuPtoe2UtP2EuWAYYi3WYPFrl3733exE1e5QJEQ7PLMO7Oj4b3HPXaFhLoQctehgrYsd12HVWxZZAqZxA02OpGifP7caOxK3GqsskP/FG0TwxdUqnjCGPCMQtmzIP7B8asKXEt9u9pp3Tagj1u8uzovrkxMoZRZ6gbMbSss26YquuPV9ZO+dRynD5yf4X4HhIKmfUlVrCRCoWHbmpxwEzH/PTCfTx34ptfYXer60+5kBR2WKPYI5tM5PD5VVYn9axHlwVZb0TQmtLJriQcopHhqbKFxo+wS+4PB753Soj7apk5tdl6235RrJPulBXBzb3pkmmWaUrcxlOuu3eAdodRxHZ/6xCGETq17XZTPuitKjK13H1F/KppK4i/sRC1Mxgf34JoryPOAh1HCM4/OGGehH3iP1rubry2o42bVyulb0nCJS4cIL+KLbDlIZIxl3jBhjjCcJc3CcFgjTfkiGiZIxN1BIs/dxWJEg3qLEQ2aDGbhZJlmbFgjy/gwkeScjPTD9Rl5HJ+F3E8W6YwFLIwCNs4vvIS7/sxzw4gG7v/wXkiZ4XlAo2icDwhPvGgWUJdQMtjGnFA/Hx7ehLkj4514bHDweLpMBzTyJPUpZ1nfiO9a/lTY/Vh3WFTmd+z0GzCj1Av5cuaZJlsWvZgjTObzaru118/2HteilGgbI91Jrea9Cbz41sOHs79MLia3OT1WsjV22b9VWBcmCjbaprC1CShjXaW29Vqoi7IBJ4+Tk/vthRIn76t7RyIunG1TOX8BEmm53g==","*TC-053 - User should be able to search by VIN3 to HK Retail Home Page","*TC-053 - User should be able to search by VIN4 to HK Retail Home Page","eNrllD1v2zAQhuf4VxwyBDFcqyIp6ivIIOsj7dAWaNougQdaOsdsZMkgadf+96XipEUWqnsFCALJ5947vuLxHg+oRAtrIdu9Qg19Xe+VwiadTMgUyha32Jm8lfXTx86gqnFnsCmPw1f2XQqfUGvxiCngGYV6YEH+hdNXFbhqzc1qb0zfgTnt8PbyPLi0MUJrOzQd2Heuse67RqjT5dWjufE8bwh8f4aHGZAauv4llVi1CMLArrc54Tph4TtgIZ968MVsUP2p61e/bxtQWKM8INilc3j6XFUjD69F1Me53smus6HNfN3iEUQrH7u5NLjV8xqHjcHPvTZyfZrbOo2deZl+U66VHIYTgOt765E1y5qy7lOoN6rf4i2h1PO9kIbEI4ROJ/dG1E9GiRrTycUdmg+ia1r8gUqupc344B99+0RVFfE4yXkZ0BnjLA6jYDm5uP7cgz5tV307fUtaLvepiwgSnpULJ1EyVgZuwm7BnaUo49itURQ8S9wESbjvJKrKz7IRDRpkIxo0d2bhZFGUbGn/LMDDawPAy1GA3jbU8/Fq5VYa2AgNK8TOnrytXWo8+N9scmmUJXcTecXJiB9+yMhyvGWqMM+KGYtYnERsnM+CnPvhLPDjhEb+v/BBTJnleUSTZJyPCM+DZBZRn1DitLEiNKzcPZ4zf+QWyAPm7E9eLAqHRpUXIeWsHIz4atrvGtW3jULR2FtLmTdgSWkQ88UsYMvfKdDU1w==","*TC-053 - User should be able to search by VIN5 to HK Retail Home Page"]);
+window.output["strings"] = window.output["strings"].concat(["*","*HK Retail Check Bronze","*C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Retail\\HK_TC\\P1\\HK_Retail_Check_Bronze.robot","*HK_Retail_Check_Bronze.robot","*<p>Suite description\x3c/p>","*Test Setup","*Screen Shot DIR","*TC-001 - Verify Login Page","*Login Page","*TC001","*TC-014 - Input Valid Username","*TC-015 - Input Valid Password","*TC-016 - User should be able to click Login Button","*TC-017 - User should be able to view home page","*Home Page","*TC-060 - User should be able to view account orders page","*Order Page","*Element with locator '//a[@aria-label='previous page']' not found.","*TC-066 - User should be able to view order Retail Account Orders Page","*TC-067 - User should be able to view account return request page","*Return Page","*TC-078 - User should be able to view account saved carts page","*Saved Carts Page","*TC-083 - User should be able to view account vehicle listing page","*Vehicle Listing Page","*TC-084 - User should be able to view message page","*Message Page","*TC-091 - User should be able to view Account Details page","*Account Details Page","*TC-093 - User should be able to view change password page","*Change Password Page","*TC-096 - User should be able to view company details page","*Company Details Page","*TC-041 - User should be able to view All Products Page in HK Retail Home Page","*TC-043 - User should be able to filter product","*All Products Page","*TC-044 - User should be able to view product Out of Stock","*TC-045 - User should be able to view product In Stock Only","*TC-046 - User should be able to click add to cart button for in stock only in Retail Product Page","*TC-047 - User should be able to add to cart random item in Retail Product Page","*TC-048 - User should be able to view shopping cart pop up modal","*Shopping Cart Page","*TC-049 - User should be able to view shopping cart in Retail Shopping Cart Page","*TC-052 - User should be able to click checkout button in Retail Shopping Cart Page","*TC-053 - User should be able to view checkout in Retail Checkout Page","*Checkout Page","*TC-053 - User should be able to change Address","*TC-053 - User should be albe to Compare Shipping Fee in HK Retail Checkout Page","*TC-053 - User should be able to Go to Home Page in HK Retail","*TC-053 - User should be able to Search Vehicle in the home page","*Vehicle Search","*TC-053 - User should be able to search by VIN1 to HK Retail Home Page","*TC-053 - User should be able to search by VIN2 to HK Retail Home Page","eNrllDtv2zAUhef4V1xkCGK4lvkQ9Qoy2BKddmgLNG2XwAMtXUdCaNOgaCf996WTpkWGUt2rhRD46Vzeo3N5i0e0SsNGdfpgsQdT1wdrsSlGIzoGqXGLO1fqrn74sHNoa9w7bOTTae3MroCP2PfqHgvAFxTqEwvdH7h4VYEL7a4UtBY31+ez9sGi81Vn9YycX9y7qyiKTsBMnV6g62FnfqmptUZQDvbGy8IlpXH+DmjMxxF8di3a37UfzUE3YLHG7ojgt16+L54rN/v99IhtV2uc+k4P2vXTplPa3HtK9f31eTNda+MPv1ENwtY03pe+NY9vTvd3lRM1Ari89Y54a7wFG1NA3VqzxWvKWESihCU0oiwfj26dqh+cVTUWo7MbdO/VrtH4HW236XxDd+SJ+CddLhO+EAshYzbhgmdJGq9GZ5efDPQ/tmujx29JWsUlYSGCZGIuF0Gi4lzGYYL6doJEKbMsrFFWYp6HCZoLEiTkksznAxosng9osDJYhZJFJfnK/1mAu9e4Q218wH3ijB+f56Dpbts5aFUPa8Sdz+DWbzUR/G82hTSkFGFisRR0wA+ScLoaHhmZlPNqwlOe5Skf5hNeCpJMYpLlLCX/wscZ454XKcvzYZ4TUcb5JGWEMhq0UVKWLMMzXnIycAuUMQ/OJy0XVUBDCsFLJtLKE1+c/taj/epvbdX4W8u6t2DmsyUy78TqJxUezKM=","*TC-053 - User should be able to search by VIN3 to HK Retail Home Page","eNqt0TsOwjAQBNDep9jOojAhQIWERMMJKBGFPxuywllb/gluTxo6pDTpRlPMK+aGDZP2MGjyNWGGYG1NCd1JiH4DV48TcgHZdS5GNb5URp3sqMxHNeK5pXa/WK9zPstJEysT3vALSkXtHPFTPiRwKNAok/EIeiiYoN9BRhvY5a0Q+xWxriOOtSyah1VNU0sJvIge/6ENR7Ie1fxA9SUvjHwBeO6U5w==","*TC-053 - User should be able to search by VIN4 to HK Retail Home Page","*TC-053 - User should be able to search by VIN5 to HK Retail Home Page"]);
 </script>
 <script type="text/javascript">
-window.output["stats"] = [[{"elapsed":"00:10:24","fail":8,"label":"All Tests","pass":28,"skip":0}],[{"elapsed":"00:00:12","fail":0,"label":"Account Details Page","pass":1,"skip":0},{"elapsed":"00:01:10","fail":0,"label":"All Products Page","pass":5,"skip":0},{"elapsed":"00:00:11","fail":0,"label":"Change Password Page","pass":1,"skip":0},{"elapsed":"00:00:48","fail":0,"label":"Checkout Page","pass":3,"skip":0},{"elapsed":"00:00:20","fail":1,"label":"Company Details Page","pass":0,"skip":0},{"elapsed":"00:04:00","fail":5,"label":"Home Page","pass":4,"skip":0},{"elapsed":"00:00:42","fail":0,"label":"Login Page","pass":4,"skip":0},{"elapsed":"00:00:11","fail":0,"label":"Message Page","pass":1,"skip":0},{"elapsed":"00:00:17","fail":1,"label":"Order Page","pass":1,"skip":0},{"elapsed":"00:00:12","fail":0,"label":"Return Page","pass":1,"skip":0},{"elapsed":"00:00:16","fail":0,"label":"Saved Carts Page","pass":1,"skip":0},{"elapsed":"00:00:40","fail":0,"label":"Shopping Cart Page","pass":3,"skip":0},{"elapsed":"00:00:26","fail":0,"label":"TC001","pass":1,"skip":0},{"elapsed":"00:00:16","fail":0,"label":"Vehicle Listing Page","pass":1,"skip":0},{"elapsed":"00:01:04","fail":1,"label":"Vehicle Search","pass":0,"skip":0}],[{"elapsed":"00:10:25","fail":8,"id":"s1","label":"HK Retail Check Bronze","name":"HK Retail Check Bronze","pass":28,"skip":0}]];
+window.output["stats"] = [[{"elapsed":"00:12:12","fail":5,"label":"All Tests","pass":31,"skip":0}],[{"elapsed":"00:00:12","fail":0,"label":"Account Details Page","pass":1,"skip":0},{"elapsed":"00:01:10","fail":0,"label":"All Products Page","pass":5,"skip":0},{"elapsed":"00:00:12","fail":0,"label":"Change Password Page","pass":1,"skip":0},{"elapsed":"00:00:50","fail":0,"label":"Checkout Page","pass":3,"skip":0},{"elapsed":"00:00:18","fail":0,"label":"Company Details Page","pass":1,"skip":0},{"elapsed":"00:05:42","fail":4,"label":"Home Page","pass":5,"skip":0},{"elapsed":"00:00:42","fail":0,"label":"Login Page","pass":4,"skip":0},{"elapsed":"00:00:10","fail":0,"label":"Message Page","pass":1,"skip":0},{"elapsed":"00:00:18","fail":1,"label":"Order Page","pass":1,"skip":0},{"elapsed":"00:00:12","fail":0,"label":"Return Page","pass":1,"skip":0},{"elapsed":"00:00:16","fail":0,"label":"Saved Carts Page","pass":1,"skip":0},{"elapsed":"00:00:40","fail":0,"label":"Shopping Cart Page","pass":3,"skip":0},{"elapsed":"00:00:26","fail":0,"label":"TC001","pass":1,"skip":0},{"elapsed":"00:00:16","fail":0,"label":"Vehicle Listing Page","pass":1,"skip":0},{"elapsed":"00:01:09","fail":0,"label":"Vehicle Search","pass":1,"skip":0}],[{"elapsed":"00:12:13","fail":5,"id":"s1","label":"HK Retail Check Bronze","name":"HK Retail Check Bronze","pass":31,"skip":0}]];
 </script>
 <script type="text/javascript">
-window.output["baseMillis"] = 1710117135426;
+window.output["baseMillis"] = 1710893113933;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 624743;
+window.output["generated"] = 733095;
 </script>
 <script type="text/javascript">
 window.output["expand_keywords"] = null;
@@ -1654,7 +1922,7 @@ window.settings = {"background":{"fail":"#f66","pass":"#9e9","skip":"#fed84f"},"
 </script>
 <title></title>
 </head>
-<body>
+<body data-theme="dark">
 <div id="javascript-disabled">
   <h1>Opening Robot Framework report failed</h1>
   <ul>
@@ -1664,13 +1932,15 @@ window.settings = {"background":{"fail":"#f66","pass":"#9e9","skip":"#fed84f"},"
   </ul>
 </div>
 <script type="text/javascript">removeJavaScriptDisabledWarning();</script>
-
+<div id="status-bar"></div>
 <div id="header"></div>
 <div id="statistics-container"></div>
 <div id="test-details-container"></div>
 
 <script type="text/javascript">
 $(document).ready(function () {
+    storage.init();
+    theme.init(storage);
     try {
         var topsuite = window.testdata.suite();
     } catch (error) {
@@ -1678,24 +1948,37 @@ $(document).ready(function () {
         return;
     }
     window.prevLocationHash = '';
-    setBackground(topsuite);
     initLayout(topsuite.name, 'Report');
-    storage.init('report');
+    setStatusColor(topsuite);
     addSummary(topsuite);
     addStatistics();
     addDetails();
     window.onhashchange = showDetailsByHash;
+    document.addEventListener("theme-change", () => {
+        setStatusColor(topsuite);
+    });
 });
 
-function setBackground(topsuite) {
+function setStatusColor(topsuite) {
     var color;
-    if (topsuite.fail)
+    let fail = Boolean(topsuite.fail);
+    let pass = Boolean(!topsuite.fail && topsuite.pass);
+    let skip = Boolean(!topsuite.fail && !topsuite.pass);
+    if (theme.getPreference() === 'dark') {
+        $('#status-bar').toggleClass("fail-bar", fail);
+        $('#status-bar').toggleClass("pass-bar", pass);
+        $('#status-bar').toggleClass("skip-bar", skip);
+        $('body').css('background-color', "#1c2227");
+        return;
+    }
+    if (fail)
         color = window.settings.background.fail;
-    else if (topsuite.pass)
+    else if (pass)
         color = window.settings.background.pass;
     else
         color = window.settings.background.skip;
     $('body').css('background-color', color);
+    $('#status-bar').toggleClass("fail-bar pass-bar skip-bar", false);
 }
 
 function addSummary(topsuite) {

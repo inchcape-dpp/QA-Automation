@@ -182,16 +182,19 @@ TC-053 - User should be able to Go to Home Page in HK Retail
 TC-053 - User should be able to Search Vehicle in the home page
     [Tags]    Vehicle Search
     run keyword and continue on failure    User should be albe to View Search Vehicle in HK Retail Home Page
-    run keyword and continue on failure    User should be able to click model on manual search in Retail Select Vehicle
-    run keyword and continue on failure    User should be able to select model on manual search in Retail Select Vehicle
-    run keyword and continue on failure    User should be able to click year on manual search in Retail Select Vehicle
-    run keyword and continue on failure    User should be able to select year on manual search in Retail Select Vehicle
-    run keyword and continue on failure    User should be able to click series on manual search in Retail Select Vehicle
-    run keyword and continue on failure    User should be able to select series on manual search in Retail Select Vehicle
-    run keyword and continue on failure    User should be able to click Model ID on manual search in HK Retail Select Vehicle
-    run keyword and continue on failure    User should be able to select Model ID on manual search in HK Retail Select Vehicle
-    run keyword and continue on failure    User shoud be albe to click search this vehicle on manual seearh in Retail Select Vehicle
+    run keyword and continue on failure    User should be able to click brand on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to select brand on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click model on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to select model on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click year on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to select year on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click variant on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to select variant on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click model id on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to select model id on manual search in HK Retail Home Page
+    run keyword and continue on failure    User shoud be albe to click search this vehicle on manual seearh in HK Retail Home Page
     run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
+    run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    TC Sleep
 
 TC-053 - User should be able to Go to Home Page in HK Retail
@@ -206,6 +209,7 @@ TC-053 - User should be able to search by VIN1 to HK Retail Home Page
     run keyword and continue on failure    User should be albe to Click Search VIN in HK Retail Home Page
     run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
     run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view All Parts Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    TC Sleep
@@ -216,6 +220,7 @@ TC-053 - User should be able to search by VIN2 to HK Retail Home Page
     run keyword and continue on failure    User should be albe to Input Search VIN2 in HK Retail Home Page
     run keyword and continue on failure    User should be albe to Click Search VIN in HK Retail Home Page
     run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
+    run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view All Parts Page
     run keyword and continue on failure    User should be able to Go to Home page
@@ -228,6 +233,7 @@ TC-053 - User should be able to search by VIN3 to HK Retail Home Page
     run keyword and continue on failure    User should be albe to Click Search VIN in HK Retail Home Page
     run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
     run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view All Parts Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    TC Sleep
@@ -239,6 +245,7 @@ TC-053 - User should be able to search by VIN4 to HK Retail Home Page
     run keyword and continue on failure    User should be albe to Click Search VIN in HK Retail Home Page
     run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
     run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view All Parts Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    TC Sleep
@@ -249,6 +256,7 @@ TC-053 - User should be able to search by VIN5 to HK Retail Home Page
     run keyword and continue on failure    User should be albe to Input Search VIN5 in HK Retail Home Page
     run keyword and continue on failure    User should be albe to Click Search VIN in HK Retail Home Page
     run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
+    run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view All Parts Page
     run keyword and continue on failure    User should be able to Go to Home page

@@ -255,8 +255,17 @@ ${AU_S2_Automation_PWD}    AU_Auto@12345!
 ${HK_S2_Automation_Bronze_UID}    hk_automation1retails2_bronze@yopmail.com
 ${HK_S2_Automation_Bronze_PWD}    HK_Auto@12345!
 
+${HK_S2_Automation_Silver_UID}    hk_automation1retails2_silver@yopmail.com
+${HK_S2_Automation_Silver_PWD}    HK_Auto@12345!
+
+${HK_S2_Automation_SilverPlus_UID}    hk_automation1retails2_silverplus@yopmail.com
+${HK_S2_Automation_SilverPlus_PWD}    HK_Auto@12345!
+
 ${HK_S2_Automation_Gold_UID}    hk_automation1retails2_gold@yopmail.com
 ${HK_S2_Automation_Gold_PWD}    HK_Auto@12345!
+
+${HK_S2_Automation_GoldPlus_UID}    hk_automation1retails2_goldplus@yopmail.com
+${HK_S2_Automation_GoldPlus_PWD}    HK_Auto@12345!
 
 ${HK_P1_Automation_Bronze_UID}    hk_automation1retailp1_bronze@yopmail.com
 ${HK_P1_Automation_Bronze_PWD}    HK_Auto@12345!

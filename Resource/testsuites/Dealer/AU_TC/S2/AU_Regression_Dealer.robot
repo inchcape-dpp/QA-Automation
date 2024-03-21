@@ -173,7 +173,7 @@ TC-038 - User should be able to filter status by Dispatched in Order Page
     run keyword and continue on failure    User should be able to click filter by status in Order Page
     run keyword and continue on failure    User should be able to filter status by Dispatched in Order Page
 
-TC-039 - User should be able to filter status by Dispatched in Order Page
+TC-039 - User should be able to filter status by Partially Dispatched in Order Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to click filter by status in Order Page
     run keyword and continue on failure    User should be able to filter status by Partially Dispathed in Order Page
