@@ -900,10 +900,10 @@ User should be able to click load more button in HK Retail Product Page
 
 Show number of product list
     wait until element is visible    ${Retail_HK_ProductSelectionProductlist}    10
-    get element count    ${Retail_HK_ProductSelectionProductlist}
+    ${elementcount}    get element count    ${Retail_HK_ProductSelectionProductlist}
     ${Productlisttext}    get text     ${Retail_HK_ProductSelectionProductResult}
-    @{words}    split string    ${Productlisttext}     ,${SPACE}
-    log    ${words}
+    @{words}    split string    ${Productlisttext}    ${SPACE}
+    log    ${words}[0]
 
     capture element screenshot    ${Retail_HK_ProductSelectionProductResult}
 
