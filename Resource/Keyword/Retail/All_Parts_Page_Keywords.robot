@@ -17,10 +17,10 @@ User should be able to view All Parts Page
     click element    ${HomePageAllCategory}
     wait until element is visible    ${AllProdPageLabelFilter}    10
     wait until element is visible    ${AllProdPagePanelHeader}    10
-    ${AllProdPage_AllProd_Label}
-    ${AllProdPageSortProdDropdown}
-    ${AllProdPageInStockCheckBoxContainer}
-    ${AllProdPageInStockCheckBox}
+#    ${AllProdPage_AllProd_Label}
+#    ${AllProdPageSortProdDropdown}
+#    ${AllProdPageInStockCheckBoxContainer}
+#    ${AllProdPageInStockCheckBox}
 
 
     sleep    2
