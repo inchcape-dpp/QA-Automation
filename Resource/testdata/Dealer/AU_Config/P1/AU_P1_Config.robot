@@ -32,11 +32,11 @@ ${Password}    ${AUSeller_P1_PWD}
 ${YopMailEmail}    ${admin1_s2_dealer_UID}
 
 *** Keywords ***
-Open Chrome Browser
+Open Chrome Browser P1
     SeleniumLibrary.Open Browser    ${p1Dealer}    Chrome  executable_path=${driver_path}
     maximize browser window
 
-Dealer Screent Shot DIR
+Dealer Screent Shot DIR P1
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
     create directory    ${Dealer_screenshot_path}/AU_${currentdate}
     ${LogDIR}=    convert to string    ${Dealer_screenshot_path}/AU_${currentdate}
@@ -51,5 +51,5 @@ Browse Back Button
 
 #-----------------------------------------------------Dealer Sleep------------------------------------------------------
 
-TC Sleep
+TC Sleep P1
     sleep    10

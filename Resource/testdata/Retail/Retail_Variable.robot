@@ -2249,6 +2249,20 @@ ${ProductDeatilsPageProductGSTToggleDisabled}    //div[@class='ml-5 custom-contr
 
 
 #-----------------------------------------------------EPC Page----------------------------------------------------------
+#-----------------------------------------------------EPC Page PDP
+${EPCProductDeatilsPageProductName}    (//div[@class='row table-header ml-0 mr-0']//div[@class='col'])[1]
+${EPCProductDeatilsPageProductRef}    (//div[@class='row table-header ml-0 mr-0']//div[@class='col'])[2]
+${EPCProductDeatilsPageProductModel}    //th[@class='model']
+${EPCProductDeatilsPageProductYear}    //th[@class='year']
+${EPCProductDeatilsPageProductModelValue}    (//table//tr//td[@class='model'])[1]
+${EPCProductDeatilsPageProductYearValue}    (//table//tr//td[@class='year'])[1]
+${EPCProductDeatilsPageProductLoadMore}    //div[@class='load-more']//span[contains(text(),'Load more')]
+${EPCProductDeatilsPageProductRRP}    //div[@class='product-msrp']
+${EPCProductDeatilsPageProductSubCategory}    (//div[@class='category-section pb-2'])[1]
+${EPCProductDeatilsPageProductFitment}    (//div[@class='fitment-note pb-2'])[1]
+${EPCProductDeatilsPageProductPCQ}    (//div[@class='fitment-note'])[1]
+${EPCProductDeatilsPageProductSeller}    //div[@class='seller-info']
+
 #-----------------------------------------------------EPC Page L1
 ${Retail_HK_EPC_L1_Container}    //cx-page-layout[@class='EPCLevel1PageTemplate']
 ${Retail_HK_EPC_L1_ElectronicParts_Container}    //cx-page-slot[@class='Section2A has-components']

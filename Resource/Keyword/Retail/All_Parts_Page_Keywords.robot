@@ -17,10 +17,10 @@ User should be able to view All Parts Page
     click element    ${HomePageAllCategory}
     wait until element is visible    ${AllProdPageLabelFilter}    10
     wait until element is visible    ${AllProdPagePanelHeader}    10
-    ${AllProdPage_AllProd_Label}
-    ${AllProdPageSortProdDropdown}
-    ${AllProdPageInStockCheckBoxContainer}
-    ${AllProdPageInStockCheckBox}
+#    ${AllProdPage_AllProd_Label}
+#    ${AllProdPageSortProdDropdown}
+#    ${AllProdPageInStockCheckBoxContainer}
+#    ${AllProdPageInStockCheckBox}
 
 
     sleep    2
@@ -1768,6 +1768,45 @@ User should be able to view Option Card Details on the Parts Card List in HK Ret
 
     sleep    2
 
+
+User should be able to view PDP after EPC Level 3
+    wait until element is visible    ${ProductDeatilsPageProductImage}    10
+    wait until element is visible    ${ProductDeatilsPageProductName}    10
+    wait until element is visible    ${ProductDeatilsPageProductPartNum}    10
+    wait until element is visible    ${ProductDeatilsPageProductPrice}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductRRP}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductSeller}    10
+    wait until element is visible    ${ProductDeatilsPageProductInStock}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductSubCategory}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductFitment}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductPCQ}    10
+    wait until element is visible    ${ProductDeatilsPageProductAddtoCartButton}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductName}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductRef}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductModel}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductYear}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductModelValue}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductYearValue}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductLoadMore}    10
+
+    capture element screenshot    ${ProductDeatilsPageProductImage}
+    capture element screenshot    ${ProductDeatilsPageProductName}
+    capture element screenshot    ${ProductDeatilsPageProductPartNum}
+    capture element screenshot    ${ProductDeatilsPageProductPrice}
+    capture element screenshot    ${EPCProductDeatilsPageProductRRP}
+    capture element screenshot    ${EPCProductDeatilsPageProductSeller}
+    capture element screenshot    ${ProductDeatilsPageProductInStock}
+    capture element screenshot    ${EPCProductDeatilsPageProductSubCategory}
+    capture element screenshot    ${EPCProductDeatilsPageProductFitment}
+    capture element screenshot    ${EPCProductDeatilsPageProductPCQ}
+    capture element screenshot    ${ProductDeatilsPageProductAddtoCartButton}
+    capture element screenshot    ${EPCProductDeatilsPageProductName}
+    capture element screenshot    ${EPCProductDeatilsPageProductRef}
+    capture element screenshot    ${EPCProductDeatilsPageProductModel}
+    capture element screenshot    ${EPCProductDeatilsPageProductYear}
+    capture element screenshot    ${EPCProductDeatilsPageProductModelValue}
+    capture element screenshot    ${EPCProductDeatilsPageProductYearValue}
+    capture element screenshot    ${EPCProductDeatilsPageProductLoadMore}
 
 
 

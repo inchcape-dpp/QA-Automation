@@ -333,7 +333,7 @@ ${ReturnPageOrderReturnDataSectionContainer}    //div[@class='cancel-order-conta
 ${ReturnPageOrderReturnDataSectionReasonLabel}    //div[@class='form-group']//span[@class='label-content']
 ${ReturnPageOrderReturnDataSectionReasonSelection}    //div[@class='ng-select-container ng-has-value']
 ${ReturnPageOrderReturnDataSectionQtyLabel}    //div[@class='form-group']//span[@class='label-content qty-return']
-${ReturnPageOrderReturnDataSectionQtyValue}    //div[@class='col-3 pl-0']//input
+${ReturnPageOrderReturnDataSectionQtyValue}    //div[@class='form-group']//input[@class='form-control display-data qty-returned']
 ${ReturnPageOrderReturnDataSectionNoteLabel}    //div[@class='form-group col-12']//span[@class='label-content']
 ${ReturnPageOrderReturnDataSectionNoteTextField}    //div[@class='form-group col-12']//textarea
 ${ReturnPageOrderReturnDataSectionImageLabel}    //div[@class='form-group pl-0 col-12']//label
