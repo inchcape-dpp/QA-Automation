@@ -15,13 +15,13 @@ ${FirefoxBrowser}    Firefox
 ${EdgeBrowser}    Edge
 ${SafariBrowser}    Safari
 
-${driver_path}    C:\\Users\\Tyron.Demate\\PycharmProjects\\pythonProject2\\Resource\\chromedriver.exe
+${driver_path}    ..\\..\\..\\..\\..\\Resource\\chromedriver.exe
 #${driver_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\geckodriver.exe
 
-${Retail_screenshot_path}    C:\\Users\\Tyron.Demate\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Retail\\Screenshots\\HK\\S2
+${Retail_screenshot_path}    ..\\..\\..\\..\\..\\Resource\\testsuites\\Retail\\Screenshots\\HK\\S2
 #${Retail_screenshot_path}    C:\\Users\\Danielouie.Estopace\\OneDrive - Inchcape\\06.Dev\\Dan\\Retail Screenshots
 
-${UploadPhoto_Path_Value}    C:\\Users\\Tyron.Demate\\Pictures\\Sample Image\\Image.png
+${UploadPhoto_Path_Value}    C:\\Users\\Danielouie.Estopace\\Pictures\\Sample Image\\Image.jpg
 
 ${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\HKProductReportView.
 ${ExcelFile_AU_Stock_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\Titan SUB Geerex.xlsx
@@ -35,6 +35,11 @@ ${Password}    ${HK_S2_Automation_Gold_PWD}
 
 ${YopMailEmail}    ${HK_S2_Automation_Bronze_UID}
 
+${Retail_AccountProfileChangePassCurrentPassValue}    ${Password}
+
+#Testing Values
+${ProdductSearchValue}    037018200
+
 *** Keywords ***
 Open Chrome Browser HK
     SeleniumLibrary.Open Browser    ${s2HKRetail}    Chrome  executable_path=${driver_path}
@@ -47,17 +52,17 @@ Retail Screent Shot DIR HK
     set screenshot directory    ${LogDIR}
     set global variable    ${LogDIR}
 
-Save Log DIR HK
+Save Log DIR
     copy file    log.html    ${LogDIR}
  ### Test
 
 #-----------------------------------------------------Browser Commands--------------------------------------------------
-Browse Back Button HK
+Browse Back Button
     go back
     sleep    5
 #    capture page screenshot
 
 #-----------------------------------------------------Dealer Sleep------------------------------------------------------
 
-TC Sleep HK
+TC Sleep
     sleep    10

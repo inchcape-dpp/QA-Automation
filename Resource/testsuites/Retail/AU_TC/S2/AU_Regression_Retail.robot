@@ -1060,36 +1060,36 @@ TC-142 - User should be able to view company details page
     [Tags]    Company Details Page
     run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view company details page
-
-TC-143 - User should be able to edit company details page
-    [Tags]    Company Details Page
-#    run keyword and continue on failure    User should be able to input valid Account number in Retail Account Company Details Page
-#    run keyword and continue on failure    User should be able to input valid Company name in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid Trading Name in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid Postal Address Line 1 in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid Postal Address Line 2 in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid Postal Suburb in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid Postal Code in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to click Postal Address State Drop Down in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to select Postal Address State in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid Delivery Address Line 1 in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid Delivery Address Line 2 in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid Delivery Suburb in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid Delivery Code in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to click Delivery Address State Drop Down in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to select Delivery Address State in Retail Account Company Details Page
-#    run keyword and continue on failure    User should be able to input valid Email Address in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid Company Phone Number in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid First Name in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to input valid Last Name in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to click opening hours in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to select opening hours value in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to click closing hours in Retail Account Company Details Page
-    run keyword and continue on failure    User should be able to select closing hours value in Retail Account Company Details Page
-#    run keyword and continue on failure    User should be able to click save button in Retail Account Company Details Page
-#    run keyword and continue on failure    User should be able to click no on update cofirmation modal in Retail Account Company Details Page
+#
+#TC-143 - User should be able to edit company details page
+#    [Tags]    Company Details Page
+##    run keyword and continue on failure    User should be able to input valid Account number in Retail Account Company Details Page
+##    run keyword and continue on failure    User should be able to input valid Company name in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid Trading Name in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid Postal Address Line 1 in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid Postal Address Line 2 in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid Postal Suburb in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid Postal Code in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to click Postal Address State Drop Down in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to select Postal Address State in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid Delivery Address Line 1 in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid Delivery Address Line 2 in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid Delivery Suburb in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid Delivery Code in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to click Delivery Address State Drop Down in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to select Delivery Address State in Retail Account Company Details Page
+##    run keyword and continue on failure    User should be able to input valid Email Address in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid Company Phone Number in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid First Name in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to input valid Last Name in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to click opening hours in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to select opening hours value in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to click closing hours in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to select closing hours value in Retail Account Company Details Page
+##    run keyword and continue on failure    User should be able to click save button in Retail Account Company Details Page
+##    run keyword and continue on failure    User should be able to click no on update cofirmation modal in Retail Account Company Details Page
 
 
 

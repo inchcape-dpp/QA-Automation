@@ -449,6 +449,7 @@ TC-075 - User should be able to click checkout button in Retail Shopping Cart Pa
     [Tags]    Shopping Cart Page
     run keyword and continue on failure    User should be able to click checkout button in Retail Shopping Cart Page
     run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep
 
 TC-076 - User should be able to view checkout in Retail Checkout Page
     [Tags]    Checkout Page

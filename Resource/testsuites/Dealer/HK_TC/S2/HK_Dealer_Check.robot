@@ -60,6 +60,7 @@ TC-010 - User should be able to click orders from left navigation
 TC-011 - User should be able to view Cutomer Orders Panel
     [Tags]    TC033    Order Page
     run keyword and continue on failure    User should be able to view Cutomer Orders Panel
+    run keyword and continue on failure    User should be able to view account orders page HK
 
 TC-012 - User should be able to select one order from the list
     [Tags]    TC034    Order Page
@@ -67,7 +68,7 @@ TC-012 - User should be able to select one order from the list
 
 TC-013 - User should be able to view order details
     [Tags]    TC035    Order Page
-    run keyword and continue on failure    User should be able to view order details in HK Order Details Page
+    run keyword and continue on failure    User should be able to view order details HK
     run keyword and continue on failure    TC Move to Top
 
 TC-014 - User should be able to click Return from left navigation

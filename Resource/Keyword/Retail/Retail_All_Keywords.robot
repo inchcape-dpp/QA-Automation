@@ -561,6 +561,11 @@ User should be able to click yes in the confirmation in Retail Account Staff Pag
 
 #-----------------------------------------------------Retail All Parts Page---------------------------------------------
 User should be able to view All Parts Page
+
+User should be able to view All Parts Page with VIN
+User should be able to view All Parts Page with Manual Car Search
+User should be able to view All Parts Page with No Car Search
+
 User should be able to filter product name from A to Z
 User should be able to fitler results per page to 100
 User should be able to Filter Products by Stocks

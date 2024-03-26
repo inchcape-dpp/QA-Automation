@@ -45,7 +45,7 @@ ${p1HKDealer}    	https://www.partslane.com.hk/hkdealer
 #------------------------Waf------------------------
 ${wafRetail}    https://wafretail.partslane.com.au
 
-
+${PartsLane}    https://www.partslane.com.au/home/index.html
 
 
 

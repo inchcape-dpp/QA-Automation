@@ -139,6 +139,9 @@ ${admin1_s2_Gold_HKretail_PWD}    HKPass@12345
 ${admin1_s2_Bronze_HKretail_UID}    hk.bronze.admin@test.com
 ${admin1_s2_Bronze_HKretail_PWD}    HKPass@12345
 
+${Ric_S2_HKUser_GOLD}    hktestric3@yopmail.com
+${Ric_S2_HKPass_GOLD}    Pass@12345
+
                                                                          #------------------------Dealer----------------
                                                                              #------------------------ADMIN1------------
 ${admin1_s2_dealer_UID}    seller1.admin@test.com
@@ -268,3 +271,45 @@ ${HK_P1_Automation_Gold_PWD}    HK_Auto@12345!
                                                                         #------------------------Inboxes----------------
 ${HK_D1_Automation_Bronze_UID}    hk_automation1retaild1_bronze@robot-mail.com
 ${HK_D1_Automation_Bronze_PWD}    HK_Auto@12345!
+
+#-----------------------Ric AU------------------------------------------------------------------------------------------
+
+${AU_D1_UID}    rictestemail40@yopmail.com
+${AU_D1_PWD}    Pass@12345
+${AUSeller_D1_UID}    rictestemail105@yopmail.com
+${AUSeller_D1_PWD}    Pass@12345
+
+${AU_S1_UID}    rictestemail30@yopmail.com
+${AU_S1_PWD}    Pass@12345
+
+${AU_S2_UID}    rictestemail31@yopmail.com
+${AU_S2_PWD}    Pass@12345
+${AUSeller_S2_UID}    seller1.admin@test.com
+${AUSeller_S2_PWD}    AUPass@12345
+
+${AUCustomer_P1_UID}    ericson.tinana@inchcape.com
+${AUCustomer_P1_PWD}    Carloakos1!
+${AUSeller_P1_UID}    testp1seller@yopmail.com
+${AUSeller_P1_PWD}    dealNTG07.
+
+#-----------------------Ric HK------------------------------------------------------------------------------------------
+
+${HK_D1_UID}    hktestric001@yopmail.com
+${HK_D1_PWD}    Pass@12345
+${HKSeller_D1_UID}    hktestricsellerd1@yopmail.com
+${HKSeller_D1_PWD}    Pass@12345
+
+${HK_S1_UID}    hktestric@yopmail.com
+${HK_S1_PWD}    Pass@12345
+${HKSeller_S1_UID}    hk.seller2.admin@test.com
+${HKSeller_S1_PWD}    HKPass@12345
+
+${HK_S2_UID}    hktestric3@yopmail.com
+${HK_S2_PWD}    Pass@12345
+${HKSeller_S2_UID}    hk.seller2.admin@test.com
+${HKSeller_S2_PWD}    HKPass@12345
+
+${HKCustomer_P1_UID}    hktestric10@yopmail.com
+${HKCustomer_P1_PWD}    Pass@12345
+${HKSeller_P1_UID}    hk.seller1.admin@test.com
+${HKSeller_P1_PWD}    HKPass@12345

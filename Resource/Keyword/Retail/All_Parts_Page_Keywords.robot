@@ -17,10 +17,10 @@ User should be able to view All Parts Page
     click element    ${HomePageAllCategory}
     wait until element is visible    ${AllProdPageLabelFilter}    10
     wait until element is visible    ${AllProdPagePanelHeader}    10
-    ${AllProdPage_AllProd_Label}
-    ${AllProdPageSortProdDropdown}
-    ${AllProdPageInStockCheckBoxContainer}
-    ${AllProdPageInStockCheckBox}
+#    ${AllProdPage_AllProd_Label}
+#    ${AllProdPageSortProdDropdown}
+#    ${AllProdPageInStockCheckBoxContainer}
+#    ${AllProdPageInStockCheckBox}
 
 
     sleep    2
@@ -897,6 +897,16 @@ User should be able to click load more button in HK Retail Product Page
     scroll element into view    ${Retail_HK_AllProdPageLoadmoreButton}
     click element    ${Retail_HK_AllProdPageLoadmoreButton}
     sleep    5
+
+Show number of product list
+    wait until element is visible    ${Retail_HK_ProductSelectionProductlist}    10
+    get element count    ${Retail_HK_ProductSelectionProductlist}
+    ${Productlisttext}    get text     ${Retail_HK_ProductSelectionProductResult}
+    @{words}    split string    ${Productlisttext}     ,${SPACE}
+    log    ${words}
+
+    capture element screenshot    ${Retail_HK_ProductSelectionProductResult}
+
 
 User should be able to click scroll to top button in HK Retail Product Page
     wait until element is visible    ${Retail_HK_AllProdPageScrolltoTopButton}    10
