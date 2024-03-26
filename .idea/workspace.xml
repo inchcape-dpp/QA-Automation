@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="Commit March 18">
-      <change afterPath="$PROJECT_DIR$/Resource/testsuites/Sprints/Sprint 41/DPP-304986.robot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Resource/testsuites/Sprints/Sprint 41/DPP-310362.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Sprints/Sprint 41/DPP-310362.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Sprints/Sprint 41/DPP-310362.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +119,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710740724157</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Commit March 18">
+      <option name="closed" value="true" />
+      <created>1710744554388</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1710744554388</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -168,6 +175,7 @@
     <MESSAGE value="Commit Feb 13" />
     <MESSAGE value="Commit Feb 16" />
     <MESSAGE value="Commit Feb 19" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit Feb 19" />
+    <MESSAGE value="Commit March 18" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit March 18" />
   </component>
 </project>
