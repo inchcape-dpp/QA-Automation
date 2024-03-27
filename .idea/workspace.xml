@@ -6,24 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/D1/AU_D1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/D1/AU_D1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/P1/AU_P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/P1/AU_P1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/S1/AU_S1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/S1/AU_S1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/S2/AU_S2_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/S2/AU_S2_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/D1/HK_D1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/D1/HK_D1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/P1/HK_P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/P1/HK_P1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S1/HK_S1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S1/HK_S1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S2/HK_S2_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S2/HK_S2_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/QE MiniSIte/Nino/MiniSite_Variable.Robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/QE MiniSIte/Nino/MiniSite_Variable.Robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/D1/AU_D1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/D1/AU_D1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/P1/AU_P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/P1/AU_P1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/S1/AU_S1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/S1/AU_S1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/S2/AU_S2_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/S2/AU_S2_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S2/HK_S2_Bronze_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S2/HK_S2_Bronze_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S2/HK_S2_Gold_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S2/HK_S2_Gold_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/report.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +62,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708927509704</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Mini Site exercise folders">
+      <option name="closed" value="true" />
+      <created>1709781542042</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709781542042</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
