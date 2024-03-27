@@ -173,7 +173,7 @@ TC-038 - User should be able to filter status by Dispatched in Order Page
     run keyword and continue on failure    User should be able to click filter by status in Order Page
     run keyword and continue on failure    User should be able to filter status by Dispatched in Order Page
 
-TC-039 - User should be able to filter status by Dispatched in Order Page
+TC-039 - User should be able to filter status by Partially Dispatched in Order Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to click filter by status in Order Page
     run keyword and continue on failure    User should be able to filter status by Partially Dispathed in Order Page
@@ -504,12 +504,12 @@ TC-093 - User should be able to filter status by All in Dealer New Registration 
     run keyword and continue on failure    User should be able to click Filter by Status in Dealer New Registration Request
     run keyword and continue on failure    User should be able to filter status by All in Dealer New Registration Request
 
-#TC-094 - User should be able to view and click Registration Request with In Progress Status in Dealer New Registration Request Page
-#    [Tags]    Home Page    New Reg Req
-#    run keyword and continue on failure    User should be able to view Registration Request with In Progress Status in Dealer New Registration Request Page
-#    run keyword and continue on failure    User should be able to click Registration Request with In Progress Status in Dealer New Registration Request Page
-#    run keyword and continue on failure    User should be able to view New Buyer Details Page
-#    run keyword and continue on failure    User should be able to click Back to Registraion Request in Dealer Registration Request Details Page
+TC-094 - User should be able to view and click Registration Request with In Progress Status in Dealer New Registration Request Page
+    [Tags]    Home Page    New Reg Req
+    run keyword and continue on failure    User should be able to view Registration Request with In Progress Status in Dealer New Registration Request Page
+    run keyword and continue on failure    User should be able to click Registration Request with In Progress Status in Dealer New Registration Request Page
+    run keyword and continue on failure    User should be able to view New Buyer Details Page
+    run keyword and continue on failure    User should be able to click Back to Registraion Request in Dealer Registration Request Details Page
 
 TC-095 - User should be able to view and click Registration Request with Approved Status in Dealer New Registration Request Page
     [Tags]    Home Page    New Reg Req

@@ -47,63 +47,87 @@ TC-004 - User should be able to click Login Button
     run keyword and continue on failure    User should be able to click Login Button
     run keyword and continue on failure    TC Sleep
 
-TC-004 - User should be albe to View Search VIN in HK Retail Home Page
-    [Tags]    Home Page    VIN Search
-    run keyword and continue on failure    User should be albe to View Search VIN in HK Retail Home Page
-    run keyword and continue on failure    User should be albe to Input Search VIN1 in HK Retail Home Page
-    run keyword and continue on failure    User should be albe to Click Search VIN in HK Retail Home Page
-
-TC-005 - User should be able to view EPC Search Result Pop Up Modal in HK Retail Home Page
-    [Tags]    Home Page    EPC
-    run keyword and continue on failure    User should be able to view EPC Search Result Pop Up Modal in HK Retail Home Page
-    run keyword and continue on failure    User should be able to click Show More button in EPC Search Result Pop Up Modal in HK Retail Home Page
-    run keyword and continue on failure    User should be able to view EPC Search Result Pop Up Modal Elements in HK Retail Home Page
-    run keyword and continue on failure    User should be able to click Shop this vehicle in EPC Search Result Pop Up Modal in HK Retail Home Page
+TC-041 - User should be able to view All Products Page in HK Retail Home Page
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to view All products
     run keyword and continue on failure    TC Sleep
 
-TC-006 - User should be able to view EPC L1 Page in HK Retail
-    [Tags]    EPC    L1
-    run keyword and continue on failure    TC Sleep
-    run keyword and continue on failure    User should be able to view EPC L1 Page in HK Retail
+TC0-042 - Show number of product list
+    run keyword and continue on failure    Show number of product list
 
-TC-007 - User should be able to view EPC L1 Page in HK Retail
-    [Tags]    EPC    L1
-    run keyword and continue on failure    User should be able to click Shop Now in HK Retail EPC L1 Page
-    run keyword and continue on failure    Browse Back Button
+#TC-004 - User should be albe to View Search VIN in HK Retail Home Page
+#    [Tags]    Home Page    VIN Search
+#    run keyword and continue on failure    User should be albe to View Search VIN in HK Retail Home Page
+#    run keyword and continue on failure    User should be albe to Input Search VIN1 in HK Retail Home Page
+#    run keyword and continue on failure    User should be albe to Click Search VIN in HK Retail Home Page
+#
+#TC-005 - User should be able to view EPC Search Result Pop Up Modal in HK Retail Home Page
+#    [Tags]    Home Page    EPC
+#    run keyword and continue on failure    User should be able to view EPC Search Result Pop Up Modal in HK Retail Home Page
+#    run keyword and continue on failure    User should be able to click Show More button in EPC Search Result Pop Up Modal in HK Retail Home Page
+#    run keyword and continue on failure    User should be able to view EPC Search Result Pop Up Modal Elements in HK Retail Home Page
+#    run keyword and continue on failure    User should be able to click Shop this vehicle in EPC Search Result Pop Up Modal in HK Retail Home Page
+#    run keyword and continue on failure    TC Sleep
+#
+#TC-006 - User should be able to view EPC L1 Page in HK Retail
+#    [Tags]    EPC    L1
+#    run keyword and continue on failure    TC Sleep
+#    run keyword and continue on failure    User should be able to view EPC L1 Page in HK Retail
+#
+#TC-007 - User should be able to view EPC L1 Page in HK Retail
+#    [Tags]    EPC    L1
+#    run keyword and continue on failure    User should be able to click Shop Now in HK Retail EPC L1 Page
+#    run keyword and continue on failure    Browse Back Button
+#
+#TC-008 - User should be able to Click Engine Fuel System in HK Retail EPC L1 Page
+#    [Tags]    EPC    L1
+#    run keyword and continue on failure    User should be able to Click Engine Fuel System in HK Retail EPC L1 Page
+#    run keyword and continue on failure    Browse Back Button
+#
+#TC-009 - User should be able to Click Transmission and Chasis in HK Retail EPC L1 Page
+#    [Tags]    EPC    L1
+#    run keyword and continue on failure    User should be able to Click Transmission and Chasis in HK Retail EPC L1 Page
+#    run keyword and continue on failure    Browse Back Button
+#
+#TC-010 - User should be able to Click Body and Interior in HK Retail EPC L1 Page
+#    [Tags]    EPC    L1
+#    run keyword and continue on failure    User should be able to Click Body and Interior in HK Retail EPC L1 Page
+#    run keyword and continue on failure    Browse Back Button
+#
+#TC-011 - User should be able to Click Electrics in HK Retail EPC L1 Page
+#    [Tags]    EPC    L1
+#    run keyword and continue on failure    User should be able to Click Electrics in HK Retail EPC L1 Page
+#    run keyword and continue on failure    Browse Back Button
+#
+#TC-012 - User should be able to view EPC L2 Page in HK Retail
+#    [Tags]    EPC    L2
+#    run keyword and continue on failure    User should be able to Click Engine Fuel System in HK Retail EPC L1 Page
+#    run keyword and continue on failure    User should be able to view EPC L2 Page in HK Retail
+#
+#TC-013 - User should be able to view All Schema in HK Retail EPC L2 Page
+#    [Tags]    EPC    L2
+#    run keyword and continue on failure    User should be able to Click All in HK Retail EPC L2 Page
+#    run keyword and continue on failure    User should be able to view All Schema in HK Retail EPC L2 Page
+#
+#TC-014 - User should be able to select random Schema in HK Retail EPC L2 Page
+#    [Tags]    EPC    L2
+#    run keyword and continue on failure    User should be able to select random Schema in HK Retail EPC L2 Page
 
-TC-008 - User should be able to Click Engine Fuel System in HK Retail EPC L1 Page
-    [Tags]    EPC    L1
-    run keyword and continue on failure    User should be able to Click Engine Fuel System in HK Retail EPC L1 Page
-    run keyword and continue on failure    Browse Back Button
+TC-015 - User should be able to select random Schema in HK Retail EPC L2 Page
+    [Tags]    EPC    L3
+    run keyword and continue on failure    User should be able to view EPC L3 Page in HK Retail EPC L3 Page
 
-TC-009 - User should be able to Click Transmission and Chasis in HK Retail EPC L1 Page
-    [Tags]    EPC    L1
-    run keyword and continue on failure    User should be able to Click Transmission and Chasis in HK Retail EPC L1 Page
-    run keyword and continue on failure    Browse Back Button
+TC-016 - User should be able to view Parts List Card and Diagram in HK Retail EPC L3 Page
+    [Tags]    EPC    L3
+    run keyword and continue on failure    User should be able to view Parts List Card and Diagram in HK Retail EPC L3 Page
 
-TC-010 - User should be able to Click Body and Interior in HK Retail EPC L1 Page
-    [Tags]    EPC    L1
-    run keyword and continue on failure    User should be able to Click Body and Interior in HK Retail EPC L1 Page
-    run keyword and continue on failure    Browse Back Button
+TC-017 - User should be able to view Parts List Card and Diagram in HK Retail EPC L3 Page
+    [Tags]    EPC    L3
+    run keyword and continue on failure    User should be able to view one Card on the Parts Card List in HK Retail EPC L3 Page
+    run keyword and continue on failure    User should be able to expand one Card on the Parts Card List in HK Retail EPC L3 Page
+    run keyword and continue on failure    User should be able to view Option Card Details on the Parts Card List in HK Retail EPC L3 Page
 
-TC-011 - User should be able to Click Electrics in HK Retail EPC L1 Page
-    [Tags]    EPC    L1
-    run keyword and continue on failure    User should be able to Click Electrics in HK Retail EPC L1 Page
-    run keyword and continue on failure    Browse Back Button
 
-TC-012 - User should be able to view EPC L2 Page in HK Retail
-    [Tags]    EPC    L2
-    run keyword and continue on failure    User should be able to Click Engine Fuel System in HK Retail EPC L1 Page
-    run keyword and continue on failure    User should be able to view EPC L2 Page in HK Retail
-
-TC-013 - User should be able to view All Schema in HK Retail EPC L2 Page
-    [Tags]    EPC    L2
-    run keyword and continue on failure    User should be able to Click All in HK Retail EPC L2 Page
-    run keyword and continue on failure    User should be able to view All Schema in HK Retail EPC L2 Page
-
-TC-014 - User should be able to select random Schema in HK Retail EPC L2 Page
-    [Tags]    EPC    L2
-    run keyword and continue on failure    User should be able to select random Schema in HK Retail EPC L2 Page
 
 
 
@@ -118,9 +142,9 @@ TC-014 - User should be able to select random Schema in HK Retail EPC L2 Page
 #    run keyword and continue on failure    Browse Back Button
 
 
-#TC-000000 - User should be able to logout
-#    [Tags]    TC009    Logout
-#    run keyword and continue on failure    User should be able to logout
+TC-000000 - User should be able to logout
+    [Tags]    TC009    Logout
+    run keyword and continue on failure    User should be able to logout using double header
 #
 #Test Teardown
 #    Run Keywords  Close Browser

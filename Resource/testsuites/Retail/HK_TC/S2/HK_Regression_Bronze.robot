@@ -68,8 +68,6 @@ TC-012 - User should be able to view HK Registration Form
 
 TC-013 - User should be able to input details in Registration Form Page
     [Tags]    Login Page    Registration
-#    run keyword and continue on failure    User should be able to click Preferred Supplier Dropdown for HK Registration Form
-#    run keyword and continue on failure    User should be able to select 1 Preferred Supplier from Dropdown for HK Registration Form
     run keyword and continue on failure    User should be able to input Company Name
     run keyword and continue on failure    User should be able to click Postal Address Dropdown for HK Registration Form
     run keyword and continue on failure    User should be able to input text in Postal Address for HK Registration Form
@@ -221,6 +219,129 @@ TC-041 - User should be able to access Relationship page using double header in 
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to access Relationship page using double header in Retail Homepage
+
+TC-041 - User should be able to manual search vehicle in HK Retail Homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be albe to View Search Vehicle in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click brand on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to select brand on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click model on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to select model on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click year on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to select year on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click variant on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to select variant on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click model id on manual search in HK Retail Home Page
+    run keyword and continue on failure    User should be able to select model id on manual search in HK Retail Home Page
+    run keyword and continue on failure    User shoud be albe to click search this vehicle on manual seearh in HK Retail Home Page
+    run keyword and continue on failure    TC Sleep
+
+TC-041 - User should be able to view EPC Search Result Pop Up Modal in HK Retail Home Page
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to view EPC Search Result Pop Up Modal in HK Retail Home Page
+    run keyword and continue on failure    User should be able to view EPC Search Result Pop Up Modal Elements in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click Show More button in EPC Search Result Pop Up Modal in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click Shop this vehicle in EPC Search Result Pop Up Modal in HK Retail Home Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep
+
+TC-041 - User should be able to VIN search vehicle in HK Retail Homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be albe to View Search VIN in HK Retail Home Page
+    run keyword and continue on failure    User should be albe to Input Search VIN1 in HK Retail Home Page
+    run keyword and continue on failure    User should be albe to Click Search VIN in HK Retail Home Page
+    run keyword and continue on failure    TC Sleep
+
+
+TC-041 - User should be able to view EPC Search Result Pop Up Modal in HK Retail Home Page
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to view EPC Search Result Pop Up Modal in HK Retail Home Page
+    run keyword and continue on failure    User should be able to view EPC VIN Search Result Pop Up Modal Elements in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click Show More button in EPC Search Result Pop Up Modal in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click Shop this vehicle in EPC Search Result Pop Up Modal in HK Retail Home Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep
+
+TC-041 - User should be able to view EPC L1 Page in HK Retail
+    [Tags]    EPC L1
+    run keyword and continue on failure    User should be able to view EPC L1 Page in HK Retail
+
+TC-041 - User should be able to click Shop Now in HK Retail EPC L1 Page
+    [Tags]    EPC L1
+    run keyword and continue on failure    User should be able to click Shop Now in HK Retail EPC L1 Page
+    run keyword and continue on failure    Browse Back Button
+
+TC-041 - User should be able to Click Engine Fuel System in HK Retail EPC L1 Page
+    [Tags]    EPC L1
+    run keyword and continue on failure    User should be able to Click Engine Fuel System in HK Retail EPC L1 Page
+    run keyword and continue on failure    Browse Back Button
+
+TC-041 - User should be able to Click Transmission and Chasis in HK Retail EPC L1 Page
+    [Tags]    EPC L1
+    run keyword and continue on failure    User should be able to Click Transmission and Chasis in HK Retail EPC L1 Page
+    run keyword and continue on failure    Browse Back Button
+
+TC-041 - User should be able to Click Body and Interior in HK Retail EPC L1 Page
+    [Tags]    EPC L1
+    run keyword and continue on failure    User should be able to Click Body and Interior in HK Retail EPC L1 Page
+    run keyword and continue on failure    Browse Back Button
+
+TC-041 - User should be able to Click Electrics in HK Retail EPC L1 Page
+    [Tags]    EPC L1
+    run keyword and continue on failure    User should be able to Click Electrics in HK Retail EPC L1 Page
+
+TC-041 - User should be able to Click Electrics in HK Retail EPC L1 Page
+    [Tags]    EPC L2
+    run keyword and continue on failure    User should be able to view EPC L2 Page in HK Retail
+
+TC-041 - User should be able to view Engine Fuel System Schema in HK Retail EPC L2 Page
+    [Tags]    EPC L2
+    run keyword and continue on failure    User should be able to Click Engine Fuel System in HK Retail EPC L2 Page
+    run keyword and continue on failure    User should be able to view Engine Fuel System Schema in HK Retail EPC L2 Page
+
+TC-041 - User should be able to view Transmission and Chasis Schema in HK Retail EPC L2 Page
+    [Tags]    EPC L2
+    run keyword and continue on failure    User should be able to Click Transmission and Chasis in HK Retail EPC L2 Page
+    run keyword and continue on failure    User should be able to view Transmission and Chasis Schema in HK Retail EPC L2 Page
+
+TC-041 - User should be able to view Body and Innterior Schema in HK Retail EPC L2 Page
+    [Tags]    EPC L2
+    run keyword and continue on failure    User should be able to Click Body and Interior in HK Retail EPC L2 Page
+    run keyword and continue on failure    User should be able to view Body and Innterior Schema in HK Retail EPC L2 Page
+
+TC-041 - User should be able to view Electrics Schema in HK Retail EPC L2 Page
+    [Tags]    EPC L2
+    run keyword and continue on failure    User should be able to Click Electrics in HK Retail EPC L2 Page
+    run keyword and continue on failure    User should be able to view Electrics Schema in HK Retail EPC L2 Page
+
+TC-041 - User should be able to view All Schema in HK Retail EPC L2 Page
+    [Tags]    EPC L2
+    run keyword and continue on failure    User should be able to Click All in HK Retail EPC L2 Page
+    run keyword and continue on failure    User should be able to view All Schema in HK Retail EPC L2 Page
+
+TC-041 - User should be able to select random Schema in HK Retail EPC L2 Page
+    [Tags]    EPC L2
+    run keyword and continue on failure    User should be able to select random Schema in HK Retail EPC L2 Page
+
+TC-041 - User should be able to view EPC L3 Page in HK Retail EPC L3 Page
+    [Tags]    EPC L3
+    run keyword and continue on failure    User should be able to view EPC L3 Page in HK Retail EPC L3 Page
+    run keyword and continue on failure    User should be able to view Parts List Card and Diagram in HK Retail EPC L3 Page
+
+TC-041 - User should be able to view one Card on the Parts Card List in HK Retail EPC L3 Page
+    [Tags]    EPC L3
+    run keyword and continue on failure    User should be able to view one Card on the Parts Card List in HK Retail EPC L3 Page
+    run keyword and continue on failure    User should be able to expand one Card on the Parts Card List in HK Retail EPC L3 Page
+    run keyword and continue on failure    User should be able to view Option Card Details on the Parts Card List in HK Retail EPC L3 Page
+
+TC-041 - User should be able to clear vehicle selection in HK Retail Home Page
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to click Select Your Vehicle
+    run keyword and continue on failure    User should be able to click clear vehicle on selected vehicle in Retail Select Vehicle
+    run keyword and continue on failure    User should be able to Go to Home page
 
 TC-041 - User should be able to view All Products Page in HK Retail Home Page
     [Tags]    Home Page
@@ -374,7 +495,7 @@ TC-059 - User should be able to view place order in HK Retail Place Order Page
 TC-060 - User should be able to view account orders page
     [Tags]    Order Page
     run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
-    run keyword and continue on failure    User should be able to view account orders page
+    run keyword and continue on failure    User should be able to view account orders page HK
 
 TC-061 - User should be able to apply filter status in Retail Account Orders Page
     [Tags]    Order Page
@@ -431,6 +552,7 @@ TC-065 - User should be able to view and message order with Recieved Status in R
     [Tags]    Order Page
     run keyword and continue on failure    User should be able to view order with Recieved Status in Retail Account Orders Page
     run keyword and continue on failure    User should be able to click order with Recieved Status in Retail Account Orders Page
+    run keyword and continue on failure    User should be able to view order details HK
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
@@ -445,6 +567,7 @@ TC-066 - User should be able to view and message order with Submitted Status in 
     [Tags]    Order Page
     run keyword and continue on failure    User should be able to view order with Submitted Status in Retail Account Orders Page
     run keyword and continue on failure    User should be able to click order with Submitted Status in Retail Account Orders Page
+    run keyword and continue on failure    User should be able to view order details HK
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
@@ -459,6 +582,7 @@ TC-067 - User should be able to view and message order with Dispatched Status in
     [Tags]    Order Page
     run keyword and continue on failure    User should be able to view order with Dispatched Status in Retail Account Orders Page
     run keyword and continue on failure    User should be able to click order with Dispatched Status in Retail Account Orders Page
+    run keyword and continue on failure    User should be able to view order details HK
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
@@ -473,6 +597,7 @@ TC-069 - User should be able to view and message order with Orders with Returns 
     [Tags]    Order Page
     run keyword and continue on failure    User should be able to view order with Orders with Returns Status in Retail Account Orders Page
     run keyword and continue on failure    User should be able to click order with Orders with Returns Status in Retail Account Orders Page
+    run keyword and continue on failure    User should be able to view order details HK
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
@@ -639,7 +764,7 @@ TC-083 - User should be able to add new vehicle in Retail Account Vehicle Listin
     run keyword and continue on failure    User should be able to select Model ID on manual search in HK Retail Select Vehicle
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User shoud be albe to click search this vehicle on manual seearh in Retail Select Vehicle
-    run keyword and continue on failure    User should be able to click select & save vehicle in Retail Select Vehicle
+    run keyword and continue on failure    User should be able to click Save and Shop in EPC Search Result Drop Down in HK Retail Vehicle Listing Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    reload page
     run keyword and continue on failure    TC Sleep
@@ -806,7 +931,6 @@ TC-097 - User should be able to edit company details page
 
 
 
-
 #TC-000000 - TC Sleep
 #    [Tags]    TC-000000   TC Sleep
 #    run keyword and continue on failure    TC Sleep
@@ -816,9 +940,9 @@ TC-097 - User should be able to edit company details page
 #    run keyword and continue on failure    Browse Back Button
 
 
-#TC-000000 - User should be able to logout
-#    [Tags]    TC009    Logout
-#    run keyword and continue on failure    User should be able to logout
+TC-000000 - User should be able to logout
+    [Tags]    TC009    Logout
+    run keyword and continue on failure    User should be able to logout using double header
 #
 #Test Teardown
 #    Run Keywords  Close Browser

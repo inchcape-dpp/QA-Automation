@@ -47,9 +47,9 @@ TC-007 - User should be able to process Re-Order in Retail Account Order Details
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to view shopping cart pop up modal
     run keyword and continue on failure    User should be albe to delete all items from shopping cart pop up modal
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account orders page
-    run keyword and continue on failure    User should be able to click orders with $129.0 spent in HK Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to click order with Recieved Status in Retail Account Orders Page
     run keyword and continue on failure    User should be able to click Re-Order button in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to view shopping cart in HK Retail Shopping Cart Page
     run keyword and continue on failure    User should be able to click checkout button in Retail Shopping Cart Page
@@ -109,9 +109,9 @@ TC-017 - User should be able to process Re-Order in Retail Account Order Details
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to view shopping cart pop up modal
     run keyword and continue on failure    User should be albe to delete all items from shopping cart pop up modal
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account orders page
-    run keyword and continue on failure    User should be able to click orders with $129.0 spent in HK Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to click order with Recieved Status in Retail Account Orders Page
     run keyword and continue on failure    User should be able to click Re-Order button in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to view shopping cart in HK Retail Shopping Cart Page
     run keyword and continue on failure    User should be able to click checkout button in Retail Shopping Cart Page

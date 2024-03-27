@@ -43,3 +43,31 @@ User should be able to Click Yes Check/Uncheck Status
     capture element screenshot    ${CustRelPageModal}
     click element    ${CustRelPageModalYes}
     sleep    2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
