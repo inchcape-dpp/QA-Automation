@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Suite description
 
-Resource  ../../../Resource/testdata/Retail/AU_Config/AU_S2_Config.robot
+#Resource  ../../../Resource/testdata/Retail/AU_Config/AU_S2_Config.robot
 
 *** Variables ***
 #-----------------------------------------------------Retail Login Page-------------------------------------------------
@@ -1826,7 +1826,7 @@ ${Retail_AccountProfileChangePassConfirmationContainer}    //div[@class='cx-dial
 ${Retail_AccountProfileChangePassConfirmationYesButton}    //button[@class='btn btn-block btn-secondary backToHomepage-button']
 ${Retail_AccountProfileChangePassConfirmationNoButton}    //div[@class='col-sm-12 cta py-2']//button[@class='btn btn-block btn-outline-secondary']
 
-${Retail_AccountProfileChangePassCurrentPassValue}    ${Password}
+
 ${Retail_AccountProfileChangePassNewPassValue}    HelloWorld1!
 ${Retail_AccountProfileChangePassConfirmPassValue}    HelloWorld1!
 

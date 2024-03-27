@@ -15,10 +15,10 @@ ${FirefoxBrowser}    Firefox
 ${EdgeBrowser}    Edge
 ${SafariBrowser}    Safari
 
-${driver_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject1\\Resource\\chromedriver.exe
+${driver_path}    ..\\..\\..\\..\\..\\Resource\\chromedriver.exe
 #${driver_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\geckodriver.exe
 
-${Dealer_screenshot_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject1\\Resource\\testsuites\\Dealer\\Screenshots\\S1
+${Dealer_screenshot_path}    ..\\..\\..\\..\\..\\Resource\\testsuites\\Dealer\\Screenshots\\S1
 #${Retail_screenshot_path}    C:\\Users\\Danielouie.Estopace\\OneDrive - Inchcape\\06.Dev\\Dan\\Retail Screenshots
 
 ${UploadPhoto_Path_Value}    C:\\Users\\Ericson.Tinana\\Pictures\\SampleImage\\Image.jpg
@@ -29,15 +29,15 @@ ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files
 
 ${Username}    ${admin1_s2_HKdealer_UID}
 ${Password}    ${admin1_s2_HKdealer_PWD}
-
+${ProfileChangePassCurrentPassValue}    ${Password}
 ${YopMailEmail}    ${admin1_s2_HKdealer_UID}
 
 *** Keywords ***
-Open Chrome Browser HK
+Open Chrome Browser
     SeleniumLibrary.Open Browser    ${s1HKDealer}    Chrome  executable_path=${driver_path}
     maximize browser window
 
-Dealer Screent Shot DIR HK
+Dealer Screent Shot DIR
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
     create directory    ${Dealer_screenshot_path}/HK_${currentdate}
     ${LogDIR}=    convert to string    ${Dealer_screenshot_path}/HK_${currentdate}

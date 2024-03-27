@@ -15,10 +15,10 @@ ${FirefoxBrowser}    Firefox
 ${EdgeBrowser}    Edge
 ${SafariBrowser}    Safari
 
-${driver_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject1\\Resource\\chromedriver.exe
+${driver_path}    ..\\..\\..\\..\\..\\Resource\\chromedriver.exe
 #${driver_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\geckodriver.exe
 
-${Retail_screenshot_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject1\\Resource\\testsuites\\Dealer\\Screenshots\\D1
+${Retail_screenshot_path}    ..\\..\\..\\..\\..\\Resource\\testsuites\\Dealer\\Screenshots\\D1
 #${Retail_screenshot_path}    C:\\Users\\Danielouie.Estopace\\OneDrive - Inchcape\\06.Dev\\Dan\\Retail Screenshots
 
 ${UploadPhoto_Path_Value}    C:\\Users\\Ericson.Tinana\\Pictures\\SampleImage\\Image.jpg
@@ -32,7 +32,7 @@ ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files
 
 ${Username}    ${AU_D1_Automation_UID}
 ${Password}    ${AU_D1_Automation_PWD}
-
+${Retail_AccountProfileChangePassCurrentPassValue}    ${Password}
 ${YopMailEmail}    ${AU_D1_Automation_UID}
 
 #Testing Values

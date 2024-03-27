@@ -15,10 +15,10 @@ ${FirefoxBrowser}    Firefox
 ${EdgeBrowser}    Edge
 ${SafariBrowser}    Safari
 
-${driver_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject1\\Resource\\chromedriver.exe
+${driver_path}    ..\\..\\..\\..\\..\\Resource\\chromedriver.exe
 #${driver_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\geckodriver.exe
 
-${Retail_screenshot_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject1\\Resource\\testsuites\\Dealer\\Screenshots\\P1
+${Retail_screenshot_path}    ..\\..\\..\\..\\..\\Resource\\testsuites\\Dealer\\Screenshots\\P1
 #${Retail_screenshot_path}    C:\\Users\\Danielouie.Estopace\\OneDrive - Inchcape\\06.Dev\\Dan\\Retail Screenshots
 
 ${UploadPhoto_Path_Value}    C:\\Users\\Ericson.Tinana\\Pictures\\SampleImage\\Image.jpg
@@ -32,18 +32,18 @@ ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files
 
 ${Username}    ${HKCustomer_P1_UID}
 ${Password}    ${HKCustomer_P1_PWD}
-
+${Retail_AccountProfileChangePassCurrentPassValue}    ${Password}
 ${YopMailEmail}    ${HK_P1_Automation_Bronze_UID}
 
 #Testing Values
 ${ProdductSearchValue}    1780121060
 
 *** Keywords ***
-Open Chrome Browser HK
+Open Chrome Browser
     SeleniumLibrary.Open Browser    ${p1HKRetail}    Chrome  executable_path=${driver_path}
     maximize browser window
 
-Retail Screent Shot DIR HK
+Retail Screent Shot DIR
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
     create directory    ${Retail_screenshot_path}/HK_${currentdate}
     ${LogDIR}=    convert to string    ${Retail_screenshot_path}/HK_${currentdate}

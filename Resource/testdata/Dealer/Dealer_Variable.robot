@@ -2,7 +2,7 @@
 Documentation       Suite description
 
 
-Resource     ../../../Resource/testdata/Dealer/AU_Config/S2/AU_S2_Config.robot
+#Resource     ../../../Resource/testdata/Dealer/AU_Config/S2/AU_S2_Config.robot
 
 
 *** Variables ***
@@ -712,7 +712,7 @@ ${ProfileChangePassConfirmationContainer}    //div[@class='cx-dialog-body modal-
 ${ProfileChangePassConfirmationYesButton}    //button[@class='btn btn-block btn-secondary backToHomepage-button']
 ${ProfileChangePassConfirmationNoButton}    //div[@class='col-sm-12 cta py-2']//button[@class='btn btn-block btn-outline-secondary']
 
-${ProfileChangePassCurrentPassValue}    ${Password}
+
 ${ProfileChangePassNewPassValue}    HelloWorld1!
 ${ProfileChangePassConfirmPassValue}    HelloWorld1!
 

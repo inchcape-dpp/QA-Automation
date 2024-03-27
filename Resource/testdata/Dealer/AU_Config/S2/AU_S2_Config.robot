@@ -14,10 +14,10 @@ ${FirefoxBrowser}    Firefox
 ${EdgeBrowser}    Edge
 ${SafariBrowser}    Safari
 
-${driver_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject1\\Resource\\chromedriver.exe
+${driver_path}    ..\\..\\..\\..\\..\\Resource\\chromedriver.exe
 #${driver_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\geckodriver.exe
 
-${Dealer_screenshot_path}    C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject1\\Resource\\testsuites\\Dealer\\Screenshots\\S2
+${Dealer_screenshot_path}    ..\\..\\..\\..\\..\\Resource\\testsuites\\Dealer\\Screenshots\\S2
 #${Retail_screenshot_path}    C:\\Users\\Danielouie.Estopace\\OneDrive - Inchcape\\06.Dev\\Dan\\Retail Screenshots
 
 ${UploadPhoto_Path_Value}    C:\\Users\\Ericson.Tinana\\Pictures\\SampleImage\\Image.jpg
@@ -28,6 +28,7 @@ ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files
 
 ${Username}    ${AUSeller_S2_UID}
 ${Password}    ${AUSeller_S2_PWD}
+${ProfileChangePassCurrentPassValue}    ${Password}
 
 ${YopMailEmail}    ${admin1_s2_dealer_UID}
 
