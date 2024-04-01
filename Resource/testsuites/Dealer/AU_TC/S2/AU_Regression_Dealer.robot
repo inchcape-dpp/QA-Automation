@@ -12,8 +12,8 @@ Resource  ../../../../../Resource/testdata/Dealer/Dealer_Resource.robot
 
 
 *** Test Cases ***
-Test Setup  Run Keywords   Open Chrome Browser
-Screen Shot DIR  Run Keywords    Dealer Screent Shot DIR
+Test Setup  Run Keywords   Open Chrome Browser S2
+Screen Shot DIR  Run Keywords    Dealer Screent Shot DIR S2
 
 TC-001 - Verify Login Page
     [Tags]    Login Page
