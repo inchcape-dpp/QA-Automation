@@ -179,46 +179,64 @@ TC-041 - User should be able to access Order page using double header in Retail 
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to access Order page using double header in Retail Homepage
+    run keyword and continue on failure    reload page
+    run keyword and continue on failure    TC Sleep
 
 TC-041 - User should be able to access Retrun page using double header in Retail Homepage
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to access Retrun page using double header in Retail Homepage
+    run keyword and continue on failure    reload page
+    run keyword and continue on failure    TC Sleep
 
 TC-041 - User should be able to access Save carts page using double header in Retail Homepage
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to access Save carts page using double header in Retail Homepage
+    run keyword and continue on failure    reload page
+    run keyword and continue on failure    TC Sleep
 
 TC-041 - User should be able to access Vehicle Listing page using double header in Retail Homepage
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to access Vehicle Listing page using double header in Retail Homepage
+    run keyword and continue on failure    reload page
+    run keyword and continue on failure    TC Sleep
 
 TC-041 - User should be able to access Inbox page using double header in Retail Homepage
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to access Inbox page using double header in Retail Homepage
+    run keyword and continue on failure    reload page
+    run keyword and continue on failure    TC Sleep
 
 TC-041 - User should be able to access Account Details page using double header in Retail Homepage
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to access Account Details page using double header in Retail Homepage
+    run keyword and continue on failure    reload page
+    run keyword and continue on failure    TC Sleep
 
 TC-041 - User should be able to access Change Pass page using double header in Retail Homepage
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to access Change Pass page using double header in Retail Homepage
+    run keyword and continue on failure    reload page
+    run keyword and continue on failure    TC Sleep
 
 TC-041 - User should be able to access Company Details page using double header in Retail Homepage
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to access Company Details page using double header in Retail Homepage
+    run keyword and continue on failure    reload page
+    run keyword and continue on failure    TC Sleep
 
 TC-041 - User should be able to access Relationship page using double header in Retail Homepage
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to access Relationship page using double header in Retail Homepage
+    run keyword and continue on failure    reload page
+    run keyword and continue on failure    TC Sleep
 
 TC-041 - User should be able to manual search vehicle in HK Retail Homepage
     [Tags]    Home Page
@@ -390,7 +408,9 @@ TC-046 - User should be able to click add to cart button for in stock only in Re
 TC-047 - User should be able to add to cart random item in Retail Product Page
     [Tags]    All Products Page
     run keyword and continue on failure    User should be able to add to cart random item in Retail Product Page
+    run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to add to cart random item in Retail Product Page
+    run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to add to cart random item in Retail Product Page
 
 TC-048 - User should be able to view shopping cart pop up modal
@@ -487,6 +507,39 @@ TC-058 - User should be able to click Submit button on 2C2P
 
 TC-059 - User should be able to view place order in HK Retail Place Order Page
     [Tags]    Checkout Page
+    run keyword and continue on failure    Unselect Credit Card Frame
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User should be able to view place order in HK Retail Place Order Page
+    run keyword and continue on failure    User should be able to click back to home button in Retail Place Order Page
+
+TC-087 - User should be able to process Re-Order in Retail Account Order Details Page
+    [Tags]    Re-Order Process
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to view shopping cart pop up modal
+    run keyword and continue on failure    User should be albe to delete all items from shopping cart pop up modal
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
+    run keyword and continue on failure    User should be able to view account orders page
+    run keyword and continue on failure    User should be able to select one order from the list
+    run keyword and continue on failure    User should be able to click Re-Order button in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to view shopping cart in Retail Shopping Cart Page
+    run keyword and continue on failure    User should be able to click checkout button in Retail Shopping Cart Page
+    run keyword and continue on failure    User should be able to view checkout in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to view Promo Code in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to input Promo Code in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to check Promo Code in HK Retail Checkout Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User should be able to view payment method in HK Retail Checkout Page
+    run keyword and continue on failure    Select Credit Card Frame
+    run keyword and continue on failure    User should be able to input jcb card number
+    run keyword and continue on failure    User should be albe to input Exp Date
+    run keyword and continue on failure    User should be albe to input CVV
+    run keyword and continue on failure    User should be albe to input Card Holders Name
+    run keyword and continue on failure    User should be albe to input Email
+    run keyword and continue on failure    User should be able to click continue payment button
+    run keyword and continue on failure    User should be able to view 2C2P Modal
+    run keyword and continue on failure    User should be able to Input OTP
+    run keyword and continue on failure    User should be able to click Submit button on 2C2P
+    run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    Unselect Credit Card Frame
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view place order in HK Retail Place Order Page
@@ -677,6 +730,34 @@ TC-077 - User should be able to view and message order with Accepted Status in R
     run keyword and continue on failure    User should be able to click back to order details in Retail Account Return Details Page
     run keyword and continue on failure    User should be able to click Back to Return Request in Retail Account Return Details Page
 
+TC-109 - User should be able to view and message order with Declined Status in Retail Account Return Page
+    [Tags]    Return Page
+    run keyword and continue on failure    User should be able to view order with Declined Status in Retail Account Return Page
+    run keyword and continue on failure    User should be able to click order with Declined Status in Retail Account Return Page
+    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to view message supplier pop up in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to input text on message pop up text field in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to upload photo on message pop in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to send on message pop in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to click back to order details in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to click Back to Return Request in Retail Account Return Details Page
+
+TC-110 - User should be able to view and message order with In Progress Status in Retail Account Return Page
+    [Tags]    Return Page
+    run keyword and continue on failure    User should be able to view order with In Progress Status in Retail Account Return Page
+    run keyword and continue on failure    User should be able to click order with In Progress Status in Retail Account Return Page
+    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to view message supplier pop up in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to input text on message pop up text field in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to upload photo on message pop in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to send on message pop in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to click back to order details in Retail Account Return Details Page
+    run keyword and continue on failure    User should be able to click Back to Return Request in Retail Account Return Details Page
+
 TC-078 - User should be able to view account saved carts page
     [Tags]    Saved Carts Page
     run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
@@ -850,6 +931,66 @@ TC-090 - User should be able to view and message read Product Enquiry in Retail 
     run keyword and continue on failure    User should be able to upload image in Retail Account Messages Details Page
     run keyword and continue on failure    User should be able to click send in Retail Account Messages Details Page
     run keyword and continue on failure    User should be able to click Back to All Message in Retail Account Messages Details Page
+
+TC-128 - User should be able to view and message read General Enquiry in Retail Account Message Page
+    [Tags]    Message Page
+    run keyword and continue on failure    User should be able to view read General Enquiry in Retail Account Message Page
+    run keyword and continue on failure    User should be able to click read General Enquiry in Retail Account Message Page
+    run keyword and continue on failure    User should be able to Input Text on Message in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to upload image in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to click send in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to click Back to All Message in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to view message page
+
+TC-130 - User should be able to view and message read Return Enquiry in Retail Account Message Page
+    [Tags]    Message Page
+    run keyword and continue on failure    User should be able to view read Return Enquiry in Retail Account Message Page
+    run keyword and continue on failure    User should be able to click read Return Enquiry in Retail Account Message Page
+    run keyword and continue on failure    User should be able to Input Text on Message in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to upload image in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to click send in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to click Back to All Message in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to view message page
+
+TC-133 - User should be able to view and message unread General Enquiry in Retail Account Message Page
+    [Tags]    Message Page
+    run keyword and continue on failure    User should be able to view unread General Enquiry in Retail Account Message Page
+    run keyword and continue on failure    User should be able to click unread General Enquiry in Retail Account Message Page
+    run keyword and continue on failure    User should be able to Input Text on Message in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to upload image in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to click send in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to click Back to All Message in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to view message page
+
+TC-134 - User should be able to view and message unread Return Enquiry in Retail Account Message Page
+    [Tags]    Message Page
+    run keyword and continue on failure    User should be able to view unread Return Enquiry in Retail Account Message Page
+    run keyword and continue on failure    User should be able to click unread Return Enquiry in Retail Account Message Page
+    run keyword and continue on failure    User should be able to Input Text on Message in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to upload image in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to click send in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to click Back to All Message in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to view message page
+
+TC-135 - User should be able to view and message unread Order Enquiry in Retail Account Message Page
+    [Tags]    Message Page
+    run keyword and continue on failure    User should be able to view unread Order Enquiry in Retail Account Message Page
+    run keyword and continue on failure    User should be able to click unread Order Enquiry in Retail Account Message Page
+    run keyword and continue on failure    User should be able to Input Text on Message in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to upload image in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to click send in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to click Back to All Message in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to view message page
+
+TC-136 - User should be able to view and message unread Product Enquiry in Retail Account Message Page
+    [Tags]    Message Page
+    run keyword and continue on failure    User should be able to view unread Product Enquiry in Retail Account Message Page
+    run keyword and continue on failure    User should be able to click unread Product Enquiry in Retail Account Message Page
+    run keyword and continue on failure    User should be able to Input Text on Message in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to upload image in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to click send in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to click Back to All Message in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to view message page
 
 TC-091 - User should be able to view Account Details page
     [Tags]    Account Details Page

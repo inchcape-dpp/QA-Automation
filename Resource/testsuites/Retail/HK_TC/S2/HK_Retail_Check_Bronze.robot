@@ -132,7 +132,9 @@ TC-046 - User should be able to click add to cart button for in stock only in Re
 TC-047 - User should be able to add to cart random item in Retail Product Page
     [Tags]    All Products Page
     run keyword and continue on failure    User should be able to add to cart random item in Retail Product Page
+    run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to add to cart random item in Retail Product Page
+    run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to add to cart random item in Retail Product Page
 
 TC-048 - User should be able to view shopping cart pop up modal

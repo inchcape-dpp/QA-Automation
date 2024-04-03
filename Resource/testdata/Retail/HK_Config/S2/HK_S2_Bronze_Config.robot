@@ -30,8 +30,8 @@ ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files
 #${Username}    retailtitanp1@yopmail.com
 #${Password}    Welcom3@NT
 
-${Username}    ${HK_S2_UID}
-${Password}    ${HK_S2_PWD}
+${Username}    ${HK_S2_Automation_Bronze_UID}
+${Password}    ${HK_S2_Automation_Bronze_PWD}
 
 ${YopMailEmail}    ${HK_S2_Automation_Bronze_UID}
 

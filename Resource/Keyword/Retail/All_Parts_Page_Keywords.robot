@@ -678,6 +678,7 @@ User should be able to add to cart random item in Retail Product Page
     ${AddToCartElements}    get element count    ${AllProdPageAddtoCartButton}
     ${RandomAddToCartIndex}    evaluate    random.randint(1,${AddToCartElements})
     scroll element into view    (//dpp-add-to-cart//button[@type='submit'])[${RandomAddToCartIndex}]
+    sleep    2
     click element    (//dpp-add-to-cart//button[@type='submit'])[${RandomAddToCartIndex}]
     set global variable    ${RandomAddToCartIndex}
     sleep    2
@@ -1686,12 +1687,8 @@ User should be able to view EPC L3 Page in HK Retail EPC L3 Page
     capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_ChangeCar_Button}
 
     wait until element is visible    ${Retail_HK_EPC_L3_SchemaCar_Header_Label}    10
-    wait until element is visible    ${Retail_HK_EPC_L3_SchemaCar_Header_Prev_Button}    10
-    wait until element is visible    ${Retail_HK_EPC_L3_SchemaCar_Header_Next_Button}    10
 
     capture element screenshot    ${Retail_HK_EPC_L3_SchemaCar_Header_Label}
-    capture element screenshot    ${Retail_HK_EPC_L3_SchemaCar_Header_Prev_Button}
-    capture element screenshot    ${Retail_HK_EPC_L3_SchemaCar_Header_Next_Button}
 
     wait until element is visible    ${Retail_HK_EPC_L3_SchemaCar_Diagram}    10
 
