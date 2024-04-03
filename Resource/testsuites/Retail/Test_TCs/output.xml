@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-03-21T11:23:12.825364" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Retail Smoke1" source="C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Retail\Test_TCs\Test_Retail_Smoke1.robot">
+<test id="s1-t1" name="Test Setup" line="14">
+<kw name="Run Keywords" owner="BuiltIn">
+<kw name="Open Chrome Browser HK" owner="HK_D1_Bronze_Config">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-21T11:23:13.968997" level="INFO">Opening browser 'Chrome' to base url 'https://hkretail.coyzchwfjr-inchcaped2-d1-public.model-t.cc.commerce.ondemand.com/hkretail/login'.</msg>
+<arg>${d1HKRetail}</arg>
+<arg>Chrome</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-21T11:23:13.968997" elapsed="1.926847"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-21T11:23:15.895844" elapsed="2.115544"/>
+</kw>
+<status status="PASS" start="2024-03-21T11:23:13.967995" elapsed="4.043393"/>
+</kw>
+<arg>Open Chrome Browser HK</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2024-03-21T11:23:13.967995" elapsed="4.043393"/>
+</kw>
+<status status="PASS" start="2024-03-21T11:23:13.964999" elapsed="4.047388"/>
+</test>
+<test id="s1-t2" name="Retail Screent Shot DIR HK" line="15">
+<kw name="Run Keywords" owner="BuiltIn">
+<kw name="Retail Screent Shot DIR HK" owner="HK_D1_Bronze_Config">
+<kw name="Get Current Date" owner="DateTime">
+<msg time="2024-03-21T11:23:18.014899" level="INFO">${currentdate} = 03-21-24 11-23</msg>
+<var>${currentdate}</var>
+<arg>result_format=%m-%d-%y %H-%M</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<status status="PASS" start="2024-03-21T11:23:18.013894" elapsed="0.001005"/>
+</kw>
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2024-03-21T11:23:18.015902" level="INFO" html="true">Created directory '&lt;a href="file://C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject1\Resource\testsuites\Dealer\Screenshots\D1\HK_03-21-24 11-23"&gt;C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject1\Resource\testsuites\Dealer\Screenshots\D1\HK_03-21-24 11-23&lt;/a&gt;'.</msg>
+<arg>${Retail_screenshot_path}/HK_${currentdate}</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2024-03-21T11:23:18.014899" elapsed="0.001003"/>
+</kw>
+<kw name="Convert To String" owner="BuiltIn">
+<msg time="2024-03-21T11:23:18.015902" level="INFO">${LogDIR} = C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject1\Resource\testsuites\Dealer\Screenshots\D1/HK_03-21-24 11-23</msg>
+<var>${LogDIR}</var>
+<arg>${Retail_screenshot_path}/HK_${currentdate}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<status status="PASS" start="2024-03-21T11:23:18.015902" elapsed="0.000000"/>
+</kw>
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<arg>${LogDIR}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2024-03-21T11:23:18.015902" elapsed="0.000998"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2024-03-21T11:23:18.016900" level="INFO">${LogDIR} = C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject1\Resource\testsuites\Dealer\Screenshots\D1/HK_03-21-24 11-23</msg>
+<arg>${LogDIR}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2024-03-21T11:23:18.016900" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-03-21T11:23:18.013894" elapsed="0.003006"/>
+</kw>
+<arg>Retail Screent Shot DIR HK</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<status status="PASS" start="2024-03-21T11:23:18.013894" elapsed="0.003006"/>
+</kw>
+<status status="PASS" start="2024-03-21T11:23:18.012387" elapsed="0.004513"/>
+</test>
+<test id="s1-t3" name="TC-001 - Verify Login Page" line="17">
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="TC Sleep" owner="HK_D1_Bronze_Config">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-21T11:23:28.022397" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-21T11:23:18.021903" elapsed="10.000494"/>
+</kw>
+<status status="PASS" start="2024-03-21T11:23:18.020905" elapsed="10.001492"/>
+</kw>
+<arg>TC Sleep</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-03-21T11:23:18.019902" elapsed="10.002495"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="User should be able to click Translate to English Button" owner="Login_Page_Keywords">
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-03-21T11:23:28.054463" level="INFO">Element '//dpp-language-toggle//span[contains(text(),'EN')]' is displayed.</msg>
+<arg>${Retail_HK_LoginPage_English_Button}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-21T11:23:28.024919" elapsed="0.029544"/>
+</kw>
+<msg time="2024-03-21T11:23:28.054463" level="INFO">${EN} = True</msg>
+<var>${EN}</var>
+<arg>element should be visible</arg>
+<arg>${Retail_HK_LoginPage_English_Button}</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-03-21T11:23:28.024407" elapsed="0.030056"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Translate to English" owner="Login_Page_Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Retail_HK_LoginPage_English_Button}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-21T11:23:28.056477" elapsed="0.022563"/>
+</kw>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2024-03-21T11:23:28.189634" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../../../../pythonProject1/Resource/testsuites/Dealer/Screenshots/D1/HK_03-21-24%2011-23/selenium-element-screenshot-1.png"&gt;&lt;img src="../../../../../pythonProject1/Resource/testsuites/Dealer/Screenshots/D1/HK_03-21-24%2011-23/selenium-element-screenshot-1.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>${Retail_HK_LoginPage_English_Button}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2024-03-21T11:23:28.079040" elapsed="0.110594"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T11:23:28.189634" level="INFO">Clicking element '//dpp-language-toggle//span[contains(text(),'EN')]'.</msg>
+<arg>${Retail_HK_LoginPage_English_Button}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T11:23:28.189634" elapsed="0.091775"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-21T11:23:30.282821" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-21T11:23:28.282408" elapsed="2.000413"/>
+</kw>
+<status status="PASS" start="2024-03-21T11:23:28.055471" elapsed="2.227350"/>
+</kw>
+<arg>${EN}</arg>
+<arg>Translate to English</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2024-03-21T11:23:28.055471" elapsed="2.227350"/>
+</kw>
+<status status="PASS" start="2024-03-21T11:23:28.023404" elapsed="2.259417"/>
+</kw>
+<arg>User should be able to click Translate to English Button</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-03-21T11:23:28.023404" elapsed="2.259417"/>
+</kw>
+<tag>Login Page</tag>
+<tag>TC001</tag>
+<status status="PASS" start="2024-03-21T11:23:18.018905" elapsed="12.263916"/>
+</test>
+<test id="s1-t4" name="TC-002 - Input Valid Username" line="22">
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Input Valid Username" owner="Login_Page_Keywords">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${Email}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T11:23:30.285631" elapsed="0.043533"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-21T11:23:30.330168" level="INFO">Typing text 'hktestric001@yopmail.com' into text field '//*[@type='email']'.</msg>
+<arg>${Email}</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T11:23:30.329164" elapsed="0.138144"/>
+</kw>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2024-03-21T11:23:30.601118" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../../../../pythonProject1/Resource/testsuites/Dealer/Screenshots/D1/HK_03-21-24%2011-23/selenium-element-screenshot-2.png"&gt;&lt;img src="../../../../../pythonProject1/Resource/testsuites/Dealer/Screenshots/D1/HK_03-21-24%2011-23/selenium-element-screenshot-2.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>${Email}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2024-03-21T11:23:30.467308" elapsed="0.134811"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-21T11:23:32.602654" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-21T11:23:30.602119" elapsed="2.000535"/>
+</kw>
+<status status="PASS" start="2024-03-21T11:23:30.284622" elapsed="2.318032"/>
+</kw>
+<arg>Input Valid Username</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-03-21T11:23:30.284622" elapsed="2.318032"/>
+</kw>
+<tag>Login Page</tag>
+<tag>TC002</tag>
+<status status="PASS" start="2024-03-21T11:23:30.282821" elapsed="2.320843"/>
+</test>
+<test id="s1-t5" name="TC-003 - Input Valid Password" line="26">
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Input Valid Password" owner="Login_Page_Keywords">
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${Pass}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T11:23:32.606186" elapsed="0.034081"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-21T11:23:32.641266" level="INFO">Typing text 'Pass@12345' into text field '//*[@type='password']'.</msg>
+<arg>${Pass}</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T11:23:32.640267" elapsed="0.085707"/>
+</kw>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2024-03-21T11:23:32.874476" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../../../../pythonProject1/Resource/testsuites/Dealer/Screenshots/D1/HK_03-21-24%2011-23/selenium-element-screenshot-3.png"&gt;&lt;img src="../../../../../pythonProject1/Resource/testsuites/Dealer/Screenshots/D1/HK_03-21-24%2011-23/selenium-element-screenshot-3.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>${Pass}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2024-03-21T11:23:32.726986" elapsed="0.147490"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-21T11:23:34.875168" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-21T11:23:32.874476" elapsed="2.000692"/>
+</kw>
+<status status="PASS" start="2024-03-21T11:23:32.605174" elapsed="2.269994"/>
+</kw>
+<arg>Input Valid Password</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-03-21T11:23:32.605174" elapsed="2.269994"/>
+</kw>
+<tag>Login Page</tag>
+<tag>TC003</tag>
+<status status="PASS" start="2024-03-21T11:23:32.604666" elapsed="2.270502"/>
+</test>
+<test id="s1-t6" name="TC-004 - User should be able to click Login Button" line="30">
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="User should be able to click Login Button" owner="Login_Page_Keywords">
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2024-03-21T11:23:34.965912" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../../../../pythonProject1/Resource/testsuites/Dealer/Screenshots/D1/HK_03-21-24%2011-23/selenium-element-screenshot-4.png"&gt;&lt;img src="../../../../../pythonProject1/Resource/testsuites/Dealer/Screenshots/D1/HK_03-21-24%2011-23/selenium-element-screenshot-4.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>${LoginButton}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2024-03-21T11:23:34.878179" elapsed="0.087733"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T11:23:34.966913" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<arg>${LoginButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T11:23:34.965912" elapsed="0.051728"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-21T11:23:37.017962" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-21T11:23:35.017640" elapsed="2.000322"/>
+</kw>
+<status status="PASS" start="2024-03-21T11:23:34.878179" elapsed="2.139783"/>
+</kw>
+<arg>User should be able to click Login Button</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-03-21T11:23:34.877179" elapsed="2.140783"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="TC Sleep" owner="HK_D1_Bronze_Config">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-21T11:23:47.019260" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-21T11:23:37.018969" elapsed="10.000291"/>
+</kw>
+<status status="PASS" start="2024-03-21T11:23:37.018969" elapsed="10.000291"/>
+</kw>
+<arg>TC Sleep</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-03-21T11:23:37.017962" elapsed="10.001298"/>
+</kw>
+<tag>Login Page</tag>
+<tag>TC004</tag>
+<status status="PASS" start="2024-03-21T11:23:34.877179" elapsed="12.142081"/>
+</test>
+<test id="s1-t7" name="TC-005 - User should be able to view All Products Page in HK Retail Home Page" line="35">
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="User should be able to view All products" owner="Home_Page_Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${HomePageAllCategory}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-21T11:23:47.022597" elapsed="0.020607"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-21T11:23:47.043204" level="INFO">Clicking element '//dpp-category-navigation//a[@href='/dppretail/c/0']|//dpp-category-navigation//a[contains(text(),'All') or contains(text(),'Other')]'.</msg>
+<arg>${HomePageAllCategory}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T11:23:47.043204" elapsed="0.188754"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${AllProdPageLabelFilter}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-21T11:23:47.231958" elapsed="0.656295"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-03-21T11:23:48.101891" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../../../../pythonProject1/Resource/testsuites/Dealer/Screenshots/D1/HK_03-21-24%2011-23/selenium-screenshot-1.png"&gt;&lt;img src="../../../../../pythonProject1/Resource/testsuites/Dealer/Screenshots/D1/HK_03-21-24%2011-23/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-03-21T11:23:47.888253" elapsed="0.214639"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-21T11:23:50.103283" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-21T11:23:48.102892" elapsed="2.000391"/>
+</kw>
+<status status="PASS" start="2024-03-21T11:23:47.021599" elapsed="3.081684"/>
+</kw>
+<arg>User should be able to view All products</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-03-21T11:23:47.021599" elapsed="3.081684"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="TC Sleep" owner="HK_D1_Bronze_Config">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-21T11:24:00.106028" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-21T11:23:50.103789" elapsed="10.002456"/>
+</kw>
+<status status="PASS" start="2024-03-21T11:23:50.103789" elapsed="10.002456"/>
+</kw>
+<arg>TC Sleep</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-03-21T11:23:50.103789" elapsed="10.002456"/>
+</kw>
+<tag>Home Page</tag>
+<status status="PASS" start="2024-03-21T11:23:47.020595" elapsed="13.085650"/>
+</test>
+<test id="s1-t8" name="TC-006 - Show number of product list" line="40">
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Show number of product list" owner="All_Parts_Page_Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Retail_HK_ProductSelectionProductlist}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-21T11:24:00.109262" elapsed="0.022535"/>
+</kw>
+<kw name="Get Element Count" owner="SeleniumLibrary">
+<arg>${Retail_HK_ProductSelectionProductlist}</arg>
+<doc>Returns the number of elements matching ``locator``.</doc>
+<status status="PASS" start="2024-03-21T11:24:00.131797" elapsed="0.010388"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-21T11:24:00.164100" level="INFO">${Productlisttext} = Showing 20 of 1361 products</msg>
+<var>${Productlisttext}</var>
+<arg>${Retail_HK_ProductSelectionProductResult}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-21T11:24:00.142185" elapsed="0.021915"/>
+</kw>
+<kw name="Split String" owner="String">
+<msg time="2024-03-21T11:24:00.165607" level="INFO">${words} = ['Showing', '20', 'of', '1361', 'products']</msg>
+<var>${words}</var>
+<arg>${Productlisttext}</arg>
+<arg>${SPACE}</arg>
+<doc>Splits the ``string`` using ``separator`` as a delimiter string.</doc>
+<status status="PASS" start="2024-03-21T11:24:00.165607" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-03-21T11:24:00.167617" level="INFO">Showing</msg>
+<arg>${words}[0]</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-03-21T11:24:00.165607" elapsed="0.002010"/>
+</kw>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2024-03-21T11:24:00.290439" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../../../../pythonProject1/Resource/testsuites/Dealer/Screenshots/D1/HK_03-21-24%2011-23/selenium-element-screenshot-5.png"&gt;&lt;img src="../../../../../pythonProject1/Resource/testsuites/Dealer/Screenshots/D1/HK_03-21-24%2011-23/selenium-element-screenshot-5.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>${Retail_HK_ProductSelectionProductResult}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2024-03-21T11:24:00.167617" elapsed="0.122822"/>
+</kw>
+<status status="PASS" start="2024-03-21T11:24:00.108263" elapsed="0.183176"/>
+</kw>
+<arg>Show number of product list</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-03-21T11:24:00.108263" elapsed="0.183176"/>
+</kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="TC Sleep" owner="HK_D1_Bronze_Config">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-03-21T11:24:10.292581" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-03-21T11:24:00.292435" elapsed="10.000146"/>
+</kw>
+<status status="PASS" start="2024-03-21T11:24:00.291439" elapsed="10.001142"/>
+</kw>
+<arg>TC Sleep</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-03-21T11:24:00.291439" elapsed="10.001142"/>
+</kw>
+<tag>Home Page</tag>
+<status status="PASS" start="2024-03-21T11:24:00.107252" elapsed="10.185840"/>
+</test>
+<doc>Suite description</doc>
+<status status="PASS" start="2024-03-21T11:23:12.827362" elapsed="57.466736"/>
+</suite>
+<statistics>
+<total>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">Home Page</stat>
+<stat pass="4" fail="0" skip="0">Login Page</stat>
+<stat pass="1" fail="0" skip="0">TC001</stat>
+<stat pass="1" fail="0" skip="0">TC002</stat>
+<stat pass="1" fail="0" skip="0">TC003</stat>
+<stat pass="1" fail="0" skip="0">TC004</stat>
+</tag>
+<suite>
+<stat pass="8" fail="0" skip="0" id="s1" name="Test Retail Smoke1">Test Retail Smoke1</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2024-03-21T11:23:13.247062" level="ERROR">Error in file 'C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testdata\Retail\Retail_Variable.robot' on line 2587: Setting variable '//tbody//tbody//tr//td//a//font[contains(text(),'Contact Us')]' failed: Invalid variable name '//tbody//tbody//tr//td//a//font[contains(text(),'Contact Us')]'.</msg>
+<msg time="2024-03-21T11:23:13.249061" level="ERROR">Error in file 'C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testdata\Retail\Retail_Variable.robot' on line 4: Resource file '..\..\..\Resource\testdata\Retail\AU_Config\AU_S2_Config.robot' does not exist.</msg>
+<msg time="2024-03-21T11:23:13.356085" level="ERROR">Error in file 'C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\Keyword\Retail\Account_Orders_Page_Keywords.robot' on line 648: Creating keyword 'User should be able to click orders with $129.0 spent in HK Retail Account Order Details Page' failed: Keyword with same name defined multiple times.</msg>
+<msg time="2024-03-21T11:23:13.942438" level="ERROR">Error in file 'C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testdata\Retail\Retail_Variable.robot' on line 463: Setting variable '${Retail_FilterListSubElements}' failed: Variable '${RandomFilterIndex}' not found.</msg>
+</errors>
+</robot>
