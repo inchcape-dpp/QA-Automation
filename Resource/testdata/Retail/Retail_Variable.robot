@@ -253,13 +253,13 @@ ${HomePage_DoubleHeader_DropDown_Button}    //div[@class='double-header--relativ
 
 ${HomePage_DoubleHeader_Menu_Greet_Label}    //div[@class='menu-content']//div[@class='menu-content__greet']
 
-${HomePage_DoubleHeader_Menu_Order_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab']//*[contains(text(),'Order')]
-${HomePage_DoubleHeader_Menu_ReturnRequest_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab']//*[contains(text(),'Return Request')]
-${HomePage_DoubleHeader_Menu_SavedCarts_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab']//*[contains(text(),'Saved Carts')]
-${HomePage_DoubleHeader_Menu_VehicleListing_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab']//*[contains(text(),'Vehicle Listing')]
-${HomePage_DoubleHeader_Menu_Inbox_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab']//*[contains(text(),'Inbox') or contains(text(),'Messages')]
-${HomePage_DoubleHeader_Menu_Profile_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab']//*[contains(text(),'Profile')]
-${HomePage_DoubleHeader_Menu_Company_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab']//*[contains(text(),'Company')]
+${HomePage_DoubleHeader_Menu_Order_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab__title']//*[contains(text(),'Order')]
+${HomePage_DoubleHeader_Menu_ReturnRequest_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab__title']//*[contains(text(),'Return Request')]
+${HomePage_DoubleHeader_Menu_SavedCarts_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab__title']//*[contains(text(),'Saved Carts')]
+${HomePage_DoubleHeader_Menu_VehicleListing_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab__title']//*[contains(text(),'Vehicle Listing')]
+${HomePage_DoubleHeader_Menu_Inbox_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab__title']//*[contains(text(),'Inbox') or contains(text(),'Messages')]
+${HomePage_DoubleHeader_Menu_Profile_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab__title']//*[contains(text(),'Profile')]
+${HomePage_DoubleHeader_Menu_Company_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab__title']//*[contains(text(),'Company')]
 
 ${HomePage_DoubleHeader_Menu_Profile_AccountDetails_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab__sub-acc show-item']//*[contains(text(),'Account Details')]
 ${HomePage_DoubleHeader_Menu_Profile_ChangePassword_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab__sub-acc show-item']//*[contains(text(),'Change Password')]

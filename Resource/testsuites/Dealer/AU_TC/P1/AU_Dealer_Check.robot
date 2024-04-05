@@ -11,7 +11,7 @@ Resource    ../../../../../Resource/testdata/Dealer/Dealer_Variable.robot
 Resource    ../../../../../Resource/testdata/Dealer/Dealer_Resource.robot
 
 *** Test Cases ***
-Test Setup  Run Keywords   Open Chrome Browser
+Test Setup  Run Keywords   Open Chrome Browser P1
 Screen Shot DIR  Run Keywords    Dealer Screen Shot DIR
 
 TC Sleep
