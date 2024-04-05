@@ -131,7 +131,9 @@ TC-046 - User should be able to click add to cart button for in stock only in Re
 TC-047 - User should be able to add to cart random item in Retail Product Page
     [Tags]    All Products Page
     run keyword and continue on failure    User should be able to add to cart random item in Retail Product Page
+    run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to add to cart random item in Retail Product Page
+    run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to add to cart random item in Retail Product Page
 
 TC-048 - User should be able to view shopping cart pop up modal
@@ -210,6 +212,7 @@ TC-053 - User should be able to search by VIN1 to HK Retail Home Page
     run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view All Parts Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    TC Sleep
@@ -220,6 +223,7 @@ TC-053 - User should be able to search by VIN2 to HK Retail Home Page
     run keyword and continue on failure    User should be albe to Input Search VIN2 in HK Retail Home Page
     run keyword and continue on failure    User should be albe to Click Search VIN in HK Retail Home Page
     run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
+    run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view All Parts Page
@@ -234,6 +238,7 @@ TC-053 - User should be able to search by VIN3 to HK Retail Home Page
     run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view All Parts Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    TC Sleep
@@ -246,6 +251,7 @@ TC-053 - User should be able to search by VIN4 to HK Retail Home Page
     run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view All Parts Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    TC Sleep
@@ -256,6 +262,7 @@ TC-053 - User should be able to search by VIN5 to HK Retail Home Page
     run keyword and continue on failure    User should be albe to Input Search VIN5 in HK Retail Home Page
     run keyword and continue on failure    User should be albe to Click Search VIN in HK Retail Home Page
     run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
+    run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view All Parts Page

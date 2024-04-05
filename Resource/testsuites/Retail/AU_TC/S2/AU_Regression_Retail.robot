@@ -535,7 +535,7 @@ TC-087 - User should be able to process Re-Order in Retail Account Order Details
     run keyword and continue on failure    User should be albe to delete all items from shopping cart pop up modal
     run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account orders page
-    run keyword and continue on failure    User should be able to click orders with $0.25 spent in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to select one order from the list
     run keyword and continue on failure    User should be able to click Re-Order button in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to view shopping cart in Retail Shopping Cart Page
     run keyword and continue on failure    User should be able to click checkout button in Retail Shopping Cart Page

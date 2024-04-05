@@ -584,8 +584,6 @@ User should be albe to Input Search VIN1 in HK Retail Home Page
     capture element screenshot    ${Retail_HK_HomePage_SearchVIN_TextBox}
     sleep    2
 
-    element should not be visible
-
 User should be albe to Input Search VIN2 in HK Retail Home Page
     wait until element is visible    ${Retail_HK_HomePage_SearchVIN_TextBox}    10
     clear element text    ${Retail_HK_HomePage_SearchVIN_TextBox}

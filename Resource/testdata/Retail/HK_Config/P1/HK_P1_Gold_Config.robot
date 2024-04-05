@@ -35,6 +35,8 @@ ${Password}    ${HK_P1_Automation_Gold_PWD}
 ${Retail_AccountProfileChangePassCurrentPassValue}    ${Password}
 ${YopMailEmail}    ${HK_P1_Automation_Bronze_UID}
 
+${Retail_AccountProfileChangePassCurrentPassValue}    ${Password}
+
 #Testing Values
 ${ProdductSearchValue}    037018200
 
