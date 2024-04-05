@@ -1750,18 +1750,24 @@ User should be able to view Option Card Details on the Parts Card List in HK Ret
     wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_DetailsSpec_Value}
     wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Stock_Value}
     wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Price_Value}
-    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Note_Button}
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_MoreInfo_Button}
 
     capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_PartNo_Value}
     capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_DetailsSpec_Value}
     capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Stock_Value}
     capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Price_Value}
-    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Note_Button}
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_MoreInfo_Button}
 
-    click element    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Note_Button}
+    click element    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_MoreInfo_Button}
 
     wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_MoreDetails_Container}    10
     capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_MoreDetails_Container}
+
+    sleep    2
+
+    click element    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_HideInfo_Button}
+
+    element should not be visible    ${Retail_HK_EPC_L3_PartsListCards_Option_MoreDetails_Container}    10
 
     sleep    2
 

@@ -267,7 +267,7 @@ ${HomePage_DoubleHeader_Menu_Profile_ChangePassword_Button}    //div[@class='men
 ${HomePage_DoubleHeader_Menu_Company_CompanyDetails_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab__sub-acc show-item']//*[contains(text(),'Company Details')]
 ${HomePage_DoubleHeader_Menu_Company_Relationship_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab__sub-acc show-item']//*[contains(text(),'Supplier Relationships')]
 
-${HomePage_DoubleHeader_Menu_Logout_Button}    //div[@class='menu-content']//div[@class='menu-content__logout']
+${HomePage_DoubleHeader_Menu_Logout_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//div[@class='logout-item']//a
 
 
 ${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Container}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']
@@ -503,7 +503,7 @@ ${Retail_HK_HomePage_SearchVIN_PopUp_Search_Button}    //dpp-hk-vehicle-results/
 
 ${Retail_HK_HomePage_Manula_Brand_Combobox}    //dpp-hk-search-by-vehicle//ng-select[@formcontrolname='make']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
 ${Retail_HK_HomePage_Manula_Model_Combobox}    //dpp-hk-search-by-vehicle//ng-select[@formcontrolname='model']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
-${Retail_HK_HomePage_Manual_Year_Combobox}    //dpp-hk-search-by-vehicle//ng-select[@formcontrolname='year']//div[@class='ng-select-container']
+${Retail_HK_HomePage_Manual_Year_Combobox}    //dpp-hk-search-by-vehicle//ng-select[@formcontrolname='year']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
 ${Retail_HK_HomePage_Manual_Variant_Combobox}    //dpp-hk-search-by-vehicle//ng-select[@formcontrolname='series']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
 ${Retail_HK_HomePage_Manual_ModelID_Combobox}    //dpp-hk-search-by-vehicle//ng-select[@formcontrolname='modelId']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
 
@@ -2566,8 +2566,8 @@ ${Retail_HK_EPC_L3_PartsListCards_Option_Details_PartNo_Value}    //dpp-epc-part
 ${Retail_HK_EPC_L3_PartsListCards_Option_Details_DetailsSpec_Value}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='row part-details']//div[@class='col-3']//p[@class='m-0 compatibility']
 ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Stock_Value}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='row part-details']//div[@class='col-1']//p
 ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Price_Value}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='row part-details']//div[@class='col-2' or @class='col-2 pr-0']//p[@class='m-0 price' or @class='m-0 not-available']
-${Retail_HK_EPC_L3_PartsListCards_Option_Details_MoreInfo_Button}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='row part-details']//div[@class='col-4 d-flex justify-content-between flex-wrap']//p[contains(text(),'More Info')]
-${Retail_HK_EPC_L3_PartsListCards_Option_Details_HideInfo_Button}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='row part-details']//div[@class='col-4 d-flex justify-content-between flex-wrap']//p[contains(text(),'Hide Info')]
+${Retail_HK_EPC_L3_PartsListCards_Option_Details_MoreInfo_Button}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='row part-details']//div[@class='col-4 d-flex justify-content-between flex-wrap more-info-wrapper']//span[contains(text(),'More Info')]
+${Retail_HK_EPC_L3_PartsListCards_Option_Details_HideInfo_Button}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='row part-details']//div[@class='col-4 d-flex justify-content-between flex-wrap more-info-wrapper']//span[contains(text(),'Hide Info')]
 
 ${Retail_HK_EPC_L3_PartsListCards_Option_MoreDetails_Container}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='more-details']
 
