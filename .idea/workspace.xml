@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="Commit" />
+    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="Commit April 1">
+      <change afterPath="$PROJECT_DIR$/Resource/testsuites/Ty_Sprints/Sprint 42/DPP-310718.robot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Resource/testsuites/Ty_Sprints/Sprint 43/DPP-310339.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Sprints/Sprint 41/DPP-304986.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Ty_Sprints/Sprint 41/DPP-304986.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Sprints/Sprint 41/DPP-310362.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Ty_Sprints/Sprint 41/DPP-310362.robot" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -140,7 +146,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711959894978</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Commit April 1">
+      <option name="closed" value="true" />
+      <created>1711960543716</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1711960543716</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -189,6 +203,7 @@
     <MESSAGE value="Commit Feb 19" />
     <MESSAGE value="Commit March 18" />
     <MESSAGE value="Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
+    <MESSAGE value="Commit April 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit April 1" />
   </component>
 </project>
