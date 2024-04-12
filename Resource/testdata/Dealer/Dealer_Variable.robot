@@ -510,6 +510,34 @@ ${CustRelPageModal}    //div[@class='cx-modal-content']
 ${CustRelPageModalYes}    //div[@class='cx-dialog-row text-center']//button[contains(text(),'Yes')]
 ${CustRelPageModalNo}    //div[@class='cx-dialog-row text-center']//button[contains(text(),'No')]
 
+${Dealer-HK_BuyerRelPage_Header_CustomerName_Label}    //dpp-hk-buyer-relationship-list//thead//th[@class='cust-name']//span[contains(text(),'Customer Name')]
+${Dealer-HK_BuyerRelPage_Header_PartsClub_Label}    //dpp-hk-buyer-relationship-list//thead//th[@class='part-club']//span[contains(text(),'Parts Club')]
+${Dealer-HK_BuyerRelPage_Header_ADP_Label}    //dpp-hk-buyer-relationship-list//thead//th[@class='adp-code']//span[contains(text(),'ADP')]
+${Dealer-HK_BuyerRelPage_Header_MemberTier_Label}    //dpp-hk-buyer-relationship-list//thead//span[contains(text(),'Membership')]
+${Dealer-HK_BuyerRelPage_Header_Active_Label}    //dpp-hk-buyer-relationship-list//thead//th[@class='check-active']//span[contains(text(),'Active')]
+
+${Dealer-HK_BuyerRelPage_Entry_Container}    (//dpp-hk-buyer-relationship-list//tbody//tr)
+
+${Dealer-HK_BuyerRelPage_Entry_Name_Label}    (//dpp-hk-buyer-relationship-list//tbody//tr//td[1])
+${Dealer-HK_BuyerRelPage_Entry_PartsClub_Label}    (//dpp-hk-buyer-relationship-list//tbody//tr//td[2])
+${Dealer-HK_BuyerRelPage_Entry_ADP_Label}    (//dpp-hk-buyer-relationship-list//tbody//tr//td[3])
+${Dealer-HK_BuyerRelPage_Entry_MemberTeir_Label}    (//dpp-hk-buyer-relationship-list//tbody//tr//td[4])
+${Dealer-HK_BuyerRelPage_Entry_Active_Label}    (//dpp-hk-buyer-relationship-list//tbody//tr//td[5])
+
+${Dealer-HK_BuyerRelPage_Entry_PartsClub_Textbox}    //dpp-hk-buyer-relationship-list//tbody//tr//td[2]//input
+${Dealer-HK_BuyerRelPage_Entry_ADP_TextBox}    //dpp-hk-buyer-relationship-list//tbody//tr//td[3]//input
+${Dealer-HK_BuyerRelPage_Entry_MemberTeir_Dropdown}    //dpp-hk-buyer-relationship-list//tbody//tr//td[4]//ng-select//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
+${Dealer-HK_BuyerRelPage_Entry_MemberTeir_Dropdown_Options}    (//dpp-hk-buyer-relationship-list//tbody//tr//td[4]//ng-select//ng-dropdown-panel//div[@role='option'])
+${Dealer-HK_BuyerRelPage_Entry_MemberTeir_Dropdown_Options1}    (//dpp-hk-buyer-relationship-list//tbody//tr//td[4]//ng-select//ng-dropdown-panel//div[@role='option'])[1]
+${Dealer-HK_BuyerRelPage_Entry_Active_Checkbox}    (//dpp-hk-buyer-relationship-list//tbody//tr//td[5]//input[@type='checkbox'])
+
+${Dealer-HK_BuyerRelPage_Entry_Edit_Button}    (//dpp-hk-buyer-relationship-list//tbody//tr//td[@class='pr-0']//span[@class='edit-label d-flex justify-content-end'])
+${Dealer-HK_BuyerRelPage_Entry_Cancel_Button}    //dpp-hk-buyer-relationship-list//tbody//tr//td[@class='pr-0']//button[@class='btn btn-outline-secondary']
+${Dealer-HK_BuyerRelPage_Entry_Update_Button}    //dpp-hk-buyer-relationship-list//tbody//tr//td[@class='pr-0']//button[@class='btn btn-secondary']
+
+
+
+
 #-----------------------------------------------------Dealer Message Page-----------------------------------------------
 ${MessagePagePanelContainer}    //dpp-message-list
 ${MessagePagePanelHeader}    //dpp-message-list//h3
@@ -712,7 +740,7 @@ ${ProfileChangePassConfirmationContainer}    //div[@class='cx-dialog-body modal-
 ${ProfileChangePassConfirmationYesButton}    //button[@class='btn btn-block btn-secondary backToHomepage-button']
 ${ProfileChangePassConfirmationNoButton}    //div[@class='col-sm-12 cta py-2']//button[@class='btn btn-block btn-outline-secondary']
 
-${ProfileChangePassCurrentPassValue}    ${Password}
+
 ${ProfileChangePassNewPassValue}    HelloWorld1!
 ${ProfileChangePassConfirmPassValue}    HelloWorld1!
 

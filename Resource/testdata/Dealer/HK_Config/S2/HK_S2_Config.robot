@@ -34,6 +34,9 @@ ${YopMailEmail}    ${admin1_s2_HKdealer_UID}
 
 ${ProfileChangePassCurrentPassValue}    ${Password}
 
+${Dealer-HK_BuyerRelPage_Entry_PartsClub_Value}    TestQA
+${Dealer-HK_BuyerRelPage_Entry_ADP_Value}    QATest
+
 *** Keywords ***
 Open Chrome Browser
     SeleniumLibrary.Open Browser    ${s2HKDealer}    Chrome  executable_path=${driver_path}

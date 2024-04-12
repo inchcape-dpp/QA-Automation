@@ -1,106 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-04-02T14:46:35.384532" rpa="false" schemaversion="5">
-<suite id="s1" name="HK Dealer Check" source="C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Dealer\HK_TC\S2\HK_Dealer_Check.robot">
+<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-04-12T08:36:20.450519" rpa="false" schemaversion="5">
+<suite id="s1" name="HK Regression Dealer" source="C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Dealer\HK_TC\S2\HK_Regression_Dealer.robot">
 <test id="s1-t1" name="Test Setup" line="15">
 <kw name="Run Keywords" owner="BuiltIn">
 <kw name="Open Chrome Browser" owner="HK_S2_Config">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:46:35.737553" level="INFO">Opening browser 'Chrome' to base url 'https://hkdealer.coyzchwfjr-inchcaped2-s2-public.model-t.cc.commerce.ondemand.com/hkdealer'.</msg>
+<msg time="2024-04-12T08:36:20.826383" level="INFO">Opening browser 'Chrome' to base url 'https://hkdealer.coyzchwfjr-inchcaped2-s2-public.model-t.cc.commerce.ondemand.com/hkdealer'.</msg>
 <arg>${s2HKDealer}</arg>
 <arg>Chrome</arg>
 <arg>executable_path=${driver_path}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-04-02T14:46:35.737553" elapsed="3.740310"/>
+<status status="PASS" start="2024-04-12T08:36:20.826383" elapsed="4.556718"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-04-02T14:46:39.477863" elapsed="0.124239"/>
+<status status="PASS" start="2024-04-12T08:36:25.383101" elapsed="0.127992"/>
 </kw>
-<status status="PASS" start="2024-04-02T14:46:35.737553" elapsed="3.864549"/>
+<status status="PASS" start="2024-04-12T08:36:20.826383" elapsed="4.684710"/>
 </kw>
 <arg>Open Chrome Browser</arg>
 <doc>Executes all the given keywords in a sequence.</doc>
-<status status="PASS" start="2024-04-02T14:46:35.737553" elapsed="3.864549"/>
+<status status="PASS" start="2024-04-12T08:36:20.826383" elapsed="4.684710"/>
 </kw>
-<status status="PASS" start="2024-04-02T14:46:35.737553" elapsed="3.864549"/>
+<status status="PASS" start="2024-04-12T08:36:20.810758" elapsed="4.700335"/>
 </test>
 <test id="s1-t2" name="Screen Shot DIR" line="16">
 <kw name="Run Keywords" owner="BuiltIn">
 <kw name="Dealer Screent Shot DIR" owner="HK_S2_Config">
 <kw name="Get Current Date" owner="DateTime">
-<msg time="2024-04-02T14:46:39.602102" level="INFO">${currentdate} = 04-02-24 14-46</msg>
+<msg time="2024-04-12T08:36:25.513093" level="INFO">${currentdate} = 04-12-24 08-36</msg>
 <var>${currentdate}</var>
 <arg>result_format=%m-%d-%y %H-%M</arg>
 <doc>Returns current local or UTC time with an optional increment.</doc>
-<status status="PASS" start="2024-04-02T14:46:39.602102" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-12T08:36:25.512096" elapsed="0.000997"/>
 </kw>
 <kw name="Create Directory" owner="OperatingSystem">
-<msg time="2024-04-02T14:46:39.602102" level="INFO" html="true">Created directory '&lt;a href="file://C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Dealer\Screenshots\S2\HK_04-02-24 14-46"&gt;C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Dealer\Screenshots\S2\HK_04-02-24 14-46&lt;/a&gt;'.</msg>
+<msg time="2024-04-12T08:36:25.513093" level="INFO" html="true">Created directory '&lt;a href="file://C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Dealer\Screenshots\HK\S2\HK_04-12-24 08-36"&gt;C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testsuites\Dealer\Screenshots\HK\S2\HK_04-12-24 08-36&lt;/a&gt;'.</msg>
 <arg>${Dealer_screenshot_path}/HK_${currentdate}</arg>
 <doc>Creates the specified directory.</doc>
-<status status="PASS" start="2024-04-02T14:46:39.602102" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-12T08:36:25.513093" elapsed="0.001003"/>
 </kw>
 <kw name="Convert To String" owner="BuiltIn">
-<msg time="2024-04-02T14:46:39.602102" level="INFO">${LogDIR} = ..\..\..\..\..\Resource\testsuites\Dealer\Screenshots\S2/HK_04-02-24 14-46</msg>
+<msg time="2024-04-12T08:36:25.514096" level="INFO">${LogDIR} = ..\..\..\..\..\Resource\testsuites\Dealer\Screenshots\HK\S2/HK_04-12-24 08-36</msg>
 <var>${LogDIR}</var>
 <arg>${Dealer_screenshot_path}/HK_${currentdate}</arg>
 <doc>Converts the given item to a Unicode string.</doc>
-<status status="PASS" start="2024-04-02T14:46:39.602102" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-12T08:36:25.514096" elapsed="0.000000"/>
 </kw>
 <kw name="Set Screenshot Directory" owner="SeleniumLibrary">
 <arg>${LogDIR}</arg>
 <doc>Sets the directory for captured screenshots.</doc>
-<status status="PASS" start="2024-04-02T14:46:39.602102" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-12T08:36:25.514096" elapsed="0.000000"/>
 </kw>
 <kw name="Set Global Variable" owner="BuiltIn">
-<msg time="2024-04-02T14:46:39.602102" level="INFO">${LogDIR} = ..\..\..\..\..\Resource\testsuites\Dealer\Screenshots\S2/HK_04-02-24 14-46</msg>
+<msg time="2024-04-12T08:36:25.515128" level="INFO">${LogDIR} = ..\..\..\..\..\Resource\testsuites\Dealer\Screenshots\HK\S2/HK_04-12-24 08-36</msg>
 <arg>${LogDIR}</arg>
 <doc>Makes a variable available globally in all tests and suites.</doc>
-<status status="PASS" start="2024-04-02T14:46:39.602102" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-12T08:36:25.514096" elapsed="0.001032"/>
 </kw>
-<status status="PASS" start="2024-04-02T14:46:39.602102" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-12T08:36:25.512096" elapsed="0.003032"/>
 </kw>
 <arg>Dealer Screent Shot DIR</arg>
 <doc>Executes all the given keywords in a sequence.</doc>
-<status status="PASS" start="2024-04-02T14:46:39.602102" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-12T08:36:25.512096" elapsed="0.003032"/>
 </kw>
-<status status="PASS" start="2024-04-02T14:46:39.602102" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-12T08:36:25.511093" elapsed="0.004035"/>
 </test>
 <test id="s1-t3" name="TC Sleep" line="18">
 <kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
 <kw name="TC Sleep" owner="HK_S2_Config">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:46:49.602844" level="INFO">Slept 10 seconds.</msg>
+<msg time="2024-04-12T08:36:35.516522" level="INFO">Slept 10 seconds.</msg>
 <arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:46:39.602102" elapsed="10.000742"/>
+<status status="PASS" start="2024-04-12T08:36:25.516093" elapsed="10.000429"/>
 </kw>
-<status status="PASS" start="2024-04-02T14:46:39.602102" elapsed="10.000742"/>
+<status status="PASS" start="2024-04-12T08:36:25.516093" elapsed="10.000429"/>
 </kw>
 <arg>TC Sleep</arg>
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:46:39.602102" elapsed="10.000742"/>
+<status status="PASS" start="2024-04-12T08:36:25.516093" elapsed="10.000429"/>
 </kw>
 <tag>Sleep</tag>
 <tag>TC Sleep</tag>
-<status status="PASS" start="2024-04-02T14:46:39.602102" elapsed="10.000742"/>
+<status status="PASS" start="2024-04-12T08:36:25.515128" elapsed="10.001394"/>
 </test>
-<test id="s1-t4" name="TC-001 - Input Valid Email" line="22">
+<test id="s1-t4" name="TC-001 - Verify Login Page" line="22">
 <kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
 <kw name="User should be able to click Translate to English Button" owner="Login_Page_Keywords">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:46:49.612898" level="INFO">Element '//dpp-language-toggle//span[contains(text(),'EN')]' is displayed.</msg>
+<msg time="2024-04-12T08:36:35.539673" level="INFO">Element '//dpp-language-toggle//span[contains(text(),'EN')]' is displayed.</msg>
 <arg>${Dealer_HK_LoginPage_English_Button}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:46:49.602844" elapsed="0.010054"/>
+<status status="PASS" start="2024-04-12T08:36:35.516522" elapsed="0.023151"/>
 </kw>
-<msg time="2024-04-02T14:46:49.612898" level="INFO">${EN} = True</msg>
+<msg time="2024-04-12T08:36:35.539673" level="INFO">${EN} = True</msg>
 <var>${EN}</var>
 <arg>element should be visible</arg>
 <arg>${Dealer_HK_LoginPage_English_Button}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-04-02T14:46:49.602844" elapsed="0.010054"/>
+<status status="PASS" start="2024-04-12T08:36:35.516522" elapsed="0.023151"/>
 </kw>
 <kw name="Run Keyword If" owner="BuiltIn">
 <kw name="Translate to English" owner="Login_Page_Keywords">
@@ -108,2149 +108,609 @@
 <arg>${Dealer_HK_LoginPage_English_Button}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:46:49.612898" elapsed="0.015634"/>
+<status status="PASS" start="2024-04-12T08:36:35.539673" elapsed="0.017747"/>
 </kw>
 <kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:46:49.733909" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-1.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-1.png" width="400px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-12T08:36:35.647980" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-1.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-1.png" width="400px"&gt;&lt;/a&gt;</msg>
 <arg>${Dealer_HK_LoginPage_English_Button}</arg>
 <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:46:49.628532" elapsed="0.105377"/>
+<status status="PASS" start="2024-04-12T08:36:35.557420" elapsed="0.090560"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:46:49.733909" level="INFO">Clicking element '//dpp-language-toggle//span[contains(text(),'EN')]'.</msg>
+<msg time="2024-04-12T08:36:35.647980" level="INFO">Clicking element '//dpp-language-toggle//span[contains(text(),'EN')]'.</msg>
 <arg>${Dealer_HK_LoginPage_English_Button}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:46:49.733909" elapsed="0.075007"/>
+<status status="PASS" start="2024-04-12T08:36:35.647980" elapsed="0.077661"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:46:51.809387" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-04-12T08:36:37.726694" level="INFO">Slept 2 seconds.</msg>
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:46:49.808916" elapsed="2.000471"/>
+<status status="PASS" start="2024-04-12T08:36:35.725641" elapsed="2.001053"/>
 </kw>
-<status status="PASS" start="2024-04-02T14:46:49.612898" elapsed="2.196489"/>
+<status status="PASS" start="2024-04-12T08:36:35.539673" elapsed="2.187021"/>
 </kw>
 <arg>${EN}</arg>
 <arg>Translate to English</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-04-02T14:46:49.612898" elapsed="2.196489"/>
+<status status="PASS" start="2024-04-12T08:36:35.539673" elapsed="2.187021"/>
 </kw>
-<status status="PASS" start="2024-04-02T14:46:49.602844" elapsed="2.206543"/>
+<status status="PASS" start="2024-04-12T08:36:35.516522" elapsed="2.210172"/>
 </kw>
 <arg>User should be able to click Translate to English Button</arg>
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:46:49.602844" elapsed="2.206543"/>
+<status status="PASS" start="2024-04-12T08:36:35.516522" elapsed="2.210172"/>
 </kw>
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Verify Login Page" owner="Login_Page_Keywords">
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-12T08:36:47.726802" level="INFO">Slept 10 seconds.</msg>
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-12T08:36:37.726694" elapsed="10.000108"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-12T08:36:48.064366" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-screenshot-1.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-04-12T08:36:47.726802" elapsed="0.337564"/>
+</kw>
+<status status="PASS" start="2024-04-12T08:36:37.726694" elapsed="10.337672"/>
+</kw>
+<arg>Verify Login Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-04-12T08:36:37.726694" elapsed="10.337672"/>
+</kw>
+<tag>Login Page</tag>
+<status status="PASS" start="2024-04-12T08:36:35.516522" elapsed="12.547844"/>
+</test>
+<test id="s1-t5" name="TC-002 - Verify Login Page Elements" line="27">
+<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
+<kw name="Verify Login Page Elements" owner="Login_Page_Keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Logo}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-12T08:36:48.064366" elapsed="0.015527"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Header}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-12T08:36:48.079893" elapsed="0.015626"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Email}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-12T08:36:48.095519" elapsed="0.015625"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Pass}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-12T08:36:48.111144" elapsed="0.021546"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Remember}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-12T08:36:48.132690" elapsed="0.010006"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Forgot}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-12T08:36:48.142696" elapsed="0.015636"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${LoginButton}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-12T08:36:48.158332" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${FooterLogo}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-12T08:36:48.158332" elapsed="0.015627"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${PN}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-12T08:36:48.173959" elapsed="0.015622"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TnC}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-12T08:36:48.189581" elapsed="0.015625"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${CopyRight}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-04-12T08:36:48.205206" elapsed="0.015626"/>
+</kw>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-12T08:36:48.343960" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-2.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-2.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>${Logo}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2024-04-12T08:36:48.220832" elapsed="0.123128"/>
+</kw>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-12T08:36:48.408198" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-3.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-3.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>${Header}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2024-04-12T08:36:48.343960" elapsed="0.064238"/>
+</kw>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-12T08:36:48.494188" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-4.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-4.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>${Email}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2024-04-12T08:36:48.408198" elapsed="0.085990"/>
+</kw>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-12T08:36:48.584075" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-5.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-5.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>${Pass}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2024-04-12T08:36:48.494188" elapsed="0.089887"/>
+</kw>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-12T08:36:48.676085" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-6.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-6.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>${Remember}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2024-04-12T08:36:48.584075" elapsed="0.092010"/>
+</kw>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-12T08:36:48.767038" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-7.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-7.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>${Forgot}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2024-04-12T08:36:48.676085" elapsed="0.090953"/>
+</kw>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-12T08:36:48.867187" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-8.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-8.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>${LoginButton}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2024-04-12T08:36:48.767038" elapsed="0.100149"/>
+</kw>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-12T08:36:48.967042" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-9.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-9.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>${FooterLogo}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2024-04-12T08:36:48.873934" elapsed="0.093108"/>
+</kw>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-12T08:36:49.059384" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-10.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-10.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>${PN}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2024-04-12T08:36:48.973854" elapsed="0.085530"/>
+</kw>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-12T08:36:49.141668" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-11.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-11.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>${TnC}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2024-04-12T08:36:49.059384" elapsed="0.082284"/>
+</kw>
+<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
+<msg time="2024-04-12T08:36:49.232178" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-12.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-12.png" width="400px"&gt;&lt;/a&gt;</msg>
+<arg>${CopyRight}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<status status="PASS" start="2024-04-12T08:36:49.141668" elapsed="0.090510"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-04-12T08:36:50.232652" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-04-12T08:36:49.232178" elapsed="1.000474"/>
+</kw>
+<status status="PASS" start="2024-04-12T08:36:48.064366" elapsed="2.168286"/>
+</kw>
+<arg>Verify Login Page Elements</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<status status="PASS" start="2024-04-12T08:36:48.064366" elapsed="2.168286"/>
+</kw>
+<tag>Login Page</tag>
+<status status="PASS" start="2024-04-12T08:36:48.064366" elapsed="2.170345"/>
+</test>
+<test id="s1-t6" name="TC-012 - Input Valid Email" line="68">
 <kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
 <kw name="Input Valid Username" owner="Login_Page_Keywords">
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${Email}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:46:51.809387" elapsed="0.031158"/>
+<status status="PASS" start="2024-04-12T08:36:50.239714" elapsed="0.031151"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:46:51.840545" level="INFO">Typing text 'hk.seller1.admin@test.com' into text field '//*[@type='email']'.</msg>
+<msg time="2024-04-12T08:36:50.270865" level="INFO">Typing text 'hk.seller1.admin@test.com' into text field '//*[@type='email']'.</msg>
 <arg>${Email}</arg>
 <arg>${Username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:46:51.840545" elapsed="0.090778"/>
+<status status="PASS" start="2024-04-12T08:36:50.270865" elapsed="0.070157"/>
 </kw>
 <kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:46:52.055391" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-2.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-2.png" width="400px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-12T08:36:50.411346" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-13.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-13.png" width="400px"&gt;&lt;/a&gt;</msg>
 <arg>${Email}</arg>
 <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:46:51.931323" elapsed="0.124068"/>
+<status status="PASS" start="2024-04-12T08:36:50.341022" elapsed="0.070324"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:46:53.056112" level="INFO">Slept 1 second.</msg>
+<msg time="2024-04-12T08:36:51.412046" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:46:52.055391" elapsed="1.000721"/>
+<status status="PASS" start="2024-04-12T08:36:50.411346" elapsed="1.000700"/>
 </kw>
-<status status="PASS" start="2024-04-02T14:46:51.809387" elapsed="1.246725"/>
+<status status="PASS" start="2024-04-12T08:36:50.239714" elapsed="1.172332"/>
 </kw>
 <arg>Input Valid Username</arg>
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:46:51.809387" elapsed="1.246725"/>
+<status status="PASS" start="2024-04-12T08:36:50.239714" elapsed="1.172332"/>
 </kw>
 <tag>TC006</tag>
 <tag>Valid Account</tag>
-<status status="PASS" start="2024-04-02T14:46:49.602844" elapsed="3.453268"/>
+<status status="PASS" start="2024-04-12T08:36:50.234711" elapsed="1.177335"/>
 </test>
-<test id="s1-t5" name="TC-002 - Input Valid Password" line="27">
+<test id="s1-t7" name="TC-013 - Input Valid Password" line="73">
 <kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
 <kw name="Input Valid Password" owner="Login_Page_Keywords">
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${Pass}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:46:53.056112" elapsed="0.024142"/>
+<status status="PASS" start="2024-04-12T08:36:51.412046" elapsed="0.025335"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:46:53.080254" level="INFO">Typing text 'HKPass@12345' into text field '//*[@type='password']'.</msg>
+<msg time="2024-04-12T08:36:51.437886" level="INFO">Typing text 'HKs2@12345' into text field '//*[@type='password']'.</msg>
 <arg>${Pass}</arg>
 <arg>${Password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:46:53.080254" elapsed="0.069220"/>
+<status status="PASS" start="2024-04-12T08:36:51.437886" elapsed="0.056125"/>
 </kw>
 <kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:46:53.251041" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-3.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-3.png" width="400px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-12T08:36:51.564607" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-14.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-14.png" width="400px"&gt;&lt;/a&gt;</msg>
 <arg>${Pass}</arg>
 <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:46:53.149474" elapsed="0.101567"/>
+<status status="PASS" start="2024-04-12T08:36:51.495000" elapsed="0.069607"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:46:54.252642" level="INFO">Slept 1 second.</msg>
+<msg time="2024-04-12T08:36:52.565290" level="INFO">Slept 1 second.</msg>
 <arg>1</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:46:53.252036" elapsed="1.000606"/>
+<status status="PASS" start="2024-04-12T08:36:51.564607" elapsed="1.000683"/>
 </kw>
-<status status="PASS" start="2024-04-02T14:46:53.056112" elapsed="1.196530"/>
+<status status="PASS" start="2024-04-12T08:36:51.412046" elapsed="1.153244"/>
 </kw>
 <arg>Input Valid Password</arg>
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:46:53.056112" elapsed="1.196530"/>
+<status status="PASS" start="2024-04-12T08:36:51.412046" elapsed="1.153244"/>
 </kw>
 <tag>TC007</tag>
 <tag>Valid Account</tag>
-<status status="PASS" start="2024-04-02T14:46:53.056112" elapsed="1.196530"/>
+<status status="PASS" start="2024-04-12T08:36:51.412046" elapsed="1.153244"/>
 </test>
-<test id="s1-t6" name="TC-003 - User should be able to click Login Button" line="31">
+<test id="s1-t8" name="TC-014 - User should be able to click Login Button" line="77">
 <kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
 <kw name="User should be able to click Login Button" owner="Login_Page_Keywords">
 <kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:46:54.334868" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-4.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-4.png" width="400px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-12T08:36:52.666556" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-15.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-15.png" width="400px"&gt;&lt;/a&gt;</msg>
 <arg>${LoginButton}</arg>
 <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:46:54.254648" elapsed="0.080220"/>
+<status status="PASS" start="2024-04-12T08:36:52.574797" elapsed="0.091759"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:46:54.334868" level="INFO">Clicking element '//button[@type='submit']'.</msg>
+<msg time="2024-04-12T08:36:52.666556" level="INFO">Clicking element '//button[@type='submit']'.</msg>
 <arg>${LoginButton}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:46:54.334868" elapsed="0.040378"/>
+<status status="PASS" start="2024-04-12T08:36:52.666556" elapsed="0.044371"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:46:56.375857" level="INFO">Slept 2 seconds.</msg>
+<msg time="2024-04-12T08:36:54.711343" level="INFO">Slept 2 seconds.</msg>
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:46:54.375246" elapsed="2.000611"/>
+<status status="PASS" start="2024-04-12T08:36:52.710927" elapsed="2.000416"/>
 </kw>
-<status status="PASS" start="2024-04-02T14:46:54.254648" elapsed="2.121209"/>
+<status status="PASS" start="2024-04-12T08:36:52.573733" elapsed="2.137610"/>
 </kw>
 <arg>User should be able to click Login Button</arg>
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:46:54.254648" elapsed="2.121723"/>
+<status status="PASS" start="2024-04-12T08:36:52.565290" elapsed="2.146053"/>
 </kw>
 <kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
 <kw name="TC Sleep" owner="HK_S2_Config">
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:47:06.378209" level="INFO">Slept 10 seconds.</msg>
+<msg time="2024-04-12T08:37:04.712678" level="INFO">Slept 10 seconds.</msg>
 <arg>10</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:46:56.377896" elapsed="10.000313"/>
+<status status="PASS" start="2024-04-12T08:36:54.712352" elapsed="10.000326"/>
 </kw>
-<status status="PASS" start="2024-04-02T14:46:56.377896" elapsed="10.000313"/>
+<status status="PASS" start="2024-04-12T08:36:54.712352" elapsed="10.000326"/>
 </kw>
 <arg>TC Sleep</arg>
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:46:56.376876" elapsed="10.001333"/>
+<status status="PASS" start="2024-04-12T08:36:54.711343" elapsed="10.001335"/>
 </kw>
 <tag>Login Button</tag>
 <tag>TC008</tag>
-<status status="PASS" start="2024-04-02T14:46:54.254648" elapsed="12.123561"/>
+<status status="PASS" start="2024-04-12T08:36:52.565290" elapsed="12.147388"/>
 </test>
-<test id="s1-t7" name="TC-004 - User should be able to view top navigation" line="36">
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to view top navigation in HK Dealer Home Page" owner="Home_Page_Keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${HomepageUserAccount}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:06.378209" elapsed="0.015007"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${HomepageOrders}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:06.393216" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${HomepageReturn}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:06.393216" elapsed="0.015636"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${HomepageMessage}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:06.408852" elapsed="0.015626"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:06.524289" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-5.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-5.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${HomepageUserAccount}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:06.424478" elapsed="0.099811"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:06.651021" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-6.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-6.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${HomepageOrders}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:06.524289" elapsed="0.126732"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:06.740503" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-7.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-7.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${HomepageReturn}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:06.651021" elapsed="0.089482"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:06.854471" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-8.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-8.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${HomepageMessage}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:06.740503" elapsed="0.113968"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:47:06.378209" elapsed="0.476262"/>
-</kw>
-<arg>User should be able to view top navigation in HK Dealer Home Page</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:47:06.378209" elapsed="0.476262"/>
-</kw>
-<tag>TC014</tag>
-<tag>Top Navigation</tag>
-<status status="PASS" start="2024-04-02T14:47:06.378209" elapsed="0.476262"/>
-</test>
-<test id="s1-t8" name="TC-005 - User should be able to click account from top navigation" line="40">
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to click account from top navigation" owner="Home_Page_Keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:06.865191" level="INFO">Clicking element '//dpp-login//button|(//dpp-login//button)[1]'.</msg>
-<arg>${HomepageUserAccount}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:47:06.865191" elapsed="0.034290"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:47:11.899687" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:47:06.899481" elapsed="5.000206"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:12.012573" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-1.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:11.899687" elapsed="0.112886"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:47:06.865191" elapsed="5.147382"/>
-</kw>
-<arg>User should be able to click account from top navigation</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:47:06.864179" elapsed="5.148394"/>
-</kw>
-<tag>TC015</tag>
-<tag>Top Navigation</tag>
-<status status="PASS" start="2024-04-02T14:47:06.864179" elapsed="5.148394"/>
-</test>
-<test id="s1-t9" name="TC-006 - User should be able to click orders from top navigation" line="44">
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to click orders from top navigation" owner="Home_Page_Keywords">
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:12.012573" level="INFO">Clicking element '//dpp-order-notification//cx-icon[@class='cx-icon dpp-icons__header-orders']'.</msg>
-<arg>${HomepageOrders}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:47:12.012573" elapsed="0.043208"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:47:17.057305" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:47:12.056794" elapsed="5.000511"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:17.178740" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-2.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:17.057305" elapsed="0.121435"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:47:12.012573" elapsed="5.166167"/>
-</kw>
-<arg>User should be able to click orders from top navigation</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:47:12.012573" elapsed="5.166167"/>
-</kw>
-<tag>TC016</tag>
-<tag>Top Navigation</tag>
-<status status="PASS" start="2024-04-02T14:47:12.012573" elapsed="5.166167"/>
-</test>
-<test id="s1-t10" name="TC-007 - User should be able to click return from top navigation" line="48">
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to click return from top navigation" owner="Home_Page_Keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${HomepageReturn}</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:17.178740" elapsed="0.016016"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:17.194756" level="INFO">Clicking element '//dpp-return-notification//cx-icon[@class='cx-icon dpp-icons__header-returns']'.</msg>
-<arg>${HomepageReturn}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:47:17.194756" elapsed="0.031841"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:47:22.227109" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:47:17.226597" elapsed="5.000512"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:22.345069" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-3.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:22.227109" elapsed="0.117960"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:47:17.178740" elapsed="5.166329"/>
-</kw>
-<arg>User should be able to click return from top navigation</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:47:17.178740" elapsed="5.166329"/>
-</kw>
-<tag>TC017</tag>
-<tag>Top Navigation</tag>
-<status status="PASS" start="2024-04-02T14:47:17.178740" elapsed="5.166329"/>
-</test>
-<test id="s1-t11" name="TC-009 - User should be able to click messages from top navigation" line="52">
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to click messages from top navigation" owner="Home_Page_Keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${HomepageMessage}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:22.345069" elapsed="0.015638"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:22.360707" level="INFO">Clicking element '//dpp-message-notification//cx-icon[@class='cx-icon dpp-icons__message-header']'.</msg>
-<arg>${HomepageMessage}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:47:22.360707" elapsed="0.037046"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:47:27.398454" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:47:22.397753" elapsed="5.000701"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:27.511863" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-4.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:27.398454" elapsed="0.113409"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:47:22.345069" elapsed="5.166794"/>
-</kw>
-<arg>User should be able to click messages from top navigation</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:47:22.345069" elapsed="5.166794"/>
-</kw>
-<tag>TC019</tag>
-<tag>Top Navigation</tag>
-<status status="PASS" start="2024-04-02T14:47:22.345069" elapsed="5.166794"/>
-</test>
-<test id="s1-t12" name="TC-010 - User should be able to click orders from left navigation" line="56">
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to click orders from left navigation" owner="Home_Page_Keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${HomepageOrdersMenu}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:27.511863" elapsed="0.015633"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${HomepageOrdersMenu}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-04-02T14:47:27.527496" elapsed="0.275178"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:27.802674" level="INFO">Clicking element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Orders ')]'.</msg>
-<arg>${HomepageOrdersMenu}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:47:27.802674" elapsed="0.057208"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:47:32.860985" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:47:27.859882" elapsed="5.001103"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:32.977996" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-5.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:32.860985" elapsed="0.117011"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:47:27.511863" elapsed="5.466133"/>
-</kw>
-<arg>User should be able to click orders from left navigation</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:47:27.511863" elapsed="5.466133"/>
-</kw>
-<tag>Left Navigation</tag>
-<tag>TC020</tag>
-<status status="PASS" start="2024-04-02T14:47:27.511863" elapsed="5.466133"/>
-</test>
-<test id="s1-t13" name="TC-011 - User should be able to view Cutomer Orders Panel" line="60">
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to view Cutomer Orders Panel" owner="Orders_Page_Keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${HomepageOrdersMenu}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:32.977996" elapsed="0.015608"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:32.993604" level="INFO">Clicking element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Orders ')]'.</msg>
-<arg>${HomepageOrdersMenu}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:47:32.993604" elapsed="0.032563"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${OrderPagePanelContainer}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:33.026167" elapsed="0.017308"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:33.177874" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-6.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:33.043475" elapsed="0.134399"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${HomepageOrdersMenu}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:33.177874" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${OrderPageTotalOrders}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:33.177874" elapsed="0.015626"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${OrderPageSortBar}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:33.193500" elapsed="0.015652"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${OrderPageStatusFilter}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:33.209152" elapsed="0.016021"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${OrderPageDateFilter}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:33.225173" elapsed="0.015639"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${OrderPageSearchBox}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:33.240812" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${OrderPageSearchButton}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:33.240812" elapsed="0.015623"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${OrderPageArrangeFilter}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:33.256435" elapsed="0.015623"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${OrderPageDetailsColumn}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:33.272058" elapsed="0.015627"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:33.384752" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-9.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-9.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${HomepageOrdersMenu}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:33.287685" elapsed="0.097067"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:33.488496" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-10.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-10.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${OrderPageTotalOrders}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:33.384972" elapsed="0.103524"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:33.602553" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-11.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-11.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${OrderPageSortBar}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:33.488496" elapsed="0.114057"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:33.705660" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-12.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-12.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${OrderPageStatusFilter}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:33.602553" elapsed="0.103107"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:33.799857" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-13.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-13.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${OrderPageDateFilter}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:33.705660" elapsed="0.094197"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:33.914137" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-14.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-14.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${OrderPageSearchBox}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:33.799857" elapsed="0.114280"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:34.000111" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-15.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-15.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${OrderPageSearchButton}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:33.915131" elapsed="0.084980"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:34.087125" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-16.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-16.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${OrderPageArrangeFilter}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:34.000111" elapsed="0.087014"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:34.202714" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-17.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-17.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${OrderPageDetailsColumn}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:34.087125" elapsed="0.115589"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${OrderPageDetailsPreviousPageButton}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-04-02T14:47:34.202714" elapsed="0.285714"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:34.636203" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-18.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-18.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${OrderPageDetailsPreviousPageButton}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:34.489470" elapsed="0.147733"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:34.702657" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-19.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-19.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${OrderPageDetailsNextPageButton}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:34.637203" elapsed="0.065454"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:34.782857" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-20.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-20.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${OrderPageDetailsPage1Button}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:34.702657" elapsed="0.080200"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:47:36.783501" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:47:34.782857" elapsed="2.000644"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:47:32.977996" elapsed="3.805505"/>
-</kw>
-<arg>User should be able to view Cutomer Orders Panel</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:47:32.977996" elapsed="3.805505"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to view account orders page HK" owner="Orders_Page_Keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${Retail_AccountpageOrdersMenu}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:36.783501" elapsed="0.028179"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:36.811680" level="INFO">Clicking element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Orders ')]|//ul[@class='vertical-menu tab-level']//*[contains(text(),' Order History ')]'.</msg>
-<msg time="2024-04-02T14:47:38.010422" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-7.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-04-02T14:47:38.010422" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="has-nochild" href="/hkdealer/my-account/orders"&gt;...&lt;/a&gt; is not clickable at point (250, 11). Other element would receive the click: &lt;cx-page-layout section="headerDealer" class="d-flex hkdealer show-desktop headerDealer"&gt;...&lt;/cx-page-layout&gt;
-  (Session info: chrome=123.0.6312.59)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7D0BA7062+63090]
-	(No symbol) [0x00007FF7D0B12CB2]
-	(No symbol) [0x00007FF7D09AEC65]
-	(No symbol) [0x00007FF7D09FBB34]
-	(No symbol) [0x00007FF7D09F9954]
-	(No symbol) [0x00007FF7D09F7164]
-	(No symbol) [0x00007FF7D09F5EF9]
-	(No symbol) [0x00007FF7D09EA708]
-	(No symbol) [0x00007FF7D0A16FDA]
-	(No symbol) [0x00007FF7D09EA00A]
-	(No symbol) [0x00007FF7D0A171F0]
-	(No symbol) [0x00007FF7D0A33412]
-	(No symbol) [0x00007FF7D0A16D83]
-	(No symbol) [0x00007FF7D09E83A8]
-	(No symbol) [0x00007FF7D09E9441]
-	GetHandleVerifier [0x00007FF7D0FA25CD+4238301]
-	GetHandleVerifier [0x00007FF7D0FDF72D+4488509]
-	GetHandleVerifier [0x00007FF7D0FD7A0F+4456479]
-	GetHandleVerifier [0x00007FF7D0C805A6+953270]
-	(No symbol) [0x00007FF7D0B1E57F]
-	(No symbol) [0x00007FF7D0B19254]
-	(No symbol) [0x00007FF7D0B1938B]
-	(No symbol) [0x00007FF7D0B09BC4]
-	(No symbol) [0x00007FFA67A9257D]
-	RtlUserThreadStart [0x00007FFA6822AA58+40]
-</msg>
-<arg>${Retail_AccountpageOrdersMenu}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="FAIL" start="2024-04-02T14:47:36.811680" elapsed="1.214369">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="has-nochild" href="/hkdealer/my-account/orders"&gt;...&lt;/a&gt; is not clickable at point (250, 11). Other element would receive the click: &lt;cx-page-layout section="headerDealer" class="d-flex hkdealer show-desktop headerDealer"&gt;...&lt;/cx-page-layout&gt;
-  (Session info: chrome=123.0.6312.59)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7D0BA7062+63090]
-	(No symbol) [0x00007FF7D0B12CB2]
-	(No symbol) [0x00007FF7D09AEC65]
-	(No symbol) [0x00007FF7D09FBB34]
-	(No symbol) [0x00007FF7D09F9954]
-	(No symbol) [0x00007FF7D09F7164]
-	(No symbol) [0x00007FF7D09F5EF9]
-	(No symbol) [0x00007FF7D09EA708]
-	(No symbol) [0x00007FF7D0A16FDA]
-	(No symbol) [0x00007FF7D09EA00A]
-	(No symbol) [0x00007FF7D0A171F0]
-	(No symbol) [0x00007FF7D0A33412]
-	(No symbol) [0x00007FF7D0A16D83]
-	(No symbol) [0x00007FF7D09E83A8]
-	(No symbol) [0x00007FF7D09E9441]
-	GetHandleVerifier [0x00007FF7D0FA25CD+4238301]
-	GetHandleVerifier [0x00007FF7D0FDF72D+4488509]
-	GetHandleVerifier [0x00007FF7D0FD7A0F+4456479]
-	GetHandleVerifier [0x00007FF7D0C805A6+953270]
-	(No symbol) [0x00007FF7D0B1E57F]
-	(No symbol) [0x00007FF7D0B19254]
-	(No symbol) [0x00007FF7D0B1938B]
-	(No symbol) [0x00007FF7D0B09BC4]
-	(No symbol) [0x00007FFA67A9257D]
-	RtlUserThreadStart [0x00007FFA6822AA58+40]
-</status>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${Retail_AccountOrderPagePanelContainer}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-04-02T14:47:38.026049" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:47:38.026049" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${Retail_HK_AccountOrderPageDetailsColumn}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-04-02T14:47:38.026049" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${Retail_HK_AccountOrderPageDetailsPartslaneRefLabel}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-04-02T14:47:38.026049" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${Retail_HK_AccountOrderPageDetailsCustAccNumLabel}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-04-02T14:47:38.026049" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${Retail_HK_AccountOrderPageDetailsOrderDateLabel}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-04-02T14:47:38.026049" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${Retail_HK_AccountOrderPageDetailsDeliveryMethod}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-04-02T14:47:38.026049" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${Retail_HK_AccountOrderPageDetailsPaymentMethod}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-04-02T14:47:38.026049" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${Retail_HK_AccountOrderPageDetailsTotalLabel}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-04-02T14:47:38.026049" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${Retail_HK_AccountOrderPageDetailsStatusLabel}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-04-02T14:47:38.026049" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${Retail_HK_AccountOrderPageDetailsReturnLabel}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-04-02T14:47:38.026049" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${Retail_HK_AccountOrderPageDetailsColumn}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:47:38.026049" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${Retail_HK_AccountOrderPageDetailsPartslaneRefLabel}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:47:38.026049" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${Retail_HK_AccountOrderPageDetailsCustAccNumLabel}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:47:38.026049" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${Retail_HK_AccountOrderPageDetailsOrderDateLabel}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:47:38.026049" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${Retail_HK_AccountOrderPageDetailsDeliveryMethod}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:47:38.026049" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${Retail_HK_AccountOrderPageDetailsPaymentMethod}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:47:38.026049" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${Retail_HK_AccountOrderPageDetailsTotalLabel}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:47:38.026049" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${Retail_HK_AccountOrderPageDetailsStatusLabel}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:47:38.026049" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${Retail_HK_AccountOrderPageDetailsReturnLabel}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:47:38.026049" elapsed="0.000000"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-04-02T14:47:38.026049" elapsed="0.000000"/>
-</kw>
-<status status="FAIL" start="2024-04-02T14:47:36.783501" elapsed="1.242548">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="has-nochild" href="/hkdealer/my-account/orders"&gt;...&lt;/a&gt; is not clickable at point (250, 11). Other element would receive the click: &lt;cx-page-layout section="headerDealer" class="d-flex hkdealer show-desktop headerDealer"&gt;...&lt;/cx-page-layout&gt;
-  (Session info: chrome=123.0.6312.59)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7D0BA7062+63090]
-	(No symbol) [0x00007FF7D0B12CB2]
-	(No symbol) [0x00007FF7D09AEC65]
-	(No symbol) [0x00007FF7D09FBB34]
-	(No symbol) [0x00007FF7D09F9954]
-	(No symbol) [0x00007FF7D09F7164]
-	(No symbol) [0x00007FF7D09F5EF9]
-	(No symbol) [0x00007FF7D09EA708]
-	(No symbol) [0x00007FF7D0A16FDA]
-	(No symbol) [0x00007FF7D09EA00A]
-	(No symbol) [0x00007FF7D0A171F0]
-	(No symbol) [0x00007FF7D0A33412]
-	(No symbol) [0x00007FF7D0A16D83]
-	(No symbol) [0x00007FF7D09E83A8]
-	(No symbol) [0x00007FF7D09E9441]
-	GetHandleVerifier [0x00007FF7D0FA25CD+4238301]
-	GetHandleVerifier [0x00007FF7D0FDF72D+4488509]
-	GetHandleVerifier [0x00007FF7D0FD7A0F+4456479]
-	GetHandleVerifier [0x00007FF7D0C805A6+953270]
-	(No symbol) [0x00007FF7D0B1E57F]
-	(No symbol) [0x00007FF7D0B19254]
-	(No symbol) [0x00007FF7D0B1938B]
-	(No symbol) [0x00007FF7D0B09BC4]
-	(No symbol) [0x00007FFA67A9257D]
-	RtlUserThreadStart [0x00007FFA6822AA58+40]
-</status>
-</kw>
-<arg>User should be able to view account orders page HK</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="FAIL" start="2024-04-02T14:47:36.783501" elapsed="1.242548">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="has-nochild" href="/hkdealer/my-account/orders"&gt;...&lt;/a&gt; is not clickable at point (250, 11). Other element would receive the click: &lt;cx-page-layout section="headerDealer" class="d-flex hkdealer show-desktop headerDealer"&gt;...&lt;/cx-page-layout&gt;
-  (Session info: chrome=123.0.6312.59)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7D0BA7062+63090]
-	(No symbol) [0x00007FF7D0B12CB2]
-	(No symbol) [0x00007FF7D09AEC65]
-	(No symbol) [0x00007FF7D09FBB34]
-	(No symbol) [0x00007FF7D09F9954]
-	(No symbol) [0x00007FF7D09F7164]
-	(No symbol) [0x00007FF7D09F5EF9]
-	(No symbol) [0x00007FF7D09EA708]
-	(No symbol) [0x00007FF7D0A16FDA]
-	(No symbol) [0x00007FF7D09EA00A]
-	(No symbol) [0x00007FF7D0A171F0]
-	(No symbol) [0x00007FF7D0A33412]
-	(No symbol) [0x00007FF7D0A16D83]
-	(No symbol) [0x00007FF7D09E83A8]
-	(No symbol) [0x00007FF7D09E9441]
-	GetHandleVerifier [0x00007FF7D0FA25CD+4238301]
-	GetHandleVerifier [0x00007FF7D0FDF72D+4488509]
-	GetHandleVerifier [0x00007FF7D0FD7A0F+4456479]
-	GetHandleVerifier [0x00007FF7D0C805A6+953270]
-	(No symbol) [0x00007FF7D0B1E57F]
-	(No symbol) [0x00007FF7D0B19254]
-	(No symbol) [0x00007FF7D0B1938B]
-	(No symbol) [0x00007FF7D0B09BC4]
-	(No symbol) [0x00007FFA67A9257D]
-	RtlUserThreadStart [0x00007FFA6822AA58+40]
-</status>
-</kw>
-<tag>Order Page</tag>
-<tag>TC033</tag>
-<status status="FAIL" start="2024-04-02T14:47:32.977996" elapsed="5.053058">ElementClickInterceptedException: Message: element click intercepted: Element &lt;a class="has-nochild" href="/hkdealer/my-account/orders"&gt;...&lt;/a&gt; is not clickable at point (250, 11). Other element would receive the click: &lt;cx-page-layout section="headerDealer" class="d-flex hkdealer show-desktop headerDealer"&gt;...&lt;/cx-page-layout&gt;
-  (Session info: chrome=123.0.6312.59)
-Stacktrace:
-	GetHandleVerifier [0x00007FF7D0BA7062+63090]
-	(No symbol) [0x00007FF7D0B12CB2]
-	(No symbol) [0x00007FF7D09AEC65]
-	(No symbol) [0x00007FF7D09FBB34]
-	(No symbol) [0x00007FF7D09F9954]
-	(No symbol) [0x00007FF7D09F7164]
-	(No symbol) [0x00007FF7D09F5EF9]
-	(No symbol) [0x00007FF7D09EA708]
-	(No symbol) [0x00007FF7D0A16FDA]
-	(No symbol) [0x00007FF7D09EA00A]
-	(No symbol) [0x00007FF7D0A171F0]
-	(No symbol) [0x00007FF7D0A33412]
-	(No symbol) [0x00007FF7D0A16D83]
-	(No symbol) [0x00007FF7D09E83A8]
-	(No symbol) [0x00007FF7D09E9441]
-	GetHandleVerifier [0x00007FF7D0FA25CD+4238301]
-	GetHandleVerifier [0x00007FF7D0FDF72D+4488509]
-	GetHandleVerifier [0x00007FF7D0FD7A0F+4456479]
-	GetHandleVerifier [0x00007FF7D0C805A6+953270]
-	(No symbol) [0x00007FF7D0B1E57F]
-	(No symbol) [0x00007FF7D0B19254]
-	(No symbol) [0x00007FF7D0B1938B]
-	(No symbol) [0x00007FF7D0B09BC4]
-	(No symbol) [0x00007FFA67A9257D]
-	RtlUserThreadStart [0x00007FFA6822AA58+40]
-</status>
-</test>
-<test id="s1-t14" name="TC-012 - User should be able to select one order from the list" line="65">
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to select one order from the list" owner="Orders_Page_Keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${OrderPageHistory1}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:38.031054" elapsed="0.011007"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${OrderPageHistory1}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-04-02T14:47:38.042061" elapsed="0.272649"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:38.314710" level="INFO">Clicking element '(//tr//td[@class='cx-order-history-code']//a[@class='cx-order-history-value'])[1]|(//tr//td[@class='cx-order-history-code'])[1]'.</msg>
-<arg>${OrderPageHistory1}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:47:38.314710" elapsed="0.044379"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:47:40.359344" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:47:38.359089" elapsed="2.000255"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:40.558656" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-8.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:40.359344" elapsed="0.199312"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:47:38.031054" elapsed="2.527602"/>
-</kw>
-<arg>User should be able to select one order from the list</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:47:38.031054" elapsed="2.527602"/>
-</kw>
-<tag>Order Page</tag>
-<tag>TC034</tag>
-<status status="PASS" start="2024-04-02T14:47:38.031054" elapsed="2.527602"/>
-</test>
-<test id="s1-t15" name="TC-013 - User should be able to view order details" line="69">
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to view order details HK">
-<msg time="2024-04-02T14:47:40.558656" level="FAIL">No keyword with name 'User should be able to view order details HK' found. Did you mean:
-    Orders_Page_Keywords.User should be able to view order details
-    Return_Page_Keywords.User should be able to view Return details</msg>
-<status status="FAIL" start="2024-04-02T14:47:40.558656" elapsed="0.000000">No keyword with name 'User should be able to view order details HK' found. Did you mean:
-    Orders_Page_Keywords.User should be able to view order details
-    Return_Page_Keywords.User should be able to view Return details</status>
-</kw>
-<arg>User should be able to view order details HK</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="FAIL" start="2024-04-02T14:47:40.558656" elapsed="0.000000">No keyword with name 'User should be able to view order details HK' found. Did you mean:
-    Orders_Page_Keywords.User should be able to view order details
-    Return_Page_Keywords.User should be able to view Return details</status>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="TC Move to Top" owner="Home_Page_Keywords">
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${HomepageMyAccountLabel}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-04-02T14:47:40.558656" elapsed="0.274882"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:47:43.833935" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:47:40.833538" elapsed="3.000397"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:47:40.558656" elapsed="3.275279"/>
-</kw>
-<arg>TC Move to Top</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:47:40.558656" elapsed="3.275279"/>
-</kw>
-<tag>Order Page</tag>
-<tag>TC035</tag>
-<status status="FAIL" start="2024-04-02T14:47:40.558656" elapsed="3.275279">No keyword with name 'User should be able to view order details HK' found. Did you mean:
-    Orders_Page_Keywords.User should be able to view order details
-    Return_Page_Keywords.User should be able to view Return details</status>
-</test>
-<test id="s1-t16" name="TC-014 - User should be able to click Return from left navigation" line="74">
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to click Return from left navigation" owner="Home_Page_Keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${HomepageReturnMenu}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:43.833935" elapsed="0.014021"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${HomepageReturnMenu}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-04-02T14:47:43.847956" elapsed="0.266210"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:44.114166" level="INFO">Clicking element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Return ')]'.</msg>
-<arg>${HomepageReturnMenu}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:47:44.114166" elapsed="0.061786"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:47:49.176926" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:47:44.175952" elapsed="5.000974"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:49.294070" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-9.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:49.176926" elapsed="0.117144"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:47:43.833935" elapsed="5.460135"/>
-</kw>
-<arg>User should be able to click Return from left navigation</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:47:43.833935" elapsed="5.460135"/>
-</kw>
-<tag>Left Navigation</tag>
-<tag>TC021</tag>
-<status status="PASS" start="2024-04-02T14:47:43.833935" elapsed="5.460135"/>
-</test>
-<test id="s1-t17" name="TC-015 - User should be able to select one return from the list" line="78">
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to select one return from the list" owner="Return_Page_Keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageHistory1}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:49.294070" elapsed="0.015622"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:49.309692" level="INFO">Clicking element '(//td//a[@class='cx-return-requests-value'])[1]|(//div//a[@class='cx-return-requests-value'])[1]'.</msg>
-<arg>${ReturnPageHistory1}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:47:49.309692" elapsed="0.043020"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:47:52.353351" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:47:49.352977" elapsed="3.000374"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:52.460487" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-10.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:52.353351" elapsed="0.107136"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:47:49.294070" elapsed="3.166417"/>
-</kw>
-<arg>User should be able to select one return from the list</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:47:49.294070" elapsed="3.166417"/>
-</kw>
-<tag>Return Page</tag>
-<tag>TC037</tag>
-<status status="PASS" start="2024-04-02T14:47:49.294070" elapsed="3.166417"/>
-</test>
-<test id="s1-t18" name="TC-016 - User should be able to view Return details" line="82">
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to view Return details in HK Return Details Page" owner="Return_Page_Keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderDetailsHeader}</arg>
-<arg>20</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:52.460487" elapsed="0.016013"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderDetailsStatus}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:52.476500" elapsed="0.015633"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:52.588128" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-21.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-21.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${ReturnPageOrderDetailsHeader}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:52.492133" elapsed="0.095995"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:52.688711" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-22.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-22.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${ReturnPageOrderDetailsStatus}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:52.588128" elapsed="0.100583"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderDetailsContainer}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:52.688711" elapsed="0.018911"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderDetailsPartsRefLabel}</arg>
-<arg>20</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:52.707622" elapsed="0.013860"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderDetailsCustNameLabel}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:52.721482" elapsed="0.012408"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderDetailsOrderDateLabel}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:52.733890" elapsed="0.011998"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderDetailsRetReqDateLabel}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:52.745888" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderDetailsPartsRefValue}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:52.745888" elapsed="0.024169"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderDetailsCustOrderNumValue}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:52.770057" elapsed="0.007507"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderDetailsCustNameValue}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:52.777564" elapsed="0.015634"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderDetailsSupRefValue}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:52.793198" elapsed="0.015626"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderDetailsSupValue}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:52.808824" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderDetailsOrderDateValue}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:52.808824" elapsed="0.015624"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:52.953295" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-23.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-23.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${ReturnPageOrderDetailsContainer}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:52.824448" elapsed="0.128847"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:53.054837" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-24.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-24.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${ReturnPageOrderDetailsPartsRefLabel}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:52.953295" elapsed="0.101542"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:53.154515" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-25.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-25.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${ReturnPageOrderDetailsCustNameLabel}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:53.054837" elapsed="0.099678"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:53.248592" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-26.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-26.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${ReturnPageOrderDetailsOrderDateLabel}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:53.154515" elapsed="0.094077"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:53.340569" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-27.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-27.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${ReturnPageOrderDetailsRetReqDateLabel}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:53.248592" elapsed="0.091977"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:53.437295" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-28.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-28.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${ReturnPageOrderDetailsPartsRefValue}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:53.340569" elapsed="0.096726"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:53.537344" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-29.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-29.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${ReturnPageOrderDetailsCustOrderNumValue}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:53.437295" elapsed="0.100049"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:53.652656" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-30.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-30.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${ReturnPageOrderDetailsCustNameValue}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:53.537344" elapsed="0.116314"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:53.753051" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-31.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-31.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${ReturnPageOrderDetailsSupRefValue}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:53.653658" elapsed="0.099393"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:53.830649" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-32.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-32.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${ReturnPageOrderDetailsSupValue}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:53.753051" elapsed="0.077598"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:53.914662" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-33.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-33.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${ReturnPageOrderDetailsOrderDateValue}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:53.830649" elapsed="0.084013"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnContainer}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-04-02T14:47:53.914662" elapsed="0.285049"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnHeader}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:54.199711" elapsed="0.015662"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnItemList}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:54.215373" elapsed="0.015589"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:54.334348" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-34.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-34.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${ReturnPageOrderReturnContainer}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:54.230962" elapsed="0.103386"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:54.455215" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-35.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-35.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${ReturnPageOrderReturnHeader}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:54.334348" elapsed="0.120867"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:47:54.555803" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-36.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-36.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${ReturnPageOrderReturnItemList}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:47:54.455215" elapsed="0.100588"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnDataSectionContainer}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-04-02T14:47:54.555803" elapsed="0.277134"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnDataSectionReasonLabel}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:54.832937" elapsed="0.015417"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnDataSectionReasonSelection}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:54.848354" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnDataSectionQtyLabel}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:47:54.848354" elapsed="0.024133"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:05.028226" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-11.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-04-02T14:48:05.028226" level="FAIL">Element '//div[@class='col-3 pl-0']//input' not visible after 10 seconds.</msg>
-<arg>${ReturnPageOrderReturnDataSectionQtyValue}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="FAIL" start="2024-04-02T14:47:54.872487" elapsed="10.155739">Element '//div[@class='col-3 pl-0']//input' not visible after 10 seconds.</status>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnDataSectionNoteLabel}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.028226" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnDataSectionNoteTextField}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.028226" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnDataSectionImageLabel}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.028226" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnDataSectionImageField}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.028226" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnDataSectionContainer}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.043841" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnDataSectionReasonLabel}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.043841" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnDataSectionReasonSelection}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.043841" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnDataSectionQtyLabel}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.043841" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnDataSectionQtyValue}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.043841" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnDataSectionNoteLabel}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.043841" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnDataSectionNoteTextField}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.043841" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnDataSectionImageLabel}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.043841" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnDataSectionImageField}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.043841" elapsed="0.000000"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnApproveRejectContainer}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.043841" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnNoteLabel}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.043841" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnApproveRejectNoteTextField}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.043841" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnApproveRejectContainer}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.043841" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnNoteLabel}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.043841" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnApproveRejectNoteTextField}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.043841" elapsed="0.000000"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnMessageContainer}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.043841" elapsed="0.000000"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnMessageSupplierButton}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.043841" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnMessageContainer}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.043841" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<arg>${ReturnPageOrderReturnMessageSupplierButton}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.043841" elapsed="0.000000"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2024-04-02T14:48:05.043841" elapsed="0.000000"/>
-</kw>
-<status status="FAIL" start="2024-04-02T14:47:52.460487" elapsed="12.583354">Element '//div[@class='col-3 pl-0']//input' not visible after 10 seconds.</status>
-</kw>
-<arg>User should be able to view Return details in HK Return Details Page</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="FAIL" start="2024-04-02T14:47:52.460487" elapsed="12.583354">Element '//div[@class='col-3 pl-0']//input' not visible after 10 seconds.</status>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="TC Move to Top" owner="Home_Page_Keywords">
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${HomepageMyAccountLabel}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-04-02T14:48:05.043841" elapsed="0.288985"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:48:08.333469" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:48:05.332826" elapsed="3.000643"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:48:05.043841" elapsed="3.289628"/>
-</kw>
-<arg>TC Move to Top</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:48:05.043841" elapsed="3.289628"/>
-</kw>
-<tag>Return Page</tag>
-<tag>TC038</tag>
-<status status="FAIL" start="2024-04-02T14:47:52.460487" elapsed="15.872982">Element '//div[@class='col-3 pl-0']//input' not visible after 10 seconds.</status>
-</test>
-<test id="s1-t19" name="TC-022 - User should be able to click and expand Customer Management" line="87">
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to click and expand Customer Management" owner="Home_Page_Keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${HomepageCustomerMenu}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:08.333469" elapsed="0.006006"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${HomepageCustomerMenu}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-04-02T14:48:08.339475" elapsed="0.277422"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:08.616897" level="INFO">Clicking element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Customer ')]'.</msg>
-<arg>${HomepageCustomerMenu}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:48:08.616897" elapsed="0.041814"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:48:13.659010" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:48:08.658711" elapsed="5.000299"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:48:08.333469" elapsed="5.325541"/>
-</kw>
-<arg>User should be able to click and expand Customer Management</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:48:08.333469" elapsed="5.325541"/>
-</kw>
-<tag>Left Navigation</tag>
-<tag>TC022</tag>
-<status status="PASS" start="2024-04-02T14:48:08.333469" elapsed="5.325541"/>
-</test>
-<test id="s1-t20" name="TC-023 - User should be able to click Customer Manegement - Buyer Rel from left navigation" line="91">
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to click Customer Manegement - Buyer Rel from left navigation" owner="Home_Page_Keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${HomepageCustomerBuyerRelation}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:13.659010" elapsed="0.011005"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${HomepageCustomerBuyerRelation}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-04-02T14:48:13.670015" elapsed="0.281344"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:13.951359" level="INFO">Clicking element '//div[@class='tab-data has-child']//a[contains(text(),'Customer Relationship') or contains(text(),'Buyer Relationship')]'.</msg>
-<arg>${HomepageCustomerBuyerRelation}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:48:13.951359" elapsed="0.037999"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:48:18.989640" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:48:13.989358" elapsed="5.000282"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:19.111773" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-12.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-12.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-02T14:48:18.989640" elapsed="0.122133"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:48:13.659010" elapsed="5.452763"/>
-</kw>
-<arg>User should be able to click Customer Manegement - Buyer Rel from left navigation</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:48:13.659010" elapsed="5.452763"/>
-</kw>
-<tag>Left Navigation</tag>
-<tag>TC024</tag>
-<status status="PASS" start="2024-04-02T14:48:13.659010" elapsed="5.452763"/>
-</test>
-<test id="s1-t21" name="TC-024 - User should be able to view Buyer Rel Page" line="95">
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to view Buyer Rel Page" owner="BuyerRel_Page_Keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BuyerRelPagePanelContainer}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:19.111773" elapsed="0.018645"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${BuyerRelPagePanelHeader}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:19.130418" elapsed="0.013008"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:19.259895" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-13.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-13.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-02T14:48:19.143426" elapsed="0.116469"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:48:21.260399" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:48:19.259895" elapsed="2.000504"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:48:19.111773" elapsed="2.148626"/>
-</kw>
-<arg>User should be able to view Buyer Rel Page</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:48:19.111773" elapsed="2.148626"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="TC Move to Top" owner="Home_Page_Keywords">
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${HomepageMyAccountLabel}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-04-02T14:48:21.261299" elapsed="0.273517"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:48:24.535069" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:48:21.534816" elapsed="3.000253"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:48:21.261299" elapsed="3.273770"/>
-</kw>
-<arg>TC Move to Top</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:48:21.261299" elapsed="3.273770"/>
-</kw>
-<tag>New RegReq Page</tag>
-<tag>TC043</tag>
-<status status="PASS" start="2024-04-02T14:48:19.111773" elapsed="5.423296"/>
-</test>
-<test id="s1-t22" name="TC-025 - User should be able to click Messages from left navigation" line="100">
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to click Messages from left navigation" owner="Home_Page_Keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${HomepageMessagesMenu}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:24.535069" elapsed="0.017129"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${HomepageMessagesMenu}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-04-02T14:48:24.552198" elapsed="0.273808"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:24.826006" level="INFO">Clicking element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Messages ') or contains(text(),'Inbox')]'.</msg>
-<arg>${HomepageMessagesMenu}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:48:24.826006" elapsed="0.120291"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:48:29.946425" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:48:24.946297" elapsed="5.000128"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:30.059357" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-14.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-14.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-02T14:48:29.946425" elapsed="0.112932"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:48:24.535069" elapsed="5.524288"/>
-</kw>
-<arg>User should be able to click Messages from left navigation</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:48:24.535069" elapsed="5.524288"/>
-</kw>
-<tag>Left Navigation</tag>
-<tag>TC025</tag>
-<status status="PASS" start="2024-04-02T14:48:24.535069" elapsed="5.524288"/>
-</test>
-<test id="s1-t23" name="TC-026 - User should be able to view message page" line="104">
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to view message page" owner="Message_Page_Keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${MessagePagePanelContainer}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:30.059357" elapsed="0.015636"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${MessagePagePanelHeader}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:30.074993" elapsed="0.015623"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:30.209118" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-15.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-02T14:48:30.090616" elapsed="0.118502"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:48:32.209641" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:48:30.209118" elapsed="2.000523"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:48:30.059357" elapsed="2.150284"/>
-</kw>
-<arg>User should be able to view message page</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:48:30.059357" elapsed="2.150284"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="TC Move to Top" owner="Home_Page_Keywords">
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${HomepageMyAccountLabel}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-04-02T14:48:32.209641" elapsed="0.268853"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:48:35.479166" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:48:32.478494" elapsed="3.000672"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:48:32.209641" elapsed="3.270549"/>
-</kw>
-<arg>TC Move to Top</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:48:32.209641" elapsed="3.270549"/>
-</kw>
-<tag>Message Page</tag>
-<tag>TC044</tag>
-<status status="PASS" start="2024-04-02T14:48:30.059357" elapsed="5.421829"/>
-</test>
-<test id="s1-t24" name="TC-027 - User should be able to click and expand Profile" line="109">
+<test id="s1-t9" name="TC-027 - User should be able to click and expand Profile" line="661">
 <kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
 <kw name="User should be able to click and expand Profile" owner="Home_Page_Keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomepageProfileMenu}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:35.487198" elapsed="0.025245"/>
+<status status="PASS" start="2024-04-12T08:37:04.714683" elapsed="0.016018"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${HomepageProfileMenu}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-04-02T14:48:35.512443" elapsed="0.265142"/>
+<status status="PASS" start="2024-04-12T08:37:04.731703" elapsed="0.270689"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:35.777585" level="INFO">Clicking element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Profile ')]'.</msg>
+<msg time="2024-04-12T08:37:05.002392" level="INFO">Clicking element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Profile ')]'.</msg>
 <arg>${HomepageProfileMenu}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:48:35.777585" elapsed="0.033945"/>
+<status status="PASS" start="2024-04-12T08:37:05.002392" elapsed="0.039169"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:48:40.812807" level="INFO">Slept 5 seconds.</msg>
+<msg time="2024-04-12T08:37:10.041819" level="INFO">Slept 5 seconds.</msg>
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:48:35.812578" elapsed="5.000229"/>
+<status status="PASS" start="2024-04-12T08:37:05.041561" elapsed="5.000258"/>
 </kw>
-<status status="PASS" start="2024-04-02T14:48:35.486190" elapsed="5.326617"/>
+<status status="PASS" start="2024-04-12T08:37:04.714683" elapsed="5.327136"/>
 </kw>
 <arg>User should be able to click and expand Profile</arg>
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:48:35.486190" elapsed="5.326617"/>
+<status status="PASS" start="2024-04-12T08:37:04.714683" elapsed="5.327136"/>
 </kw>
 <tag>Left Navigation</tag>
 <tag>TC026</tag>
-<status status="PASS" start="2024-04-02T14:48:35.484191" elapsed="5.328616"/>
+<status status="PASS" start="2024-04-12T08:37:04.713684" elapsed="5.328866"/>
 </test>
-<test id="s1-t25" name="TC-028 - User should be able to click Profile - Account Details from left navigation" line="113">
+<test id="s1-t10" name="TC-028 - User should be able to click Profile - Account Details from left navigation" line="665">
 <kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
 <kw name="User should be able to click Profile - Account Details from left navigation" owner="Home_Page_Keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${HomepageProfileAccountDetails}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:40.812807" elapsed="0.019639"/>
+<status status="PASS" start="2024-04-12T08:37:10.044064" elapsed="0.014073"/>
 </kw>
 <kw name="Scroll Element Into View" owner="SeleniumLibrary">
 <arg>${HomepageProfileAccountDetails}</arg>
 <doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-04-02T14:48:40.832446" elapsed="0.264104"/>
+<status status="PASS" start="2024-04-12T08:37:10.058137" elapsed="0.267924"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:41.096550" level="INFO">Clicking element '//div[@class='tab-data has-child']//a[contains(text(),'Account Details')]'.</msg>
+<msg time="2024-04-12T08:37:10.327061" level="INFO">Clicking element '//div[@class='tab-data has-child']//a[contains(text(),'Account Details')]'.</msg>
 <arg>${HomepageProfileAccountDetails}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:48:41.096550" elapsed="0.036320"/>
+<status status="PASS" start="2024-04-12T08:37:10.326061" elapsed="0.035317"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:41.277595" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-16.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-16.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-12T08:37:10.523180" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-screenshot-2.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-02T14:48:41.132870" elapsed="0.144725"/>
+<status status="PASS" start="2024-04-12T08:37:10.362380" elapsed="0.160800"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:48:46.278036" level="INFO">Slept 5 seconds.</msg>
+<msg time="2024-04-12T08:37:15.523804" level="INFO">Slept 5 seconds.</msg>
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:48:41.277595" elapsed="5.000441"/>
+<status status="PASS" start="2024-04-12T08:37:10.523180" elapsed="5.000624"/>
 </kw>
-<status status="PASS" start="2024-04-02T14:48:40.812807" elapsed="5.465229"/>
+<status status="PASS" start="2024-04-12T08:37:10.044064" elapsed="5.479740"/>
 </kw>
 <arg>User should be able to click Profile - Account Details from left navigation</arg>
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:48:40.812807" elapsed="5.465229"/>
+<status status="PASS" start="2024-04-12T08:37:10.044064" elapsed="5.479740"/>
 </kw>
 <tag>Left Navigation</tag>
 <tag>TC027</tag>
-<status status="PASS" start="2024-04-02T14:48:40.812807" elapsed="5.465229"/>
+<status status="PASS" start="2024-04-12T08:37:10.043056" elapsed="5.480748"/>
 </test>
-<test id="s1-t26" name="TC-029 - User should be able to view account details page" line="117">
+<test id="s1-t11" name="TC-029 - User should be able to view account details page" line="669">
 <kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
 <kw name="User should be able to view account details page" owner="Account_Details_Page_Keywords">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ProfileAccountsDetailsPanelContainer}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:46.278036" elapsed="0.015634"/>
+<status status="PASS" start="2024-04-12T08:37:15.523804" elapsed="0.008508"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ProfileAccountsDetailsPanelHeader}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:46.293670" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-12T08:37:15.532312" elapsed="0.015634"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ProfileAccountsDetailsFirstNameLabel}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:46.293670" elapsed="0.015625"/>
+<status status="PASS" start="2024-04-12T08:37:15.547946" elapsed="0.015625"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ProfileAccountsDetailsLastNameLabel}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:46.309295" elapsed="0.015625"/>
+<status status="PASS" start="2024-04-12T08:37:15.563571" elapsed="0.015625"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ProfileAccountsDetailsEmailLabel}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:46.324920" elapsed="0.015626"/>
+<status status="PASS" start="2024-04-12T08:37:15.579196" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ProfileAccountsDetailsPhoneLabel}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:46.340546" elapsed="0.015624"/>
+<status status="PASS" start="2024-04-12T08:37:15.579196" elapsed="0.031645"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ProfileAccountsDetailsLandlineLabel}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:46.356170" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-12T08:37:15.610841" elapsed="0.015634"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ProfileAccountsDetailsFirstNameTextBox}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:46.371796" elapsed="0.002005"/>
+<status status="PASS" start="2024-04-12T08:37:15.626475" elapsed="0.015625"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ProfileAccountsDetailsLastNameTextBox}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:46.373801" elapsed="0.014007"/>
+<status status="PASS" start="2024-04-12T08:37:15.642100" elapsed="0.000000"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ProfileAccountsDetailsEmailTextBox}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:46.387808" elapsed="0.015635"/>
+<status status="PASS" start="2024-04-12T08:37:15.642100" elapsed="0.015625"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ProfileAccountsDetailsPhoneTextBox}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:46.403443" elapsed="0.015625"/>
+<status status="PASS" start="2024-04-12T08:37:15.657725" elapsed="0.015646"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ProfileAccountsDetailsLandlineTextBox}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:46.419068" elapsed="0.000000"/>
+<status status="PASS" start="2024-04-12T08:37:15.673371" elapsed="0.015606"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ProfileAccountsDetailsCancelButton}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:46.419068" elapsed="0.015625"/>
+<status status="PASS" start="2024-04-12T08:37:15.688977" elapsed="0.016013"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${ProfileAccountsDetailsUpdateButton}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:46.434693" elapsed="0.015623"/>
+<status status="PASS" start="2024-04-12T08:37:15.704990" elapsed="0.015636"/>
 </kw>
 <kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:46.616994" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-37.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-37.png" width="400px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-12T08:37:15.879083" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-16.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-16.png" width="400px"&gt;&lt;/a&gt;</msg>
 <arg>${ProfileAccountsDetailsPanelContainer}</arg>
 <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:48:46.450316" elapsed="0.166678"/>
+<status status="PASS" start="2024-04-12T08:37:15.720626" elapsed="0.158457"/>
 </kw>
 <kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:46.700748" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-38.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-38.png" width="400px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-12T08:37:15.963923" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-17.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-17.png" width="400px"&gt;&lt;/a&gt;</msg>
 <arg>${ProfileAccountsDetailsFirstNameLabel}</arg>
 <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:48:46.616994" elapsed="0.083754"/>
+<status status="PASS" start="2024-04-12T08:37:15.879083" elapsed="0.084840"/>
 </kw>
 <kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:46.796403" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-39.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-39.png" width="400px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-12T08:37:16.063767" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-18.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-18.png" width="400px"&gt;&lt;/a&gt;</msg>
 <arg>${ProfileAccountsDetailsLastNameLabel}</arg>
 <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:48:46.700748" elapsed="0.095655"/>
+<status status="PASS" start="2024-04-12T08:37:15.963923" elapsed="0.099844"/>
 </kw>
 <kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:46.884853" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-40.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-40.png" width="400px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-12T08:37:16.175558" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-19.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-19.png" width="400px"&gt;&lt;/a&gt;</msg>
 <arg>${ProfileAccountsDetailsEmailLabel}</arg>
 <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:48:46.796403" elapsed="0.088450"/>
+<status status="PASS" start="2024-04-12T08:37:16.063767" elapsed="0.111791"/>
 </kw>
 <kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:46.986186" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-41.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-41.png" width="400px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-12T08:37:16.265154" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-20.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-20.png" width="400px"&gt;&lt;/a&gt;</msg>
 <arg>${ProfileAccountsDetailsPhoneLabel}</arg>
 <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:48:46.884853" elapsed="0.101333"/>
+<status status="PASS" start="2024-04-12T08:37:16.175558" elapsed="0.089596"/>
 </kw>
 <kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:47.097512" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-42.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-42.png" width="400px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-12T08:37:16.365132" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-21.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-21.png" width="400px"&gt;&lt;/a&gt;</msg>
 <arg>${ProfileAccountsDetailsLandlineLabel}</arg>
 <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:48:46.986186" elapsed="0.111326"/>
+<status status="PASS" start="2024-04-12T08:37:16.265154" elapsed="0.099978"/>
 </kw>
 <kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:47.186387" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-43.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-43.png" width="400px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-12T08:37:16.466036" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-22.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-22.png" width="400px"&gt;&lt;/a&gt;</msg>
 <arg>${ProfileAccountsDetailsFirstNameTextBox}</arg>
 <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:48:47.097512" elapsed="0.088875"/>
+<status status="PASS" start="2024-04-12T08:37:16.365132" elapsed="0.100904"/>
 </kw>
 <kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:47.285578" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-44.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-44.png" width="400px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-12T08:37:16.558832" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-23.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-23.png" width="400px"&gt;&lt;/a&gt;</msg>
 <arg>${ProfileAccountsDetailsLastNameTextBox}</arg>
 <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:48:47.186387" elapsed="0.099191"/>
+<status status="PASS" start="2024-04-12T08:37:16.466036" elapsed="0.092796"/>
 </kw>
 <kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:47.396166" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-45.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-45.png" width="400px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-12T08:37:16.645719" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-24.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-24.png" width="400px"&gt;&lt;/a&gt;</msg>
 <arg>${ProfileAccountsDetailsEmailTextBox}</arg>
 <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:48:47.285578" elapsed="0.110588"/>
+<status status="PASS" start="2024-04-12T08:37:16.558832" elapsed="0.086887"/>
 </kw>
 <kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:47.497162" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-46.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-46.png" width="400px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-12T08:37:16.741998" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-25.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-25.png" width="400px"&gt;&lt;/a&gt;</msg>
 <arg>${ProfileAccountsDetailsPhoneTextBox}</arg>
 <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:48:47.397181" elapsed="0.099981"/>
+<status status="PASS" start="2024-04-12T08:37:16.645719" elapsed="0.096279"/>
 </kw>
 <kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:47.584417" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-47.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-47.png" width="400px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-12T08:37:16.827761" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-26.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-26.png" width="400px"&gt;&lt;/a&gt;</msg>
 <arg>${ProfileAccountsDetailsLandlineTextBox}</arg>
 <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:48:47.497162" elapsed="0.087255"/>
+<status status="PASS" start="2024-04-12T08:37:16.741998" elapsed="0.085763"/>
 </kw>
 <kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:47.685809" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-48.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-48.png" width="400px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-12T08:37:16.925106" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-27.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-27.png" width="400px"&gt;&lt;/a&gt;</msg>
 <arg>${ProfileAccountsDetailsCancelButton}</arg>
 <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:48:47.584417" elapsed="0.101392"/>
+<status status="PASS" start="2024-04-12T08:37:16.827761" elapsed="0.097345"/>
 </kw>
 <kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:47.785527" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-49.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-49.png" width="400px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-04-12T08:37:17.041780" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-28.png"&gt;&lt;img src="../../Screenshots/HK/S2/HK_04-12-24%2008-36/selenium-element-screenshot-28.png" width="400px"&gt;&lt;/a&gt;</msg>
 <arg>${ProfileAccountsDetailsUpdateButton}</arg>
 <doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:48:47.685809" elapsed="0.099718"/>
+<status status="PASS" start="2024-04-12T08:37:16.925106" elapsed="0.117674"/>
 </kw>
-<status status="PASS" start="2024-04-02T14:48:46.278036" elapsed="1.507491"/>
+<status status="PASS" start="2024-04-12T08:37:15.523804" elapsed="1.518976"/>
 </kw>
 <arg>User should be able to view account details page</arg>
 <doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:48:46.278036" elapsed="1.507491"/>
+<status status="PASS" start="2024-04-12T08:37:15.523804" elapsed="1.518976"/>
 </kw>
 <tag>Profile</tag>
 <tag>TC045</tag>
-<status status="PASS" start="2024-04-02T14:48:46.278036" elapsed="1.515632"/>
-</test>
-<test id="s1-t27" name="TC-030 - User should be able to click Profile - Change Pass from left navigation" line="121">
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to click Profile - Change Pass from left navigation" owner="Home_Page_Keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${HomepageProfileChangePass}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:47.798684" elapsed="0.019975"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${HomepageProfileChangePass}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-04-02T14:48:47.818659" elapsed="0.283445"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:48.102104" level="INFO">Clicking element '//div[@class='tab-data has-child']//a[contains(text(),'Change Password')]'.</msg>
-<arg>${HomepageProfileChangePass}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:48:48.102104" elapsed="0.044501"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:48.294590" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-17.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-02T14:48:48.146605" elapsed="0.147985"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:48:53.295313" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:48:48.294590" elapsed="5.000723"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:48:47.798684" elapsed="5.496629"/>
-</kw>
-<arg>User should be able to click Profile - Change Pass from left navigation</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:48:47.797690" elapsed="5.498691"/>
-</kw>
-<tag>Left Navigation</tag>
-<tag>TC028</tag>
-<status status="PASS" start="2024-04-02T14:48:47.796686" elapsed="5.499695"/>
-</test>
-<test id="s1-t28" name="TC-031 - User should be able to view change password page" line="125">
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to view change password page" owner="Change_Pass_Page_Keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ProfileChangePassPanelContainer}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:53.301888" elapsed="0.015633"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${ProfileChangePassPanelHeader}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:53.317521" elapsed="0.000000"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:53.472193" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-50.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-50.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${ProfileChangePassPanelContainer}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:48:53.317521" elapsed="0.155670"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:48:53.296381" elapsed="0.176810"/>
-</kw>
-<arg>User should be able to view change password page</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:48:53.296381" elapsed="0.176810"/>
-</kw>
-<tag>Profile</tag>
-<tag>TC046</tag>
-<status status="PASS" start="2024-04-02T14:48:53.296381" elapsed="0.176810"/>
-</test>
-<test id="s1-t29" name="TC-032 - User should be able to click and expand Company" line="129">
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to click and expand Company" owner="Home_Page_Keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${HomepageCompanyMenu}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:53.474192" elapsed="0.013315"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${HomepageCompanyMenu}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-04-02T14:48:53.487507" elapsed="0.279290"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:53.766797" level="INFO">Clicking element '//ul[@class='vertical-menu tab-level']//a[@class='has-nochild'][contains(text(),' Company ')]'.</msg>
-<arg>${HomepageCompanyMenu}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:48:53.766797" elapsed="0.030334"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:48:58.798592" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:48:53.797806" elapsed="5.000786"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:48:53.474192" elapsed="5.324400"/>
-</kw>
-<arg>User should be able to click and expand Company</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:48:53.474192" elapsed="5.324400"/>
-</kw>
-<tag>Left Navigation</tag>
-<tag>TC029</tag>
-<status status="PASS" start="2024-04-02T14:48:53.473191" elapsed="5.325401"/>
-</test>
-<test id="s1-t30" name="TC-033 - User should be able to click Company - Company Details from left navigation" line="133">
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to click Company - Company Details from left navigation" owner="Home_Page_Keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${HomepageCompanyDetails}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:48:58.804650" elapsed="0.007006"/>
-</kw>
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${HomepageCompanyDetails}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-04-02T14:48:58.811656" elapsed="0.293475"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:59.106128" level="INFO">Clicking element '//div[@class='tab-data has-child']//a[contains(text(),'Company Details')]'.</msg>
-<arg>${HomepageCompanyDetails}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:48:59.106128" elapsed="0.030981"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:48:59.276629" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-18.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-02T14:48:59.137109" elapsed="0.139520"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:49:04.277021" level="INFO">Slept 5 seconds.</msg>
-<arg>5</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:48:59.276629" elapsed="5.000392"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:48:58.804650" elapsed="5.472371"/>
-</kw>
-<arg>User should be able to click Company - Company Details from left navigation</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:48:58.804650" elapsed="5.472371"/>
-</kw>
-<tag>Left Navigation</tag>
-<tag>TC030</tag>
-<status status="PASS" start="2024-04-02T14:48:58.798592" elapsed="5.478429"/>
-</test>
-<test id="s1-t31" name="TC-034 - User should be able to view company details page" line="137">
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Dealer Company Details Page" owner="Company_Details_Page_Keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${CompanyDetailsPageDelSameAsPostalCheckBox}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:49:04.277021" elapsed="0.008510"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:49:04.285531" level="INFO">Clicking element '//dpp-company-details//input[@type='checkbox']|//dpp-hk-company-details//input[@type='checkbox']'.</msg>
-<arg>${CompanyDetailsPageDelSameAsPostalCheckBox}</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-04-02T14:49:04.285531" elapsed="0.052355"/>
-</kw>
-<kw name="Capture Element Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:49:04.432364" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-51.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-element-screenshot-51.png" width="400px"&gt;&lt;/a&gt;</msg>
-<arg>${CompanyDetailsPageDelSameAsPostalCheckBox}</arg>
-<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
-<status status="PASS" start="2024-04-02T14:49:04.337886" elapsed="0.094478"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:49:06.432676" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:49:04.432364" elapsed="2.000312"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:49:04.277021" elapsed="2.155655"/>
-</kw>
-<arg>User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Dealer Company Details Page</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:49:04.277021" elapsed="2.155655"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="User should be able to view company details in HK Company Details Page" owner="Company_Details_Page_Keywords">
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${CompanyDetailsPagePanelContainer}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:49:06.432676" elapsed="0.009521"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>${CompanyDetailsPagePanelHeader}</arg>
-<arg>10</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-04-02T14:49:06.442197" elapsed="0.015634"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-04-02T14:49:06.559307" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-19.png"&gt;&lt;img src="../../Screenshots/S2/HK_04-02-24%2014-46/selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-04-02T14:49:06.457831" elapsed="0.101476"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:49:08.559804" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:49:06.559307" elapsed="2.000497"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:49:06.432676" elapsed="2.127128"/>
-</kw>
-<arg>User should be able to view company details in HK Company Details Page</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:49:06.432676" elapsed="2.127128"/>
-</kw>
-<kw name="Run Keyword And Continue On Failure" owner="BuiltIn">
-<kw name="TC Move to Top" owner="Home_Page_Keywords">
-<kw name="Scroll Element Into View" owner="SeleniumLibrary">
-<arg>${HomepageMyAccountLabel}</arg>
-<doc>Scrolls the element identified by ``locator`` into view.</doc>
-<status status="PASS" start="2024-04-02T14:49:08.559804" elapsed="0.271228"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-04-02T14:49:11.831541" level="INFO">Slept 3 seconds.</msg>
-<arg>3</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-04-02T14:49:08.831032" elapsed="3.000509"/>
-</kw>
-<status status="PASS" start="2024-04-02T14:49:08.559804" elapsed="3.271737"/>
-</kw>
-<arg>TC Move to Top</arg>
-<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
-<status status="PASS" start="2024-04-02T14:49:08.559804" elapsed="3.271737"/>
-</kw>
-<tag>Company Details</tag>
-<tag>TC047</tag>
-<status status="PASS" start="2024-04-02T14:49:04.277021" elapsed="7.554520"/>
+<status status="PASS" start="2024-04-12T08:37:15.523804" elapsed="1.520990"/>
 </test>
 <doc>Suite description</doc>
-<status status="FAIL" start="2024-04-02T14:46:35.392540" elapsed="156.440525"/>
+<status status="PASS" start="2024-04-12T08:36:20.450519" elapsed="56.598375"/>
 </suite>
 <statistics>
 <total>
-<stat pass="28" fail="3" skip="0">All Tests</stat>
+<stat pass="11" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">Company Details</stat>
-<stat pass="10" fail="0" skip="0">Left Navigation</stat>
+<stat pass="2" fail="0" skip="0">Left Navigation</stat>
 <stat pass="1" fail="0" skip="0">Login Button</stat>
-<stat pass="1" fail="0" skip="0">Message Page</stat>
-<stat pass="1" fail="0" skip="0">New RegReq Page</stat>
-<stat pass="1" fail="2" skip="0">Order Page</stat>
-<stat pass="2" fail="0" skip="0">Profile</stat>
-<stat pass="1" fail="1" skip="0">Return Page</stat>
+<stat pass="2" fail="0" skip="0">Login Page</stat>
+<stat pass="1" fail="0" skip="0">Profile</stat>
 <stat pass="1" fail="0" skip="0">Sleep</stat>
 <stat pass="1" fail="0" skip="0">TC006</stat>
 <stat pass="1" fail="0" skip="0">TC007</stat>
 <stat pass="1" fail="0" skip="0">TC008</stat>
-<stat pass="1" fail="0" skip="0">TC014</stat>
-<stat pass="1" fail="0" skip="0">TC015</stat>
-<stat pass="1" fail="0" skip="0">TC016</stat>
-<stat pass="1" fail="0" skip="0">TC017</stat>
-<stat pass="1" fail="0" skip="0">TC019</stat>
-<stat pass="1" fail="0" skip="0">TC020</stat>
-<stat pass="1" fail="0" skip="0">TC021</stat>
-<stat pass="1" fail="0" skip="0">TC022</stat>
-<stat pass="1" fail="0" skip="0">TC024</stat>
-<stat pass="1" fail="0" skip="0">TC025</stat>
 <stat pass="1" fail="0" skip="0">TC026</stat>
 <stat pass="1" fail="0" skip="0">TC027</stat>
-<stat pass="1" fail="0" skip="0">TC028</stat>
-<stat pass="1" fail="0" skip="0">TC029</stat>
-<stat pass="1" fail="0" skip="0">TC030</stat>
-<stat pass="0" fail="1" skip="0">TC033</stat>
-<stat pass="1" fail="0" skip="0">TC034</stat>
-<stat pass="0" fail="1" skip="0">TC035</stat>
-<stat pass="1" fail="0" skip="0">TC037</stat>
-<stat pass="0" fail="1" skip="0">TC038</stat>
-<stat pass="1" fail="0" skip="0">TC043</stat>
-<stat pass="1" fail="0" skip="0">TC044</stat>
 <stat pass="1" fail="0" skip="0">TC045</stat>
-<stat pass="1" fail="0" skip="0">TC046</stat>
-<stat pass="1" fail="0" skip="0">TC047</stat>
 <stat pass="1" fail="0" skip="0">TC Sleep</stat>
-<stat pass="5" fail="0" skip="0">Top Navigation</stat>
 <stat pass="2" fail="0" skip="0">Valid Account</stat>
 </tag>
 <suite>
-<stat pass="28" fail="3" skip="0" id="s1" name="HK Dealer Check">HK Dealer Check</stat>
+<stat pass="11" fail="0" skip="0" id="s1" name="HK Regression Dealer">HK Regression Dealer</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2024-04-02T14:46:35.737553" level="WARN">Imported resource file 'C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testdata\config.robot' is empty.</msg>
+<msg time="2024-04-12T08:36:20.810758" level="WARN">Imported resource file 'C:\Users\Danielouie.Estopace\PycharmProjects\pythonProject2\Resource\testdata\config.robot' is empty.</msg>
 </errors>
 </robot>
