@@ -193,8 +193,21 @@ User should be able to click Back to Retrun Request on message pop thank you in 
 
 #-----------------------------------------------------Dealer New Reg Req Page-------------------------------------------
 User should be able to view New Reg Req Panel
-User should be able to select one account number from history
 User should be able to view New Buyer Details Page
+User should be able to Check/Uncheck Status
+User should be able to Click No Check/Uncheck Status
+User should be able to Click Yes Check/Uncheck Status
+User should be able to view Header List in Dealer HK Buyer Relationship Page
+User should be albe to view one Entry in Dealer HK Buyer Relationship Page
+User should be able to click edit one Entry in Dealer HK Buyer Relationship Page
+User should be able to edit Parts Club in Dealer HK Buyer Relationship Page
+User should be able to edit ADP in Dealer HK Buyer Relationship Page
+User should be able to edit Member Teir in Dealer HK Buyer Relationship Page
+User should be able to check/uncheck active status in Dealer HK Buyer Relationship Page
+User should be able to click cancel button in Dealer HK Buyer Relationship Page
+User should be able to click update button in Dealer HK Buyer Relationship Page
+User should be able to click Yes in Dealer HK Buyer Relationship Page
+User should be able to click No in Dealer HK Buyer Relationship Page
 
 #-----------------------------------------------------Dealer New Reg Req Page Filter By Status
 User should be able to click Filter by Status in Dealer New Registration Request

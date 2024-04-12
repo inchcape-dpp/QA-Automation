@@ -6,14 +6,14 @@ Library    Process
 #Library    FakerLibrary
 
 
-Resource    ../../../../../Resource/testdata/Dealer/HK_Config/S2/HK_S2_Config.robot
-Resource    ../../../../../Resource/testdata/Dealer/Dealer_Variable.robot
-Resource    ../../../../../Resource/testdata/Dealer/Dealer_Resource.robot
+Resource  ../../../../../Resource/testdata/Dealer/HK_Config/S2/HK_S2_Config.robot
+Resource  ../../../../../Resource/testdata/Dealer/Dealer_Variable.robot
+Resource  ../../../../../Resource/testdata/Dealer/Dealer_Resource.robot
 
 
 *** Test Cases ***
-Test Setup    Run Keywords    Open Chrome Browser
-Screen Shot DIR    Run Keywords    Dealer Screent Shot DIR
+Test Setup  Run Keywords   Open Chrome Browser
+Screen Shot DIR  Run Keywords    Dealer Screent Shot DIR
 
 TC Sleep
     [Tags]    Sleep    TC Sleep
@@ -139,7 +139,6 @@ TC-034 - User should be able to view company details page
     run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Dealer Company Details Page
     run keyword and continue on failure    User should be able to view company details in HK Company Details Page
     run keyword and continue on failure    TC Move to Top
-
 
 
 

@@ -158,7 +158,7 @@ ${user2_s2_dealer_PWD}    AUPass@12345
 
                                                                             #------------------------HK ADMIN1----------
 ${admin1_s2_HKdealer_UID}    hk.seller1.admin@test.com
-${admin1_s2_HKdealer_PWD}    HKPass@12345
+${admin1_s2_HKdealer_PWD}    HKs2@12345
 
 
                                                                      #------------------------P1------------------------
@@ -262,6 +262,9 @@ ${HK_S2_Automation_GoldPlus_PWD}    HK_Auto@12345!
 
 ${HK_P1_Automation_Bronze_UID}    hk_automation1retailp1_bronze@yopmail.com
 ${HK_P1_Automation_Bronze_PWD}    HK_Auto@12345!
+
+${HK_P1_Automation_Silver_UID}    hk_automation1retailp1_silver@yopmail.com
+${HK_P1_Automation_Silver_UID}    HK_Auto@12345!
 
 ${HK_P1_Automation_Gold_UID}    hk_automation1retailp1_gold@yopmail.com
 ${HK_P1_Automation_Gold_PWD}    HK_Auto@12345!

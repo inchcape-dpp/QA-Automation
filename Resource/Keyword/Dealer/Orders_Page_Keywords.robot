@@ -153,7 +153,7 @@ User should be able to view order details
 
     sleep     3
 
-User should be able to view order details HK
+User should be able to view order details in HK Order Details Page
     click element    ${OrderPageDetailsReferenceNumber}
     wait until element is visible    ${OrderDetailsOrderHeader}    20
     wait until element is visible    ${OrderDetailsOrderStatus}    10
