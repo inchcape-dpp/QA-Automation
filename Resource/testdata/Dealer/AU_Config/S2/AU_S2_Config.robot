@@ -33,6 +33,9 @@ ${YopMailEmail}    ${admin1_s2_dealer_UID}
 
 ${ProfileChangePassCurrentPassValue}    ${Password}
 
+${ProfileAccountsDetailsPhoneValue}    0412333444
+${ProfileAccountsDetailsLandlineValue}    0421333444
+
 *** Keywords ***
 Open Chrome Browser
     SeleniumLibrary.Open Browser    ${s2Dealer}    Chrome  executable_path=${driver_path}

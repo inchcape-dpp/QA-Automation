@@ -91,6 +91,9 @@ ${OrderPageStatusFilterSubmitted}    //div[@class='ng-dropdown-panel-items scrol
 ${OrderPageStatusFilterDispatched}    (//div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Dispatched')])[1]
 ${OrderPageStatusFilterPartiallyDispatched}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Partially Dispatched')]
 ${OrderPageStatusFilterOrderwithReturns}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Order with Returns')]
+${OrderPageStatusFilterDelivered}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Delivered')]
+${OrderPageStatusFilterProcessing}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'Processing')]
+
 
 ${OrderPageDateFilter}    //div[@id='dateRangePicker']
 ${OrderPageDateFilterContainer}    //ngb-datepicker[@class='dropdown-menu show']
@@ -138,24 +141,33 @@ ${OrderPageDetailsReturnLabel}    //th[@class='return-icon']
 ${OrderPageHistory1}    (//tr//td[@class='cx-order-history-code']//a[@class='cx-order-history-value'])[1]|(//tr//td[@class='cx-order-history-code'])[1]    #${variable 1-15}
 
 #-----------------------------------------------------Dealer Order Page Received
-${OrderPageReceivedContainer}    (//tr[.//td[@class='cx-order-history-total' and contains(text(),'Received')]])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Received')]])[1]
-${OrderPageReceivedPartRef}    (//tr[.//td[@class='cx-order-history-total' and contains(text(),'Received')]]//td[@class='cx-order-history-code'])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Received')]]//td[@class='cx-order-history-code'])[1]
+${OrderPageReceivedContainer}    (//tr[.//td[@class='cx-order-history-status']//div[contains(text(),'Received')]])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Received')]])[1]
+${OrderPageReceivedPartRef}    (//tr[.//td[@class='cx-order-history-status']//div[contains(text(),'Received')]]//td[@class='cx-order-history-code'])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Received')]]//td[@class='cx-order-history-code'])[1]
 
 #-----------------------------------------------------Dealer Order Page Submitted
-${OrderPageSubmittedContainer}    (//tr[.//td[@class='cx-order-history-total' and contains(text(),'Submitted')]])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Submitted')]])[1]
-${OrderPageSubmittedPartRef}    (//tr[.//td[@class='cx-order-history-total' and contains(text(),'Submitted')]]//td[@class='cx-order-history-code'])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Submitted')]]//td[@class='cx-order-history-code'])[1]
+${OrderPageSubmittedContainer}    (//tr[.//td[@class='cx-order-history-status']//div[contains(text(),'Submitted')]])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Submitted')]])[1]
+${OrderPageSubmittedPartRef}    (//tr[.//td[@class='cx-order-history-status']//div[contains(text(),'Submitted')]]//td[@class='cx-order-history-code'])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Submitted')]]//td[@class='cx-order-history-code'])[1]
 
 #-----------------------------------------------------Dealer Order Page Dispatched
-${OrderPageDispatchedContainer}    (//tr[.//td[@class='cx-order-history-total' and starts-with(text(),' Dispatched ')]])[1]|(//tr[.//td[@class='cx-order-history-status' and starts-with(text(),' Dispatched ')]])[1]
-${OrderPageDispatchedPartRef}    (//tr[.//td[@class='cx-order-history-total' and starts-with(text(),' Dispatched ')]]//td[@class='cx-order-history-code'])[1]|(//tr[.//td[@class='cx-order-history-status' and starts-with(text(),' Dispatched ')]]//td[@class='cx-order-history-code'])[1]
+${OrderPageDispatchedContainer}    (//tr[.//td[@class='cx-order-history-status']//div[contains(text(),'Dispatched')]])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Dispatched')]])[1]
+${OrderPageDispatchedPartRef}    (//tr[.//td[@class='cx-order-history-status']//div[contains(text(),'Dispatched')]]//td[@class='cx-order-history-code'])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Dispatched')]]//td[@class='cx-order-history-code'])[1]
 
 #-----------------------------------------------------Dealer Order Page Partially Dispatched
-${OrderPagePartiallyDispatchedContainer}    (//tr[.//td[@class='cx-order-history-total' and starts-with(text(),' Partially Dispatched ')]])[1]|(//tr[.//td[@class='cx-order-history-status' and starts-with(text(),' Partially Dispatched ')]])[1]
-${OrderPagePartiallyDispatchedPartRef}    (//tr[.//td[@class='cx-order-history-total' and starts-with(text(),' Partially Dispatched ')]]//td[@class='cx-order-history-code'])[1]|(//tr[.//td[@class='cx-order-history-status' and starts-with(text(),' Partially Dispatched ')]]//td[@class='cx-order-history-code'])[1]
+${OrderPagePartiallyDispatchedContainer}    (//tr[.//td[@class='cx-order-history-status']//div[contains(text(),'Partially Dispatched')]])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Partially Dispatched')]])[1]
+${OrderPagePartiallyDispatchedPartRef}    (//tr[.//td[@class='cx-order-history-status']//div[contains(text(),'Partially Dispatched')]]//td[@class='cx-order-history-code'])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Partially Dispatched')]]//td[@class='cx-order-history-code'])[1]
 
 #-----------------------------------------------------Dealer Order Page Orders with Returns
 ${OrderPageOrderwithReturnContainer}    (//tr[.//td[@class='cx-order-history-total']][.//cx-icon[@class='cx-icon dpp-icons__returns-request']])[1]|(//tr[.//td[@class='cx-order-history-status']][.//cx-icon[@class='cx-icon dpp-icons__returns-request']])[1]
 ${OrderPageOrderwithReturnPartRef}    (//tr[.//td[@class='cx-order-history-total']][.//cx-icon[@class='cx-icon dpp-icons__returns-request']]//td[@class='cx-order-history-code'])[1]|(//tr[.//td[@class='cx-order-history-status']][.//cx-icon[@class='cx-icon dpp-icons__returns-request']]//td[@class='cx-order-history-code'])[1]
+
+#-----------------------------------------------------Dealer Order Page Processing
+${OrderPageProcessingContainer}    (//tr[.//td[@class='cx-order-history-status']//div[contains(text(),'Processing')]])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Processing')]])[1]
+${OrderPageProcessingPartRef}    (//tr[.//td[@class='cx-order-history-status']//div[contains(text(),'Processing')]]//td[@class='cx-order-history-code'])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Processing')]]//td[@class='cx-order-history-code'])[1]
+
+#-----------------------------------------------------Dealer Order Page Delivered
+${OrderPageDeliveredContainer}    (//tr[.//td[@class='cx-order-history-status']//div[contains(text(),'Delivered')]])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Delivered')]])[1]
+${OrderPageDeliveredPartRef}    (//tr[.//td[@class='cx-order-history-status']//div[contains(text(),'Delivered')]]//td[@class='cx-order-history-code'])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Delivered')]]//td[@class='cx-order-history-code'])[1]
+
 
 
 ${OrderPageDetailsPreviousPageButton}    //a[@aria-label='previous page']
@@ -214,7 +226,7 @@ ${OrderDetailsReturnContainer}    //div[@class='order-details-items-table return
 ${OrderDetailsReturnHeader}    //div[@class='row header return-request-header']
 ${OrderDetailsReturnDescription}    //span[@class='order-table-heading' and (contains(text(),'Description'))]
 ${OrderDetailsReturnPrice}    (//span[@class='order-table-heading' and (contains(text(),'Price'))])[1]
-${OrderDetailsReturnRRP}    //span[@class='order-table-heading' and (contains(text(),'RRP'))]
+${OrderDetailsReturnRRP}    //span[@class='order-table-heading' and ((contains(text(),'RRP')) or contains(text(),'Retail Price'))]
 ${OrderDetailsReturnOrder}    //span[@class='order-table-heading' and (contains(text(),'Order'))]
 ${OrderDetailsReturnShipped}    //span[@class='order-table-heading' and (contains(text(),'Shipped'))]
 ${OrderDetailsReturnPending}    //span[@class='order-table-heading' and (contains(text(),'Pending'))]
@@ -238,7 +250,7 @@ ${ReturnPageTotalReturnRequests}    //h3[@class='return-requests-heading']//span
 ${ReturnPageFilterRow}    //dpp-return-request-list//div[@class='row']
 
 ${ReturnPageStatusFilter}    //div[@class='col-11 col-md-3 pr-lg-0 pr-1 pr-md-1 pl-0 pl-md-3' or @class='col-10 col-sm-10 col-md-3 pr-lg-0 pr-0 pr-md-1 pl-0 pl-md-3']//div[@class='ng-select-container ng-has-value']
-${RetrunPageStatusFilterALL}    //div[@class='col-11 col-md-3 pr-lg-0 pr-1 pr-md-1 pl-0 pl-md-3' or @class='col-10 col-sm-10 col-md-3 pr-lg-0 pr-0 pr-md-1 pl-0 pl-md-3']//div[@role='option']//span[contains(text(),'All')]
+${RetrunPageStatusFilterALL}    //div[@class='col-11 col-md-3 pr-lg-0 pr-1 pr-md-1 pl-0 pl-md-3' or @class='col-10 col-sm-10 col-md-3 pr-lg-0 pr-0 pr-md-1 pl-0 pl-md-3']//div[@role='option']//span[contains(text(),'ALL') or contains(text(),'All')]
 ${RetrunPageStatusFilterAccepted}    //div[@class='col-11 col-md-3 pr-lg-0 pr-1 pr-md-1 pl-0 pl-md-3' or @class='col-10 col-sm-10 col-md-3 pr-lg-0 pr-0 pr-md-1 pl-0 pl-md-3']//div[@role='option']//span[contains(text(),'Accepted')]
 ${RetrunPageStatusFilterDeclined}    //div[@class='col-11 col-md-3 pr-lg-0 pr-1 pr-md-1 pl-0 pl-md-3' or @class='col-10 col-sm-10 col-md-3 pr-lg-0 pr-0 pr-md-1 pl-0 pl-md-3']//div[@role='option']//span[contains(text(),'Declined')]
 ${RetrunPageStatusFilterInProgress}    //div[@class='col-11 col-md-3 pr-lg-0 pr-1 pr-md-1 pl-0 pl-md-3' or @class='col-10 col-sm-10 col-md-3 pr-lg-0 pr-0 pr-md-1 pl-0 pl-md-3']//div[@role='option']//span[contains(text(),'In Progress')]
@@ -333,10 +345,10 @@ ${ReturnPageOrderReturnDataSectionContainer}    //div[@class='cancel-order-conta
 ${ReturnPageOrderReturnDataSectionReasonLabel}    //div[@class='form-group']//span[@class='label-content']
 ${ReturnPageOrderReturnDataSectionReasonSelection}    //div[@class='ng-select-container ng-has-value']
 ${ReturnPageOrderReturnDataSectionQtyLabel}    //div[@class='form-group']//span[@class='label-content qty-return']
-${ReturnPageOrderReturnDataSectionQtyValue}    //div[@class='col-3 pl-0']//input
-${ReturnPageOrderReturnDataSectionNoteLabel}    //div[@class='form-group col-12']//span[@class='label-content']
-${ReturnPageOrderReturnDataSectionNoteTextField}    //div[@class='form-group col-12']//textarea
-${ReturnPageOrderReturnDataSectionImageLabel}    //div[@class='form-group pl-0 col-12']//label
+${ReturnPageOrderReturnDataSectionQtyValue}    //div[@class='col-md-3']//input
+${ReturnPageOrderReturnDataSectionNoteLabel}    //div[@class='col-md-6 pr-sm-0']//span[@class='label-content']
+${ReturnPageOrderReturnDataSectionNoteTextField}    //div[@class='col-md-6 pr-sm-0']//textarea
+${ReturnPageOrderReturnDataSectionImageLabel}    //div[@class='col-md-6']//label
 ${ReturnPageOrderReturnDataSectionImageField}    //div[@class='d-flex image-section']
 
 ${ReturnPageOrderReturnApproveRejectContainer}     //div[@class='approve-reject-contanier']
@@ -696,14 +708,13 @@ ${ProfileAccountsDetailsUpdateButton}    //dpp-account-details[@class='user-form
 ${ProfileAccountsDetailsPhoneError}    //div[@class='form-errors']//p[contains(text(),'Enter a valid Phone Number')]
 ${ProfileAccountsDetailsLandlineError}    //div[@class='form-errors']//p[contains(text(),'Landline Number must begin with a 0 followed by 9 digits')]
 
-${ProfileAccountsDetailsConfirmationContainer}    //div[@class='cx-dialog-body modal-body pt-5']
-${ProfileAccountsDetailsConfirmationYesButton}    //button[@class='btn btn-block btn-secondary backToHomepage-button']
-${ProfileAccountsDetailsConfirmationNoButton}    //div[@class='col-sm-12 cta py-2']//button[@class='btn btn-block btn-outline-secondary']
+${ProfileAccountsDetailsConfirmationContainer}    //div[@class='cx-dialog-body modal-body']
+${ProfileAccountsDetailsConfirmationYesButton}    //button[@class='btn btn-secondary btn-block']
+${ProfileAccountsDetailsConfirmationNoButton}    //div[@class='cx-dialog-body modal-body']//button[@class='btn btn-block btn-outline-secondary']
 
 ${ProfileAccountsDetailsFirstNameValue}    Test FN
 ${ProfileAccountsDetailsLastNameValue}    Test LN
-${ProfileAccountsDetailsPhoneValue}    0412333444
-${ProfileAccountsDetailsLandlineValue}    0421333444
+
 
 ${ProfileAccountsDetailsPhoneInvalidValue}    0412333aaa
 ${ProfileAccountsDetailsLandlineInvalidValue}    0421333aaa

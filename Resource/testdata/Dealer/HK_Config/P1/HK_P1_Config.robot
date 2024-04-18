@@ -34,6 +34,9 @@ ${YopMailEmail}    ${admin2_p1_HKdealer_UID}
 
 ${ProfileChangePassCurrentPassValue}    ${Password}
 
+${ProfileAccountsDetailsPhoneValue}    85296374
+${ProfileAccountsDetailsLandlineValue}    14725836
+
 *** Keywords ***
 Open Chrome Browser
     SeleniumLibrary.Open Browser    ${p1HKDealer}    Chrome  executable_path=${driver_path}

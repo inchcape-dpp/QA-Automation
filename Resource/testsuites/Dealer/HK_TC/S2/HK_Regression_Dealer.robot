@@ -79,25 +79,25 @@ TC-014 - User should be able to click Login Button
     run keyword and continue on failure    User should be able to click Login Button
     run keyword and continue on failure    TC Sleep
 
-#TC-015 - User should be able to view top navigation
-#    [Tags]    TC014    Top Navigation
-#    run keyword and continue on failure    User should be able to view top navigation in HK Dealer Home Page
-#
-#TC-016 - User should be able to click account from top navigation
-#    [Tags]    TC015    Top Navigation
-#    run keyword and continue on failure    User should be able to click account from top navigation
-#
-#TC-017 - User should be able to click orders from top navigation
-#    [Tags]    TC016    Top Navigation
-#    run keyword and continue on failure    User should be able to click orders from top navigation
-#
-#TC-018 - User should be able to click return from top navigation
-#    [Tags]    TC017    Top Navigation
-#    run keyword and continue on failure    User should be able to click return from top navigation
-#
-#TC-019 - User should be able to click messages from top navigation
-#    [Tags]    TC019    Top Navigation
-#    run keyword and continue on failure    User should be able to click messages from top navigation
+TC-015 - User should be able to view top navigation
+    [Tags]    TC014    Top Navigation
+    run keyword and continue on failure    User should be able to view top navigation in HK Dealer Home Page
+
+TC-016 - User should be able to click account from top navigation
+    [Tags]    TC015    Top Navigation
+    run keyword and continue on failure    User should be able to click account from top navigation
+
+TC-017 - User should be able to click orders from top navigation
+    [Tags]    TC016    Top Navigation
+    run keyword and continue on failure    User should be able to click orders from top navigation
+
+TC-018 - User should be able to click return from top navigation
+    [Tags]    TC017    Top Navigation
+    run keyword and continue on failure    User should be able to click return from top navigation
+
+TC-019 - User should be able to click messages from top navigation
+    [Tags]    TC019    Top Navigation
+    run keyword and continue on failure    User should be able to click messages from top navigation
 
 #TC-020 - User should be able to click orders from left navigation
 #    [Tags]    Home Page    Left Navigation
@@ -470,7 +470,7 @@ TC-014 - User should be able to click Login Button
 #    run keyword and continue on failure    User should be able to check/uncheck active status in Dealer HK Buyer Relationship Page
 #    run keyword and continue on failure    User should be able to click update button in Dealer HK Buyer Relationship Page
 #    run keyword and continue on failure    User should be able to click Yes in Dealer HK Buyer Relationship Page
-
+#
 #TC-097 - User should be able to view message page
 #    [Tags]    Home Page    Message
 #    run keyword and continue on failure    User should be able to click Messages from left navigation
@@ -670,7 +670,15 @@ TC-029 - User should be able to view account details page
     [Tags]    TC045    Profile
     run keyword and continue on failure    User should be able to view account details page
 
-
+TC-029 - User should be able to edit account details page
+    [Tags]    TC045    Profile
+    run keyword and continue on failure    User should be able to edit First name in Dealer Account Details Page
+    run keyword and continue on failure    User should be able to edit Last name in Dealer Account Details Page
+    run keyword and continue on failure    User should be able to edit Phone Number in Dealer Account Details Page
+    run keyword and continue on failure    User should be able to edit Landline Number in Dealer Account Details Page
+    run keyword and continue on failure    User should be able to click Update in Dealer Account Details Page
+    run keyword and continue on failure    User should be able to view update confirmation modal in Dealer Account Details Page
+    run keyword and continue on failure    User should be able to click No on update confirmation modal in Dealer Account Details Page
 
 
 

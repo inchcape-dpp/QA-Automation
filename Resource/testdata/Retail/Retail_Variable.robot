@@ -1270,7 +1270,7 @@ ${HK_Retail_AccountOrderDetailsRe-orderButton}    //button[@class='btn btn-secon
 
 #-----------------------------------------------------Retail Account Retrun Page----------------------------------------
 ${Retail_AccountReturnPagePanelContainer}    //cx-page-slot[@position='BodyContent']
-${AccountReturnPageReturnHeader}    //h3[@class='return-requests-heading']
+${AccountReturnPageReturnHeader}    //h3[@class='return-requests-heading' and contains(text(),'Return Requests') or contains(text(),'退貨請求')]
 ${AccountReturnPageTotalReturnRequests}    //h3[@class='return-requests-heading']//span
 
 ${Retail_AccountReturnPageFilterRow}    //dpp-return-request-list//div[@class='row']
@@ -1419,7 +1419,7 @@ ${Retail_AccountReturnPageOrderReturnDetailsMessagePopUpUpMessabeValue}    Hello
 
 #-----------------------------------------------------Retail Account Saved Carts Page-----------------------------------
 ${Retail_AccountSavedCartsPagePanelContainer}    //dpp-saved-cart-history
-${Retail_AccountSavedCartsPagePanelHeader}    //dpp-saved-cart-history//h3
+${Retail_AccountSavedCartsPagePanelHeader}    //dpp-saved-cart-history//h3[contains(text(),'Saved Carts') or contains(text(),'已儲存貨品')]
 
 ${Retail_AccountSavedCartsPageCartNameLabel}    //table[@class='table cx-saved-cart-list-table']//th[@class='cart-name pl-3 py-2']|//thead[@class='cx-saved-cart-list-thead-mobile']//th[@class='cart-name px-4 py-2']
 ${Retail_AccountSavedCartsPageRegoLabel}    //table[@class='table cx-saved-cart-list-table']//th[@class='pl-4' and contains(text(),'Rego')]|//thead[@class='cx-saved-cart-list-thead-mobile']//th[@class='pl-4' and contains(text(),'Rego')]
@@ -1622,6 +1622,7 @@ ${Retail_AccountVehicleListingPageVehicleCardListDeletePopUpNoButton}    //div[@
 
 
 ${Retail_HK_AccountVehicleListingPage_Container}    //dpp-hk-vehicle-listing//div[@class='container']
+${Retail_HK_AccountVehicleListingPage_Header}    //div//h3[contains(text(),'Vehicle Listing') or contains(text(),'車輛列表')]
 
 ${Retail_HK_AccountVehicleListingPage_Add New Vehicle_Button}    //dpp-hk-vehicle-listing//div[@class='header-container d-flex align-items-center justify-content-between']//button
 ${Retail_HK_AccountVehicleListingPage_VehicleCard_List}    //dpp-hk-vehicle-listing//div[@class='row px-0 px-md-2']//div[@class='col-12 col-md-6 col-lg-4 align-self-lg-center card-content selected' or @class='col-12 col-md-6 col-lg-4 align-self-lg-center card-content']
@@ -1678,7 +1679,7 @@ ${Retail_AccountVehicleListingPageSelectVehicleSearchManualDetailsIndexValue}   
 
 #-----------------------------------------------------Account Retail Message Page---------------------------------------
 ${Retail_AccountMessagePagePanelContainer}    //dpp-message-list
-${Retail_AccountMessagePagePanelHeader}    //dpp-message-list//h3
+${Retail_AccountMessagePagePanelHeader}    //dpp-message-list//h3//div[contains(text(),'Inbox') or contains(text(),'收件箱')]
 
 ${Retail_AccountMessagePageReadMessagesProdEnq}    //div[@class='row message-container']//div[@class='pl-1 pointer enquiry-col-value col-2']//span[contains(text(),'PRODUCT ENQUIRY')]
 ${Retail_AccountMessagePageReadMessagesGenEnq}    //div[@class='row message-container']//div[@class='pl-1 pointer enquiry-col-value col-2']//span[contains(text(),'GENERAL ENQUIRY')]
@@ -1833,7 +1834,7 @@ ${Retail_AccountMessageDetailsPageMessageValue}    Hello World QE Test
 
 #-----------------------------------------------------Retail Account Account Detais Page--------------------------------
 ${Retail_AccountProfileAccountsDetailsPanelContainer}    //dpp-account-details[@class='user-form']
-${Retail_AccountProfileAccountsDetailsPanelHeader}    //dpp-account-details[@class='user-form']//*[contains(text(),'Account Details')]
+${Retail_AccountProfileAccountsDetailsPanelHeader}    //dpp-account-details[@class='user-form']//h2[contains(text(),'Account Details') or contains(text(),'帳戶資料')]
 
 ${Retail_AccountProfileAccountsDetailsFirstNameLabel}    //dpp-account-details[@class='user-form']//span[@class='label-content' and contains(text(),'First Name')]
 ${Retail_AccountProfileAccountsDetailsLastNameLabel}    //dpp-account-details[@class='user-form']//span[@class='label-content' and contains(text(),'Last Name')]
@@ -1870,7 +1871,7 @@ ${Retail_AccountProfileAccountsDetailsLandlineInvalidValue}    0421333aaa
 
 #-----------------------------------------------------Retail Account Change Password Page-------------------------------
 ${Retail_AccountProfileChangePassPanelContainer}    //dpp-update-password[@class='user-form']
-${Retail_AccountProfileChangePassPanelHeader}    //dpp-update-password[@class='user-form']//h2
+${Retail_AccountProfileChangePassPanelHeader}    //dpp-update-password[@class='user-form']//h2[contains(text(),'Change Password') or contains(text(),'更改密碼')]
 
 ${Retail_AccountProfileChangePassCurrentPassLabel}    //dpp-update-password//span[contains(text(),'Current Password')]
 ${Retail_AccountProfileChangePassNewPassLabel}    //dpp-update-password//span[@class='label-content' and contains(text(),'New Password')]
@@ -1909,7 +1910,7 @@ ${Retail_AccountProfileChangePassConfirmPassInvalidValue}    Test
 
 #-----------------------------------------------------Retail Account Company Details Page-------------------------------
 ${Retail_AccountCompanyDetailsPagePanelContainer}    //dpp-company-details|//dpp-hk-company-details
-${Retail_AccountCompanyDetailsPagePanelHeader}    //dpp-company-details//h2|//dpp-hk-company-details//h2
+${Retail_AccountCompanyDetailsPagePanelHeader}    //dpp-company-details//h2|//dpp-hk-company-details//h2[contains(text(),'Company Details') or contains(text(),'公司詳情')]
 
 #-----------------------------------------------------Retail Account Company Details Page Labels
 ${Retail_AccountCompanyDetailsPagePrefSupplierLabel}    //dpp-company-details//span[@class='label-content' and contains(text(),'Preferred Supplier')]
@@ -2130,7 +2131,7 @@ ${Retail_HK_AccountStaffPage_PhoneNum_Add_Value}    12345678
 #-----------------------------------------------------Retail All Product Page-------------------------------------------
 
 ${AllProdPageLabelFilter}    //dpp-breadcrumb
-${AllProdPagePanelHeader}    //div[@class='search-result-heading']
+${AllProdPagePanelHeader}    //div[@class='search-result-heading']//strong[contains(text(),'All Products') or contains(text(),'所有產品')]
 ${AllProdPageSortProdDropdown}    (//div[@class='cx-sorting top']//div[@class='ng-select-container ng-has-value'])[2]|(//dpp-product-list//div[@class='form-group sort-filter-wrapper row m-0']//ng-select//div)[1]|(//div[@class='ng-select-container ng-has-value'])[2]
 ${AllProdPageSortProdDropdownRelevance}    //div[@role='option']//span[contains(text(),'Relevance')]
 ${AllProdPageSortProdDropdownAtoZ}    //div[@role='option']//span[contains(text(),'Name A to Z') or contains(text(),'Name (ascending)')]
