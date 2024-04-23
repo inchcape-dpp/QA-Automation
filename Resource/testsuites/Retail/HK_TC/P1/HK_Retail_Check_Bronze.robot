@@ -198,6 +198,7 @@ TC-053 - User should be able to Search Vehicle in the home page
     run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    reload page
 
 TC-053 - User should be able to Go to Home Page in HK Retail
     [Tags]    Home Page
@@ -216,6 +217,7 @@ TC-053 - User should be able to search by VIN1 to HK Retail Home Page
     run keyword and continue on failure    User should be able to view All Parts Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    reload page
 
 TC-053 - User should be able to search by VIN2 to HK Retail Home Page
     [Tags]    Home Page
@@ -229,6 +231,7 @@ TC-053 - User should be able to search by VIN2 to HK Retail Home Page
     run keyword and continue on failure    User should be able to view All Parts Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    reload page
 
 TC-053 - User should be able to search by VIN3 to HK Retail Home Page
     [Tags]    Home Page
@@ -242,6 +245,7 @@ TC-053 - User should be able to search by VIN3 to HK Retail Home Page
     run keyword and continue on failure    User should be able to view All Parts Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    reload page
 
 TC-053 - User should be able to search by VIN4 to HK Retail Home Page
     [Tags]    Home Page
@@ -255,6 +259,7 @@ TC-053 - User should be able to search by VIN4 to HK Retail Home Page
     run keyword and continue on failure    User should be able to view All Parts Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    reload page
 
 TC-053 - User should be able to search by VIN5 to HK Retail Home Page
     [Tags]    Home Page
@@ -268,6 +273,7 @@ TC-053 - User should be able to search by VIN5 to HK Retail Home Page
     run keyword and continue on failure    User should be able to view All Parts Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    reload page
 
 
 

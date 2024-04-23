@@ -12,8 +12,8 @@ Resource  ../../../../../Resource/testdata/Dealer/Dealer_Resource.robot
 
 
 *** Test Cases ***
-Test Setup  Run Keywords   Open Chrome Browser HK
-Screen Shot DIR  Run Keywords    Dealer Screent Shot DIR HK
+Test Setup  Run Keywords   Open Chrome Browser
+Screen Shot DIR  Run Keywords    Dealer Screent Shot DIR
 
 TC Sleep
     [Tags]    Sleep    TC Sleep
@@ -448,27 +448,237 @@ TC-019 - User should be able to click messages from top navigation
 #    run keyword and continue on failure    User should be able to click send on message pop in Dealer Return Details Page
 #    run keyword and continue on failure    User should be able to click Back to Retrun Request on message pop thank you in Dealer Return Details Page
 #    run keyword and continue on failure    User should be able to click Back to Return Request in Dealer Return Details Page
+#
+#TC-097 - User should be able to view Buyer Rel Page
+#    [Tags]    Home Page    Cust Rel
+#    run keyword and continue on failure    User should be able to click and expand Customer Management
+#    run keyword and continue on failure    User should be able to click Customer Manegement - Buyer Rel from left navigation
+#    run keyword and continue on failure    User should be able to view Buyer Rel Page
+#
+#TC-097 - User should be albe to view one Entry in Dealer HK Buyer Relationship Page
+#    [Tags]    Home Page    Cust Rel
+#    run keyword and continue on failure    User should be able to view Header List in Dealer HK Buyer Relationship Page
+#    run keyword and continue on failure    User should be albe to view one Entry in Dealer HK Buyer Relationship Page
+#
+#TC-097 - User should be able to click edit one Entry in Dealer HK Buyer Relationship Page
+#    [Tags]    Home Page    Cust Rel
+#    run keyword and continue on failure    User should be able to click edit one Entry in Dealer HK Buyer Relationship Page
+#    run keyword and continue on failure    User should be able to edit Parts Club in Dealer HK Buyer Relationship Page
+#    run keyword and continue on failure    User should be able to edit ADP in Dealer HK Buyer Relationship Page
+#    run keyword and continue on failure    User should be able to edit Member Teir in Dealer HK Buyer Relationship Page
+#    run keyword and continue on failure    User should be able to check/uncheck active status in Dealer HK Buyer Relationship Page
+#    run keyword and continue on failure    User should be able to check/uncheck active status in Dealer HK Buyer Relationship Page
+#    run keyword and continue on failure    User should be able to click update button in Dealer HK Buyer Relationship Page
+#    run keyword and continue on failure    User should be able to click Yes in Dealer HK Buyer Relationship Page
+#
+#TC-097 - User should be able to view message page
+#    [Tags]    Home Page    Message
+#    run keyword and continue on failure    User should be able to click Messages from left navigation
+#    run keyword and continue on failure    User should be able to view message page
+#
+#TC-101 - User should be able to select General Enquiry filter in Dealer Messages Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to select General Enquiry filter in Dealer Messages Page
+#
+#TC-102 - User should be able to select Return Enquiry filter in Dealer Messages Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to select Return Enquiry filter in Dealer Messages Page
+#
+#TC-103 - User should be able to select Order Enquiry filter in Dealer Messages Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to select Order Enquiry filter in Dealer Messages Page
+#
+#TC-104 - User should be able to select Product Enquiry filter in Dealer Messages Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to select Product Enquiry filter in Dealer Messages Page
+#
+#TC-105 - User should be able to select All filter in Dealer Messages Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to select All filter in Dealer Messages Page
+#
+#TC-106 - User should be able to view Date Filter Elements in Dealer Messages Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to click Date Filter in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to view Date Filter Elements in Dealer Messages Page
+#
+#TC-107 - User should be able to click Previous Month Button in Dealer Messages Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to click Previous Month Button in Dealer Messages Page
+#
+#TC-108 - User should be able to click Previous Month Button in Dealer Messages Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to click Next Month Button in Dealer Messages Page
+#
+#TC-109 - User should be able to select month from drop down in Dealer Messages Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to click Month Drop Down Filter in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to select month from drop down in Dealer Messages Page
+#
+#TC-110 - User should be able to select year from drop down in Dealer Messages Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to click Year Drop Down Filter in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to select year from drop down in Dealer Messages Page
+#
+#TC-111 - User should be able to select From Date in Dealer Messages Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to select From Date in Dealer Messages Page
+#
+#TC-112 - User should be able to select To Date in Dealer Messages Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to select To Date in Dealer Messages Page
+#
+#TC-113 - User should be able to click Date Filter Submit Button in Dealer Messages Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to click Date Filter Submit Button in Dealer Messages Page
+#
+#TC-114 - User should be able to click Date Filter Clear Button in Dealer Messages Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to click Date Filter in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to click Date Filter Clear Button in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to click Search Box in Dealer Messages Page
+#
+#TC-115 - User should be able to click Search Box in Dealer Messages Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to click Search Box in Dealer Messages Page
+#
+#TC-116 - User should be able to Input Text in Search Box in Dealer Messages Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to Input Text in Search Box in Dealer Messages Page
+#
+#TC-117 - User should be able to click clear button from Search Box in Dealer Messages Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to click clear button from Search Box in Dealer Messages Page
+#
+#TC-118 - User should be able to click and send message on read General Enquiry in Dealer Message Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to select General Enquiry filter in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to view read General Enquiry in Dealer Message Page
+#    run keyword and continue on failure    User should be able to click read General Enquiry in Dealer Message Page
+#    run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click cancel in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to upload image in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click send in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click Back to All Message in Dealer Messages Details Page
+#
+#TC-119 - User should be able to click and send message on read Order Enquiry in Dealer Message Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to select Order Enquiry filter in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to view read Order Enquiry in Dealer Message Page
+#    run keyword and continue on failure    User should be able to click read Order Enquiry in Dealer Message Page
+#    run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click cancel in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to upload image in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click send in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click Back to All Message in Dealer Messages Details Page
+#
+#TC-120 - User should be able to click and send message on read Return Enquiry in Dealer Message Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to select Return Enquiry filter in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to view read Return Enquiry in Dealer Message Page
+#    run keyword and continue on failure    User should be able to click read Return Enquiry in Dealer Message Page
+#    run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click cancel in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to upload image in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click send in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click Back to All Message in Dealer Messages Details Page
+#
+#TC-121 - User should be able to click and send message on read Product Enquiry in Dealer Message Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to select Product Enquiry filter in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to view read Product Enquiry in Dealer Message Page
+#    run keyword and continue on failure    User should be able to click read Product Enquiry in Dealer Message Page
+#    run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click cancel in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to upload image in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click send in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click Back to All Message in Dealer Messages Details Page
+#
+#TC-122 - User should be able to click and send message on unread General Enquiry in Dealer Message Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to select General Enquiry filter in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to view unread General Enquiry in Dealer Message Page
+#    run keyword and continue on failure    User should be able to click unread General Enquiry in Dealer Message Page
+#    run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click cancel in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to upload image in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click send in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click Back to All Message in Dealer Messages Details Page
+#
+#TC-123 - User should be able to click and send message on unread Order Enquiry in Dealer Message Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to select Order Enquiry filter in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to view unread Order Enquiry in Dealer Message Page
+#    run keyword and continue on failure    User should be able to click unread Order Enquiry in Dealer Message Page
+#    run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click cancel in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to upload image in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click send in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click Back to All Message in Dealer Messages Details Page
+#
+#TC-124 - User should be able to click and send message on unread Return Enquiry in Dealer Message Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to select Return Enquiry filter in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to view unread Return Enquiry in Dealer Message Page
+#    run keyword and continue on failure    User should be able to click unread Return Enquiry in Dealer Message Page
+#    run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click cancel in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to upload image in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click send in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click Back to All Message in Dealer Messages Details Page
+#
+#TC-125 - User should be able to click and send message on unread Product Enquiry in Dealer Message Page
+#    [Tags]    Home Page    Messages
+#    run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to select Product Enquiry filter in Dealer Messages Page
+#    run keyword and continue on failure    User should be able to view unread Product Enquiry in Dealer Message Page
+#    run keyword and continue on failure    User should be able to click unread Product Enquiry in Dealer Message Page
+#    run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click cancel in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to Input Text on Message in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to upload image in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click send in Dealer Messages Details Page
+#    run keyword and continue on failure    User should be able to click Back to All Message in Dealer Messages Details Page
 
-TC-097 - User should be able to view Buyer Rel Page
-    [Tags]    Home Page    Cust Rel
-    run keyword and continue on failure    User should be able to click and expand Customer Management
-    run keyword and continue on failure    User should be able to click Customer Manegement - Buyer Rel from left navigation
-    run keyword and continue on failure    User should be able to view Buyer Rel Page
+TC-027 - User should be able to click and expand Profile
+    [Tags]    TC026    Left Navigation
+    run keyword and continue on failure    User should be able to click and expand Profile
 
+TC-028 - User should be able to click Profile - Account Details from left navigation
+    [Tags]    TC027    Left Navigation
+    run keyword and continue on failure    User should be able to click Profile - Account Details from left navigation
 
+TC-029 - User should be able to view account details page
+    [Tags]    TC045    Profile
+    run keyword and continue on failure    User should be able to view account details page
 
-
-
-
-
-
-
-
-
-
-
-
-
+TC-029 - User should be able to edit account details page
+    [Tags]    TC045    Profile
+    run keyword and continue on failure    User should be able to edit First name in Dealer Account Details Page
+    run keyword and continue on failure    User should be able to edit Last name in Dealer Account Details Page
+    run keyword and continue on failure    User should be able to edit Phone Number in Dealer Account Details Page
+    run keyword and continue on failure    User should be able to edit Landline Number in Dealer Account Details Page
+    run keyword and continue on failure    User should be able to click Update in Dealer Account Details Page
+    run keyword and continue on failure    User should be able to view update confirmation modal in Dealer Account Details Page
+    run keyword and continue on failure    User should be able to click No on update confirmation modal in Dealer Account Details Page
 
 
 

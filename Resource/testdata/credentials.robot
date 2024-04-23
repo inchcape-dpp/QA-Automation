@@ -158,7 +158,7 @@ ${user2_s2_dealer_PWD}    AUPass@12345
 
                                                                             #------------------------HK ADMIN1----------
 ${admin1_s2_HKdealer_UID}    hk.seller1.admin@test.com
-${admin1_s2_HKdealer_PWD}    HKPass@12345
+${admin1_s2_HKdealer_PWD}    HKs2@12345
 
 
                                                                      #------------------------P1------------------------
