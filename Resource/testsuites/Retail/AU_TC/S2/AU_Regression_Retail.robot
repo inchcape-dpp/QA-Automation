@@ -319,41 +319,57 @@ TC-056 - User should be able to access Order page using double header in Retail 
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to access Order page using double header in Retail Homepage
+    run keyword and continue on failure    reload page
+    run keyword and continue on failure    TC Sleep
 
 TC-057 - User should be able to access Retrun page using double header in Retail Homepage
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to access Retrun page using double header in Retail Homepage
+    run keyword and continue on failure    reload page
+    run keyword and continue on failure    TC Sleep
 
 TC-058 - User should be able to access Save carts page using double header in Retail Homepage
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to access Save carts page using double header in Retail Homepage
+    run keyword and continue on failure    reload page
+    run keyword and continue on failure    TC Sleep
 
 TC-059 - User should be able to access Vehicle Listing page using double header in Retail Homepage
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to access Vehicle Listing page using double header in Retail Homepage
+    run keyword and continue on failure    reload page
+    run keyword and continue on failure    TC Sleep
 
 TC-060 - User should be able to access Inbox page using double header in Retail Homepage
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to access Inbox page using double header in Retail Homepage
+    run keyword and continue on failure    reload page
+    run keyword and continue on failure    TC Sleep
 
 TC-061 - User should be able to access Account Details page using double header in Retail Homepage
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to access Account Details page using double header in Retail Homepage
+    run keyword and continue on failure    reload page
+    run keyword and continue on failure    TC Sleep
 
 TC-062 - User should be able to access Change Pass page using double header in Retail Homepage
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to access Change Pass page using double header in Retail Homepage
+    run keyword and continue on failure    reload page
+    run keyword and continue on failure    TC Sleep
 
 TC-063 - User should be able to access Company Details page using double header in Retail Homepage
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to access Company Details page using double header in Retail Homepage
+    run keyword and continue on failure    reload page
+    run keyword and continue on failure    TC Sleep
 
 TC-064 - User should be able to clear vehicle selection
     [Tags]    Home Page

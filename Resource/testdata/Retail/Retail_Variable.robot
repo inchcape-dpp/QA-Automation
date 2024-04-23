@@ -608,6 +608,12 @@ ${Retail_HomePageShopByCategoryAllButton}    //div[@class='shop-by-category']//h
 
 ${Retail_HomePageShopByCategoryShowAllCategoriesButton}    //div[@class='shop-by-category']//p/a
 
+#-----------------------------------------------------Retail Select your vehicle
+${Retail_Selectyourvehicle_5searchedvehicles_Radiobutton}    //div//input[@name='last5SearchedVehicle']
+${Retail_Selectyourvehicle_Selectfromvehiclelisting_Radiobutton}    //div//input[@id='selectFromVehicleListing']
+${Retail_Selectyourvehicle_Selectfromvehiclelisting_Addavehicle}    //cx-icon[@class='cx-icon dpp-icons__plus']
+${Retail_Selectyourvehicle_Selectfromvehiclelisting_AddavehicleRegoVIN}    //div[@class='cx-modal-content d-flex']
+
 
 #-----------------------------------------------------Retail Home Page HK
 ${Retail_HK_HomePageShopByCategoryParts&ServiceButton}    //div[@class='shop-by-category']//h4[contains(text(),' Parts & Service ')]/parent::div/parent::div[@class='shop-by-category__card' or @class='shop-by-category__card mr-2 ml-2']

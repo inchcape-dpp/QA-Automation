@@ -483,7 +483,26 @@ User should be able to click Search Again in EPC Search Result Drop Down in HK R
     sleep    5
 
 
+User should be able to toggle radio button Select from Last 5 Searched Vehicle to Vehicle Listing
+    wait until element is visible    ${HomePageSelectVehicle}    10
+    click element    ${HomePageSelectVehicle}
+    wait until element is visible    ${Retail_Selectyourvehicle_5searchedvehicles_Radiobutton}   10
+    capture element screenshot    ${Retail_Selectyourvehicle_5searchedvehicles_Radiobutton}
+    scroll element into view    ${Retail_Selectyourvehicle_Selectfromvehiclelisting_Addavehicle}
+    click element    ${Retail_Selectyourvehicle_Selectfromvehiclelisting_Addavehicle}
+    wait until element is visible    ${Retail_Selectyourvehicle_Selectfromvehiclelisting_AddavehicleRegoVIN}    5
+    capture element screenshot    ${Retail_Selectyourvehicle_Selectfromvehiclelisting_AddavehicleRegoVIN}
 
+User should be able to toggle radio button Select from your vehicle listing
+    wait until element is visible    ${HomePageSelectVehicle}    10
+    click element    ${HomePageSelectVehicle}
+    wait until element is visible    ${Retail_Selectyourvehicle_Selectfromvehiclelisting_Radiobutton}    10
+    click element    ${Retail_Selectyourvehicle_Selectfromvehiclelisting_Radiobutton}
+    capture element screenshot    ${Retail_Selectyourvehicle_5searchedvehicles_Radiobutton}
+    scroll element into view    ${Retail_Selectyourvehicle_Selectfromvehiclelisting_Addavehicle}
+    click element    ${Retail_Selectyourvehicle_Selectfromvehiclelisting_Addavehicle}
+    wait until element is visible    ${Retail_Selectyourvehicle_Selectfromvehiclelisting_AddavehicleRegoVIN}    5
+    capture element screenshot    ${Retail_Selectyourvehicle_Selectfromvehiclelisting_AddavehicleRegoVIN}
 
 
 
