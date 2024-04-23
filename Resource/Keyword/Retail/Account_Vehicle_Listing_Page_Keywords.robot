@@ -25,7 +25,9 @@ User should be able to view vehicle listing Panel
 
 User should be able to view HK vehicle listing Panel
     wait until element is visible    ${Retail_HK_AccountVehicleListingPage_Container}    10
+    wait until element is visible    ${Retail_HK_AccountVehicleListingPage_Header}    10
     capture element screenshot    ${Retail_HK_AccountVehicleListingPage_Container}
+    capture element screenshot    ${Retail_HK_AccountVehicleListingPage_Header}
     sleep    2
 
 

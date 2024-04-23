@@ -37,6 +37,9 @@ ${ProfileChangePassCurrentPassValue}    ${Password}
 ${Dealer-HK_BuyerRelPage_Entry_PartsClub_Value}    TestQA
 ${Dealer-HK_BuyerRelPage_Entry_ADP_Value}    QATest
 
+${ProfileAccountsDetailsPhoneValue}    65457898
+${ProfileAccountsDetailsLandlineValue}    12324565
+
 *** Keywords ***
 Open Chrome Browser
     SeleniumLibrary.Open Browser    ${s2HKDealer}    Chrome  executable_path=${driver_path}
@@ -48,6 +51,7 @@ Dealer Screent Shot DIR
     ${LogDIR}=    convert to string    ${Dealer_screenshot_path}/HK_${currentdate}
     set screenshot directory    ${LogDIR}
     set global variable    ${LogDIR}
+
 
 #-----------------------------------------------------Browser Commands--------------------------------------------------
 Browse Back Button
