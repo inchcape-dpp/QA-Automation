@@ -1,10 +1,12 @@
 *** Settings ***
 Documentation       Suite description
 
-Resource  ../../../../../Resource/testdata/Retail/AU_Config/S2_Config.robot
+#Resource  ../../../../../Resource/testdata/Retail/AU_Config/S2_Config.robot
 
 
 *** Variables ***
+
+${PartsLane}    https://www.partslane.com.au/home/index.html
 
 ${Our_Supplier}    //section//header[contains(text(), 'Our Suppliers')]
 ${Suttons}    //div/img[@src='https://cdn.partslane.com.au/sys-master-images/minisite/Suttons-1.svg']

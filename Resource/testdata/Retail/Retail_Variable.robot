@@ -2229,6 +2229,8 @@ ${ProductSelectionInStockDCStockInfoContainer}    //dpp-popover-info//cx-popover
 
 ${ProductSelectionInStockDCStockQtyTextBoxValue}    2
 
+${ProductSelectionQtyTextBoxValue}    999
+
 #-----------------------------------------------------Retail Product Selection In Stock Only
 ${ProductSelectionInStockOnly}    (//div[@class='custom-product-list' or @class='product-grid-list'][.//p[@class='inStock mr-0']][not(.//p[@class='inStock pr-2'])])
 ${ProductSelectionInStockOnlyContainer}    (//div[@class='custom-product-list' or @class='product-grid-list'][.//p[@class='inStock mr-0']][not(.//p[@class='inStock pr-2'])])[1]

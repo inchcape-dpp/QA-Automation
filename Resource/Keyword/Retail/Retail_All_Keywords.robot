@@ -705,6 +705,7 @@ User should be able to click 1 product cart item in Retail Shopping Cart Page
 User should be able to click add item qty in Retail Shopping Cart Page
 User should be able to click remove item qty in Retail Shopping Cart Page
 User should be able to input item qty in Retail Shopping Cart Page
+User should be able to input 999 item qty in Retail Shopping cart Page
 User should be able to click delete cart item button in Retail Shopping Cart Page
 User should be able to click continue shopping button in Retail Shopping Cart Page
 User should be able to click checkout button in Retail Shopping Cart Page
