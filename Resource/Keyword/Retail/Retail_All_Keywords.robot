@@ -77,6 +77,9 @@ User should be able to click Preferred Supplier Dropdown for HK Registration For
 User should be able to select 1 Preferred Supplier from Dropdown for HK Registration Form
 User should be able to click Postal Address Dropdown for HK Registration Form
 User should be able to input text in Postal Address for HK Registration Form
+User should be able to input manual text in Postal Address for HK Registration Form
+User should be able to click Manual Input Postal Address for HK Registration Form
+User should be able to click Clear Postal Address for HK Registration Form
 User should be able to select Random Postal Address from suggestions for HK Registration Form
 User should be able to click Area Dropdown in Postal Address for HK Registration Form
 User should be able to select Random Postal Address Area for HK Registration Form
@@ -84,6 +87,9 @@ User should be able to click District Dropdown in Postal Address for HK Registra
 User should be able to select Random Postal Address District for HK Registration Form
 User should be able to click Delivery Address Dropdown for HK Registration Form
 User should be able to input text in Deliver Address for HK Registration Form
+User should be able to input manual text in Deliver Address for HK Registration Form
+User should be able to click Manual Input Deliver Address for HK Registration Form
+User should be able to click Clear Deliver Address for HK Registration Form
 User should be able to select Random Delivery Address from suggestions for HK Registration Form
 User should be able to click Area Dropdown in Delivery Address for HK Registration Form
 User should be able to select Random Delivery Address Area for HK Registration Form

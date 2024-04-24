@@ -70,6 +70,10 @@ TC-013 - User should be able to input details in Registration Form Page
     [Tags]    Login Page    Registration
     run keyword and continue on failure    User should be able to input Company Name
     run keyword and continue on failure    User should be able to click Postal Address Dropdown for HK Registration Form
+    run keyword and continue on failure    User should be able to input manual text in Postal Address for HK Registration Form
+    run keyword and continue on failure    User should be able to click Manual Input Postal Address for HK Registration Form
+    run keyword and continue on failure    User should be able to click Clear Postal Address for HK Registration Form
+    run keyword and continue on failure    User should be able to click Postal Address Dropdown for HK Registration Form
     run keyword and continue on failure    User should be able to input text in Postal Address for HK Registration Form
     run keyword and continue on failure    User should be able to select Random Postal Address from suggestions for HK Registration Form
     run keyword and continue on failure    User should be able to input Postal Address Line 2
@@ -77,6 +81,10 @@ TC-013 - User should be able to input details in Registration Form Page
     run keyword and continue on failure    User should be able to select Random Postal Address Area for HK Registration Form
     run keyword and continue on failure    User should be able to click District Dropdown in Postal Address for HK Registration Form
     run keyword and continue on failure    User should be able to select Random Postal Address District for HK Registration Form
+    run keyword and continue on failure    User should be able to click Delivery Address Dropdown for HK Registration Form
+    run keyword and continue on failure    User should be able to input manual text in Deliver Address for HK Registration Form
+    run keyword and continue on failure    User should be able to click Manual Input Deliver Address for HK Registration Form
+    run keyword and continue on failure    User should be able to click Clear Deliver Address for HK Registration Form
     run keyword and continue on failure    User should be able to click Delivery Address Dropdown for HK Registration Form
     run keyword and continue on failure    User should be able to input text in Deliver Address for HK Registration Form
     run keyword and continue on failure    User should be able to select Random Delivery Address from suggestions for HK Registration Form
@@ -1042,6 +1050,11 @@ TC-096 - User should be able to view company details page
 TC-097 - User should be able to edit company details page
     [Tags]    Company Details Page
     run keyword and continue on failure    User should be able to input valid Company name in Retail Account Company Details Page
+    run keyword and continue on failure    User should be able to click clear Postal Address Dropdown for HK Retail Account Company Details Page
+    run keyword and continue on failure    User should be able to click Postal Address Dropdown for HK Retail Account Company Details Page
+    run keyword and continue on failure    User should be able to input manual text in Postal Address for HK Retail Account Company Details Page
+    run keyword and continue on failure    User should be able to click manual Postal Address Dropdown for HK Retail Account Company Details Page
+    run keyword and continue on failure    User should be able to click clear Postal Address Dropdown for HK Retail Account Company Details Page
     run keyword and continue on failure    User should be able to click Postal Address Dropdown for HK Retail Account Company Details Page
     run keyword and continue on failure    User should be able to input text in Postal Address for HK Retail Account Company Details Page
     run keyword and continue on failure    User should be able to select Random Postal Address from suggestions for HK Retail Account Company Details Page
@@ -1051,6 +1064,11 @@ TC-097 - User should be able to edit company details page
     run keyword and continue on failure    User should be able to click District Dropdown in Postal Address for HK Retail Account Company Details Page
     run keyword and continue on failure    User should be able to select Random Postal Address District for HK Retail Account Company Details Page
 #    run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Retail Account Company Details Page
+    run keyword and continue on failure    User should be able to click clear Delivery Address Dropdown for HK Retail Account Company Details Page
+    run keyword and continue on failure    User should be able to click Delivery Address Dropdown for HK Retail Account Company Details Page
+    run keyword and continue on failure    User should be able to input manual text in Deliver Address for HK Retail Account Company Details Page
+    run keyword and continue on failure    User should be able to click manual Deliver Address Dropdown for HK Retail Account Company Details Page
+    run keyword and continue on failure    User should be able to click clear Delivery Address Dropdown for HK Retail Account Company Details Page
     run keyword and continue on failure    User should be able to click Delivery Address Dropdown for HK Retail Account Company Details Page
     run keyword and continue on failure    User should be able to input text in Deliver Address for HK Retail Account Company Details Page
     run keyword and continue on failure    User should be able to select Random Delivery Address from suggestions for HK Retail Account Company Details Page

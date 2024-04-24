@@ -218,11 +218,13 @@ ${Retail_RegistrationCompNameValue}    Test Company Name
 ${Retail_RegistrationTradingNameValue}    Test Trading Name
 ${Retail_RegistrationPostalAddLine1Value}    Test Postal Address Line 1
 ${Retail_HK_RegistrationPostalAddLine1Value}    Pok Fu Lam
+${Retail_HK_RegistrationManualPostalAddLine1Value}    Test1 Address
 ${Retail_RegistrationPostalAddLine2Value}    Test Postal Address Line 2
 ${Retail_RegistrationPostalSuburbValue}    Test Postal Suburb
 ${Retail_RegistrationPostalPostalCodevalue}    1234
 ${Retail_RegistrationDelAddLine1Value}    Test Delivery Address Line 1
 ${Retail_HK_RegistrationDelAddLine1Value}    Kwai Chung
+${Retail_HK_RegistrationManualDelAddLine1Value}    Test2 Address
 ${Retail_RegistrationDelAddLine2Value}    Test Delivery Address Line 2
 ${Retail_RegistrationDelSuburbValue}    Test Delivery Suburb
 ${Retail_RegistrationDelPostalCodevalue}    4321
@@ -247,7 +249,7 @@ ${HomePageProfileAccount}    (//div[@class='header-account-label']//span[contain
 ${HomePageProfileLogout}    //li//a[@href='/dppretail/logout']
 
 ${HomePage_DoubleHeader}    //div[@class='double-header--relative']
-${HomePage_DoubleHeader_SellerName}    //div[@class='double-header--relative']//div[@class='seller-container']//p[@class='seller-name']
+${HomePage_DoubleHeader_SellerName}    //div[@class='double-header--relative']//div[@class='seller-info']//p[@class='seller-name']
 ${HomePage_DoubleHeader_MyAccount_Button}    //div[@class='double-header--relative']//cx-generic-link//a[@class='header-account']
 ${HomePage_DoubleHeader_DropDown_Button}    //div[@class='double-header--relative']//div[@class='header-account-menu']
 ${HomePage_DoubleHeader_DropDown_Button_Active}    //div[@class='double-header--relative']//div[@class='header-account-menu']//cx-icon[@class='account-caret cx-icon dpp-icons__myaccount-caret-down account-menu--active']
@@ -1967,9 +1969,14 @@ ${Retail_AccountCompanyDetailsPageABNTextBox}    //dpp-company-details//input[@f
 
 ${Retail_HK_AccountCompanyDetailsPage_MemberNumber_TextBox}    //input[@name='membershipNumber']
 ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_TextBox}     //div[@formgroupname='postalAddress']//dpp-autocomplete-search//div[@role='combobox']//input
+${Retail_HK_AccountCompanyDetailsPage_PostalAddress_TextBox_Clear_Button}    //div[@formgroupname='postalAddress']//dpp-autocomplete-search//span[@title='Clear all']
 ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_Options_Container}    (//form//div[@formgroupname='postalAddress']//ng-dropdown-panel//div//div[@role='option'])
+${Retail_HK_AccountCompanyDetailsPage_PostalAddress_Manual_Container}    //form//div[@formgroupname='postalAddress']//ng-dropdown-panel//div//div[@role='option']//p//parent::div
 ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_TextBox}    //div[@formgroupname='deliveryAddress']//dpp-autocomplete-search//div[@role='combobox']//input
+${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_TextBox_Clear_Button}    //div[@formgroupname='deliveryAddress']//dpp-autocomplete-search//span[@title='Clear all']
 ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_Options_Container}    (//form//div[@formgroupname='deliveryAddress']//ng-dropdown-panel//div//div[@role='option'])
+${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_Manual_Container}    //form//div[@formgroupname='deliveryAddress']//ng-dropdown-panel//div//div[@role='option']//p//parent::div
+
 
 ${Retail_HK_AccountCompanyDetailsPage_CompanyPhone_TextBox}    //span[@class='label-content' and contains(text(),'Company Phone Number')]/parent::label/following-sibling::dpp-input-contact-number//input
 ${Retail_HK_AccountCompanyDetailsPage_Landline_TextBox}    //span[@class='label-content' and contains(text(),'Landline Number')]/parent::label/following-sibling::dpp-input-contact-number//input
