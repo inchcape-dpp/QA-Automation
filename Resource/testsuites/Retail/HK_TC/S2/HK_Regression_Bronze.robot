@@ -468,6 +468,36 @@ TC-053 - User should be able to view checkout in Retail Checkout Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view checkout in HK Retail Checkout Page
 
+TC-053 - User should be able to change to manual Address
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be albe to click Change Address in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to view Change Shipping Address Modal in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to change Mobile Number on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to change Landline Number on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to cliear shipping address on shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to edit manual shipping address on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to click manual shipping address on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to click Area Dropdown on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to select Random Area on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to click District Dropdown on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to select Random District on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to click Save Button on change shipping in HK Retail Checkout Page
+
+TC-053 - User should be able to change Address
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be albe to click Change Address in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to view Change Shipping Address Modal in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to change Mobile Number on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to change Landline Number on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to edit shipping address on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to select Random Address from suggestions in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to click Area Dropdown on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to select Random Area on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to click District Dropdown on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to select Random District on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to click Save Button on change shipping in HK Retail Checkout Page
+
+
 TC-053 - User should be able to view Promo Code in HK Retail Checkout Page
     [Tags]    Checkout Page
     run keyword and continue on failure    User should be able to view Promo Code in HK Retail Checkout Page
@@ -533,24 +563,23 @@ TC-087 - User should be able to process Re-Order in Retail Account Order Details
     run keyword and continue on failure    User should be able to view shopping cart in Retail Shopping Cart Page
     run keyword and continue on failure    User should be able to click checkout button in Retail Shopping Cart Page
     run keyword and continue on failure    User should be able to view checkout in HK Retail Checkout Page
+    run keyword and continue on failure    User should be albe to click Change Address in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to view Change Shipping Address Modal in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to change Mobile Number on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to change Landline Number on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to cliear shipping address on shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to edit manual shipping address on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to click manual shipping address on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to click Area Dropdown on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to select Random Area on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to click District Dropdown on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to select Random District on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to click Save Button on change shipping in HK Retail Checkout Page
     run keyword and continue on failure    User should be able to view Promo Code in HK Retail Checkout Page
     run keyword and continue on failure    User should be able to input Promo Code in HK Retail Checkout Page
     run keyword and continue on failure    User should be able to check Promo Code in HK Retail Checkout Page
     run keyword and continue on failure    TC Sleep
-    run keyword and continue on failure    User should be able to view payment method in HK Retail Checkout Page
-    run keyword and continue on failure    Select Credit Card Frame
-    run keyword and continue on failure    User should be able to input jcb card number
-    run keyword and continue on failure    User should be albe to input Exp Date
-    run keyword and continue on failure    User should be albe to input CVV
-    run keyword and continue on failure    User should be albe to input Card Holders Name
-    run keyword and continue on failure    User should be albe to input Email
-    run keyword and continue on failure    User should be able to click continue payment button
-    run keyword and continue on failure    User should be able to view 2C2P Modal
-    run keyword and continue on failure    User should be able to Input OTP
-    run keyword and continue on failure    User should be able to click Submit button on 2C2P
-    run keyword and continue on failure    TC Sleep
-    run keyword and continue on failure    Unselect Credit Card Frame
-    run keyword and continue on failure    TC Sleep
+
     run keyword and continue on failure    User should be able to view place order in HK Retail Place Order Page
     run keyword and continue on failure    User should be able to click back to home button in Retail Place Order Page
 
