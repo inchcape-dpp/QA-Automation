@@ -73,6 +73,43 @@ User should be able to view von Bibra Auto Group logo
     capture element screenshot
     sleep    2
 
+User should be able to view Contact Us image
+    wait until element is visible    ${ContactUs_Image}
+    capture element screenshot
+    sleep    2
+
+User should be able to view Let Us Talk
+    wait until element is visible    ${LetUsTalk}
+    capture element screenshot
+    sleep    2
+
+User should be able to view Let Us Talk subtext
+    wait until element is visible    ${LetUsTalk_Subtext}
+    capture element screenshot
+    sleep    2
+
+User should be able to view First name field
+    wait until element is visible    ${form_firstname}
+    capture element screenshot
+    sleep    2
+
+User should be able to view Last name field
+    wait until element is visible    ${form_lastname}
+    capture element screenshot
+    sleep    2
+
+User should be able to view Email address field
+    wait until element is visible    ${form_emailaddress}
+    capture element screenshot
+    sleep    2
+
+User should be able to view the Message box field
+    wait until element is visible    ${form_message}
+    capture element screenshot
+    sleep    2
+
+
+
 
 
 
