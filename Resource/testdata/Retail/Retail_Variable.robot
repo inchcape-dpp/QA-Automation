@@ -1671,7 +1671,12 @@ ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_SearchAgain_button}    //d
 
 #-----------------------------------------------------Retail Account Vehicle Listing Page
 ${Retail_AccountVehicleListingPageSelectVehicleRegoValue}    CX20LA
+${Retail_AccountVehicleListingPageSelectVehicleRegoValue2}    ETK16F
+${Retail_AccountVehicleListingPageSelectVehicleRegoValue3}    CXQ17E
+
 ${Retail_AccountVehicleListingPageSelectVehicleVINNumValue}    JF1ZD8K72PG004012
+${Retail_AccountVehicleListingPageSelectVehicleVINNumValue2}    JF2SK9KL5PG090443
+${Retail_AccountVehicleListingPageSelectVehicleVINNumValue3}    JF2BT9KL3NG025777
 
 
 ${Retail_AccountVehicleListingPageSelectVehicleRegoInvalidValue}    654321
