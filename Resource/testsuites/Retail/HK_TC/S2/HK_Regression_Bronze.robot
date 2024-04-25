@@ -5,13 +5,13 @@ Library  SeleniumLibrary
 Library    Process
 #Library  FakerLibrary
 
-Resource  ../../../../../Resource/testdata/Retail/HK_Config/S2/HK_S2_Bronze_Config.robot
-Resource  ../../../../../Resource/testdata/Retail/Retail_Variable.robot
-Resource  ../../../../../Resource/testdata/Retail/Retail_Resource.robot
+Resource    ../../../../../Resource/testdata/Retail/HK_Config/S2/HK_S2_Bronze_Config.robot
+Resource    ../../../../../Resource/testdata/Retail/Retail_Variable.robot
+Resource    ../../../../../Resource/testdata/Retail/Retail_Resource.robot
 
 *** Test Cases ***
-Test Setup  Run Keywords   Open Chrome Browser HK
-Screen Shot DIR  Run Keywords    Retail Screent Shot DIR HK
+Test Setup  Run Keywords   Open Chrome Browser
+Screen Shot DIR  Run Keywords    Retail Screent Shot DIR
 
 TC-001 - Verify Login Page
     [Tags]    TC001    Login Page
@@ -148,6 +148,8 @@ TC-025 - User should be able to select 1 filter from selected category in HK Ret
 TC-026 - User should be able to click 1 sub filter from selected category in Retail Home Page
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to click 1 sub filter from selected category in Retail Home Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    Show number of product list
     run keyword and continue on failure    User should be able to Go to Home page
 
 TC-038 - User should be able to click shop by category Body Parts in HK Retail Home Page
@@ -373,6 +375,7 @@ TC-041 - User should be able to view All Products Page in HK Retail Home Page
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to view All products
     run keyword and continue on failure    TC Sleep
+
 
 TC-042 - User should be able to side filter product
     [Tags]    All Products Page

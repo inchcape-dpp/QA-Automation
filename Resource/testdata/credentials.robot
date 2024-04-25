@@ -312,7 +312,7 @@ ${HK_S2_PWD}    Pass@12345
 ${HKSeller_S2_UID}    hk.seller2.admin@test.com
 ${HKSeller_S2_PWD}    HKPass@12345
 
-${HKCustomer_P1_UID}    hktestric10@yopmail.com
+${HKCustomer_P1_UID}    hktestri0010@yopmail.com
 ${HKCustomer_P1_PWD}    Pass@12345
 ${HKSeller_P1_UID}    hk.seller1.admin@test.com
 ${HKSeller_P1_PWD}    HKPass@12345

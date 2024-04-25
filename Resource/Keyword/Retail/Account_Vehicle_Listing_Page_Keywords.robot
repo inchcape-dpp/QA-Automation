@@ -1,11 +1,11 @@
 *** Settings ***
 Documentation    Suite description
 
-Library    SeleniumLibrary
+Library  SeleniumLibrary
 
-#Resource    ../../../Resource/testdata/config.robot
-Resource    ../../../Resource/testdata/Retail/Retail_Variable.robot
-Resource    ../../../Resource/testdata/credentials.robot
+#Resource  ../../../Resource/testdata/config.robot
+Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
+Resource  ../../../Resource/testdata/credentials.robot
 
 
 *** Keywords ***
@@ -241,10 +241,10 @@ User should be able to select model on manual search in Retail Select Vehicle
     ${RandomModelIndexCount}    get element count    ${Retail_AccountVehicleListingPageSelectVehicleSearchManualModelListOpt}
     ${RandomModelIndex}    evaluate    random.randint(1,${RandomModelIndexCount})
     mouse over    ${Retail_AccountVehicleListingPageSelectVehicleSearchManualModelListOpt1}
-    wait until element is visible    (//div[@class='ng-dropdown-panel-items scroll-host']//span[@title!='---Popular Models---' and @title!='----All Models----' ])[${RandomModelIndex}]    10
-    scroll element into view    (//div[@class='ng-dropdown-panel-items scroll-host']//span[@title!='---Popular Models---' and @title!='----All Models----' ])[${RandomModelIndex}]
-    capture element screenshot    (//div[@class='ng-dropdown-panel-items scroll-host']//span[@title!='---Popular Models---' and @title!='----All Models----' ])[${RandomModelIndex}]
-    click element    (//div[@class='ng-dropdown-panel-items scroll-host']//span[@title!='---Popular Models---' and @title!='----All Models----' ])[${RandomModelIndex}]
+    wait until element is visible    (//div[@class='ng-dropdown-panel-items scroll-host']//span[@title!='---Popular Models---' and @title!='----All Models----' ])|(//div[@class='ng-dropdown-panel-items scroll-host']//span[@class!='---Popular Models---' and @class!='----All Models----' ])[${RandomModelIndex}]    10
+    scroll element into view    (//div[@class='ng-dropdown-panel-items scroll-host']//span[@title!='---Popular Models---' and @title!='----All Models----' ])|(//div[@class='ng-dropdown-panel-items scroll-host']//span[@class!='---Popular Models---' and @class!='----All Models----' ])[${RandomModelIndex}]
+    capture element screenshot    (//div[@class='ng-dropdown-panel-items scroll-host']//span[@title!='---Popular Models---' and @title!='----All Models----' ])|(//div[@class='ng-dropdown-panel-items scroll-host']//span[@class!='---Popular Models---' and @class!='----All Models----' ])[${RandomModelIndex}]
+    click element    (//div[@class='ng-dropdown-panel-items scroll-host']//span[@title!='---Popular Models---' and @title!='----All Models----' ])|(//div[@class='ng-dropdown-panel-items scroll-host']//span[@class!='---Popular Models---' and @class!='----All Models----' ])[${RandomModelIndex}]
     sleep    5
 
 User should be able to click year on manual search in Retail Select Vehicle
@@ -397,6 +397,121 @@ User should be able to click clear vehicle on selected vehicle in Retail Select 
     capture element screenshot    ${Retail_AccountVehicleListingPageSelectedVehicleClearVehicleButton}
     click element    ${Retail_AccountVehicleListingPageSelectedVehicleClearVehicleButton}
     sleep    2
+
+User should be able to view EPC Search Result Drop Down in HK Retail Vehicle Listing Page
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Container}    10
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Container}
+    sleep    2
+
+User should be able to view EPC Search Result Drop Down Elements in HK Retail Vehicle Listing Page
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_VIN_Value}    10
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Model}    10
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_ModelCode_Label}    10
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_ModelCode_Value}    10
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Transmission_Label}    10
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Transmission_Value}    10
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Period_Label}    10
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Period_Value}    10
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Engine_Label}    10
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Engine_Value}    10
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_ProductionDate_Label}    10
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_ProductionDate_Value}    10
+
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Body_Label}    10
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Body_Value}    10
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Doors_Label}    10
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Doors_Value}    10
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_SeatingCapacity_Label}    10
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_SeatingCapacity_Value}    10
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Grade_Label}    10
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Grade_Value}    10
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Driverosition_Label}    10
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Driverosition_Value}    10
+
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_VIN_Value}
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Model}
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_ModelCode_Label}
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_ModelCode_Value}
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Transmission_Label}
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Transmission_Value}
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Period_Label}
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Period_Value}
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Engine_Label}
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Engine_Value}
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_ProductionDate_Label}
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_ProductionDate_Value}
+
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Body_Label}
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Body_Value}
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Doors_Label}
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Doors_Value}
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_SeatingCapacity_Label}
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_SeatingCapacity_Value}
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Grade_Label}
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Grade_Value}
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Driverosition_Label}
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Driverosition_Value}
+
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_SaveShop_button}    10
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_ShopThisVehicle_button}    10
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_SearchAgain_button}    10
+
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_SaveShop_button}
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_ShopThisVehicle_button}
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_SearchAgain_button}
+
+User should be able to click Show More button in EPC Search Result Drop Down in HK Retail Vehicle Listing Page
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_ShowMore_button}    10
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_ShowMore_button}
+    click element    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_ShowMore_button}
+    sleep    2
+
+User should be able to click Save and Shop in EPC Search Result Drop Down in HK Retail Vehicle Listing Page
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_SaveShop_button}    10
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_SaveShop_button}
+    click element    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_SaveShop_button}
+    sleep    5
+
+User should be able to click Shop this vehicle in EPC Search Result Drop Down in HK Retail Vehicle Listing Page
+    wait until element is visible    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_ShopThisVehicle_button}    10
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_ShopThisVehicle_button}
+    click element    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_ShopThisVehicle_button}
+    sleep    5
+
+User should be able to click Search Again in EPC Search Result Drop Down in HK Retail Vehicle Listing Page
+    wait until element is visible   ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_SearchAgain_button}    10
+    capture element screenshot    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_SearchAgain_button}
+    click element    ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_SearchAgain_button}
+    sleep    5
+
+
+User should be able to toggle radio button Select from Last 5 Searched Vehicle to Vehicle Listing
+    wait until element is visible    ${HomePageSelectVehicle}    10
+    click element    ${HomePageSelectVehicle}
+    wait until element is visible    ${Retail_Selectyourvehicle_5searchedvehicles_Radiobutton}   10
+    capture element screenshot    ${Retail_Selectyourvehicle_5searchedvehicles_Radiobutton}
+    scroll element into view    ${Retail_Selectyourvehicle_Selectfromvehiclelisting_Addavehicle}
+    click element    ${Retail_Selectyourvehicle_Selectfromvehiclelisting_Addavehicle}
+    wait until element is visible    ${Retail_Selectyourvehicle_Selectfromvehiclelisting_AddavehicleRegoVIN}    5
+    capture element screenshot    ${Retail_Selectyourvehicle_Selectfromvehiclelisting_AddavehicleRegoVIN}
+
+User should be able to toggle radio button Select from your vehicle listing
+    wait until element is visible    ${HomePageSelectVehicle}    10
+    click element    ${HomePageSelectVehicle}
+    wait until element is visible    ${Retail_Selectyourvehicle_Selectfromvehiclelisting_Radiobutton}    10
+    click element    ${Retail_Selectyourvehicle_Selectfromvehiclelisting_Radiobutton}
+    capture element screenshot    ${Retail_Selectyourvehicle_5searchedvehicles_Radiobutton}
+    scroll element into view    ${Retail_Selectyourvehicle_Selectfromvehiclelisting_Addavehicle}
+    click element    ${Retail_Selectyourvehicle_Selectfromvehiclelisting_Addavehicle}
+    wait until element is visible    ${Retail_Selectyourvehicle_Selectfromvehiclelisting_AddavehicleRegoVIN}    5
+    capture element screenshot    ${Retail_Selectyourvehicle_Selectfromvehiclelisting_AddavehicleRegoVIN}
+
+
+
+
+
+
+
 
 
 

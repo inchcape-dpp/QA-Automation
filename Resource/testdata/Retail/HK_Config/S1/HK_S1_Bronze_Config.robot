@@ -18,10 +18,10 @@ ${SafariBrowser}    Safari
 ${driver_path}    ..\\..\\..\\..\\..\\Resource\\chromedriver.exe
 #${driver_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\geckodriver.exe
 
-${Retail_screenshot_path}    ..\\..\\..\\..\\..\\Resource\\testsuites\\Retail\\Screenshots\\HK\\S2
+${Retail_screenshot_path}    ..\\..\\..\\..\\..\\Resource\\testsuites\\Dealer\\Screenshots\\S2
 #${Retail_screenshot_path}    C:\\Users\\Danielouie.Estopace\\OneDrive - Inchcape\\06.Dev\\Dan\\Retail Screenshots
 
-${UploadPhoto_Path_Value}    C:\\Users\\Danielouie.Estopace\\Pictures\\Sample Image\\Image.jpg
+${UploadPhoto_Path_Value}    C:\\Users\\Ericson.Tinana\\Pictures\\SampleImage\\Image.jpg
 
 ${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\HKProductReportView.
 ${ExcelFile_AU_Stock_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\Titan SUB Geerex.xlsx
@@ -32,20 +32,18 @@ ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files
 
 ${Username}    ${HK_S2_Automation_Bronze_UID}
 ${Password}    ${HK_S2_Automation_Bronze_PWD}
-
-${YopMailEmail}    ${HK_S2_Automation_Bronze_UID}
-
 ${Retail_AccountProfileChangePassCurrentPassValue}    ${Password}
+${YopMailEmail}    ${HK_S2_Automation_Bronze_UID}
 
 #Testing Values
 ${ProdductSearchValue}    037018200
 
 *** Keywords ***
-Open Chrome Browser HK
+Open Chrome Browser
     SeleniumLibrary.Open Browser    ${s2HKRetail}    Chrome  executable_path=${driver_path}
     maximize browser window
 
-Retail Screent Shot DIR HK
+Retail Screent Shot DIR
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
     create directory    ${Retail_screenshot_path}/HK_${currentdate}
     ${LogDIR}=    convert to string    ${Retail_screenshot_path}/HK_${currentdate}

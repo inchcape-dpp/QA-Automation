@@ -5,60 +5,16 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Robot Framework 7.0 (Python 3.11.4 on win32)" name="Generator">
+<meta content="Robot Framework 6.1.1 (Python 3.11.4 on win32)" name="Generator">
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
-<style media="all">
-:root {
-    --text-color: black;
-    --background-color: white;
-    --primary-color: #ddd;
-    --secondary-color: #ccc;
-    --link-color: #15c;
-    --link-hover-color: #61c;
-    --highlight-color: #eee;
-    --target-color: #f9f9f9;
-    --pass-color: #97bd61;
-    --fail-color: #ce3e01;
-    --warn-color: #fed84f;
-    --pass-link-color: #098a09;
-    --warn-link-color: #927201;
-    --fail-link-color: #ce3e01;
-    --ascending-icon: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==);
-    --descending-icon: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==);
-}
-@media (prefers-color-scheme: dark) {
-    :root {
-        color-scheme: dark;
-    }
-}
-[data-theme="dark"] {
-    --text-color: #e2e1d7;
-    --background-color: #1c2227;
-    --primary-color: #26373b;
-    --secondary-color: #424f5a;
-    --link-color: #8cc4ff;
-    --link-hover-color: #bb86fc;
-    --highlight-color: #002b36;
-    --target-color: #1a252e;
-    --pass-link-color: #97bd61;
-    --warn-link-color: #fed84f;
-    --fail-link-color: #ff9b8f;
-    --ascending-icon: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJAgMAAACZCj6+AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAlQTFRFAAAAfn5+////f/cqYgAAAAN0Uk5TAP//RFDWIQAAACdJREFUeJxjYHBgYGAMYGBgDWFgEA1lAAOtVQwMXCsYGJgWADkNDAA78QP9oKr7vwAAAABJRU5ErkJggg==);
-    --descending-icon: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJAgMAAACZCj6+AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAlQTFRFAAAA////fn5+K6jOaAAAAAN0Uk5TAP//RFDWIQAAACdJREFUeJxjYHBgYGAMYGBgDWFgEA1lAAOtVQwMXCsYGJgWADkNDAA78QP9oKr7vwAAAABJRU5ErkJggg==);
-}
+<style media="all" type="text/css">
 /* Generic and misc styles */
 body {
     font-family: Helvetica, sans-serif;
     font-size: 0.8em;
-    color: black; /* Fallback value */
-    color: var(--text-color);
+    color: black;
     padding: 6px;
-    background: white; /* Fallback value */
-    background: var(--background-color);
-    margin-left: 15px;
-}
-body[theme-toggled] {
-    transition: background 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s;
+    background: white;
 }
 table {
     table-layout: fixed;
@@ -73,37 +29,20 @@ br {
     mso-data-placement: same-cell; /* maintain line breaks in Excel */
 }
 hr {
-    background: #ccc; /* Fallback value */
-    background: var(--secondary-color);
+    background: #ccc;
     height: 1px;
     border: 0;
 }
 a, a:link, a:visited {
     text-decoration: none;
-    color: #15c; /* Fallback value */
-    color: var(--link-color);
+    color: #15c;
 }
 a > img {
-    border-width: 1px !important;
-    border-style: solid !important;
-    border-color: #15c !important; /* Fallback value */
-    border-color: var(--link-color) !important;
+    border: 1px solid #15c !important;
 }
 a:hover, a:active {
     text-decoration: underline;
-    color: #61c; /* Fallback value */
-    color: var(--link-hover-color);
-}
-select {
-    background-color: white; /* Fallback value */
-    background-color: var(--background-color);
-    color: black; /* Fallback value */
-    color: var(--text-color);
-    border-width: 2px;
-    border-style: solid;
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--secondary-color);
-    border-radius: 4px;
+    color: #61c;
 }
 .parent-name {
     font-size: 0.7em;
@@ -116,7 +55,7 @@ select {
 #header {
     width: 65em;
     height: 3em;
-    margin: 20px 0 6px 0;
+    margin: 6px 0;
 }
 h1 {
     float: left;
@@ -144,17 +83,14 @@ h2 {
 }
 /* Status text colors -- !important allows using them in links */
 .fail {
-    color: #ce3e01 !important; /* Fallback value */
-    color: var(--fail-link-color) !important;
+    color: #ce3e01 !important;
     font-weight: bold;
 }
 .pass {
-    color: #098a09 !important; /* Fallback value */
-    color: var(--pass-link-color) !important;
+    color: #098a09 !important;
 }
 .skip {
-    color: #927201 !important; /* Fallback value */
-    color: var(--warn-link-color) !important;
+    color: #927201 !important;
     font-weight: bold;
 }
 .label {
@@ -162,10 +98,8 @@ h2 {
     font-size: 0.75em;
     letter-spacing: 1px;
     white-space: nowrap;
-    color: black; /* Fallback value */
-    color: var(--text-color);
-    background-color: #ddd; /* Fallback value */
-    background-color: var(--primary-color);
+    color: black;
+    background-color: #ddd;
     border-radius: 3px;
 }
 .label.debug, .label.trace, .label.error, .label.keyword {
@@ -175,18 +109,15 @@ h2 {
     font-weight: bold;
 }
 .label.pass {
-    background-color: #97bd61; /* Fallback value */
-    background-color: var(--pass-color);
+    background-color: #97bd61;
     color: #000 !important;
 }
 .label.fail, .label.error {
-    background-color: #ce3e01; /* Fallback value */
-    background-color: var(--fail-color);
+    background-color: #ce3e01;
     color: #fff !important;
 }
 .label.skip, .label.warn {
-    background-color: #fed84f; /* Fallback value */
-    background-color: var(--warn-color);
+    background-color: #fed84f;
     color: #000 !important;
 }
 /* Top right header */
@@ -215,8 +146,7 @@ h2 {
     padding: 0.3em 0;
     font-size: 0.9em;
     border-bottom-left-radius: 4px;
-    background: #ddd; /* Fallback value */
-    background: var(--primary-color);
+    background: #ddd;
 }
 /* Statistics table */
 .statistics {
@@ -226,20 +156,15 @@ h2 {
     margin-bottom: 1em;
 }
 .statistics tr:hover {
-    background: #eee; /* Fallback value */
-    background: var(--highlight-color);
+    background: #f4f4f4;
     cursor: pointer;
 }
 .statistics th, .statistics td {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--secondary-color);
+    border: 1px solid #ccc;
     padding: 0.1em 0.3em;
 }
 .statistics th {
-    background-color: #ddd; /* Fallback value */
-    background-color: var(--primary-color);
+    background-color: #ddd;
     padding: 0.2em 0.3em;
 }
 .statistics td {
@@ -275,33 +200,27 @@ th.stats-col-graph:hover {
 }
 /* Statistics graph */
 .graph, .empty-graph {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--secondary-color);
+    border: 1px solid #ccc;
     width: auto;
     height: 7px;
     padding: 0;
+    background: #aaa;
 }
 .empty-graph {
-    background: #eee; /* Fallback value */
-    background: var(--highlight-color);
+    background: #eee;
 }
 .pass-bar, .fail-bar, .skip-bar {
     float: left;
     height: 100%;
 }
 .fail-bar {
-    background: #ce3e01; /* Fallback value */
-    background: var(--fail-color);
+    background: #ce3e01;
 }
 .pass-bar {
-    background: #97bd61; /* Fallback value */
-    background: var(--pass-color);
+    background: #97bd61;
 }
 .skip-bar {
-    background: #fed84f; /* Fallback value */
-    background: var(--warn-color);
+    background: #fed84f;
 }
 /* Tablesorter - adapted from provided Blue Skin */
 .tablesorter-header {
@@ -311,84 +230,30 @@ th.stats-col-graph:hover {
     cursor: pointer;
 }
 .tablesorter-header:hover {
-    background-color: #ccc; /* Fallback value */
-    background-color: var(--secondary-color);
+    background-color: #ccc;
 }
 .tablesorter-headerAsc {
-    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==); /* Fallback value */
-    background-image: var(--ascending-icon);
-    background-color: #ccc !important; /* Fallback value */
-    background-color: var(--secondary-color) !important;
+    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==);
+    background-color: #ccc !important;
 }
 .tablesorter-headerDesc {
-    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==); /* Fallback value */
-    background-image: var(--descending-icon);
-    background-color: #ccc !important; /* Fallback value */
-    background-color: var(--secondary-color) !important;
+    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==);
+    background-color: #ccc !important;
 }
 .sorter-false {
     background-image: none;
     cursor: default;
 }
 .sorter-false:hover {
-    background-color: #ddd; /* Fallback value */
-    background-color: var(--primary-color);
-}
-#theme-toggle {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    width: 28px;
-    height: 28px;
-    border: none;
-    padding: 4px;
-    z-index: 1000;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    background: var(--highlight-color);
-}
-[data-theme="dark"] .dark-mode-icon,
-[data-theme="light"] .light-mode-icon {
-    display: none;
-}
-[data-theme="dark"] .light-mode-icon,
-[data-theme="light"] .dark-mode-icon {
-    display: block;
-}
-@keyframes highlight {
-    0% {
-        background: var(--primary-color)
-    }
-    100% {
-        background: var(--target-color);
-    }
-}
-:target {
-    background: var(--target-color);
-    transition: background 0.3s;
-    animation: highlight 4s;
+    background-color: #ddd;
 }
 </style>
-<style media="all">
+<style media="all" type="text/css">
 /* Icons are from Open Iconic <https://useiconic.com/open/>.
    Licensed under the MIT License. */
-:root {
-    --icon-filter: invert(0);
-    --icon-highlight: var(--secondary-color);
-    --elapsed-color: #666;
-}
-/* @media (prefers-color-scheme: dark) { */
-[data-theme="dark"] {
-    --icon-filter: invert(1);
-    --icon-highlight: #a39990;
-    --elapsed-color: #999;
-}
 /* Containers */
 .suite, .test, #errors {
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--secondary-color);
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid #ccc;
     padding: 0.3em 0.2em;
     margin: 0.2em 0;
 }
@@ -417,10 +282,8 @@ th.stats-col-graph:hover {
 }
 .element-header:hover {
     cursor: pointer;
-    background-color: #eee; /* Fallback value */
-    background-color: var(--highlight-color);
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--secondary-color);
+    background-color: #eee;
+    border-color: #ccc;
 }
 .element-header-toggle {
     position: absolute;
@@ -430,14 +293,10 @@ th.stats-col-graph:hover {
     background-position: center;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAGCAQAAABKxSfDAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfeCR0JChSkZz20AAAAGklEQVQI12NgQAKMDKzInP8IDhOqMk4G7AAANQwBE427PYUAAAAASUVORK5CYII=);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0wIDB2Mmg4di0yaC04eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAzKSIgLz4KPC9zdmc+), none;
-    filter: var(--icon-filter);
     height: 10px;
     width: 10px;
     background-size: 6px 6px;
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--icon-highlight);
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid #ccc;
     border-radius: 2px;
 }
 .closed > .element-header-toggle {
@@ -445,8 +304,7 @@ th.stats-col-graph:hover {
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0zIDB2M2gtM3YyaDN2M2gydi0zaDN2LTJoLTN2LTNoLTJ6IiAvPgo8L3N2Zz4=), none;
 }
 .element-header:hover > .element-header-toggle {
-    background-color: #ccc; /* Fallback value */
-    background-color: var(--icon-highlight);
+    background-color: #ccc;
 }
 .element-header-right:hover ~ .element-header-toggle {
     background-color: transparent;
@@ -466,31 +324,23 @@ th.stats-col-graph:hover {
 }
 .name {
     font-weight: bold;
-    white-space: pre-wrap;
-}
-.arg, .assign {
-    white-space: pre-wrap;
 }
 .elapsed {
     float: right;
-    color: #666; /* Fallback value */
-    color: var(--elapsed-color);
+    color: #666;
     padding-left: 1em;
 }
 .link {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAHlJREFUGJVtzrEJwmAQBtCn6ASuIKTIBhY2gmghBiJYB1udwk10B8FJbKMBcQFbtbkfJHrVwfu+4/idJR64Y9H7E3higj5O3S8Y44ApLnjhnXCNGhV2yNGggDJwiC02gavUbpDFvscRo4QdXOMKDHBufz3HLYKzNn4AbSkV3fncGQYAAAAASUVORK5CYII=);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik01Ljg4LjAzYy0uMTguMDEtLjM2LjAzLS41My4wOS0uMjcuMS0uNTMuMjUtLjc1LjQ3YS41LjUgMCAxIDAgLjY5LjY5Yy4xMS0uMTEuMjQtLjE3LjM4LS4yMi4zNS0uMTIuNzgtLjA3IDEuMDYuMjIuMzkuMzkuMzkgMS4wNCAwIDEuNDRsLTEuNSAxLjVjLS40NC40NC0uOC40OC0xLjA2LjQ3LS4yNi0uMDEtLjQxLS4xMy0uNDEtLjEzYS41LjUgMCAxIDAtLjUuODhzLjM0LjIyLjg0LjI1Yy41LjAzIDEuMi0uMTYgMS44MS0uNzhsMS41LTEuNWMuNzgtLjc4Ljc4LTIuMDQgMC0yLjgxLS4yOC0uMjgtLjYxLS40NS0uOTctLjUzLS4xOC0uMDQtLjM4LS4wNC0uNTYtLjAzem0tMiAyLjMxYy0uNS0uMDItMS4xOS4xNS0xLjc4Ljc1bC0xLjUgMS41Yy0uNzguNzgtLjc4IDIuMDQgMCAyLjgxLjU2LjU2IDEuMzYuNzIgMi4wNi40Ny4yNy0uMS41My0uMjUuNzUtLjQ3YS41LjUgMCAxIDAtLjY5LS42OWMtLjExLjExLS4yNC4xNy0uMzguMjItLjM1LjEyLS43OC4wNy0xLjA2LS4yMi0uMzktLjM5LS4zOS0xLjA0IDAtMS40NGwxLjUtMS41Yy40LS40Ljc1LS40NSAxLjAzLS40NC4yOC4wMS40Ny4wOS40Ny4wOWEuNS41IDAgMSAwIC40NC0uODhzLS4zNC0uMi0uODQtLjIyeiIKICAvPgo8L3N2Zz4=), none;
-    filter: var(--icon-filter);
 }
 .expand {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAADtJREFUGJVjYCACKDAwMByA0ljFDjAwMPxnYGB4ABVQgLL/Q+VQBB6gseGmIivCkERXhFUSWRFOSawAAEl7E3uv1iMcAAAAAElFTkSuQmCC);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0xLjUgMGwtMS41IDEuNSA0IDQgNC00LTEuNS0xLjUtMi41IDIuNS0yLjUtMi41eiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAxKSIgLz4KPC9zdmc+), none;
-    filter: var(--icon-filter);
 }
 .collapse {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEwAACxMBAJqcGAAAAC5JREFUGJVjYCARNEAxTsn/UIyhCFkSQxG6ThQ+C5IpjWhG1yNb4YDFTdjEMAEACi8Q++9Y9TAAAAAASUVORK5CYII=);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik00IDBsLTQgNCAxLjUgMS41IDIuNS0yLjUgMi41IDIuNSAxLjUtMS41LTQtNHoiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMSkiIC8+Cjwvc3ZnPg==), none;
-    filter: var(--icon-filter);
 }
 .expand, .collapse, .link {
     float: left;
@@ -502,10 +352,7 @@ th.stats-col-graph:hover {
     background-size: 8px 8px;
     background-repeat: no-repeat;
     background-position: center;
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--icon-highlight);
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid #ccc;
     border-radius: 2px;
 }
 .link {
@@ -515,8 +362,7 @@ th.stats-col-graph:hover {
     visibility: visible;
 }
 .expand:hover, .collapse:hover, .link:hover {
-    background-color: #ccc; /* Fallback value */
-    background-color: var(--icon-highlight);
+    background-color: #ccc;
 }
 /* Messages and errors */
 .messages .time, .messages .message {
@@ -557,16 +403,11 @@ th.stats-col-graph:hover {
 .message-row:hover .select-message div {
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAAmJLR0QA/4ePzL8AAAAJcEhZcwAACxMAAAsTAQCanBgAAAAHdElNRQfeCR0MOzhWKZQOAAAASUlEQVQY032PsRHAIAwDX9BkicD+W8UMEqegAQJWKZ/+3sLZJhFGQEZzNaIa4ibh66En867VNaIeoP5WppNuIGoAlOm3g5VC1AdYeQv1BZPRSgAAAABJRU5ErkJggg==);
     background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiIHZpZXdCb3g9IjAgMCA4IDgiPgogIDxwYXRoIGQ9Ik0wIDB2MWg4di0xaC04em0wIDJ2MWg2di0xaC02em0wIDJ2MWg4di0xaC04em0wIDJ2MWg2di0xaC02eiIgLz4KPC9zdmc+), none;
-    filter: var(--icon-filter);
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--icon-highlight);
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid #ccc;
     border-radius: 2px;
 }
 .select-message:hover div {
-    background-color: #ccc; /* Fallback value */
-    background-color: var(--icon-highlight);
+    background-color: #ccc;
     cursor: pointer;
 }
 /* Message tables - these MUST NOT be combined together because otherwise
@@ -598,7 +439,7 @@ th.stats-col-graph:hover {
     cursor: default;
 }
 </style>
-<style media="print">
+<style media="print" type="text/css">
 body {
     background: white !important;
     padding: 0;
@@ -638,7 +479,7 @@ a:link, a:visited {
     background: #ddd !important;
 }
 </style>
-<style media="all">
+<style media="all" type="text/css">
 #javascript-disabled {
     width: 600px;
     margin: 100px auto 0 auto;
@@ -661,7 +502,7 @@ a:link, a:visited {
     font-style: italic;
 }
 </style>
-<style media="all">
+<style media="all" type="text/css">
 .doc > * {
     margin: 0.7em 1em 0.1em 1em;
     padding: 0;
@@ -673,12 +514,14 @@ a:link, a:visited {
     margin-top: 0.1em;
 }
 .doc table {
+    border: 1px solid #ccc;
     background: transparent;
     border-collapse: collapse;
     empty-cells: show;
     font-size: 0.9em;
 }
 .doc table th, .doc table td {
+    border: 1px solid #ccc;
     background: transparent;
     padding: 0.1em 0.3em;
     height: 1.2em;
@@ -688,32 +531,24 @@ a:link, a:visited {
     letter-spacing: 0.1em;
 }
 .doc pre {
-    border-radius: 2px;
     font-size: 1.1em;
     letter-spacing: 0.05em;
-    background: #eee; /* Fallback value */
-    background: var(--highlight-color);
+    background: #f4f4f4;
 }
 .doc code {
-    border-radius: 2px;
     padding: 0 0.2em;
     letter-spacing: 0.05em;
-    background: #eee; /* Fallback value */
-    background: var(--highlight-color);
+    background: #eee;
 }
 .doc li {
     list-style-position: inside;
     list-style-type: square;
 }
-.doc img, .doc table, .doc table th, .doc table td {
-    border-width: 1px;
-    border-style: solid;
-    border-color: #ccc; /* Fallback value */
-    border-color: var(--secondary-color);
+.doc img {
+    border: 1px solid #ccc;
 }
 .doc hr {
-    background: #ccc; /* Fallback value */
-    background: var(--secondary-color);
+    background: #ccc;
     height: 1px;
     border: 0;
 }
@@ -1015,6 +850,7 @@ window.model = (function () {
         suite.populateSuites = createIterablePopulator('Suite');
         suite.childrenNames = ['keyword', 'suite', 'test'];
         suite.callWhenChildrenReady = function (callable) { callable(); };
+        suite.message = data.message;
         suite.children = function () {
             return suite.keywords().concat(suite.tests()).concat(suite.suites());
         };
@@ -1105,7 +941,6 @@ window.model = (function () {
             name: data.name,
             doc: data.doc,
             status: data.status,
-            message: data.message,
             times: data.times,
             id: data.parent ? data.parent.id + '-' + data.id : data.id
         };
@@ -1126,6 +961,7 @@ window.model = (function () {
                 return test.keywords();
         };
         test.tags = data.tags;
+        test.message = data.message;
         test.matchesTagPattern = function (pattern) {
             return containsTagPattern(test.tags, pattern);
         };
@@ -1136,12 +972,13 @@ window.model = (function () {
     }
     function Keyword(data) {
         var kw = createModelObject(data);
+        var flatTypes = ['RETURN', 'BREAK', 'CONTINUE'];
         kw.libname = data.libname;
         kw.fullName = (kw.libname ? kw.libname + '.' : '') + kw.name;
         kw.type = data.type;
         kw.template = 'keywordTemplate';
         kw.arguments = data.args;
-        kw.assign = data.assign + (data.assign ? ' =  ' : '');
+        kw.assign = data.assign + (data.assign ? ' =' : '');
         kw.tags = data.tags;
         kw.timeout = data.timeout;
         kw.populateKeywords = createIterablePopulator('Keyword');
@@ -1520,9 +1357,8 @@ window.testdata = function () {
     var _statistics = null;
     var LEVELS = ['TRACE', 'DEBUG', 'INFO', 'WARN', 'ERROR', 'FAIL', 'SKIP'];
     var STATUSES = ['FAIL', 'PASS', 'SKIP', 'NOT RUN'];
-    var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'ITERATION', 'IF',
-                         'ELSE IF', 'ELSE', 'RETURN', 'VAR', 'TRY', 'EXCEPT', 'FINALLY',
-                         'WHILE', 'CONTINUE', 'BREAK', 'ERROR'];
+    var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'ITERATION', 'IF', 'ELSE IF', 'ELSE', 'RETURN',
+                         'TRY', 'EXCEPT', 'FINALLY', 'WHILE', 'CONTINUE', 'BREAK', 'ERROR'];
     function addElement(elem) {
         if (!elem.id)
             elem.id = uniqueId();
@@ -1565,7 +1401,6 @@ window.testdata = function () {
         return createKeyword(parent, element, strings, index - messages.length);
     }
     function createKeyword(parent, element, strings, index) {
-        var status = element[8];
         var kw = model.Keyword({
             parent: parent,
             type: KEYWORD_TYPES[element[0]],
@@ -1581,12 +1416,7 @@ window.testdata = function () {
                 this.doc = function () { return doc; };
                 return doc;
             },
-            status: parseStatus(status),
-            message: function () {
-                var msg = status.length == 4 ? strings.get(status[3]) : '';
-                this.message = function () { return msg; };
-                return msg;
-            },
+            status: parseStatus(element[8], strings),
             times: model.Times(times(element[8])),
             isChildrenLoaded: typeof(element[9]) !== 'number'
         });
@@ -1797,20 +1627,6 @@ window.testdata = function () {
 }();
 </script>
 <script type="text/javascript">
-const lightModeIcon = `
-<svg class="light-mode-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
-    viewBox="0 0 24 24" fill="var(--text-color)">
-    <rect fill="none" height="24" width="24" />
-    <path
-        d="M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0 c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2 c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1 C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06 c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41 l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41 c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36 c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z" />
-</svg>`
-const darkModeIcon = `
-<svg class="dark-mode-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
-    viewBox="0 0 24 24" fill="var(--text-color)">
-    <rect fill="none" height="24" width="24" />
-    <path
-        d="M11.01,3.05C6.51,3.54,3,7.36,3,12c0,4.97,4.03,9,9,9c4.63,0,8.45-3.5,8.95-8c0.09-0.79-0.78-1.42-1.54-0.95 c-0.84,0.54-1.84,0.85-2.91,0.85c-2.98,0-5.4-2.42-5.4-5.4c0-1.06,0.31-2.06,0.84-2.89C12.39,3.94,11.9,2.98,11.01,3.05z" />
-</svg>`
 function removeJavaScriptDisabledWarning() {
     // Not using jQuery here for maximum speed
     document.getElementById('javascript-disabled').style.display = 'none';
@@ -1846,10 +1662,6 @@ function setTitle(suiteName, type) {
 function addHeader() {
     var generated = util.timestamp(window.output.generated);
     $.tmpl('<h1>${title}</h1>' +
-           '<button id=theme-toggle>' +
-             lightModeIcon +
-             darkModeIcon +
-           '</button>' +
            '<div id="generated">' +
              '<span>Generated<br>${generated}</span><br>' +
              '<span id="generated-ago">${ago} ago</span>' +
@@ -1861,7 +1673,6 @@ function addHeader() {
         ago: util.createGeneratedAgoString(generated),
         title: document.title
     }).appendTo($('#header'));
-    document.getElementById('theme-toggle')?.addEventListener('click', theme.onClick);
 }
 function addReportOrLogLink(myType) {
     var url;
@@ -1990,116 +1801,30 @@ function stopPropagation(event) {
     if (event.stopPropagation)
         event.stopPropagation();
 }
-const theme = function () {
-    const storageKey = 'theme-preference';
-    const urlParams = new URLSearchParams(window.location.search);
-    var storage;
-    var theme;
-    function init(givenStorage) {
-        storage = givenStorage;
-        theme = { value: getPreference() };
-        document.body.setAttribute('data-theme', theme.value);
-        reflectPreference();
-        window.matchMedia('(prefers-color-scheme: dark)')
-            .addEventListener('change', ({matches:isDark}) => {
-                theme.value = isDark ? 'dark' : 'light';
-                setPreference();
-            });
-        window.addEventListener('storage', ({key, newValue}) => {
-            if (key === storage.fullKey(storageKey)) {
-                theme.value = newValue === 'dark' ? 'dark' : 'light';
-                setPreference();
-            }
-        });
-    }
-    function getPreference() {
-        if (urlParams.has('theme')) {
-            var urlTheme = urlParams.get('theme') === 'dark' ? 'dark' : 'light';
-            storage.set(storageKey, urlTheme);
-            urlParams.delete('theme');
-            return urlTheme;
-        }
-        if (storage.get(storageKey))
-            return storage.get(storageKey) === 'dark' ? 'dark' : 'light';
-        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-    }
-    function setPreference() {
-        storage.set(storageKey, theme.value);
-        reflectPreference();
-    }
-    function reflectPreference() {
-        document.body.setAttribute('data-theme', theme.value);
-        document.querySelector('#theme-toggle')?.setAttribute('aria-label', theme.value);
-        const event = new Event('theme-change', {value: theme.value});
-        document.dispatchEvent(event);
-    }
-    function onClick() {
-        theme.value = theme.value === 'light' ? 'dark' : 'light';
-        document.body.setAttribute('theme-toggled', "");
-        setPreference();
-    }
-    return {init: init, getPreference: getPreference, setPreference: setPreference,
-        reflectPreference: reflectPreference, onClick: onClick};
-}();
-</script>
-<script type="text/javascript">
-storage = function () {
-    var prefix = 'robot-framework-';
-    var storage;
-    function init(user) {
-        if (user)
-            prefix += user + '-';
-        storage = getStorage();
-    }
-    function getStorage() {
-        // Use localStorage if it's accessible, normal object otherwise.
-        // Inspired by https://stackoverflow.com/questions/11214404
-        try {
-            localStorage.setItem(prefix, prefix);
-            localStorage.removeItem(prefix);
-            return localStorage;
-        } catch (exception) {
-            return {};
-        }
-    }
-    function get(key, defaultValue) {
-        var value = storage[fullKey(key)];
-        if (typeof value === 'undefined')
-            return defaultValue;
-        return value;
-    }
-    function set(key, value) {
-        storage[fullKey(key)] = value;
-    }
-    function fullKey(key) {
-        return prefix + key;
-    }
-    return {init: init, get: get, set: set, fullKey: fullKey};
-}();
 </script>
 <script type="text/javascript">
 window.output = {};
 </script>
 <script type="text/javascript">
-window.output["suite"] = [1,2,3,4,[],[0,0,166589],[],[[5,0,0,[],[1,396,6004],[[0,6,7,0,8,9,0,0,[1,396,6004],[[0,9,10,0,0,0,0,0,[1,396,6004],[[0,11,12,0,13,14,0,0,[1,396,5884],[[396,2,15]]],[0,16,12,0,17,0,0,0,[1,6280,119],[]]]]]]]],[18,0,0,[],[1,6401,4],[[0,6,7,0,8,19,0,0,[1,6401,3],[[0,19,10,0,0,0,0,0,[1,6402,2],[[0,20,21,0,22,23,24,0,[1,6402,0],[[6402,2,25]]],[0,26,27,0,28,29,0,0,[1,6402,1],[[6403,2,30]]],[0,31,7,0,32,29,33,0,[1,6403,0],[[6403,2,34]]],[0,35,12,0,36,33,0,0,[1,6404,0],[]],[0,37,7,0,38,33,0,0,[1,6404,0],[[6404,2,34]]]]]]]]],[39,0,0,[40,39],[1,6406,10004],[[0,41,7,0,42,39,0,0,[1,6406,10002],[[0,39,10,0,0,0,0,0,[1,6406,10002],[[0,40,7,0,43,44,0,0,[1,6406,10002],[[16408,2,45]]]]]]]]],[46,0,0,[47,48],[1,16411,3470],[[0,41,7,0,42,49,0,0,[1,16412,2232],[[0,49,50,0,0,0,0,0,[1,16413,2231],[[0,51,7,0,52,53,54,0,[1,16414,24],[[0,55,12,0,56,57,0,0,[1,16414,24],[[16437,2,58]]],[16437,2,59]]],[0,60,7,0,61,62,0,0,[1,16437,2206],[[0,63,50,0,0,0,0,0,[1,16437,2206],[[0,64,12,0,65,66,0,0,[1,16437,16],[]],[0,67,12,0,68,57,0,0,[1,16453,110],[[16563,2,69]]],[0,70,12,0,71,57,0,0,[1,16564,80],[[16564,2,72]]],[0,40,7,0,43,73,0,0,[1,16644,2000],[[18644,2,74]]]]]]]]]]],[0,41,7,0,42,75,0,0,[1,18644,1237],[[0,75,50,0,0,0,0,0,[1,18644,1237],[[0,76,12,0,77,78,0,0,[1,18644,26],[]],[0,79,12,0,80,81,0,0,[1,18670,100],[[18670,2,82]]],[0,67,12,0,68,78,0,0,[1,18770,110],[[18880,2,83]]],[0,40,7,0,43,84,0,0,[1,18880,1000],[[19880,2,85]]]]]]]]],[86,0,0,[87,48],[1,19880,1166],[[0,41,7,0,42,88,0,0,[1,19880,1166],[[0,88,50,0,0,0,0,0,[1,19880,1166],[[0,76,12,0,77,89,0,0,[1,19880,39],[]],[0,79,12,0,80,90,0,0,[1,19919,62],[[19919,2,91]]],[0,67,12,0,68,89,0,0,[1,19982,64],[[20046,2,92]]],[0,40,7,0,43,84,0,0,[1,20046,1000],[[21046,2,85]]]]]]]]],[93,0,0,[94,95],[1,21046,12118],[[0,41,7,0,42,96,0,0,[1,21046,2117],[[0,96,50,0,0,0,0,0,[1,21046,2117],[[0,67,12,0,68,97,0,0,[1,21046,86],[[21132,2,98]]],[0,70,12,0,71,97,0,0,[1,21132,31],[[21132,2,99]]],[0,40,7,0,43,73,0,0,[1,21163,2000],[[23163,2,74]]]]]]],[0,41,7,0,42,39,0,0,[1,23163,10001],[[0,39,10,0,0,0,0,0,[1,23163,10001],[[0,40,7,0,43,44,0,0,[1,23163,10001],[[33164,2,45]]]]]]]]],[100,0,0,[101,102],[1,33166,487],[[0,41,7,0,42,103,0,0,[1,33166,487],[[0,103,104,0,0,0,0,0,[1,33166,487],[[0,64,12,0,65,105,0,0,[1,33166,16],[]],[0,64,12,0,65,106,0,0,[1,33181,16],[]],[0,64,12,0,65,107,0,0,[1,33197,0],[]],[0,64,12,0,65,108,0,0,[1,33197,16],[]],[0,67,12,0,68,109,0,0,[1,33212,105],[[33317,2,110]]],[0,67,12,0,68,111,0,0,[1,33318,148],[[33466,2,112]]],[0,67,12,0,68,113,0,0,[1,33476,87],[[33563,2,114]]],[0,67,12,0,68,115,0,0,[1,33563,89],[[33652,2,116]]]]]]]]],[117,0,0,[118,102],[1,33661,5163],[[0,41,7,0,42,119,0,0,[1,33663,5161],[[0,119,104,0,0,0,0,0,[1,33663,5161],[[0,70,12,0,71,109,0,0,[1,33664,36],[[33664,2,120]]],[0,40,7,0,43,121,0,0,[1,33701,5000],[[38701,2,122]]],[0,123,12,0,124,0,0,0,[1,38701,123],[[38824,2,125]]]]]]]]],[126,0,0,[127,102],[1,38824,5183],[[0,41,7,0,42,128,0,0,[1,38824,5183],[[0,128,104,0,0,0,0,0,[1,38824,5183],[[0,70,12,0,71,111,0,0,[1,38824,52],[[38824,2,129]]],[0,40,7,0,43,121,0,0,[1,38876,5001],[[43877,2,122]]],[0,123,12,0,124,0,0,0,[1,43877,130],[[44007,2,130]]]]]]]]],[131,0,0,[132,102],[1,44007,5167],[[0,41,7,0,42,133,0,0,[1,44007,5167],[[0,133,104,0,0,0,0,0,[1,44007,5167],[[0,64,12,0,65,113,0,0,[1,44007,0],[]],[0,70,12,0,71,113,0,0,[1,44023,33],[[44023,2,134]]],[0,40,7,0,43,121,0,0,[1,44056,5001],[[49057,2,122]]],[0,123,12,0,124,0,0,0,[1,49057,117],[[49174,2,135]]]]]]]]],[136,0,0,[137,102],[1,49174,5150],[[0,41,7,0,42,138,0,0,[1,49174,5150],[[0,138,104,0,0,0,0,0,[1,49174,5150],[[0,64,12,0,65,108,0,0,[1,49174,0],[]],[0,70,12,0,71,115,0,0,[1,49174,45],[[49174,2,139]]],[0,40,7,0,43,121,0,0,[1,49219,5000],[[54219,2,122]]],[0,123,12,0,124,0,0,0,[1,54219,105],[[54324,2,140]]]]]]]]],[141,0,0,[142,143],[1,54324,5484],[[0,41,7,0,42,144,0,0,[1,54324,5484],[[0,144,104,0,0,0,0,0,[1,54324,5484],[[0,64,12,0,65,145,0,0,[1,54324,16],[]],[0,146,12,0,147,148,0,0,[1,54340,274],[]],[0,70,12,0,71,148,0,0,[1,54615,70],[[54616,2,149]]],[0,40,7,0,43,121,0,0,[1,54685,5001],[[59686,2,122]]],[0,123,12,0,124,0,0,0,[1,59686,122],[[59808,2,150]]]]]]]]],[151,0,0,[152,153],[0,59808,1272,154],[[0,41,7,0,42,155,0,0,[0,59808,1272],[[0,155,156,0,0,0,0,0,[0,59808,1272],[[0,64,12,0,65,145,0,0,[1,59820,4],[]],[0,70,12,0,71,148,0,0,[1,59824,34],[[59824,2,149]]],[0,64,12,0,65,157,0,0,[1,59858,14],[]],[0,123,12,0,124,0,0,0,[1,59872,102],[[59974,2,158]]],[0,64,12,0,65,145,0,0,[1,59974,16],[]],[0,64,12,0,65,159,0,0,[1,59990,16],[]],[0,64,12,0,65,160,0,0,[1,60005,16],[]],[0,64,12,0,65,161,0,0,[1,60021,16],[]],[0,64,12,0,65,162,0,0,[1,60037,16],[]],[0,64,12,0,65,163,0,0,[1,60053,0],[]],[0,64,12,0,65,164,0,0,[1,60068,0],[]],[0,64,12,0,65,165,0,0,[1,60068,16],[]],[0,64,12,0,65,166,0,0,[1,60084,16],[]],[0,67,12,0,68,148,0,0,[1,60099,96],[[60195,2,167]]],[0,67,12,0,68,168,0,0,[1,60195,100],[[60296,2,169]]],[0,67,12,0,68,170,0,0,[1,60296,63],[[60359,2,171]]],[0,67,12,0,68,172,0,0,[1,60359,87],[[60446,2,173]]],[0,67,12,0,68,174,0,0,[1,60446,87],[[60533,2,175]]],[0,67,12,0,68,176,0,0,[1,60533,99],[[60632,2,177]]],[0,67,12,0,68,178,0,0,[1,60632,99],[[60731,2,179]]],[0,67,12,0,68,180,0,0,[1,60731,82],[[60814,2,181]]],[0,67,12,0,68,182,0,0,[1,60814,119],[[60932,2,183]]],[0,146,12,0,147,184,0,0,[0,60932,147],[[61079,2,185],[61079,5,154]]],[0,67,12,0,68,184,0,0,[3,61079,0],[]],[0,67,12,0,68,186,0,0,[3,61079,0],[]],[0,67,12,0,68,187,0,0,[3,61079,0],[]],[0,40,7,0,43,73,0,0,[3,61079,0],[]]]]]]]],[188,0,0,[152,189],[1,61079,2449],[[0,41,7,0,42,190,0,0,[1,61079,2449],[[0,190,156,0,0,0,0,0,[1,61079,2449],[[0,64,12,0,65,191,0,0,[1,61079,9],[]],[0,146,12,0,147,192,0,0,[1,61088,280],[]],[0,70,12,0,71,192,0,0,[1,61369,31],[[61369,2,193]]],[0,40,7,0,43,73,0,0,[1,61401,2001],[[63401,2,74]]],[0,123,12,0,124,0,0,0,[1,63401,127],[[63528,2,194]]]]]]]]],[195,0,0,[152,196],[1,63535,10460],[[0,41,7,0,42,197,0,0,[1,63535,7182],[[0,197,156,0,0,0,0,0,[1,63536,7181],[[0,64,12,0,65,198,0,0,[1,63536,52],[]],[0,64,12,0,65,199,0,0,[1,63588,15],[]],[0,64,12,0,65,200,0,0,[1,63603,5],[]],[0,67,12,0,68,201,0,0,[1,63608,119],[[63727,2,202]]],[0,64,12,0,65,203,0,0,[1,63727,16],[]],[0,64,12,0,65,204,0,0,[1,63744,12],[]],[0,64,12,0,65,205,0,0,[1,63757,14],[]],[0,64,12,0,65,206,0,0,[1,63770,5],[]],[0,64,12,0,65,207,0,0,[1,63775,16],[]],[0,64,12,0,65,208,0,0,[1,63791,16],[]],[0,64,12,0,65,209,0,0,[1,63807,16],[]],[0,64,12,0,65,210,0,0,[1,63822,4],[]],[0,67,12,0,68,211,0,0,[1,63826,85],[[63911,2,212]]],[0,67,12,0,68,213,0,0,[1,63911,100],[[64011,2,214]]],[0,67,12,0,68,215,0,0,[1,64011,87],[[64099,2,216]]],[0,67,12,0,68,217,0,0,[1,64099,77],[[64176,2,218]]],[0,67,12,0,68,219,0,0,[1,64176,105],[[64281,2,220]]],[0,67,12,0,68,221,0,0,[1,64281,61],[[64342,2,222]]],[0,67,12,0,68,223,0,0,[1,64342,86],[[64427,2,224]]],[0,67,12,0,68,225,0,0,[1,64427,87],[[64515,2,226]]],[0,64,12,0,65,227,0,0,[1,64515,19],[]],[0,64,12,0,65,228,0,0,[1,64534,13],[]],[0,64,12,0,65,229,0,0,[1,64547,14],[]],[0,64,12,0,65,230,0,0,[1,64562,16],[]],[0,64,12,0,65,231,0,0,[1,64577,16],[]],[0,64,12,0,65,232,0,0,[1,64593,16],[]],[0,64,12,0,65,233,0,0,[1,64609,16],[]],[0,64,12,0,65,234,0,0,[1,64624,2],[]],[0,67,12,0,68,235,0,0,[1,64626,86],[[64712,2,236]]],[0,67,12,0,68,237,0,0,[1,64712,85],[[64797,2,238]]],[0,67,12,0,68,239,0,0,[1,64797,98],[[64894,2,240]]],[0,67,12,0,68,241,0,0,[1,64894,102],[[64997,2,242]]],[0,67,12,0,68,243,0,0,[1,64997,91],[[65087,2,244]]],[0,67,12,0,68,245,0,0,[1,65088,89],[[65177,2,246]]],[0,67,12,0,68,247,0,0,[1,65177,89],[[65266,2,248]]],[0,67,12,0,68,249,0,0,[1,65266,102],[[65368,2,250]]],[0,146,12,0,147,251,0,0,[1,65368,297],[]],[0,67,12,0,68,251,0,0,[1,65665,103],[[65768,2,252]]],[0,64,12,0,65,253,0,0,[1,65768,20],[]],[0,64,12,0,65,254,0,0,[1,65788,13],[]],[0,64,12,0,65,255,0,0,[1,65801,12],[]],[0,64,12,0,65,256,0,0,[1,65814,13],[]],[0,64,12,0,65,257,0,0,[1,65827,0],[]],[0,64,12,0,65,258,0,0,[1,65827,14],[]],[0,64,12,0,65,259,0,0,[1,65841,16],[]],[0,64,12,0,65,260,0,0,[1,65857,16],[]],[0,67,12,0,68,261,0,0,[1,65873,109],[[65982,2,262]]],[0,67,12,0,68,263,0,0,[1,65982,81],[[66063,2,264]]],[0,67,12,0,68,265,0,0,[1,66063,106],[[66170,2,266]]],[0,67,12,0,68,267,0,0,[1,66170,95],[[66265,2,268]]],[0,67,12,0,68,269,0,0,[1,66265,94],[[66359,2,270]]],[0,67,12,0,68,271,0,0,[1,66359,84],[[66443,2,272]]],[0,67,12,0,68,273,0,0,[1,66443,85],[[66528,2,274]]],[0,67,12,0,68,275,0,0,[1,66528,100],[[66628,2,276]]],[0,146,12,0,147,277,0,0,[1,66628,285],[]],[0,67,12,0,68,277,0,0,[1,66913,141],[[67053,2,278]]],[0,64,12,0,65,279,0,0,[1,67053,14],[]],[0,64,12,0,65,280,0,0,[1,67068,13],[]],[0,64,12,0,65,281,0,0,[1,67081,11],[]],[0,64,12,0,65,282,0,0,[1,67092,0],[]],[0,64,12,0,65,283,0,0,[1,67092,16],[]],[0,64,12,0,65,284,0,0,[1,67108,21],[]],[0,67,12,0,68,285,0,0,[1,67129,82],[[67211,2,286]]],[0,67,12,0,68,287,0,0,[1,67211,87],[[67299,2,288]]],[0,67,12,0,68,289,0,0,[1,67299,102],[[67401,2,290]]],[0,67,12,0,68,291,0,0,[1,67401,95],[[67496,2,292]]],[0,67,12,0,68,293,0,0,[1,67496,106],[[67602,2,294]]],[0,67,12,0,68,295,0,0,[1,67602,115],[[67717,2,296]]],[0,40,7,0,43,297,0,0,[1,67717,3001],[[70717,2,298]]]]]]],[0,41,7,0,42,299,0,0,[1,70717,3278],[[0,299,104,0,0,0,0,0,[1,70717,3278],[[0,146,12,0,147,300,0,0,[1,70717,278],[]],[0,40,7,0,43,297,0,0,[1,70995,3000],[[73995,2,298]]]]]]]]],[301,0,0,[142,302],[1,73995,5446],[[0,41,7,0,42,303,0,0,[1,73995,5446],[[0,303,104,0,0,0,0,0,[1,73995,5446],[[0,64,12,0,65,304,0,0,[1,73995,7],[]],[0,146,12,0,147,305,0,0,[1,74002,274],[]],[0,70,12,0,71,305,0,0,[1,74278,63],[[74278,2,306]]],[0,40,7,0,43,121,0,0,[1,74341,5000],[[79341,2,122]]],[0,123,12,0,124,0,0,0,[1,79341,101],[[79441,2,307]]]]]]]]],[308,0,0,[309,310],[0,79457,10286,311],[[0,41,7,0,42,312,0,0,[0,79457,10286],[[0,312,313,0,0,0,0,0,[0,79457,10286],[[0,64,12,0,65,314,0,0,[0,79457,10286],[[89743,2,315],[89743,5,311]]],[0,70,12,0,71,316,0,0,[3,89743,0],[]],[0,40,7,0,43,297,0,0,[3,89743,0],[]],[0,123,12,0,124,0,0,0,[3,89743,0],[]]]]]]]],[317,0,0,[309,318],[0,89743,13437,319],[[0,41,7,0,42,320,0,0,[0,89743,10147],[[0,320,313,0,0,0,0,0,[0,89743,10147],[[0,64,12,0,65,321,0,0,[1,89743,16],[]],[0,64,12,0,65,322,0,0,[0,89759,10131],[[99889,2,323],[99889,5,319]]],[0,67,12,0,68,324,0,0,[3,99890,0],[]],[0,67,12,0,68,325,0,0,[3,99891,0],[]],[0,64,12,0,65,326,0,0,[3,99891,0],[]],[0,64,12,0,65,327,0,0,[3,99891,0],[]],[0,64,12,0,65,328,0,0,[3,99891,0],[]],[0,64,12,0,65,329,0,0,[3,99891,0],[]],[0,64,12,0,65,330,0,0,[3,99891,0],[]],[0,64,12,0,65,331,0,0,[3,99891,0],[]],[0,64,12,0,65,332,0,0,[3,99891,0],[]],[0,64,12,0,65,333,0,0,[3,99891,0],[]],[0,64,12,0,65,334,0,0,[3,99891,0],[]],[0,64,12,0,65,335,0,0,[3,99891,0],[]],[0,64,12,0,65,336,0,0,[3,99891,0],[]],[0,67,12,0,68,337,0,0,[3,99891,0],[]],[0,67,12,0,68,338,0,0,[3,99891,0],[]],[0,67,12,0,68,339,0,0,[3,99891,0],[]],[0,67,12,0,68,340,0,0,[3,99891,0],[]],[0,67,12,0,68,341,0,0,[3,99891,0],[]],[0,67,12,0,68,342,0,0,[3,99891,0],[]],[0,67,12,0,68,343,0,0,[3,99891,0],[]],[0,67,12,0,68,344,0,0,[3,99891,0],[]],[0,67,12,0,68,345,0,0,[3,99891,0],[]],[0,67,12,0,68,346,0,0,[3,99891,0],[]],[0,67,12,0,68,347,0,0,[3,99891,0],[]],[0,146,12,0,147,348,0,0,[3,99891,0],[]],[0,64,12,0,65,349,0,0,[3,99891,0],[]],[0,64,12,0,65,350,0,0,[3,99891,0],[]],[0,67,12,0,68,348,0,0,[3,99891,0],[]],[0,67,12,0,68,351,0,0,[3,99891,0],[]],[0,67,12,0,68,352,0,0,[3,99891,0],[]],[0,146,12,0,147,353,0,0,[3,99891,0],[]],[0,64,12,0,65,354,0,0,[3,99891,0],[]],[0,64,12,0,65,355,0,0,[3,99891,0],[]],[0,64,12,0,65,356,0,0,[3,99891,0],[]],[0,64,12,0,65,357,0,0,[3,99891,0],[]],[0,64,12,0,65,358,0,0,[3,99891,0],[]],[0,64,12,0,65,359,0,0,[3,99891,0],[]],[0,64,12,0,65,360,0,0,[3,99891,0],[]],[0,64,12,0,65,361,0,0,[3,99891,0],[]],[0,67,12,0,68,353,0,0,[3,99891,0],[]],[0,67,12,0,68,362,0,0,[3,99891,0],[]],[0,67,12,0,68,363,0,0,[3,99891,0],[]],[0,67,12,0,68,364,0,0,[3,99891,0],[]],[0,67,12,0,68,365,0,0,[3,99891,0],[]],[0,67,12,0,68,366,0,0,[3,99891,0],[]],[0,67,12,0,68,367,0,0,[3,99891,0],[]],[0,67,12,0,68,368,0,0,[3,99891,0],[]],[0,67,12,0,68,369,0,0,[3,99891,0],[]],[0,146,12,0,147,370,0,0,[3,99891,0],[]],[0,64,12,0,65,371,0,0,[3,99891,0],[]],[0,64,12,0,65,372,0,0,[3,99891,0],[]],[0,67,12,0,68,370,0,0,[3,99891,0],[]],[0,67,12,0,68,373,0,0,[3,99891,0],[]],[0,67,12,0,68,374,0,0,[3,99891,0],[]],[0,146,12,0,147,375,0,0,[3,99891,0],[]],[0,64,12,0,65,376,0,0,[3,99891,0],[]],[0,67,12,0,68,375,0,0,[3,99891,0],[]],[0,67,12,0,68,377,0,0,[3,99891,0],[]],[0,40,7,0,43,73,0,0,[3,99891,0],[]]]]]],[0,41,7,0,42,299,0,0,[1,99891,3289],[[0,299,104,0,0,0,0,0,[1,99891,3289],[[0,146,12,0,147,300,0,0,[1,99891,288],[]],[0,40,7,0,43,297,0,0,[1,100179,3001],[[103180,2,298]]]]]]]]],[378,0,0,[142,379],[1,103180,5325],[[0,41,7,0,42,380,0,0,[1,103180,5325],[[0,380,104,0,0,0,0,0,[1,103180,5325],[[0,64,12,0,65,381,0,0,[1,103180,9],[]],[0,146,12,0,147,382,0,0,[1,103189,277],[]],[0,70,12,0,71,382,0,0,[1,103465,40],[[103465,2,383]]],[0,40,7,0,43,121,0,0,[1,103505,5000],[[108506,2,122]]]]]]]]],[384,0,0,[142,385],[1,108506,5437],[[0,41,7,0,42,386,0,0,[1,108506,5437],[[0,386,104,0,0,0,0,0,[1,108506,5437],[[0,64,12,0,65,387,0,0,[1,108506,9],[]],[0,146,12,0,147,388,0,0,[1,108515,277],[]],[0,70,12,0,71,388,0,0,[1,108792,41],[[108792,2,389]]],[0,40,7,0,43,121,0,0,[1,108833,5000],[[113833,2,122]]],[0,123,12,0,124,0,0,0,[1,113833,110],[[113943,2,390]]]]]]]]],[391,0,0,[392,393],[1,113943,5434],[[0,41,7,0,42,394,0,0,[1,113943,2163],[[0,394,395,0,0,0,0,0,[1,113943,2163],[[0,64,12,0,65,396,0,0,[1,113943,14],[]],[0,64,12,0,65,397,0,0,[1,113956,16],[]],[0,123,12,0,124,0,0,0,[1,113972,134],[[114106,2,398]]],[0,40,7,0,43,73,0,0,[1,114106,2000],[[116106,2,74]]]]]]],[0,41,7,0,42,299,0,0,[1,116106,3271],[[0,299,104,0,0,0,0,0,[1,116106,3271],[[0,146,12,0,147,300,0,0,[1,116106,270],[]],[0,40,7,0,43,297,0,0,[1,116376,3001],[[119377,2,298]]]]]]]]],[399,0,0,[142,400],[1,119377,5494],[[0,41,7,0,42,401,0,0,[1,119377,5494],[[0,401,104,0,0,0,0,0,[1,119377,5494],[[0,64,12,0,65,402,0,0,[1,119377,14],[]],[0,146,12,0,147,403,0,0,[1,119390,268],[]],[0,70,12,0,71,403,0,0,[1,119660,103],[[119660,2,404]]],[0,40,7,0,43,121,0,0,[1,119763,5000],[[124763,2,122]]],[0,123,12,0,124,0,0,0,[1,124763,108],[[124871,2,405]]]]]]]]],[406,0,0,[407,408],[1,124871,5420],[[0,41,7,0,42,409,0,0,[1,124871,2150],[[0,409,410,0,0,0,0,0,[1,124871,2150],[[0,64,12,0,65,411,0,0,[1,124871,17],[]],[0,64,12,0,65,412,0,0,[1,124888,16],[]],[0,123,12,0,124,0,0,0,[1,124904,117],[[125021,2,413]]],[0,40,7,0,43,73,0,0,[1,125021,2000],[[127021,2,74]]]]]]],[0,41,7,0,42,299,0,0,[1,127021,3270],[[0,299,104,0,0,0,0,0,[1,127021,3270],[[0,146,12,0,147,300,0,0,[1,127021,270],[]],[0,40,7,0,43,297,0,0,[1,127291,3000],[[130291,2,298]]]]]]]]],[414,0,0,[142,415],[1,130293,5318],[[0,41,7,0,42,416,0,0,[1,130293,5318],[[0,416,104,0,0,0,0,0,[1,130293,5318],[[0,64,12,0,65,417,0,0,[1,130293,16],[]],[0,146,12,0,147,418,0,0,[1,130309,268],[]],[0,70,12,0,71,418,0,0,[1,130577,34],[[130577,2,419]]],[0,40,7,0,43,121,0,0,[1,130611,5000],[[135612,2,122]]]]]]]]],[420,0,0,[142,421],[1,135612,5477],[[0,41,7,0,42,422,0,0,[1,135612,5477],[[0,422,104,0,0,0,0,0,[1,135612,5477],[[0,64,12,0,65,423,0,0,[1,135612,20],[]],[0,146,12,0,147,424,0,0,[1,135632,274],[]],[0,70,12,0,71,424,0,0,[1,135906,41],[[135907,2,425]]],[0,123,12,0,124,0,0,0,[1,135947,142],[[136089,2,426]]],[0,40,7,0,43,121,0,0,[1,136089,5000],[[141089,2,122]]]]]]]]],[427,0,0,[428,429],[1,141089,1553],[[0,41,7,0,42,430,0,0,[1,141089,1553],[[0,430,431,0,0,0,0,0,[1,141089,1553],[[0,64,12,0,65,432,0,0,[1,141089,6],[]],[0,64,12,0,65,433,0,0,[1,141095,16],[]],[0,64,12,0,65,434,0,0,[1,141110,16],[]],[0,64,12,0,65,435,0,0,[1,141126,16],[]],[0,64,12,0,65,436,0,0,[1,141141,16],[]],[0,64,12,0,65,437,0,0,[1,141157,16],[]],[0,64,12,0,65,438,0,0,[1,141173,0],[]],[0,64,12,0,65,439,0,0,[1,141173,16],[]],[0,64,12,0,65,440,0,0,[1,141189,16],[]],[0,64,12,0,65,441,0,0,[1,141204,21],[]],[0,64,12,0,65,442,0,0,[1,141225,11],[]],[0,64,12,0,65,443,0,0,[1,141236,16],[]],[0,64,12,0,65,444,0,0,[1,141251,17],[]],[0,64,12,0,65,445,0,0,[1,141269,15],[]],[0,67,12,0,68,446,0,0,[1,141283,162],[[141445,2,447]]],[0,67,12,0,68,448,0,0,[1,141445,98],[[141543,2,449]]],[0,67,12,0,68,450,0,0,[1,141543,98],[[141641,2,451]]],[0,67,12,0,68,452,0,0,[1,141641,102],[[141743,2,453]]],[0,67,12,0,68,454,0,0,[1,141743,103],[[141846,2,455]]],[0,67,12,0,68,456,0,0,[1,141846,95],[[141942,2,457]]],[0,67,12,0,68,458,0,0,[1,141942,100],[[142042,2,459]]],[0,67,12,0,68,460,0,0,[1,142042,100],[[142141,2,461]]],[0,67,12,0,68,462,0,0,[1,142141,101],[[142243,2,463]]],[0,67,12,0,68,464,0,0,[1,142244,99],[[142343,2,465]]],[0,67,12,0,68,466,0,0,[1,142343,99],[[142442,2,467]]],[0,67,12,0,68,468,0,0,[1,142442,99],[[142541,2,469]]],[0,67,12,0,68,470,0,0,[1,142541,100],[[142642,2,471]]]]]]]]],[472,0,0,[142,473],[1,142642,5464],[[0,41,7,0,42,474,0,0,[1,142642,5464],[[0,474,104,0,0,0,0,0,[1,142642,5464],[[0,64,12,0,65,475,0,0,[1,142642,21],[]],[0,146,12,0,147,476,0,0,[1,142663,280],[]],[0,70,12,0,71,476,0,0,[1,142943,37],[[142943,2,477]]],[0,123,12,0,124,0,0,0,[1,142980,125],[[143105,2,478]]],[0,40,7,0,43,121,0,0,[1,143105,5001],[[148106,2,122]]]]]]]]],[479,0,0,[428,480],[1,148106,139],[[0,41,7,0,42,481,0,0,[1,148106,139],[[0,481,482,0,0,0,0,0,[1,148106,139],[[0,64,12,0,65,483,0,0,[1,148106,12],[]],[0,64,12,0,65,484,0,0,[1,148118,16],[]],[0,67,12,0,68,485,0,0,[1,148133,111],[[148245,2,486]]]]]]]]],[487,0,0,[142,488],[1,148245,5331],[[0,41,7,0,42,489,0,0,[1,148245,5331],[[0,489,104,0,0,0,0,0,[1,148245,5331],[[0,64,12,0,65,490,0,0,[1,148245,18],[]],[0,146,12,0,147,491,0,0,[1,148263,280],[]],[0,70,12,0,71,491,0,0,[1,148543,32],[[148543,2,492]]],[0,40,7,0,43,121,0,0,[1,148575,5000],[[153576,2,122]]]]]]]]],[493,0,0,[142,494],[1,153576,5463],[[0,41,7,0,42,495,0,0,[1,153576,5463],[[0,495,104,0,0,0,0,0,[1,153576,5463],[[0,64,12,0,65,496,0,0,[1,153576,16],[]],[0,146,12,0,147,497,0,0,[1,153592,278],[]],[0,70,12,0,71,497,0,0,[1,153870,36],[[153871,2,498]]],[0,123,12,0,124,0,0,0,[1,153906,132],[[154038,2,499]]],[0,40,7,0,43,121,0,0,[1,154038,5000],[[159039,2,122]]]]]]]]],[500,0,0,[501,502],[1,159041,7548],[[0,41,7,0,42,503,0,0,[1,159041,2150],[[0,503,504,0,0,0,0,0,[1,159041,2150],[[0,64,12,0,65,505,0,0,[1,159041,16],[]],[0,70,12,0,71,506,0,0,[1,159057,46],[[159057,2,507]]],[0,67,12,0,68,506,0,0,[1,159104,87],[[159191,2,508]]],[0,40,7,0,43,73,0,0,[1,159191,2000],[[161191,2,74]]]]]]],[0,41,7,0,42,509,0,0,[1,161191,2134],[[0,509,504,0,0,0,0,0,[1,161191,2134],[[0,64,12,0,65,510,0,0,[1,161191,13],[]],[0,64,12,0,65,511,0,0,[1,161204,16],[]],[0,123,12,0,124,0,0,0,[1,161219,106],[[161325,2,512]]],[0,40,7,0,43,73,0,0,[1,161325,2000],[[163325,2,74]]]]]]],[0,41,7,0,42,299,0,0,[1,163325,3264],[[0,299,104,0,0,0,0,0,[1,163325,3264],[[0,146,12,0,147,300,0,0,[1,163325,264],[]],[0,40,7,0,43,297,0,0,[1,163589,3000],[[166589,2,298]]]]]]]]]],[],[31,28,3,0]];
+window.output["suite"] = [1,2,3,4,[],[0,0,247318],[],[[5,0,0,[],[1,363,2717],[[0,6,7,0,8,9,0,0,[1,364,2716],[[0,9,10,0,0,0,0,0,[1,364,2716],[[0,11,12,0,13,14,0,0,[1,364,2598],[[365,2,15]]],[0,16,12,0,17,0,0,0,[1,2963,116],[]]]]]]]],[18,0,0,[],[1,3081,6],[[0,6,7,0,8,19,0,0,[1,3081,5],[[0,19,10,0,0,0,0,0,[1,3082,4],[[0,20,21,0,22,23,24,0,[1,3082,0],[[3082,2,25]]],[0,26,27,0,28,29,0,0,[1,3082,2],[[3084,2,30]]],[0,31,7,0,32,29,33,0,[1,3084,1],[[3085,2,34]]],[0,35,12,0,36,33,0,0,[1,3085,1],[]],[0,37,7,0,38,33,0,0,[1,3086,0],[[3086,2,34]]]]]]]]],[39,0,0,[40,39],[1,3088,10003],[[0,41,7,0,42,43,0,0,[1,3088,10002],[[0,43,10,0,0,0,0,0,[1,3089,10001],[[0,40,7,0,44,45,0,0,[1,3089,10001],[[13090,2,46]]]]]]]]],[47,0,0,[48,49],[1,13091,3340],[[0,41,7,0,42,50,0,0,[1,13091,2155],[[0,50,51,0,0,0,0,0,[1,13092,2154],[[0,52,7,0,53,54,55,0,[1,13092,20],[[0,56,12,0,57,58,0,0,[1,13092,20],[[13112,2,59]]],[13112,2,60]]],[0,61,7,0,62,63,0,0,[1,13113,2133],[[0,64,51,0,0,0,0,0,[1,13113,2133],[[0,65,12,0,66,67,0,0,[1,13113,14],[]],[0,68,12,0,69,58,0,0,[1,13128,59],[[13187,2,70]]],[0,71,12,0,72,58,0,0,[1,13187,58],[[13187,2,73]]],[0,40,7,0,44,74,0,0,[1,13246,2000],[[15246,2,75]]]]]]]]]]],[0,41,7,0,42,76,0,0,[1,15247,1184],[[0,76,51,0,0,0,0,0,[1,15247,1184],[[0,77,12,0,78,79,0,0,[1,15247,33],[]],[0,80,12,0,81,82,0,0,[1,15280,76],[[15280,2,83]]],[0,68,12,0,69,79,0,0,[1,15356,73],[[15429,2,84]]],[0,40,7,0,44,85,0,0,[1,15429,1002],[[16431,2,86]]]]]]]]],[87,0,0,[88,49],[1,16432,1141],[[0,41,7,0,42,89,0,0,[1,16432,1141],[[0,89,51,0,0,0,0,0,[1,16432,1141],[[0,77,12,0,78,90,0,0,[1,16432,25],[]],[0,80,12,0,81,91,0,0,[1,16458,59],[[16458,2,92]]],[0,68,12,0,69,90,0,0,[1,16518,55],[[16573,2,93]]],[0,40,7,0,44,85,0,0,[1,16573,1000],[[17573,2,86]]]]]]]]],[94,0,0,[95,96],[1,17574,12104],[[0,41,7,0,42,97,0,0,[1,17575,2102],[[0,97,51,0,0,0,0,0,[1,17575,2102],[[0,68,12,0,69,98,0,0,[1,17575,58],[[17633,2,99]]],[0,71,12,0,72,98,0,0,[1,17634,43],[[17634,2,100]]],[0,40,7,0,44,74,0,0,[1,17677,2000],[[19677,2,75]]]]]]],[0,41,7,0,42,43,0,0,[1,19678,10000],[[0,43,10,0,0,0,0,0,[1,19678,10000],[[0,40,7,0,44,45,0,0,[1,19678,10000],[[29678,2,46]]]]]]]]],[101,0,0,[102,103],[1,29680,291],[[0,41,7,0,42,104,0,0,[1,29680,291],[[0,104,105,0,0,0,0,0,[1,29680,291],[[0,65,12,0,66,106,0,0,[1,29680,15],[]],[0,65,12,0,66,107,0,0,[1,29695,15],[]],[0,65,12,0,66,108,0,0,[1,29710,13],[]],[0,65,12,0,66,109,0,0,[1,29723,14],[]],[0,68,12,0,69,110,0,0,[1,29737,47],[[29784,2,111]]],[0,68,12,0,69,112,0,0,[1,29784,90],[[29873,2,113]]],[0,68,12,0,69,114,0,0,[1,29874,48],[[29922,2,115]]],[0,68,12,0,69,116,0,0,[1,29922,49],[[29971,2,117]]]]]]]]],[118,0,0,[119,103],[1,29972,5139],[[0,41,7,0,42,120,0,0,[1,29972,5139],[[0,120,105,0,0,0,0,0,[1,29972,5139],[[0,71,12,0,72,110,0,0,[1,29972,37],[[29973,2,121]]],[0,40,7,0,44,122,0,0,[1,30009,5000],[[35009,2,123]]],[0,124,12,0,125,0,0,0,[1,35009,102],[[35111,2,126]]]]]]]]],[127,0,0,[128,103],[1,35113,5140],[[0,41,7,0,42,129,0,0,[1,35113,5140],[[0,129,105,0,0,0,0,0,[1,35113,5140],[[0,71,12,0,72,112,0,0,[1,35113,40],[[35114,2,130]]],[0,40,7,0,44,122,0,0,[1,35153,5001],[[40154,2,123]]],[0,124,12,0,125,0,0,0,[1,40154,99],[[40253,2,131]]]]]]]]],[132,0,0,[133,103],[1,40255,5159],[[0,41,7,0,42,134,0,0,[1,40255,5158],[[0,134,105,0,0,0,0,0,[1,40255,5158],[[0,65,12,0,66,114,0,0,[1,40256,12],[]],[0,71,12,0,72,114,0,0,[1,40269,34],[[40269,2,135]]],[0,40,7,0,44,122,0,0,[1,40303,5000],[[45303,2,123]]],[0,124,12,0,125,0,0,0,[1,45303,110],[[45413,2,136]]]]]]]]],[137,0,0,[138,103],[1,45415,5149],[[0,41,7,0,42,139,0,0,[1,45415,5149],[[0,139,105,0,0,0,0,0,[1,45415,5149],[[0,65,12,0,66,109,0,0,[1,45415,12],[]],[0,71,12,0,72,116,0,0,[1,45427,33],[[45427,2,140]]],[0,40,7,0,44,122,0,0,[1,45460,5001],[[50461,2,123]]],[0,124,12,0,125,0,0,0,[1,50461,102],[[50563,2,141]]]]]]]]],[142,0,0,[143,144],[0,50565,10288,145],[[0,41,7,0,42,146,0,0,[0,50566,10286],[[0,146,105,0,0,0,0,0,[0,50566,10286],[[0,65,12,0,66,147,0,0,[0,50566,10286],[[60850,2,148],[60850,5,145]]],[0,149,12,0,150,151,0,0,[3,60852,0],[]],[0,71,12,0,72,151,0,0,[3,60852,0],[]],[0,40,7,0,44,122,0,0,[3,60852,0],[]],[0,124,12,0,125,0,0,0,[3,60852,0],[]]]]]]]],[152,0,0,[153,154],[0,60854,10099,145],[[0,41,7,0,42,155,0,0,[0,60854,10099],[[0,155,156,0,0,0,0,0,[0,60855,10098],[[0,65,12,0,66,147,0,0,[0,60855,10095],[[70950,2,157],[70950,5,145]]],[0,71,12,0,72,151,0,0,[3,70950,0],[]],[0,65,12,0,66,158,0,0,[3,70951,0],[]],[0,124,12,0,125,0,0,0,[3,70951,0],[]],[0,65,12,0,66,147,0,0,[3,70951,0],[]],[0,65,12,0,66,159,0,0,[3,70951,0],[]],[0,65,12,0,66,160,0,0,[3,70951,0],[]],[0,65,12,0,66,161,0,0,[3,70951,0],[]],[0,65,12,0,66,162,0,0,[3,70951,0],[]],[0,65,12,0,66,163,0,0,[3,70951,0],[]],[0,65,12,0,66,164,0,0,[3,70951,0],[]],[0,65,12,0,66,165,0,0,[3,70951,0],[]],[0,65,12,0,66,166,0,0,[3,70952,0],[]],[0,68,12,0,69,151,0,0,[3,70952,0],[]],[0,68,12,0,69,167,0,0,[3,70952,0],[]],[0,68,12,0,69,168,0,0,[3,70952,0],[]],[0,68,12,0,69,169,0,0,[3,70952,0],[]],[0,68,12,0,69,170,0,0,[3,70952,0],[]],[0,68,12,0,69,171,0,0,[3,70952,0],[]],[0,68,12,0,69,172,0,0,[3,70952,0],[]],[0,68,12,0,69,173,0,0,[3,70952,0],[]],[0,68,12,0,69,174,0,0,[3,70952,0],[]],[0,149,12,0,150,175,0,0,[3,70952,0],[]],[0,68,12,0,69,175,0,0,[3,70952,1],[]],[0,68,12,0,69,176,0,0,[3,70953,0],[]],[0,68,12,0,69,177,0,0,[3,70953,0],[]],[0,40,7,0,44,74,0,0,[3,70953,0],[]]]]]]]],[178,0,0,[153,179],[0,70955,10113,180],[[0,41,7,0,42,181,0,0,[0,70955,10113],[[0,181,156,0,0,0,0,0,[0,70955,10113],[[0,65,12,0,66,182,0,0,[0,70955,10112],[[81066,2,183],[81066,5,180]]],[0,149,12,0,150,184,0,0,[3,81067,0],[]],[0,71,12,0,72,184,0,0,[3,81067,0],[]],[0,40,7,0,44,74,0,0,[3,81067,0],[]],[0,124,12,0,125,0,0,0,[3,81067,0],[]]]]]]]],[185,0,0,[153,186],[0,81069,3285,187],[[0,41,7,0,42,188,0,0,[0,81070,8],[[0,188,0,0,0,0,0,0,[0,81078,0],[[81078,5,187]]]]],[0,41,7,0,42,189,0,0,[1,81078,3275],[[0,189,105,0,0,0,0,0,[1,81078,3275],[[0,149,12,0,150,190,0,0,[1,81079,273],[]],[0,40,7,0,44,191,0,0,[1,81352,3001],[[84353,2,192]]]]]]]]],[193,0,0,[143,194],[0,84355,10252,195],[[0,41,7,0,42,196,0,0,[0,84355,10251],[[0,196,105,0,0,0,0,0,[0,84356,10250],[[0,65,12,0,66,197,0,0,[0,84356,10250],[[94605,2,198],[94605,5,195]]],[0,149,12,0,150,199,0,0,[3,94606,0],[]],[0,71,12,0,72,199,0,0,[3,94606,0],[]],[0,40,7,0,44,122,0,0,[3,94606,0],[]],[0,124,12,0,125,0,0,0,[3,94606,0],[]]]]]]]],[200,0,0,[201,202],[0,94608,10314,203],[[0,41,7,0,42,204,0,0,[0,94609,10312],[[0,204,205,0,0,0,0,0,[0,94609,10312],[[0,65,12,0,66,206,0,0,[0,94609,10312],[[104920,2,207],[104920,5,203]]],[0,71,12,0,72,208,0,0,[3,104921,0],[]],[0,40,7,0,44,191,0,0,[3,104921,0],[]],[0,124,12,0,125,0,0,0,[3,104921,0],[]]]]]]]],[209,0,0,[201,210],[0,104923,13557,211],[[0,41,7,0,42,212,0,0,[0,104923,10277],[[0,212,205,0,0,0,0,0,[0,104923,10277],[[0,65,12,0,66,213,0,0,[1,104924,15],[]],[0,65,12,0,66,214,0,0,[0,104939,10255],[[115194,2,215],[115194,5,211]]],[0,68,12,0,69,216,0,0,[3,115194,0],[]],[0,68,12,0,69,217,0,0,[3,115195,0],[]],[0,65,12,0,66,218,0,0,[3,115195,0],[]],[0,65,12,0,66,219,0,0,[3,115195,0],[]],[0,65,12,0,66,220,0,0,[3,115195,0],[]],[0,65,12,0,66,221,0,0,[3,115195,0],[]],[0,65,12,0,66,222,0,0,[3,115195,0],[]],[0,65,12,0,66,223,0,0,[3,115195,0],[]],[0,65,12,0,66,224,0,0,[3,115195,0],[]],[0,65,12,0,66,225,0,0,[3,115195,0],[]],[0,65,12,0,66,226,0,0,[3,115195,0],[]],[0,65,12,0,66,227,0,0,[3,115195,1],[]],[0,65,12,0,66,228,0,0,[3,115196,0],[]],[0,68,12,0,69,229,0,0,[3,115196,0],[]],[0,68,12,0,69,230,0,0,[3,115196,0],[]],[0,68,12,0,69,231,0,0,[3,115196,0],[]],[0,68,12,0,69,232,0,0,[3,115196,0],[]],[0,68,12,0,69,233,0,0,[3,115196,0],[]],[0,68,12,0,69,234,0,0,[3,115196,0],[]],[0,68,12,0,69,235,0,0,[3,115196,0],[]],[0,68,12,0,69,236,0,0,[3,115196,0],[]],[0,68,12,0,69,237,0,0,[3,115196,0],[]],[0,68,12,0,69,238,0,0,[3,115197,0],[]],[0,68,12,0,69,239,0,0,[3,115197,0],[]],[0,149,12,0,150,240,0,0,[3,115197,0],[]],[0,65,12,0,66,241,0,0,[3,115197,0],[]],[0,65,12,0,66,242,0,0,[3,115197,0],[]],[0,68,12,0,69,240,0,0,[3,115197,0],[]],[0,68,12,0,69,243,0,0,[3,115197,0],[]],[0,68,12,0,69,244,0,0,[3,115197,0],[]],[0,149,12,0,150,245,0,0,[3,115197,0],[]],[0,65,12,0,66,246,0,0,[3,115197,0],[]],[0,65,12,0,66,247,0,0,[3,115197,0],[]],[0,65,12,0,66,248,0,0,[3,115197,1],[]],[0,65,12,0,66,249,0,0,[3,115198,0],[]],[0,65,12,0,66,250,0,0,[3,115198,0],[]],[0,65,12,0,66,251,0,0,[3,115198,0],[]],[0,65,12,0,66,252,0,0,[3,115198,0],[]],[0,65,12,0,66,253,0,0,[3,115198,0],[]],[0,68,12,0,69,245,0,0,[3,115198,0],[]],[0,68,12,0,69,254,0,0,[3,115198,0],[]],[0,68,12,0,69,255,0,0,[3,115198,0],[]],[0,68,12,0,69,256,0,0,[3,115198,0],[]],[0,68,12,0,69,257,0,0,[3,115198,1],[]],[0,68,12,0,69,258,0,0,[3,115199,0],[]],[0,68,12,0,69,259,0,0,[3,115199,0],[]],[0,68,12,0,69,260,0,0,[3,115199,0],[]],[0,68,12,0,69,261,0,0,[3,115199,0],[]],[0,149,12,0,150,262,0,0,[3,115199,0],[]],[0,65,12,0,66,263,0,0,[3,115199,0],[]],[0,65,12,0,66,264,0,0,[3,115199,0],[]],[0,68,12,0,69,262,0,0,[3,115199,0],[]],[0,68,12,0,69,265,0,0,[3,115199,0],[]],[0,68,12,0,69,266,0,0,[3,115199,0],[]],[0,149,12,0,150,267,0,0,[3,115199,1],[]],[0,65,12,0,66,268,0,0,[3,115200,0],[]],[0,68,12,0,69,267,0,0,[3,115200,0],[]],[0,68,12,0,69,269,0,0,[3,115200,0],[]],[0,40,7,0,44,74,0,0,[3,115200,0],[]]]]]],[0,41,7,0,42,189,0,0,[1,115200,3280],[[0,189,105,0,0,0,0,0,[1,115201,3279],[[0,149,12,0,150,190,0,0,[1,115201,276],[]],[0,40,7,0,44,191,0,0,[1,115477,3003],[[118480,2,192]]]]]]]]],[270,0,0,[143,271],[0,118481,10292,272],[[0,41,7,0,42,273,0,0,[0,118481,10292],[[0,273,105,0,0,0,0,0,[0,118481,10292],[[0,65,12,0,66,274,0,0,[0,118481,10291],[[128772,2,275],[128772,5,272]]],[0,149,12,0,150,276,0,0,[3,128773,0],[]],[0,71,12,0,72,276,0,0,[3,128773,0],[]],[0,40,7,0,44,122,0,0,[3,128773,0],[]]]]]]]],[277,0,0,[143,278],[0,128775,10273,279],[[0,41,7,0,42,280,0,0,[0,128775,10273],[[0,280,105,0,0,0,0,0,[0,128775,10273],[[0,65,12,0,66,281,0,0,[0,128776,10271],[[139046,2,282],[139047,5,279]]],[0,149,12,0,150,283,0,0,[3,139047,0],[]],[0,71,12,0,72,283,0,0,[3,139047,0],[]],[0,40,7,0,44,122,0,0,[3,139047,0],[]],[0,124,12,0,125,0,0,0,[3,139047,0],[]]]]]]]],[284,0,0,[285,286],[0,139049,13551,287],[[0,41,7,0,42,288,0,0,[0,139050,10282],[[0,288,289,0,0,0,0,0,[0,139050,10282],[[0,65,12,0,66,290,0,0,[0,139050,10281],[[149330,2,291],[149331,5,287]]],[0,65,12,0,66,292,0,0,[3,149331,0],[]],[0,124,12,0,125,0,0,0,[3,149331,0],[]],[0,40,7,0,44,74,0,0,[3,149331,0],[]]]]]],[0,41,7,0,42,189,0,0,[1,149332,3267],[[0,189,105,0,0,0,0,0,[1,149332,3267],[[0,149,12,0,150,190,0,0,[1,149332,266],[]],[0,40,7,0,44,191,0,0,[1,149598,3001],[[152599,2,192]]]]]]]]],[293,0,0,[143,294],[0,152601,10305,295],[[0,41,7,0,42,296,0,0,[0,152602,10304],[[0,296,105,0,0,0,0,0,[0,152602,10304],[[0,65,12,0,66,297,0,0,[0,152602,10303],[[162905,2,298],[162905,5,295]]],[0,149,12,0,150,299,0,0,[3,162905,0],[]],[0,71,12,0,72,299,0,0,[3,162906,0],[]],[0,40,7,0,44,122,0,0,[3,162906,0],[]],[0,124,12,0,125,0,0,0,[3,162906,0],[]]]]]]]],[300,0,0,[301,302],[1,162908,5404],[[0,41,7,0,42,303,0,0,[1,162908,2121],[[0,303,304,0,0,0,0,0,[1,162908,2121],[[0,65,12,0,66,305,0,0,[1,162908,18],[]],[0,65,12,0,66,306,0,0,[1,162926,14],[]],[0,124,12,0,125,0,0,0,[1,162940,89],[[163029,2,307]]],[0,40,7,0,44,74,0,0,[1,163029,2000],[[165029,2,75]]]]]]],[0,41,7,0,42,189,0,0,[1,165029,3282],[[0,189,105,0,0,0,0,0,[1,165029,3282],[[0,149,12,0,150,190,0,0,[1,165030,280],[]],[0,40,7,0,44,191,0,0,[1,165311,3000],[[168311,2,192]]]]]]]]],[308,0,0,[143,309],[0,168314,10291,310],[[0,41,7,0,42,311,0,0,[0,168314,10290],[[0,311,105,0,0,0,0,0,[0,168315,10289],[[0,65,12,0,66,312,0,0,[0,168315,10289],[[178603,2,313],[178603,5,310]]],[0,149,12,0,150,314,0,0,[3,178604,0],[]],[0,71,12,0,72,314,0,0,[3,178604,0],[]],[0,40,7,0,44,122,0,0,[3,178604,0],[]]]]]]]],[315,0,0,[143,316],[0,178606,10108,317],[[0,41,7,0,42,318,0,0,[0,178607,10106],[[0,318,105,0,0,0,0,0,[0,178607,10106],[[0,65,12,0,66,319,0,0,[0,178607,10105],[[188712,2,320],[188712,5,317]]],[0,149,12,0,150,321,0,0,[3,188713,0],[]],[0,71,12,0,72,321,0,0,[3,188713,0],[]],[0,124,12,0,125,0,0,0,[3,188713,0],[]],[0,40,7,0,44,122,0,0,[3,188713,0],[]]]]]]]],[322,0,0,[323,324],[0,188715,10288,325],[[0,41,7,0,42,326,0,0,[0,188715,10288],[[0,326,327,0,0,0,0,0,[0,188715,10288],[[0,65,12,0,66,328,0,0,[0,188715,10285],[[198999,2,329],[198999,5,325]]],[0,65,12,0,66,330,0,0,[3,199000,0],[]],[0,65,12,0,66,331,0,0,[3,199000,0],[]],[0,65,12,0,66,332,0,0,[3,199000,0],[]],[0,65,12,0,66,333,0,0,[3,199000,0],[]],[0,65,12,0,66,334,0,0,[3,199000,0],[]],[0,65,12,0,66,335,0,0,[3,199000,0],[]],[0,65,12,0,66,336,0,0,[3,199001,0],[]],[0,65,12,0,66,337,0,0,[3,199001,0],[]],[0,65,12,0,66,338,0,0,[3,199001,0],[]],[0,65,12,0,66,339,0,0,[3,199001,0],[]],[0,65,12,0,66,340,0,0,[3,199001,0],[]],[0,65,12,0,66,341,0,0,[3,199001,0],[]],[0,65,12,0,66,342,0,0,[3,199001,0],[]],[0,68,12,0,69,343,0,0,[3,199001,0],[]],[0,68,12,0,69,344,0,0,[3,199001,0],[]],[0,68,12,0,69,345,0,0,[3,199001,0],[]],[0,68,12,0,69,346,0,0,[3,199001,0],[]],[0,68,12,0,69,347,0,0,[3,199001,1],[]],[0,68,12,0,69,348,0,0,[3,199002,0],[]],[0,68,12,0,69,349,0,0,[3,199002,0],[]],[0,68,12,0,69,350,0,0,[3,199002,0],[]],[0,68,12,0,69,351,0,0,[3,199002,0],[]],[0,68,12,0,69,352,0,0,[3,199002,0],[]],[0,68,12,0,69,353,0,0,[3,199002,0],[]],[0,68,12,0,69,354,0,0,[3,199002,0],[]],[0,68,12,0,69,355,0,0,[3,199003,0],[]]]]]]]],[356,0,0,[143,357],[0,199005,10106,358],[[0,41,7,0,42,359,0,0,[0,199005,10105],[[0,359,105,0,0,0,0,0,[0,199005,10105],[[0,65,12,0,66,360,0,0,[0,199005,10105],[[209109,2,361],[209109,5,358]]],[0,149,12,0,150,362,0,0,[3,209110,0],[]],[0,71,12,0,72,362,0,0,[3,209110,0],[]],[0,124,12,0,125,0,0,0,[3,209110,0],[]],[0,40,7,0,44,122,0,0,[3,209110,0],[]]]]]]]],[363,0,0,[323,364],[0,209112,10298,365],[[0,41,7,0,42,366,0,0,[0,209113,10297],[[0,366,367,0,0,0,0,0,[0,209113,10297],[[0,65,12,0,66,368,0,0,[0,209113,10297],[[219409,2,369],[219409,5,365]]],[0,65,12,0,66,370,0,0,[3,219410,0],[]],[0,68,12,0,69,371,0,0,[3,219410,0],[]]]]]]]],[372,0,0,[143,373],[1,219412,14958],[[0,41,7,0,42,374,0,0,[1,219412,14957],[[0,374,105,0,0,0,0,0,[1,219412,14957],[[0,65,12,0,66,375,0,0,[1,219413,9631],[]],[0,149,12,0,150,376,0,0,[1,229044,277],[]],[0,71,12,0,72,376,0,0,[1,229321,48],[[229323,2,377]]],[0,40,7,0,44,122,0,0,[1,229369,5000],[[234369,2,123]]]]]]]]],[378,0,0,[143,379],[1,234371,5435],[[0,41,7,0,42,380,0,0,[1,234371,5434],[[0,380,105,0,0,0,0,0,[1,234372,5433],[[0,65,12,0,66,381,0,0,[1,234372,16],[]],[0,149,12,0,150,382,0,0,[1,234388,264],[]],[0,71,12,0,72,382,0,0,[1,234652,44],[[234652,2,383]]],[0,124,12,0,125,0,0,0,[1,234696,108],[[234804,2,384]]],[0,40,7,0,44,122,0,0,[1,234804,5001],[[239805,2,123]]]]]]]]],[385,0,0,[386,387],[1,239807,7509],[[0,41,7,0,42,388,0,0,[1,239808,2109],[[0,388,389,0,0,0,0,0,[1,239808,2109],[[0,65,12,0,66,390,0,0,[1,239808,17],[]],[0,71,12,0,72,391,0,0,[1,239826,39],[[239826,2,392]]],[0,68,12,0,69,391,0,0,[1,239865,52],[[239917,2,393]]],[0,40,7,0,44,74,0,0,[1,239917,2000],[[241917,2,75]]]]]]],[0,41,7,0,42,394,0,0,[1,241917,2115],[[0,394,389,0,0,0,0,0,[1,241918,2114],[[0,65,12,0,66,395,0,0,[1,241918,15],[]],[0,65,12,0,66,396,0,0,[1,241934,13],[]],[0,124,12,0,125,0,0,0,[1,241947,84],[[242031,2,397]]],[0,40,7,0,44,74,0,0,[1,242031,2001],[[244032,2,75]]]]]]],[0,41,7,0,42,189,0,0,[1,244033,3283],[[0,189,105,0,0,0,0,0,[1,244033,3283],[[0,149,12,0,150,190,0,0,[1,244034,280],[]],[0,40,7,0,44,191,0,0,[1,244315,3001],[[247316,2,192]]]]]]]]]],[],[31,15,16,0]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*HK Dealer Check","*C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Dealer\\HK_TC\\P1\\HK_Dealer_Check.robot","*HK_Dealer_Check.robot","*<p>Suite description\x3c/p>","*Test Setup","*Run Keywords","*BuiltIn","*<p>Executes all the given keywords in a sequence.\x3c/p>","*Open Chrome Browser","*HK_P1_Config","*Open Browser","*SeleniumLibrary","*<p>Opens a new browser instance to the optional <code>url\x3c/code>.\x3c/p>","*${p1HKDealer}    Chrome    executable_path=${driver_path}","*Opening browser 'Chrome' to base url '<a href=\"https://www.partslane.com.hk/hkdealer\">https://www.partslane.com.hk/hkdealer\x3c/a>'.","*Maximize Browser Window","*<p>Maximizes current browser window.\x3c/p>","*Screen Shot DIR","*Dealer Screent Shot DIR","*Get Current Date","*DateTime","*<p>Returns current local or UTC time with an optional increment.\x3c/p>","*result_format=%m-%d-%y %H-%M","*${currentdate}","*${currentdate} = 04-25-24 07-50","*Create Directory","*OperatingSystem","*<p>Creates the specified directory.\x3c/p>","*${Dealer_screenshot_path}/HK_${currentdate}","eNrFjbsKg0AURH9lsUnlI6IExNhoIJBGEtJdCIuO7Abjyr1r4d9ni/xDmhkGzmFahvYY1WgZg3e8q0OtlWFM52iyM6o0bSt6Clio04vF7DaL5CLerXoA9ftgNH96du/gC627N275zZzuELdx4DzEy2ZDUQc9g+kxMLCIccG63qg/hnxlRZyXcV6o7BSXWdT877tOdXNIvn/pZ2E=","*Convert To String","*<p>Converts the given item to a Unicode string.\x3c/p>","*${LogDIR}","*${LogDIR} = ..\\..\\..\\..\\..\\Resource\\testsuites\\Dealer\\Screenshots\\HK\\P1/HK_04-25-24 07-50","*Set Screenshot Directory","*<p>Sets the directory for captured screenshots.\x3c/p>","*Set Global Variable","*<p>Makes a variable available globally in all tests and suites.\x3c/p>","*TC Sleep","*Sleep","*Run Keyword And Continue On Failure","*<p>Runs the keyword and continues execution even if a failure occurs.\x3c/p>","*<p>Pauses the test executed for the given time.\x3c/p>","*10","*Slept 10 seconds.","*TC-001 - Input Valid Email","*TC006","*Valid Account","*User should be able to click Translate to English Button","*Login_Page_Keywords","*Run Keyword And Return Status","*<p>Runs the given keyword with given arguments and returns the status as a Boolean value.\x3c/p>","*element should be visible    ${Dealer_HK_LoginPage_English_Button}","*${EN}","*Element Should Be Visible","*<p>Verifies that the element identified by <code>locator\x3c/code> is visible.\x3c/p>","*${Dealer_HK_LoginPage_English_Button}","*Element '//dpp-language-toggle//span[contains(text(),'EN')]' is displayed.","*${EN} = True","*Run Keyword If","*<p>Runs the given keyword with the given arguments, if <code>condition\x3c/code> is true.\x3c/p>","*${EN}    Translate to English","*Translate to English","*Wait Until Element Is Visible","*<p>Waits until the element <code>locator\x3c/code> is visible.\x3c/p>","*${Dealer_HK_LoginPage_English_Button}    10","*Capture Element Screenshot","*<p>Captures a screenshot from the element identified by <code>locator\x3c/code> and embeds it into log file.\x3c/p>","eNqtjc0KAiEUhV9FhJbX65hDG3UdtAl6gBC1UZhxRI16/KRFTxCcn9X5jsLujcJejfraE7evrdis6ZEaZUms4aEpYzh0czWE3OLeG54veJ1G3rkEMYOQB8H5CWaOLawhp+cGo7eQO7TfDCZW8jK4aVtIq+7fYPJKvkdNJeflPW7Qmg+p4UXh","*Click Element","*<p>Click the element identified by <code>locator\x3c/code>.\x3c/p>","*Clicking element '//dpp-language-toggle//span[contains(text(),'EN')]'.","*2","*Slept 2 seconds.","*Input Valid Username","*Clear Element Text","*<p>Clears the value of the text-input-element identified by <code>locator\x3c/code>.\x3c/p>","*${Email}","*Input Text","*<p>Types the given <code>text\x3c/code> into the text field identified by <code>locator\x3c/code>.\x3c/p>","*${Email}    ${Username}","*Typing text 'hk.seller2.admin@test.com' into text field '//*[@type='email']'.","eNqtjc0KAiEUhV9FhJbXa+bQRl0PtAl6gBC1UZhxRI16/KRFTxCcn9X5jsLujcJejfraE7evrdis6YkaZUms4aEpYzh0czWE3OLeG84XvB5H3rkEMYGQB8H5GSaOLawhp+cGo7eQO7TfDAQreRnctC2kVfdvMHkl36OmkvPyHjdozQeqbEXj","*1","*Slept 1 second.","*TC-002 - Input Valid Password","*TC007","*Input Valid Password","*${Pass}","*${Pass}    ${Password}","*Typing text 'HKPass@12345' into text field '//*[@type='password']'.","eNqtjc0KAiEUhV9FhJZ6zXFoo66DNkEPEKI2CjOOeI16/KRFTxCcn9X5joYerIberP46EL+vWF0xdKJWO5JafBjKOQzdfIuxYNo7wvkC1+PIu1BMzkyqgxTixGYBGNdY8nNjo7dYOsPfjE28lmVw87YQbP7fYPLKoSdDlRD1PW7A2Q+q90Xl","*TC-003 - User should be able to click Login Button","*Login Button","*TC008","*User should be able to click Login Button","*${LoginButton}","eNqtjc0KAiEUhV9FhJbXa+bQRl0PtAl6gBC1UZhxRI16/KRFTxCcn9X5jsLujcJejfraE7evrdis6YkaZUms4aEpYzh0czWE3OLeG84XvB5H3rkEMYGQB8H5GSaOLawhp+cGo7eQO7TfDCQreRnctC2kVfdvMHkl36OmkvPyHjdozQergkXn","*Clicking element '//button[@type='submit']'.","*TC-004 - User should be able to view top navigation","*TC014","*Top Navigation","*User should be able to view top navigation in HK Dealer Home Page","*Home_Page_Keywords","*${HomepageUserAccount}    10","*${HomepageOrders}    10","*${HomepageReturn}    10","*${HomepageMessage}    10","*${HomepageUserAccount}","eNqtjU0KAiEcxa8iQkv9mylt1PVAm6ADhKiNwuiIGnX8pEUnCN7H6v2eguGNgtGM+tojt2+92qLxCRtlUWzhoTGlMHVzLYTS4z46LBe4HmfemSBcEi4OnLEzkQx62EJJz0xm51AG6b8ZkbSWdXJTXlFv7t9g9Ep+RI0FY/U9b8CaD6wNRek=","*${HomepageOrders}","eNqtjc0KAiEUhV9FhJZ6b+bURl0HbYIeIERtHBgdUaMeP2nREwTnZ3W+o6B7o6BXo772xG1rKzZreqBGWRJreGjKOQzdXA0ht7j1BucLXPcj7yiZmJiQO4F4YhNCC2vIyzOx0Snkztpvxo685HlwlzSTVt2/weS1+B41lYjlPW7Amg+smEXr","*${HomepageReturn}","eNqtjc0KAiEUhV9FhJbXa+YwG3UdtAl6gBjURmF0RI16/KRFTxCcn9X5jsLujMJejfraEbtvrSxZ0xM1aiGh+oemjOHQzVbvcwt7b3i+4PU48s4liAmEPAjOZ5g4Nr/5HJ8JRiefO7TfDGZW8jq4Ma2kVftvMHlF14OmkvPyHje4mA+tI0Xt","*${HomepageMessage}","eNqtjc0KAiEUhV9FhJZ6b+ZQC3UdtAl6gBC1cWB0RI16/KRFTxCcn9X5joLujYJejfraE7etrdis6YEaZUms4aEp5zB0czWE3OLWG5wvcN2PvKNkYmJC7gTikU0ILawhL8/ERqeQO2u/GTvxkufBXdJMWnX/BpPX4nvUVCKW97gBaz6trkXv","*TC-005 - User should be able to click account from top navigation","*TC015","*User should be able to click account from top navigation","*Clicking element '//dpp-login//button|(//dpp-login//button)[1]'.","*5","*Slept 5 seconds.","*Capture Page Screenshot","*<p>Takes a screenshot of the current page and embeds it into a log file.\x3c/p>","eNqz0S9JsbPRLymyswHjFIXk/JzigsQ8WyVjJTubRIWMotQ0WyU9PX0gCk4uSk3NK87ILynW9/DWDzAEkvEGJrpGprpGJqpGBgbmuqYG+sWpOal5maW5usVw5bqGegV56UDzMnPTFYqLkqlloEJ5ZkpJhq2ShYFBQQXQeP1EOwAg/j+3","*TC-006 - User should be able to click orders from top navigation","*TC016","*User should be able to click orders from top navigation","*Clicking element '//dpp-order-notification//cx-icon[@class='cx-icon dpp-icons__header-orders']'.","eNqz0S9JsbPRLymyswHjFIXk/JzigsQ8WyVjJTubRIWMotQ0WyU9PX0gCk4uSk3NK87ILynW9/DWDzAEkvEGJrpGprpGJqpGBgbmuqYG+sWpOal5maW5usVw5bpGegV56UDzMnPTFYqLkqlloEJ5ZkpJhq2ShYFBQQXQeP1EOwAhgT+5","*TC-007 - User should be able to click return from top navigation","*TC017","*User should be able to click return from top navigation","*Clicking element '//dpp-return-notification//cx-icon[@class='cx-icon dpp-icons__header-returns']'.","eNqz0S9JsbPRLymyswHjFIXk/JzigsQ8WyVjJTubRIWMotQ0WyU9PX0gCk4uSk3NK87ILynW9/DWDzAEkvEGJrpGprpGJqpGBgbmuqYG+sWpOal5maW5usVw5brGegV56UDzMnPTFYqLkqlloEJ5ZkpJhq2ShYFBQQXQeP1EOwAiBD+7","*TC-009 - User should be able to click messages from top navigation","*TC019","*User should be able to click messages from top navigation","*Clicking element '//dpp-message-notification//cx-icon[@class='cx-icon dpp-icons__message-header']'.","eNqtzEEKAiEYBeCriNBSfzOHWqjroE3QAULURmHGEX+jjp+06ATBe2/1+DT0YDX0ZvW3gfhtweqKoQdqtSOpxYehnMPIzbcYC6atI5wvcN2PvQvF5MSk2kkhjmwSgHGJJT9Xhr87U7yWeXh5nQk2/y+QvHLoydCTEPU9eHD2AyKHP70=","*TC-010 - User should be able to click orders from left navigation","*Left Navigation","*TC020","*User should be able to click orders from left navigation","*${HomepageOrdersMenu}    10","*Scroll Element Into View","*<p>Scrolls the element identified by <code>locator\x3c/code> into view.\x3c/p>","*${HomepageOrdersMenu}","*Clicking element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Orders ')]|//div[@class='acc-tab__title']//*[contains(text(),'Orders')]'.","eNqtzEEKAiEYBeCriNBSf7ORWqjroE3QAULURmHGEX+jjp+06ATBe2/1+DT0YDX0ZvW3gfhtweqKoQdqtSOpxYehnMPIzbcYC6atI5wvcN2PvYuJScXktJNCHJkSgHGJJT9Xhr87U7yWeXh5nQk2/y+QvHLoydCTEPU9eHD2AyMKP78=","*TC-011 - User should be able to view Cutomer Orders Panel","*Order Page","*TC033","*Element with locator '//a[@aria-label='previous page']' not found.","*User should be able to view Cutomer Orders Panel","*Orders_Page_Keywords","*${OrderPagePanelContainer}    10","eNqz0S9JsbPRLymyswHjFIXk/JzigsQ8WyVjJTubRIWMotQ0WyU9PX0gCk4uSk3NK87ILynW9/DWDzAEkvEGJrpGprpGJqpGBgbmuqYG+sWpOal5maW5usVw5bpmegV56UDzMnPTFYqLkqlloEJ5ZkpJhq2ShYFBQQXQeP1EOwAjjT/B","*${OrderPageTotalOrders}    10","*${OrderPageSortBar}    10","*${OrderPageStatusFilter}    10","*${OrderPageDateFilter}    10","*${OrderPageSearchBox}    10","*${OrderPageSearchButton}    10","*${OrderPageArrangeFilter}    10","*${OrderPageDetailsColumn}    10","eNqtjc0KAiEUhV9FhJZ6b+YQgboO2gQ9QIjaODA6okY9ftKiJwjOz+p8R0H3RkGvRn3tidvWVmzW9ECNsiTW8NCUcxi6uRpCbnHrDc4XuO5H3lEyMTEhdwLxyCaEFtaQl2dio1PInbXfjJ14yfPgLmkmrbp/g8lr8T1qKhHLe9yANR+uOUXx","*${OrderPageTotalOrders}","eNqtjc0KAiEUhV9FhJZ675hDG3UdtAl6gBC1UZhxRI16/KRFTxCcn9X5joLujYJejfraE7evrdis6ZEaZUms4aEp5zB0czWE3OLeG5wvcJ1G3lEyMTMhDwLxxGaEFtaQ03Njo7eQO2u/GZuQl7wMcNoW0qr7O5m8ku9RU4lY3uMHrPkAJfVGQQ==","*${OrderPageSortBar}","eNqtjU0KAiEcxa8iQkv9qzm0UddBm6ADhKiNwuiIGnX8pEUnCN7H6v2eguGNgtGM+tojt2+92qLxERtlUWzhoTGlMHVzLYTS4z46nC9w5TPvTBKxECEPgrETWRj0sIWSnpnMzqEM0n8zwjmtZZ3glFfUm/s7Gb2SH1FjyVh9zx+w5gMmgUZD","*${OrderPageStatusFilter}","eNqtjc0KAiEUhV9FhJbX65hDG3UdtAl6gBC1UZhxRI16/KRFTxCcn9X5jsLujcJejfraE7evrdis6ZEaZUms4aEpYzh0czWE3OLeG54veJ1G3rkEMYOQB8H5CWaOLawhp+cGo7eQO7TfDCbBSl4GOG0LadX9nUxeyfeoqeS8vMcPWvMBJw1GRQ==","*${OrderPageDateFilter}","eNqtjU0KAiEcxa8iQkv9O45DG3U90CboACFqozA6okYdP2nRCYL3sXq/J6E7LaFXLb92yB57KyYrPGMtDQrVPxSmFIZutnqfWzh6g/UC12nknQnCF8LFiTN2JguD5nef4zOR0cnnTtpvRqaZlrwNcEwbatX+nYxe0fWgsGCsvMcPGP0BJ5lGRw==","*${OrderPageSearchBox}","eNqtjc0KAiEUhV9FhJbX65hDG3UdtAl6gBC1UZhxRI16/KRFTxCcn9X5jsLujcJejfraE7evrdis6ZEaZUms4aEpYzh0czWE3OLeG54veJ1G3rkEMYOQB8H5CWaOLawhp+cGo7eQO7TfDCbJSl4GOG0LadX9nUxeyfeoqeS8vMcPWvMBKCVGSQ==","*${OrderPageSearchButton}","eNqtjU0KAiEcxa8iQkv9O6a0UddBm6ADhKiNwuiIGnX8pEUnCN7H6v2eguGNgtGM+tojt2+92qLxERtlUWzhoTGlMHVzLYTS4z46nC9wXWbemSBcEi4OnLETkQx62EJJz0xm51AG6b8ZWSStZZ3glFfUm/s7Gb2SH1FjwVh9zx+w5gMosUZL","*${OrderPageArrangeFilter}","eNqtjU0KAiEcxa8iQkv9O+bURl0PtAk6QIjaKIyOqFHHT1p0guB9rN7vSehOS+hVy68dsvvWiskKH7GWBoXqHwpTCkM3W73PLey9wXKB6zTyzgThM+HiwBk7k5lB85vP8ZnI6ORzJ+03I9OJlrwOcEwratX+nYxe0fWgsGCsvMcPGP0BKT1GTQ==","*${OrderPageDetailsColumn}","eNqtjU0KAiEcxa8iQkv9O+YwG3U90CboACFqozA6okYdP2nRCYL3sXq/J6E7LaFXLb92yB57KyYrfMZaGhSqfyhMKQzdbPU+t3D0BusFrtPIOxOEz4SLE2dsITOD5nef4zOR0cnnTtpvRqaFlrwNcEwbatX+nYxe0fWgsGCsvMcPGP0BKclGTw==","*${OrderPageDetailsPreviousPageButton}","eNqz0S9JsbPRLymyswHjFIXk/JzigsQ8WyVjJTubRIWMotQ0WyU9PX0gCk4uSk3NK87ILynW9/DWDzAEkvEGJrpGprpGJqpGBgbmuqYG+sWpOal5maW5usVw5brmegV56UDzMnPTFYqLkqlloEJ5ZkpJhq2ShYFBQQXQeP1EOwAkED/D","*${OrderPageDetailsNextPageButton}","*${OrderPageDetailsPage1Button}","*TC-012 - User should be able to select one order from the list","*TC034","*User should be able to select one order from the list","*${OrderPageHistory1}    10","*${OrderPageHistory1}","eNpzzslMzs7MS1dIzUnNTc0rUVDX0NcvKQLilGiH5JzE4mJb9eQK3fyilNQi3YzM4pL8okrd5PyUVPVYff1E3ErKEnNKgWo0ow1ja4g2EaRaXQ8A7UkzPA==","eNqz0S9JsbPRLymyswHjFIXk/JzigsQ8WyVjJTubRIWMotQ0WyU9PX0gCk4uSk3NK87ILynW9/DWDzAEkvEGJrpGprpGJqpGBgbmuqYG+sWpOal5maW5usVw5boWegV56UDzMnPTFYqLkqlloEJ5ZkpJhq2ShYFBQQXQeP1EOwAkkz/F","*TC-013 - User should be able to view order details","*TC035","*User should be able to view order details in HK Order Details Page","*${OrderDetailsOrderHeader}    20","*${OrderDetailsOrderStatus}    10","*${OrderDetailsContainer}    10","*${OrderDetailsContainer}","eNqtjU0KAiEcxa8iQkv9O+ZQC3U90CboACFqozA6okYdP2nRCYL3sXq/J6E7LaFXLb92yO5bKyYrfMRaGhSqfyhMKQzdbPU+t7D3BssFrtPIOxOEz4SLA2fsRGYGzW8+x2cio5PPnbTfjExnWvI6wDGtqFX7dzJ6RdeDwoKx8h4/YPQHKlVGUQ==","*${OrderDetailsContainerRefNumLabel}    10","*${OrderDetailsContainerCustNameLabel}    10","*${OrderDetailsContainerComNameLabel}    10","*${OrderDetailsContainerADPLabel}    10","*${OrderDetailsContainerMembershipLabel}    10","*${OrderDetailsContainerOrderDateLabel}    10","*${OrderDetailsContainerPaymenMethodLabel}    10","*${OrderDetailsContainerDeliveryMethodLabel}    10","*${OrderDetailsContainerRefNumLabel}","eNqtjU0KAiEcxa8iQkv9O+YQgboeaBN0gBC1URgdUaOOn7ToBMH7WL3fk9CdltCrll87ZPetFZMVPmItDQrVPxSmFIZutnqfW9h7g+UC12nknQnCZ8LFgTN2IjOD5jef4zOR0cnnTtpvRqYzLXkd4JhW1Kr9Oxm9outBYcFYeY8fMPoDKuFGUw==","*${OrderDetailsContainerCustNameLabel}","eNqtjc0KAiEUhV9FhJZ6b+bQRl0PtAl6gBC1UZhxRI16/KRFTxCcn9X5joLujYJejfraE7evrdis6YkaZUms4aEp5zB0czWE3OLeG8wXuB5H3lEyMTEhDwLxzCaEFtaQ03Njo7eQO2u/GRPIS14GOG0LadX9nUxeyfeoqUQs7/ED1nwAJoNGQw==","*${OrderDetailsContainerComNameLabel}","eNqtjc0KAiEUhV9FhJbX65hDG3UdtAl6gBC1UZhxRI16/KRFTxCcn9X5jsLujcJejfraE7evrdis6ZEaZUms4aEpYzh0czWE3OLeG54veJ1G3rkEMYOQB8H5CWaOLawhp+cGo7eQO7TfDMTESl4GOG0LadX9nUxeyfeoqeS8vMcPWvMBJw9GRQ==","*${OrderDetailsContainerADPLabel}","eNqtjc0KAiEUhV9FhJbXa+bQRl0PtAl6gBC1UZhxRI16/KRFTxCcn9X5jsLujcJejfraE7evrdis6YkaZUms4aEpYzh0czWE3OLeG84XvB5H3rkEMYGQB8H5GSaOLawhp+cGo7eQO7TfDIRgJS8DnLaFtOr+Tiav5HvUVHJe3uMHrfkAJ5tGRw==","*${OrderDetailsContainerMembershipLabel}","eNqtjc0KAiEUhV9FhJZ6zXFoo66DNkEPEKI2CjOOeI16/KRFTxCcn9X5joYerIberP46EL+vWF0xdKJWO5JafBjKOQzdfIuxYNo7wvkC1+PIu1BMzkyqgxTixGYBGNdY8nNjo7dYOsPfjMmJ17IMcN4Wgs3/nUxeOfRkqBKivscPOPsBKCdGSQ==","*${OrderDetailsContainerOrderDateLabel}","eNqtTcsKAiEU/RURWuq9mUMbdT3QJugDQtRGYcYRNerzkxZ9QXAem/NQ0L1R0KtRX3ri9rUVmzU9UaMsiTU8NOUcBm6uhpBb3HuD+QLX49A7SiYmJuRBIJ7ZhNDCGnJ6bmz4FnJn7VcbMV7yMobTtpBW3d+XySv5HjWViOU9fsCaDyizRks=","*${OrderDetailsContainerPaymenMethodLabel}","eNqtTcsKAiEU/RURWuq9mUMbdT3QJugDQtRGYcYRNerzkxZ9QXAem/NQ0L1R0KtRX3ri9rUVmzU9UaMsiTU8NOUcBm6uhpBb3HuD+QLX49A7SiYmJuRBIJ7ZhNDCGnJ6bmz4FnJn7VcbSV7yMobTtpBW3d+XySv5HjWViOU9fsCaDyk/Rk0=","*${OrderDetailsContainerDeliveryMethodLabel}","eNqtjc0KAiEUhV9FhJZ6b+bURl0HbYIeIERtHBgdUaMeP2nREwTnZ3W+o6B7o6BXo772xG1rKzZreqBGWRJreGjKOQzdXA0ht7j1BucLXPcj7yiZmJiQO4F4YhNCC2vIyzOx0SnkztpvxsSRlzwP8JJm0qr7O5m8Ft+jphKxvMcPWPMBKctGTw==","*${OrderDetailsContainerRefNumValue}    10","*${OrderDetailsContainerCustNameValue}    10","*${OrderDetailsContainerComNameValue}    10","*${OrderDetailsContainerADPValue}    10","*${OrderDetailsContainerMembershipValue}    10","*${OrderDetailsContainerPaymenMethodValue}    10","*${OrderDetailsContainerOrderDateValue}    10","*${OrderDetailsContainerDeliveryMethodValue}    10","*${OrderDetailsContainerRefNumValue}","eNqtjc0KAiEUhV9FhJbXa+YwG3UdtAl6gBjURmF0RI16/KRFTxCcn9X5jsLujMJejfraEbtvrSxZ0xM1aiGh+oemjOHQzVbvcwt7b3i+4PU48s4liAmEPAjOZ5g4Nr/5HJ8JRiefO7TfDMTMSl4HOKaVtGr/Tiav6HrQVHJe3uMHF/MBKldGUQ==","*${OrderDetailsContainerCustNameValue}","eNqtjc0KAiEUhV9FhJZ6b+ZQC3UdtAl6gBC1cWB0RI16/KRFTxCcn9X5joLujYJejfraE7etrdis6YEaZUms4aEp5zB0czWE3OLWG5wvcN2PvKNkYmJC7gTikU0ILawhL8/ERqeQO2u/GRMnXvI8wEuaSavu72TyWnyPmkrE8h4/YM0HKuNGUw==","*${OrderDetailsContainerComNameValue}","eNqtjc0KAiEUhV9FhJZ6b+YQgboO2gQ9QIjaODA6okY9ftKiJwjOz+p8R0H3RkGvRn3tidvWVmzW9ECNsiTW8NCUcxi6uRpCbnHrDc4XuO5H3lEyMTEhdwLxyCaEFtaQl2dio1PInbXfjIkTL3ke4CXNpFX3dzJ5Lb5HTSVieY8fsOYDK29GVQ==","*${OrderDetailsContainerADPValue}","eNqtjc0KAiEUhV9FhJZ6b45DG3UdtAl6gBC1UZhxRI16/KRFTxCcn9X5joLujYJejfraE7evrdis6USNsiTW8NCUcxi6uRpCbnHvDc4XuB5H3lEyMTMhDwLxxGaEFtaQ03Njo7eQO2u/GZuQl7wMcNoW0qr7O5m8ku9RU4lY3uMHrPkAJxFGRQ==","*${OrderDetailsContainerMembershipValue}","eNqtjU0KAiEcxa8iQkv9O45DG3U90CboACFqozA6okYdP2nRCYL3sXq/J6E7LaFXLb92yB57KyYrPGMtDQrVPxSmFIZutnqfWzh6g/UC12nknQnCF8LFiTN2JguD5nef4zOR0cnnTtpvRuaJlrwNcEwbatX+nYxe0fWgsGCsvMcPGP0BJ51GRw==","*${OrderDetailsContainerOrderDateValue}","eNqtjc0KAiEUhV9FhJZ6zXFoo66DNkEPEKI2CjOOeI16/KRFTxCcn9X5joYerIberP46EL+vWF0xdKJWO5JafBjKOQzdfIuxYNo7wvkC1+PIu1BMzkyqgxTixGYBGNdY8nNjo7dYOsPfjE2S17IMcN4Wgs3/nUxeOfRkqBKivscPOPsBKClGSQ==","*${OrderDetailsContainerPaymenMethodValue}","eNqtjU0KAiEcxa8iQkv9mzq0UddBm6ADhKiNwuiIGnX8pEUnCN7H6v2eguGNgtGM+tojt2+92qKxwEZZFFt4aEwpTN1cC6H0uI8O5wtcjzPvTBK+EC4PnLETWRj0sIWSnpnMzqEM0n8zIgStZZ3glFfUm/s7Gb2SH1FjyVh9zx+w5gMotUZL","*${OrderDetailsContainerDeliveryMethodValue}","eNqtjc0KAiEUhV9FhJZ6zXFoo66DNkEPEKI2CjOOeI16/KRFTxCcn9X5joYerIberP46EL+vWF0xdKJWO5JafBjKOQzdfIuxYNo7wvkC1+PIu1BMzkyqgxTixGYBGNdY8nNjo7dYOsPfjE2K17IMcN4Wgs3/nUxeOfRkqBKivscPOPsBKUFGTQ==","*${OrderDetailsReturnContainer}","eNqtjU0KAiEcxa8iQkv9m6O0UddBm6ADhKiNwuiIGnX8pEUnCN7H6v2eguGNgtGM+tojt2+92qLxgo2yKLbw0JhSmLq5FkLpcR8dzhe4HmfemSBcEi4OnLETkQx62EJJz0xm51AG6b8ZWSStZZ3glFfUm/s7Gb2SH1FjwVh9zx+w5gMpzUZP","*${OrderDetailsReturnHeader}    10","*${OrderDetailsReturnDescription}    10","*${OrderDetailsReturnPrice}    10","*${OrderDetailsReturnRRP}    10","*${OrderDetailsReturnOrder}    10","*${OrderDetailsReturnShipped}    10","*${OrderDetailsReturnPending}    10","*${OrderDetailsReturnTotal}    10","*${OrderDetailsReturnHeader}","eNqtjU0KAiEcxa8iQkv9O45TG3UdtAk6QIjaKIyOqFHHT1p0guB9rN7vSehOS+hVy68dsvvWiskKz1hLg0L1D4UphaGbrd7nFvbe4HyB6zTyzgThC+HiwBk7kYVB85vP8ZnI6ORzJ+03I/ORlrwOcEwratX+nYxe0fWgsGCsvMcPGP0BKllGUQ==","*${OrderDetailsReturnDescription}","eNqtjU0KAiEcxa8iQkv9m+MwG3U90CboACFqozA6okYdP2nRCYL3sXq/J6E7LaFXLb92yB57KyYrPGEtDQrVPxSmFIZutnqfWzh6g/UC1/PIOxOEz4SLE2dsITOD5nef4zOR0cnnTtpvRqaFlrwNcEwbatX+nYxe0fWgsGCsvMcPGP0BKuVGUw==","*${OrderDetailsReturnPrice}","eNqtjU0KAiEcxa8iQkv9O45DLdR10CboACFqozA6okYdP2nRCYL3sXq/J6E7LaFXLb92yO5bKyYrPGMtDQrVPxSmFIZutnqfW9h7g/MFrtPIOxOEL4SLA2fsSBYGzW8+x2cio5PPnbTfjMwnWvI6wDGtqFX7dzJ6RdeDwoKx8h4/YPQHK3FGVQ==","*${OrderDetailsReturnRRP}","eNqtjU0KAiEcxa8iQkv9O45DBOo6aBN0gBC1URgdUaOOn7ToBMH7WL3fk9CdltCrll87ZPetFZMVnrGWBoXqHwpTCkM3W73PLey9wfkC12nknQnCF8LFgTN2JAuD5jef4zOR0cnnTtpvRuYTLXkd4JhW1Kr9Oxm9outBYcFYeY8fMPoDK/1GVw==","*${OrderDetailsReturnOrder}","eNqtjc0KAiEUhV9FhJZ6b+bQRl0PtAl6gBC1UZhxRI16/KRFTxCcn9X5joLujYJejfraE7evrdis6YkaZUms4aEp5zB0czWE3OLeG8wXuB5H3lEyMTEhDwLxzCaEFtaQ03Njo7eQO2u/GZPIS14GOG0LadX9nUxeyfeoqUQs7/ED1nwAJ59GRw==","*${OrderDetailsReturnShipped}","eNqtjc0KAiEUhV9FhJbX65hDG3UdtAl6gBC1UZhxRI16/KRFTxCcn9X5jsLujcJejfraE7evrdis6ZEaZUms4aEpYzh0czWE3OLeG54veJ1G3rkEMYOQB8H5CWaOLawhp+cGo7eQO7TfDOTESl4GOG0LadX9nUxeyfeoqeS8vMcPWvMBKCtGSQ==","*${OrderDetailsReturnPending}","eNqtjc0KAiEUhV9FhJbXa+bQRl0PtAl6gBC1UZhxRI16/KRFTxCcn9X5jsLujcJejfraE7evrdis6YkaZUms4aEpYzh0czWE3OLeG84XvB5H3rkEMYGQB8H5GSaOLawhp+cGo7eQO7TfDKRgJS8DnLaFtOr+Tiav5HvUVHJe3uMHrfkAKLdGSw==","*${OrderDetailsReturnTotal}","eNqtjc0KAiEUhV9FhJZ6zXFoo66DNkEPEKI2CjOOeI16/KRFTxCcn9X5joYerIberP46EL+vWF0xdKJWO5JafBjKOQzdfIuxYNo7wvkC1+PIu1BMzkyqgxTixGYBGNdY8nNjo7dYOsPfjKmJ17IMcN4Wgs3/nUxeOfRkqBKivscPOPsBKUNGTQ==","*${OrderDetailsBillingContainer}","eNqtjc0KAiEUhV9FhJbXa+bQRl0PtAl6gBC1UZhxRI16/KRFTxCcn9X5jsLujcJejfraE7evrdis6YkaZUms4aEpYzh0czWE3OLeG84XvB5H3rkEMYGQB8H5GSaOLawhp+cGo7eQO7TfDKRkJS8DnLaFtOr+Tiav5HvUVHJe3uMHrfkAKc9GTw==","*${OrderDetailsBillingLabel}    10","*${OrderDetailsOrderSummaryLabel}    10","*${OrderDetailsBillingDetailsAndTotal}    10","*${OrderDetailsAddressField}    10","*${OrderDetailsSummaryField}    10","*${OrderDetailsDeliveryInstructionField}    10","*${OrderDetailsBillingLabel}","eNqtjU0KAiEcxa8iQkv9mylt1PVAm6ADhKiNwuiIGnX8pEUnCN7H6v2eguGNgtGM+tojt2+92qLxCRtlUWzhoTGlMHVzLYTS4z46LBe4HmfemSBcEi4OnLEzkQx62EJJz0xm51AG6b8ZEZLWsk5wyivqzf2djF7Jj6ixYKy+5w9Y8wEqW0ZR","*${OrderDetailsOrderSummaryLabel}","eNqtjc0KAiEUhV9FhJZ6b+bURl0HbYIeIERtHBgdUaMeP2nREwTnZ3W+o6B7o6BXo772xG1rKzZreqBGWRJreGjKOQzdXA0ht7j1BucLXPcj7yiZmJiQO4F4YhNCC2vIyzOx0SnkztpvxuSRlzwP8JJm0qr7O5m8Ft+jphKxvMcPWPMBKudGUw==","*${OrderDetailsBillingDetailsAndTotal}","eNqtjc0KAiEUhV9FhJbXa+YwG3UdtAl6gBjURmF0RI16/KRFTxCcn9X5jsLujMJejfraEbtvrSxZ0xM1aiGh+oemjOHQzVbvcwt7b3i+4PU48s4liAmEPAjOZ5g4Nr/5HJ8JRiefO7TfDOTMSl4HOKaVtGr/Tiav6HrQVHJe3uMHF/MBK3NGVQ==","*${OrderDetailsAddressField}","eNqtjc0KAiEUhV9FhJZ6b+ZQC3UdtAl6gBC1cWB0RI16/KRFTxCcn9X5joLujYJejfraE7etrdis6YEaZUms4aEp5zB0czWE3OLWG5wvcN2PvKNkYmJC7gTikU0ILawhL8/ERqeQO2u/GZMnXvI8wEuaSavu72TyWnyPmkrE8h4/YM0HK/9GVw==","*${OrderDetailsSummaryField}","eNqtjc0KAiEUhV9FhJZ6b+YQgboO2gQ9QIjaODA6okY9ftKiJwjOz+p8R0H3RkGvRn3tidvWVmzW9ECNsiTW8NCUcxi6uRpCbnHrDc4XuO5H3lEyMTEhdwLxyCaEFtaQl2dio1PInbXfjMkTL3ke4CXNpFX3dzJ5Lb5HTSVieY8fsOYDLItGWQ==","*${OrderDetailsDeliveryInstructionField}","eNqtTc0KAiEYfBUROur3ZS5d1PNCl6AHCFFbhV1X1KjHTzr0BMH8HIaZUdC9UdCrUV964va1FZs1PVGjLIk1PDTlHAZuroaQW9x7g/kC1+PQO0omJibkQSCe2YTQwhpyem5s+BZyZ+1XGzEveRnDaVtIq+7vy+SVfI+aSsTyHj9gzQcoLUZJ","*3","*Slept 3 seconds.","*TC Move to Top","*${HomepageMyAccountLabel}","*TC-014 - User should be able to click Return from left navigation","*TC021","*User should be able to click Return from left navigation","*${HomepageReturnMenu}    10","*${HomepageReturnMenu}","*Clicking element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Return ')]|//div[@class='acc-tab__title']//*[contains(text(),'Return')]'.","eNqz0S9JsbPRLymyswHjFIXk/JzigsQ8WyVjJTubRIWMotQ0WyU9PX0gCk4uSk3NK87ILynW9/DWDzAEkvEGJrpGprpGJqpGBgbmuqYG+sWpOal5maW5usVw5bqWegV56UDzMnPTFYqLkqlloEJ5ZkpJhq2ShYFBQQXQeP1EOwAlFj/H","*TC-015 - User should be able to select one return from the list","*Return Page","*TC037","*Element '(//td//a[@class='cx-return-requests-value'])[1]|(//div//a[@class='cx-return-requests-value'])[1]' not visible after 10 seconds.","*User should be able to select one return from the list","*Return_Page_Keywords","*${ReturnPageHistory1}    10","eNqtzEEKAiEYBeCriNBS/39shlqo64E2QQcIURuFGUfUqOMnLTpB8N5bPT4JzWkJrWj5rSN2X2s2SdEj1dKQUPxDUc6h52aL96mGvVWYL3Ad+t5xZGJiYjwIxBObEKpffYrPjdXfnQ3Ic1o6GLeF1GL/JpJXdC0oekbM7+6D0R+SPkAX","*${ReturnPageHistory1}","*TC-016 - User should be able to view Return details","*TC038","*Element '//span[@class='status']' not visible after 10 seconds.","*User should be able to view Return details in HK Return Details Page","*${ReturnPageOrderDetailsHeader}    20","*${ReturnPageOrderDetailsStatus}    10","eNqz0S9JsbPRLymyswHjFIXk/JzigsQ8WyVjJTubRIWMotQ0WyU9PX0gCk4uSk3NK87ILynW9/DWDzAEkvEGJrpGprpGJqpGBgbmuqYG+sWpOal5maW5usVw5bqGhnoFeelAAzNz0xWKi5KpZqJCeWZKSYatkoWBQUEF0Hz9RDsAksJAGQ==","*${ReturnPageOrderDetailsHeader}","*${ReturnPageOrderDetailsStatus}","*${ReturnPageOrderDetailsContainer}    10","*${ReturnPageOrderDetailsPartsRefLabel}    20","*${ReturnPageOrderDetailsCustNameLabel}    10","*${ReturnPageOrderDetailsOrderDateLabel}    10","*${ReturnPageOrderDetailsRetReqDateLabel}    10","*${ReturnPageOrderDetailsPartsRefValue}    10","*${ReturnPageOrderDetailsCustOrderNumValue}    10","*${ReturnPageOrderDetailsCustNameValue}    10","*${ReturnPageOrderDetailsSupRefValue}    10","*${ReturnPageOrderDetailsSupValue}    10","*${ReturnPageOrderDetailsOrderDateValue}    10","*${ReturnPageOrderDetailsContainer}","*${ReturnPageOrderDetailsPartsRefLabel}","*${ReturnPageOrderDetailsCustNameLabel}","*${ReturnPageOrderDetailsOrderDateLabel}","*${ReturnPageOrderDetailsRetReqDateLabel}","*${ReturnPageOrderDetailsPartsRefValue}","*${ReturnPageOrderDetailsCustOrderNumValue}","*${ReturnPageOrderDetailsCustNameValue}","*${ReturnPageOrderDetailsSupRefValue}","*${ReturnPageOrderDetailsSupValue}","*${ReturnPageOrderDetailsOrderDateValue}","*${ReturnPageOrderReturnContainer}","*${ReturnPageOrderReturnHeader}    10","*${ReturnPageOrderReturnItemList}    10","*${ReturnPageOrderReturnHeader}","*${ReturnPageOrderReturnItemList}","*${ReturnPageOrderReturnDataSectionContainer}","*${ReturnPageOrderReturnDataSectionReasonLabel}    10","*${ReturnPageOrderReturnDataSectionReasonSelection}    10","*${ReturnPageOrderReturnDataSectionQtyLabel}    10","*${ReturnPageOrderReturnDataSectionQtyValue}    10","*${ReturnPageOrderReturnDataSectionNoteLabel}    10","*${ReturnPageOrderReturnDataSectionNoteTextField}    10","*${ReturnPageOrderReturnDataSectionImageLabel}    10","*${ReturnPageOrderReturnDataSectionImageField}    10","*${ReturnPageOrderReturnDataSectionReasonLabel}","*${ReturnPageOrderReturnDataSectionReasonSelection}","*${ReturnPageOrderReturnDataSectionQtyLabel}","*${ReturnPageOrderReturnDataSectionQtyValue}","*${ReturnPageOrderReturnDataSectionNoteLabel}","*${ReturnPageOrderReturnDataSectionNoteTextField}","*${ReturnPageOrderReturnDataSectionImageLabel}","*${ReturnPageOrderReturnDataSectionImageField}","*${ReturnPageOrderReturnApproveRejectContainer}","*${ReturnPageOrderReturnNoteLabel}    10","*${ReturnPageOrderReturnApproveRejectNoteTextField}    10","*${ReturnPageOrderReturnNoteLabel}","*${ReturnPageOrderReturnApproveRejectNoteTextField}","*${ReturnPageOrderReturnMessageContainer}","*${ReturnPageOrderReturnMessageSupplierButton}    10","*${ReturnPageOrderReturnMessageSupplierButton}","*TC-022 - User should be able to click and expand Customer Management","*TC022","*User should be able to click and expand Customer Management","*${HomepageCustomerMenu}    10","*${HomepageCustomerMenu}","*Clicking element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Customer ')]|//div[@class='acc-tab__title']//*[contains(text(),'Customer')]'.","*TC-023 - User should be able to click Customer Manegement - Buyer Rel from left navigation","*TC024","*User should be able to click Customer Manegement - Buyer Rel from left navigation","*${HomepageCustomerBuyerRelation}    10","*${HomepageCustomerBuyerRelation}","eNq1jkEKwjAQAL+yt7RgzAsEsT/wWkrZJotZTBPpbqqCj7dX6dnjwMBMl9jfOd+AEs2UFYxzgdf+7BOKnIziZAMqQkSxPnIKZnAOe1+yImdplF7atAfTVdEy0wJXSqhcskR+mBbKAjv3Ut87cfj8htF7u8XHUepkNwCJ5WlZaf7XgDl+AT1NXxQ=","eNqtzEEKAiEYBeCriNBS/39shlqo64E2QQcIURuFGUfUqOMnLTpB8N5bPT4JzWkJrWj5rSN2X2s2SdEj1dKQUPxDUc6h52aL96mGvVWYL3Ad+t5xZGJiYjwIxBObEKpffYrPjdXfnQ2C57R0MG4LqcX+TSSv6FpQ9IyY390Hoz+TRkAb","*TC-024 - User should be able to view Buyer Rel Page","*New RegReq Page","*TC043","*User should be able to view Buyer Rel Page","*BuyerRel_Page_Keywords","*${BuyerRelPagePanelContainer}    10","*${BuyerRelPagePanelHeader}    10","eNqz0S9JsbPRLymyswHjFIXk/JzigsQ8WyVjJTubRIWMotQ0WyU9PX0gCk4uSk3NK87ILynW9/DWDzAEkvEGJrpGprpGJqpGBgbmuqYG+sWpOal5maW5usVw5bqGxnoFeelAAzNz0xWKi5KpZqJCeWZKSYatkoWBQUEF0Hz9RDsAk8pAHQ==","*TC-025 - User should be able to click Messages from left navigation","*TC025","*User should be able to click Messages from left navigation","*${HomepageMessagesMenu}    10","*${HomepageMessagesMenu}","eNqljTEOwjAMAL/izQ0i5AVISEwMvKCqKjdYlYVJpNqNOvB4OrEwMt/p7qqSn1JmYOUXFwdMadX+kpXMzth4ccmkcWcrOE1RubHikNKhz7U4SbHOefMuHBHubEYzG2CAusCPcCtT3TAM75Qe0r4Xyjnu7XF0ceV/43j6ANCWSE4=","eNqz0S9JsbPRLymyswHjFIXk/JzigsQ8WyVjJTubRIWMotQ0WyU9PX0gCk4uSk3NK87ILynW9/DWDzAEkvEGJrpGprpGJqpGBgbmuqYG+sWpOal5maW5usVw5bqGJnoFeelAAzNz0xWKi5KpZqJCeWZKSYatkoWBQUEF0Hz9RDsAlE5AHw==","*TC-026 - User should be able to view message page","*Message Page","*TC044","*User should be able to view message page","*Message_Page_Keywords","*${MessagePagePanelContainer}    10","*${MessagePagePanelHeader}    10","eNqz0S9JsbPRLymyswHjFIXk/JzigsQ8WyVjJTubRIWMotQ0WyU9PX0gCk4uSk3NK87ILynW9/DWDzAEkvEGJrpGprpGJqpGBgbmuqYG+sWpOal5maW5usVw5bqGpnoFeelAAzNz0xWKi5KpZqJCeWZKSYatkoWBQUEF0Hz9RDsAlNJAIQ==","*TC-027 - User should be able to click and expand Profile","*TC026","*User should be able to click and expand Profile","*${HomepageProfileMenu}    10","*${HomepageProfileMenu}","*Clicking element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Profile ')]'.","*TC-028 - User should be able to click Profile - Account Details from left navigation","*TC027","*User should be able to click Profile - Account Details from left navigation","*${HomepageProfileAccountDetails}    10","*${HomepageProfileAccountDetails}","*Clicking element '//div[@class='tab-data has-child']//a[contains(text(),'Account Details')]'.","eNqz0S9JsbPRLymyswHjFIXk/JzigsQ8WyVjJTubRIWMotQ0WyU9PX0gCk4uSk3NK87ILynW9/DWDzAEkvEGJrpGprpGJqpGBgbmuqYG+sWpOal5maW5usVw5bqGZnoFeelAAzNz0xWKi5KpZqJCeWZKSYatkoWBQUEF0Hz9RDsAlVZAIw==","*TC-029 - User should be able to view account details page","*Profile","*TC045","*User should be able to view account details page","*Account_Details_Page_Keywords","*${ProfileAccountsDetailsPanelContainer}    10","*${ProfileAccountsDetailsPanelHeader}    10","*${ProfileAccountsDetailsFirstNameLabel}    10","*${ProfileAccountsDetailsLastNameLabel}    10","*${ProfileAccountsDetailsEmailLabel}    10","*${ProfileAccountsDetailsPhoneLabel}    10","*${ProfileAccountsDetailsLandlineLabel}    10","*${ProfileAccountsDetailsFirstNameTextBox}    10","*${ProfileAccountsDetailsLastNameTextBox}    10","*${ProfileAccountsDetailsEmailTextBox}    10","*${ProfileAccountsDetailsPhoneTextBox}    10","*${ProfileAccountsDetailsLandlineTextBox}    10","*${ProfileAccountsDetailsCancelButton}    10","*${ProfileAccountsDetailsUpdateButton}    10","*${ProfileAccountsDetailsPanelContainer}","eNqtjU0KAiEcxa8iQkv9O6a0UddBm6ADhKiNwuiIGnX8pEUnCN7H6v2eguGNgtGM+tojt2+92qLxERtlUWzhoTGlMHVzLYTS4z46nC9wXWbemSBcEi4OnLETkQx62EJJz0xm51AG6b8ZkQutZZ3glFfUm/s7Gb2SH1FjwVh9zx+w5gMouUZL","*${ProfileAccountsDetailsFirstNameLabel}","eNqtjU0KAiEcxa8iQkv9mylt1PVAm6ADhKiNwuiIGnX8pEUnCN7H6v2eguGNgtGM+tojt2+92qLxCRtlUWzhoTGlMHVzLYTS4z46LBe4HmfemSBcEi4OnLEzkQx62EJJz0xm51AG6b8ZkZzWsk5wyivqzf2djF7Jj6ixYKy+5w9Y8wEpRUZN","*${ProfileAccountsDetailsLastNameLabel}","eNqtjU0KAiEcxa8iQkv9m6O0UddBm6ADhKiNwuiIGnX8pEUnCN7H6v2eguGNgtGM+tojt2+92qLxgo2yKLbw0JhSmLq5FkLpcR8dzhe4HmfemSBcEi4OnLETkQx62EJJz0xm51AG6b8ZkQutZZ3glFfUm/s7Gb2SH1FjwVh9zx+w5gMp0UZP","*${ProfileAccountsDetailsEmailLabel}","eNqtjU0KAiEcxa8iQkv9mylt1PVAm6ADhKiNwuiIGnX8pEUnCN7H6v2eguGNgtGM+tojt2+92qLxCRtlUWzhoTGlMHVzLYTS4z46LBe4HmfemSBcEi4OnLEzkQx62EJJz0xm51AG6b8ZkYLWsk5wyivqzf2djF7Jj6ixYKy+5w9Y8wEqXUZR","*${ProfileAccountsDetailsPhoneLabel}","eNqtjU0KAiEcxa8iQkv9mylt1PVAm6ADhKiNwuiIGnX8pEUnCN7H6v2eguGNgtGM+tojt2+92qLxCRtlUWzhoTGlMHVzLYTS4z46LBe4HmfemSBcEi4OnLEzkQx62EJJz0xm51AG6b8ZkZLWsk5wyivqzf2djF7Jj6ixYKy+5w9Y8wEq6UZT","*${ProfileAccountsDetailsLandlineLabel}","eNqtjUsKQiEYhbciQkP9zbQm6jhoErSAELWrcPWKGrX8pEErCM5jdL6jYHijYDSjvvbIbWuvtmh8wEZZFFt4aEwpTN1cC6H0uI0O5wtc9zPvTBAuCRc7ztiJSAY9rKGkZyazcyiD9N+MyCOtZZnglBfUm/s7Gb2SH1FjwVh9zx+w5gMrdUZV","*${ProfileAccountsDetailsFirstNameTextBox}","eNqtjU0KAiEcxa8iQkv9mymzUddBm6ADhKiNwuiIGnX8pEUnCN7H6v2eguGNgtGM+tojt2+92qLxCRtlUWzhoTGlMHVzLYTS4z46nC9wPc68M0G4JFwcOGMLkQx62EJJz0xm51AG6b8ZkQutZZ3glFfUm/s7Gb2SH1FjwVh9zx+w5gMsAUZX","*${ProfileAccountsDetailsLastNameTextBox}","eNqtjUsKQiEYhbciQkP9zZQaqOOgSdACQtSuwtUratTykwatIDiP0fmOguGNgtGM+tojt6292qLxARtlUWzhoTGlMHVzLYTS4zY6nC9w3c+8M0G4JFzsOGNHIhn0sIaSnpnMzqEM0n8zIk+0lmWCU15Qb+7vZPRKfkSNBWP1PX/Amg8sjUZZ","*${ProfileAccountsDetailsEmailTextBox}","eNqtjUsKQiEYhbciQkP9zZQI1HHQJGgBIWpX4eoVNWr5SYNWEJzH6HxHwfBGwWhGfe2R29ZebdH4gI2yKLbw0JhSmLq5FkLpcRsdzhe47mfemSBcEi52nLEjkQx6WENJz0xm51AG6b8ZkSdayzLBKS+oN/d3MnolP6LGgrH6nj9gzQctGUZb","*${ProfileAccountsDetailsPhoneTextBox}","eNqtjc0KAiEUhV9FhJZ6b+bURl0HbYIeIERtHBgdUaMeP2nREwTnZ3W+o6B7o6BXo772xG1rKzZreqBGWRJreGjKOQzdXA0ht7j1BucLXPcj7yiZmJiQO4F4YhNCC2vIyzOx0Snkztpvxo7IS54HeEkzadX9nUxei+9RU4lY3uMHrPkAKLtGSw==","*${ProfileAccountsDetailsLandlineTextBox}","eNqtjU0KAiEcxa8iQkv9O+bURl0PtAk6QIjaKIyOqFHHT1p0guB9rN7vSehOS+hVy68dsvvWiskKH7GWBoXqHwpTCkM3W73PLey9wXKB6zTyzgThM+HiwBk7k5lB85vP8ZnI6ORzJ+03I6eJlrwOcEwratX+nYxe0fWgsGCsvMcPGP0BKUdGTQ==","*${ProfileAccountsDetailsCancelButton}","eNqtjc0KAiEUhV9FhJZ6b+bURl0HbYIeIERtHBgdUaMeP2nREwTnZ3W+o6B7o6BXo772xG1rKzZreqBGWRJreGjKOQzdXA0ht7j1BucLXPcj7yiZmJiQO4F4YhNCC2vIyzOx0Snkztpvxo6ClzwP8JJm0qr7O5m8Ft+jphKxvMcPWPMBKdNGTw==","*${ProfileAccountsDetailsUpdateButton}","eNqtjU0KAiEcxa8iQkv9O45TG3UdtAk6QIjaKIyOqFHHT1p0guB9rN7vSehOS+hVy68dsvvWiskKz1hLg0L1D4UphaGbrd7nFvbe4HyB6zTyzgThC+HiwBk7kYVB85vP8ZnI6ORzJ+03I8eZlrwOcEwratX+nYxe0fWgsGCsvMcPGP0BKl9GUQ==","*TC-030 - User should be able to click Profile - Change Pass from left navigation","*TC028","*User should be able to click Profile - Change Pass from left navigation","*${HomepageProfileChangePass}    10","*${HomepageProfileChangePass}","*Clicking element '//div[@class='tab-data has-child']//a[contains(text(),'Change Password')]'.","eNqz0S9JsbPRLymyswHjFIXk/JzigsQ8WyVjJTubRIWMotQ0WyU9PX0gCk4uSk3NK87ILynW9/DWDzAEkvEGJrpGprpGJqpGBgbmuqYG+sWpOal5maW5usVw5bqG5noFeelAAzNz0xWKi5KpZqJCeWZKSYatkoWBQUEF0Hz9RDsAldpAJQ==","*TC-031 - User should be able to view change password page","*TC046","*User should be able to view change password page","*Change_Pass_Page_Keywords","*${ProfileChangePassPanelContainer}    10","*${ProfileChangePassPanelHeader}    10","*${ProfileChangePassPanelContainer}","eNqtjc0KAiEUhV9FhJZ6b+bURl0HbYIeIERtHBgdUaMeP2nREwTnZ3W+o6B7o6BXo772xG1rKzZreqBGWRJreGjKOQzdXA0ht7j1BucLXPcj7yiZmJiQO4F4YhNCC2vIyzOx0Snkztpvxo6SlzwP8JJm0qr7O5m8Ft+jphKxvMcPWPMBKutGUw==","*TC-032 - User should be able to click and expand Company","*TC029","*User should be able to click and expand Company","*${HomepageCompanyMenu}    10","*${HomepageCompanyMenu}","*Clicking element '//ul[@class='vertical-menu tab-level']//a[@class='has-nochild'][contains(text(),' Company ')]'.","*TC-033 - User should be able to click Company - Company Details from left navigation","*TC030","*User should be able to click Company - Company Details from left navigation","*${HomepageCompanyDetails}    10","*${HomepageCompanyDetails}","*Clicking element '//div[@class='tab-data has-child']//a[contains(text(),'Company Details')]'.","eNqz0S9JsbPRLymyswHjFIXk/JzigsQ8WyVjJTubRIWMotQ0WyU9PX0gCk4uSk3NK87ILynW9/DWDzAEkvEGJrpGprpGJqpGBgbmuqYG+sWpOal5maW5usVw5bqGFnoFeelAAzNz0xWKi5KpZqJCeWZKSYatkoWBQUEF0Hz9RDsAll5AJw==","*TC-034 - User should be able to view company details page","*Company Details","*TC047","*User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Dealer Company Details Page","*Company_Details_Page_Keywords","*${CompanyDetailsPageDelSameAsPostalCheckBox}    10","*${CompanyDetailsPageDelSameAsPostalCheckBox}","*Clicking element '//dpp-company-details//input[@type='checkbox']|//dpp-hk-company-details//input[@type='checkbox']'.","eNqtjUsKQiEYhbciQkP9zbQm6jhoErSAELWrcPWKGrX8pEErCM5jdL6jYHijYDSjvvbIbWuvtmh8wEZZFFt4aEwpTN1cC6H0uI0O5wtc9zPvTBAuCRc7ztiJSAY9rKGkZyazcyiD9N+MHCWtZZnglBfUm/s7Gb2SH1FjwVh9zx+w5gMrd0ZV","*User should be able to view company details in HK Company Details Page","*${CompanyDetailsPagePanelContainer}    10","*${CompanyDetailsPagePanelHeader}    10","eNqtzEEKAiEYBeCriNBS/39shgrUddAm6AAhaqMw44gadfykRScI3nurxyehOS2hFS2/dcRuS80mKbqnWhoSin8oyjn03GzxPtWwtQrnC1yHvnccmZiYGHcC8cAmhOoXn+JzZfV3Z8OJ5zR3MK4zqcX+TSSv6FpQ9IiY390Hoz+W4kAp","*Imported resource file 'C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\testdata\\config.robot' is empty."]);
+window.output["strings"] = window.output["strings"].concat(["*","*HK Dealer Check","*C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject1\\Resource\\testsuites\\Dealer\\HK_TC\\P1\\HK_Dealer_Check.robot","*HK_Dealer_Check.robot","*<p>Suite description\x3c/p>","*Test Setup","*Run Keywords","*BuiltIn","*<p>Executes all the given keywords in a sequence.\x3c/p>","*Open Chrome Browser HK","*HK_P1_Config","*Open Browser","*SeleniumLibrary","*<p>Opens a new browser instance to the optional <code>url\x3c/code>.\x3c/p>","*${p1HKDealer}, Chrome, executable_path=${driver_path}","*Opening browser 'Chrome' to base url '<a href=\"https://www.partslane.com.hk/hkdealer\">https://www.partslane.com.hk/hkdealer\x3c/a>'.","*Maximize Browser Window","*<p>Maximizes current browser window.\x3c/p>","*Screen Shot DIR","*Dealer Screent Shot DIR HK","*Get Current Date","*DateTime","*<p>Returns current local or UTC time with an optional increment.\x3c/p>","*result_format=%m-%d-%y %H-%M","*${currentdate}","*${currentdate} = 03-26-24 08-49","*Create Directory","*OperatingSystem","*<p>Creates the specified directory.\x3c/p>","*${Dealer_screenshot_path}/HK_${currentdate}","eNq9jbsKwkAQAH/lSJMqT4NoiGmiINgEH92CLJcNdxLvZPdS5O9N4TdYDVMM0zFhoEENlkkHz4uKG1SGaTxEo52ozrKuhocQC5zYavEuvVuHDqFftEF+9+xfayrwWYLx7qcFXEn8zJogkASZ7Qo4Ek7EcNNM5MT4teoLOF+e+SYpt0lZqXyXVPuo/f+zybCN0y/4OmGJ","*Convert To String","*<p>Converts the given item to a Unicode string.\x3c/p>","*${LogDIR}","*${LogDIR} = C:\\Users\\Ericson.Tinana\\PycharmProjects\\pythonProject1\\Resource\\testsuites\\Dealer\\Screenshots\\P1/HK_03-26-24 08-49","*Set Screenshot Directory","*<p>Sets the directory for captured screenshots.\x3c/p>","*Set Global Variable","*<p>Makes a variable available globally in all tests and suites.\x3c/p>","*TC Sleep","*Sleep","*Run Keyword And Continue On Failure","*<p>Runs the keyword and continues execution even if a failure occurs.\x3c/p>","*TC Sleep P1","*<p>Pauses the test executed for the given time.\x3c/p>","*10","*Slept 10 seconds","*TC-001 - Input Valid Email","*TC006","*Valid Account","*User should be able to click Translate to English Button","*Login_Page_Keywords","*Run Keyword And Return Status","*<p>Runs the given keyword with given arguments and returns the status as a Boolean value.\x3c/p>","*element should be visible, ${Dealer_HK_LoginPage_English_Button}","*${EN}","*Element Should Be Visible","*<p>Verifies that the element identified by <code>locator\x3c/code> is visible.\x3c/p>","*${Dealer_HK_LoginPage_English_Button}","*Element '//dpp-language-toggle//span[contains(text(),'EN')]' is displayed.","*${EN} = True","*Run Keyword If","*<p>Runs the given keyword with the given arguments, if <code>condition\x3c/code> is true.\x3c/p>","*${EN}, Translate to English","*Translate to English","*Wait Until Element Is Visible","*<p>Waits until the element <code>locator\x3c/code> is visible.\x3c/p>","*${Dealer_HK_LoginPage_English_Button}, 10","*Capture Element Screenshot","*<p>Captures a screenshot from the element identified by <code>locator\x3c/code> and embeds it into log file.\x3c/p>","eNqtjUEKAiEYha8iQkv9HUeiQF0PtAk6QIjaKIyOqFHHT1p0guA93ur7noTutIRetfzWIbtvrZis8Iy1NChU/1CYUhi52ep9bmHvDa4TLJc7mwk/Ei4OnLETEWdofvM5PhMZm3zupP0YMtGS1yGNaUWt2r9a0Su6HhQWjJX3+ACjPzkPRG8=","*Click Element","*<p>Click the element identified by <code>locator\x3c/code>.\x3c/p>","*Clicking element '//dpp-language-toggle//span[contains(text(),'EN')]'.","*2","*Slept 2 seconds","*Input Valid Username","*Clear Element Text","*<p>Clears the value of the text-input-element identified by <code>locator\x3c/code>.\x3c/p>","*${Email}","*Input Text","*<p>Types the given <code>text\x3c/code> into the text field identified by <code>locator\x3c/code>.\x3c/p>","*${Email}, ${Username}","*Typing text 'hk.seller1.admin@test.com' into text field '//*[@type='email']'.","eNqtjcEKAiEURX9FhJb6zJEoUNdBm6APCFEbB0ZHfEZ9ftKiLwju5a7OuRp6sBp6s/rbQPy2YnXF0Ila7Uhq8WEo5zBy8y3GgmnrCNc9nC93MTF5YFLtpBBHpk6AcY1leWY2NsfSGf4YJnkt85AueSbY/F+t5LWEngxVQtT3+ABnPzmXRHE=","*1","*Slept 1 second","*TC-002 - Input Valid Password","*TC007","*Input Valid Password","*${Pass}","*${Pass}, ${Password}","*Typing text 'HKPass@12345' into text field '//*[@type='password']'.","eNqtjUEKQiEYhK8iQkv9TSUK1HXQJugAIWpP4ekTNer4SYtOEMwwq+8bBcMbBaMZ9a1Hblt7tUVjgY2yKLbw0JhSmLm5FkLpcRsdrns4X+5MEH4gXO44Y0ciT9DDGkp6ZjI3hzJI/zFE0FqWKU15Qb25v1rRK/kRNZaM1ff8AGs+Oh9Ecw==","*TC-003 - User should be able to click Login Button","*Login Button","*TC008","*User should be able to click Login Button","*${LoginButton}","eNqtjcEKAiEURX9FhJbPZ45EgboO2gR9QIjaODA6okZ9ftKiLwju5a7OuQq7Nwp7NepbT9y2tmKzphM1ypJYw0NTxnDk5moIucWtN7zu8Xy58wnEAYTcCc6PIE/Ywhry8kwwNoXcof0YkKzkeUiXNJNW3V+t5LX4HjWVnJf3+EBrPjqnRHU=","*Clicking element '//button[@type='submit']'.","*TC-004 - User should be able to view top navigation","*TC014","*Top Navigation","*User should be able to view top navigation in HK Dealer Home Page","*Home_Page_Keywords","*${HomepageUserAccount}, 10","*${HomepageOrders}, 10","*${HomepageReturn}, 10","*${HomepageMessage}, 10","*${HomepageUserAccount}","eNqtjUEKAiEYha8iQkv9HceiQF0HbYIOEKI2CqMjatTxkxadIHiPt/q+J6E7LaFXLb91yG5rKyYrPGMtDQrVPxSmFEZutnqfW9h6g+sE58udzYQfCBc7ztiRiBM0v/ocn4mMTT530n4M2dOSlyGNaUGt2r9a0Su6HhQWjJX3+ACjPzsvRHc=","*${HomepageOrders}","eNqtjUEKAiEYha8iQkv9HUeGAnUdtAk6QIjaKIyOqFHHT1p0guA93ur7noTutIRetfzWIbtvrZis8Iy1NChU/1CYUhi52ep9bmHvDa4TnC93NhO+EC4OnLEjESdofvM5PhMZm3zupP0YstCS1yGNaUWt2r9a0Su6HhQWjJX3+ACjPzu3RHk=","*${HomepageReturn}","eNqtjc0KAiEYRV9FhJb6OY70A+o6aBP0ACFqozA6okY9ftKiJwju5a7OuRK60xJ61fJbh+y2tmKywjPW0qBQ/UNhSmHkZqv3uYWtN7hOcL7c2Uz4nnCx44wdiThB86vP8ZnI2ORzJ+3HkAMteRnSmBbUqv2rFb2i60FhwVh5jw8w+gM8P0R7","*${HomepageMessage}","eNqtjUEKAiEYha8iQkv9HUdiAnUdtAk6QIjaKIyOqFHHT1p0guA93ur7noTutIRetfzWIbtvrZis8Iy1NChU/1CYUhi52ep9bmHvDa4TnC93NhN+JFwcOGMLESdofvM5PhMZm3zupP0YstCS1yGNaUWt2r9a0Su6HhQWjJX3+ACjPzzHRH0=","*TC-005 - User should be able to click account from top navigation","*TC015","*User should be able to click account from top navigation","*Clicking element '//dpp-login//button|(//dpp-login//button)[1]'.","*5","*Slept 5 seconds","*Capture Page Screenshot","*<p>Takes a screenshot of the current page and embeds it into a log file.\x3c/p>","eNqtzMEKAiEUheFXEaGlXscZYgJ1HbQJeoAQtVGYccRr1OMnLXqC4Py7w6egeaOgVaO+eeL2FYvNmo7UKEtiDQ9NOYe+m6shZIx7Q7gOcL7cxcjkkcnpIIWY2XQCDGvI6bkx/H3ZwEteOpa2hWB1f9HIK/kWNZ2FKO9ugzUfyro+RQ==","*TC-006 - User should be able to click orders from top navigation","*TC016","*User should be able to click orders from top navigation","*Clicking element '//dpp-order-notification//cx-icon[@class='cx-icon dpp-icons__header-orders']'.","eNqtzMEKAiEUheFXEaGlXscZYgJ1HbQJeoAQtVGYccRr1OMnLXqC4Py7w6egeaOgVaO+eeL2FYvNmo7UKEtiDQ9NOYe+m6shZIx7Q7gOcL7cxcjkkcnpIIWY2XQCDGvI6bkx/H2Z5CUvHUvbQrC6v2jklXyLms5ClHe3wZoPyzo+Rw==","*TC-007 - User should be able to click return from top navigation","*TC017","*User should be able to click return from top navigation","*Clicking element '//dpp-return-notification//cx-icon[@class='cx-icon dpp-icons__header-returns']'.","eNqtzMEKAiEUheFXEaGlXkeHmEBdB22CHiBEbRyYccRr1OMnLXqC4Py7w6ehBauhVau/BeL3FYvLhipqtSOpxoehnEPfzdcYM6a9IVwHOF/uQjF5ZHI8SCEmNp4A4xrz8twY/r5M8ZLnji3bTLD6v2jktYSWDJ2EKO9ug7Mfy7o+SQ==","*TC-009 - User should be able to click messages from top navigation","*TC019","*User should be able to click messages from top navigation","*Clicking element '//dpp-message-notification//cx-icon[@class='cx-icon dpp-icons__message-header']'.","eNqtzMEKAiEUheFXEaGlXseRmEBdB22CHiBEbRyYccRr1OMnLXqC4Py7w6ehBauhVau/BeL3FYvLho7UakdSjQ9DOYe+m68xZkx7Q7gOcL7cxcjkkUl1kEJMTJ0A4xrz8twY/r5M8ZLnji3bTLD6v2jktYSWDJ2EKO9ug7MfzDo+Sw==","*TC-010 - User should be able to click orders from left navigation","*Left Navigation","*TC020","*Element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Orders ')]' not visible after 10 seconds.","*User should be able to click orders from left navigation","*${HomepageOrdersMenu}, 10","eNqtzMEKAiEUheFXEaGlXnOmmEBdB22CHiBEbRRmHPEa9fhJi54gOP/u8Clo3iho1ahvnrhtwWKzpgM1ypJYw0NTzqHv5moIGePWEK57OF/uYmDyyOS4k0JMbDwBhiXk9FwZ/r7swEueO5bWmWB1f9HIK/kWNZ2EKO9ugzUfzLo+TQ==","*Scroll Element Into View","*<p>Scrolls the element identified by <code>locator\x3c/code> into view.\x3c/p>","*${HomepageOrdersMenu}","*TC-011 - User should be able to view Cutomer Orders Panel","*Order Page","*TC033","*User should be able to view Cutomer Orders Panel","*Orders_Page_Keywords","eNqtzMEKAiEUheFXEaGlXnOGYQJ1HbQJeoAQtVGYccRr1OMnLXqC4Py7w6egeaOgVaO+eeL2FYvNmg7UKEtiDQ9NOYe+m6shZIx7Q7ge4Xy5i4HJicnxIIWY2XgCDGvI6bkx/H3ZxEteOpa2hWB1f9HIK/kWNZ2FKO9ugzUfzTo+Tw==","*${OrderPagePanelContainer}, 10","*${OrderPageTotalOrders}, 10","*${OrderPageSortBar}, 10","*${OrderPageStatusFilter}, 10","*${OrderPageDateFilter}, 10","*${OrderPageSearchBox}, 10","*${OrderPageSearchButton}, 10","*${OrderPageArrangeFilter}, 10","*${OrderPageDetailsColumn}, 10","*${OrderPageTotalOrders}","*${OrderPageSortBar}","*${OrderPageStatusFilter}","*${OrderPageDateFilter}","*${OrderPageSearchBox}","*${OrderPageSearchButton}","*${OrderPageArrangeFilter}","*${OrderPageDetailsColumn}","*${OrderPageDetailsPreviousPageButton}","*${OrderPageDetailsNextPageButton}","*${OrderPageDetailsPage1Button}","*TC-012 - User should be able to select one order from the list","*TC034","eNpzzUnNTc0rUVDX0NcvKQLilGiH5JzE4mJb9eQK3fyilNQi3YzM4pL8okrd5PyUVPVYff1E3ErKEnNKgWo0ow1ja4g2EaRaXSEvv0ShLLM4MyknVSExrSS1SMHQQKE4NTk/L6VYDwAR+DoZ","*User should be able to select one order from the list","*${OrderPageHistory1}, 10","eNqtzMEKAiEUheFXEaGlXnOGmkBdB22CHiBEbRRmHPEa9fhJi54gOP/u8Clo3iho1ahvnrhtwWKzpgM1ypJYw0NTzqHv5moIGePWEK57OF/uYmDywOS4k0JMbDwBhiXk9FwZ/r7syEueO5bWmWB1f9HIK/kWNZ2EKO9ugzUfzbo+UQ==","*${OrderPageHistory1}","*TC-013 - User should be able to view order details","*TC035","*No keyword with name 'User should be able to view order details in HK Order Details Page' found. Did you mean:\n    Return_Page_Keywords.User Should Be Able To View Return Details In HK Return Details Page","*User should be able to view order details in HK Order Details Page","*TC Move to Top","*${HomepageMyAccountLabel}","*3","*Slept 3 seconds","*TC-014 - User should be able to click Return from left navigation","*TC021","*Element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Return ')]' not visible after 10 seconds.","*User should be able to click Return from left navigation","*${HomepageReturnMenu}, 10","eNqtzMEKAiEUheFXEaGlXscZwkBdB22CHiBEbRyYccRr1OMnLXqC4Py7w6ehBauhVau/BeL3FYvLho7UakdSjQ9DOYe+m68xZkx7Q7gOcL7cxcjkkcnpIIVQbDoBxjXm5bkx/H2Z4iXPHVu2mWD1f9HIawktGaqEKO9ug7Mfzjo+Uw==","*${HomepageReturnMenu}","*TC-015 - User should be able to select one return from the list","*Return Page","*TC037","*Element '(//td//a[@class='cx-return-requests-value'])[1]|(//div//a[@class='cx-return-requests-value'])[1]' not visible after 10 seconds.","*User should be able to select one return from the list","*Return_Page_Keywords","*${ReturnPageHistory1}, 10","eNqtzMEKAiEUheFXEaGlXnOGmAF1HbQJeoAQtVGYccRr1OMnLXqC4Py7w6egeaOgVaO+eeL2FYvNmg7UKEtiDQ9NOYe+m6shZIx7Q7ge4Xy5i4HJE5PjQQoxsXEGDGvI6bkx/H3ZzEteOpa2hWB1f9HIK/kWNZ2EKO9ugzUfzro+VQ==","*${ReturnPageHistory1}","*TC-016 - User should be able to view Return details","*TC038","*Element '//span[@class='status']' not visible after 10 seconds.","*User should be able to view Return details in HK Return Details Page","*${ReturnPageOrderDetailsHeader}, 20","*${ReturnPageOrderDetailsStatus}, 10","eNqtzMEKAiEUheFXEaGlXscZYgJ1HbQJeoAQtVGYccRr1OMnLXqC4Py7w6egeaOgVaO+eeL2FYvNmo7UKEtiDQ9NOYe+m6shZIx7Q7gOcL7cxcjkkcnpIIWY2XQCDGvI6bkx/H3ZIHjJS9fSthCs7j8ceSXfoqazEOXdcbDmAzlOPqU=","*${ReturnPageOrderDetailsHeader}","*${ReturnPageOrderDetailsStatus}","*${ReturnPageOrderDetailsContainer}, 10","*${ReturnPageOrderDetailsPartsRefLabel}, 20","*${ReturnPageOrderDetailsCustNameLabel}, 10","*${ReturnPageOrderDetailsOrderDateLabel}, 10","*${ReturnPageOrderDetailsRetReqDateLabel}, 10","*${ReturnPageOrderDetailsPartsRefValue}, 10","*${ReturnPageOrderDetailsCustOrderNumValue}, 10","*${ReturnPageOrderDetailsCustNameValue}, 10","*${ReturnPageOrderDetailsSupRefValue}, 10","*${ReturnPageOrderDetailsSupValue}, 10","*${ReturnPageOrderDetailsOrderDateValue}, 10","*${ReturnPageOrderDetailsContainer}","*${ReturnPageOrderDetailsPartsRefLabel}","*${ReturnPageOrderDetailsCustNameLabel}","*${ReturnPageOrderDetailsOrderDateLabel}","*${ReturnPageOrderDetailsRetReqDateLabel}","*${ReturnPageOrderDetailsPartsRefValue}","*${ReturnPageOrderDetailsCustOrderNumValue}","*${ReturnPageOrderDetailsCustNameValue}","*${ReturnPageOrderDetailsSupRefValue}","*${ReturnPageOrderDetailsSupValue}","*${ReturnPageOrderDetailsOrderDateValue}","*${ReturnPageOrderReturnContainer}","*${ReturnPageOrderReturnHeader}, 10","*${ReturnPageOrderReturnItemList}, 10","*${ReturnPageOrderReturnHeader}","*${ReturnPageOrderReturnItemList}","*${ReturnPageOrderReturnDataSectionContainer}","*${ReturnPageOrderReturnDataSectionReasonLabel}, 10","*${ReturnPageOrderReturnDataSectionReasonSelection}, 10","*${ReturnPageOrderReturnDataSectionQtyLabel}, 10","*${ReturnPageOrderReturnDataSectionQtyValue}, 10","*${ReturnPageOrderReturnDataSectionNoteLabel}, 10","*${ReturnPageOrderReturnDataSectionNoteTextField}, 10","*${ReturnPageOrderReturnDataSectionImageLabel}, 10","*${ReturnPageOrderReturnDataSectionImageField}, 10","*${ReturnPageOrderReturnDataSectionReasonLabel}","*${ReturnPageOrderReturnDataSectionReasonSelection}","*${ReturnPageOrderReturnDataSectionQtyLabel}","*${ReturnPageOrderReturnDataSectionQtyValue}","*${ReturnPageOrderReturnDataSectionNoteLabel}","*${ReturnPageOrderReturnDataSectionNoteTextField}","*${ReturnPageOrderReturnDataSectionImageLabel}","*${ReturnPageOrderReturnDataSectionImageField}","*${ReturnPageOrderReturnApproveRejectContainer}","*${ReturnPageOrderReturnNoteLabel}, 10","*${ReturnPageOrderReturnApproveRejectNoteTextField}, 10","*${ReturnPageOrderReturnNoteLabel}","*${ReturnPageOrderReturnApproveRejectNoteTextField}","*${ReturnPageOrderReturnMessageContainer}","*${ReturnPageOrderReturnMessageSupplierButton}, 10","*${ReturnPageOrderReturnMessageSupplierButton}","*TC-022 - User should be able to click and expand Customer Management","*TC022","*Element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Customer ')]' not visible after 10 seconds.","*User should be able to click and expand Customer Management","*${HomepageCustomerMenu}, 10","eNqtzMEKAiEUheFXEaGlXnWGmEBdB22CHiBEbRyYccRr1OMnLXqC4Py7w6ehBauhVau/BeL3FYvLhg7UakdSjQ9DOYe+m68xZkx7Q7hKOF/uYmDqyNR4UEJMbDwBxjXm5bkx/H2ZlLzkuWvLNhOs/j8ceS2hJUMnIcq74+DsBznPPqc=","*${HomepageCustomerMenu}","*TC-023 - User should be able to click Customer Manegement - Buyer Rel from left navigation","*TC024","*Element '//div[@class='tab-data has-child']//a[contains(text(),'Customer Relationship') or contains(text(),'Buyer Relationship')]' not visible after 10 seconds.","*User should be able to click Customer Manegement - Buyer Rel from left navigation","*${HomepageCustomerBuyerRelation}, 10","eNqtzMEKAiEUheFXEaGlXscZYgJ1HbQJeoAQtVGYccRr1OMnLXqC4Py7w6egeaOgVaO+eeL2FYvNmo7UKEtiDQ9NOYe+m6shZIx7Q7gOcL7cxcjkkcnpIIWY2XQCDGvI6bkx/H3ZIHnJS9fSthCs7j8ceSXfoqazEOXdcbDmAzpQPqk=","*${HomepageCustomerBuyerRelation}","*TC-024 - User should be able to view Buyer Rel Page","*New RegReq Page","*TC043","*Element '//dpp-buyer-relationship|//dpp-hk-buyer-relationship' not visible after 10 seconds.","*User should be able to view Buyer Rel Page","*BuyerRel_Page_Keywords","*${BuyerRelPagePanelContainer}, 10","eNqtzMEKAiEUheFXEaGlXkeHmEBdB22CHiBEbRyYccRr1OMnLXqC4Py7w6ehBauhVau/BeL3FYvLhipqtSOpxoehnEPfzdcYM6a9IVwHOF/uQjF5ZHI8SCEmNp4A4xrz8twY/r5sULzkuWvLNhOs/j8ceS2hJUMnIcq74+DsBzrRPqs=","*${BuyerRelPagePanelHeader}, 10","*TC-025 - User should be able to click Messages from left navigation","*TC025","*Element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Messages ') or contains(text(),'Inbox')]' not visible after 10 seconds.","*User should be able to click Messages from left navigation","*${HomepageMessagesMenu}, 10","eNqtzMEKAiEUheFXEaGlXseRmEBdB22CHiBEbRyYccRr1OMnLXqC4Py7w6ehBauhVau/BeL3FYvLho7UakdSjQ9DOYe+m68xZkx7Q7gOcL7cxcjkkUl1kEJMTJ0A4xrz8twY/r5sULzkuWvLNhOs/j8ceS2hJUMnIcq74+DsBztSPq0=","*${HomepageMessagesMenu}","*TC-026 - User should be able to view message page","*Message Page","*TC044","*User should be able to view message page","*Message_Page_Keywords","*${MessagePagePanelContainer}, 10","*${MessagePagePanelHeader}, 10","eNqz0S9JsbPRLymyswHjFIXk/JzigsQ8WyVjJTubRIWMotQ0WyU9PX0gCk4uSk3NK87ILynWDzDU9/CONzDWNTLTNTJRNTIwsNA1sdQvTs1JzcsszdUthqvVNTTVK8hLB5qWmZuuUFyUTB3jFMozU0oybJUsDAwKKoCG6yfaAQA70z6v","*TC-027 - User should be able to click and expand Profile","*TC026","*Element '//ul[@class='vertical-menu tab-level']//*[contains(text(),' Profile ')]' not visible after 10 seconds.","*User should be able to click and expand Profile","*${HomepageProfileMenu}, 10","eNqz0S9JsbPRLymyswHjFIXk/JzigsQ8WyVjJTubRIWMotQ0WyU9PX0gCk4uSk3NK87ILynWDzDU9/CONzDWNTLTNTJRNTIwsNA1sdQvTs1JzcsszdUthqvVNTTTK8hLB5qWmZuuUFyUTB3jFMozU0oybJUsDAwKKoCG6yfaAQA8VD6x","*${HomepageProfileMenu}","*TC-028 - User should be able to click Profile - Account Details from left navigation","*TC027","*Element '//div[@class='tab-data has-child']//a[contains(text(),'Account Details')]' not visible after 10 seconds.","*User should be able to click Profile - Account Details from left navigation","*${HomepageProfileAccountDetails}, 10","eNqz0S9JsbPRLymyswHjFIXk/JzigsQ8WyVjJTubRIWMotQ0WyU9PX0gCk4uSk3NK87ILynWDzDU9/CONzDWNTLTNTJRNTIwsNA1sdQvTs1JzcsszdUthqvVNTTXK8hLB5qWmZuuUFyUTB3jFMozU0oybJUsDAwKKoCG6yfaAQA81T6z","*${HomepageProfileAccountDetails}","*TC-029 - User should be able to view account details page","*Profile","*TC045","*Element '//dpp-account-details[@class='user-form']' not visible after 10 seconds.","*User should be able to view account details page","*Account_Details_Page_Keywords","*${ProfileAccountsDetailsPanelContainer}, 10","eNqtzMEKAiEUheFXEaGlXscZwkBdB22CHiBEbRyYccRr1OMnLXqC4Py7w6ehBauhVau/BeL3FYvLho7UakdSjQ9DOYe+m68xZkx7Q7gOcL7cxcjkkcnpIIVQbDoBxjXm5bkx/H3ZoHjJc9eWbSZY/X848lpCS4YqIcq74+DsBz1WPrU=","*${ProfileAccountsDetailsPanelHeader}, 10","*${ProfileAccountsDetailsFirstNameLabel}, 10","*${ProfileAccountsDetailsLastNameLabel}, 10","*${ProfileAccountsDetailsEmailLabel}, 10","*${ProfileAccountsDetailsPhoneLabel}, 10","*${ProfileAccountsDetailsLandlineLabel}, 10","*${ProfileAccountsDetailsFirstNameTextBox}, 10","*${ProfileAccountsDetailsLastNameTextBox}, 10","*${ProfileAccountsDetailsEmailTextBox}, 10","*${ProfileAccountsDetailsPhoneTextBox}, 10","*${ProfileAccountsDetailsLandlineTextBox}, 10","*${ProfileAccountsDetailsCancelButton}, 10","*${ProfileAccountsDetailsUpdateButton}, 10","*${ProfileAccountsDetailsPanelContainer}","*${ProfileAccountsDetailsFirstNameLabel}","*${ProfileAccountsDetailsLastNameLabel}","*${ProfileAccountsDetailsEmailLabel}","*${ProfileAccountsDetailsPhoneLabel}","*${ProfileAccountsDetailsLandlineLabel}","*${ProfileAccountsDetailsFirstNameTextBox}","*${ProfileAccountsDetailsLastNameTextBox}","*${ProfileAccountsDetailsEmailTextBox}","*${ProfileAccountsDetailsPhoneTextBox}","*${ProfileAccountsDetailsLandlineTextBox}","*${ProfileAccountsDetailsCancelButton}","*${ProfileAccountsDetailsUpdateButton}","*TC-030 - User should be able to click Profile - Change Pass from left navigation","*TC028","*Element '//div[@class='tab-data has-child']//a[contains(text(),'Change Password')]' not visible after 10 seconds.","*User should be able to click Profile - Change Pass from left navigation","*${HomepageProfileChangePass}, 10","eNqz0S9JsbPRLymyswHjFIXk/JzigsQ8WyVjJTubRIWMotQ0WyU9PX0gCk4uSk3NK87ILynWDzDU9/CONzDWNTLTNTJRNTIwsNA1sdQvTs1JzcsszdUthqvVNbTUK8hLB5qWmZuuUFyUTB3jFMozU0oybJUsDAwKKoCG6yfaAQA91z63","*${HomepageProfileChangePass}","*TC-031 - User should be able to view change password page","*TC046","*Element '//dpp-update-password[@class='user-form']' not visible after 10 seconds.","*User should be able to view change password page","*Change_Pass_Page_Keywords","*${ProfileChangePassPanelContainer}, 10","eNqtzMEKAiEUheFXEaGl3jvOEBOo66BN0AOEqI3CjCNq1OMnLXqC4Py7wyehOS2hFS2/OWL3tWaTFB2ploaE4h+Kcg59N1u8TzXsrcJ1gPPljiMTRyamg0Cc2XSC6lef4nNj9fdlAnlOS9fitpBa7H848oquBUVnxPzuOBj9ATnRPqc=","*${ProfileChangePassPanelHeader}, 10","*${ProfileChangePassPanelContainer}","*TC-032 - User should be able to click and expand Company","*TC029","*User should be able to click and expand Company","*${HomepageCompanyMenu}, 10","*${HomepageCompanyMenu}","*Clicking element '//ul[@class='vertical-menu tab-level']//a[@class='has-nochild'][contains(text(),' Company ')]'.","*TC-033 - User should be able to click Company - Company Details from left navigation","*TC030","*User should be able to click Company - Company Details from left navigation","*${HomepageCompanyDetails}, 10","*${HomepageCompanyDetails}","*Clicking element '//div[@class='tab-data has-child']//a[contains(text(),'Company Details')]'.","eNqtzMEKAiEUheFXEaGlXscZYgJ1HbQJeoAQtVGYccRr1OMnLXqC4Py7w6egeaOgVaO+eeL2FYvNmo7UKEtiDQ9NOYe+m6shZIx7Q7gOcL7cxcjkkcnpIIWY2XQCDGvI6bkx/H2ZHHjJS9fSthCs7j8ceSXfoqazEOXdcbDmAzpSPqk=","*TC-034 - User should be able to view company details page","*Company Details","*TC047","*User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Dealer Company Details Page","*Company_Details_Page_Keywords","*${CompanyDetailsPageDelSameAsPostalCheckBox}, 10","*${CompanyDetailsPageDelSameAsPostalCheckBox}","*Clicking element '//dpp-company-details//input[@type='checkbox']|//dpp-hk-company-details//input[@type='checkbox']'.","eNqtjUEKAiEYha8iQkv9HUeiAXUdtAk6QIjaKIyOqFHHT1p0guA93ur7noTutIRetfzWIbtvrZis8Iy1NChU/1CYUhi52ep9bmHvDa4TnC93NhN+JFwcOGMnIhZofvM5PhMZm3zupP0YstCS1yGNaUWt2r9a0Su6HhQWjJX3+ACjPz1PRH8=","*User should be able to view company details in HK Company Details Page","*${CompanyDetailsPagePanelContainer}, 10","*${CompanyDetailsPagePanelHeader}, 10","eNqtzMEKAiEUheFXEaGlXscZYgJ1HbQJeoAQtVGYccRr1OMnLXqC4Py7w6egeaOgVaO+eeL2FYvNmo7UKEtiDQ9NOYe+m6shZIx7Q7gOcL7cxcjkkcnpIIWY2XQCDGvI6bkx/H2ZlLzkpWtpWwhW9x+OvJJvUdNZiPLuOFjzATrTPqs="]);
 </script>
 <script type="text/javascript">
-window.output["stats"] = [[{"elapsed":"00:02:46","fail":3,"label":"All Tests","pass":28,"skip":0}],[{"elapsed":"00:00:08","fail":0,"label":"Company Details","pass":1,"skip":0},{"elapsed":"00:00:54","fail":0,"label":"Left Navigation","pass":10,"skip":0},{"elapsed":"00:00:12","fail":0,"label":"Login Button","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"Message Page","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"New RegReq Page","pass":1,"skip":0},{"elapsed":"00:00:14","fail":1,"label":"Order Page","pass":2,"skip":0},{"elapsed":"00:00:02","fail":0,"label":"Profile","pass":2,"skip":0},{"elapsed":"00:00:24","fail":2,"label":"Return Page","pass":0,"skip":0},{"elapsed":"00:00:10","fail":0,"label":"Sleep","pass":1,"skip":0},{"elapsed":"00:00:03","fail":0,"label":"TC006","pass":1,"skip":0},{"elapsed":"00:00:01","fail":0,"label":"TC007","pass":1,"skip":0},{"elapsed":"00:00:12","fail":0,"label":"TC008","pass":1,"skip":0},{"elapsed":"00:00:00","fail":0,"label":"TC014","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC015","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC016","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC017","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC019","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC020","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC021","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC022","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC024","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC025","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC026","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC027","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC028","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC029","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC030","pass":1,"skip":0},{"elapsed":"00:00:01","fail":1,"label":"TC033","pass":0,"skip":0},{"elapsed":"00:00:02","fail":0,"label":"TC034","pass":1,"skip":0},{"elapsed":"00:00:10","fail":0,"label":"TC035","pass":1,"skip":0},{"elapsed":"00:00:10","fail":1,"label":"TC037","pass":0,"skip":0},{"elapsed":"00:00:13","fail":1,"label":"TC038","pass":0,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC043","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC044","pass":1,"skip":0},{"elapsed":"00:00:02","fail":0,"label":"TC045","pass":1,"skip":0},{"elapsed":"00:00:00","fail":0,"label":"TC046","pass":1,"skip":0},{"elapsed":"00:00:08","fail":0,"label":"TC047","pass":1,"skip":0},{"elapsed":"00:00:10","fail":0,"label":"TC Sleep","pass":1,"skip":0},{"elapsed":"00:00:21","fail":0,"label":"Top Navigation","pass":5,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"Valid Account","pass":2,"skip":0}],[{"elapsed":"00:02:47","fail":3,"id":"s1","label":"HK Dealer Check","name":"HK Dealer Check","pass":28,"skip":0}]];
+window.output["stats"] = [[{"elapsed":"00:04:07","fail":16,"label":"All Tests","pass":15,"skip":0}],[{"elapsed":"00:00:08","fail":0,"label":"Company Details","pass":1,"skip":0},{"elapsed":"00:01:42","fail":8,"label":"Left Navigation","pass":2,"skip":0},{"elapsed":"00:00:12","fail":0,"label":"Login Button","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"Message Page","pass":1,"skip":0},{"elapsed":"00:00:14","fail":1,"label":"New RegReq Page","pass":0,"skip":0},{"elapsed":"00:00:23","fail":3,"label":"Order Page","pass":0,"skip":0},{"elapsed":"00:00:21","fail":2,"label":"Profile","pass":0,"skip":0},{"elapsed":"00:00:24","fail":2,"label":"Return Page","pass":0,"skip":0},{"elapsed":"00:00:10","fail":0,"label":"Sleep","pass":1,"skip":0},{"elapsed":"00:00:03","fail":0,"label":"TC006","pass":1,"skip":0},{"elapsed":"00:00:01","fail":0,"label":"TC007","pass":1,"skip":0},{"elapsed":"00:00:12","fail":0,"label":"TC008","pass":1,"skip":0},{"elapsed":"00:00:00","fail":0,"label":"TC014","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC015","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC016","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC017","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC019","pass":1,"skip":0},{"elapsed":"00:00:10","fail":1,"label":"TC020","pass":0,"skip":0},{"elapsed":"00:00:10","fail":1,"label":"TC021","pass":0,"skip":0},{"elapsed":"00:00:10","fail":1,"label":"TC022","pass":0,"skip":0},{"elapsed":"00:00:10","fail":1,"label":"TC024","pass":0,"skip":0},{"elapsed":"00:00:10","fail":1,"label":"TC025","pass":0,"skip":0},{"elapsed":"00:00:10","fail":1,"label":"TC026","pass":0,"skip":0},{"elapsed":"00:00:10","fail":1,"label":"TC027","pass":0,"skip":0},{"elapsed":"00:00:10","fail":1,"label":"TC028","pass":0,"skip":0},{"elapsed":"00:00:15","fail":0,"label":"TC029","pass":1,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC030","pass":1,"skip":0},{"elapsed":"00:00:10","fail":1,"label":"TC033","pass":0,"skip":0},{"elapsed":"00:00:10","fail":1,"label":"TC034","pass":0,"skip":0},{"elapsed":"00:00:03","fail":1,"label":"TC035","pass":0,"skip":0},{"elapsed":"00:00:10","fail":1,"label":"TC037","pass":0,"skip":0},{"elapsed":"00:00:14","fail":1,"label":"TC038","pass":0,"skip":0},{"elapsed":"00:00:14","fail":1,"label":"TC043","pass":0,"skip":0},{"elapsed":"00:00:05","fail":0,"label":"TC044","pass":1,"skip":0},{"elapsed":"00:00:10","fail":1,"label":"TC045","pass":0,"skip":0},{"elapsed":"00:00:10","fail":1,"label":"TC046","pass":0,"skip":0},{"elapsed":"00:00:08","fail":0,"label":"TC047","pass":1,"skip":0},{"elapsed":"00:00:10","fail":0,"label":"TC Sleep","pass":1,"skip":0},{"elapsed":"00:00:21","fail":0,"label":"Top Navigation","pass":5,"skip":0},{"elapsed":"00:00:04","fail":0,"label":"Valid Account","pass":2,"skip":0}],[{"elapsed":"00:04:07","fail":16,"id":"s1","label":"HK Dealer Check","name":"HK Dealer Check","pass":15,"skip":0}]];
 </script>
 <script type="text/javascript">
-window.output["errors"] = [[396,3,513]];
+window.output["errors"] = [];
 </script>
 <script type="text/javascript">
-window.output["baseMillis"] = 1714002628689;
+window.output["baseMillis"] = 1711414168304;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 166613;
+window.output["generated"] = 247341;
 </script>
 <script type="text/javascript">
 window.output["expand_keywords"] = null;
@@ -2109,7 +1834,7 @@ window.settings = {"defaultLevel":"INFO","minLevel":"INFO","reportURL":"report.h
 </script>
 <title></title>
 </head>
-<body data-theme="dark">
+<body>
 <div id="javascript-disabled">
   <h1>Opening Robot Framework log failed</h1>
   <ul>
@@ -2119,13 +1844,12 @@ window.settings = {"defaultLevel":"INFO","minLevel":"INFO","reportURL":"report.h
   </ul>
 </div>
 <script type="text/javascript">removeJavaScriptDisabledWarning();</script>
+
 <div id="header"></div>
 <div id="statistics-container"></div>
 
 <script type="text/javascript">
 $(document).ready(function() {
-    storage.init();
-    theme.init(storage);
     try {
         var topsuite = window.testdata.suite();
     } catch (error) {
@@ -2133,7 +1857,6 @@ $(document).ready(function() {
         return;
     }
     initLayout(topsuite.name, 'Log');
-    theme.reflectPreference();
     addStatistics();
     addErrors();
     addExecutionLog(topsuite);
@@ -2174,6 +1897,25 @@ function drawErrorsRecursively(errors, target) {
         // Errors may have moved scroll position. Resetting location re-scrolls.
         if (window.location.hash)
             window.location.replace(window.location.hash);
+        highlightLinkTarget();
+    }
+}
+
+function highlightLinkTarget() {
+    if (window.location.hash) {
+        var target = $(window.location.hash);
+        highlight(target);
+    }
+}
+
+function highlight(element, color) {
+    if (color === undefined)
+        color = 242;
+    if (color < 255) {
+        element.css({'background-color': 'rgb('+color+','+color+','+color+')'});
+        setTimeout(function () { highlight(element, color+1); }, 300);
+    } else {
+        element.css({'background-color': ''});
     }
 }
 
@@ -2191,6 +1933,7 @@ function makeElementVisible(id) {
             expandFailed(window.testdata.findLoaded(util.last(ids)));
             window.location.hash = id;
             document.getElementById(id).scrollIntoView();
+            highlightLinkTarget();
         }
     });
 }
@@ -2388,9 +2131,8 @@ function addExecutionLog(main) {
       <div class="element-header-left" title="${type}  {{if name}}{{html fullName}}  {{/if}}[${status}]">
         <span class="elapsed" title="Elapsed time">${times.elapsedTime}</span>
         <span class="label ${status.toLowerCase()}">${type}</span>
-        <span class="assign">{{html assign}}</span>
+        <span>{{html assign}}</span>
         <span class="name"><span class="parent-name">{{html libname}}{{if libname}} . {{/if}}</span>{{html name}}</span>
-        &nbsp;
         <span class="arg">{{html arguments}}</span>
       </div>
       <div class="element-header-right" onclick="stopPropagation(event)">
@@ -2424,12 +2166,6 @@ function addExecutionLog(main) {
           <th>Start / End / Elapsed:</th>
           <td>${times.startTime} / ${times.endTime} / ${times.elapsedTime}</td>
         </tr>
-        {{if message()}}
-        <tr>
-          <th>Message:</th>
-          <td class="message">{{html message()}}</td>
-        </tr>
-        {{/if}}
       </table>
     </div>
   </div>
@@ -2452,7 +2188,6 @@ function addExecutionLog(main) {
   <div id="log-level-selector">
   Log level:
     <select onchange="logLevelSelected(this.options[selectedIndex].value)">
-      <option value="3">WARN</option>
       <option value="2">INFO</option>
       <option value="1">DEBUG</option>
       {{if showTrace()}}<option value="0">TRACE</option>{{/if}}
