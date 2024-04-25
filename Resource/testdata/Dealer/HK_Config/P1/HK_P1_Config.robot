@@ -18,7 +18,7 @@ ${SafariBrowser}    Safari
 ${driver_path}    ..\\..\\..\\..\\..\\Resource\\chromedriver.exe
 #${driver_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\geckodriver.exe
 
-${Dealer_screenshot_path}    ..\\..\\..\\..\\..\\Resource\\testsuites\\Dealer\\Screenshots\\P1
+${Dealer_screenshot_path}    ..\\..\\..\\..\\..\\Resource\\testsuites\\Dealer\\Screenshots\\HK\\P1
 #${Retail_screenshot_path}    C:\\Users\\Danielouie.Estopace\\OneDrive - Inchcape\\06.Dev\\Dan\\Retail Screenshots
 
 ${UploadPhoto_Path_Value}    C:\\Users\\Ericson.Tinana\\Pictures\\SampleImage\\Image.jpg
@@ -40,7 +40,7 @@ Open Chrome Browser
     SeleniumLibrary.Open Browser    ${p1HKDealer}    Chrome  executable_path=${driver_path}
     maximize browser window
 
-Dealer Screent Shot DIR
+Dealer Screen Shot DIR
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
     create directory    ${Dealer_screenshot_path}/HK_${currentdate}
     ${LogDIR}=    convert to string    ${Dealer_screenshot_path}/HK_${currentdate}
