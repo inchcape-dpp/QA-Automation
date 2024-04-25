@@ -57,25 +57,25 @@ ${HomepageReturn}    //dpp-return-notification//cx-icon[@class='cx-icon dpp-icon
 ${HomepageNewBuyer}    //dpp-new-buyer-notification//cx-icon[@class='cx-icon dpp-icons__header-new-buyer']
 ${HomepageMessage}    //dpp-message-notification//cx-icon[@class='cx-icon dpp-icons__message-header']
 ${HomepageMyAccountLabel}    //div[@class='myaccount']//h2
-${HomepageOrdersMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Orders ')]
-${HomepageReturnMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Return ')]
-${HomepageCustomerMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Customer ')]
-${HomepageCustomerNewReg}    //div[@class='tab-data has-child']//a[contains(text(),'New Registration Request')]
-${HomepageCustomerBuyerRelation}    //div[@class='tab-data has-child']//a[contains(text(),'Customer Relationship') or contains(text(),'Buyer Relationship')]
+${HomepageOrdersMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Orders ')]|//div[@class='acc-tab__title']//*[contains(text(),'Orders')]
+${HomepageReturnMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Return ')]|//div[@class='acc-tab__title']//*[contains(text(),'Return')]
+${HomepageCustomerMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Customer ')]|//div[@class='acc-tab__title']//*[contains(text(),'Customer')]
+${HomepageCustomerNewReg}    //div[@class='tab-data has-child']//a[contains(text(),'New Registration Request')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'New Registration Request')]
+${HomepageCustomerBuyerRelation}    //div[@class='tab-data has-child']//a[contains(text(),'Customer Relationship') or contains(text(),'Buyer Relationship')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'Customer Relationship') or contains(text(),'Buyer Relationship')]
 ${HomepageCustomerDropdownClosed}    (//ul[@class='vertical-menu tab-level']//div[@class='dropdown-icon'])[1]
 ${HomepageCustomerDropdownOpen}    (//ul[@class='vertical-menu tab-level']//div[@class='dropdown-icon opened'])[1]
-${HomepageMessagesMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Messages ') or contains(text(),'Inbox')]
-${HomepageProfileMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Profile ')]
+${HomepageMessagesMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Messages ') or contains(text(),'Inbox')]|//div[@class='acc-tab__title']//*[contains(text(),' Messages ') or contains(text(),'Inbox')]
+${HomepageProfileMenu}     //ul[@class='vertical-menu tab-level']//a[contains(text(),'Profile')]|//div[@class='acc-tab__title']//a[contains(text(),'Profile')]
 ${HomepageProfileDropdownClosed}    (//ul[@class='vertical-menu tab-level']//div[@class='dropdown-icon'])[2]
 ${HomepageProfileDropdownOpen}    (//ul[@class='vertical-menu tab-level']//div[@class='dropdown-icon opened'])[2]
-${HomepageProfileAccountDetails}    //div[@class='tab-data has-child']//a[contains(text(),'Account Details')]
-${HomepageProfileChangePass}   //div[@class='tab-data has-child']//a[contains(text(),'Change Password')]
-${HomepageCompanyMenu}    //ul[@class='vertical-menu tab-level']//a[@class='has-nochild'][contains(text(),' Company ')]
-${HomepageCompanyDetails}    //div[@class='tab-data has-child']//a[contains(text(),'Company Details')]
-${HomepageCompanyStaff}    //div[@class='tab-data has-child']//a[contains(text(),'Staff')]
+${HomepageProfileAccountDetails}    //div[@class='tab-data has-child']//a[contains(text(),'Account Details')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'Account Details')]
+${HomepageProfileChangePass}   //div[@class='tab-data has-child']//a[contains(text(),'Change Password')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'Change Password')]
+${HomepageCompanyMenu}    //ul[@class='vertical-menu tab-level']//a[@class='has-nochild'][contains(text(),'Company')]|//div[@class='acc-tab__title']//a[contains(text(),'Company')]
+${HomepageCompanyDetails}    //div[@class='tab-data has-child']//a[contains(text(),'Company Details')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'Company Details')]
+${HomepageCompanyStaff}    //div[@class='tab-data has-child']//a[contains(text(),'Staff')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'Staff')]
 ${HomepageProfileDropdownClosed}    (//ul[@class='vertical-menu tab-level']//div[@class='dropdown-icon'])[3]
 ${HomepageProfileDropdownOpen}    (//ul[@class='vertical-menu tab-level']//div[@class='dropdown-icon opened'])[1]
-${HomepageSettingsMenu}    //ul[@class='vertical-menu tab-level']//a[@class='has-nochild'][contains(text(),' Settings')]
+${HomepageSettingsMenu}    //ul[@class='vertical-menu tab-level']//a[@class='has-nochild'][contains(text(),'Settings')]|//div[@class='acc-tab__title']//a[contains(text(),'Settings')]
 
 
 #-----------------------------------------------------Dealer Order Page-------------------------------------------------
@@ -508,8 +508,8 @@ ${NewRegReqPageBuyerDetailsAcceptButton}    //button[@class='btn btn-secondary m
 
 
 #-----------------------------------------------------Dealer Customer Rel Page------------------------------------------
-${BuyerRelPagePanelContainer}    //dpp-buyer-relationship|//dpp-hk-buyer-relationship
-${BuyerRelPagePanelHeader}    //dpp-buyer-relationship//h3|//dpp-hk-buyer-relationship//h3
+${BuyerRelPagePanelContainer}    //dpp-buyer-relationship|//dpp-hk-buyer-relationship|//dpp-toyota-buyer-relationship
+${BuyerRelPagePanelHeader}    //dpp-buyer-relationship//h3|//dpp-hk-buyer-relationship//h3|//dpp-toyota-buyer-relationship//h3
 ${CustRelPageDesc}    //p[@class='description']
 ${CustRelPageBuyerLabel}    //th[@class='item']
 ${CustRelPageActiveLabel}    //th[contains(text(),'Active')]
@@ -522,19 +522,19 @@ ${CustRelPageModal}    //div[@class='cx-modal-content']
 ${CustRelPageModalYes}    //div[@class='cx-dialog-row text-center']//button[contains(text(),'Yes')]
 ${CustRelPageModalNo}    //div[@class='cx-dialog-row text-center']//button[contains(text(),'No')]
 
-${Dealer-HK_BuyerRelPage_Header_CustomerName_Label}    //dpp-hk-buyer-relationship-list//thead//th[@class='cust-name']//span[contains(text(),'Customer Name')]
-${Dealer-HK_BuyerRelPage_Header_PartsClub_Label}    //dpp-hk-buyer-relationship-list//thead//th[@class='part-club']//span[contains(text(),'Parts Club')]
-${Dealer-HK_BuyerRelPage_Header_ADP_Label}    //dpp-hk-buyer-relationship-list//thead//th[@class='adp-code']//span[contains(text(),'ADP')]
-${Dealer-HK_BuyerRelPage_Header_MemberTier_Label}    //dpp-hk-buyer-relationship-list//thead//span[contains(text(),'Membership')]
-${Dealer-HK_BuyerRelPage_Header_Active_Label}    //dpp-hk-buyer-relationship-list//thead//th[@class='check-active']//span[contains(text(),'Active')]
+${Dealer-HK_BuyerRelPage_Header_CustomerName_Label}    //thead//th[@class='cust-name']//span[contains(text(),'Customer Name')]
+${Dealer-HK_BuyerRelPage_Header_PartsClub_Label}    //thead//th[@class='part-club']//span[contains(text(),'Parts Club')]
+${Dealer-HK_BuyerRelPage_Header_ADP_Label}    //thead//th[@class='adp-code']//span[contains(text(),'ADP')]
+${Dealer-HK_BuyerRelPage_Header_MemberTier_Label}    //thead//span[contains(text(),'Membership')]
+${Dealer-HK_BuyerRelPage_Header_Active_Label}    //thead//th[@class='check-active']//span[contains(text(),'Active')]
 
-${Dealer-HK_BuyerRelPage_Entry_Container}    (//dpp-hk-buyer-relationship-list//tbody//tr)
+${Dealer-HK_BuyerRelPage_Entry_Container}    (//tbody//tr)
 
-${Dealer-HK_BuyerRelPage_Entry_Name_Label}    (//dpp-hk-buyer-relationship-list//tbody//tr//td[1])
-${Dealer-HK_BuyerRelPage_Entry_PartsClub_Label}    (//dpp-hk-buyer-relationship-list//tbody//tr//td[2])
-${Dealer-HK_BuyerRelPage_Entry_ADP_Label}    (//dpp-hk-buyer-relationship-list//tbody//tr//td[3])
-${Dealer-HK_BuyerRelPage_Entry_MemberTeir_Label}    (//dpp-hk-buyer-relationship-list//tbody//tr//td[4])
-${Dealer-HK_BuyerRelPage_Entry_Active_Label}    (//dpp-hk-buyer-relationship-list//tbody//tr//td[5])
+${Dealer-HK_BuyerRelPage_Entry_Name_Label}    (//tbody//tr//td[1])
+${Dealer-HK_BuyerRelPage_Entry_PartsClub_Label}    (//tbody//tr//td[2])
+${Dealer-HK_BuyerRelPage_Entry_ADP_Label}    (//tbody//tr//td[3])
+${Dealer-HK_BuyerRelPage_Entry_MemberTeir_Label}    (//tbody//tr//td[4])
+${Dealer-HK_BuyerRelPage_Entry_Active_Label}    (//tbody//tr//td[5])
 
 ${Dealer-HK_BuyerRelPage_Entry_PartsClub_Textbox}    //dpp-hk-buyer-relationship-list//tbody//tr//td[2]//input
 ${Dealer-HK_BuyerRelPage_Entry_ADP_TextBox}    //dpp-hk-buyer-relationship-list//tbody//tr//td[3]//input

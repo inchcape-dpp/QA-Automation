@@ -372,6 +372,27 @@ User should be able to edit shipping address on change shipping in HK Retail Che
     capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}
     sleep    2
 
+User should be able to cliear shipping address on shipping in HK Retail Checkout Page
+    wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox_Clear_Button}    10
+    capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox_Clear_Button}
+    click element    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox_Clear_Button}
+    sleep    2
+
+User should be able to edit manual shipping address on change shipping in HK Retail Checkout Page
+    wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}    10
+    scroll element into view    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}
+    click element    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}
+    clear element text    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}
+    input text    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}    ${Retail_HK_RegistrationManualPostalAddLine1Value}
+    capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}
+    sleep    2
+
+User should be able to click manual shipping address on change shipping in HK Retail Checkout Page
+    wait until element is visible    ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_AddressLine1_Manual_Options}    10
+    capture element screenshot    ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_AddressLine1_Manual_Options}
+    click element    ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_AddressLine1_Manual_Options}
+    sleep    2
+
 User should be able to select Random Address from suggestions in HK Retail Checkout Page
     wait until element is visible    ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_AddressLine1_Suggest_Options}    10
     ${AddressCount}    get element count    ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_AddressLine1_Suggest_Options}
