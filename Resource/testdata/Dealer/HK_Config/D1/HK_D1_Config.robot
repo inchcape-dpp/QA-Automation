@@ -37,7 +37,7 @@ Open Chrome Browser
     SeleniumLibrary.Open Browser    ${d1HKDealer}    Chrome  executable_path=${driver_path}
     maximize browser window
 
-Dealer Screent Shot DIR
+Dealer Screen Shot DIR
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
     create directory    ${Dealer_screenshot_path}/HK_${currentdate}
     ${LogDIR}=    convert to string    ${Dealer_screenshot_path}/HK_${currentdate}

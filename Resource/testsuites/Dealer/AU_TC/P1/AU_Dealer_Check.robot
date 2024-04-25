@@ -11,12 +11,12 @@ Resource    ../../../../../Resource/testdata/Dealer/Dealer_Variable.robot
 Resource    ../../../../../Resource/testdata/Dealer/Dealer_Resource.robot
 
 *** Test Cases ***
-Test Setup  Run Keywords   Open Chrome Browser P1
-Screen Shot DIR  Run Keywords    Dealer Screen Shot DIR P1
+Test Setup  Run Keywords   Open Chrome Browser
+Screen Shot DIR  Run Keywords    Dealer Screen Shot DIR
 
 TC Sleep
-    [Tags]    Sleep    TC Sleep P1
-    run keyword and continue on failure    TC Sleep P1
+    [Tags]    Sleep    TC Sleep
+    run keyword and continue on failure    TC Sleep
 
 TC-001 - Input Valid Email
     [Tags]    TC006    Valid Account
@@ -30,7 +30,7 @@ TC-002 - Input Valid Password
 TC-003 - User should be able to click Login Button
     [Tags]    TC008    Login Button
     run keyword and continue on failure    User should be able to click Login Button
-    run keyword and continue on failure    TC Sleep P1
+    run keyword and continue on failure    TC Sleep
 
 TC-004 - User should be able to view top navigation
     [Tags]    TC014    Top Navigation
