@@ -3,7 +3,7 @@ Documentation    Suite description
 
 Library  SeleniumLibrary
 
-Resource  ../../../Resource/testdata/config.robot
+#Resource  ../../../Resource/testdata/config.robot
 Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../Resource/testdata/credentials.robot
 
@@ -68,9 +68,32 @@ User should be able to view Return details
     scroll element into view    ${Retail_AccountReturnPageReturnReturnContainer}
     wait until element is visible    ${Retail_AccountReturnPageReturnReturnContainer}    10
     wait until element is visible    ${Retail_AccountReturnPageOrderReturnItemList}    10
+    wait until element is visible    ${Retail_AccountReturnPageOrderReturnItemList_Desc_Label}    10
+    wait until element is visible    ${Retail_AccountReturnPageOrderReturnItemList_Price_Label}    10
+    wait until element is visible    ${Retail_AccountReturnPageOrderReturnItemList_RRP_Label}    10
+    wait until element is visible    ${Retail_AccountReturnPageOrderReturnItemList_Qty_Label}    10
+    wait until element is visible    ${Retail_AccountReturnPageOrderReturnItemList_Total_Label}    10
+
+    wait until element is visible    ${Retail_AccountReturnPageOrderReturnItemList_Desc_Value1}    10
+    wait until element is visible    ${Retail_AccountReturnPageOrderReturnItemList_Price_Value1}    10
+    wait until element is visible    ${Retail_AccountReturnPageOrderReturnItemList_RRP_Value1}    10
+    wait until element is visible    ${Retail_AccountReturnPageOrderReturnItemList_Qty_Value1}    10
+    wait until element is visible    ${Retail_AccountReturnPageOrderReturnItemList_Total_Value1}    10
+
     capture element screenshot    ${Retail_AccountReturnPageReturnReturnContainer}
     capture element screenshot    ${Retail_AccountReturnPageOrderReturnHeader}
     capture element screenshot    ${Retail_AccountReturnPageOrderReturnItemList}
+    capture element screenshot    ${Retail_AccountReturnPageOrderReturnItemList_Desc_Label}
+    capture element screenshot    ${Retail_AccountReturnPageOrderReturnItemList_Price_Label}
+    capture element screenshot    ${Retail_AccountReturnPageOrderReturnItemList_RRP_Label}
+    capture element screenshot    ${Retail_AccountReturnPageOrderReturnItemList_Qty_Label}
+    capture element screenshot    ${Retail_AccountReturnPageOrderReturnItemList_Total_Label}
+
+    capture element screenshot    ${Retail_AccountReturnPageOrderReturnItemList_Desc_Value1}
+    capture element screenshot    ${Retail_AccountReturnPageOrderReturnItemList_Price_Value1}
+    capture element screenshot    ${Retail_AccountReturnPageOrderReturnItemList_RRP_Value1}
+    capture element screenshot    ${Retail_AccountReturnPageOrderReturnItemList_Qty_Value1}
+    capture element screenshot    ${Retail_AccountReturnPageOrderReturnItemList_Total_Value1}
 
     scroll element into view    ${Retail_AccountReturnPageOrderReturnDataSectionContainer}
     wait until element is visible    ${Retail_AccountReturnPageOrderReturnDataSectionReasonLabel}    10

@@ -1,7 +1,7 @@
 *** Settings ***
 Documentation       Suite description
 
-Resource  ../../../Resource/testdata/config.robot
+#Resource  ../../../../../Resource/testdata/Retail/AU_Config/AU_S2_Config.robot
 
 *** Variables ***
 #-----------------------------------------------------Retail Login Page-------------------------------------------------
@@ -218,11 +218,13 @@ ${Retail_RegistrationCompNameValue}    Test Company Name
 ${Retail_RegistrationTradingNameValue}    Test Trading Name
 ${Retail_RegistrationPostalAddLine1Value}    Test Postal Address Line 1
 ${Retail_HK_RegistrationPostalAddLine1Value}    Pok Fu Lam
+${Retail_HK_RegistrationManualPostalAddLine1Value}    Test1 Address
 ${Retail_RegistrationPostalAddLine2Value}    Test Postal Address Line 2
 ${Retail_RegistrationPostalSuburbValue}    Test Postal Suburb
 ${Retail_RegistrationPostalPostalCodevalue}    1234
 ${Retail_RegistrationDelAddLine1Value}    Test Delivery Address Line 1
 ${Retail_HK_RegistrationDelAddLine1Value}    Kwai Chung
+${Retail_HK_RegistrationManualDelAddLine1Value}    Test2 Address
 ${Retail_RegistrationDelAddLine2Value}    Test Delivery Address Line 2
 ${Retail_RegistrationDelSuburbValue}    Test Delivery Suburb
 ${Retail_RegistrationDelPostalCodevalue}    4321
@@ -243,14 +245,74 @@ ${HomePageSelectVehicle}    (//div[@class='custom-header-vehicle'])[1]
 ${HomePageSearhProduct}    //div[@role='search']//input[@type='text']
 ${HomePageSearhProductIcon}    //div[@role='presentation']
 ${HomePageProfileIcon}     //dpp-navigation//cx-icon[@class='cx-icon fas fa-angle-down']
-${HomePageProfileAccount}   (//li//a[@href='/dppretail/my-account/orders']|//dpp-navigation-ui[@class='accNavComponent flyout']//div[@class='wrapper']//a[contains(text(),'My Account') or contains(text(),'我的帳戶')])[1]
+${HomePageProfileAccount}    (//div[@class='header-account-label']//span[contains(text(),'My Account')]|//dpp-navigation-ui[@class='accNavComponent flyout']//div[@class='wrapper']//a[contains(text(),'My Account') or contains(text(),'我的帳戶')])[1]
 ${HomePageProfileLogout}    //li//a[@href='/dppretail/logout']
+
+${HomePage_DoubleHeader}    //div[@class='double-header--relative']
+${HomePage_DoubleHeader_SellerName}    //div[@class='double-header--relative']//div[@class='seller-info']//p[@class='seller-name']
+${HomePage_DoubleHeader_MyAccount_Button}    //div[@class='double-header--relative']//cx-generic-link//a[@class='header-account']
+${HomePage_DoubleHeader_DropDown_Button}    //div[@class='double-header--relative']//div[@class='header-account-menu']
+${HomePage_DoubleHeader_DropDown_Button_Active}    //div[@class='double-header--relative']//div[@class='header-account-menu']//cx-icon[@class='account-caret cx-icon dpp-icons__myaccount-caret-down account-menu--active']
+
+${HomePage_DoubleHeader_Menu_Greet_Label}    //div[@class='menu-content']//div[@class='menu-content__greet']
+
+${HomePage_DoubleHeader_Menu_Order_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='d-flex acc-tab' or @class='acc-tab']//*[contains(text(),'Order')]
+${HomePage_DoubleHeader_Menu_ReturnRequest_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='d-flex acc-tab' or @class='acc-tab']//*[contains(text(),'Return Request')]
+${HomePage_DoubleHeader_Menu_SavedCarts_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='d-flex acc-tab' or @class='acc-tab']//*[contains(text(),'Saved Carts')]
+${HomePage_DoubleHeader_Menu_VehicleListing_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='d-flex acc-tab' or @class='acc-tab']//*[contains(text(),'Vehicle Listing')]
+${HomePage_DoubleHeader_Menu_Inbox_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='d-flex acc-tab' or @class='acc-tab']//*[contains(text(),'Inbox') or contains(text(),'Messages')]
+${HomePage_DoubleHeader_Menu_Profile_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='d-flex acc-tab' or @class='acc-tab']//*[contains(text(),'Profile')]
+${HomePage_DoubleHeader_Menu_Company_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='d-flex acc-tab' or @class='acc-tab']//*[contains(text(),'Company')]
+
+${HomePage_DoubleHeader_Menu_Profile_AccountDetails_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab__sub-acc show-item']//*[contains(text(),'Account Details')]
+${HomePage_DoubleHeader_Menu_Profile_ChangePassword_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab__sub-acc show-item']//*[contains(text(),'Change Password')]
+${HomePage_DoubleHeader_Menu_Company_CompanyDetails_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab__sub-acc show-item']//*[contains(text(),'Company Details')]
+${HomePage_DoubleHeader_Menu_Company_Relationship_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//li//div[@class='acc-tab__sub-acc show-item']//*[contains(text(),'Supplier Relationships')]
+
+${HomePage_DoubleHeader_Menu_Logout_Button}    //div[@class='menu-content']//ul[@class='menu-content__ul']//div[@class='logout-item']//a
+
+
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Container}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_VIN_Value}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div//span[@class='vin-value']
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Model}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-header']
+
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ModelCode_Label}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[contains(text(),'Model Code') or contains(text(),'型號代碼')]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ModelCode_Value}    (//dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[1]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Transmission_Label}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[contains(text(),'Transmission') or contains(text(),'傳染')]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Transmission_Value}    (//dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[2]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Period_Label}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[contains(text(),'Period') or contains(text(),'時期')]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Period_Value}    (//dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[3]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Engine_Label}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[contains(text(),'Engine') or contains(text(),'引擎')]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Engine_Value}    (//dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[4]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ProductionDate_Label}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[contains(text(),'Production Date') or contains(text(),'生產日期')]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_ProductionDate_Value}    (//dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[5]
+
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_ShowMore_button}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='show-more-details']//span[contains(text(),'顯示更多詳情') or contains(text(),'Show More Details')]
+
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Body_Label}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[contains(text(),'Body') or contains(text(),'身體')]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Body_Value}    (//dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[6]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Doors_Label}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[contains(text(),'Doors #') or contains(text(),'門 ＃')]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Doors_Value}    (//dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[7]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_SeatingCapacity_Label}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[contains(text(),'Seating Capacity') or contains(text(),'座位數')]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_SeatingCapacity_Value}    (//dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[8]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Grade_Label}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[contains(text(),'Grade') or contains(text(),'年級')]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_Grade_Value}    (//dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[9]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_DriverPosition_Label}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[contains(text(),"Driver's Position") or contains(text(),'駕駛員位置')]
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_Car_DriverPosition_Value}    (//dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[10]
+
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SaveShop_button}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//button[@class='btn btn-primary btn-sm btn-block p-1 select-this-vehicle-btn vehicleListing-btn']
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_ShopThisVehicle_button}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//button[@class='btn btn-default btn-sm btn-block p-1 select-this-vehicle-btn']
+${Retail_HomePage_HK_EPC_VehicleSearch_PopupModal_SearchAgain_button}    //dpp-vehicle-results-dialog//div[@class='cx-modal-content flex-layout epc']//button[@class='btn btn-block btn-default vehicleListing-btn-sm']
+
 
 ${HomePageMessageIcon}    //dpp-message-notification//cx-icon
 ${HomePageCartIcon}    //dpp-mini-cart//cx-icon
 ${HomePageCartCountIcon}    (//dpp-mini-cart//div[@class='mini-cart--info']//span[@class='count'])[1]
 ${HomePageSellerInfo}    //div[@class='mini-cart--seller-info']
 
+
+#8521458030
+#26296SG011
 #-----------------------------------------------------Retail Home Page Filters & Oil
 ${Retail_HomePageFilter&OilCategoryButton}    //dpp-category-navigation//button[@aria-label='Filters & Oil' or @aria-label='油隔及機油']
 ${Retail_HomePageFilter&OilCategoryList}    //dpp-category-navigation//button[@aria-label='Filters & Oil']/following-sibling::div[@class='wrapper']//li
@@ -375,14 +437,15 @@ ${Retail_HomePageEnginePartsCategoryMiscButton}    //dpp-category-navigation//bu
 @{Retail_RandomEnginePartsList}    ${Retail_HomePageEnginePartsCategoryValvetrainButton}    ${Retail_HomePageEnginePartsCategoryConnectingRodButton}    ${Retail_HomePageEnginePartsCategoryManifoldsButton}    ${Retail_HomePageEnginePartsCategoryEngineMountButton}    ${Retail_HomePageEnginePartsCategoryEngineValvesButton}    ${Retail_HomePageEnginePartsCategoryHarmonicButton}    ${Retail_HomePageEnginePartsCategoryOilSumpButton}    ${Retail_HomePageEnginePartsCategoryOilPumpButton}    ${Retail_HomePageEnginePartsCategoryPistonsButton}    ${Retail_HomePageEnginePartsCategoryTimingBeltsButton}    ${Retail_HomePageEnginePartsCategoryTimingChainsButton}    ${Retail_HomePageEnginePartsCategoryTimingCoverButton}    ${Retail_HomePageEnginePartsCategoryTurbochargerButton}    ${Retail_HomePageEnginePartsCategoryCylinderButton}    ${Retail_HomePageEnginePartsCategoryCrankshaftButton}    ${Retail_HomePageEnginePartsCategoryEngineBlockButton}    ${Retail_HomePageEnginePartsCategoryTimingGearsButton}    ${Retail_HomePageEnginePartsCategoryRockerCoverButton}    ${Retail_HomePageEnginePartsCategoryMiscButton}
 
 #-----------------------------------------------------Retail Home Page All
-${HomePageAllCategory}    //dpp-category-navigation//a[@href='/dppretail/c/0']|//dpp-category-navigation//a[contains(text(),'All')]
+${HomePageAllCategory}    //dpp-category-navigation//a[@href='/dppretail/c/0']|//dpp-category-navigation//a[contains(text(),'All') or contains(text(),'Other')]
+${HomePageOtherCategory}
 
 #${HomePageYourPirceLabel}    //div[@class='custom-control custom-switch']//label
 #${HomePageYourPirceToggle}    //div[@class='custom-control custom-switch']//input[@type='checkbox']
 #${HomePageGSTLabel}    //div[@class='ml-5 custom-control custom-switch']//label
 #${HomePageGSTToggle}    //div[@class='ml-5 custom-control custom-switch']//input[@type='checkbox']
 
-${HomePageSelectVehicleContainer}    //dpp-vehicle-search|//dpp-hk-vehicle
+${HomePageSelectVehicleContainer}    //dpp-vehicle-search|//dpp-hk-vehicle|//dpp-toyota-vehicle-selection
 ${HomePageSelectVehicleHeader}    //dpp-vehicle-search//span
 ${HomePageSelectVehicleStateComboBox}    //dpp-vehicle-search//ng-select[@formcontrolname='state']
 ${HomePageSelectVehicleRegoTextBox}    //dpp-vehicle-search//input[@formcontrolname='rego']
@@ -403,18 +466,59 @@ ${HomePageSearchSuggestion}    //ul[@class='suggestions']//li/a
 ${Retail_FilterListSubElements}    ((//dpp-category-navigation//button[@tabindex='0'])[${RandomFilterIndex}]/following-sibling::div[@class='wrapper']//li)
 
 ${Prod_NumPrize_Index}    2
+${Part_Num_Index}    1
 
 ${HomePageSearchSuggestionList1}    (//div[@id='results']//ul[@class='products'])[1]
 ${SearchProdPrice}    (//div[@id='results']//ul[@class='products']//li[@class='row-wrapper']//span[@class='price'])[1]
 
 
-#-----------------------------------------------------Retail Home Page HK
-${Retail_HK_HomePage_SearchVehicle_Container}    //dpp-hk-search-by-vehicle//div[@class='main-box main-box--padding']
-${Retail_HK_HomePage_SearchVIN_Container}    //dpp-hk-search-by-vin//div[@class='main-box main-box--padding']
-${Retail_HK_HomePage_SearchVIN_TextBox}    //dpp-hk-search-by-vin//div[@class='main-box main-box--padding']//input
-${Retail_HK_HomePage_SearchVIN_Button}    //dpp-hk-search-by-vin//div[@class='main-box main-box--padding']//button
+${Retail_AU_HomePage_Manual_SearchVehicle_Container}    //dpp-search-by-vehicle//div[@class='main-box main-box--padding']
+${Retail_AU_HomePage_VINRego_SearchVehicle_Container}    //dpp-vehicle-search//dpp-rego-vin-vehicle-search//div[@class='main-box main-box--padding']
+${Retail_AU_HomePage_Search_PopUp_Container}    //dpp-vehicle-results
+${Retail_AU_HomePage_Search_PopUp_SearchAgain_Button}    //dpp-vehicle-results//div[@class='col-6 pl-2']
+${Retail_AU_HomePage_Search_PopUp_SelectSave_Button}    //dpp-vehicle-results//button[@class='btn btn-sm btn-block mt-0 p-1 select-this-vehicle-btn btn-default vehicleListing-btn' and contains(text(),'Select & Save Vehicle')]
+${Retail_AU_HomePage_Search_PopUp_SelectVehicle_Button}    //dpp-vehicle-results//button[@class='btn btn-sm btn-block ml-2 mt-0 p-1 select-this-vehicle-btn btn-secondary' and contains(text(),'Select This Vehicle')]
 
-${Retail_HK_HomePage_SearchVIN_TextBox_Value}    JTNB24HK703072114
+${Retail_AU_HomePage_Manual_Model_Combobox}    //dpp-search-by-vehicle//ng-select[@formcontrolname='model']//div[@class='ng-select-container']
+${Retail_AU_HomePage_Manual_Year_Combobox}    //dpp-search-by-vehicle//ng-select[@formcontrolname='year']//div[@class='ng-select-container']
+${Retail_AU_HomePage_Manual_Series_Combobox}    //dpp-search-by-vehicle//ng-select[@formcontrolname='series']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
+${Retail_AU_HomePage_Manual_Engine_Combobox}    //dpp-search-by-vehicle//ng-select[@formcontrolname='engine']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
+${Retail_AU_HomePage_Manual_Details_Combobox}    //dpp-search-by-vehicle//ng-select[@formcontrolname='details']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
+
+${Retail_AU_HomePage_Manual_Search_Button}    //dpp-search-by-vehicle//button
+
+${Retail_AU_HomePage_VINRego_State_Combobox}    //dpp-vehicle-search//dpp-rego-vin-vehicle-search//div[@class='main-box main-box--padding']//ng-select[@formcontrolname='state']//div[@class='ng-select-container']
+${Retail_AU_HomePage_VINRego_Rego_Textbox}    //dpp-vehicle-search//dpp-rego-vin-vehicle-search//div[@class='main-box main-box--padding']//input[@formcontrolname='rego']
+${Retail_AU_HomePage_VINRego_VIN_Textbox}    //dpp-vehicle-search//dpp-rego-vin-vehicle-search//div[@class='main-box main-box--padding']//input[@formcontrolname='vinNumber']
+${Retail_AU_HomePage_VINRego_Search_Button}    //dpp-vehicle-search//dpp-rego-vin-vehicle-search//div[@class='main-box main-box--padding']//button
+
+#-----------------------------------------------------Retail Home Page HK
+${Retail_HK_HomePage_SearchVehicle_Container}    //dpp-hk-search-by-vehicle//div[@class='main-box main-box--padding']|//dpp-toyota-search-by-vehicle//div[@class='main-box main-box--padding']
+${Retail_HK_HomePage_SearchVIN_Container}    //dpp-hk-search-by-vin//div[@class='main-box main-box--padding']|//dpp-toyota-search-by-vin//div[@class='main-box main-box--padding']
+${Retail_HK_HomePage_SearchVIN_TextBox}    //dpp-hk-search-by-vin//div[@class='main-box main-box--padding']//input|//dpp-toyota-search-by-vin//div[@class='main-box main-box--padding']//input
+${Retail_HK_HomePage_SearchVIN_Button}    //dpp-hk-search-by-vin//div[@class='main-box main-box--padding']//button|//dpp-toyota-search-by-vin//div[@class='main-box main-box--padding']//button
+
+${Retail_HK_HomePage_SearchVIN_PopUp_Container}    //dpp-hk-vehicle-results
+${Retail_HK_HomePage_SearchVIN_PopUp_ShopVehicle_Button}    //dpp-hk-vehicle-results//div/button[@class='btn btn-sm btn-block btn-default mt-2 p-1 select-this-vehicle-btn']
+${Retail_HK_HomePage_SearchVIN_PopUp_SaveVehicle_Button}    //dpp-hk-vehicle-results//div/button[@class='btn btn-sm btn-primary btn-block p-1 select-this-vehicle-btn vehicleListing-btn']
+${Retail_HK_HomePage_SearchVIN_PopUp_Search_Button}    //dpp-hk-vehicle-results//div[@class='button-wrapper d-flex justify-content-center mt-3']//button
+
+${Retail_HK_HomePage_Manula_Brand_Combobox}    //dpp-hk-search-by-vehicle//ng-select[@formcontrolname='make']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']|//dpp-toyota-search-by-vehicle//ng-select[@formcontrolname='make']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
+${Retail_HK_HomePage_Manula_Model_Combobox}    //dpp-hk-search-by-vehicle//ng-select[@formcontrolname='model']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']|//dpp-toyota-search-by-vehicle//ng-select[@formcontrolname='model']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
+${Retail_HK_HomePage_Manual_Year_Combobox}    //dpp-hk-search-by-vehicle//ng-select[@formcontrolname='year']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']|//dpp-toyota-search-by-vehicle//ng-select[@formcontrolname='year']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
+${Retail_HK_HomePage_Manual_Variant_Combobox}    //dpp-hk-search-by-vehicle//ng-select[@formcontrolname='series']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']|//dpp-toyota-search-by-vehicle//ng-select[@formcontrolname='series']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
+${Retail_HK_HomePage_Manual_ModelID_Combobox}    //dpp-hk-search-by-vehicle//ng-select[@formcontrolname='modelId']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']|//dpp-toyota-search-by-vehicle//ng-select[@formcontrolname='modelId']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
+
+${Retail_HK_HomePage_Manula_Search_Button}    //dpp-hk-search-by-vehicle//button|//dpp-toyota-search-by-vehicle//button
+
+${Retail_HK_HomePage_SearchVIN_TextBox_Value1}    JTNKC4B1809000753
+${Retail_HK_HomePage_SearchVIN_TextBox_Value2}    JTMBH31V10D017606
+${Retail_HK_HomePage_SearchVIN_TextBox_Value3}    JT711MP1000052922
+${Retail_HK_HomePage_SearchVIN_TextBox_Value4}    JTHBH96S605048702
+${Retail_HK_HomePage_SearchVIN_TextBox_Value5}    JTHGL46F705046712
+
+${Retail_HK_HomePage_EPC_Button}    //dpp-category-navigation//span[contains(text(),'ELECTRONIC PARTS CATALOG')]/parent::button
+${Retail_HK_HomePage_EPC_Button_Disabled}    //dpp-category-navigation//span[contains(text(),'ELECTRONIC PARTS CATALOG')]/parent::button[@disabled]
 
 #-----------------------------------------------------Retail HK Home Page Body Parts
 ${Retail_HK_HomePage_BodyParts_Category_Button}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']
@@ -602,25 +706,28 @@ ${Retail_CheckoutCartPageGSTToggle}     //div[@class='custom-control custom-swit
 
 
 ${Retail_CheckoutPageCustomerDetailsContainer}    //div[@class='basic-details-container']
-${Retail_CheckoutPageCustomerDetailsMethodofPaymetLabel}    //div[@class='col-md-6 col-sm-12 custom-divider']//div[@class='col-12']//p
-${Retail_CheckoutPageCustomerDetailsMethodofPaymetValue}    //div[@class='col-md-6 col-sm-12 custom-divider']//div[@class='col-12']//span
-${Retail_CheckoutPageCustomerDetailsAccountNameLabel}    (//div[@class='col-md-6 col-sm-12 custom-divider']//div[@class='col-12 mt-4']//p)[1]
-${Retail_CheckoutPageCustomerDetailsAccountNameValue}    (//div[@class='col-md-6 col-sm-12 custom-divider']//div[@class='col-12 mt-4']//span)[1]
-${Retail_CheckoutPageCustomerDetailsSupplierLabel}    (//div[@class='col-md-6 col-sm-12 custom-divider']//div[@class='col-12 mt-4']//p)[2]
-${Retail_CheckoutPageCustomerDetailsSupplierValue}    (//div[@class='col-md-6 col-sm-12 custom-divider']//div[@class='col-12 mt-4']//span)[2]
+${Retail_CheckoutPageCustomerDetailsMethodofPaymetLabel}    //div[@class='col-sm-12 col-md-6 col-lg-6 custom-divider']//div[@class='col-12 p-0 px-lg-3']//p
+${Retail_CheckoutPageCustomerDetailsMethodofPaymetValue}    //div[@class='col-sm-12 col-md-6 col-lg-6 custom-divider']//div[@class='col-12 p-0 px-lg-3']//span
+${Retail_CheckoutPageCustomerDetailsAccountNameLabel}    (//div[@class='col-sm-12 col-md-6 col-lg-6 custom-divider']//div[@class='col-12 mt-3 p-0 px-lg-3']//p)[1]
+${Retail_CheckoutPageCustomerDetailsAccountNameValue}    (//div[@class='col-sm-12 col-md-6 col-lg-6 custom-divider']//div[@class='col-12 mt-3 p-0 px-lg-3']//span)[1]
+${Retail_CheckoutPageCustomerDetailsSupplierLabel}    (//div[@class='col-sm-12 col-md-6 col-lg-6 custom-divider']//div[@class='col-12 mt-3 p-0 px-lg-3']//p)[2]
+${Retail_CheckoutPageCustomerDetailsSupplierValue}    (//div[@class='col-sm-12 col-md-6 col-lg-6 custom-divider']//div[@class='col-12 mt-3 p-0 px-lg-3']//span)[2]
 
-${Retail_CheckoutPageCustomerDetailsPONumberLabel}    //div[@class='col-md-6 col-sm-12']//p[@class='po-number']
-${Retail_CheckoutPageCustomerDetailsPONumberInfoButton}    //div[@class='col-md-6 col-sm-12']//dpp-popover-info//cx-icon
-${Retail_CheckoutPageCustomerDetailsPONumberTextBox}    //div[@class='col-md-6 col-sm-12']//div[@class='mb-3']//input
-${Retail_CheckoutPageCustomerDetailsPONumberSaveButton}    //div[@class='col-md-6 col-sm-12']//div[@class='mb-3']//button
-${Retail_CheckoutPageCustomerDetailsPONumberResetButton}    //div[@class='col-md-6 col-sm-12']//div[@class='mb-3']//div//a
-${Retail_CheckoutPageCustomerDetailsShippingToLabel}    //div[@class='col-md-6 col-sm-12']//div[@class='column ml-4']//p[@class='m-0 d-flex']
-${Retail_CheckoutPageCustomerDetailsShippingToInfoButton}    //div[@class='col-md-6 col-sm-12']//div[@class='column ml-4']//p[@class='m-0 d-flex']//cx-icon
-${Retail_CheckoutPageCustomerDetailsShippingToNameLabel}    //div[@class='col-md-6 col-sm-12']//div[@class='column ml-4']//span[@class='shipping-to']//strong
-${Retail_CheckoutPageCustomerDetailsShippingToAddressLabel}    //div[@class='col-md-6 col-sm-12']//div[@class='column ml-4']//div[@class='col-12']//p[@class='m-0 d-flex']/following-sibling::span
+${Retail_CheckoutPageCustomerDetailsPONumberLabel}    //div[@class='column ml-lg-4']//div[@class='col-12 p-0 px-lg-3']//p[@class='po-number']
+${Retail_CheckoutPageCustomerDetailsPONumberInfoButton}    //div[@class='column ml-lg-4']//dpp-popover-info//cx-icon
+${Retail_CheckoutPageCustomerDetailsPONumberTextBox}    //div[@class='column ml-lg-4']//div[@class='col-12 p-0 px-lg-3']//input
+${Retail_CheckoutPageCustomerDetailsPONumberSaveButton}    //div[@class='column ml-lg-4']//div[@class='col-12 p-0 px-lg-3']//button
+${Retail_CheckoutPageCustomerDetailsPONumberResetButton}    //div[@class='col-12 p-0 px-lg-3']//div//a
+${Retail_CheckoutPageCustomerDetailsShippingToLabel}    //div[@class='column ml-lg-4 pb-3 pb-lg-0']//p[@class='m-0 d-flex']
+${Retail_CheckoutPageCustomerDetailsShippingToInfoButton}    //div[@class='column ml-lg-4 pb-3 pb-lg-0']//p[@class='m-0 d-flex']//cx-icon
+${Retail_CheckoutPageCustomerDetailsShippingToNameLabel}    //div[@class='column ml-lg-4 pb-3 pb-lg-0']//span[@class='shipping-to']//strong
+${Retail_CheckoutPageCustomerDetailsShippingToAddressLabel}    //div[@class='column ml-lg-4 pb-3 pb-lg-0']//div[@class='col-12 p-0 px-lg-3']//p[@class='m-0 d-flex']/following-sibling::span
 
 ${Retail_HK_CheckoutPageReviewItemsContainer}    //dpp-hk-order-items-summary
 ${Retail_HK_CheckoutPageReviewItemsHeader}    //dpp-hk-order-items-summary//*[@class='title']
+${Retail_HK_CheckoutPageReviewItemsDeliveryDate}    //dpp-hk-order-items-summary//div[@class='col-12 p-0 sub-header']
+${Retail_HK_CheckoutPageReviewItemsList}    //dpp-hk-order-items-summary//dpp-hk-order-items//div[@class='product-list-item']
+
 ${Retail_HK_CheckoutPageReviewItemsArrowUp}    //dpp-hk-order-items-summary//cx-icon[@class='cx-icon dpp-icons__icon-up-arrow']
 ${Retail_HK_CheckoutPageReviewItemsArrowDown}    //dpp-hk-order-items-summary//cx-icon[@class='cx-icon dpp-icons__icon-down-arrow']
 
@@ -662,10 +769,13 @@ ${Retail_HK_CheckoutPageShippingAddressChangePopUpEmailAddressTextBox}    //dpp-
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpMobileNumberTextBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Mobile Number') or contains(text(),'手機號碼')]/parent::div//input
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpLandlineNumberTextBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Landline Number') or contains(text(),'分機號')]/parent::div//input
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]/parent::div//input
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox_Clear_Button}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]/parent::div//span[@title='Clear all']
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine2TextBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Address Line 2') or contains(text(),'地址第二行')]/parent::div//input
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpDeliveryInstructionsTextBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Delivery Instructions') or contains(text(),'發貨備註')]/following-sibling::div//textarea
 
 ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_AddressLine1_Suggest_Options}    (//dpp-autocomplete-search//ng-dropdown-panel//div//div[@role='option'])
+${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_AddressLine1_Manual_Options}    //dpp-autocomplete-search//ng-dropdown-panel//div//p/parent::div
+
 
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpAreaComboBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//div[@class='ng-select-container ng-has-value']
 ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_Area_ComboBox_Options}    (//dpp-hk-checkout-address-dialog//label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])
@@ -736,7 +846,7 @@ ${Retail_HK_CheckoutPage_PaymentMethod_Frame_Cancel_Button}    //div[@class='acc
 ${Retail_HK_CheckoutPage_PaymentMethod_Frame_ContinuePayment_Button}    //div[@class='accordion__content']//button[@class='btn btn-primary']
 
 ${Retail_HK_CheckoutPage_PaymentMethod_Frame_2C2P_Container}    //div[@class='acs-challenge-modal']
-${Retail_HK_CheckoutPage_PaymentMethod_Frame_2C2P_VerifyOTP_Label}    //div[@class='acs-challenge-modal']//*[contains(text(),'Verify OTP')]
+${Retail_HK_CheckoutPage_PaymentMethod_Frame_2C2P_VerifyOTP_Label}    //div[@class='acs-challenge-modal']//h3
 
 ${Retail_HK_CheckoutPage_PaymentMethod_Frame_2C2P_MerchantName_Label}    //div[@class='acs-challenge-modal']//li[@class='acs-challenge-date-item'][1]//div[@class='date title']
 ${Retail_HK_CheckoutPage_PaymentMethod_Frame_2C2P_MerchantName_Value}    //div[@class='acs-challenge-modal']//li[@class='acs-challenge-date-item'][1]//div[@class='date value']
@@ -778,6 +888,22 @@ ${Retail_CheckoutPageCustomerDetailsOrderSummaryOrderTotalValue}    //div[@class
 ${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryShippingFeeLabel}    //div[@class='row order-summary']//div[@class='details mt-2 col-6']
 ${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryShippingFeeValue}    //div[@class='row order-summary']//div[@class='total-wrapper row w-100']//div[4]
 
+${Retail_HK_CheckoutPage_CustomerDetails_OrderSummary_Discounnt_Label}    (//div[@class='row order-summary']//div[@class='details mt-2 col-6'])[2]
+${Retail_HK_CheckoutPage_CustomerDetails_OrderSummary_Discounnt_Value}    //div[@class='row order-summary']//div[@class='total-wrapper row w-100']//div[6]
+
+${Retail_HK_CheckoutPage_PromoCode_Container}    //div[@class='promotion-container']
+${Retail_HK_CheckoutPage_PromoCode_Label}    //div[@class='promotion-container']//span
+${Retail_HK_CheckoutPage_PromoCode_TextBox}    //div[@class='promotion-container']//input
+${Retail_HK_CheckoutPage_PromoCode_Apply_Button}    //div[@class='promotion-container']//button
+${Retail_HK_CheckoutPage_PromoCode_Desc}    //div[@class='promotion-container']//div[@class='description']
+${Retail_HK_CheckoutPage_PromoCode_Code}    //div[@class='promotion-container']//div[@class='promo-code']
+${Retail_HK_CheckoutPage_PromoCode_Remove_Button}    //div[@class='promotion-container']//a
+${Retail_HK_CheckoutPage_PromoCode_Value}    PRTSLNPROMO
+
+${100}    100.0
+${200}    200.0
+${300}    300.0
+
 ${Retail_CheckoutPageCustomerDetailsOrderSummaryRRPTotal}    //div[@class='order-cart-totals']//div[@class='cart-rrp mx-0']
 
 ${Retail_CheckoutPageCustomerDetailsOrderSummaryPlaceOrderButton}    //div[@class='order-cart-totals']//button[@class='btn btn-secondary w-100 mt-3 text-uppercase']|//div[@class='actions-container w-100']//button[@class='btn btn-secondary w-100']
@@ -787,8 +913,8 @@ ${Retail_CheckoutPageCustomerDetailsOrderSummaryBacktoCartButton}    //div[@clas
 ${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryContinuePaymentButton}    //div[@class='actions-container w-100']//button[@class='btn btn-secondary w-100']
 ${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryBacktoCartButton}    //div[@class='actions-container w-100']//button[@class='btn btn-outline-secondary w-100 mt-3']
 
-${Retail_CheckoutPageCustomerDetailsPONumberGroup}    //div[@class='col-md-6 col-sm-12']//div[@class='mb-3']
-${Retail_CheckoutPageCustomerDetailsPONumberErrorMessage}    //div[@class='col-md-6 col-sm-12']//div[@class='mb-3']//div[@class='form-errors po-invalid-format-message']
+${Retail_CheckoutPageCustomerDetailsPONumberGroup}    //div[@class='col-md-6 col-sm-12']//div[@class='mb-3']|//div[@class='column ml-lg-4']//div[@class='col-12 p-0 px-lg-3']
+${Retail_CheckoutPageCustomerDetailsPONumberErrorMessage}    //div[@class='col-12 p-0 px-lg-3']//div[@class='form-errors po-invalid-format-message']
 
 ${Retail_CheckoutPageCustomerDetailsPONumberTextBoxValidValue}    TestQEAutomation1234
 ${Retail_CheckoutPageCustomerDetailsPONumberTextBoxValid-Value}    TestQEAutomation12-3
@@ -833,16 +959,16 @@ ${Retail_PlaceOrderPageViewOrderButton}    //div[@class='container']//button[@cl
 
 #-----------------------------------------------------Retail Account Page-----------------------------------------------
 ${Retail_AccountAccountpageMyAccountLabel}    //div[@class='myaccount']//h2
-${Retail_AccountpageOrdersMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Orders ')]|//ul[@class='vertical-menu tab-level']//*[contains(text(),' Order History ')]
-${Retail_AccountAccountpageReturnMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Return ')]
-${Retail_AccountpageSavedCartsMenu}    //div[@class='ml-3']//a[contains(text(),'Saved Carts')]
-${Retail_AccountpageVehicleListingMenu}    //div[@class='ml-3']//a[contains(text(),'Vehicle Listing')]
-${Retail_AccountpageMessagesMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Messages ')]
-${Retail_AccountpageProfileMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Profile ')]
-${Retail_AccountpageProfileAccountDetails}    //a[contains(text(),'Profile')]/parent::cx-generic-link/parent::div/parent::div/following-sibling::div//div[1]
-${AccountpageProfileChangePass}    //a[contains(text(),'Profile')]/parent::cx-generic-link/parent::div/parent::div/following-sibling::div//div[2]
-${Retail_AccountpageCompanyMenu}    //ul[@class='vertical-menu tab-level']//a[@class='has-nochild'][contains(text(),' Company ')]
-${Retail_AccountpageCompanyDetails}    //a[@href='/dppretail/my-account/company' or @href='/hkretail/my-account/company']
+${Retail_AccountpageOrdersMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),'Orders')]|//ul[@class='vertical-menu tab-level']//a[contains(text(),' Order History ')]|//div[@class='acc-tab__title']//*[contains(text(),'Orders')]|//ul[@class='vertical-menu tab-level']//*[contains(text(),'Order History')]
+${Retail_AccountAccountpageReturnMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),'Return Requests')]|//div[@class='acc-tab__title']//*[contains(text(),'Return Requests')]
+${Retail_AccountpageSavedCartsMenu}    //div[@class='ml-3']//a[contains(text(),'Saved Carts')]|//div[@class='acc-tab__title']//a[contains(text(),'Saved Carts')]
+${Retail_AccountpageVehicleListingMenu}    //div[@class='ml-3']//a[contains(text(),'Vehicle Listing')]|//div[@class='acc-tab__title']//a[contains(text(),'Vehicle Listing')]
+${Retail_AccountpageMessagesMenu}    //ul[@class='vertical-menu tab-level']//a[contains(text(),' Messages ') or contains(text(),'Inbox')]|//ul[@class='vertical-menu tab-level']//*[contains(text(),'Inbox')]|//div[@class='acc-tab__title']//*[contains(text(),'Messages')]
+${Retail_AccountpageProfileMenu}    //ul[@class='vertical-menu tab-level']//a[contains(text(),'Profile')]|//div[@class='acc-tab__title']//a[contains(text(),'Profile')]
+${Retail_AccountpageProfileAccountDetails}    //li[@class='mb-3 isActive' or @class='mb-3']//div[@class='tab-data has-child']//a[contains(text(),'Account Details')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'Account Details')]
+${AccountpageProfileChangePass}    //li[@class='mb-3 isActive' or @class='mb-3']//div[@class='tab-data has-child']//a[contains(text(),'Change Password')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'Change Password')]
+${Retail_AccountpageCompanyMenu}    //ul[@class='vertical-menu tab-level']//a[@class='has-nochild'][contains(text(),'Company')]|//div[@class='acc-tab__title']//a[contains(text(),'Company')]
+${Retail_AccountpageCompanyDetails}    //li[@class='mb-3 isActive' or @class='mb-3']//div[@class='tab-data has-child']//a[contains(text(),'Company Details')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'Company Details')]
 ${Retail_AccountpageCompanyStaff}    //a[@href='/dppretail/my-account/company/staff' or @href='/hkretail/my-account/company/staff']
 
 
@@ -895,9 +1021,10 @@ ${Retail_AccountOrderPageArrangeFilterOrderNum}    //cx-sorting//div[@role='opti
 ${Retail_AccountOrderPageNoOrdersMessage}    //div[@class='noOrders']
 
 ${Retail_AccountOrderPageStartShoppingButton}    //a[@class='btn btn-primary btn-block start-shopping active']
+#__________________________________________________________________AU___________________________________________________
 
 ${Retail_AccountOrderPageDetailsColumn}    //thead
-${Retail_AccountOrderPageDetailsPartslaneRefLabel}    //th[@class='partslane-reference']
+${Retail_AccountOrderPageDetailsPartslaneRefLabel}   //th[@class='partslane-reference']//span[contains(text(),'PartsLane')]
 ${Retail_AccountOrderPageDetailsCustOrdNumLabel}    //th[@class='your-reference']
 ${Retail_AccountOrderPageDetailsCustRefLabel}    //th[@class='supplier-reference']
 ${Retail_AccountOrderPageDetailsCustAccNumLabel}    //th[@class='supplier']
@@ -906,6 +1033,22 @@ ${Retail_AccountOrderPageDetailsOrderDateLabel}    //th[@class='order-date']
 ${Retail_AccountOrderPageDetailsTotalLabel}    //th[@class='total']
 ${Retail_AccountOrderPageDetailsStatusLabel}    //th[@class='status']
 ${Retail_AccountOrderPageDetailsReturnLabel}    //th[@class='return-icon']
+
+#__________________________________________________________________HK___________________________________________________
+${Retail_HK_AccountOrderPageDetailsColumn}    //thead
+${Retail_HK_AccountOrderPageDetailsPartslaneRefLabel}   //th[@class='partslane-reference']//span[contains(text(),'PartsLane')]
+${Retail_HK_AccountOrderPageDetailsCustAccNumLabel}    //th[@class='company-supplier-name']//span[contains(text(),'Supplier')]
+${Retail_HK_AccountOrderPageDetailsOrderDateLabel}    //th[@class='order-date']//span[contains(text(),'Order')]
+${Retail_HK_AccountOrderPageDetailsDeliveryMethod}    //th[@class='delivery-method']//span[contains(text(),'Delivery Method')]
+${Retail_HK_AccountOrderPageDetailsPaymentMethod}     //th[@class='payment-method']//span[contains(text(),'Payment')]
+${Retail_HK_AccountOrderPageDetailsTotalLabel}    //th[@class='total']//span[contains(text(),'Total')]
+${Retail_HK_AccountOrderPageDetailsStatusLabel}    //th[@class='status']//span[contains(text(),'Order Status')]
+${Retail_HK_AccountOrderPageDetailsReturnLabel}    //th[@class='return-icon']//span[contains(text(),'Returns')]
+${Retail_HK_AccountOrderPageDetailsSupplierLabel}   //thead//span[contains(text(),'Supplier')]
+
+${Retail_HK_AccountOrderPageDetailsReferenceNumber}    (//td[@class='cx-order-history-code'])[1]
+
+#_________________________________________________________________________________________________________________________________________________________________________________________________
 
 ${Retail_AccountOrderPageHistory1}    (//tr//td[@class='cx-order-history-code']//a[@class='cx-order-history-value'])[1]
 
@@ -997,7 +1140,7 @@ ${Retail_AccountOrderDetailsBillingLabel}    //p[(contains(text(),'Billing Addre
 ${Retail_AccountOrderDetailsOrderSummaryLabel}    //p[(contains(text(),'Order Summary'))]
 ${Retail_AccountOrderDetailsBillingDetailsAndTotal}    //div[@class='row mt-2 content']
 ${Retail_AccountOrderDetailsAddressField}    //p[@class='address-field']
-${Retail_AccountOrderDetailsPriceField}    //div[@class='col-md-4 col-sm-12' or @class='col-md-4 col-sm-12 px-0 px-md-3']
+${Retail_AccountOrderDetailsPriceField}    //div[@class='col-12 col-md-6 col-lg-5 px-0 px-md-3']
 
 ${AccountOrderDetailsNewReturnRequestButton}    //div[@class='mt-3 text-right']//a
 
@@ -1073,9 +1216,66 @@ ${Retail_AccountOrderDetailsReturnRequestNumber}    //div[@class='d-flex mt-3'][
 
 ${Retail_AccountOrderDetailsRe-OrderButton}    //dpp-order-detail//div[@class='mt-3 button-container']//button[contains(text(),'Re-Order')]
 
+#-----------------------------------------------------HK Retail Account Order Details Page------------------------------
+
+${HK_Retail_AccountOrderDetailsOrderHeader}    //div[@class='order-header col-12 col-md-9 pl-0' or @class='order-header col-9 pl-0']
+${HK_AccountOrderDetailsOrderStatus}    //span[@class='status-value']
+
+${HK_Retail_AccountOrderDetailsContainer}    //div[@class='order-details-container']
+
+${HK_Retail_AccountOrderDetailsContainerRefNumLabel}    (//div[@class='details']//div[@class='col-4' or @class='col-12 col-md-5'])
+${HK_Retail_AccountOrderDetailsContainerCompanyNameLabel}    (//div[@class='details']//div[@class='col-4' or @class='col-12 col-md-5'])[2]
+${HK_Retail_AccountOrderDetailsContainerSupplierLabel}    (//div[@class='details']//div[@class='col-4' or @class='col-12 col-md-5'])[3]
+${HK_Retail_AccountOrderDetailsContainerOrderDateLabel}    (//div[@class='details']//div[@class='col-4' or @class='col-12 col-md-5'])[4]
+
+${HK_Retail_AccountOrderDetailsBackButton}    //span[contains(text(),'Back to Order History')]
+
+${HK_Retail_AccountOrderDetailsContainerRefNumValue}    (//div[@class='order-details-container']//span)[1]
+${HK_Retail_AccountOrderDetailsContainerCompanyNameValue}    (//div[@class='order-details-container']//span)[2]
+${HK_Retail_AccountOrderDetailsContainerSupplierValue}    (//div[@class='order-details-container']//span)[3]
+${HK_Retail_AccountOrderDetailsContainerOrderDateNumValue}    (//div[@class='order-details-container']//span)[4]
+${HK_Retail_AccountOrderDetailsContainerOrderTimeValue}    (//div[@class='order-details-container']//span)[5]
+
+
+${HK_Retail_AccountOrderDetailsReturnContainer}    //div[@class='order-details-items-table return-order-items']
+
+${HK_Retail_AccountOrderDetailsReturnHeader}    //div[@class='row header return-request-header']
+${HK_Retail_AccountOrderDetailsReturnDescription}    //span[@class='order-table-heading' and (contains(text(),'Description'))]
+${HK_Retail_AccountOrderDetailsReturnPrice}    (//span[@class='order-table-heading' and (contains(text(),'Price'))])[1]
+${HK_Retail_AccountOrderDetailsReturnRRP}    (//span[@class='order-table-heading' and (contains(text(),'Price'))])[2]
+${HK_Retail_AccountOrderDetailsReturnOrder}    //span[@class='order-table-heading' and (contains(text(),'Order'))]
+${HK_Retail_AccountOrderDetailsReturnShipped}    //span[@class='order-table-heading' and (contains(text(),'Shipped'))]
+${HK_Retail_AccountOrderDetailsReturnPending}    //span[@class='order-table-heading' and (contains(text(),'Pending'))]
+${HK_Retail_AccountOrderDetailsReturnTotal}    //span[@class='order-table-heading' and (contains(text(),'Total'))]
+
+${HK_etail_AccountOrderDetailsReturnProductList}    //div[@class='product-list-item return-order-item']
+${HK_Retail_AccountOrderDetailsReturnProductImage}    //div[@class='product-list-item return-order-item'][1]//cx-media
+${HK_Retail_AccountOrderDetailsReturnProductName}    //div[@class='product-list-item return-order-item'][1]//h3
+${HK_Retail_AccountOrderDetailsReturnProductPartNumber}    //div[@class='col-lg-auto pr-lg-0 part-no']
+${HK_Retail_AccountOrderDetailsReturnProductPrice}    //div[@class='product-list-item return-order-item'][1]//div[@class='col text-left pl-0']/span[1]
+${HK_Retail_AccountOrderDetailsReturnProductRRP}    //div[@class='product-list-item return-order-item'][1]//div[@class='col rrp-label text-left pl-0 pr-0']/span[1]
+${HK_Retail_AccountOrderDetailsReturnProductOrderQty}    //div[@class='product-list-item return-order-item'][1]//div[@class='col text-center pl-0 pr-0'][1]/span
+${HK_Retail_AccountOrderDetailsReturnProductShippedQty}    //div[@class='product-list-item return-order-item'][1]//div[@class='col text-center pl-0 pr-0'][2]/span
+${HK_Retail_AccountOrderDetailsReturnProductPendingQty}    //div[@class='product-list-item return-order-item'][1]//div[@class='col text-center pl-0 pr-0'][3]/span
+${HK_Retail_AccountOrderDetailsReturnProductTotal}    //div[@class='product-list-item return-order-item'][1]//div[@class='col text-right']/span[1]
+
+
+${HK_Retail_AccountOrderDetailsBillingContainer}    //div[@class='billing-address-order-summary-container mt-3']
+
+${HK_Retail_AccountOrderDetailsBillingLabel}    //p[(contains(text(),'Billing Address'))]
+${HK_Retail_AccountOrderDetailsOrderSummaryLabel}    //p[(contains(text(),'Order Summary'))]
+${HK_Retail_AccountOrderDetailsBillingDetailsAndTotal}    //div[@class='row mt-2 content']
+${HK_Retail_AccountOrderDetailsAddressField}    //p[@class='address-field']
+${HK_Retail_AccountOrderDetailsSummaryField}    //div[@class='col-12 col-md-6 col-lg-5 px-0 px-md-3']
+${HK_Retail_AccountOrderDetailsDeliveryInstructionField}    //div[@class='col-md-12 col-sm-12 px-0 px-md-3']
+${HK_Retail_AccountOrderDetailsMessageSupplierButton}    //button[@class='btn btn-outline-secondary']
+${HK_Retail_AccountOrderDetailsRe-orderButton}    //button[@class='btn btn-secondary']
+
+
+
 #-----------------------------------------------------Retail Account Retrun Page----------------------------------------
 ${Retail_AccountReturnPagePanelContainer}    //cx-page-slot[@position='BodyContent']
-${AccountReturnPageReturnHeader}    //h3[@class='return-requests-heading']
+${AccountReturnPageReturnHeader}    //h3[@class='return-requests-heading' and contains(text(),'Return Requests') or contains(text(),'退貨請求')]
 ${AccountReturnPageTotalReturnRequests}    //h3[@class='return-requests-heading']//span
 
 ${Retail_AccountReturnPageFilterRow}    //dpp-return-request-list//div[@class='row']
@@ -1155,7 +1355,7 @@ ${Retail_AccountReturnDetailsMessageCofirmationContainer}    //div[@class='cx-mo
 ${Retail_AccountReturnDetailsMessageCofirmationButton}    //div[@class='cx-modal-content']//button//span[contains(text(),'Back to Return Request')]
 
 #-----------------------------------------------------Retail Account Retrun Details Page--------------------------------
-${Retail_AccountReturnPageReturnDetailsHeader}    //span[@class='return-request-heading' or @class='return-request-heading col-12 col-md-6 p-0 p-md-3']
+${Retail_AccountReturnPageReturnDetailsHeader}    //span[@class='return-request-heading col-12 col-md-6 p-0 p-md-3']
 ${Retail_AccountReturnPageReturnDetailsStatus}    //span[@class='status']
 ${Retail_AccountReturnPageReturnDetailsBack}    //a[@class='back-to-order-history']
 ${Retail_AccountReturnPageReturnDetailsContainer}    //div[@class='order-details-container']
@@ -1177,6 +1377,18 @@ ${Retail_AccountReturnPageOrderDetailsRetReqDateValue}    (//div[@class='col']//
 ${Retail_AccountReturnPageOrderReturnHeader}    //h2[@class='returned']
 ${Retail_AccountReturnPageReturnReturnContainer}    //table/..
 ${Retail_AccountReturnPageOrderReturnItemList}    //table[@class='return-request-detail-table']
+
+${Retail_AccountReturnPageOrderReturnItemList_Desc_Label}    //table[@class='return-request-detail-table']//tr//th[contains(text(),'Description')]
+${Retail_AccountReturnPageOrderReturnItemList_Price_Label}    //table[@class='return-request-detail-table']//tr//th[contains(text(),'Price')]
+${Retail_AccountReturnPageOrderReturnItemList_RRP_Label}    //table[@class='return-request-detail-table']//tr//th[contains(text(),'RRP')]
+${Retail_AccountReturnPageOrderReturnItemList_Qty_Label}    //table[@class='return-request-detail-table']//tr//th[contains(text(),'Qty')]
+${Retail_AccountReturnPageOrderReturnItemList_Total_Label}    //table[@class='return-request-detail-table']//tr//th[contains(text(),'Total')]
+
+${Retail_AccountReturnPageOrderReturnItemList_Desc_Value1}    (//table[@class='return-request-detail-table']//tbody//td)[1]
+${Retail_AccountReturnPageOrderReturnItemList_Price_Value1}    (//table[@class='return-request-detail-table']//tbody//td)[2]
+${Retail_AccountReturnPageOrderReturnItemList_RRP_Value1}    (//table[@class='return-request-detail-table']//tbody//td)[3]
+${Retail_AccountReturnPageOrderReturnItemList_Qty_Value1}    (//table[@class='return-request-detail-table']//tbody//td)[4]
+${Retail_AccountReturnPageOrderReturnItemList_Total_Value1}    (//table[@class='return-request-detail-table']//tbody//td)[5]
 
 ${Retail_AccountReturnPageOrderReturnDataSectionContainer}    //div[@class='return-request-data-section' or @class='cancel-order-container']
 ${Retail_AccountReturnPageOrderReturnDataSectionReasonLabel}    //div[@class='form-group']//span[@class='label-content']
@@ -1212,7 +1424,7 @@ ${Retail_AccountReturnPageOrderReturnDetailsMessagePopUpUpMessabeValue}    Hello
 
 #-----------------------------------------------------Retail Account Saved Carts Page-----------------------------------
 ${Retail_AccountSavedCartsPagePanelContainer}    //dpp-saved-cart-history
-${Retail_AccountSavedCartsPagePanelHeader}    //dpp-saved-cart-history//h3
+${Retail_AccountSavedCartsPagePanelHeader}    //dpp-saved-cart-history//h3[contains(text(),'Saved Carts') or contains(text(),'已儲存貨品')]
 
 ${Retail_AccountSavedCartsPageCartNameLabel}    //table[@class='table cx-saved-cart-list-table']//th[@class='cart-name pl-3 py-2']|//thead[@class='cx-saved-cart-list-thead-mobile']//th[@class='cart-name px-4 py-2']
 ${Retail_AccountSavedCartsPageRegoLabel}    //table[@class='table cx-saved-cart-list-table']//th[@class='pl-4' and contains(text(),'Rego')]|//thead[@class='cx-saved-cart-list-thead-mobile']//th[@class='pl-4' and contains(text(),'Rego')]
@@ -1321,9 +1533,9 @@ ${Retail_AccountVehicleListingPagePanelHeader}    //dpp-vehicle-listing//h3
 ${Retail_AccountVehicleListingPageAddVehicleButton}    //button[@class='btn btn-sm btn-primary mb-0']
 ${Retail_AccountVehicleListingPageShopThisVehicleButton}    (//dpp-vehicle-listing-for-dialog//div[@class='card p-4 my-2' or @class='card p-4 my-2 last-item']//button)[1]
 ${Retail_AccountVehicleListingPageSelectedVehicleShopThisVehicleButton}    //div[@class='selected-vehicle-modal']//div[@class='row selected-vehicle-info align-items-center']//button[@class='btn btn-sm btn-primary']
-${Retail_AccountVehicleListingPageSelectedVehicleClearVehicleButton}    //div[@class='selected-vehicle-modal']//div[@class='row selected-vehicle-info align-items-center']//button[@class='btn mt-3 btn-sm btn-default clear-vehicle']
+${Retail_AccountVehicleListingPageSelectedVehicleClearVehicleButton}    //button[@class='btn mt-2 btn-outline-secondary clear-vehicle w-100']|//button[@class='btn mt-2 btn-sm btn-default clear-vehicle']
 
-${Retail_AccountVehicleListingPageSelectVehicleAddVehicleButton}    //div[@class='selected-vehicle-modal vehicle-not-selected']//button[@class='btn btn-secondary']|//dpp-vehicle-box-list//div[@class='vehicle-box last-box-container p-3 d-flex flex-column text-center align-items-center']
+${Retail_AccountVehicleListingPageSelectVehicleAddVehicleButton}    //dpp-vehicle-box-list//div[@class='vehicle-box last-box-container p-3 d-flex flex-column text-center align-items-center justify-content-center']|//dpp-vehicle-box-list//div[@class='vehicle-box last-box-container p-3 d-flex flex-column text-center align-items-center']
 ${Retail_HK_AccountVehicleListingPage_SelectVehicleAddVehicle_Button}    //div[@class='cx-dialog-body modal-body flex-layout']//button[@class='btn btn-secondary']
 
 ${Retail_AccountVehicleListingPageSelectVehicleContainer}    //div[@class='add-vehicle-container']|//div[@class='cx-modal-content d-flex']
@@ -1357,19 +1569,19 @@ ${Retail_AccountVehicleListingPageSelectVehicleSearchNoResultSearchAgainButton} 
 
 ${Retail_AccountVehicleListingPageSelectVehicleSearchManualContainer}    //dpp-manual-vehicle-search//div[@class='row custom-vehicle-search']
 ${Retail_AccountVehicleListingPageSelectVehicleSearchManualMakerComboBox}    //dpp-manual-vehicle-search//ng-select[@formcontrolname='make']//div[@class='ng-select-container ng-has-value']
-${Retail_AccountVehicleListingPageSelectVehicleSearchManualModelComboBox}    //dpp-manual-vehicle-search//ng-select[@formcontrolname='model']//div[@class='ng-select-container']
-${Retail_AccountVehicleListingPageSelectVehicleSearchManualYearComboBox}    //dpp-manual-vehicle-search//ng-select[@formcontrolname='year']//div[@class='ng-select-container']
-${Retail_AccountVehicleListingPageSelectVehicleSearchManualSeriesComboBox}    //dpp-manual-vehicle-search//ng-select[@formcontrolname='series']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
-${Retail_AccountVehicleListingPageSelectVehicleSearchManualEngineComboBox}    //dpp-manual-vehicle-search//ng-select[@formcontrolname='engine']//div[@class='ng-select-container']
-${Retail_AccountVehicleListingPageSelectVehicleSearchManualDetailsComboBox}    //dpp-manual-vehicle-search//ng-select[@formcontrolname='details']//div[@class='ng-select-container']
+${Retail_AccountVehicleListingPageSelectVehicleSearchManualModelComboBox}    //div[@class='cx-dialog-body modal-body d-flex flex-column']//ng-select[@formcontrolname='model']//div[@class='ng-select-container']|//div[@class='cx-dialog-body modal-body flex-layout']//ng-select[@formcontrolname='model']//div[@class='ng-select-container']
+${Retail_AccountVehicleListingPageSelectVehicleSearchManualYearComboBox}    //div[@class='cx-dialog-body modal-body d-flex flex-column']//ng-select[@formcontrolname='year']//div[@class='ng-select-container']|//div[@class='cx-dialog-body modal-body flex-layout']//ng-select[@formcontrolname='year']//div[@class='ng-select-container']
+${Retail_AccountVehicleListingPageSelectVehicleSearchManualSeriesComboBox}    //div[@class='cx-dialog-body modal-body d-flex flex-column']//ng-select[@formcontrolname='series']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']|//div[@class='cx-dialog-body modal-body flex-layout']//ng-select[@formcontrolname='series']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
+${Retail_AccountVehicleListingPageSelectVehicleSearchManualEngineComboBox}    //div[@class='cx-dialog-body modal-body d-flex flex-column']//ng-select[@formcontrolname='engine']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']|//div[@class='cx-dialog-body modal-body flex-layout']//ng-select[@formcontrolname='engine']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
+${Retail_AccountVehicleListingPageSelectVehicleSearchManualDetailsComboBox}    //div[@class='cx-dialog-body modal-body d-flex flex-column']//ng-select[@formcontrolname='details']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']|//div[@class='cx-dialog-body modal-body flex-layout']//ng-select[@formcontrolname='details']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
 
-${Retail_HK_AccountVehicleListingPage_SelectVehicle_SearchManual_ModelID_ComboBox}    //dpp-manual-vehicle-search//ng-select[@formcontrolname='modelId']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
+${Retail_HK_AccountVehicleListingPage_SelectVehicle_SearchManual_ModelID_ComboBox}    //div[@class='cx-dialog-body modal-body flex-layout']//ng-select[@formcontrolname='modelId']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
 
-${Retail_AccountVehicleListingPageSelectVehicleSearchManualSearchButton}    //dpp-manual-vehicle-search//button[@class='btn btn-block btn-primary search-btn' or @class='btn btn-block btn-secondary search-btn']|//div[@class='col-md-6']//button
+${Retail_AccountVehicleListingPageSelectVehicleSearchManualSearchButton}    //button[@class='btn btn-block btn-primary search-btn' or @class='btn btn-block btn-secondary search-btn']|//div[@class='col-md-6']//button
 ${Retail_AccountVehicleListingPageSelectVehicleSearchManualSearchRegoButton}    //dpp-manual-vehicle-search//p/a
 
-${Retail_AccountVehicleListingPageSelectVehicleSearchManualModelListOpt1}    (//div[@class='ng-dropdown-panel-items scroll-host']//span[@title!='---Popular Models---' and @title!='----All Models----' ])[1]
-${Retail_AccountVehicleListingPageSelectVehicleSearchManualModelListOpt}    (//div[@class='ng-dropdown-panel-items scroll-host']//span[@title!='---Popular Models---' and @title!='----All Models----' ])
+${Retail_AccountVehicleListingPageSelectVehicleSearchManualModelListOpt1}    (//div[@class='ng-dropdown-panel-items scroll-host']//span[@title!='---Popular Models---' and @title!='----All Models----' ])[1]|(//div[@class='ng-dropdown-panel-items scroll-host']//span[@class!='---Popular Models---' and @class!='----All Models----' ])[1]
+${Retail_AccountVehicleListingPageSelectVehicleSearchManualModelListOpt}    (//div[@class='ng-dropdown-panel-items scroll-host']//span[@title!='---Popular Models---' and @title!='----All Models----' ])|(//div[@class='ng-dropdown-panel-items scroll-host']//span[@class!='---Popular Models---' and @class!='----All Models----' ])
 
 ${Retail_AccountVehicleListingPageSelectVehicleSearchManualYearListOpt1}    (//ng-dropdown-panel//div[@role='option'])[1]
 ${Retail_AccountVehicleListingPageSelectVehicleSearchManualYearListOpt}    (//ng-dropdown-panel//div[@role='option'])
@@ -1386,10 +1598,13 @@ ${Retail_AccountVehicleListingPageSelectVehicleSearchManualDetailsListOpt}    (/
 ${Retail_HK_AccountVehicleListingPage_SelectVehicle_SearchManual_ModelID_Opt1}    (//ng-dropdown-panel//div[@role='option'])[1]
 ${Retail_HK_AccountVehicleListingPage_SelectVehicle_SearchManual_ModelID_Opt}    (//ng-dropdown-panel//div[@role='option'])
 
+${Retail_HK_AccountVehicleListingPage_SelectVehicle_SearchManual_Brand_Opt1}    (//ng-dropdown-panel//div[@role='option'])[1]
+${Retail_HK_AccountVehicleListingPage_SelectVehicle_SearchManual_Brand_Opt}    (//ng-dropdown-panel//div[@role='option'])
+
 ${Retail_AccountVehicleListingPageSelectVehicleSearchResultContainer}    //div[@class='vehicle-results']
 ${Retail_AccountVehicleListingPageSelectVehicleSearchResultVehicleLabel}    //div[@class='vehicle-results']//div[@class='col-md-7 pr-0']//p
 ${Retail_AccountVehicleListingPageSelectVehicleSearchResultSelectVehicleButton}    //dpp-vehicle-results//button[@class='btn btn-sm btn-block ml-2 mt-0 p-1 select-this-vehicle-btn btn-secondary']|//div[@class='vehicle-results flex-layout']//button[@class='btn btn-sm btn-block btn-default mt-2 p-1 select-this-vehicle-btn']
-${Retail_AccountVehicleListingPageSelectVehicleSearchResultSelect&SaveVehicleButton}    //div[@class='vehicle-results']//button[@class='btn btn-sm btn-block mr-1 mt-3 p-1 select-this-vehicle-btn btn-default vehicleListing-btn']|//button[@class='btn btn-sm btn-block mr-2 mt-0 p-1 select-this-vehicle-btn btn-default vehicleListing-btn']|//div[@class='vehicle-results flex-layout']//button[@class='btn btn-sm btn-primary btn-block p-1 select-this-vehicle-btn vehicleListing-btn']
+${Retail_AccountVehicleListingPageSelectVehicleSearchResultSelect&SaveVehicleButton}    //dpp-vehicle-results//button[@class='btn btn-sm btn-block mt-0 p-1 select-this-vehicle-btn btn-default vehicleListing-btn']|//button[@class='btn btn-sm btn-block mr-2 mt-0 p-1 select-this-vehicle-btn btn-default vehicleListing-btn']|//div[@class='vehicle-results flex-layout']//button[@class='btn btn-sm btn-primary btn-block p-1 select-this-vehicle-btn vehicleListing-btn']
 ${Retail_AccountVehicleListingPageSelectVehicleSearchResultSearchAgainButton}    //div[@class='vehicle-results']//button[@class='btn btn-block btn-default vehicleListing-btn-sm']|//div[@class='vehicle-results flex-layout']//button[@class='btn btn-block btn-default vehicleListing-btn-sm']
 
 ${Retail_AccountVehicleListingPageVehicleCardList}    //dpp-vehicle-listing//div[@class='vehicle-card']
@@ -1399,22 +1614,57 @@ ${Retail_AccountVehicleListingPageVehicleCardListRegoLabel}    (//dpp-vehicle-li
 ${Retail_AccountVehicleListingPageVehicleCardListShopVehicleButton}    (//dpp-vehicle-listing//div[@class='vehicle-card']//button[@class='btn btn-sm btn-secondary mb-0'])[1]
 ${Retail_AccountVehicleListingPageVehicleCardListDeleteButton}    (//dpp-vehicle-listing//div[@class='vehicle-card']//cx-icon)[1]
 
-${Retail_HK_AccountVehicleListingPage_VehicleCard_List}    (//dpp-hk-vehicle-listing//div[@class='row vehicle-card vehicle-desc'])
-${Retail_HK_AccountVehicleListingPage_VehicleCardList_Model_Label}    (//dpp-hk-vehicle-listing//div[@class='row vehicle-card vehicle-desc']//span[@class='vehicle-name'])[1]
-${Retail_HK_AccountVehicleListingPage_VehicleCardList_VIN_Label}    (//dpp-hk-vehicle-listing//div[@class='col-12 registration']//p)[1]
-${Retail_HK_AccountVehicleListingPage_VehicleCardList_EditDesc_Button}    (//dpp-hk-vehicle-listing//div[@class='row vehicle-card vehicle-desc']//cx-icon[@class='cx-icon dpp-icons__pencil-light'])[1]
-${Retail_HK_AccountVehicleListingPage_VehicleCardList_ShopVehicle_Button}    (//dpp-hk-vehicle-listing//div[@class='row vehicle-card vehicle-desc']//button[@class='btn btn-sm btn-secondary mb-0'])[1]
-${Retail_HK_AccountVehicleListingPage_VehicleCardList_Delete_Button}    (//dpp-hk-vehicle-listing//div[@class='row vehicle-card vehicle-desc']//cx-icon[@class='cx-icon dpp-icons__trash-v2'])[1]
+${Retail_HK_AccountVehicleListingPage_VehicleCard_List}    (//div[@class='row vehicle-card vehicle-desc'])
+${Retail_HK_AccountVehicleListingPage_VehicleCardList_Model_Label}    (//div[@class='row vehicle-card vehicle-desc']//span[@class='vehicle-name'])[1]
+${Retail_HK_AccountVehicleListingPage_VehicleCardList_VIN_Label}    (//div[@class='col-12 registration']//p)[1]
+${Retail_HK_AccountVehicleListingPage_VehicleCardList_EditDesc_Button}    (//div[@class='row vehicle-card vehicle-desc']//cx-icon[@class='cx-icon dpp-icons__pencil-light'])[1]
+${Retail_HK_AccountVehicleListingPage_VehicleCardList_ShopVehicle_Button}    (//div[@class='row vehicle-card vehicle-desc']//button[@class='btn btn-sm btn-secondary mb-0'])[1]
+${Retail_HK_AccountVehicleListingPage_VehicleCardList_Delete_Button}    (//div[@class='row vehicle-card vehicle-desc']//cx-icon[@class='cx-icon dpp-icons__trash-v2'])[1]
 
 ${Retail_AccountVehicleListingPageVehicleCardListDeletePopUpContainer}    //div[@class='cx-dialog-body modal-body']
 ${Retail_AccountVehicleListingPageVehicleCardListDeletePopUpYesButton}    //div[@class='cx-dialog-body modal-body']//button[@class='btn btn-secondary btn-block']
 ${Retail_AccountVehicleListingPageVehicleCardListDeletePopUpNoButton}    //div[@class='cx-dialog-body modal-body']//button[@class='btn btn-block btn-outline-secondary']
 
 
-${Retail_HK_AccountVehicleListingPage_Container}    //dpp-hk-vehicle-listing//div[@class='container']
+${Retail_HK_AccountVehicleListingPage_Container}    //dpp-hk-vehicle-listing//div[@class='container']|//dpp-toyota-vehicle-listing//div[@class='container']
+${Retail_HK_AccountVehicleListingPage_Header}    //div//h3[contains(text(),'Vehicle Listing') or contains(text(),'車輛列表')]
 
 ${Retail_HK_AccountVehicleListingPage_Add New Vehicle_Button}    //dpp-hk-vehicle-listing//div[@class='header-container d-flex align-items-center justify-content-between']//button
 ${Retail_HK_AccountVehicleListingPage_VehicleCard_List}    //dpp-hk-vehicle-listing//div[@class='row px-0 px-md-2']//div[@class='col-12 col-md-6 col-lg-4 align-self-lg-center card-content selected' or @class='col-12 col-md-6 col-lg-4 align-self-lg-center card-content']
+
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Container}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_VIN_Value}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div//span[@class='vin-value']
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Model}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-header']
+
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_ModelCode_Label}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[contains(text(),'Model Code') or contains(text(),'型號代碼')]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_ModelCode_Value}    (//dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[1]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Transmission_Label}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[contains(text(),'Transmission') or contains(text(),'傳染')]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Transmission_Value}    (//dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[2]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Period_Label}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[contains(text(),'Period') or contains(text(),'時期')]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Period_Value}    (//dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[3]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Engine_Label}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[contains(text(),'Engine') or contains(text(),'引擎')]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Engine_Value}    (//dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[4]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_ProductionDate_Label}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[contains(text(),'Production Date') or contains(text(),'生產日期')]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_ProductionDate_Value}    (//dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[5]
+
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_ShowMore_button}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='show-more-details']//span[contains(text(),'顯示更多詳情') or contains(text(),'Show More Details')]
+
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Body_Label}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[contains(text(),'Body') or contains(text(),'身體')]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Body_Value}    (//dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[6]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Doors_Label}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[contains(text(),'Doors #') or contains(text(),'門 ＃')]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Doors_Value}    (//dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[7]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_SeatingCapacity_Label}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[contains(text(),'Seating Capacity') or contains(text(),'座位數')]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_SeatingCapacity_Value}    (//dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[8]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Grade_Label}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[contains(text(),'Grade') or contains(text(),'年級')]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Grade_Value}    (//dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[9]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Driverosition_Label}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[contains(text(),'Driver's Position') or contains(text(),'駕駛員位置')]
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Driverosition_Value}    (//dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[10]
+
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_SaveShop_button}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//button[@class='btn btn-primary btn-sm btn-block p-1 select-this-vehicle-btn vehicleListing-btn']|//dpp-toyota-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//button[@class='btn btn-primary btn-sm btn-block p-1 select-this-vehicle-btn vehicleListing-btn']
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_ShopThisVehicle_button}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//button[@class='btn btn-default btn-sm btn-block p-1 select-this-vehicle-btn']|//dpp-toyota-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//button[@class='btn btn-default btn-sm btn-block p-1 select-this-vehicle-btn']
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_SearchAgain_button}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//button[@class='btn btn-block btn-default vehicleListing-btn-sm']|//dpp-toyota-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//button[@class='btn btn-block btn-default vehicleListing-btn-sm']
+
+
 
 
 
@@ -1434,7 +1684,7 @@ ${Retail_AccountVehicleListingPageSelectVehicleSearchManualDetailsIndexValue}   
 
 #-----------------------------------------------------Account Retail Message Page---------------------------------------
 ${Retail_AccountMessagePagePanelContainer}    //dpp-message-list
-${Retail_AccountMessagePagePanelHeader}    //dpp-message-list//h3
+${Retail_AccountMessagePagePanelHeader}    //dpp-message-list//h3//div[contains(text(),'Inbox') or contains(text(),'收件箱')]
 
 ${Retail_AccountMessagePageReadMessagesProdEnq}    //div[@class='row message-container']//div[@class='pl-1 pointer enquiry-col-value col-2']//span[contains(text(),'PRODUCT ENQUIRY')]
 ${Retail_AccountMessagePageReadMessagesGenEnq}    //div[@class='row message-container']//div[@class='pl-1 pointer enquiry-col-value col-2']//span[contains(text(),'GENERAL ENQUIRY')]
@@ -1589,7 +1839,7 @@ ${Retail_AccountMessageDetailsPageMessageValue}    Hello World QE Test
 
 #-----------------------------------------------------Retail Account Account Detais Page--------------------------------
 ${Retail_AccountProfileAccountsDetailsPanelContainer}    //dpp-account-details[@class='user-form']
-${Retail_AccountProfileAccountsDetailsPanelHeader}    //dpp-account-details[@class='user-form']//*[contains(text(),'Account Details')]
+${Retail_AccountProfileAccountsDetailsPanelHeader}    //dpp-account-details[@class='user-form']//h2[contains(text(),'Account Details') or contains(text(),'帳戶資料')]
 
 ${Retail_AccountProfileAccountsDetailsFirstNameLabel}    //dpp-account-details[@class='user-form']//span[@class='label-content' and contains(text(),'First Name')]
 ${Retail_AccountProfileAccountsDetailsLastNameLabel}    //dpp-account-details[@class='user-form']//span[@class='label-content' and contains(text(),'Last Name')]
@@ -1609,9 +1859,9 @@ ${Retail_AccountProfileAccountsDetailsUpdateButton}    //dpp-account-details[@cl
 ${Retail_AccountProfileAccountsDetailsPhoneError}    //div[@class='form-errors']//p[contains(text(),'Enter a valid Phone Number')]
 ${Retail_AccountProfileAccountsDetailsLandlineError}    //div[@class='form-errors']//p[contains(text(),'Landline Number must begin with a 0 followed by 9 digits')]
 
-${Retail_AccountProfileAccountsDetailsConfirmationContainer}    //div[@class='cx-dialog-body modal-body pt-5']
-${Retail_AccountProfileAccountsDetailsConfirmationYesButton}    //button[@class='btn btn-block btn-secondary backToHomepage-button']
-${Retail_AccountProfileAccountsDetailsConfirmationNoButton}    //div[@class='col-sm-12 cta py-2']//button[@class='btn btn-block btn-outline-secondary']
+${Retail_AccountProfileAccountsDetailsConfirmationContainer}    //div[@class='cx-dialog-body modal-body']
+${Retail_AccountProfileAccountsDetailsConfirmationYesButton}    //button[@class='btn btn-secondary btn-block']
+${Retail_AccountProfileAccountsDetailsConfirmationNoButton}    //button[@class='btn btn-block btn-outline-secondary']
 
 ${Retail_AccountProfileAccountsDetailsFirstNameValue}    Test FN
 ${Retail_AccountProfileAccountsDetailsLastNameValue}    Test LN
@@ -1626,7 +1876,7 @@ ${Retail_AccountProfileAccountsDetailsLandlineInvalidValue}    0421333aaa
 
 #-----------------------------------------------------Retail Account Change Password Page-------------------------------
 ${Retail_AccountProfileChangePassPanelContainer}    //dpp-update-password[@class='user-form']
-${Retail_AccountProfileChangePassPanelHeader}    //dpp-update-password[@class='user-form']//h2
+${Retail_AccountProfileChangePassPanelHeader}    //dpp-update-password[@class='user-form']//h2[contains(text(),'Change Password') or contains(text(),'更改密碼')]
 
 ${Retail_AccountProfileChangePassCurrentPassLabel}    //dpp-update-password//span[contains(text(),'Current Password')]
 ${Retail_AccountProfileChangePassNewPassLabel}    //dpp-update-password//span[@class='label-content' and contains(text(),'New Password')]
@@ -1653,10 +1903,10 @@ ${Retail_AccountProfileChangePassNewPassNotMatchError}    //div[@class='form-err
 ${Retail_AccountProfileChangePassConfirmPassNotMatchError}    //div[@class='form-errors']//p[contains(text(),'Your passwords do not match')]
 
 ${Retail_AccountProfileChangePassConfirmationContainer}    //div[@class='cx-dialog-body modal-body pt-5']
-${Retail_AccountProfileChangePassConfirmationYesButton}    //button[@class='btn btn-block btn-secondary backToHomepage-button']
-${Retail_AccountProfileChangePassConfirmationNoButton}    //div[@class='col-sm-12 cta py-2']//button[@class='btn btn-block btn-outline-secondary']
+${Retail_AccountProfileChangePassConfirmationYesButton}    //button[@class='btn btn-block btn-secondary']
+${Retail_AccountProfileChangePassConfirmationNoButton}    //button[@class='btn btn-block btn-outline-secondary']
 
-${Retail_AccountProfileChangePassCurrentPassValue}    ${Password}
+
 ${Retail_AccountProfileChangePassNewPassValue}    HelloWorld1!
 ${Retail_AccountProfileChangePassConfirmPassValue}    HelloWorld1!
 
@@ -1665,7 +1915,7 @@ ${Retail_AccountProfileChangePassConfirmPassInvalidValue}    Test
 
 #-----------------------------------------------------Retail Account Company Details Page-------------------------------
 ${Retail_AccountCompanyDetailsPagePanelContainer}    //dpp-company-details|//dpp-hk-company-details
-${Retail_AccountCompanyDetailsPagePanelHeader}    //dpp-company-details//h2|//dpp-hk-company-details//h2
+${Retail_AccountCompanyDetailsPagePanelHeader}    //dpp-company-details//h2|//dpp-hk-company-details//h2[contains(text(),'Company Details') or contains(text(),'公司詳情')]
 
 #-----------------------------------------------------Retail Account Company Details Page Labels
 ${Retail_AccountCompanyDetailsPagePrefSupplierLabel}    //dpp-company-details//span[@class='label-content' and contains(text(),'Preferred Supplier')]
@@ -1722,9 +1972,14 @@ ${Retail_AccountCompanyDetailsPageABNTextBox}    //dpp-company-details//input[@f
 
 ${Retail_HK_AccountCompanyDetailsPage_MemberNumber_TextBox}    //input[@name='membershipNumber']
 ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_TextBox}     //div[@formgroupname='postalAddress']//dpp-autocomplete-search//div[@role='combobox']//input
+${Retail_HK_AccountCompanyDetailsPage_PostalAddress_TextBox_Clear_Button}    //div[@formgroupname='postalAddress']//dpp-autocomplete-search//span[@title='Clear all']
 ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_Options_Container}    (//form//div[@formgroupname='postalAddress']//ng-dropdown-panel//div//div[@role='option'])
+${Retail_HK_AccountCompanyDetailsPage_PostalAddress_Manual_Container}    //form//div[@formgroupname='postalAddress']//ng-dropdown-panel//div//div[@role='option']//p//parent::div
 ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_TextBox}    //div[@formgroupname='deliveryAddress']//dpp-autocomplete-search//div[@role='combobox']//input
+${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_TextBox_Clear_Button}    //div[@formgroupname='deliveryAddress']//dpp-autocomplete-search//span[@title='Clear all']
 ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_Options_Container}    (//form//div[@formgroupname='deliveryAddress']//ng-dropdown-panel//div//div[@role='option'])
+${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_Manual_Container}    //form//div[@formgroupname='deliveryAddress']//ng-dropdown-panel//div//div[@role='option']//p//parent::div
+
 
 ${Retail_HK_AccountCompanyDetailsPage_CompanyPhone_TextBox}    //span[@class='label-content' and contains(text(),'Company Phone Number')]/parent::label/following-sibling::dpp-input-contact-number//input
 ${Retail_HK_AccountCompanyDetailsPage_Landline_TextBox}    //span[@class='label-content' and contains(text(),'Landline Number')]/parent::label/following-sibling::dpp-input-contact-number//input
@@ -1886,8 +2141,8 @@ ${Retail_HK_AccountStaffPage_PhoneNum_Add_Value}    12345678
 #-----------------------------------------------------Retail All Product Page-------------------------------------------
 
 ${AllProdPageLabelFilter}    //dpp-breadcrumb
-${AllProdPagePanelHeader}    //div[@class='search-result-heading']
-${AllProdPageSortProdDropdown}    (//div[@class='cx-sorting top']//div[@class='ng-select-container ng-has-value'])[2]|(//dpp-product-list//div[@class='form-group sort-filter-wrapper row m-0']//ng-select//div)[1]
+${AllProdPagePanelHeader}    //div[@class='search-result-heading']//strong[contains(text(),'All Products') or contains(text(),'所有產品')]
+${AllProdPageSortProdDropdown}    (//div[@class='cx-sorting top']//div[@class='ng-select-container ng-has-value'])[2]|(//dpp-product-list//div[@class='form-group sort-filter-wrapper row m-0']//ng-select//div)[1]|(//div[@class='ng-select-container ng-has-value'])[2]
 ${AllProdPageSortProdDropdownRelevance}    //div[@role='option']//span[contains(text(),'Relevance')]
 ${AllProdPageSortProdDropdownAtoZ}    //div[@role='option']//span[contains(text(),'Name A to Z') or contains(text(),'Name (ascending)')]
 ${AllProdPageSortProdDropdownZtoA}    //div[@role='option']//span[contains(text(),'Name Z to A') or contains(text(),'Name (descending)')]
@@ -1930,7 +2185,7 @@ ${AllProdPagePreviousPageButtonDisabled}    //a[@class='previous disabled']
 ${AllProdPageDisabledCurrentPage1}     //a[@aria-label='page 1' and @class='page disabled current']
 
 
-${Retail_HK_AllProdPageLoadmoreButton}    //dpp-product-grid-view//div[@class='showmore']//div[@class='showmore-btn btn btn-block btn-secondary align-btn']
+${Retail_HK_AllProdPageLoadmoreButton}    //dpp-product-grid-view//div[@class='showmore']//button[@class='showmore-btn btn btn-secondary align-btn']
 ${Retail_HK_AllProdPageScrolltoTopButton}    //cx-scroll-to-top//button
 
 ${AllProdPageAddtoCartButton}    (//dpp-add-to-cart//button[@type='submit'])
@@ -1963,6 +2218,9 @@ ${Retail_AllProdPageMessagePopUpUpMessageValue}    Test
 
 
 #-----------------------------------------------------Retail Product Selection------------------------------------------
+${Retail_HK_ProductSelectionProductlist}    //div[@class='custom-product-list' or @class='product-grid-list']
+${Retail_HK_ProductSelectionProductResult}    //div[@class='showmore-result text-center mb-2']
+
 #-----------------------------------------------------Retail Product Selection In Stock and DC Stock
 ${ProductSelectionInStockDCStock}    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']])
 ${ProductSelectionInStockDCStockContainer}    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']])[1]
@@ -2064,30 +2322,314 @@ ${ProductDeatilsPageProductYourPriceToggleDisabled}    //div[@class='custom-cont
 ${ProductDeatilsPageProductGSTToggleDisabled}    //div[@class='ml-5 custom-control custom-switch']|//div[@class='custom-control custom-switch custom-switch--ml'][.//input[@disabled]]
 
 
+#-----------------------------------------------------EPC Page----------------------------------------------------------
+#-----------------------------------------------------EPC Page L1
+${Retail_HK_EPC_L1_Container}    //cx-page-layout[@class='EPCLevel1PageTemplate']
+${Retail_HK_EPC_L1_ElectronicParts_Container}    //cx-page-slot[@class='Section2A has-components']
+${Retail_HK_EPC_L1_ElectronicParts_Cards_Container}    //cx-page-slot[@class='Section2A has-components']//div[@class='epc-cards row m-0']
+${Retail_HK_EPC_L1_ElectronicParts_Cards_Header}    //cx-page-slot[@class='Section2A has-components']//div[@class='epc-title mb-3']
+
+${Retail_HK_EPC_L1_ElectronicParts_Cards_EngineFuelSystem}    //cx-page-slot[@class='Section2A has-components']//div[@class='epc-cards row m-0']//div[@class='epc-card-title pt-3 text-center' and contains(text(),'Engine, fuel system, and tools')]//parent::div[@class='epc-card d-flex flex-column justify-content-start align-items-center']
+${Retail_HK_EPC_L1_ElectronicParts_Cards_TransmissionChasis}    //cx-page-slot[@class='Section2A has-components']//div[@class='epc-cards row m-0']//div[@class='epc-card-title pt-3 text-center' and contains(text(),'Transmission and chassis')]//parent::div[@class='epc-card d-flex flex-column justify-content-start align-items-center']
+${Retail_HK_EPC_L1_ElectronicParts_Cards_BodyInterior}    //cx-page-slot[@class='Section2A has-components']//div[@class='epc-cards row m-0']//div[@class='epc-card-title pt-3 text-center' and contains(text(),'Body and interior')]//parent::div[@class='epc-card d-flex flex-column justify-content-start align-items-center']
+${Retail_HK_EPC_L1_ElectronicParts_Cards_Electrics}    //cx-page-slot[@class='Section2A has-components']//div[@class='epc-cards row m-0']//div[@class='epc-card-title pt-3 text-center' and contains(text(),'Electrics')]//parent::div[@class='epc-card d-flex flex-column justify-content-start align-items-center']
+
+${Retail_HK_EPC_L1_MaintenanceParts_Container}    //cx-page-slot[@class='Section2B has-components']
+${Retail_HK_EPC_L1_MaintenanceParts_Card_Container}    //cx-page-slot[@class='Section2B has-components']//div[@class='top-sellers d-flex flex-column align-items-center justify-content-between']
+${Retail_HK_EPC_L1_MaintenanceParts_Header}    //cx-page-slot[@class='Section2B has-components']//div[@class='maintenance-parts-title mb-4 mt-3 mt-md-0']
+${Retail_HK_EPC_L1_MaintenanceParts_Card_ShopNow_Button}    //cx-page-slot[@class='Section2B has-components']//div[@class='top-sellers d-flex flex-column align-items-center justify-content-between']//button
+
+
+
+#-----------------------------------------------------EPC Page L2
+${Retail_HK_EPC_L2_SelectedCar_Container}    //div[@class='epc-selected-car-container']
+${Retail_HK_EPC_L2_SelectedCar_Header_Label}    //div[@class='epc-selected-car-container']//div[@class='col-12 d-flex']
+${Retail_HK_EPC_L2_SelectedCar_CarModel_Label}    //div[@class='epc-selected-car-container']//div[@class='row pt-2']
+${Retail_HK_EPC_L2_SelectedCar_CarModelCode_Value}    //div[@class='epc-selected-car-container']//div[@class='col-2']//span[@class='car-label' and contains(text(),'Model Code')]/parent::div/preceding-sibling::div
+${Retail_HK_EPC_L2_SelectedCar_CarModelCode_Label}    //div[@class='epc-selected-car-container']//div[@class='col-2']//span[@class='car-label' and contains(text(),'Model Code')]
+${Retail_HK_EPC_L2_SelectedCar_CarEngine_Value}    //div[@class='epc-selected-car-container']//div[@class='col-2 ml-n3']//span[@class='car-label' and contains(text(),'Engine')]/parent::div/preceding-sibling::div
+${Retail_HK_EPC_L2_SelectedCar_CarEngine_Label}    //div[@class='epc-selected-car-container']//div[@class='col-2 ml-n3']//span[@class='car-label' and contains(text(),'Engine')]
+${Retail_HK_EPC_L2_SelectedCar_CarYear_Value}     //div[@class='epc-selected-car-container']//div[@class='col-1 pl-5']//span[@class='car-label' and contains(text(),'Year')]/parent::div/preceding-sibling::div
+${Retail_HK_EPC_L2_SelectedCar_CarYear_Label}    //div[@class='epc-selected-car-container']//div[@class='col-1 pl-5']//span[@class='car-label' and contains(text(),'Year')]
+${Retail_HK_EPC_L2_SelectedCar_CarTransmission_Value}    //div[@class='epc-selected-car-container']//div[@class='col-3']//span[@class='car-label' and contains(text(),'Transmission')]/parent::div/preceding-sibling::div
+${Retail_HK_EPC_L2_SelectedCar_CarTransmission_Label}    //div[@class='epc-selected-car-container']//div[@class='col-3']//span[@class='car-label' and contains(text(),'Transmission')]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Button}    //div[@class='epc-selected-car-container']//button
+${Retail_HK_EPC_L2_SelectedCar_ChangeCar_Button}    //div[@class='epc-selected-car-container']//div[@class='row pt-1']
+
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Container}    //div[@class='cx-modal-content']
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Header}    //div[@class='cx-modal-content']//div[@class='cx-dialog-header d-flex justify-content-between flex-column']
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Close_Button}     //div[@class='cx-modal-content']//cx-icon
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Body_Label}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][1]//span[1]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Body_Value}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][1]//span[2]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_ProdDate_Label}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][2]//span[1]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_ProdDate_Value}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][2]//span[2]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Year_Label}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][3]//span[1]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Year_Value}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][3]//span[2]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Doors_Label}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][4]//span[1]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Doors_Value}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][4]//span[2]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Seating_Label}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][5]//span[1]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Seating_Value}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][5]//span[2]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Grade_Label}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][6]//span[1]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_Grade_Value}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][6]//span[2]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_DriverPos_Label}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][7]//span[1]
+${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Popup_DriverPos_Value}    //div[@class='cx-dialog-body d-flex flex-column']//div[@class='row'][7]//span[2]
+
+${Retail_HK_EPC_L2_PartsGroup_Header}    //dpp-epc-parts-group-facet-navigation//div[@class='epc-parts-group-title']
+${Retail_HK_EPC_L2_PartsGroup_EngingFuelSystem_Button}    //dpp-epc-parts-group-facet-navigation//a[@class='col-12 p-0 my-1' and contains(text(),' Engine, fuel system, and tools')]|//dpp-epc-parts-group-facet-navigation//a[@class='col-12 p-0 my-1 selected' and contains(text(),' Engine, fuel system, and tools')]
+${Retail_HK_EPC_L2_PartsGroup_TransmissionChasis_Button}    //dpp-epc-parts-group-facet-navigation//a[@class='col-12 p-0 my-1' and contains(text(),'Transmission and chassis')]|//dpp-epc-parts-group-facet-navigation//a[@class='col-12 p-0 my-1 selected' and contains(text(),'Transmission and chassis')]
+${Retail_HK_EPC_L2_PartsGroup_BodyInterior_Button}    //dpp-epc-parts-group-facet-navigation//a[@class='col-12 p-0 my-1' and contains(text(),'Body and interior')]|//dpp-epc-parts-group-facet-navigation//a[@class='col-12 p-0 my-1 selected' and contains(text(),'Body and interior')]
+${Retail_HK_EPC_L2_PartsGroup_Electrics_Button}    //dpp-epc-parts-group-facet-navigation//a[@class='col-12 p-0 my-1' and contains(text(),'Electrics')]|//dpp-epc-parts-group-facet-navigation//a[@class='col-12 p-0 my-1 selected' and contains(text(),'Electrics')]
+${Retail_HK_EPC_L2_PartsGroup_All_Button}    //dpp-epc-parts-group-facet-navigation//a[@class='col-12 p-0 my-1' and contains(text(),'All')]|//dpp-epc-parts-group-facet-navigation//a[@class='col-12 p-0 my-1 selected' and contains(text(),'All')]
+
+${Retail_HK_EPC_L2_Schema_All_Header}    //dpp-epc-parts-schema-list//div[@class='epc-schema-header pb-4 row m-0']//span[contains(text(),'All')]
+
+${Retail_HK_EPC_L2_SearchBar_TextBox}    //dpp-input-search//input
+${Retail_HK_EPC_L2_Schema_CardList}    (//dpp-epc-parts-schema-list//div[@class='epc-schema-card col-12 col-md-3 my-2 mx-0 px-2'])
+${Retail_HK_EPC_L2_Schema_LoadMore_Button}    //dpp-epc-parts-schema-list//button[@class='showmore-btn btn btn-secondary align-btn']
+
+${Retail_HK_EPC_L2_SearchBar_Value}    CAUTION PLATE
+
+#-----------------------------------------------------EPC Page L2 Engine, fuel system, and tools
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_Header}    //dpp-epc-parts-schema-list//div[@class='epc-schema-header pb-4 row m-0']//span[contains(text(),'Engine, fuel system, and tools')]
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_StandardTool}    //dpp-epc-parts-schema-list//div[contains(text(),'STANDARD TOOL')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_PartialEngineAssembly}    //dpp-epc-parts-schema-list//div[contains(text(),'PARTIAL ENGINE ASSEMBLY')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ShortBlockAssembly}    //dpp-epc-parts-schema-list//div[contains(text(),'SHORT BLOCK ASSEMBLY')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOverhaulGasketKit}    //dpp-epc-parts-schema-list//div[contains(text(),'ENGINE OVERHAUL GASKET KIT')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CylinderHead}    //dpp-epc-parts-schema-list//div[contains(text(),'CYLINDER HEAD')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CylinderBlock}    //dpp-epc-parts-schema-list//div[contains(text(),'CYLINDER BLOCK')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_TimingGearCoverReadEndPlate}    //dpp-epc-parts-schema-list//div[contains(text(),'TIMING GEAR COVER & REAR END PLATE')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Mounting}    //dpp-epc-parts-schema-list//div[contains(text(),'MOUNTING')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VentilationHose}    //dpp-epc-parts-schema-list//div[contains(text(),'VENTILATION HOSE')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CrankshaftPiston}    //dpp-epc-parts-schema-list//div[contains(text(),'CRANKSHAFT & PISTON')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CamshaftValve}    //dpp-epc-parts-schema-list//div[contains(text(),'CAMSHAFT & VALVE')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOilPump}    //dpp-epc-parts-schema-list//div[contains(text(),'ENGINE OIL PUMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_OilFilter}    //dpp-epc-parts-schema-list//div[contains(text(),'OIL FILTER')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOilCooler}    //dpp-epc-parts-schema-list//div[contains(text(),'ENGINE OIL COOLER')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_WaterPump}    //dpp-epc-parts-schema-list//div[contains(text(),'WATER PUMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_RadiatorWterOutlet}    //dpp-epc-parts-schema-list//div[contains(text(),'RADIATOR & WATER OUTLET')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VBelt}    //dpp-epc-parts-schema-list//div[contains(text(),'V-BELT')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Manifold}    //dpp-epc-parts-schema-list//div[contains(text(),'MANIFOLD')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ExhaustPipe}    //dpp-epc-parts-schema-list//div[contains(text(),'EXHAUST PIPE')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_AirCleaner}    //dpp-epc-parts-schema-list//div[contains(text(),'AIR CLEANER')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VaccumPiping}    //dpp-epc-parts-schema-list//div[contains(text(),'VACUUM PIPING')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CautionPlateNamePlate}    //dpp-epc-parts-schema-list//div[contains(text(),'CAUTION PLATE & NAME PLATE (ENGINE)')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_IgnitionCoilSparkPlug}    //dpp-epc-parts-schema-list//div[contains(text(),'IGNITION COIL & SPARK PLUG / GLOW PLUG')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Distributor}    //dpp-epc-parts-schema-list//div[contains(text(),'DISTRIBUTOR')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Alternator}    //dpp-epc-parts-schema-list//div[contains(text(),'ALTERNATOR')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Starter}    //dpp-epc-parts-schema-list//div[contains(text(),'STARTER')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_FuelInjectionSystem}    //dpp-epc-parts-schema-list//div[contains(text(),'FUEL INJECTION SYSTEM')]/parent::div
+${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ExhaustGasReciructionSystem}    //dpp-epc-parts-schema-list//div[contains(text(),'EXHAUST GAS RECIRCULATION SYSTEM')]/parent::div
+
+
+#-----------------------------------------------------EPC Page L2 Transmission and chassis
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_Header}    //dpp-epc-parts-schema-list//div[@class='epc-schema-header pb-4 row m-0']//span[contains(text(),'Transmission and chassis')]
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchReleaseFork}    //dpp-epc-parts-schema-list//div[contains(text(),'CLUTCH & RELEASE FORK')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchPedalFlexibleHose}    //dpp-epc-parts-schema-list//div[contains(text(),'CLUTCH PEDAL & FLEXIBLE HOSE')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchMasterCylinder}    //dpp-epc-parts-schema-list//div[contains(text(),'CLUTCH MASTER CYLINDER')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchReleaseCylinder}    //dpp-epc-parts-schema-list//div[contains(text(),'CLUTCH RELEASE CYLINDER')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransaxleTransmissionAssyGasketKitMTM}    //dpp-epc-parts-schema-list//div[contains(text(),'TRANSAXLE OR TRANSMISSION ASSY & GASKET KIT (MTM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchHousingTransmissionCaseMTM}    //dpp-epc-parts-schema-list//div[contains(text(),'CLUTCH HOUSING & TRANSMISSION CASE (MTM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SpeedmeterDrivenGearMTM}    //dpp-epc-parts-schema-list//div[contains(text(),'SPEEDOMETER DRIVEN GEAR (MTM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransmissionGearMTM}    //dpp-epc-parts-schema-list//div[contains(text(),'TRANSMISSION GEAR (MTM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_GearShiftForkLeverShaftMTM}    //dpp-epc-parts-schema-list//div[contains(text(),'GEAR SHIFT FORK & LEVER SHAFT (MTM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ShiftLeverRetainer}    //dpp-epc-parts-schema-list//div[contains(text(),'SHIFT LEVER & RETAINER')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransaxleTransmissionAssyGasketKitATM}    //dpp-epc-parts-schema-list//div[contains(text(),'TRANSAXLE OR TRANSMISSION ASSY & GASKET KIT (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TorqueConverterFrontOilPumpChainATM}    //dpp-epc-parts-schema-list//div[contains(text(),'TORQUE CONVERTER, FRONT OIL PUMP & CHAIN (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransmissionCaseOilPanATM}    //dpp-epc-parts-schema-list//div[contains(text(),'TRANSMISSION CASE & OIL PAN (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SpeedometerDrivenGearATM}    //dpp-epc-parts-schema-list//div[contains(text(),'SPEEDOMETER DRIVEN GEAR (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_OverdriveGearATM}    //dpp-epc-parts-schema-list//div[contains(text(),'OVERDRIVE GEAR (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BreakBandMultipleDiscClutch}    //dpp-epc-parts-schema-list//div[contains(text(),'BRAKE BAND & MULTIPLE DISC CLUTCH (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_CenterSupportPlanetarySunGearATM}    //dpp-epc-parts-schema-list//div[contains(text(),'CENTER SUPPORT & PLANETARY SUN GEAR (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeReverseBrakeATM}    //dpp-epc-parts-schema-list//div[contains(text(),'BRAKE NO.3, 1ST & REVERSE BRAKE (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_PlanetaryGearReversePistonCounterGearATM}    //dpp-epc-parts-schema-list//div[contains(text(),'PLANETARY GEAR, REVERSE PISTON & COUNTER GEAR(ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearOilStrainer}    //dpp-epc-parts-schema-list//div[contains(text(),'REAR OIL PUMP & GOVERNOR (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ValveBodyOilStrainerATM}    //dpp-epc-parts-schema-list//div[contains(text(),'VALVE BODY & OIL STRAINER (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ThrottleLinkValveLever}    //dpp-epc-parts-schema-list//div[contains(text(),'THROTTLE LINK & VALVE LEVER (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_OilCoolerTubeATM}    //dpp-epc-parts-schema-list//div[contains(text(),'OIL COOLER & TUBE (ATM)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearAxleHousingDifferential}    //dpp-epc-parts-schema-list//div[contains(text(),'REAR AXLE HOUSING & DIFFERENTIAL')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearAxleShaftHub}    //dpp-epc-parts-schema-list//div[contains(text(),'REAR AXLE SHAFT & HUB')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_DiscWheelWheelCap}    //dpp-epc-parts-schema-list//div[contains(text(),'DISC WHEEL & WHEEL CAP')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontAxleHub}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT AXLE HUB')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SteeringColumnShaft}    //dpp-epc-parts-schema-list//div[contains(text(),'STEERING COLUMN & SHAFT')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_VanePumpReservoirPowerSteering}    //dpp-epc-parts-schema-list//div[contains(text(),'VANE PUMP & RESERVOIR (POWER STEERING)')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_PowerSteeringTube}    //dpp-epc-parts-schema-list//div[contains(text(),'POWER STEERING TUBE')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SteeringWheel}    //dpp-epc-parts-schema-list//div[contains(text(),'STEERING WHEEL')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontSteeringGearLink}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT STEERING GEAR & LINK')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ParkingBrakeCable}    //dpp-epc-parts-schema-list//div[contains(text(),'PARKING BRAKE & CABLE')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakePedalBracket}    //dpp-epc-parts-schema-list//div[contains(text(),'BRAKE PEDAL & BRACKET')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BreakMasterCylinder}    //dpp-epc-parts-schema-list//div[contains(text(),'BRAKE MASTER CYLINDER')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeBoosterVacuumTube}    //dpp-epc-parts-schema-list//div[contains(text(),'BRAKE BOOSTER & VACUUM TUBE')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontDiscBrakeCaliperDustCover}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT DISC BRAKE CALIPER & DUST COVER')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearDiscBrakeCaliperDustCover}    //dpp-epc-parts-schema-list//div[contains(text(),'REAR DISC BRAKE CALIPER & DUST COVER')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeTubeClamp}    //dpp-epc-parts-schema-list//div[contains(text(),'BRAKE TUBE & CLAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontAxleArmSteeringKnuckle}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT AXLE ARM & STEERING KNUCKLE')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontSpringShockAbsorber}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT SPRING & SHOCK ABSORBER')]/parent::div
+${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearSpringShockAbsorber}    //dpp-epc-parts-schema-list//div[contains(text(),'REAR SPRING & SHOCK ABSORBER')]/parent::div
+
+#-----------------------------------------------------EPC Page L2 Body and interior
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_Header}    //dpp-epc-parts-schema-list//div[@class='epc-schema-header pb-4 row m-0']//span[contains(text(),'Body and interior')]
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SuspensionCrossmemberUnderCover}    //dpp-epc-parts-schema-list//div[contains(text(),'SUSPENSION CROSSMEMBER & UNDER COVER')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SpareWheelCarrier}    //dpp-epc-parts-schema-list//div[contains(text(),'SPARE WHEEL CARRIER')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontBumperBumperStay}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT BUMPER & BUMPER STAY')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RearBumperBumperStay}    //dpp-epc-parts-schema-list//div[contains(text(),'REAR BUMPER & BUMPER STAY')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RadiatorGrille}    //dpp-epc-parts-schema-list//div[contains(text(),'RADIATOR GRILLE')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_HoodFrontFender}    //dpp-epc-parts-schema-list//div[contains(text(),'HOOD & FRONT FENDER')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_HoodLockHinge}    //dpp-epc-parts-schema-list//div[contains(text(),'HOOD LOCK & HINGE')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontFenderApronDashPanel}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT FENDER APRON & DASH PANEL')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FloorSideMember}    //dpp-epc-parts-schema-list//div[contains(text(),'FLOOR SIDE MEMBER')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_InstrumentPanelGloveCompartment}    //dpp-epc-parts-schema-list//div[contains(text(),'INSTRUMENT PANEL & GLOVE COMPARTMENT')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_CowlPanelWindshieldGlass}    //dpp-epc-parts-schema-list//div[contains(text(),'COWL PANEL & WINDSHIELD GLASS')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FloorPanLowerBackPanel}    //dpp-epc-parts-schema-list//div[contains(text(),'FLOOR PAN & LOWER BACK PANEL')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FloorInsulator}    //dpp-epc-parts-schema-list//div[contains(text(),'FLOOR INSULATOR')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_MatCarpet}    //dpp-epc-parts-schema-list//div[contains(text(),'MAT & CARPET')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_ConsoleBoxBracket}    //dpp-epc-parts-schema-list//div[contains(text(),'CONSOLE BOX & BRACKET')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SideMember}    //dpp-epc-parts-schema-list//div[contains(text(),'SIDE MEMBER')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RoofSideVentilator}    //dpp-epc-parts-schema-list//div[contains(text(),'ROOF SIDE VENTILATOR')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_QuarterWindow}    //dpp-epc-parts-schema-list//div[contains(text(),'QUARTER WINDOW')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RoofPanelBackWindowGlass}    //dpp-epc-parts-schema-list//div[contains(text(),'ROOF PANEL & BACK WINDOW GLASS')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_LuggageCompartmentDoorLock}    //dpp-epc-parts-schema-list//div[contains(text(),'LUGGAGE COMPARTMENT DOOR & LOCK')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_EngineHoodLock}    //dpp-epc-parts-schema-list//div[contains(text(),'ENGINE HOOD & LOCK')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_InsideTrimBoardDoorOpeningTrimMoulding}    //dpp-epc-parts-schema-list//div[contains(text(),'INSIDE TRIM BOARD & DOOR OPENING TRIM MOULDING')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RoofHeadliningSilencerPad}    //dpp-epc-parts-schema-list//div[contains(text(),'ROOF HEADLINING & SILENCER PAD')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_PackageTrayPanelLaggageCompartmentMat}    //dpp-epc-parts-schema-list//div[contains(text(),'PACKAGE TRAY PANEL & LUGGAGE COMPARTMENT MAT')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontDoorPanelGlass}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT DOOR PANEL & GLASS')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontDoorLockHandle}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT DOOR LOCK & HANDLE')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrondDoorWindowRegulatorHinge}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT DOOR WINDOW REGULATOR & HINGE')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_LockCylinderSet}    //dpp-epc-parts-schema-list//div[contains(text(),'LOCK CYLINDER SET')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontSeatSearTrack}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT SEAT & SEAT TRACK')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SeatBeltChildRestrainSeat}    //dpp-epc-parts-schema-list//div[contains(text(),'SEAT BELT & CHILD RESTRAINT SEAT')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_ArmrestVisor}    //dpp-epc-parts-schema-list//div[contains(text(),'ARMREST & VISOR')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_BatteryCarrier}    //dpp-epc-parts-schema-list//div[contains(text(),'BATTERY CARRIER')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_CautionPlate}    //dpp-epc-parts-schema-list//div[contains(text(),'CAUTION PLATE (EXTERIOR & INTERIOR)')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_AshReceptacle}    //dpp-epc-parts-schema-list//div[contains(text(),'ASH RECEPTACLE')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_EmplemNamePlate}    //dpp-epc-parts-schema-list//div[contains(text(),'EMBLEM & NAME PLATE (EXTERIOR & INTERIOR)')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontMoulding}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT MOULDING')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SideMoulding}    //dpp-epc-parts-schema-list//div[contains(text(),'SIDE MOULDING')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RearMoulding}    //dpp-epc-parts-schema-list//div[contains(text(),'REAR MOULDING')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_MudguardSpoiler}    //dpp-epc-parts-schema-list//div[contains(text(),'MUDGUARD & SPOILER')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FuelTankTube}    //dpp-epc-parts-schema-list//div[contains(text(),'FUEL TANK & TUBE')]/parent::div
+${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_AcceleratorLink}    //dpp-epc-parts-schema-list//div[contains(text(),'ACCELERATOR LINK')]/parent::div
+
+
+#-----------------------------------------------------EPC Page L2 Electrics
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_Header}    //dpp-epc-parts-schema-list//div[@class='epc-schema-header pb-4 row m-0']//span[contains(text(),'Electrics')]
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_Headlamp}    //dpp-epc-parts-schema-list//div[contains(text(),'HEADLAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_FogLamp}    //dpp-epc-parts-schema-list//div[contains(text(),'FOG LAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_FrontTurnSignalLamp}    //dpp-epc-parts-schema-list//div[contains(text(),'FRONT TURN SIGNAL LAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_SideTurnSignalLampOuterMirrorLamp}    //dpp-epc-parts-schema-list//div[contains(text(),'SIDE TURN SIGNAL LAMP & OUTER MIRROR LAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_RearCombinationLamp}    //dpp-epc-parts-schema-list//div[contains(text(),'REAR COMBINATION LAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_BackUpLamp}    //dpp-epc-parts-schema-list//div[contains(text(),'BACK UP LAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_RearLicensePlateLamp}    //dpp-epc-parts-schema-list//div[contains(text(),'REAR LICENSE PLATE LAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_RearSideMarkerLamp}    //dpp-epc-parts-schema-list//div[contains(text(),'REAR SIDE MARKER LAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_CenterStopLamp}    //dpp-epc-parts-schema-list//div[contains(text(),'CENTER STOP LAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_InteriorLamp}    //dpp-epc-parts-schema-list//div[contains(text(),'INTERIOR LAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_BatteryBatteryCable}    //dpp-epc-parts-schema-list//div[contains(text(),'BATTERY & BATTERY CABLE')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_WiringClamp}    //dpp-epc-parts-schema-list//div[contains(text(),'WIRING & CLAMP')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_Meter}    //dpp-epc-parts-schema-list//div[contains(text(),'METER')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_Indicator}    //dpp-epc-parts-schema-list//div[contains(text(),'INDICATOR')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_SwitchRelayComputer}    //dpp-epc-parts-schema-list//div[contains(text(),'SWITCH & RELAY & COMPUTER')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_ElectronicFuelInjectionSystem}    //dpp-epc-parts-schema-list//div[contains(text(),'ELECTRONIC FUEL INJECTION SYSTEM')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_CruisControl}    //dpp-epc-parts-schema-list//div[contains(text(),'CRUISE CONTROL (AUTO DRIVE)')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_OverdriveElectronicControlledTransmission}    //dpp-epc-parts-schema-list//div[contains(text(),'OVERDRIVE & ELECTRONIC CONTROLLED TRANSMISSION')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_ABSVSC}    //dpp-epc-parts-schema-list//div[contains(text(),'ABS & VSC')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_AntiTheftDevice}    //dpp-epc-parts-schema-list//div[contains(text(),'ANTI-THEFT DEVICE')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_WindshieldWiper}    //dpp-epc-parts-schema-list//div[contains(text(),'WINDSHIELD WIPER')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_WindshieldWasher}    //dpp-epc-parts-schema-list//div[contains(text(),'WINDSHIELD WASHER')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_DoorMotorDoorSolenoid}    //dpp-epc-parts-schema-list//div[contains(text(),'DOOR MOTOR & DOOR SOLENOID')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_RadioReiverAmplifierCondenser}    //dpp-epc-parts-schema-list//div[contains(text(),'RADIO RECEIVER & AMPLIFIER & CONDENSER')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_Speaker}    //dpp-epc-parts-schema-list//div[contains(text(),'SPEAKER')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_Antena}    //dpp-epc-parts-schema-list//div[contains(text(),'ANTENNA')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_Horn}    //dpp-epc-parts-schema-list//div[contains(text(),'HORN')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_Mirror}    //dpp-epc-parts-schema-list//div[contains(text(),'MIRROR')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningSet}    //dpp-epc-parts-schema-list//div[contains(text(),'HEATING & AIR CONDITIONING - SET')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningHeaterUnitBlower}    //dpp-epc-parts-schema-list//div[contains(text(),'HEATING & AIR CONDITIONING - HEATER UNIT & BLOWER')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningCoolerUnit}    //dpp-epc-parts-schema-list//div[contains(text(),'HEATING & AIR CONDITIONING - COOLER UNIT')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningControlAirDuct}    //dpp-epc-parts-schema-list//div[contains(text(),'HEATING & AIR CONDITIONING - CONTROL & AIR DUCT')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningWaterPiping}    //dpp-epc-parts-schema-list//div[contains(text(),'HEATING & AIR CONDITIONING - WATER PIPING')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningVacuumPiping}    //dpp-epc-parts-schema-list//div[contains(text(),'HEATING & AIR CONDITIONING - VACUUM PIPING')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningCoolerPiping}    //dpp-epc-parts-schema-list//div[contains(text(),'HEATING & AIR CONDITIONING - COOLER PIPING')]/parent::div
+${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningCompressor}    //dpp-epc-parts-schema-list//div[contains(text(),'HEATING & AIR CONDITIONING - COMPRESSOR')]/parent::div
+
+
+#-----------------------------------------------------EPC Page L3
+${Retail_HK_EPC_L3_SchemaCar_Header_Label}    //div[@class='col-12 d-flex']
+${Retail_HK_EPC_L3_SchemaCar_Header_Prev_Button_Disabled}    //div[@class='parts-pagination']//div[@class='col-6 d-flex justify-content-end pr-3']//button[@class='link cx-action-link next-prev-btn' and @disabled='true']
+${Retail_HK_EPC_L3_SchemaCar_Header_Next_Button_Disabled}    //div[@class='parts-pagination']//div[@class='col-6 d-flex justify-content-end pr-3']//button[@class='link cx-action-link next-prev-btn' and @disabled='true' and contains(text(),'Next')]
+${Retail_HK_EPC_L3_SchemaCar_Header_Prev_Button_Enabled}    //div[@class='parts-pagination']//div[@class='col-6 d-flex justify-content-end pr-3']//button[@class='link cx-action-link next-prev-btn active' and contains(text(),'Prev')]
+${Retail_HK_EPC_L3_SchemaCar_Header_Next_Button_Enabled}    //div[@class='parts-pagination']//div[@class='col-6 d-flex justify-content-end pr-3']//button[@class='link cx-action-link next-prev-btn active' and contains(text(),'Next')]
+
+${Retail_HK_EPC_L3_SchemaCar_Diagram}    //dpp-dpp-epc-parts-diagram
+${Retail_HK_EPC_L3_PartsListCards_Container}    //dpp-epc-part-list//div[@class='part-list-wrapper d-flex flex-column']
+${Retail_HK_EPC_L3_PartsListCards_Options}      (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0'])
+
+${Retail_HK_EPC_L3_PartsListCards_Options_PartNum}    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//div[@class='pnc-id'])
+${Retail_HK_EPC_L3_PartsListCards_Options_ProdName}    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//div[@class='pnc-name'])
+${Retail_HK_EPC_L3_PartsListCards_Options_Expand_Button}    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//button//span[contains(text(),'EXPAND')])
+
+${Retail_HK_EPC_L3_PartsListCards_Option_Details_Container}    //dpp-epc-part-detail//div[@class='part-detail-container']
+${Retail_HK_EPC_L3_PartsListCards_Option_Details_PartNo_Label}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='header-container']//div[@class='col-2']//p[contains(text(),'Part No')]
+${Retail_HK_EPC_L3_PartsListCards_Option_Details_DetailsSpec_Label}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='header-container']//div[@class='col-3']//p[contains(text(),'Details/Spec')]
+${Retail_HK_EPC_L3_PartsListCards_Option_Details_Stock_Label}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='header-container']//div[@class='col-1']//p[contains(text(),'Stock')]
+${Retail_HK_EPC_L3_PartsListCards_Option_Details_Price_Label}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='header-container']//div[@class='col-2']//p[contains(text(),'Price')]
+${Retail_HK_EPC_L3_PartsListCards_Option_Details_Note_Label}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='header-container']//div[@class='col-4']//p[contains(text(),'Note')]
+
+${Retail_HK_EPC_L3_PartsListCards_Option_Details_PartNo_Value}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='row part-details']//div[@class='col-2']//p[@class='m-0 part-no']
+${Retail_HK_EPC_L3_PartsListCards_Option_Details_DetailsSpec_Value}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='row part-details']//div[@class='col-3']//p[@class='m-0 compatibility']
+${Retail_HK_EPC_L3_PartsListCards_Option_Details_Stock_Value}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='row part-details']//div[@class='col-1']//p
+${Retail_HK_EPC_L3_PartsListCards_Option_Details_Price_Value}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='row part-details']//div[@class='col-2' or @class='col-2 pr-0']//p[@class='m-0 price' or @class='m-0 not-available']
+${Retail_HK_EPC_L3_PartsListCards_Option_Details_MoreInfo_Button}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='row part-details']//div[@class='col-4 d-flex justify-content-between flex-wrap more-info-wrapper']//span[contains(text(),'More Info')]
+${Retail_HK_EPC_L3_PartsListCards_Option_Details_HideInfo_Button}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='row part-details']//div[@class='col-4 d-flex justify-content-between flex-wrap more-info-wrapper']//span[contains(text(),'Hide Info')]
+
+${Retail_HK_EPC_L3_PartsListCards_Option_MoreDetails_Container}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='more-details']
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #------------------------YopMail------------------------
 ${YopMail}    https://yopmail.com/en/
 
 ${Yopmail_Banner}    //header//img[@id='logoacc']
-${Yopmail_Email_TextBox}    //div[@class='ycolleft']//div[@class='ycptctn']//input
+${Yopmail_Email_TextBox}    //div[@class='ycolleft']//div[@class='nw']//div[@class='tooltip click']//input
 ${Yopmail_Email_Next_Button}    //div[@class='ycolleft']//div[@class='ycptctn']//button
 ${Yopmail_Refresh_Button}    //div[@class='wmmain']//button[@id='refresh']
 ${Yopmail_Menu_Button}    (//div[@class='wmmain']//div[@class='wminboxheader']//button//i[@class='material-icons-outlined'])[1]
 ${Yopmail_ClearInbox_Button}    //div[@class='wmmain']//div[@class='wminboxheader']//div[@class='menu']//button[@id='delall']
 ${Yopmail_InboxMessage_Option1}    (//body[@class='bodyinbox yscrollbar']//div[@class='m'])[1]
+${Yopmail_InboxMessage_Option2}    (//body[@class='bodyinbox yscrollbar']//div[@class='m'])[2]
+
 ${Yopmail_InboxBody}    //body[@class='bodymail yscrollbar']
 ${Yopmail_Inbox_Title_Message}    (//div[@class='fl']//div)[1]
 ${Yopmail_Inbox_Sender_Email}    //div[@class='fl']//div//span
 ${Yopmail_Inbox_ShowPicture_Button}    //div[@class='fl']//div[@class='noprint']//button
 
-${Yopmail_InboxBody_Header}    (//div[@id='mail']//tbody//tr)[1]
-${Yopmail_InboxBody_Content}    //div[@id='mail']//tbody//tr[2]//tbody
-${Yopmail_InboxBody_Footer}    (//div[@id='mail']//tbody//tr)[3]
+${Yopmail_InboxBody_Header}    //div[@id='mail']//div//tbody//tr//a/parent::div/parent::td
+#(//div[@id='mail']//div//tbody//tr)[1]
+${Yopmail_InboxBody_Content}     (//div[@id='mail']//div//tbody//tr//table/parent::td)[2]
+${Yopmail_InboxBody_Footer}    //div[@id='mail']//div//tbody//tr//a[contains(text(),'Contact Us') or contains(text(),'聯繫我們')]/parent::td
+#(//div[@id='mail']//div//tbody//tr)[3]
 
 ${Yopmail_Inbox_List_Frame}    ifinbox
 ${YopMail_Message_Frame}    ifmail
 
-
+${PartsLaneEmail}    admin@partslane.com.hk
 
 
 

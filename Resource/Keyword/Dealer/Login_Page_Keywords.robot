@@ -3,7 +3,7 @@ Documentation    Suite description
 
 Library  SeleniumLibrary
 
-Resource  ../../../Resource/testdata/config.robot
+#Resource  ../../../Resource/testdata/config.robot
 Resource  ../../../Resource/testdata/Dealer/Dealer_Variable.robot
 Resource  ../../../Resource/testdata/credentials.robot
 
@@ -147,6 +147,22 @@ User should be able to click create account in Dealer Reset Password Page
     click element    ${ResetPassCreateAccount}
     sleep    2
 
-#Get Text Sample
-#    ${TesGetText}=    get text    ${CreateAccount}
-#    Log    Element get ${CreateAccount}
+User should be able to click Translate to English Button
+    ${EN}    run keyword and return status    element should be visible    ${Dealer_HK_LoginPage_English_Button}
+    run keyword if    ${EN}    Translate to English
+
+User should be able to click Translate to Chinese Button
+    ${CN}    run keyword and return status    element should be visible    ${Dealer_HK_LoginPage_Chinese_Button}
+    run keyword if    ${CN}    Translate to Chinese
+
+Translate to English
+    wait until element is visible    ${Dealer_HK_LoginPage_English_Button}    10
+    capture element screenshot    ${Dealer_HK_LoginPage_English_Button}
+    click element    ${Dealer_HK_LoginPage_English_Button}
+    sleep    2
+
+Translate to Chinese
+    wait until element is visible    ${Dealer_HK_LoginPage_Chinese_Button}    10
+    capture element screenshot    ${Dealer_HK_LoginPage_Chinese_Button}
+    click element    ${Dealer_HK_LoginPage_Chinese_Button}
+    sleep    2

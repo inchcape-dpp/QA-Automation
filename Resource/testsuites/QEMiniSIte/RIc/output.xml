@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20240229 10:44:24.913" rpa="false" schemaversion="4">
+<suite id="s1" name="MiniSite TestSuite" source="C:\Users\Ericson.Tinana\PycharmProjects\pythonProject1\Resource\testsuites\QEMiniSIte\RIc\MiniSite_TestSuite.robot">
+<test id="s1-t1" name="Test Setup" line="13">
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Open Chrome Browser</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Open Chrome Browser" library="MiniSite_Config">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${PartsLane}</arg>
+<arg>Chrome</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20240229 10:44:25.200" level="INFO">Opening browser 'Chrome' to base url 'https://www.partslane.com.au/home/index.html'.</msg>
+<status status="PASS" starttime="20240229 10:44:25.200" endtime="20240229 10:44:30.067"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20240229 10:44:30.067" endtime="20240229 10:44:30.181"/>
+</kw>
+<status status="PASS" starttime="20240229 10:44:25.199" endtime="20240229 10:44:30.181"/>
+</kw>
+<status status="PASS" starttime="20240229 10:44:25.199" endtime="20240229 10:44:30.181"/>
+</kw>
+<status status="PASS" starttime="20240229 10:44:25.198" endtime="20240229 10:44:30.182"/>
+</test>
+<test id="s1-t2" name="Screen Shot DIR" line="14">
+<kw name="Run Keywords" library="BuiltIn">
+<arg>Retail Screent Shot DIR</arg>
+<doc>Executes all the given keywords in a sequence.</doc>
+<kw name="Retail Screent Shot DIR" library="MiniSite_Config">
+<kw name="Get Current Date" library="DateTime">
+<var>${currentdate}</var>
+<arg>result_format=%m-%d-%y %H-%M</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20240229 10:44:30.184" level="INFO">${currentdate} = 02-29-24 10-44</msg>
+<status status="PASS" starttime="20240229 10:44:30.183" endtime="20240229 10:44:30.184"/>
+</kw>
+<kw name="Create Directory" library="OperatingSystem">
+<arg>${Retail_screenshot_path}/${currentdate}</arg>
+<doc>Creates the specified directory.</doc>
+<msg timestamp="20240229 10:44:30.185" level="INFO" html="true">Created directory '&lt;a href="file://C:\Users\Ericson.Tinana\PycharmProjects\pythonProject1\Resource\testsuites\QEMiniSIte\RIc\Screenshots\02-29-24 10-44"&gt;C:\Users\Ericson.Tinana\PycharmProjects\pythonProject1\Resource\testsuites\QEMiniSIte\RIc\Screenshots\02-29-24 10-44&lt;/a&gt;'.</msg>
+<status status="PASS" starttime="20240229 10:44:30.184" endtime="20240229 10:44:30.185"/>
+</kw>
+<kw name="Convert To String" library="BuiltIn">
+<var>${LogDIR}</var>
+<arg>${Retail_screenshot_path}/${currentdate}</arg>
+<doc>Converts the given item to a Unicode string.</doc>
+<msg timestamp="20240229 10:44:30.186" level="INFO">${LogDIR} = C:\Users\Ericson.Tinana\PycharmProjects\pythonProject1\Resource\testsuites\QEMiniSIte\RIc\Screenshots/02-29-24 10-44</msg>
+<status status="PASS" starttime="20240229 10:44:30.185" endtime="20240229 10:44:30.186"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${LogDIR}</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" starttime="20240229 10:44:30.186" endtime="20240229 10:44:30.189"/>
+</kw>
+<kw name="Set Global Variable" library="BuiltIn">
+<arg>${LogDIR}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<msg timestamp="20240229 10:44:30.189" level="INFO">${LogDIR} = C:\Users\Ericson.Tinana\PycharmProjects\pythonProject1\Resource\testsuites\QEMiniSIte\RIc\Screenshots/02-29-24 10-44</msg>
+<status status="PASS" starttime="20240229 10:44:30.189" endtime="20240229 10:44:30.189"/>
+</kw>
+<status status="PASS" starttime="20240229 10:44:30.183" endtime="20240229 10:44:30.189"/>
+</kw>
+<status status="PASS" starttime="20240229 10:44:30.183" endtime="20240229 10:44:30.190"/>
+</kw>
+<status status="PASS" starttime="20240229 10:44:30.182" endtime="20240229 10:44:30.190"/>
+</test>
+<test id="s1-t3" name="TC-001 - Verify Minisite Page" line="16">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Verify Minisite Page</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Verify Minisite Page" library="MiniSite">
+<kw name="Sleep" library="BuiltIn">
+<arg>10</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20240229 10:44:40.192" level="INFO">Slept 10 seconds</msg>
+<status status="PASS" starttime="20240229 10:44:30.192" endtime="20240229 10:44:40.192"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20240229 10:44:40.467" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-screenshot-1.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:40.192" endtime="20240229 10:44:40.467"/>
+</kw>
+<status status="PASS" starttime="20240229 10:44:30.192" endtime="20240229 10:44:40.468"/>
+</kw>
+<status status="PASS" starttime="20240229 10:44:30.192" endtime="20240229 10:44:40.468"/>
+</kw>
+<tag>Login Page</tag>
+<tag>TC001</tag>
+<status status="PASS" starttime="20240229 10:44:30.191" endtime="20240229 10:44:40.468"/>
+</test>
+<test id="s1-t4" name="TC-002 - Verify Why Choose Us elements" line="20">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Verify Why Choose Us elements</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Verify Why Choose Us elements" library="MiniSite">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${$Why}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:40.470" endtime="20240229 10:44:40.496"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${WhyLogo}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:40.496" endtime="20240229 10:44:40.522"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Fast}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:40.522" endtime="20240229 10:44:40.543"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${FastContent}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:40.543" endtime="20240229 10:44:40.561"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Quick}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:40.562" endtime="20240229 10:44:40.580"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${QuickContent}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:40.580" endtime="20240229 10:44:40.598"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Click}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:40.598" endtime="20240229 10:44:40.616"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ClickContent}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:40.616" endtime="20240229 10:44:40.633"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Guaranteed}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:40.633" endtime="20240229 10:44:40.649"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${GuaranteedContent}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:40.649" endtime="20240229 10:44:40.670"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${$Why}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:40.763" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-1.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-1.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:40.670" endtime="20240229 10:44:40.763"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${WhyLogo}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:40.910" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-2.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-2.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:40.764" endtime="20240229 10:44:40.910"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Fast}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:40.969" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-3.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-3.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:40.910" endtime="20240229 10:44:40.969"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${FastContent}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:41.089" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-4.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-4.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:40.969" endtime="20240229 10:44:41.089"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Quick}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:41.155" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-5.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-5.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:41.089" endtime="20240229 10:44:41.155"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${QuickContent}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:41.235" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-6.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-6.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:41.155" endtime="20240229 10:44:41.236"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Click}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:41.312" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-7.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-7.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:41.236" endtime="20240229 10:44:41.312"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${ClickContent}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:41.453" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-8.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-8.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:41.312" endtime="20240229 10:44:41.453"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Guaranteed}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:41.553" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-9.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-9.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:41.453" endtime="20240229 10:44:41.553"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${GuaranteedContent}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:41.657" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-10.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-10.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:41.553" endtime="20240229 10:44:41.658"/>
+</kw>
+<status status="PASS" starttime="20240229 10:44:40.470" endtime="20240229 10:44:41.658"/>
+</kw>
+<status status="PASS" starttime="20240229 10:44:40.469" endtime="20240229 10:44:41.658"/>
+</kw>
+<tag>Login Page</tag>
+<tag>TC002</tag>
+<status status="PASS" starttime="20240229 10:44:40.469" endtime="20240229 10:44:41.658"/>
+</test>
+<test id="s1-t5" name="TC-003 - Verify How it Works elements" line="24">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Verify How it Works elements</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Verify How it Works elements" library="MiniSite">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${HowItWorks}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:41.662" endtime="20240229 10:44:41.700"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SelectVehicle1}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:41.700" endtime="20240229 10:44:41.731"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SelectGenuine1}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:41.731" endtime="20240229 10:44:41.768"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ToOrder1}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:41.768" endtime="20240229 10:44:41.794"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Receive1}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:41.794" endtime="20240229 10:44:41.820"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${HowItWorksSection}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20240229 10:44:41.821" endtime="20240229 10:44:42.101"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SelectVehicle1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240229 10:44:42.102" level="INFO">Clicking element '//div//header[@class='section-default--list-content_head item-controller--font' and (contains(text(),'Select your vehicle'))]'.</msg>
+<status status="PASS" starttime="20240229 10:44:42.101" endtime="20240229 10:44:42.177"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SelectVehicle2}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:42.178" endtime="20240229 10:44:42.206"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SelectVehicleContent}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:42.206" endtime="20240229 10:44:42.235"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SelectVehicleContent}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:42.235" endtime="20240229 10:44:42.255"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${SelectVehicle2}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:42.325" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-11.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-11.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:42.255" endtime="20240229 10:44:42.325"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${SelectVehicleContent}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:42.464" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-12.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-12.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:42.325" endtime="20240229 10:44:42.464"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${SelectVehicleImg}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:42.615" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-13.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-13.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:42.465" endtime="20240229 10:44:42.615"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${SelectGenuine1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240229 10:44:42.615" level="INFO">Clicking element '//div//header[@class='section-default--list-content_head item-controller--font' and (contains(text(),'Select the genuine part once you’ve located it in step 1'))]'.</msg>
+<status status="PASS" starttime="20240229 10:44:42.615" endtime="20240229 10:44:42.664"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SelectGenuine2}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:42.664" endtime="20240229 10:44:42.689"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SelectGenuineContent}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:42.689" endtime="20240229 10:44:42.710"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${SelectGenuineImg}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:42.711" endtime="20240229 10:44:42.735"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${SelectGenuine2}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:42.814" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-14.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-14.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:42.735" endtime="20240229 10:44:42.814"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${SelectGenuineContent}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:42.874" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-15.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-15.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:42.814" endtime="20240229 10:44:42.874"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${SelectGenuineImg}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:42.953" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-16.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-16.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:42.874" endtime="20240229 10:44:42.953"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ToOrder1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240229 10:44:42.954" level="INFO">Clicking element '//div//header[@class='section-default--list-content_head item-controller--font' and (contains(text(),'To order, add the car part to your cart and…'))]'.</msg>
+<status status="PASS" starttime="20240229 10:44:42.953" endtime="20240229 10:44:42.990"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ToOrder2}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:42.990" endtime="20240229 10:44:43.006"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ToOrderContent}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:43.006" endtime="20240229 10:44:43.022"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ToOrderImg}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:43.022" endtime="20240229 10:44:43.038"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${ToOrder2}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:43.085" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-17.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-17.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:43.038" endtime="20240229 10:44:43.085"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${ToOrderContent}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:43.148" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-18.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-18.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:43.085" endtime="20240229 10:44:43.148"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${ToOrderImg}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:43.219" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-19.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-19.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:43.148" endtime="20240229 10:44:43.219"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Receive1}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240229 10:44:43.220" level="INFO">Clicking element '//div//header[@class='section-default--list-content_head item-controller--font' and (contains(text(),'Receive delivery of your car part from your preferred Subaru Wholesale Parts Dealer'))]'.</msg>
+<status status="PASS" starttime="20240229 10:44:43.220" endtime="20240229 10:44:43.253"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${Receive2}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:43.253" endtime="20240229 10:44:43.269"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ReceiveContent}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:43.269" endtime="20240229 10:44:43.284"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${ReceiveImg}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:43.284" endtime="20240229 10:44:43.299"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${RegisterButton}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20240229 10:44:43.299" endtime="20240229 10:44:43.314"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Receive2}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:43.363" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-20.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-20.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:43.314" endtime="20240229 10:44:43.363"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${ReceiveContent}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:43.420" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-21.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-21.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:43.363" endtime="20240229 10:44:43.420"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${ReceiveImg}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:43.536" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-22.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-22.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:43.420" endtime="20240229 10:44:43.536"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${HowItWorks}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:43.592" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-23.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-23.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:43.536" endtime="20240229 10:44:43.592"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${SelectVehicle1}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:43.644" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-24.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-24.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:43.592" endtime="20240229 10:44:43.644"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${SelectGenuine1}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:43.703" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-25.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-25.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:43.645" endtime="20240229 10:44:43.703"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${ToOrder1}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:43.770" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-26.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-26.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:43.703" endtime="20240229 10:44:43.770"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${Receive1}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:43.828" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-27.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-27.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:43.770" endtime="20240229 10:44:43.828"/>
+</kw>
+<kw name="Capture Element Screenshot" library="SeleniumLibrary">
+<arg>${RegisterButton}</arg>
+<doc>Captures a screenshot from the element identified by ``locator`` and embeds it into log file.</doc>
+<msg timestamp="20240229 10:44:43.882" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="Screenshots/02-29-24%2010-44/selenium-element-screenshot-28.png"&gt;&lt;img src="Screenshots/02-29-24%2010-44/selenium-element-screenshot-28.png" width="400px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20240229 10:44:43.828" endtime="20240229 10:44:43.882"/>
+</kw>
+<status status="PASS" starttime="20240229 10:44:41.661" endtime="20240229 10:44:43.882"/>
+</kw>
+<status status="PASS" starttime="20240229 10:44:41.661" endtime="20240229 10:44:43.882"/>
+</kw>
+<tag>Login Page</tag>
+<tag>TC003</tag>
+<status status="PASS" starttime="20240229 10:44:41.660" endtime="20240229 10:44:43.883"/>
+</test>
+<test id="s1-t6" name="TC-004 - Click register button" line="28">
+<kw name="Run Keyword And Continue On Failure" library="BuiltIn">
+<arg>Click register button</arg>
+<doc>Runs the keyword and continues execution even if a failure occurs.</doc>
+<kw name="Click register button" library="MiniSite">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${RegisterButton}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20240229 10:44:43.885" level="INFO">Clicking element '//div//a[@class='btn-cta btn-hiw btn-ripple']'.</msg>
+<status status="PASS" starttime="20240229 10:44:43.884" endtime="20240229 10:44:43.943"/>
+</kw>
+<status status="PASS" starttime="20240229 10:44:43.884" endtime="20240229 10:44:43.943"/>
+</kw>
+<status status="PASS" starttime="20240229 10:44:43.884" endtime="20240229 10:44:43.943"/>
+</kw>
+<tag>Login Page</tag>
+<tag>TC004</tag>
+<status status="PASS" starttime="20240229 10:44:43.883" endtime="20240229 10:44:43.944"/>
+</test>
+<doc>Suite description</doc>
+<status status="PASS" starttime="20240229 10:44:24.915" endtime="20240229 10:44:43.945"/>
+</suite>
+<statistics>
+<total>
+<stat pass="6" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="4" fail="0" skip="0">Login Page</stat>
+<stat pass="1" fail="0" skip="0">TC001</stat>
+<stat pass="1" fail="0" skip="0">TC002</stat>
+<stat pass="1" fail="0" skip="0">TC003</stat>
+<stat pass="1" fail="0" skip="0">TC004</stat>
+</tag>
+<suite>
+<stat pass="6" fail="0" skip="0" id="s1" name="MiniSite TestSuite">MiniSite TestSuite</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20240229 10:44:25.194" level="WARN">Imported resource file 'C:\Users\Ericson.Tinana\PycharmProjects\pythonProject1\Resource\testdata\config.robot' is empty.</msg>
+</errors>
+</robot>

@@ -3,7 +3,7 @@ Documentation    Suite description
 
 Library  SeleniumLibrary
 
-Resource  ../../../Resource/testdata/config.robot
+#Resource  ../../../Resource/testdata/config.robot
 Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../Resource/testdata/credentials.robot
 
@@ -14,6 +14,8 @@ User should be able to view message page
     wait until element is visible    ${Retail_AccountpageMessagesMenu}    10
     click element    ${Retail_AccountpageMessagesMenu}
     wait until element is visible    ${Retail_AccountMessagePagePanelContainer}    10
+    wait until element is visible    ${Retail_AccountMessagePagePanelHeader}    10
+    capture element screenshot    ${Retail_AccountMessagePagePanelHeader}
     capture page screenshot
     sleep    2
 

@@ -3,7 +3,7 @@ Documentation    Suite description
 
 Library  SeleniumLibrary
 
-Resource  ../../../Resource/testdata/config.robot
+#Resource  ../../../Resource/testdata/config.robot
 Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../Resource/testdata/credentials.robot
 
@@ -21,8 +21,7 @@ User should be able to view account saved carts page
 User should be able to view Saved Carts Panel
     wait until element is visible    ${Retail_AccountSavedCartsPagePanelContainer}    10
     capture element screenshot    ${Retail_AccountSavedCartsPagePanelContainer}
-
-    sleep    2
+    sleep    5
 
 User should be able to view Saved Carts List in Retail Account Saved Carts Page
     wait until element is visible    ${Retail_AccountSavedCartsPageCartNameLabel}    10

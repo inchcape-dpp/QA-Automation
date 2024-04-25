@@ -2,8 +2,9 @@
 Documentation    Suite description
 
 Library  SeleniumLibrary
+Library    String
 
-Resource  ../../../Resource/testdata/config.robot
+#Resource  ../../../Resource/testdata/config.robot
 Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../Resource/testdata/credentials.robot
 
@@ -91,8 +92,22 @@ User should be able to view checkout in HK Retail Checkout Page
 
     capture element screenshot    ${Retail_CheckoutPageHeader}
 
-    wait until element is visible    ${Retail_CheckoutPageCustomerDetailsOrderItemList}    10
-    capture element screenshot    ${Retail_CheckoutPageCustomerDetailsOrderItemList}
+    wait until element is visible    ${Retail_HK_CheckoutPageReviewItemsContainer}    10
+    wait until element is visible    ${Retail_HK_CheckoutPageReviewItemsHeader}    10
+    wait until element is visible    ${Retail_HK_CheckoutPageReviewItemsDeliveryDate}    10
+    ${DelData}    get text    ${Retail_HK_CheckoutPageReviewItemsDeliveryDate}
+    ${RemoveStringDelDate}    remove string    ${DelData}    Delivery:
+    Log    ${RemoveStringDelDate}
+    wait until element is visible    ${Retail_HK_CheckoutPageReviewItemsList}    10
+
+    capture element screenshot    ${Retail_HK_CheckoutPageReviewItemsContainer}
+    capture element screenshot    ${Retail_HK_CheckoutPageReviewItemsHeader}
+    capture element screenshot    ${Retail_HK_CheckoutPageReviewItemsDeliveryDate}
+    capture element screenshot    ${Retail_HK_CheckoutPageReviewItemsDeliveryDate}
+    capture element screenshot    ${Retail_HK_CheckoutPageReviewItemsList}
+
+#    wait until element is visible    ${Retail_CheckoutPageCustomerDetailsOrderItemList}    10
+#    capture element screenshot    ${Retail_CheckoutPageCustomerDetailsOrderItemList}
 
     wait until element is visible    ${Retail_CheckoutPageCustomerDetailsOrderSummaryContainer}    10
     wait until element is visible    ${Retail_CheckoutPageCustomerDetailsOrderSummaryHeader}    10
@@ -118,6 +133,9 @@ User should be able to view checkout in HK Retail Checkout Page
     capture element screenshot    ${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryContinuePaymentButton}
     capture element screenshot    ${Retail_CheckoutPageCustomerDetailsOrderSummaryBacktoCartButton}
 
+    ${currentshippingfee}    get text    ${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryShippingFeeValue}
+    ${currentshippingvalue}    remove string    ${currentshippingfee}    $
+    set global variable    ${currentshippingvalue}
 
 User should be able to click po number info in Retail Checkout Page
     wait until element is visible    ${Retail_CheckoutPageCustomerDetailsPONumberInfoButton}    10
@@ -174,6 +192,15 @@ User should be able to click shipping info button in Retail Checkout Page
     sleep    1
     click element    ${Retail_CheckoutPageCustomerDetailsShippingToInfoButton}
     sleep    2
+
+
+
+User should be albe to Compare Shipping Fee in HK Retail Checkout Page
+    wait until element is visible    ${Retail_CheckoutPageCustomerDetailsOrderSummaryContainer}    10
+    ${changeshippingfee}    get text    ${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryShippingFeeValue}
+    ${changeshippingvalue}    remove string    $
+    run keyword and continue on failure    should not be equal    ${changeshippingvalue}    ${currentshippingvalue}
+    sleep    5
 
 User should be able to view Shipping Details in HK Retail Checkout Page
     wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressContainer}    10
@@ -345,6 +372,27 @@ User should be able to edit shipping address on change shipping in HK Retail Che
     capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}
     sleep    2
 
+User should be able to cliear shipping address on shipping in HK Retail Checkout Page
+    wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox_Clear_Button}    10
+    capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox_Clear_Button}
+    click element    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox_Clear_Button}
+    sleep    2
+
+User should be able to edit manual shipping address on change shipping in HK Retail Checkout Page
+    wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}    10
+    scroll element into view    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}
+    click element    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}
+    clear element text    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}
+    input text    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}    ${Retail_HK_RegistrationManualPostalAddLine1Value}
+    capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}
+    sleep    2
+
+User should be able to click manual shipping address on change shipping in HK Retail Checkout Page
+    wait until element is visible    ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_AddressLine1_Manual_Options}    10
+    capture element screenshot    ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_AddressLine1_Manual_Options}
+    click element    ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_AddressLine1_Manual_Options}
+    sleep    2
+
 User should be able to select Random Address from suggestions in HK Retail Checkout Page
     wait until element is visible    ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_AddressLine1_Suggest_Options}    10
     ${AddressCount}    get element count    ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_AddressLine1_Suggest_Options}
@@ -392,7 +440,7 @@ User should be able to click Save Button on change shipping in HK Retail Checkou
     scroll element into view    ${Retail_HK_CheckoutPageShippingAddressChangePopUpSaveButton}
     capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpSaveButton}
     click element    ${Retail_HK_CheckoutPageShippingAddressChangePopUpSaveButton}
-    sleep    2
+    sleep    5
 
 User should be able to click Cancel Button on change shipping in HK Retail Checkout Page
     wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpCancelButton}    10
@@ -414,11 +462,6 @@ User should be able to click place order button in Retail Checkout Page
     wait until element is visible    ${Retail_CheckoutPageCustomerDetailsOrderSummaryPlaceOrderDisabledButton}    10
     capture element screenshot    ${Retail_CheckoutPageCustomerDetailsOrderSummaryPlaceOrderDisabledButton}
     sleep    20
-
-
-
-
-
 
 
 User should be able to click place order button in HK Retail Checkout Page
@@ -680,8 +723,6 @@ User should be able to view place order in HK Retail Place Order Page
     wait until element is visible    ${Retail_HK_PlaceOrderPage_CofirmationDetails_OrderDate_Value}    10
     wait until element is visible    ${Retail_HK_PlaceOrderPage_CofirmationDetails_EstDelDate_Label}    10
     wait until element is visible    ${Retail_HK_PlaceOrderPage_CofirmationDetails_EstDelDate_Value}    10
-    wait until element is visible    ${Retail_HK_PlaceOrderPage_CofirmationDetails_PONumer_Label}    10
-    wait until element is visible    ${Retail_HK_PlaceOrderPage_CofirmationDetails_PONumer_Value}    10
     wait until element is visible    ${Retail_PlaceOrderPageBacktoHomeButton}    10
     wait until element is visible    ${Retail_PlaceOrderPageViewOrderButton}    10
 
@@ -693,12 +734,105 @@ User should be able to view place order in HK Retail Place Order Page
     capture element screenshot    ${Retail_HK_PlaceOrderPage_CofirmationDetails_OrderDate_Value}
     capture element screenshot    ${Retail_HK_PlaceOrderPage_CofirmationDetails_EstDelDate_Label}
     capture element screenshot    ${Retail_HK_PlaceOrderPage_CofirmationDetails_EstDelDate_Value}
-    capture element screenshot    ${Retail_HK_PlaceOrderPage_CofirmationDetails_PONumer_Label}
-    capture element screenshot    ${Retail_HK_PlaceOrderPage_CofirmationDetails_PONumer_Value}
     capture element screenshot    ${Retail_PlaceOrderPageBacktoHomeButton}
     capture element screenshot    ${Retail_PlaceOrderPageViewOrderButton}
 
     sleep    2
 
+User should be able to view Promo Code in HK Retail Checkout Page
+    wait until element is visible    ${Retail_HK_CheckoutPage_PromoCode_Container}    10
+    wait until element is visible    ${Retail_HK_CheckoutPage_PromoCode_Label}    10
+    wait until element is visible    ${Retail_HK_CheckoutPage_PromoCode_TextBox}    10
+    wait until element is visible    ${Retail_HK_CheckoutPage_PromoCode_Apply_Button}    10
 
+    capture element screenshot    ${Retail_HK_CheckoutPage_PromoCode_Container}
+    capture element screenshot    ${Retail_HK_CheckoutPage_PromoCode_Label}
+    capture element screenshot    ${Retail_HK_CheckoutPage_PromoCode_TextBox}
+    capture element screenshot    ${Retail_HK_CheckoutPage_PromoCode_Apply_Button}
+    sleep    2
+
+User should be able to input Promo Code in HK Retail Checkout Page
+    wait until element is visible    ${Retail_HK_CheckoutPage_PromoCode_TextBox}    10
+    input text    ${Retail_HK_CheckoutPage_PromoCode_TextBox}    ${Retail_HK_CheckoutPage_PromoCode_Value}
+    capture element screenshot    ${Retail_HK_CheckoutPage_PromoCode_TextBox}
+    click element    ${Retail_HK_CheckoutPage_PromoCode_Apply_Button}
+    sleep    5
+    capture element screenshot    ${Retail_HK_CheckoutPage_PromoCode_Container}
+    sleep    2
+
+User should be able to remove Promo Code in HK Retail Checkout Page
+    scroll element into view    ${FooterLogo}
+    wait until element is visible    ${Retail_HK_CheckoutPage_PromoCode_Remove_Button}    10
+    capture element screenshot    ${Retail_HK_CheckoutPage_PromoCode_Remove_Button}
+    click element    ${Retail_HK_CheckoutPage_PromoCode_Remove_Button}
+    sleep    5
+
+Get Promo code used
+    wait until element is visible    ${Retail_HK_CheckoutPage_PromoCode_Code}    10
+    ${PromoCode}    get text    ${Retail_HK_CheckoutPage_PromoCode_Code}
+    log to console    ${PromoCode}
+    log    ${PromoCode}
+
+
+User should be able to check Promo Code in HK Retail Checkout Page
+    ${100DiscountMin}    set variable    2000
+    ${100DiscountMax}    set variable    3999.9
+    ${200DiscountMin}    set variable    4000
+    ${200DiscountMax}    set variable    5999.9
+    ${300DiscountMin}    set variable    6000
+
+    ${SubtotalText}    get text    ${Retail_CheckoutPageCustomerDetailsOrderSummarySubTotalValue}
+    ${ShippingFeeText}    get text    ${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryShippingFeeValue}
+    ${DiscountText}    get text    ${Retail_HK_CheckoutPage_CustomerDetails_OrderSummary_Discounnt_Value}
+    ${OrderTotalText}    get text    ${Retail_CheckoutPageCustomerDetailsOrderSummaryOrderTotalValue}
+
+#    ${SubtotalString}    convert to string    ${SubtotalText}
+#    ${ShippingString}    convert to string    ${ShippingFeeText}
+#    ${DiscountString}    convert to string    ${DiscountText}
+#    ${OrderTotalString}    convert to string    ${OrderTotalText}
+
+    ${RemoveSubTotalString}    remove string    ${SubtotalText}    $    ,
+    ${RemoveShippingString}    remove string   ${ShippingFeeText}    Free    $    ,    FREE
+    ${RemoveDiscountString}    remove string    ${DiscountText}    $    ,
+    ${RemoveOrderTotalString}    remove string    ${OrderTotalText}    $    ,
+    set global variable    ${RemoveDiscountString}
+
+    ${RemoveShippingString}    run keyword if    '${RemoveShippingString}' == ''    set variable    0    ELSE    set variable    ${RemoveShippingString}
+
+    ${SubTotal}    convert to number    ${RemoveSubTotalString}
+    ${Shipping}    convert to number    ${RemoveShippingString}
+    ${Discount}    convert to number    ${RemoveDiscountString}
+    ${OrderTotal}  convert to number    ${RemoveOrderTotalString}
+    set global variable    ${OrderTotal}
+
+    ${SubTotalPrice}    evaluate    ${RemoveSubTotalString}+${RemoveShippingString}
+    ${OrderTotalPrice}    evaluate    ${SubTotalPrice}-${RemoveDiscountString}
+    set global variable    ${OrderTotalPrice}
+
+    run keyword if    ${RemoveSubTotalString} < ${100DiscountMin}    Invalid Promo Code
+    run keyword if    ${RemoveSubTotalString} > ${100DiscountMin} and ${RemoveSubTotalString} < ${100DiscountMax}    Set Discount to 100
+    run keyword if    ${RemoveSubTotalString} > ${200DiscountMin} and ${RemoveSubTotalString} < ${200DiscountMax}    Set Discount to 200
+    run keyword if    ${RemoveSubTotalString} > ${300DiscountMin}    Set Discount to 300
+    run keyword if    ${RemoveSubTotalString} > ${100DiscountMin}    Compare Promo Code
+
+
+Set Discount to 100
+    ${DiscountValue}  set variable    ${100}
+    set global variable    ${DiscountValue}
+
+Set Discount to 200
+    ${DiscountValue}  set variable    ${200}
+    set global variable    ${DiscountValue}
+
+Set Discount to 300
+    ${DiscountValue}  set variable    ${300}
+    set global variable    ${DiscountValue}
+
+Invalid Promo Code
+    log to console    Invalid Promo code or Below Min Ammount
+    log    Invalid Promo code or Below Min Ammount
+
+Compare Promo Code
+    run keyword and continue on failure    should be equal    ${OrderTotal}    ${OrderTotalPrice}
+    run keyword and continue on failure    should be equal    ${DiscountValue}    ${RemoveDiscountString}
 
