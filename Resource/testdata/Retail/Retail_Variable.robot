@@ -218,11 +218,13 @@ ${Retail_RegistrationCompNameValue}    Test Company Name
 ${Retail_RegistrationTradingNameValue}    Test Trading Name
 ${Retail_RegistrationPostalAddLine1Value}    Test Postal Address Line 1
 ${Retail_HK_RegistrationPostalAddLine1Value}    Pok Fu Lam
+${Retail_HK_RegistrationManualPostalAddLine1Value}    Test1 Address
 ${Retail_RegistrationPostalAddLine2Value}    Test Postal Address Line 2
 ${Retail_RegistrationPostalSuburbValue}    Test Postal Suburb
 ${Retail_RegistrationPostalPostalCodevalue}    1234
 ${Retail_RegistrationDelAddLine1Value}    Test Delivery Address Line 1
 ${Retail_HK_RegistrationDelAddLine1Value}    Kwai Chung
+${Retail_HK_RegistrationManualDelAddLine1Value}    Test2 Address
 ${Retail_RegistrationDelAddLine2Value}    Test Delivery Address Line 2
 ${Retail_RegistrationDelSuburbValue}    Test Delivery Suburb
 ${Retail_RegistrationDelPostalCodevalue}    4321
@@ -247,7 +249,7 @@ ${HomePageProfileAccount}    (//div[@class='header-account-label']//span[contain
 ${HomePageProfileLogout}    //li//a[@href='/dppretail/logout']
 
 ${HomePage_DoubleHeader}    //div[@class='double-header--relative']
-${HomePage_DoubleHeader_SellerName}    //div[@class='double-header--relative']//div[@class='seller-container']//p[@class='seller-name']
+${HomePage_DoubleHeader_SellerName}    //div[@class='double-header--relative']//div[@class='seller-info']//p[@class='seller-name']
 ${HomePage_DoubleHeader_MyAccount_Button}    //div[@class='double-header--relative']//cx-generic-link//a[@class='header-account']
 ${HomePage_DoubleHeader_DropDown_Button}    //div[@class='double-header--relative']//div[@class='header-account-menu']
 ${HomePage_DoubleHeader_DropDown_Button_Active}    //div[@class='double-header--relative']//div[@class='header-account-menu']//cx-icon[@class='account-caret cx-icon dpp-icons__myaccount-caret-down account-menu--active']
@@ -443,7 +445,7 @@ ${HomePageOtherCategory}
 #${HomePageGSTLabel}    //div[@class='ml-5 custom-control custom-switch']//label
 #${HomePageGSTToggle}    //div[@class='ml-5 custom-control custom-switch']//input[@type='checkbox']
 
-${HomePageSelectVehicleContainer}    //dpp-vehicle-search|//dpp-hk-vehicle
+${HomePageSelectVehicleContainer}    //dpp-vehicle-search|//dpp-hk-vehicle|//dpp-toyota-vehicle-selection
 ${HomePageSelectVehicleHeader}    //dpp-vehicle-search//span
 ${HomePageSelectVehicleStateComboBox}    //dpp-vehicle-search//ng-select[@formcontrolname='state']
 ${HomePageSelectVehicleRegoTextBox}    //dpp-vehicle-search//input[@formcontrolname='rego']
@@ -491,23 +493,23 @@ ${Retail_AU_HomePage_VINRego_VIN_Textbox}    //dpp-vehicle-search//dpp-rego-vin-
 ${Retail_AU_HomePage_VINRego_Search_Button}    //dpp-vehicle-search//dpp-rego-vin-vehicle-search//div[@class='main-box main-box--padding']//button
 
 #-----------------------------------------------------Retail Home Page HK
-${Retail_HK_HomePage_SearchVehicle_Container}    //dpp-hk-search-by-vehicle//div[@class='main-box main-box--padding']
-${Retail_HK_HomePage_SearchVIN_Container}    //dpp-hk-search-by-vin//div[@class='main-box main-box--padding']
-${Retail_HK_HomePage_SearchVIN_TextBox}    //dpp-hk-search-by-vin//div[@class='main-box main-box--padding']//input
-${Retail_HK_HomePage_SearchVIN_Button}    //dpp-hk-search-by-vin//div[@class='main-box main-box--padding']//button
+${Retail_HK_HomePage_SearchVehicle_Container}    //dpp-hk-search-by-vehicle//div[@class='main-box main-box--padding']|//dpp-toyota-search-by-vehicle//div[@class='main-box main-box--padding']
+${Retail_HK_HomePage_SearchVIN_Container}    //dpp-hk-search-by-vin//div[@class='main-box main-box--padding']|//dpp-toyota-search-by-vin//div[@class='main-box main-box--padding']
+${Retail_HK_HomePage_SearchVIN_TextBox}    //dpp-hk-search-by-vin//div[@class='main-box main-box--padding']//input|//dpp-toyota-search-by-vin//div[@class='main-box main-box--padding']//input
+${Retail_HK_HomePage_SearchVIN_Button}    //dpp-hk-search-by-vin//div[@class='main-box main-box--padding']//button|//dpp-toyota-search-by-vin//div[@class='main-box main-box--padding']//button
 
 ${Retail_HK_HomePage_SearchVIN_PopUp_Container}    //dpp-hk-vehicle-results
 ${Retail_HK_HomePage_SearchVIN_PopUp_ShopVehicle_Button}    //dpp-hk-vehicle-results//div/button[@class='btn btn-sm btn-block btn-default mt-2 p-1 select-this-vehicle-btn']
 ${Retail_HK_HomePage_SearchVIN_PopUp_SaveVehicle_Button}    //dpp-hk-vehicle-results//div/button[@class='btn btn-sm btn-primary btn-block p-1 select-this-vehicle-btn vehicleListing-btn']
 ${Retail_HK_HomePage_SearchVIN_PopUp_Search_Button}    //dpp-hk-vehicle-results//div[@class='button-wrapper d-flex justify-content-center mt-3']//button
 
-${Retail_HK_HomePage_Manula_Brand_Combobox}    //dpp-hk-search-by-vehicle//ng-select[@formcontrolname='make']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
-${Retail_HK_HomePage_Manula_Model_Combobox}    //dpp-hk-search-by-vehicle//ng-select[@formcontrolname='model']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
-${Retail_HK_HomePage_Manual_Year_Combobox}    //dpp-hk-search-by-vehicle//ng-select[@formcontrolname='year']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
-${Retail_HK_HomePage_Manual_Variant_Combobox}    //dpp-hk-search-by-vehicle//ng-select[@formcontrolname='series']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
-${Retail_HK_HomePage_Manual_ModelID_Combobox}    //dpp-hk-search-by-vehicle//ng-select[@formcontrolname='modelId']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
+${Retail_HK_HomePage_Manula_Brand_Combobox}    //dpp-hk-search-by-vehicle//ng-select[@formcontrolname='make']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']|//dpp-toyota-search-by-vehicle//ng-select[@formcontrolname='make']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
+${Retail_HK_HomePage_Manula_Model_Combobox}    //dpp-hk-search-by-vehicle//ng-select[@formcontrolname='model']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']|//dpp-toyota-search-by-vehicle//ng-select[@formcontrolname='model']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
+${Retail_HK_HomePage_Manual_Year_Combobox}    //dpp-hk-search-by-vehicle//ng-select[@formcontrolname='year']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']|//dpp-toyota-search-by-vehicle//ng-select[@formcontrolname='year']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
+${Retail_HK_HomePage_Manual_Variant_Combobox}    //dpp-hk-search-by-vehicle//ng-select[@formcontrolname='series']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']|//dpp-toyota-search-by-vehicle//ng-select[@formcontrolname='series']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
+${Retail_HK_HomePage_Manual_ModelID_Combobox}    //dpp-hk-search-by-vehicle//ng-select[@formcontrolname='modelId']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']|//dpp-toyota-search-by-vehicle//ng-select[@formcontrolname='modelId']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
 
-${Retail_HK_HomePage_Manula_Search_Button}    //dpp-hk-search-by-vehicle//button
+${Retail_HK_HomePage_Manula_Search_Button}    //dpp-hk-search-by-vehicle//button|//dpp-toyota-search-by-vehicle//button
 
 ${Retail_HK_HomePage_SearchVIN_TextBox_Value1}    JTNKC4B1809000753
 ${Retail_HK_HomePage_SearchVIN_TextBox_Value2}    JTMBH31V10D017606
@@ -773,10 +775,13 @@ ${Retail_HK_CheckoutPageShippingAddressChangePopUpEmailAddressTextBox}    //dpp-
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpMobileNumberTextBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Mobile Number') or contains(text(),'手機號碼')]/parent::div//input
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpLandlineNumberTextBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Landline Number') or contains(text(),'分機號')]/parent::div//input
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]/parent::div//input
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox_Clear_Button}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]/parent::div//span[@title='Clear all']
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine2TextBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Address Line 2') or contains(text(),'地址第二行')]/parent::div//input
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpDeliveryInstructionsTextBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Delivery Instructions') or contains(text(),'發貨備註')]/following-sibling::div//textarea
 
 ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_AddressLine1_Suggest_Options}    (//dpp-autocomplete-search//ng-dropdown-panel//div//div[@role='option'])
+${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_AddressLine1_Manual_Options}    //dpp-autocomplete-search//ng-dropdown-panel//div//p/parent::div
+
 
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpAreaComboBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//div[@class='ng-select-container ng-has-value']
 ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_Area_ComboBox_Options}    (//dpp-hk-checkout-address-dialog//label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])
@@ -960,16 +965,16 @@ ${Retail_PlaceOrderPageViewOrderButton}    //div[@class='container']//button[@cl
 
 #-----------------------------------------------------Retail Account Page-----------------------------------------------
 ${Retail_AccountAccountpageMyAccountLabel}    //div[@class='myaccount']//h2
-${Retail_AccountpageOrdersMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Orders ')]|//ul[@class='vertical-menu tab-level']//*[contains(text(),' Order History ')]
-${Retail_AccountAccountpageReturnMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Return ')]
-${Retail_AccountpageSavedCartsMenu}    //div[@class='ml-3']//a[contains(text(),'Saved Carts')]
-${Retail_AccountpageVehicleListingMenu}    //div[@class='ml-3']//a[contains(text(),'Vehicle Listing')]
-${Retail_AccountpageMessagesMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Messages ') or contains(text(),'Inbox')]
-${Retail_AccountpageProfileMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Profile ')]
-${Retail_AccountpageProfileAccountDetails}    //a[contains(text(),'Profile')]/parent::cx-generic-link/parent::div/parent::div/following-sibling::div//div[1]
-${AccountpageProfileChangePass}    //a[contains(text(),'Profile')]/parent::cx-generic-link/parent::div/parent::div/following-sibling::div//div[2]
-${Retail_AccountpageCompanyMenu}    //ul[@class='vertical-menu tab-level']//a[@class='has-nochild'][contains(text(),' Company ')]
-${Retail_AccountpageCompanyDetails}    //a[@href='/dppretail/my-account/company' or @href='/hkretail/my-account/company']
+${Retail_AccountpageOrdersMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),'Orders')]|//ul[@class='vertical-menu tab-level']//a[contains(text(),' Order History ')]|//div[@class='acc-tab__title']//*[contains(text(),'Orders')]|//ul[@class='vertical-menu tab-level']//*[contains(text(),'Order History')]
+${Retail_AccountAccountpageReturnMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),'Return Requests')]|//div[@class='acc-tab__title']//*[contains(text(),'Return Requests')]
+${Retail_AccountpageSavedCartsMenu}    //div[@class='ml-3']//a[contains(text(),'Saved Carts')]|//div[@class='acc-tab__title']//a[contains(text(),'Saved Carts')]
+${Retail_AccountpageVehicleListingMenu}    //div[@class='ml-3']//a[contains(text(),'Vehicle Listing')]|//div[@class='acc-tab__title']//a[contains(text(),'Vehicle Listing')]
+${Retail_AccountpageMessagesMenu}    //ul[@class='vertical-menu tab-level']//a[contains(text(),' Messages ') or contains(text(),'Inbox')]|//ul[@class='vertical-menu tab-level']//*[contains(text(),'Inbox')]|//div[@class='acc-tab__title']//*[contains(text(),'Messages')]
+${Retail_AccountpageProfileMenu}    //ul[@class='vertical-menu tab-level']//a[contains(text(),'Profile')]|//div[@class='acc-tab__title']//a[contains(text(),'Profile')]
+${Retail_AccountpageProfileAccountDetails}    //li[@class='mb-3 isActive' or @class='mb-3']//div[@class='tab-data has-child']//a[contains(text(),'Account Details')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'Account Details')]
+${AccountpageProfileChangePass}    //li[@class='mb-3 isActive' or @class='mb-3']//div[@class='tab-data has-child']//a[contains(text(),'Change Password')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'Change Password')]
+${Retail_AccountpageCompanyMenu}    //ul[@class='vertical-menu tab-level']//a[@class='has-nochild'][contains(text(),'Company')]|//div[@class='acc-tab__title']//a[contains(text(),'Company')]
+${Retail_AccountpageCompanyDetails}    //li[@class='mb-3 isActive' or @class='mb-3']//div[@class='tab-data has-child']//a[contains(text(),'Company Details')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'Company Details')]
 ${Retail_AccountpageCompanyStaff}    //a[@href='/dppretail/my-account/company/staff' or @href='/hkretail/my-account/company/staff']
 
 
@@ -1615,19 +1620,19 @@ ${Retail_AccountVehicleListingPageVehicleCardListRegoLabel}    (//dpp-vehicle-li
 ${Retail_AccountVehicleListingPageVehicleCardListShopVehicleButton}    (//dpp-vehicle-listing//div[@class='vehicle-card']//button[@class='btn btn-sm btn-secondary mb-0'])[1]
 ${Retail_AccountVehicleListingPageVehicleCardListDeleteButton}    (//dpp-vehicle-listing//div[@class='vehicle-card']//cx-icon)[1]
 
-${Retail_HK_AccountVehicleListingPage_VehicleCard_List}    (//dpp-hk-vehicle-listing//div[@class='row vehicle-card vehicle-desc'])
-${Retail_HK_AccountVehicleListingPage_VehicleCardList_Model_Label}    (//dpp-hk-vehicle-listing//div[@class='row vehicle-card vehicle-desc']//span[@class='vehicle-name'])[1]
-${Retail_HK_AccountVehicleListingPage_VehicleCardList_VIN_Label}    (//dpp-hk-vehicle-listing//div[@class='col-12 registration']//p)[1]
-${Retail_HK_AccountVehicleListingPage_VehicleCardList_EditDesc_Button}    (//dpp-hk-vehicle-listing//div[@class='row vehicle-card vehicle-desc']//cx-icon[@class='cx-icon dpp-icons__pencil-light'])[1]
-${Retail_HK_AccountVehicleListingPage_VehicleCardList_ShopVehicle_Button}    (//dpp-hk-vehicle-listing//div[@class='row vehicle-card vehicle-desc']//button[@class='btn btn-sm btn-secondary mb-0'])[1]
-${Retail_HK_AccountVehicleListingPage_VehicleCardList_Delete_Button}    (//dpp-hk-vehicle-listing//div[@class='row vehicle-card vehicle-desc']//cx-icon[@class='cx-icon dpp-icons__trash-v2'])[1]
+${Retail_HK_AccountVehicleListingPage_VehicleCard_List}    (//div[@class='row vehicle-card vehicle-desc'])
+${Retail_HK_AccountVehicleListingPage_VehicleCardList_Model_Label}    (//div[@class='row vehicle-card vehicle-desc']//span[@class='vehicle-name'])[1]
+${Retail_HK_AccountVehicleListingPage_VehicleCardList_VIN_Label}    (//div[@class='col-12 registration']//p)[1]
+${Retail_HK_AccountVehicleListingPage_VehicleCardList_EditDesc_Button}    (//div[@class='row vehicle-card vehicle-desc']//cx-icon[@class='cx-icon dpp-icons__pencil-light'])[1]
+${Retail_HK_AccountVehicleListingPage_VehicleCardList_ShopVehicle_Button}    (//div[@class='row vehicle-card vehicle-desc']//button[@class='btn btn-sm btn-secondary mb-0'])[1]
+${Retail_HK_AccountVehicleListingPage_VehicleCardList_Delete_Button}    (//div[@class='row vehicle-card vehicle-desc']//cx-icon[@class='cx-icon dpp-icons__trash-v2'])[1]
 
 ${Retail_AccountVehicleListingPageVehicleCardListDeletePopUpContainer}    //div[@class='cx-dialog-body modal-body']
 ${Retail_AccountVehicleListingPageVehicleCardListDeletePopUpYesButton}    //div[@class='cx-dialog-body modal-body']//button[@class='btn btn-secondary btn-block']
 ${Retail_AccountVehicleListingPageVehicleCardListDeletePopUpNoButton}    //div[@class='cx-dialog-body modal-body']//button[@class='btn btn-block btn-outline-secondary']
 
 
-${Retail_HK_AccountVehicleListingPage_Container}    //dpp-hk-vehicle-listing//div[@class='container']
+${Retail_HK_AccountVehicleListingPage_Container}    //dpp-hk-vehicle-listing//div[@class='container']|//dpp-toyota-vehicle-listing//div[@class='container']
 ${Retail_HK_AccountVehicleListingPage_Header}    //div//h3[contains(text(),'Vehicle Listing') or contains(text(),'車輛列表')]
 
 ${Retail_HK_AccountVehicleListingPage_Add New Vehicle_Button}    //dpp-hk-vehicle-listing//div[@class='header-container d-flex align-items-center justify-content-between']//button
@@ -1661,9 +1666,9 @@ ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Grade_Value}    (//dpp
 ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Driverosition_Label}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[contains(text(),'Driver's Position') or contains(text(),'駕駛員位置')]
 ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_Car_Driverosition_Value}    (//dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//div[@class='vehicle-detail-container']//div[@class='vehicle-detail-body']//div[@class='value'])[10]
 
-${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_SaveShop_button}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//button[@class='btn btn-primary btn-sm btn-block p-1 select-this-vehicle-btn vehicleListing-btn']
-${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_ShopThisVehicle_button}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//button[@class='btn btn-default btn-sm btn-block p-1 select-this-vehicle-btn']
-${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_SearchAgain_button}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//button[@class='btn btn-block btn-default vehicleListing-btn-sm']
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_SaveShop_button}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//button[@class='btn btn-primary btn-sm btn-block p-1 select-this-vehicle-btn vehicleListing-btn']|//dpp-toyota-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//button[@class='btn btn-primary btn-sm btn-block p-1 select-this-vehicle-btn vehicleListing-btn']
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_ShopThisVehicle_button}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//button[@class='btn btn-default btn-sm btn-block p-1 select-this-vehicle-btn']|//dpp-toyota-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//button[@class='btn btn-default btn-sm btn-block p-1 select-this-vehicle-btn']
+${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_SearchAgain_button}    //dpp-hk-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//button[@class='btn btn-block btn-default vehicleListing-btn-sm']|//dpp-toyota-add-vehicle-dialog//div[@class='cx-modal-content flex-layout pr-0']//button[@class='btn btn-block btn-default vehicleListing-btn-sm']
 
 
 
@@ -1978,9 +1983,14 @@ ${Retail_AccountCompanyDetailsPageABNTextBox}    //dpp-company-details//input[@f
 
 ${Retail_HK_AccountCompanyDetailsPage_MemberNumber_TextBox}    //input[@name='membershipNumber']
 ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_TextBox}     //div[@formgroupname='postalAddress']//dpp-autocomplete-search//div[@role='combobox']//input
+${Retail_HK_AccountCompanyDetailsPage_PostalAddress_TextBox_Clear_Button}    //div[@formgroupname='postalAddress']//dpp-autocomplete-search//span[@title='Clear all']
 ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_Options_Container}    (//form//div[@formgroupname='postalAddress']//ng-dropdown-panel//div//div[@role='option'])
+${Retail_HK_AccountCompanyDetailsPage_PostalAddress_Manual_Container}    //form//div[@formgroupname='postalAddress']//ng-dropdown-panel//div//div[@role='option']//p//parent::div
 ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_TextBox}    //div[@formgroupname='deliveryAddress']//dpp-autocomplete-search//div[@role='combobox']//input
+${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_TextBox_Clear_Button}    //div[@formgroupname='deliveryAddress']//dpp-autocomplete-search//span[@title='Clear all']
 ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_Options_Container}    (//form//div[@formgroupname='deliveryAddress']//ng-dropdown-panel//div//div[@role='option'])
+${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_Manual_Container}    //form//div[@formgroupname='deliveryAddress']//ng-dropdown-panel//div//div[@role='option']//p//parent::div
+
 
 ${Retail_HK_AccountCompanyDetailsPage_CompanyPhone_TextBox}    //span[@class='label-content' and contains(text(),'Company Phone Number')]/parent::label/following-sibling::dpp-input-contact-number//input
 ${Retail_HK_AccountCompanyDetailsPage_Landline_TextBox}    //span[@class='label-content' and contains(text(),'Landline Number')]/parent::label/following-sibling::dpp-input-contact-number//input
