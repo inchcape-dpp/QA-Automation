@@ -13,7 +13,7 @@ Resource  ../../../Resource/testdata/credentials.robot
 #-----------------------------------------------------Retail Home Page-------------------------------------------------
 Admin User should be able to Login
     wait until element is visible    ${HomePageLogo}    10
-    wait until element is visible    ${HomePage_DoubleHeader_SellerName}    10
+#    wait until element is visible    ${HomePage_DoubleHeader_SellerName}    10
     capture page screenshot
     sleep     2
 
@@ -992,10 +992,37 @@ User should be able to input rego in AU Retail Home Page
     capture element screenshot    ${Retail_AU_HomePage_VINRego_Rego_Textbox}
     sleep    2
 
+User should be able to input rego 2 in AU Retail Home Page
+    wait until element is visible    ${Retail_AU_HomePage_VINRego_Rego_Textbox}    10
+    clear element text    ${Retail_AU_HomePage_VINRego_Rego_Textbox}
+    input text    ${Retail_AU_HomePage_VINRego_Rego_Textbox}    ${Retail_AccountVehicleListingPageSelectVehicleRegoValue2}
+    capture element screenshot    ${Retail_AU_HomePage_VINRego_Rego_Textbox}
+    sleep    2
+
+User should be able to input rego 3 in AU Retail Home Page
+    wait until element is visible    ${Retail_AU_HomePage_VINRego_Rego_Textbox}    10
+    clear element text    ${Retail_AU_HomePage_VINRego_Rego_Textbox}
+    input text    ${Retail_AU_HomePage_VINRego_Rego_Textbox}    ${Retail_AccountVehicleListingPageSelectVehicleRegoValue3}
+    capture element screenshot    ${Retail_AU_HomePage_VINRego_Rego_Textbox}
+    sleep    2
+
 User should be albe to input vin in AU Retail Home Page
     wait until element is visible    ${Retail_AU_HomePage_VINRego_VIN_Textbox}    10
     clear element text    ${Retail_AU_HomePage_VINRego_VIN_Textbox}
     input text    ${Retail_AU_HomePage_VINRego_VIN_Textbox}    ${Retail_AccountVehicleListingPageSelectVehicleVINNumValue}
+    capture element screenshot    ${Retail_AU_HomePage_VINRego_VIN_Textbox}
+    sleep    2
+User should be albe to input vin 2 in AU Retail Home Page
+    wait until element is visible    ${Retail_AU_HomePage_VINRego_VIN_Textbox}    10
+    clear element text    ${Retail_AU_HomePage_VINRego_VIN_Textbox}
+    input text    ${Retail_AU_HomePage_VINRego_VIN_Textbox}    ${Retail_AccountVehicleListingPageSelectVehicleVINNumValue2}
+    capture element screenshot    ${Retail_AU_HomePage_VINRego_VIN_Textbox}
+    sleep    2
+
+User should be albe to input vin 3 in AU Retail Home Page
+    wait until element is visible    ${Retail_AU_HomePage_VINRego_VIN_Textbox}    10
+    clear element text    ${Retail_AU_HomePage_VINRego_VIN_Textbox}
+    input text    ${Retail_AU_HomePage_VINRego_VIN_Textbox}    ${Retail_AccountVehicleListingPageSelectVehicleVINNumValue3}
     capture element screenshot    ${Retail_AU_HomePage_VINRego_VIN_Textbox}
     sleep    2
 

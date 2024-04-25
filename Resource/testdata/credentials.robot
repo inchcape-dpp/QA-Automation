@@ -293,7 +293,7 @@ ${AU_S1_PWD}    Pass@12345
 ${AU_S2_UID}    rictestemail31@yopmail.com
 ${AU_S2_PWD}    Pass@12345
 ${AUSeller_S2_UID}    seller1.admin@test.com
-${AUSeller_S2_PWD}    AUPass@12345
+${AUSeller_S2_PWD}    AUs2@12345
 
 ${AUCustomer_P1_UID}    ericson.tinana@inchcape.com
 ${AUCustomer_P1_PWD}    Carloakos1!
@@ -317,7 +317,7 @@ ${HK_S2_PWD}    Pass@12345
 ${HKSeller_S2_UID}    hk.seller2.admin@test.com
 ${HKSeller_S2_PWD}    HKPass@12345
 
-${HKCustomer_P1_UID}    hktestric10@yopmail.com
+${HKCustomer_P1_UID}    hktestri0010@yopmail.com
 ${HKCustomer_P1_PWD}    Pass@12345
 ${HKSeller_P1_UID}    hk.seller1.admin@test.com
 ${HKSeller_P1_PWD}    HKPass@12345

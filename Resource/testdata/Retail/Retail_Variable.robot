@@ -610,6 +610,12 @@ ${Retail_HomePageShopByCategoryAllButton}    //div[@class='shop-by-category']//h
 
 ${Retail_HomePageShopByCategoryShowAllCategoriesButton}    //div[@class='shop-by-category']//p/a
 
+#-----------------------------------------------------Retail Select your vehicle
+${Retail_Selectyourvehicle_5searchedvehicles_Radiobutton}    //div//input[@name='last5SearchedVehicle']
+${Retail_Selectyourvehicle_Selectfromvehiclelisting_Radiobutton}    //div//input[@id='selectFromVehicleListing']
+${Retail_Selectyourvehicle_Selectfromvehiclelisting_Addavehicle}    //cx-icon[@class='cx-icon dpp-icons__plus']
+${Retail_Selectyourvehicle_Selectfromvehiclelisting_AddavehicleRegoVIN}    //div[@class='cx-modal-content d-flex']
+
 
 #-----------------------------------------------------Retail Home Page HK
 ${Retail_HK_HomePageShopByCategoryParts&ServiceButton}    //div[@class='shop-by-category']//h4[contains(text(),' Parts & Service ')]/parent::div/parent::div[@class='shop-by-category__card' or @class='shop-by-category__card mr-2 ml-2']
@@ -1670,7 +1676,12 @@ ${Retail_VehicleListing_HK_EPC_VehicleSearch_Dropdown_SearchAgain_button}    //d
 
 #-----------------------------------------------------Retail Account Vehicle Listing Page
 ${Retail_AccountVehicleListingPageSelectVehicleRegoValue}    CX20LA
+${Retail_AccountVehicleListingPageSelectVehicleRegoValue2}    ETK16F
+${Retail_AccountVehicleListingPageSelectVehicleRegoValue3}    CXQ17E
+
 ${Retail_AccountVehicleListingPageSelectVehicleVINNumValue}    JF1ZD8K72PG004012
+${Retail_AccountVehicleListingPageSelectVehicleVINNumValue2}    JF2SK9KL5PG090443
+${Retail_AccountVehicleListingPageSelectVehicleVINNumValue3}    JF2BT9KL3NG025777
 
 
 ${Retail_AccountVehicleListingPageSelectVehicleRegoInvalidValue}    654321
