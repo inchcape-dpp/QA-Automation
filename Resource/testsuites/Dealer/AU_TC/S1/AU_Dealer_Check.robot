@@ -13,7 +13,7 @@ Resource    ../../../../../Resource/testdata/Dealer/Dealer_Resource.robot
 
 *** Test Cases ***
 Test Setup  Run Keywords   Open Chrome Browser
-Screen Shot DIR  Run Keywords    Dealer Screent Shot DIR
+Screen Shot DIR  Run Keywords    Dealer Screen Shot DIR
 
 TC Sleep
     [Tags]    Sleep    TC Sleep

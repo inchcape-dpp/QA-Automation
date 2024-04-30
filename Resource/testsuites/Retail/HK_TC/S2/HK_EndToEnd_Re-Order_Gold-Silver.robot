@@ -11,7 +11,7 @@ Resource  ../../../../../Resource/testdata/Retail/Retail_Resource.robot
 
 *** Test Cases ***
 Test Setup  Run Keywords   Open Chrome Browser
-Screen Shot DIR  Run Keywords    Retail Screent Shot DIR
+Screen Shot DIR  Run Keywords    Retail Screen Shot DIR
 
 TC-001 - Verify Login Page
     [Tags]    TC001    Login Page
@@ -47,7 +47,7 @@ TC-007 - User should be able to process Re-Order in Retail Account Order Details
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to view shopping cart pop up modal
     run keyword and continue on failure    User should be albe to delete all items from shopping cart pop up modal
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account orders page
     run keyword and continue on failure    User should be able to click order with Recieved Status in Retail Account Orders Page
     run keyword and continue on failure    User should be able to click Re-Order button in Retail Account Order Details Page
@@ -109,7 +109,7 @@ TC-017 - User should be able to process Re-Order in Retail Account Order Details
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be able to view shopping cart pop up modal
     run keyword and continue on failure    User should be albe to delete all items from shopping cart pop up modal
-    run keyword and continue on failure    User should be able to access account from top navigaton
+    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
     run keyword and continue on failure    User should be able to view account orders page
     run keyword and continue on failure    User should be able to click order with Recieved Status in Retail Account Orders Page
     run keyword and continue on failure    User should be able to click Re-Order button in Retail Account Order Details Page
