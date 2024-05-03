@@ -590,6 +590,11 @@ User should be able to view HK Registration Form
     wait until element is visible    ${Retail_RegistrationContactFNLabel}    10
     wait until element is visible    ${Retail_RegistrationContactLNLabel}    10
     wait until element is visible    ${Retail_RegistrationContactEmailLabel}    10
+    wait until element is visible    ${Retail_HK_RegistrationContactCompanyPhoneNumLabel}    10
+    wait until element is visible    ${Retail_HK_RegistrationContactLandlineLabel}    10
+    wait until element is visible    ${Retail_RegistrationContactFNTextBox}    10
+    wait until element is visible    ${Retail_RegistrationContactLNTextBox}    10
+    wait until element is visible    ${Retail_RegistrationContactEmailTextBox}    10
     wait until element is visible    ${Retail_HK_RegistrationContactCompanyPhoneNumTextBox}    10
     wait until element is visible    ${Retail_HK_RegistrationContactLandlineTextBox}    10
     wait until element is visible    ${Retail_RegistrationTNC&PNLabel}    10
@@ -599,6 +604,11 @@ User should be able to view HK Registration Form
     capture element screenshot    ${Retail_RegistrationContactFNLabel}
     capture element screenshot    ${Retail_RegistrationContactLNLabel}
     capture element screenshot    ${Retail_RegistrationContactEmailLabel}
+    capture element screenshot    ${Retail_HK_RegistrationContactCompanyPhoneNumLabel}
+    capture element screenshot    ${Retail_HK_RegistrationContactLandlineLabel}
+    capture element screenshot    ${Retail_RegistrationContactFNTextBox}
+    capture element screenshot    ${Retail_RegistrationContactLNTextBox}
+    capture element screenshot    ${Retail_RegistrationContactEmailTextBox}
     capture element screenshot    ${Retail_HK_RegistrationContactCompanyPhoneNumTextBox}
     capture element screenshot    ${Retail_HK_RegistrationContactCompanyPhoneNumTextBox}
     capture element screenshot    ${Retail_RegistrationTNC&PNLabel}

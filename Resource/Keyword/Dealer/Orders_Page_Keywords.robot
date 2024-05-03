@@ -517,7 +517,7 @@ User should be able to view order with Delivered Status in Dealer Orders Page
 User should be able to click order with Delivered Status in Dealer Orders Page
     wait until element is visible    ${OrderPageDeliveredPartRef}    10
     click element    ${OrderPageDeliveredPartRef}
-    wait until element is visible    ${OrderPageDeliveredPartRef}
+    wait until element is visible    ${OrderDetailsOrderHeader}
     capture page screenshot
     sleep    2
 
