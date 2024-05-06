@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="Commit May 30">
+    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="Commit April 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,18 +25,19 @@
   &quot;associatedIndex&quot;: 5
 }</component>
   <component name="ProjectId" id="2Zq7ofnN8JJQJxW3uPYm7NLVHU4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Ty&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "Ric",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -150,119 +151,7 @@
       <option name="project" value="LOCAL" />
       <updated>1711960543716</updated>
     </task>
-    <task id="LOCAL-00014" summary="Commit">
-      <option name="closed" value="true" />
-      <created>1712801052790</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1712801052790</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Commit">
-      <option name="closed" value="true" />
-      <created>1713835870779</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1713835870779</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Commit">
-      <option name="closed" value="true" />
-      <created>1713939660180</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1713939660180</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Commit">
-      <option name="closed" value="true" />
-      <created>1714448244587</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1714448244588</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Commit">
-      <option name="closed" value="true" />
-      <created>1714957643582</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1714957643582</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Minisite Footer">
-      <option name="closed" value="true" />
-      <created>1714958461973</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1714958461973</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Minisite Footer">
-      <option name="closed" value="true" />
-      <created>1714958958000</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1714958958000</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Commit">
-      <option name="closed" value="true" />
-      <created>1715234550975</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1715234550975</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Commit">
-      <option name="closed" value="true" />
-      <created>1715587117536</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1715587117536</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Commit June 17">
-      <option name="closed" value="true" />
-      <created>1715926017384</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1715926017384</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Commit May 22">
-      <option name="closed" value="true" />
-      <created>1716345379498</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1716345379499</updated>
-    </task>
-    <task id="LOCAL-00025" summary="Commit May 22">
-      <option name="closed" value="true" />
-      <created>1716893739512</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1716893739512</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Commit May 30">
-      <option name="closed" value="true" />
-      <created>1717036672073</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1717036672073</updated>
-    </task>
-    <task id="LOCAL-00027" summary="Commit May 30">
-      <option name="closed" value="true" />
-      <created>1717037323803</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1717037323803</updated>
-    </task>
-    <option name="localTasksCounter" value="28" />
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -310,12 +199,9 @@
     <MESSAGE value="Commit Feb 16" />
     <MESSAGE value="Commit Feb 19" />
     <MESSAGE value="Commit March 18" />
-    <MESSAGE value="Commit April 1" />
-    <MESSAGE value="Minisite Footer" />
     <MESSAGE value="Commit" />
-    <MESSAGE value="Commit June 17" />
-    <MESSAGE value="Commit May 22" />
-    <MESSAGE value="Commit May 30" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit May 30" />
+    <MESSAGE value="Commit April 1" />
+    <MESSAGE value="8:55 AM | 5/06/24&#10;&#10;Minisite" />
+    <option name="LAST_COMMIT_MESSAGE" value="8:55 AM | 5/06/24&#10;&#10;Minisite" />
   </component>
 </project>
