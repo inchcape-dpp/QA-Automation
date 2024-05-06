@@ -174,6 +174,14 @@ User should be able to input item qty in Retail Shopping Cart Page
     capture element screenshot    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//input[@type='number']
     sleep    2
 
+User should be able to input 999 item qty in Retail Shopping cart Page
+    wait until element is visible    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//input[@type='number']    10
+    scroll element into view    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//input[@type='number']
+    clear element text    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//input[@type='number']
+    input text    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//input[@type='number']    ${ProductSelectionQtyTextBoxValue}
+    capture element screenshot    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//input[@type='number']
+    sleep    2
+
 User should be able to click delete cart item button in Retail Shopping Cart Page
     ${DeleteItemCount}    get element count    ${Retail_ShoppingCartPageItemList}
     ${RandomDeleteItemIndex}    evaluate    random.randint(1,${DeleteItemCount})

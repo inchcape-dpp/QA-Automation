@@ -5,8 +5,9 @@ Library    OperatingSystem
 Library    DateTime
 #Library    String
 
-Resource  ../../../../../Resource/testdata/env_variables.robot
-Resource  ../../../../../Resource/testdata/credentials.robot
+
+Resource  ../../../../Resource/testdata/env_variables.robot
+Resource  ../../../../Resource/testdata/credentials.robot
 
 *** Variables ***
 ${ChromeBrowser}    Chrome
@@ -14,35 +15,41 @@ ${FirefoxBrowser}    Firefox
 ${EdgeBrowser}    Edge
 ${SafariBrowser}    Safari
 
-${driver_path}    ..\\..\\..\\..\\..\\Resource\\chromedriver.exe
+${driver_path}    C:\\Users\\Tyron.Demate\\PycharmProjects\\pythonProject1\\Resource\\chromedriver.exe
 #${driver_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\geckodriver.exe
 
-${Dealer_screenshot_path}    ..\\..\\..\\..\\..\\Resource\\testsuites\\Dealer\\Screenshots\\AU\\S1
+${Retail_screenshot_path}    C:\\Users\\Tyron.Demate\\PycharmProjects\\pythonProject1\\Resource\\testsuites\\QE MiniSIte\\Ty\\Screenshots
 #${Retail_screenshot_path}    C:\\Users\\Danielouie.Estopace\\OneDrive - Inchcape\\06.Dev\\Dan\\Retail Screenshots
 
-${UploadPhoto_Path_Value}    C:\\Users\\Danielouie.Estopace\\Pictures\\Sample Image\\Image.jpg
+${UploadPhoto_Path_Value}    C:\\Users\\Tyron.Demate\\Pictures\\SampleImage\\Image.jpg
 
 ${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\HKProductReportView.
-${ExcelFile_AU_Stock_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\Titan SUB Geerex.xlsx
+${ExcelFile_AU_Stock_List_Path}    C:\\\Users\\\Danielouie.Estopace\\\Documents\\\Files\\Titan SUB Geerex.xlsx
 ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\You left something behind (ENG).txt
 
-${Username}    ${admin1_s1_dealer_UID}
-${Password}    ${admin1_s1_dealer_PWD}
-${ProfileChangePassCurrentPassValue}    ${Password}
+#${Username}    retailtitanp1@yopmail.com
+#${Password}    Welcom3@NT
 
-${YopMailEmail}    ${admin1_s1_dealer_UID}
+#${Username}    ${AU_S2_Automation_UID}
+#${Password}    ${AU_S2_Automation_PWD}
+
+#${YopMailEmail}    ${AU_S2_Automation_UID}
 
 *** Keywords ***
 Open Chrome Browser
-    SeleniumLibrary.Open Browser    ${s1Dealer}    Chrome  executable_path=${driver_path}
+    Open Browser    ${PartsLane}    Chrome  executable_path=${driver_path}
     maximize browser window
 
-Dealer Screen Shot DIR
+Retail Screent Shot DIR
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
-    create directory    ${Dealer_screenshot_path}/AU_${currentdate}
-    ${LogDIR}=    convert to string    ${Dealer_screenshot_path}/AU_${currentdate}
+    create directory    ${Retail_screenshot_path}/${currentdate}
+    ${LogDIR}=    convert to string    ${Retail_screenshot_path}/${currentdate}
     set screenshot directory    ${LogDIR}
     set global variable    ${LogDIR}
+
+Save Log DIR
+    copy file    log.html    ${LogDIR}
+ ### Test
 
 #-----------------------------------------------------Browser Commands--------------------------------------------------
 Browse Back Button

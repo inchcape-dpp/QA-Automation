@@ -148,7 +148,7 @@ ${admin1_s2_dealer_UID}    seller1.admin@test.com
 ${admin1_s2_dealer_PWD}    AUPass@12345
                                                                              #------------------------ADMIN2------------
 ${admin2_s2_dealer_UID}    seller2.admin@test.com
-${admin2_s2_dealer_PWD}    AUPass@12345
+${admin2_s2_dealer_PWD}    AUs2@12345
                                                                              #------------------------User1-------------
 ${user1_s2_dealer_UID}    seller1.customer@test.com
 ${user1_s2_dealer_PWD}    AUPass@12345
