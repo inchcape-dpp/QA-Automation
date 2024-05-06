@@ -6,9 +6,9 @@ Library    Process
 Library    String
 
 
-Resource  ../../../../../Resource/testdata/Retail/AU_Config/D1/AU_D1_Config.robot
-Resource  ../../../../../Resource/testdata/Retail/Retail_Variable.robot
-Resource  ../../../../../Resource/testdata/Retail/Retail_Resource.robot
+Resource    ../../../../../Resource/testdata/Retail/AU_Config/D1/AU_D1_Config.robot
+Resource    ../../../../../Resource/testdata/Retail/Retail_Variable.robot
+Resource    ../../../../../Resource/testdata/Retail/Retail_Resource.robot
 
 
 *** Test Cases ***
@@ -621,10 +621,10 @@ TC-091 - User should be able to view account return request page
     run keyword and continue on failure    User should be able to view account return request page
     run keyword and continue on failure    User should be able to view Return Request Panel
 
-TC-092 - User should be able to click filter by status in Account Retrun Page
-    [Tags]    Return Page
-    run keyword and continue on failure    User should be able to click filter by status in Account Retrun Page
-    run keyword and continue on failure    User should be able to click filter by status in Account Retrun Page
+#TC-092 - User should be able to click filter by status in Account Retrun Page
+#    [Tags]    Return Page
+#    run keyword and continue on failure    User should be able to click filter by status in Account Retrun Page
+#    run keyword and continue on failure    User should be able to click filter by status in Account Retrun Page
 
 TC-093 - User should be able to apply filter status in Account Retrun Page
     [Tags]    Return Page

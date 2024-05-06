@@ -4,7 +4,7 @@ Documentation       Suite description
 *** Variables ***
 #-----------------------------------------------------URLS--------------------------------------------------------------
 #------------------------D1------------------------
-${d1BE}             https://backoffice.coyzchwfjr-inchcaped2-d1-public.model-t.cc.commerce.ondemand.com/backoffice/
+${d1BE}    https://backoffice.coyzchwfjr-inchcaped2-d1-public.model-t.cc.commerce.ondemand.com/backoffice/
 ${d1Retail}         https://retail.coyzchwfjr-inchcaped2-d1-public.model-t.cc.commerce.ondemand.com/dppretail/login
 ${d1Dealer}         https://dealer.coyzchwfjr-inchcaped2-d1-public.model-t.cc.commerce.ondemand.com/dppdealer/login
 
@@ -29,8 +29,8 @@ ${s2BE}             https://backoffice.coyzchwfjr-inchcaped2-s2-public.model-t.c
 ${s2Retail}         https://retail.coyzchwfjr-inchcaped2-s2-public.model-t.cc.commerce.ondemand.com/dppretail/
 ${s2Dealer}         https://dealer.coyzchwfjr-inchcaped2-s2-public.model-t.cc.commerce.ondemand.com/
 
-${s2HKRetail}    	https://hkretail.coyzchwfjr-inchcaped2-s2-public.model-t.cc.commerce.ondemand.com/hkretail/
-${s2HKDealer}       https://hkdealer.coyzchwfjr-inchcaped2-s2-public.model-t.cc.commerce.ondemand.com/hkdealer
+${s2HKRetail}    https://hkretail.coyzchwfjr-inchcaped2-s2-public.model-t.cc.commerce.ondemand.com/hkretail/
+${s2HKDealer}    https://hkdealer.coyzchwfjr-inchcaped2-s2-public.model-t.cc.commerce.ondemand.com/hkdealer
 
 ${s2HKRetailAllProducts}    https://hkretail.coyzchwfjr-inchcaped2-s2-public.model-t.cc.commerce.ondemand.com/hkretail/c/0
 
