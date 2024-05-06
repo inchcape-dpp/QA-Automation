@@ -41,11 +41,11 @@ ${Retail_AccountProfileChangePassCurrentPassValue}    ${Password}
 ${ProdductSearchValue}    1780121060
 
 *** Keywords ***
-Open Chrome Browser
+Open Chrome Browser HK
     SeleniumLibrary.Open Browser    ${p1HKRetail}    Chrome  executable_path=${driver_path}
     maximize browser window
 
-Retail Screen Shot DIR
+Retail Screen Shot DIR HK
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
     create directory    ${Retail_screenshot_path}/HK_${currentdate}
     ${LogDIR}=    convert to string    ${Retail_screenshot_path}/HK_${currentdate}
