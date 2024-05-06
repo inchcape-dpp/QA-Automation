@@ -108,6 +108,57 @@ User should be able to view the Message box field
     capture element screenshot
     sleep    2
 
+User should be able to view p
+    wait until element is visible    ${form_p}
+    capture element screenshot
+    sleep    2
+
+User should be able to view Terms of Use
+    wait until element is visible    ${form_termsofuse}
+    capture element screenshot
+    sleep    2
+
+User should be able to view Privacy Policy
+    wait until element is visible    ${form_privacypolicy}
+    capture element screenshot
+    sleep    2
+
+User should be able to input on fields in Contact Us form and submit it
+    wait until element is visible    ${form_firstname}
+    input text    ${form_firstname}    ${First_Name}
+    input text    ${form_lastname}    ${Last_Name}
+    input text    ${form_emailaddress}    ${Email_Address}
+    input text    ${form_message}    ${message}
+    click element    ${form_submit}
+
+User should be able to view Submit button
+    wait until element is visible    ${form_submit}
+    capture element screenshot
+    sleep    2
+
+User should be able to view Footer logo
+    wait until element is visible    ${footer_logo}
+    capture element screenshot
+    sleep    2
+
+User should be able to view Footer Privacy Policy
+    wait until element is visible    ${Footer_PP}
+    capture element screenshot
+    sleep    2
+
+User should be able to view Footer Terms and Conditions
+    wait until element is visible    ${Footer_TNC}
+    capture element screenshot
+    sleep    2
+
+User should be able to view Footer Copyright
+    wait until element is visible    ${Footer_Copyright}
+    capture element screenshot
+    sleep    2
+
+
+
+
 
 
 

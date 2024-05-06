@@ -94,7 +94,35 @@ TC-020 - Verify Minisite Contact Us Section
     [Tags]    TC020    User should be able to view the Message box field
     run keyword and continue on failure    User should be able to view the Message box field
 
-TC-014 - Verify Minisite Contact Us Section
+TC-021 - Verify Minisite Contact Us Section
+    [Tags]    TC021    User should be able to view p
+    run keyword and continue on failure    User should be able to view p
 
-TC-014 - Verify Minisite Contact Us Section
+TC-022 - Verify Minisite Contact Us Section
+    [Tags]    TC022    User should be able to view Terms of Use
+    run keyword and continue on failure    User should be able to view Terms of Use
+
+TC-023 - Verify Minisite Contact Us Section
+    [Tags]    TC023    User should be able to view Privacy Policy
+    run keyword and continue on failure    User should be able to view Privacy Policy
+
+TC-024 - Verify Minisite Contact Us Section
+    [Tags]    TC024    User should be able to input on fields in Contact Us form and submit it
+    run keyword and continue on failure    User should be able to input on fields in Contact Us form and submit it
+
+TC-025 - Verify Minisite Footer Section
+    [Tags]    TC025    User should be able to view Footer logo
+    run keyword and continue on failure    User should be able to view Footer logo
+
+TC-026 - Verify Minisite Footer Section
+    [Tags]    TC026    User should be able to view Footer Privacy Policy
+    run keyword and continue on failure    User should be able to view Footer Privacy Policy
+
+TC-027 - Verify Minisite Footer Section
+    [Tags]    TC027    User should be able to view Footer Terms and Conditions
+    run keyword and continue on failure    User should be able to view Footer Terms and Conditions
+
+TC-028 - Verify Minisite Footer Section
+    [Tags]    TC028    User should be able to view Footer Copyright
+    run keyword and continue on failure    User should be able to view Footer Copyright
 

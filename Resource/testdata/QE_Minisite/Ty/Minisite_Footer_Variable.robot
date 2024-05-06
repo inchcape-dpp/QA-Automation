@@ -25,9 +25,13 @@ ${LetUsTalk}    //section//p[contains(text(), 'PartsLane is the way to go. So, l
 ${ContactUs_Image}    //section//img[@src='https://cdn.partslane.com.au/sys-master-images/minisite/contactus-car.jpg']
 ${LetUsTalk_Subtext}    //div//sub
 ${Form_FirstName}    //form//label[@for='firstName']
+${First_Name}    Tyron
 ${Form_LastName}    //form//label[@for='lastName']
+${Last_Name}    Demate
 ${Form_EmailAddress}    //form//label[@for='emailAddress']
+${Email_Address}    tsarvida21@gmail.com
 ${Form_Message}    //form//label[@for='message']
+${Message}    This is a test message for Minisite test.
 ${Form_P}    //form//p
 ${Form_TermsOfUse}    //form//a[@href='https://www.partslane.com.au/dppretail/termsandconditions']
 ${Form_PrivacyPolicy}    //form//a[@href='https://www.partslane.com.au/dppretail/privacypolicy']
