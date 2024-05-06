@@ -217,6 +217,12 @@ User should be able to select 1 filter from selected category in Retail Home Pag
     set global variable    ${RandomFilterIndex}
     sleep    2
 
+User should be able to click 1 filter from selected category in Retail Home Page
+    ${RandomFilterIndex}    evaluate    random.randint(0,7)
+    wait until element is visible    ${Retail_FilterListElements}[${RandomFilterIndex}]    10
+    click element    ${Retail_FilterListElements}[${RandomFilterIndex}]
+    sleep    2
+
 User should be able to select 1 filter from selected category in HK Retail Home Page
     ${RandomFilterIndex}    evaluate    random.randint(0,4)
     mouse over    ${Retail_HK_FilterListElements_New}[${RandomFilterIndex}]
