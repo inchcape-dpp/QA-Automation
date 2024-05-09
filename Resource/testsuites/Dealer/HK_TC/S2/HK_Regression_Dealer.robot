@@ -680,7 +680,55 @@ TC-029 - User should be able to edit account details page
     run keyword and continue on failure    User should be able to view update confirmation modal in Dealer Account Details Page
     run keyword and continue on failure    User should be able to click No on update confirmation modal in Dealer Account Details Page
 
+TC-136 - User should be able to view change password page
+    [Tags]    Home Page    Change Pass
+    run keyword and continue on failure    User should be able to click Profile - Change Pass from left navigation
+    run keyword and continue on failure    User should be able to view change password page
 
+TC-137 - User should be ablle to edit current password in Dealer Change Pass Page
+    [Tags]    Home Page    Change Pass
+    run keyword and continue on failure    User should be ablle to edit current password in Dealer Change Pass Page
+
+TC-138 - User should be ablle to edit new password in Dealer Change Pass Page
+    [Tags]    Home Page    Change Pass
+    run keyword and continue on failure    User should be ablle to edit new password in Dealer Change Pass Page
+    run keyword and continue on failure    User should be able to view new pass by clicking eye button in Dealer Change Pass Page
+    run keyword and continue on failure    User should be able to hide new pass by clicking eye button in Dealer Change Pass Page
+
+TC-139 - User should be ablle to edit confirm password in Dealer Change Pass Page
+    [Tags]    Home Page    Change Pass
+    run keyword and continue on failure    User should be ablle to edit confirm password in Dealer Change Pass Page
+    run keyword and continue on failure    User should be able to view confirm pass by clicking eye button in Dealer Change Pass Page
+    run keyword and continue on failure    User should be able to hide confirm pass by clicking eye button in Dealer Change Pass Page
+
+TC-140 - User should be able to click Update button in Dealer Change Pass Page
+    [Tags]    Home Page    Change Pass
+    run keyword and continue on failure    User should be able to click Update button in Dealer Change Pass Page
+
+TC-141 - User should be able to view update confirmation modal in Dealer Change Pass Page
+    [Tags]    Home Page    Change Pass
+    run keyword and continue on failure    User should be able to view update confirmation modal in Dealer Change Pass Page
+    run keyword and continue on failure    User should be able to click No on update confirmation modal in Dealer Change Pass Page
+
+TC-142 - User should be able to view current pass required error in Dealer Change Pass Page
+    [Tags]    Home Page    Change Pass
+    run keyword and continue on failure    User should be able to view current pass required error in Dealer Change Pass Page
+
+TC-143 - User should be able to view new pass required error in Dealer Change Pass Page
+    [Tags]    Home Page    Change Pass
+    run keyword and continue on failure    User should be able to view new pass required error in Dealer Change Pass Page
+
+TC-144 - User should be able to view confirm pass required error in Dealer Change Pass Page
+    [Tags]    Home Page    Change Pass
+    run keyword and continue on failure    User should be able to view confirm pass required error in Dealer Change Pass Page
+
+TC-145 - User should be able to view new pass not match error in Dealer Change Pass Page
+    [Tags]    Home Page    Change Pass
+    run keyword and continue on failure    User should be able to view new pass not match error in Dealer Change Pass Page
+
+TC-146 - User should be able to view confirm pass not match error in Dealer Change Pass Page
+    [Tags]    Home Page    Change Pass
+    run keyword and continue on failure    User should be able to view confirm pass not match error in Dealer Change Pass Page
 
 
 
