@@ -875,6 +875,14 @@ TC-088 - User should be able to search message in Retail Account Messages Page
     run keyword and continue on failure    User should be able to Input Text in Search Box in Retail Account Messages Page
     run keyword and continue on failure    User should be able to click clear button from Search Box in Retail Account Messages Page
 
+TC-088 - User should be able create and send new message in Retail Account Messages Page
+    [Tags]    Message Page
+    run keyword and continue on failure    User should be able to click New Message in Retail Account Message Page
+    run keyword and continue on failure    User should be able to add message subject in New message pop up in Retail Account Message Page
+    run keyword and continue on failure    User should be able to Input Text on Message in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to upload image in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to click send in New message pop up in Retail Account Message Page
+
 TC-089 - User should be able to view and message read Order Enquiry in Retail Account Message Page
     [Tags]    Message Page
     run keyword and continue on failure    User should be able to view read Order Enquiry in Retail Account Message Page

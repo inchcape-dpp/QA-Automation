@@ -149,6 +149,7 @@ TC-026 - User should be able to click 1 sub filter from selected category in Ret
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to click 1 sub filter from selected category in Retail Home Page
     run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User should be able to verify parts breadcrumbs in HK Retail Home Page
     run keyword and continue on failure    Show number of product list
     run keyword and continue on failure    User should be able to Go to Home page
 
@@ -514,6 +515,36 @@ TC-053 - User should be able to check Promo Code in HK Retail Checkout Page
     [Tags]    Checkout Page
     run keyword and continue on failure    User should be able to check Promo Code in HK Retail Checkout Page
     run keyword and continue on failure    TC Sleep
+
+TC-054 - User should be able to view payment method in HK Retail Checkout Page
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be able to view payment method in HK Retail Checkout Page
+    run keyword and continue on failure    Select Credit Card Frame
+
+TC-055 - User should be able to input card details
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be able to input jcb card number
+    run keyword and continue on failure    User should be albe to input Exp Date
+    run keyword and continue on failure    User should be albe to input CVV
+    run keyword and continue on failure    User should be albe to input Card Holders Name
+    run keyword and continue on failure    User should be albe to input Email
+
+TC-056 - User should be able to click continue payment
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be able to click continue payment button
+    run keyword and continue on failure    User should be able to view 2C2P Modal
+
+TC-057 - User should be able to input otp
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be able to Input OTP
+
+TC-058 - User should be able to click Cancel button on 2C2P
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be able to click Cancel button on 2C2P
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    Unselect Credit Card Frame
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    reload page
 
 TC-054 - User should be able to view payment method in HK Retail Checkout Page
     [Tags]    Checkout Page
@@ -950,6 +981,14 @@ TC-088 - User should be able to search message in Retail Account Messages Page
     run keyword and continue on failure    User should be able to click Search Box in Retail Account Messages Page
     run keyword and continue on failure    User should be able to Input Text in Search Box in Retail Account Messages Page
     run keyword and continue on failure    User should be able to click clear button from Search Box in Retail Account Messages Page
+
+TC-088 - User should be able create and send new message in Retail Account Messages Page
+    [Tags]    Message Page
+    run keyword and continue on failure    User should be able to click New Message in Retail Account Message Page
+    run keyword and continue on failure    User should be able to add message subject in New message pop up in Retail Account Message Page
+    run keyword and continue on failure    User should be able to Input Text on Message in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to upload image in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to click send in New message pop up in Retail Account Message Page
 
 TC-089 - User should be able to view and message read Order Enquiry in Retail Account Message Page
     [Tags]    Message Page

@@ -173,6 +173,31 @@ User should be able to click clear button from Search Box in Retail Account Mess
     click element    ${Retail_AccountMessagePageSearchClose}
     sleep    2
 
+
+User should be able to click New Message in Retail Account Message Page
+    wait until element is visible    ${Retail_AccountMessagePageNewMessageButton}    10
+    capture element screenshot    ${Retail_AccountMessagePageNewMessageButton}
+    click element    ${Retail_AccountMessagePageNewMessageButton}
+    sleep    2
+
+User should be able to add message subject in New message pop up in Retail Account Message Page
+    wait until element is visible    ${Retail_AccountMessagePageNewMessagePopUpSubjectTextBox}    10
+    input text    ${Retail_AccountMessagePageNewMessagePopUpSubjectTextBox}    ${Retail_AccountMessagePageNewMessagePopUpSubjectTextBox_Value}
+    capture element screenshot    ${Retail_AccountMessagePageNewMessagePopUpSubjectTextBox}
+    sleep    2
+
+User should be able to click send in New message pop up in Retail Account Message Page
+    wait until element is visible    ${Retail_AccountMessagePageNewMessagePopUpSendButton}    10
+    capture element screenshot    ${Retail_AccountMessagePageNewMessagePopUpSendButton}
+    click element    ${Retail_AccountMessagePageNewMessagePopUpSendButton}
+    sleep    2
+
+User should be able to click cancel in New message pop up in Retail Account Message Page
+    wait until element is visible    ${Retail_AccountMessagePageNewMessagePopUpCancelButton}    10
+    capture element screenshot    ${Retail_AccountMessagePageNewMessagePopUpCancelButton}
+    click element    ${Retail_AccountMessagePageNewMessagePopUpCancelButton}
+    sleep    2
+
 User should be able to view read General Enquiry in Retail Account Message Page
     FOR    ${Nextpage}    IN RANGE    1    500
     ${ReadGenEnqStatus}    run keyword and return status    element should be visible    ${Retail_AccountMessagePageReadMessagesGenEnqContainer}

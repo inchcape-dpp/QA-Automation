@@ -247,8 +247,8 @@ ${HomePageLogo}    //cx-page-slot[@position='SiteLogo']
 ${HomePageSelectVehicle}    (//div[@class='custom-header-vehicle'])[1]
 ${HomePageSearhProduct}    //div[@role='search']//input[@type='text']
 ${HomePageSearhProductIcon}    //div[@role='presentation']
-${HomePageProfileIcon}     //dpp-navigation//cx-icon[@class='cx-icon fas fa-angle-down']
-${HomePageProfileAccount}    (//div[@class='header-account-label']//span[contains(text(),'My Account')]|//dpp-navigation-ui[@class='accNavComponent flyout']//div[@class='wrapper']//a[contains(text(),'My Account') or contains(text(),'我的帳戶')])[1]
+${HomePageProfileIcon}     //dpp-my-accounts-header//cx-icon[@class='header-account-icon cx-icon dpp-icons__user-circle']
+${HomePageProfileAccount}    //div[@class='header-account-label']//span[contains(text(),'My Account') or contains(text(),'我的帳戶')]
 ${HomePageProfileLogout}    //li//a[@href='/dppretail/logout']
 
 ${HomePage_DoubleHeader}    //div[@class='double-header--relative']
@@ -732,7 +732,7 @@ ${Retail_CheckoutPageCustomerDetailsShippingToInfoButton}    //div[@class='colum
 ${Retail_CheckoutPageCustomerDetailsShippingToNameLabel}    //div[@class='column ml-lg-4 pb-3 pb-lg-0']//span[@class='shipping-to']//strong
 ${Retail_CheckoutPageCustomerDetailsShippingToAddressLabel}    //div[@class='column ml-lg-4 pb-3 pb-lg-0']//div[@class='col-12 p-0 px-lg-3']//p[@class='m-0 d-flex']/following-sibling::span
 
-${Retail_HK_CheckoutPageReviewItemsContainer}    //dpp-order-items-summary|//dpp-hk-order-items-summary
+${Retail_HK_CheckoutPageReviewItemsContainer}    //dpp-order-items-summary|//dpp-hk-order-items-summary|//dpp-multi-step-checkout-order-items-summary
 ${Retail_HK_CheckoutPageReviewItemsHeader}    //dpp-hk-order-items-summary//*[@class='title']|//dpp-multi-step-checkout-order-items-summary//*[@class='title']
 ${Retail_HK_CheckoutPageReviewItemsDeliveryDate}    //dpp-hk-order-items-summary//div[@class='col-12 p-0 sub-header']|//dpp-multi-step-checkout-order-items-summary//div[@class='col-12 p-0 sub-header']
 ${Retail_HK_CheckoutPageReviewItemsList}    //dpp-hk-order-items-summary//div[@class='product-list-item']|//dpp-multi-step-checkout-order-items-summary//div[@class='product-list-item']
@@ -885,7 +885,7 @@ ${Retail_Loader}    //div[@class='loader']
 ${Retail_CheckoutPageCustomerDetailsOrderItemList}    //div[@class='order-details-items-table']//div[@class='product-list-item']
 ${Retail_CheckoutPageCustomerDetailsOrderItemList1}    //div[@class='order-details-items-table']//div[@class='product-list-item'][1]
 
-${Retail_CheckoutPageCustomerDetailsOrderSummaryContainer}    //div[@class='order-cart-totals']|//dpp-hk-order-summary//div[@class='sticky-wrapper']
+${Retail_CheckoutPageCustomerDetailsOrderSummaryContainer}    //div[@class='order-cart-totals']|//div[@class='sticky-wrapper']
 ${Retail_CheckoutPageCustomerDetailsOrderSummaryHeader}    //div[@class='order-cart-totals' or @class='row order-summary']//div[@class='header col-12']|//div[@class='order-cart-totals' or @class='row order-summary']//h3
 ${Retail_CheckoutPageCustomerDetailsOrderSummarySubTotalLabel}    //div[@class='order-cart-totals' or @class='row order-summary']//div[@class='row' or @class='total-wrapper row w-100']//div[@class='col-6' or @class='details col-6'][1]
 ${Retail_CheckoutPageCustomerDetailsOrderSummarySubTotalValue}    //div[@class='order-cart-totals' or @class='row order-summary']//div[@class='row' or @class='total-wrapper row w-100']//div[@class='col-6 text-right' or @class='details col-6 text-right'][1]
@@ -1743,7 +1743,7 @@ ${Retail_AccountMessagePageDetailsFirstPageButton}    (//a[@aria-label='first pa
 ${Retail_AccountMessagePageDetailsNextPageButtonDisabled}    //a[@class='next disabled']
 ${Retail_AccountMessagePageDetailsPreviousPageButtonDisabled}    //a[@class='previous disabled']
 
-${Retail_AccountMessagePageNewMessageButton}    //dpp-message-list//div[@class='row']//button[@class='btn btn-outline-secondary w-100']
+${Retail_AccountMessagePageNewMessageButton}   //dpp-message-list//button[@class='btn btn-outline-secondary w-100 p-0']
 
 ${Retail_AccountMessagePageNewMessagePopUpContainer}    //div[@class='cx-dialog-body modal-body']
 ${Retail_AccountMessagePageNewMessagePopUpToSupplierLabel}    //div[@class='col-sm-12 header']//span[@class='message-subject mb-1']
@@ -1761,6 +1761,8 @@ ${Retail_AccountMessagePageNewMessagePopUpUploadImage}    //input[@type='file']
 
 ${Retail_AccountMessagePageNewMessagePopUpCancelButton}    //button[@class='btn btn-sm btn-outline-secondary']
 ${Retail_AccountMessagePageNewMessagePopUpSendButton}    //button[@class='btn btn-sm btn-secondary ml-2']
+
+${Retail_AccountMessagePageNewMessagePopUpSubjectTextBox_Value}    Test New Message
 
 #-----------------------------------------------------Retail Account Message Page Read General Enquiry
 ${Retail_AccountMessagePageReadMessagesGenEnqContainer}    (//div[@class='row message-container'][.//span[contains(text(),'GENERAL ENQUIRY')]])[1]
@@ -1936,7 +1938,7 @@ ${Retail_AccountCompanyDetailsPagePrefSupplierLabel}    //dpp-company-details//s
 ${Retail_AccountCompanyDetailsPageAccNumLabel}    //span[@class='label-content' and contains(text(),'Account Number')]|//span[@class='label-content' and contains(text(),'Membership Number')]
 ${Retail_AccountCompanyDetailsPageCompanyNameLabel}    //span[@class='label-content' and contains(text(),'Company Name')]
 ${Retail_AccountCompanyDetailsPageTradingNameLabel}    //dpp-company-details//span[@class='label-content' and contains(text(),'Trading Name')]
-${Retail_AccountCompanyDetailsPagePostalAddressLabel}    //span[@class='label-content' and contains(text(),'Postal Address')]
+${Retail_AccountCompanyDetailsPagePostalAddressLabel}    //span[@class='label-container' and contains(text(),'Postal Address')]
 ${Retail_AccountCompanyDetailsPagePostalAddressAddLine1Label}    //dpp-company-details//span[@class='label-content color-grey' and contains(text(),'Address Line 1')]
 ${Retail_AccountCompanyDetailsPagePostalAddressAddLine2Label}    //span[@class='label-content color-grey' and contains(text(),'Address Line 2')]
 ${Retail_AccountCompanyDetailsPagePostalAddressSuburbLabel}    //dpp-company-details//div[@formgroupname='postalAddress']//span[@class='label-content' and contains(text(),'Suburb')]
