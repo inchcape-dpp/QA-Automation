@@ -845,8 +845,8 @@ User should be able to click send on message pop in Retail All Products Page
     sleep    5
 
 User should be able to click continue shopping in Retail All Products Page
-    wait until element is visible    ${Retail_AllProdPagePopUpMessageContainer}    10
-    wait until element is visible    ${Retail_AllProdPagePopUpMessageContinueButton}    10
+    wait until element is visible    ${Retail_AllProdPagePopUpSentMessage}    10
+    wait until element is visible    ${Retail_AllProdPagePopUpMessageContinueButton}    15
     capture element screenshot    ${Retail_AllProdPagePopUpMessageContinueButton}
     click element    ${Retail_AllProdPagePopUpMessageContinueButton}
     sleep    2

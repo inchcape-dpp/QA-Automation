@@ -161,3 +161,4 @@ User should be able to click Translate to Chinese Button
     capture element screenshot    ${Retail_HK_LoginPage_Chinese_Button}
     click element    ${Retail_HK_LoginPage_Chinese_Button}
     sleep    2
+

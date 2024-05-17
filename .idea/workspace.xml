@@ -5,7 +5,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="Commit April 1">
+      <change afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/HK_Retail_Translation.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/QEMiniSIte/MiniSite.Robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/QEMiniSIte/MiniSite.Robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/QEMiniSIte/Ric/MiniSite.Robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/QE_Minisite/Ty/Minisite_Footer.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/QE_Minisite/Ty/Minisite_Footer.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/All_Parts_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/All_Parts_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Home_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Home_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Login_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Login_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/chromedriver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/P1/HK_P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/P1/HK_P1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/QE MiniSIte/Ty/Minisite_Footer_Resource.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/QEMiniSIte/MiniSite_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/QEMiniSite/MiniSite_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/QEMiniSIte/MiniSite_Variable.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/QEMiniSite/MiniSite_Variable.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/QEMiniSIte/MiniSite_resource.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/QEMiniSite/MiniSite_resource.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/QE_Minisite/Ty/Minisite_Footer_Config.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/QE_Minisite/Ty/Minisite_Footer_Resource.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/QE_Minisite/Ty/Minisite_Footer_Variable.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/P1/AU_P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/P1/AU_P1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/S2/AU_S2_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/AU_Config/S2/AU_S2_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/P1/HK_P1_Gold_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/P1/HK_P1_Gold_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/Retail_Variable.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/Retail_Variable.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/AU_egression_Dealer.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/AU_Regression_Dealer.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/HK_TC/P1/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/HK_TC/P1/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/HK_TC/P1/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/HK_TC/P1/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/HK_TC/P1/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/HK_TC/P1/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/QEMiniSIte/MiniSite_TestSuite.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/QEMiniSite/MiniSite_TestSuite.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/AU_Regression_Retail.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/AU_Regression_Retail.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/chromedriver.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,14 +66,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Ric",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Ric&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -151,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711960543716</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Commit April 1">
+      <option name="closed" value="true" />
+      <created>1714958554469</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1714958554469</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -200,8 +244,8 @@
     <MESSAGE value="Commit Feb 19" />
     <MESSAGE value="Commit March 18" />
     <MESSAGE value="Commit" />
-    <MESSAGE value="Commit April 1" />
     <MESSAGE value="8:55 AM | 5/06/24&#10;&#10;Minisite" />
-    <option name="LAST_COMMIT_MESSAGE" value="8:55 AM | 5/06/24&#10;&#10;Minisite" />
+    <MESSAGE value="Commit April 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit April 1" />
   </component>
 </project>
