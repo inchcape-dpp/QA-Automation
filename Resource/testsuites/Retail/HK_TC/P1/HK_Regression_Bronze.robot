@@ -10,8 +10,8 @@ Resource  ../../../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../../../Resource/testdata/Retail/Retail_Resource.robot
 
 *** Test Cases ***
-Test Setup  Run Keywords   Open Chrome Browser HK
-Screen Shot DIR  Run Keywords    Retail Screent Shot DIR HK
+Test Setup  Run Keywords   Open Chrome Browser
+Screen Shot DIR  Run Keywords    Retail Screen Shot DIR
 
 TC-001 - Verify Login Page
     [Tags]    TC001    Login Page
@@ -70,6 +70,10 @@ TC-013 - User should be able to input details in Registration Form Page
     [Tags]    Login Page    Registration
     run keyword and continue on failure    User should be able to input Company Name
     run keyword and continue on failure    User should be able to click Postal Address Dropdown for HK Registration Form
+    run keyword and continue on failure    User should be able to input manual text in Postal Address for HK Registration Form
+    run keyword and continue on failure    User should be able to click Manual Input Postal Address for HK Registration Form
+    run keyword and continue on failure    User should be able to click Clear Postal Address for HK Registration Form
+    run keyword and continue on failure    User should be able to click Postal Address Dropdown for HK Registration Form
     run keyword and continue on failure    User should be able to input text in Postal Address for HK Registration Form
     run keyword and continue on failure    User should be able to select Random Postal Address from suggestions for HK Registration Form
     run keyword and continue on failure    User should be able to input Postal Address Line 2
@@ -77,6 +81,10 @@ TC-013 - User should be able to input details in Registration Form Page
     run keyword and continue on failure    User should be able to select Random Postal Address Area for HK Registration Form
     run keyword and continue on failure    User should be able to click District Dropdown in Postal Address for HK Registration Form
     run keyword and continue on failure    User should be able to select Random Postal Address District for HK Registration Form
+    run keyword and continue on failure    User should be able to click Delivery Address Dropdown for HK Registration Form
+    run keyword and continue on failure    User should be able to input manual text in Deliver Address for HK Registration Form
+    run keyword and continue on failure    User should be able to click Manual Input Deliver Address for HK Registration Form
+    run keyword and continue on failure    User should be able to click Clear Deliver Address for HK Registration Form
     run keyword and continue on failure    User should be able to click Delivery Address Dropdown for HK Registration Form
     run keyword and continue on failure    User should be able to input text in Deliver Address for HK Registration Form
     run keyword and continue on failure    User should be able to select Random Delivery Address from suggestions for HK Registration Form
@@ -140,6 +148,8 @@ TC-025 - User should be able to select 1 filter from selected category in HK Ret
 TC-026 - User should be able to click 1 sub filter from selected category in Retail Home Page
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to click 1 sub filter from selected category in Retail Home Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    Show number of product list
     run keyword and continue on failure    User should be able to Go to Home page
 
 TC-038 - User should be able to click shop by category Body Parts in HK Retail Home Page
@@ -237,6 +247,7 @@ TC-041 - User should be able to access Relationship page using double header in 
     run keyword and continue on failure    User should be able to access Relationship page using double header in Retail Homepage
     run keyword and continue on failure    reload page
     run keyword and continue on failure    TC Sleep
+
 TC-041 - User should be able to manual search vehicle in HK Retail Homepage
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to Go to Home page
@@ -253,10 +264,18 @@ TC-041 - User should be able to manual search vehicle in HK Retail Homepage
     run keyword and continue on failure    User should be able to select model id on manual search in HK Retail Home Page
     run keyword and continue on failure    User shoud be albe to click search this vehicle on manual seearh in HK Retail Home Page
     run keyword and continue on failure    TC Sleep
-    run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
-    run keyword and continue on failure    TC Sleep
-    run keyword and continue on failure    TC Sleep
+#    run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
+#    run keyword and continue on failure    TC Sleep
+#    run keyword and continue on failure    TC Sleep
 
+TC-041 - User should be able to view EPC Search Result Pop Up Modal in HK Retail Home Page
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to view EPC Search Result Pop Up Modal in HK Retail Home Page
+    run keyword and continue on failure    User should be able to view EPC Search Result Pop Up Modal Elements in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click Show More button in EPC Search Result Pop Up Modal in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click Shop this vehicle in EPC Search Result Pop Up Modal in HK Retail Home Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    TC Sleep
 
 TC-041 - User should be able to VIN search vehicle in HK Retail Homepage
     [Tags]    Home Page
@@ -265,10 +284,90 @@ TC-041 - User should be able to VIN search vehicle in HK Retail Homepage
     run keyword and continue on failure    User should be albe to Input Search VIN1 in HK Retail Home Page
     run keyword and continue on failure    User should be albe to Click Search VIN in HK Retail Home Page
     run keyword and continue on failure    TC Sleep
-    run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
+#    run keyword and continue on failure    User should be able to click shop this vehicle in Pop up Vehicle Search in HK Retail Home Page
+#    run keyword and continue on failure    TC Sleep
+#    run keyword and continue on failure    TC Sleep
+
+TC-041 - User should be able to view EPC Search Result Pop Up Modal in HK Retail Home Page
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to view EPC Search Result Pop Up Modal in HK Retail Home Page
+    run keyword and continue on failure    User should be able to view EPC VIN Search Result Pop Up Modal Elements in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click Show More button in EPC Search Result Pop Up Modal in HK Retail Home Page
+    run keyword and continue on failure    User should be able to click Shop this vehicle in EPC Search Result Pop Up Modal in HK Retail Home Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    TC Sleep
 
+TC-041 - User should be able to view EPC L1 Page in HK Retail
+    [Tags]    EPC L1
+    run keyword and continue on failure    User should be able to view EPC L1 Page in HK Retail
+
+TC-041 - User should be able to click Shop Now in HK Retail EPC L1 Page
+    [Tags]    EPC L1
+    run keyword and continue on failure    User should be able to click Shop Now in HK Retail EPC L1 Page
+    run keyword and continue on failure    Browse Back Button
+
+TC-041 - User should be able to Click Engine Fuel System in HK Retail EPC L1 Page
+    [Tags]    EPC L1
+    run keyword and continue on failure    User should be able to Click Engine Fuel System in HK Retail EPC L1 Page
+    run keyword and continue on failure    Browse Back Button
+
+TC-041 - User should be able to Click Transmission and Chasis in HK Retail EPC L1 Page
+    [Tags]    EPC L1
+    run keyword and continue on failure    User should be able to Click Transmission and Chasis in HK Retail EPC L1 Page
+    run keyword and continue on failure    Browse Back Button
+
+TC-041 - User should be able to Click Body and Interior in HK Retail EPC L1 Page
+    [Tags]    EPC L1
+    run keyword and continue on failure    User should be able to Click Body and Interior in HK Retail EPC L1 Page
+    run keyword and continue on failure    Browse Back Button
+
+TC-041 - User should be able to Click Electrics in HK Retail EPC L1 Page
+    [Tags]    EPC L1
+    run keyword and continue on failure    User should be able to Click Electrics in HK Retail EPC L1 Page
+
+TC-041 - User should be able to Click Electrics in HK Retail EPC L1 Page
+    [Tags]    EPC L2
+    run keyword and continue on failure    User should be able to view EPC L2 Page in HK Retail
+
+TC-041 - User should be able to view Engine Fuel System Schema in HK Retail EPC L2 Page
+    [Tags]    EPC L2
+    run keyword and continue on failure    User should be able to Click Engine Fuel System in HK Retail EPC L2 Page
+    run keyword and continue on failure    User should be able to view Engine Fuel System Schema in HK Retail EPC L2 Page
+
+TC-041 - User should be able to view Transmission and Chasis Schema in HK Retail EPC L2 Page
+    [Tags]    EPC L2
+    run keyword and continue on failure    User should be able to Click Transmission and Chasis in HK Retail EPC L2 Page
+    run keyword and continue on failure    User should be able to view Transmission and Chasis Schema in HK Retail EPC L2 Page
+
+TC-041 - User should be able to view Body and Innterior Schema in HK Retail EPC L2 Page
+    [Tags]    EPC L2
+    run keyword and continue on failure    User should be able to Click Body and Interior in HK Retail EPC L2 Page
+    run keyword and continue on failure    User should be able to view Body and Innterior Schema in HK Retail EPC L2 Page
+
+TC-041 - User should be able to view Electrics Schema in HK Retail EPC L2 Page
+    [Tags]    EPC L2
+    run keyword and continue on failure    User should be able to Click Electrics in HK Retail EPC L2 Page
+    run keyword and continue on failure    User should be able to view Electrics Schema in HK Retail EPC L2 Page
+
+TC-041 - User should be able to view All Schema in HK Retail EPC L2 Page
+    [Tags]    EPC L2
+    run keyword and continue on failure    User should be able to Click All in HK Retail EPC L2 Page
+    run keyword and continue on failure    User should be able to view All Schema in HK Retail EPC L2 Page
+
+TC-041 - User should be able to select random Schema in HK Retail EPC L2 Page
+    [Tags]    EPC L2
+    run keyword and continue on failure    User should be able to select random Schema in HK Retail EPC L2 Page
+
+TC-041 - User should be able to view EPC L3 Page in HK Retail EPC L3 Page
+    [Tags]    EPC L3
+    run keyword and continue on failure    User should be able to view EPC L3 Page in HK Retail EPC L3 Page
+    run keyword and continue on failure    User should be able to view Parts List Card and Diagram in HK Retail EPC L3 Page
+
+TC-041 - User should be able to view one Card on the Parts Card List in HK Retail EPC L3 Page
+    [Tags]    EPC L3
+    run keyword and continue on failure    User should be able to view one Card on the Parts Card List in HK Retail EPC L3 Page
+    run keyword and continue on failure    User should be able to expand one Card on the Parts Card List in HK Retail EPC L3 Page
+    run keyword and continue on failure    User should be able to view Option Card Details on the Parts Card List in HK Retail EPC L3 Page
 
 TC-041 - User should be able to clear vehicle selection in HK Retail Home Page
     [Tags]    Home Page
@@ -376,16 +475,42 @@ TC-053 - User should be able to view checkout in Retail Checkout Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view checkout in HK Retail Checkout Page
 
+TC-053 - User should be able to change to manual Address
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be albe to click Change Address in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to view Change Shipping Address Modal in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to change Mobile Number on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to change Landline Number on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to clear shipping address on shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to edit manual shipping address on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to click manual shipping address on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to click Area Dropdown on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to select Random Area on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to click District Dropdown on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to select Random District on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to click Save Button on change shipping in HK Retail Checkout Page
+
+TC-053 - User should be able to change Address
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be albe to click Change Address in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to view Change Shipping Address Modal in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to change Mobile Number on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to change Landline Number on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to clear shipping address on shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to edit shipping address on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to select Random Address from suggestions in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to click Area Dropdown on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to select Random Area on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to click District Dropdown on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to select Random District on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to click Save Button on change shipping in HK Retail Checkout Page
+
 TC-053 - User should be able to view Promo Code in HK Retail Checkout Page
     [Tags]    Checkout Page
     run keyword and continue on failure    User should be able to view Promo Code in HK Retail Checkout Page
 
 TC-053 - User should be able to input Promo Code in HK Retail Checkout Page
     [Tags]    Checkout Page
-    run keyword and continue on failure    User should be able to input Promo Code in HK Retail Checkout Page
-    run keyword and continue on failure    TC Sleep
-    run keyword and continue on failure    User should be able to remove Promo Code in HK Retail Checkout Page
-    run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to input Promo Code in HK Retail Checkout Page
     run keyword and continue on failure    TC Sleep
 
@@ -468,6 +593,7 @@ TC-065 - User should be able to view and message order with Recieved Status in R
     [Tags]    Order Page
     run keyword and continue on failure    User should be able to view order with Recieved Status in Retail Account Orders Page
     run keyword and continue on failure    User should be able to click order with Recieved Status in Retail Account Orders Page
+    run keyword and continue on failure    User should be able to view order details HK
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
@@ -482,6 +608,7 @@ TC-066 - User should be able to view and message order with Submitted Status in 
     [Tags]    Order Page
     run keyword and continue on failure    User should be able to view order with Submitted Status in Retail Account Orders Page
     run keyword and continue on failure    User should be able to click order with Submitted Status in Retail Account Orders Page
+    run keyword and continue on failure    User should be able to view order details HK
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
@@ -496,6 +623,7 @@ TC-067 - User should be able to view and message order with Dispatched Status in
     [Tags]    Order Page
     run keyword and continue on failure    User should be able to view order with Dispatched Status in Retail Account Orders Page
     run keyword and continue on failure    User should be able to click order with Dispatched Status in Retail Account Orders Page
+    run keyword and continue on failure    User should be able to view order details HK
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
@@ -510,6 +638,7 @@ TC-069 - User should be able to view and message order with Orders with Returns 
     [Tags]    Order Page
     run keyword and continue on failure    User should be able to view order with Orders with Returns Status in Retail Account Orders Page
     run keyword and continue on failure    User should be able to click order with Orders with Returns Status in Retail Account Orders Page
+    run keyword and continue on failure    User should be able to view order details HK
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
@@ -746,6 +875,14 @@ TC-088 - User should be able to search message in Retail Account Messages Page
     run keyword and continue on failure    User should be able to Input Text in Search Box in Retail Account Messages Page
     run keyword and continue on failure    User should be able to click clear button from Search Box in Retail Account Messages Page
 
+TC-088 - User should be able create and send new message in Retail Account Messages Page
+    [Tags]    Message Page
+    run keyword and continue on failure    User should be able to click New Message in Retail Account Message Page
+    run keyword and continue on failure    User should be able to add message subject in New message pop up in Retail Account Message Page
+    run keyword and continue on failure    User should be able to Input Text on Message in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to upload image in Retail Account Messages Details Page
+    run keyword and continue on failure    User should be able to click send in New message pop up in Retail Account Message Page
+
 TC-089 - User should be able to view and message read Order Enquiry in Retail Account Message Page
     [Tags]    Message Page
     run keyword and continue on failure    User should be able to view read Order Enquiry in Retail Account Message Page
@@ -813,6 +950,11 @@ TC-096 - User should be able to view company details page
 TC-097 - User should be able to edit company details page
     [Tags]    Company Details Page
     run keyword and continue on failure    User should be able to input valid Company name in Retail Account Company Details Page
+    run keyword and continue on failure    User should be able to click clear Postal Address Dropdown for HK Retail Account Company Details Page
+    run keyword and continue on failure    User should be able to click Postal Address Dropdown for HK Retail Account Company Details Page
+    run keyword and continue on failure    User should be able to input manual text in Postal Address for HK Retail Account Company Details Page
+    run keyword and continue on failure    User should be able to click manual Postal Address Dropdown for HK Retail Account Company Details Page
+    run keyword and continue on failure    User should be able to click clear Postal Address Dropdown for HK Retail Account Company Details Page
     run keyword and continue on failure    User should be able to click Postal Address Dropdown for HK Retail Account Company Details Page
     run keyword and continue on failure    User should be able to input text in Postal Address for HK Retail Account Company Details Page
     run keyword and continue on failure    User should be able to select Random Postal Address from suggestions for HK Retail Account Company Details Page
@@ -822,6 +964,11 @@ TC-097 - User should be able to edit company details page
     run keyword and continue on failure    User should be able to click District Dropdown in Postal Address for HK Retail Account Company Details Page
     run keyword and continue on failure    User should be able to select Random Postal Address District for HK Retail Account Company Details Page
 #    run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Retail Account Company Details Page
+    run keyword and continue on failure    User should be able to click clear Delivery Address Dropdown for HK Retail Account Company Details Page
+    run keyword and continue on failure    User should be able to click Delivery Address Dropdown for HK Retail Account Company Details Page
+    run keyword and continue on failure    User should be able to input manual text in Deliver Address for HK Retail Account Company Details Page
+    run keyword and continue on failure    User should be able to click manual Deliver Address Dropdown for HK Retail Account Company Details Page
+    run keyword and continue on failure    User should be able to click clear Delivery Address Dropdown for HK Retail Account Company Details Page
     run keyword and continue on failure    User should be able to click Delivery Address Dropdown for HK Retail Account Company Details Page
     run keyword and continue on failure    User should be able to input text in Deliver Address for HK Retail Account Company Details Page
     run keyword and continue on failure    User should be able to select Random Delivery Address from suggestions for HK Retail Account Company Details Page

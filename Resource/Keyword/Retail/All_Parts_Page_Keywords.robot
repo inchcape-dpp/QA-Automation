@@ -3,7 +3,7 @@ Documentation    Suite description
 
 Library    SeleniumLibrary
 Library    String
-Library    ExcelLibrary
+
 
 #Resource  ../../../Resource/testdata/config.robot
 Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
@@ -112,6 +112,7 @@ User should be able to view product In Stock and DC Stock
     exit for loop if    '${InStockDCStockStatus}' == 'True'
     END
     scroll element into view    ${ProductSelectionInStockDCStockContainer}
+    mouse over    ${ProductSelectionInStockDCStockContainer}
     wait until element is visible    ${ProductSelectionInStockDCStockContainer}    10
     capture element screenshot    ${ProductSelectionInStockDCStockContainer}
     sleep    2
@@ -123,6 +124,7 @@ User should be able to view product Out of Stock and DC Stock
     exit for loop if    '${OutofStockDCStockStatus}' == 'True'
     END
     scroll element into view    ${ProductSelectionOutofStockDCStockContainer}
+    mouse over    ${ProductSelectionOutofStockDCStockContainer}
     wait until element is visible    ${ProductSelectionOutofStockDCStockContainer}    10
     capture element screenshot    ${ProductSelectionOutofStockDCStockContainer}
     sleep    2
@@ -134,6 +136,7 @@ User should be able to view product In Stock Only
     exit for loop if    '${InStockOnlyStatus}' == 'True'
     END
     scroll element into view    ${ProductSelectionInStockOnlyContainer}
+    mouse over  ${ProductSelectionInStockOnlyContainer}
     wait until element is visible    ${ProductSelectionInStockOnlyContainer}    10
     capture element screenshot    ${ProductSelectionInStockOnlyContainer}
     sleep    2
@@ -145,6 +148,7 @@ User should be able to view product In Stock Only in HK Retail Products Page
     exit for loop if    '${InStockOnlyStatus}' == 'True'
     END
     scroll element into view    ${ProductSelectionInStockOnlyContainer}
+    mouse over    ${ProductSelectionInStockOnlyContainer}
     wait until element is visible    ${ProductSelectionInStockOnlyContainer}    10
     capture element screenshot    ${ProductSelectionInStockOnlyContainer}
     sleep    2
@@ -156,6 +160,7 @@ User should be able to view product Out of Stock
     exit for loop if    '${OutofStockStatus}' == 'True'
     END
     scroll element into view    ${ProductSelectionOutofStockContainer}
+    mouse over    ${ProductSelectionOutofStockContainer}
     wait until element is visible    ${ProductSelectionOutofStockContainer}    10
     capture element screenshot    ${ProductSelectionOutofStockContainer}
     sleep    2
@@ -178,6 +183,7 @@ User should be able to view product Price not Available
     exit for loop if    '${NoPriceStatus}' == 'True'
     END
     scroll element into view    ${ProductSelectionNoPriceContainer}
+    mouse over    ${ProductSelectionNoPriceContainer}
     wait until element is visible    ${ProductSelectionNoPriceContainer}    10
     capture element screenshot    ${ProductSelectionNoPriceContainer}
     sleep    2
@@ -901,10 +907,10 @@ User should be able to click load more button in HK Retail Product Page
 
 Show number of product list
     wait until element is visible    ${Retail_HK_ProductSelectionProductlist}    10
-    get element count    ${Retail_HK_ProductSelectionProductlist}
+    ${elementcount}    get element count    ${Retail_HK_ProductSelectionProductlist}
     ${Productlisttext}    get text     ${Retail_HK_ProductSelectionProductResult}
-    @{words}    split string    ${Productlisttext}     ,${SPACE}
-    log    ${words}
+    @{words}    split string    ${Productlisttext}    ${SPACE}
+    log    ${words}[0]
 
     capture element screenshot    ${Retail_HK_ProductSelectionProductResult}
 
@@ -1771,6 +1777,45 @@ User should be able to view Option Card Details on the Parts Card List in HK Ret
 
     sleep    2
 
+
+User should be able to view PDP after EPC Level 3
+    wait until element is visible    ${ProductDeatilsPageProductImage}    10
+    wait until element is visible    ${ProductDeatilsPageProductName}    10
+    wait until element is visible    ${ProductDeatilsPageProductPartNum}    10
+    wait until element is visible    ${ProductDeatilsPageProductPrice}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductRRP}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductSeller}    10
+    wait until element is visible    ${ProductDeatilsPageProductInStock}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductSubCategory}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductFitment}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductPCQ}    10
+    wait until element is visible    ${ProductDeatilsPageProductAddtoCartButton}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductName}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductRef}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductModel}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductYear}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductModelValue}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductYearValue}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductLoadMore}    10
+
+    capture element screenshot    ${ProductDeatilsPageProductImage}
+    capture element screenshot    ${ProductDeatilsPageProductName}
+    capture element screenshot    ${ProductDeatilsPageProductPartNum}
+    capture element screenshot    ${ProductDeatilsPageProductPrice}
+    capture element screenshot    ${EPCProductDeatilsPageProductRRP}
+    capture element screenshot    ${EPCProductDeatilsPageProductSeller}
+    capture element screenshot    ${ProductDeatilsPageProductInStock}
+    capture element screenshot    ${EPCProductDeatilsPageProductSubCategory}
+    capture element screenshot    ${EPCProductDeatilsPageProductFitment}
+    capture element screenshot    ${EPCProductDeatilsPageProductPCQ}
+    capture element screenshot    ${ProductDeatilsPageProductAddtoCartButton}
+    capture element screenshot    ${EPCProductDeatilsPageProductName}
+    capture element screenshot    ${EPCProductDeatilsPageProductRef}
+    capture element screenshot    ${EPCProductDeatilsPageProductModel}
+    capture element screenshot    ${EPCProductDeatilsPageProductYear}
+    capture element screenshot    ${EPCProductDeatilsPageProductModelValue}
+    capture element screenshot    ${EPCProductDeatilsPageProductYearValue}
+    capture element screenshot    ${EPCProductDeatilsPageProductLoadMore}
 
 
 

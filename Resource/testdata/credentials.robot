@@ -236,6 +236,12 @@ ${Dan_s2_HK_Bronze_Retail_PWD}    Pass123@321
 ${AU_D1_Automation_UID}    au_automation1retaild1@yopmail.com
 ${AU_D1_Automation_PWD}    AU_Auto@12345!
 
+${AU_D1_Automation2_UID}    au_automation2retaild1@yopmail.com
+${AU_D1_Automation2_PWD}    AU_Auto@12345!
+
+${AU_D1_Automation_Eagers_UID}    au_automation1retaild1eagers@yopmail.com
+${AU_D1_Automation_Eagers_PWD}    AU_Auto@12345!
+
 ${HK_D1_Automation_Bronze_UID}    hk_automation1retaild1_bronze@yopmail.com
 ${HK_D1_Automation_Bronze_PWD}    HK_Auto@12345!
 
@@ -248,9 +254,11 @@ ${HK_S1_Automation_Bronze_PWD}    HK_Auto@12345!
 ${HK_S1_Automation_Gold_UID}    hk_automation1retails1_gold@yopmail.com
 ${HK_S1_Automation_Gold_PWD}    HK_Auto@12345!
 
-
 ${AU_S2_Automation_UID}    au_automation1retails2@yopmail.com
 ${AU_S2_Automation_PWD}    AU_Auto@12345!
+
+${AU_S2_Automation_Eagers_UID}    au_automation1retails2eagers@yopmail.com
+${AU_S2_Automation_Eagers_PWD}    AU_Auto@12345!
 
 ${HK_S2_Automation_Bronze_UID}    hk_automation1retails2_bronze@yopmail.com
 ${HK_S2_Automation_Bronze_PWD}    HK_Auto@12345!
@@ -293,7 +301,7 @@ ${AU_S1_PWD}    Pass@12345
 ${AU_S2_UID}    rictestemail31@yopmail.com
 ${AU_S2_PWD}    Pass@12345
 ${AUSeller_S2_UID}    seller1.admin@test.com
-${AUSeller_S2_PWD}    AUPass@12345
+${AUSeller_S2_PWD}    AUs2@12345
 
 ${AUCustomer_P1_UID}    ericson.tinana@inchcape.com
 ${AUCustomer_P1_PWD}    Carloakos1!
@@ -317,7 +325,7 @@ ${HK_S2_PWD}    Pass@12345
 ${HKSeller_S2_UID}    hk.seller2.admin@test.com
 ${HKSeller_S2_PWD}    HKPass@12345
 
-${HKCustomer_P1_UID}    hktestric10@yopmail.com
+${HKCustomer_P1_UID}    hktestri0010@yopmail.com
 ${HKCustomer_P1_PWD}    Pass@12345
 ${HKSeller_P1_UID}    hk.seller1.admin@test.com
 ${HKSeller_P1_PWD}    HKPass@12345

@@ -25,9 +25,9 @@ New browser tab
     switch window    ${Tab2}
     go to    ${YopMail}
     sleep    10
-#    Log to console    Switching window 1
-#    switch window    ${Tab1}
-#    sleep    10
+    Log to console    Switching window 1
+    switch window    ${Tab1}
+    sleep    10
 
 Enter Yop Mail
     wait until element is visible    ${Yopmail_Banner}    10

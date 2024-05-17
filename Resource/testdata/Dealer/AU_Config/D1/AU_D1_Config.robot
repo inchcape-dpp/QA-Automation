@@ -29,17 +29,16 @@ ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files
 
 ${Username}    ${AUSeller_D1_UID}
 ${Password}    ${AUSeller_D1_PWD}
+${ProfileChangePassCurrentPassValue}    ${Password}
 
 ${YopMailEmail}    ${admin1_d2_dealer_UID}
-
-${ProfileChangePassCurrentPassValue}    ${Password}
 
 *** Keywords ***
 Open Chrome Browser
     SeleniumLibrary.Open Browser    ${d1Dealer}    Chrome  executable_path=${driver_path}
     maximize browser window
 
-Dealer Screent Shot DIR
+Dealer Screen Shot DIR
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
     create directory    ${Dealer_screenshot_path}/AU_${currentdate}
     ${LogDIR}=    convert to string    ${Dealer_screenshot_path}/AU_${currentdate}

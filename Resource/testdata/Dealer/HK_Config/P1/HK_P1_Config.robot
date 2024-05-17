@@ -29,10 +29,8 @@ ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files
 
 ${Username}    ${admin2_p1_HKdealer_UID}
 ${Password}    ${admin2_p1_HKdealer_PWD}
-
-${YopMailEmail}    ${admin2_p1_HKdealer_UID}
-
 ${ProfileChangePassCurrentPassValue}    ${Password}
+${YopMailEmail}    ${admin2_p1_HKdealer_UID}
 
 ${ProfileAccountsDetailsPhoneValue}    85296374
 ${ProfileAccountsDetailsLandlineValue}    14725836
@@ -42,7 +40,7 @@ Open Chrome Browser
     SeleniumLibrary.Open Browser    ${p1HKDealer}    Chrome  executable_path=${driver_path}
     maximize browser window
 
-Dealer Screent Shot DIR
+Dealer Screen Shot DIR
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
     create directory    ${Dealer_screenshot_path}/HK_${currentdate}
     ${LogDIR}=    convert to string    ${Dealer_screenshot_path}/HK_${currentdate}
@@ -57,5 +55,5 @@ Browse Back Button
 
 #-----------------------------------------------------Dealer Sleep------------------------------------------------------
 
-TC Sleep
+TC Sleep P1
     sleep    10

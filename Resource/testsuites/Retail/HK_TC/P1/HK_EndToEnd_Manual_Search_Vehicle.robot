@@ -5,13 +5,13 @@ Library  SeleniumLibrary
 Library    Process
 #Library  FakerLibrary
 
-Resource  ../../../../../Resource/testdata/Retail/HK_Config/P1/HK_P1_Config.robot
+Resource  ../../../../../Resource/testdata/Retail/HK_Config/P1/HK_P1_Bronze_Config.robot
 Resource  ../../../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../../../Resource/testdata/Retail/Retail_Resource.robot
 
 *** Test Cases ***
-Test Setup  Run Keywords   Open Chrome Browser HK
-Screen Shot DIR  Run Keywords    Retail Screent Shot DIR HK
+Test Setup  Run Keywords   Open Chrome Browser
+Screen Shot DIR  Run Keywords    Retail Screen Shot DIR
 
 TC-001 - Verify Login Page
     [Tags]    TC001    Login Page

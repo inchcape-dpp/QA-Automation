@@ -6,7 +6,7 @@ Library    Process
 #Library    FakerLibrary
 
 
-Resource  ../../../../../Resource/testdata/Dealer/AU_Config/S1/AU_S1_Config.robot
+Resource  ../../../../../Resource/testdata/Dealer/HK_Config/P1/HK_P1_Config.robot
 Resource  ../../../../../Resource/testdata/Dealer/Dealer_Variable.robot
 Resource  ../../../../../Resource/testdata/Dealer/Dealer_Resource.robot
 
@@ -15,8 +15,13 @@ Resource  ../../../../../Resource/testdata/Dealer/Dealer_Resource.robot
 Test Setup  Run Keywords   Open Chrome Browser
 Screen Shot DIR  Run Keywords    Dealer Screen Shot DIR
 
+TC Sleep
+    [Tags]    Sleep    TC Sleep
+    run keyword and continue on failure    TC Sleep
+
 TC-001 - Verify Login Page
     [Tags]    Login Page
+    run keyword and continue on failure    User should be able to click Translate to English Button
     run keyword and continue on failure    Verify Login Page
 
 TC-002 - Verify Login Page Elements
@@ -60,235 +65,231 @@ TC-011 - User should be able to click submit button in Dealer Reset Password Pag
     run keyword and continue on failure    User should be able to click submit button in Dealer Reset Password Page
     run keyword and continue on failure    Browse Back Button
 
-TC-012 - Input Valid Username
-    [Tags]    Login Page
+TC-012 - Input Valid Email
+    [Tags]    TC006    Valid Account
+
     run keyword and continue on failure    Input Valid Username
 
 TC-013 - Input Valid Password
-    [Tags]    Login Page
+    [Tags]    TC007    Valid Account
     run keyword and continue on failure    Input Valid Password
 
 TC-014 - User should be able to click Login Button
-    [Tags]    Login Page
+    [Tags]    TC008    Login Button
     run keyword and continue on failure    User should be able to click Login Button
+    run keyword and continue on failure    TC Sleep
 
-TC-015 - Verify Home Page Elements
-    [Tags]    Home Page
-    run keyword and continue on failure    Verify Home Page Elements
+TC-015 - User should be able to view top navigation
+    [Tags]    TC014    Top Navigation
+    run keyword and continue on failure    User should be able to view top navigation in HK Dealer Home Page
 
-TC-016 - User should be able to view top navigation
-    [Tags]    Home Page    Top Navigation
-    run keyword and continue on failure    User should be able to view top navigation
-
-TC-017 - User should be able to click account from top navigation
-    [Tags]    Home Page    Top Navigation
+TC-016 - User should be able to click account from top navigation
+    [Tags]    TC015    Top Navigation
     run keyword and continue on failure    User should be able to click account from top navigation
 
-TC-018 - User should be able to click orders from top navigation
-    [Tags]    Home Page    Top Navigation
+TC-017 - User should be able to click orders from top navigation
+    [Tags]    TC016    Top Navigation
     run keyword and continue on failure    User should be able to click orders from top navigation
 
-TC-019 - User should be able to click return from top navigation
-    [Tags]    Home Page    Top Navigation
+TC-018 - User should be able to click return from top navigation
+    [Tags]    TC017    Top Navigation
     run keyword and continue on failure    User should be able to click return from top navigation
 
-TC-020 - User should be able to click new buyer from top navigation
-    [Tags]    Home Page    Top Navigation
-    run keyword and continue on failure    User should be able to click new buyer from top navigation
-
-TC-021 - User should be able to click messages from top navigation
-    [Tags]    Home Page    Top Navigation
+TC-019 - User should be able to click messages from top navigation
+    [Tags]    TC019    Top Navigation
     run keyword and continue on failure    User should be able to click messages from top navigation
 
-TC-022 - User should be able to click orders from left navigation
+TC-020 - User should be able to click orders from left navigation
     [Tags]    Home Page    Left Navigation
     run keyword and continue on failure    User should be able to click orders from left navigation
-
-TC-023 - User should be able to click Return from left navigation
+TC-021 - User should be able to click Return from left navigation
     [Tags]    Home Page    Left Navigation
     run keyword and continue on failure    User should be able to click Return from left navigation
 
-TC-024 - User should be able to click and expand Customer Management
+TC-022 - User should be able to click and expand Customer Management
     [Tags]    Home Page    Left Navigation
     run keyword and continue on failure    User should be able to click and expand Customer Management
 
-TC-025 - User should be able to click Customer Manegement - New Reg from left navigation
-    [Tags]    Home Page    Left Navigation
-    run keyword and continue on failure    User should be able to click Customer Manegement - New Reg from left navigation
-
-TC-026 - User should be able to click Customer Manegement - Buyer Rel from left navigation
+TC-023 - User should be able to click Customer Manegement - Buyer Rel from left navigation
     [Tags]    Home Page    Left Navigation
     run keyword and continue on failure    User should be able to click Customer Manegement - Buyer Rel from left navigation
 
-TC-027 - User should be able to click Messages from left navigation
+TC-024 - User should be able to click Messages from left navigation
     [Tags]    Home Page    Left Navigation
     run keyword and continue on failure    User should be able to click Messages from left navigation
 
-TC-028 - User should be able to click and expand Profile
+TC-025 - User should be able to click and expand Profile
     [Tags]    Home Page    Left Navigation
     run keyword and continue on failure    User should be able to click and expand Profile
 
-TC-029 - User should be able to click Profile - Account Details from left navigation
+TC-026 - User should be able to click Profile - Account Details from left navigation
     [Tags]    Home Page    Left Navigation
     run keyword and continue on failure    User should be able to click Profile - Account Details from left navigation
 
-TC-030 - User should be able to click Profile - Change Pass from left navigation
+TC-027 - User should be able to click Profile - Change Pass from left navigation
     [Tags]    Home Page    Left Navigation
     run keyword and continue on failure    User should be able to click Profile - Change Pass from left navigation
 
-TC-031 - User should be able to click and expand Company
+TC-028 - User should be able to click and expand Company
     [Tags]    Home Page    Left Navigation
     run keyword and continue on failure    User should be able to click and expand Company
 
-TC-032 - User should be able to click Company - Company Details from left navigation
+TC-029 - User should be able to click Company - Company Details from left navigation
     [Tags]    Home Page    Left Navigation
     run keyword and continue on failure    User should be able to click Company - Company Details from left navigation
 
-TC-033 - User should be able to click Company - Staff Pass from left navigation
+TC-030 - User should be able to click Company - Staff Pass from left navigation
     [Tags]    Home Page    Left Navigation
     run keyword and continue on failure    User should be able to click Company - Staff Pass from left navigation
 
-TC-034 - User should be able to click Settings from left navigation
+TC-031 - User should be able to click Settings from left navigation
     [Tags]    Home Page    Left Navigation
     run keyword and continue on failure    User should be able to click Settings from left navigation
     run keyword and continue on failure    TC Move to Top
 
-TC-035 - User should be able to view Cutomer Orders Panel
+TC-032 - User should be able to view Cutomer Orders Panel
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to click orders from left navigation
     run keyword and continue on failure    User should be able to view Cutomer Orders Panel
 
-TC-036 - User should be able to filter status by Received in Order Page
+TC-033 - User should be able to filter status by Received in Order Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to click filter by status in Order Page
     run keyword and continue on failure    User should be able to filter status by Received in Order Page
 
-TC-037 - User should be able to filter status by Submitted in Order Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to click filter by status in Order Page
-    run keyword and continue on failure    User should be able to filter status by Submitted in Order Page
-
-TC-038 - User should be able to filter status by Dispatched in Order Page
+TC-034 - User should be able to filter status by Dispatched in Order Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to click filter by status in Order Page
     run keyword and continue on failure    User should be able to filter status by Dispatched in Order Page
 
-TC-039 - User should be able to filter status by Dispatched in Order Page
+TC-035 - User should be able to filter status by Delivered in Order Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to click filter by status in Order Page
-    run keyword and continue on failure    User should be able to filter status by Partially Dispathed in Order Page
+    run keyword and continue on failure    User should be able to filter status by Delivered in Order Page
 
-TC-040 - User should be able to filter status by Order with Returns in Order Page
+TC-035 - User should be able to filter status by Processing in Order Page
+    [Tags]    Home Page    Orders Page
+    run keyword and continue on failure    User should be able to click filter by status in Order Page
+    run keyword and continue on failure    User should be able to filter status by Processing in Order Page
+
+TC-035 - User should be able to filter status by Order with Returns in Order Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to click filter by status in Order Page
     run keyword and continue on failure    User should be able to filter status by Order with Returns in Order Page
 
-TC-041 - User should be able to filter status by ALL in Order Page
+TC-036 - User should be able to filter status by ALL in Order Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to click filter by status in Order Page
     run keyword and continue on failure    User should be able to filter status by ALL in Order Page
 
-TC-042 - User should be able to view Date Filter Elements in Order Page
+TC-037 - User should be able to view Date Filter Elements in Order Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to click Date Filter in Order Page
     run keyword and continue on failure    User should be able to view Date Filter Elements in Order Page
 
-TC-043 - User should be able to click Previous Month Button in Order Page
+TC-038 - User should be able to click Previous Month Button in Order Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to click Previous Month Button in Order Page
 
-TC-044 - User should be able to click Next Month Button in Order Page
+TC-039 - User should be able to click Next Month Button in Order Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to click Next Month Button in Order Page
 
-TC-045 - User should be able to select month from drop down in Order Page
+TC-040 - User should be able to select month from drop down in Order Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to click Month Drop Down Filter in Order Page
     run keyword and continue on failure    User should be able to select month from drop down in Order Page
 
-TC-046 - User should be able to select year from drop down in Order Page
+TC-041 - User should be able to select year from drop down in Order Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to click Year Drop Down Filter in Order Page
     run keyword and continue on failure    User should be able to select year from drop down in Order Page
 
-TC-047 - User should be able to select From Date in Order Page
+TC-042 - User should be able to select From Date in Order Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to select From Date in Order Page
 
-TC-048 - User should be able to select To Date in Order Page
+TC-043 - User should be able to select To Date in Order Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to select To Date in Order Page
 
-TC-049 - User should be able to click Date Filter Submit Button in Order Page
+TC-044 - User should be able to click Date Filter Submit Button in Order Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to click Date Filter Submit Button in Order Page
 
-TC-050 - User should be able to click Date Filter Clear Button in Order Page
+TC-045 - User should be able to click Date Filter Clear Button in Order Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to click Date Filter in Order Page
     run keyword and continue on failure    User should be able to click Date Filter Clear Button in Order Page
     run keyword and continue on failure    User should be able to click Search Box in Order Page
 
-TC-051 - User should be able to click Search Box in Order Page
+TC-046 - User should be able to click Search Box in Order Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to click Search Box in Order Page
 
-TC-052 - User should be able to Input Text in Search Box in Order Page
+TC-047 - User should be able to Input Text in Search Box in Order Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to Input Text in Search Box in Order Page
 
-TC-053 - User should be able to click clear button from Search Box in Order Page
+TC-048 - User should be able to click clear button from Search Box in Order Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to click clear button from Search Box in Order Page
 
-TC-054 - User should be able to Filter by Order Number in Order Page
+TC-049 - User should be able to Filter by Order Number in Order Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to click Arrage Filter in Order Page
     run keyword and continue on failure    User should be able to Filter by Order Number in Order Page
 
-TC-055 - User should be able to Filter by Old to New in Order Page
+TC-050 - User should be able to Filter by Old to New in Order Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to click Arrage Filter in Order Page
     run keyword and continue on failure    User should be able to Filter by Old to New in Order Page
 
-TC-056 - User should be able to Filter by New to Old in Order Page
+TC-051 - User should be able to Filter by New to Old in Order Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to click Arrage Filter in Order Page
     run keyword and continue on failure    User should be able to Filter by New to Old in Order Page
 
-TC-057 - User should be able to view and click order with Recieved Status in Dealer Orders Page
+TC-052 - User should be able to view and click order with Recieved Status in Dealer Orders Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to view order with Recieved Status in Dealer Orders Page
     run keyword and continue on failure    User should be able to click order with Recieved Status in Dealer Orders Page
-    run keyword and continue on failure    User should be able to view order details
+    run keyword and continue on failure    User should be able to view order details in HK Order Details Page
     run keyword and continue on failure    User should be able to click Back to Customer Orders in Dealer Order Details Page
 
 TC-058 - User should be able to view and click order with Submitted Status in Dealer Orders Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to view order with Submitted Status in Dealer Orders Page
     run keyword and continue on failure    User should be able to click order with Submitted Status in Dealer Orders Page
-    run keyword and continue on failure    User should be able to view order details
+    run keyword and continue on failure    User should be able to view order details in HK Order Details Page
     run keyword and continue on failure    User should be able to click Back to Customer Orders in Dealer Order Details Page
 
 TC-059 - User should be able to view and click order with Dispatched Status in Dealer Orders Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to view order with Dispatched Status in Dealer Orders Page
     run keyword and continue on failure    User should be able to click order with Dispatched Status in Dealer Orders Page
-    run keyword and continue on failure    User should be able to view order details
-    run keyword and continue on failure    User should be able to click Back to Customer Orders in Dealer Order Details Page
-
-TC-060 - User should be able to view and click order with Partially Dispatched Status in Dealer Orders Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to view order with Partially Dispatched Status in Dealer Orders Page
-    run keyword and continue on failure    User should be able to click order with Partially Dispatched Status in Dealer Orders Page
-    run keyword and continue on failure    User should be able to view order details
+    run keyword and continue on failure    User should be able to view order details in HK Order Details Page
     run keyword and continue on failure    User should be able to click Back to Customer Orders in Dealer Order Details Page
 
 TC-061 - User should be able to view and click order with Orders with Returns Status in Dealer Orders Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to view order with Orders with Returns Status in Dealer Orders Page
     run keyword and continue on failure    User should be able to click order with Orders with Returns Status in Dealer Orders Page
-    run keyword and continue on failure    User should be able to view order details
+    run keyword and continue on failure    User should be able to view order details in HK Order Details Page
+    run keyword and continue on failure    User should be able to click Back to Customer Orders in Dealer Order Details Page
+
+TC-061 - User should be able to view and click order with Delivered Status in Dealer Orders Page
+    [Tags]    Home Page    Orders Page
+    run keyword and continue on failure    User should be able to view order with Delivered Status in Dealer Orders Page
+    run keyword and continue on failure    User should be able to click order with Delivered Status in Dealer Orders Page
+    run keyword and continue on failure    User should be able to view order details in HK Order Details Page
+    run keyword and continue on failure    User should be able to click Back to Customer Orders in Dealer Order Details Page
+
+TC-061 - User should be able to view and click order with Processing Status in Dealer Orders Page
+    [Tags]    Home Page    Orders Page
+    run keyword and continue on failure    User should be able to view order with Processing Status in Dealer Orders Page
+    run keyword and continue on failure    User should be able to click order with Processing Status in Dealer Orders Page
+    run keyword and continue on failure    User should be able to view order details in HK Order Details Page
     run keyword and continue on failure    User should be able to click Back to Customer Orders in Dealer Order Details Page
 
 TC-062 - User should be able to view Return Request Panel
@@ -385,7 +386,7 @@ TC-081 - User should be able to view and click order with Accepted Status in Dea
     run keyword and continue on failure    User should be able to filter status by Accepted in Return Page
     run keyword and continue on failure    User should be able to view order with Accepted Status in Dealer Return Page
     run keyword and continue on failure    User should be able to click order with Accepted Status in Dealer Return Page
-    run keyword and continue on failure    User should be able to view Return details
+    run keyword and continue on failure    User should be able to view Return details in HK Return Details Page
     run keyword and continue on failure    User should be able to click Back to Return Request in Dealer Return Details Page
 
 TC-082 - User should be able to message supplier on order with Accepted Status in Dealer Return Page
@@ -408,7 +409,7 @@ TC-083 - User should be able to view and click order with Declined Status in Dea
     run keyword and continue on failure    User should be able to filter status by Declined in Return Page
     run keyword and continue on failure    User should be able to view order with Declined Status in Dealer Return Page
     run keyword and continue on failure    User should be able to click order with Declined Status in Dealer Return Page
-    run keyword and continue on failure    User should be able to view Return details
+    run keyword and continue on failure    User should be able to view Return details in HK Return Details Page
     run keyword and continue on failure    User should be able to click Back to Return Request in Dealer Return Details Page
 
 TC-084 - User should be able to message supplier on order with Declined Status in Dealer Return Page
@@ -431,7 +432,7 @@ TC-085 - User should be able to view and click order with In Progress Status in 
     run keyword and continue on failure    User should be able to filter status by In Progress in Return Page
     run keyword and continue on failure    User should be able to view order with In Progress Status in Dealer Return Page
     run keyword and continue on failure    User should be able to click order with In Progress Status in Dealer Return Page
-    run keyword and continue on failure    User should be able to view Return details
+    run keyword and continue on failure    User should be able to view Return details in HK Return Details Page
     run keyword and continue on failure    User should be able to click Back to Return Request in Dealer Return Details Page
 
 TC-086 - User should be able to message supplier on order with In Progress Status in Dealer Return Page
@@ -448,100 +449,30 @@ TC-086 - User should be able to message supplier on order with In Progress Statu
     run keyword and continue on failure    User should be able to click Back to Retrun Request on message pop thank you in Dealer Return Details Page
     run keyword and continue on failure    User should be able to click Back to Return Request in Dealer Return Details Page
 
-#TC-087 - User should be able to accept and add message order with In Progress Status in Dealer Return Page
-#    [Tags]    Home Page    Return Page
-#    run keyword and continue on failure    User should be able to click filter by status in Retrun Page
-#    run keyword and continue on failure    User should be able to filter status by In Progress in Return Page
-#    run keyword and continue on failure    User should be able to view order with In Progress Status in Dealer Return Page
-#    run keyword and continue on failure    User should be able to click order with In Progress Status in Dealer Return Page
-#    run keyword and continue on failure    User should be able to click accept button in Dealer Return Details Page
-#    run keyword and continue on failure    User should be able to add text on Note for Customer in Dealer Return Details Page
-#    run keyword and continue on failure    User should be able to click confirm status button in Dealer Return Details Page
-#    run keyword and continue on failure    User should be able to click cancel confirm status in Dealer Return Details Page
-#    run keyword and continue on failure    User should be able to click confirm status button in Dealer Return Details Page
-#    run keyword and continue on failure    User should be able to click confirm confirm status in Dealer Return Details Page
-#    run keyword and continue on failure    User should be able to click Back to Return Request in Dealer Return Details Page
-#
-#TC-088 - User should be able to decline and add message order with In Progress Status in Dealer Return Page
-#    [Tags]    Home Page    Return Page
-#    run keyword and continue on failure    User should be able to click filter by status in Retrun Page
-#    run keyword and continue on failure    User should be able to filter status by In Progress in Return Page
-#    run keyword and continue on failure    User should be able to click filter by status in Retrun Page
-#    run keyword and continue on failure    User should be able to filter status by In Progress in Return Page
-#    run keyword and continue on failure    User should be able to view order with In Progress Status in Dealer Return Page
-#    run keyword and continue on failure    User should be able to click order with In Progress Status in Dealer Return Page
-#    run keyword and continue on failure    User should be able to click decline button in Dealer Return Details Page
-#    run keyword and continue on failure    User should be able to add text on Note for Customer in Dealer Return Details Page
-#    run keyword and continue on failure    User should be able to click confirm status button in Dealer Return Details Page
-#    run keyword and continue on failure    User should be able to click cancel confirm status in Dealer Return Details Page
-#    run keyword and continue on failure    User should be able to click confirm status button in Dealer Return Details Page
-#    run keyword and continue on failure    User should be able to click confirm confirm status in Dealer Return Details Page
-#    run keyword and continue on failure    User should be able to click Back to Return Request in Dealer Return Details Page
-
-TC-089 - User should be able to view New Reg Req Panel
-    [Tags]    Home Page    New Reg Req
-    run keyword and continue on failure    User should be able to click and expand Customer Management
-    run keyword and continue on failure    User should be able to click Customer Manegement - New Reg from left navigation
-    run keyword and continue on failure    User should be able to view New Reg Req Panel
-
-TC-090 - User should be able to filter status by Rejected in Dealer New Registration Request
-    [Tags]    Home Page    New Reg Req
-    run keyword and continue on failure    User should be able to click Filter by Status in Dealer New Registration Request
-    run keyword and continue on failure    User should be able to filter status by Rejected in Dealer New Registration Request
-
-TC-091 - User should be able to filter status by Approved in Dealer New Registration Request
-    [Tags]    Home Page    New Reg Req
-    run keyword and continue on failure    User should be able to click Filter by Status in Dealer New Registration Request
-    run keyword and continue on failure    User should be able to filter status by Approved in Dealer New Registration Request
-
-TC-092 - User should be able to filter status by In Progress in Dealer New Registration Request
-    [Tags]    Home Page    New Reg Req
-    run keyword and continue on failure    User should be able to click Filter by Status in Dealer New Registration Request
-    run keyword and continue on failure    User should be able to filter status by In Progress in Dealer New Registration Request
-
-TC-093 - User should be able to filter status by All in Dealer New Registration Request
-    [Tags]    Home Page    New Reg Req
-    run keyword and continue on failure    User should be able to click Filter by Status in Dealer New Registration Request
-    run keyword and continue on failure    User should be able to filter status by All in Dealer New Registration Request
-
-#TC-094 - User should be able to view and click Registration Request with In Progress Status in Dealer New Registration Request Page
-#    [Tags]    Home Page    New Reg Req
-#    run keyword and continue on failure    User should be able to view Registration Request with In Progress Status in Dealer New Registration Request Page
-#    run keyword and continue on failure    User should be able to click Registration Request with In Progress Status in Dealer New Registration Request Page
-#    run keyword and continue on failure    User should be able to view New Buyer Details Page
-#    run keyword and continue on failure    User should be able to click Back to Registraion Request in Dealer Registration Request Details Page
-
-TC-095 - User should be able to view and click Registration Request with Approved Status in Dealer New Registration Request Page
-    [Tags]    Home Page    New Reg Req
-    run keyword and continue on failure    User should be able to view Registration Request with Approved Status in Dealer New Registration Request Page
-    run keyword and continue on failure    User should be able to click Registration Request with Approved Status in Dealer New Registration Request Page
-    run keyword and continue on failure    User should be able to view New Buyer Details Page
-    run keyword and continue on failure    User should be able to click Back to Registraion Request in Dealer Registration Request Details Page
-
-TC-096 - User should be able to view and click Registration Request with Rejected Status in Dealer New Registration Request Page
-    [Tags]    Home Page    New Reg Req
-    run keyword and continue on failure    User should be able to view Registration Request with Rejected Status in Dealer New Registration Request Page
-    run keyword and continue on failure    User should be able to click Registration Request with Rejected Status in Dealer New Registration Request Page
-    run keyword and continue on failure    User should be able to view New Buyer Details Page
-    run keyword and continue on failure    User should be able to click Back to Registraion Request in Dealer Registration Request Details Page
-
 TC-097 - User should be able to view Buyer Rel Page
     [Tags]    Home Page    Cust Rel
+    run keyword and continue on failure    User should be able to click and expand Customer Management
     run keyword and continue on failure    User should be able to click Customer Manegement - Buyer Rel from left navigation
     run keyword and continue on failure    User should be able to view Buyer Rel Page
 
-TC-098 - User should be able to Click No Check/Uncheck Status
+TC-097 - User should be albe to view one Entry in Dealer HK Buyer Relationship Page
     [Tags]    Home Page    Cust Rel
-    run keyword and continue on failure    User should be able to Check/Uncheck Status
-    run keyword and continue on failure    User should be able to Click No Check/Uncheck Status
+    run keyword and continue on failure    User should be able to view Header List in Dealer HK Buyer Relationship Page
+    run keyword and continue on failure    User should be albe to view one Entry in Dealer HK Buyer Relationship Page
 
-TC-099 - User should be able to Click Yes Check/Uncheck Status
+TC-097 - User should be able to click edit one Entry in Dealer HK Buyer Relationship Page
     [Tags]    Home Page    Cust Rel
-    run keyword and continue on failure    User should be able to Check/Uncheck Status
-    run keyword and continue on failure    User should be able to Click Yes Check/Uncheck Status
+    run keyword and continue on failure    User should be able to click edit one Entry in Dealer HK Buyer Relationship Page
+    run keyword and continue on failure    User should be able to edit Parts Club in Dealer HK Buyer Relationship Page
+    run keyword and continue on failure    User should be able to edit ADP in Dealer HK Buyer Relationship Page
+    run keyword and continue on failure    User should be able to edit Member Teir in Dealer HK Buyer Relationship Page
+    run keyword and continue on failure    User should be able to check/uncheck active status in Dealer HK Buyer Relationship Page
+    run keyword and continue on failure    User should be able to check/uncheck active status in Dealer HK Buyer Relationship Page
+    run keyword and continue on failure    User should be able to click update button in Dealer HK Buyer Relationship Page
+    run keyword and continue on failure    User should be able to click No in Dealer HK Buyer Relationship Page
 
-TC-100 - User should be able to view message page
-    [Tags]    Home Page    Messages
+TC-097 - User should be able to view message page
+    [Tags]    Home Page    Message
     run keyword and continue on failure    User should be able to click Messages from left navigation
     run keyword and continue on failure    User should be able to view message page
 
@@ -636,7 +567,6 @@ TC-118 - User should be able to click and send message on read General Enquiry i
     run keyword and continue on failure    User should be able to click send in Dealer Messages Details Page
     run keyword and continue on failure    User should be able to click Back to All Message in Dealer Messages Details Page
 
-
 TC-119 - User should be able to click and send message on read Order Enquiry in Dealer Message Page
     [Tags]    Home Page    Messages
     run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
@@ -728,48 +658,27 @@ TC-125 - User should be able to click and send message on unread Product Enquiry
     run keyword and continue on failure    User should be able to click send in Dealer Messages Details Page
     run keyword and continue on failure    User should be able to click Back to All Message in Dealer Messages Details Page
 
-TC-126 - User should be able to view account details page
-    [Tags]    Home Page    Acc Details
+TC-027 - User should be able to click and expand Profile
+    [Tags]    TC026    Left Navigation
     run keyword and continue on failure    User should be able to click and expand Profile
+
+TC-028 - User should be able to click Profile - Account Details from left navigation
+    [Tags]    TC027    Left Navigation
     run keyword and continue on failure    User should be able to click Profile - Account Details from left navigation
+
+TC-029 - User should be able to view account details page
+    [Tags]    TC045    Profile
     run keyword and continue on failure    User should be able to view account details page
 
-TC-127 - User should be able to edit First name in Dealer Account Details Page
-    [Tags]    Home Page    Acc Details
+TC-029 - User should be able to edit account details page
+    [Tags]    TC045    Profile
     run keyword and continue on failure    User should be able to edit First name in Dealer Account Details Page
-
-TC-128 - User should be able to edit Last name in Dealer Account Details Page
-    [Tags]    Home Page    Acc Details
     run keyword and continue on failure    User should be able to edit Last name in Dealer Account Details Page
-
-TC-129 - User should be able to edit Phone Number in Dealer Account Details Page
-    [Tags]    Home Page    Acc Details
     run keyword and continue on failure    User should be able to edit Phone Number in Dealer Account Details Page
-
-TC-130 - User should be able to edit Landline Number in Dealer Account Details Page
-    [Tags]    Home Page    Acc Details
     run keyword and continue on failure    User should be able to edit Landline Number in Dealer Account Details Page
-
-TC-131 - User should be able to click Update in Dealer Account Details Page
-    [Tags]    Home Page    Acc Details
     run keyword and continue on failure    User should be able to click Update in Dealer Account Details Page
-
-TC-132 - User should be able to view update confirmation modal in Dealer Account Details Page
-    [Tags]    Home Page    Acc Details
     run keyword and continue on failure    User should be able to view update confirmation modal in Dealer Account Details Page
     run keyword and continue on failure    User should be able to click No on update confirmation modal in Dealer Account Details Page
-
-TC-133 - User should be able to click Cancel in Dealer Account Details Page
-    [Tags]    Home Page    Acc Details
-    run keyword and continue on failure    User should be able to click Cancel in Dealer Account Details Page
-
-TC-134 - User should be able to view invalid phone number error in Dealer Account Details Page
-    [Tags]    Home Page    Acc Details
-    run keyword and continue on failure    User should be able to view invalid phone number error in Dealer Account Details Page
-
-TC-135 - User should be able to view invalid landline number error in Dealer Account Details Page
-    [Tags]    Home Page    Acc Details
-    run keyword and continue on failure    User should be able to view invalid landline number error in Dealer Account Details Page
 
 TC-136 - User should be able to view change password page
     [Tags]    Home Page    Change Pass
@@ -821,271 +730,49 @@ TC-146 - User should be able to view confirm pass not match error in Dealer Chan
     [Tags]    Home Page    Change Pass
     run keyword and continue on failure    User should be able to view confirm pass not match error in Dealer Change Pass Page
 
-TC-147 - User should be able to view company details page
-    [Tags]    Home Page    Comp Details
-    run keyword and continue on failure    User should be able to click and expand Company
-    run keyword and continue on failure    User should be able to click Company - Company Details from left navigation
-    run keyword and continue on failure    User should be able to view company details page
 
-TC-148 - User should be able to input and save company details in Dealer Company Details Page
-    [Tags]    Home Page    Comp Details
-    run keyword and continue on failure    User should be able to input valid Company name in Dealer Company Details Page
-    run keyword and continue on failure    User should be able to input valid Trading Name in Dealer Company Details Page
-    run keyword and continue on failure    User should be able to input valid Postal Address Line 1 in Dealer Company Details Page
-    run keyword and continue on failure    User should be able to input valid Postal Address Line 2 in Dealer Company Details Page
-    run keyword and continue on failure    User should be able to input valid Postal Suburb in Dealer Company Details Page
-    run keyword and continue on failure    User should be able to input valid Postal Code in Dealer Company Details Page
-    run keyword and continue on failure    User should be able to click Postal Address State Drop Down in Dealer Company Details Page
-    run keyword and continue on failure    User should be able to select Postal Address State in Dealer Company Details Page
-#    run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Dealer Company Details Page
-#    run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Dealer Company Details Page
-    run keyword and continue on failure    User should be able to input valid Delivery Address Line 1 in Dealer Company Details Page
-    run keyword and continue on failure    User should be able to input valid Delivery Address Line 2 in Dealer Company Details Page
-    run keyword and continue on failure    User should be able to input valid Delivery Suburb in Dealer Company Details Page
-    run keyword and continue on failure    User should be able to input valid Delivery Code in Dealer Company Details Page
-    run keyword and continue on failure    User should be able to click Delivery Address State Drop Down in Dealer Company Details Page
-    run keyword and continue on failure    User should be able to select Delivery Address State in Dealer Company Details Page
-    run keyword and continue on failure    User should be able to input valid Company Phone Number in Dealer Company Details Page
-    run keyword and continue on failure    User should be able to input valid First Name in Dealer Company Details Page
-    run keyword and continue on failure    User should be able to input valid Last Name in Dealer Company Details Page
-    run keyword and continue on failure    User should be able to click opening hours in Dealer Company Details Page
-    run keyword and continue on failure    User should be able to select opening hours value in Dealer Company Details Page
-    run keyword and continue on failure    User should be able to click closing hours in Dealer Company Details Page
-    run keyword and continue on failure    User should be able to select closing hours value in Dealer Company Details Page
-    run keyword and continue on failure    User should be able to click cancel button in Dealer Company Details Page
-#    run keyword and continue on failure    User should be able to click save button in Dealer Company Details Page
-#    run keyword and continue on failure    User should be able to click no on update cofirmation modal in Dealer Company Details Page
-    run keyword and continue on failure    TC Move to Top
 
-##TC-149 - User should be able to view error messages in Dealer Company Details Page
-##    [Tags]    Home Page    Comp Details
-##    run keyword and continue on failure    User should be able to view error messages in Dealer Company Details Page
 
-TC-150 - User should be able to view staff page
-    [Tags]    Home Page    Staff
-#    run keyword and continue on failure    User should be able to click and expand Company
-    run keyword and continue on failure    User should be able to click Company - Staff Pass from left navigation
-    run keyword and continue on failure    User should be able to view staff page
 
-TC-151 - User should be able to click add new staff in Dealer Staff Page
-    [Tags]    Home Page    Staff
-    run keyword and continue on failure    User should be able to click add new staff in Dealer Staff Page
-    run keyword and continue on failure    User should be able to add new staff details in Dealer Staff Page
 
-TC-152 - User should be able to click active checkbox at add new staff in Dealer Staff Page
-    [Tags]    Home Page    Staff
-    run keyword and continue on failure    User should be able to click active checkbox at add new staff in Dealer Staff Page
 
-TC-153 - User should be able to click cancel add new staff in Dealer Staff Page
-    [Tags]    Home Page    Staff
-    run keyword and continue on failure    User should be able to click cancel add new staff in Dealer Staff Page
 
-TC-154 - User should be able to click and edit staff button in Dealer Staff Page
-    [Tags]    Home Page    Staff
-    run keyword and continue on failure    User should be able to click edit staff button in Dealer Staff Page
-    run keyword and continue on failure    User should be able to edit First Name in Dealer Staff Page
-    run keyword and continue on failure    User should be able to edit Last Name in Dealer Staff Page
-    run keyword and continue on failure    User should be able to edit Phone Number in Dealer Staff Page
-    run keyword and continue on failure    User should be able to click active checkbox in Dealer Staff Page
-    run keyword and continue on failure    User should ba able to click save in Dealer Staff Page
-    run keyword and continue on failure    User should be able to click no in the confirmation in Dealer Staff Page
 
-##TC-155 -  User should be able to view error messages in Dealer Staff Page
-##    [Tags]    Home Page    Staff
-##    run keyword and continue on failure    User should be able to click edit staff button in Dealer Staff Page
-##    run keyword and continue on failure    User should be able to view error messages in Dealer Staff Page
-##   run keyword and continue on failure    User should ba able to click cancel in Dealer Staff Page
 
-TC-156 - User should be able to view settings page
-    [Tags]    Home Page    Settings
-    run keyword and continue on failure    User should be able to click Settings from left navigation
-    run keyword and continue on failure    User should be able to view settings page
 
-#TC-157 - User should be able to toggle on/off email notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to toggle on/off email notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to toggle on/off email notification in Dealer Settings Page
-#
-#TC-158 - User should be able to toggle on/off general message notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to toggle on/off general message notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to toggle on/off general message notification in Dealer Settings Page
-#
-#TC-159 - User should be able to toggle on/off order message notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to toggle on/off order message notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to toggle on/off order message notification in Dealer Settings Page
-#
-#TC-160 - User should be able to toggle on/off return message notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to toggle on/off return message notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to toggle on/off return message notification in Dealer Settings Page
-#
-#TC-161 - User should be able to toggle on/off product message notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to toggle on/off product message notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to toggle on/off product message notification in Dealer Settings Page
-#
-#TC-162 - User should be able to toggle on/off order creation notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to toggle on/off order creation notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to toggle on/off order creation notification in Dealer Settings Page
-#
-#TC-163 - User should be able to toggle on/off back order notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to toggle on/off back order notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to toggle on/off back order notification in Dealer Settings Page
-#
-#TC-164 - User should be able to toggle on/off part number masking in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to toggle on/off part number masking in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to toggle on/off part number masking in Dealer Settings Page
-#
-#TC-165 - User should be able to toggle on/off returns in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to toggle on/off returns in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to toggle on/off returns in Dealer Settings Page
 
-##TC-166 - User should be able to toggle on/off dc orders in Dealer Settings Page
-##    [Tags]    Home Page    Settings
-##    run keyword and continue on failure    User should be able to toggle on/off dc orders in Dealer Settings Page
-##    run keyword and continue on failure    User should be able to toggle on/off dc orders in Dealer Settings Page
 
-#TC-167 - User should be able add email on email notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to click + icon on email notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to input valid email on email notification textbox in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to click save button on email notification in Dealer Settings Page
-#
-#TC-168 - User should be able to click edit button on email notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to click edit button on email notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to view error message on email notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to input valid email on email notification textbox in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to click save button on email notification in Dealer Settings Page
-#
-#TC-169 - User should be able to delete user email on email notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to delete user email on email notification in Dealer Settings Page
-#    tc sleep
-#
-#TC-170 - User should be able add email on general message notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to click + icon on general message notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to input valid email on general message notification textbox in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to click save button on general message notification in Dealer Settings Page
-#
-#TC-171 - User should be able to click edit button on general message notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to click edit button on general message notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to view error message on general message notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to input valid email on general message notification textbox in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to click save button on general message notification in Dealer Settings Page
-#
-#TC-172 - User should be able to delete user email on general message notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to delete user email on general message notification in Dealer Settings Page
-#
-#TC-173 - User should be able add email on order message notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to click + icon on order message notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to input valid email on order message notification textbox in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to click save button on order message notification in Dealer Settings Page
-#
-#TC-174 - User should be able to click edit button on order message notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to click edit button on order message notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to view error message on order message notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to input valid email on order message notification textbox in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to click save button on order message notification in Dealer Settings Page
-#
-#TC-175 - User should be able to delete user email on order message notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to delete user email on order message notification in Dealer Settings Page
-#
-#TC-176 - User should be able add email on return message notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to click + icon on return message notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to input valid email on return message notification textbox in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to click save button on return message notification in Dealer Settings Page
-#
-#TC-177 - User should be able to click edit button on return message notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to click edit button on return message notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to view error message on return message notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to input valid email on return message notification textbox in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to click save button on return message notification in Dealer Settings Page
-#
-#TC-178 - User should be able to delete user email on return message notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to delete user email on return message notification in Dealer Settings Page
-#
-#TC-179 - User should be able add email on product message notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to click + icon on product message notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to input valid email on product message notification textbox in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to click save button on product message notification in Dealer Settings Page
-#
-#TC-180 - User should be able to click edit button on product message notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to click edit button on product message notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to view error message on product message notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to input valid email on product message notification textbox in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to click save button on product message notification in Dealer Settings Page
-#
-#TC-181 - User should be able to delete user email on product message notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to delete user email on product message notification in Dealer Settings Page
-#
-#TC-182 - User should be able add email on order creation notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to click + icon on order creation notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to input valid email on order creation notification textbox in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to click save button on order creation notification in Dealer Settings Page
-#
-#TC-183 - User should be able to click edit button on order creation notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to click edit button on order creation notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to view error message on order creation notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to input valid email on order creation notification textbox in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to click save button on order creation notification in Dealer Settings Page
-#
-#TC-184 - User should be able to delete user email on order creation notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to delete user email on order creation notification in Dealer Settings Page
-#
-#TC-185 - User should be able add email on back order notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to click + icon on back order notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to input valid email on back order notification textbox in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to click save button on back order notification in Dealer Settings Page
-#
-#TC-186 - User should be able to click edit button on back order notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to click edit button on back order notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to view error message on back order notification in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to input valid email on back order notification textbox in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to click save button on back order notification in Dealer Settings Page
-#
-#TC-187 - User should be able to delete user email on back order notification in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to delete user email on back order notification in Dealer Settings Page
-#
-#TC-188 - User should be able to edit values on Returns in Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to click decrement icon on Returns in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to click increment icon on Returns in Dealer Settings Page
-#    run keyword and continue on failure    User should be able to edit return days value on Returns in Dealer Settings Page
-#
-#TC-189 - User should be able to click save button Dealer Settings Page
-#    [Tags]    Home Page    Settings
-#    run keyword and continue on failure    User should be able to click save button Dealer Settings Page
-#    run keyword and continue on failure    User should be able to click yes save changes in Dealer Settings Page
 
-TC-190 - User should be able to Logout
-    [Tags]    Home Page    Settings
-    run keyword and continue on failure    User should be able to Logout
 
-#Test Teardown
-#    Run Keywords    Close Browser
-#    run keyword    Save Log DIR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

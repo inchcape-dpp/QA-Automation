@@ -30,12 +30,10 @@ ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files
 #${Username}    retailtitanp1@yopmail.com
 #${Password}    Welcom3@NT
 
-${Username}    ${AU_S2_Automation_UID}
-${Password}    ${AU_S2_Automation_PWD}
-
-${YopMailEmail}    ${AU_S2_Automation_UID}
-
+${Username}    ${AU_S2_UID}
+${Password}    ${AU_S2_PWD}
 ${Retail_AccountProfileChangePassCurrentPassValue}    ${Password}
+${YopMailEmail}    ${AU_S2_Automation_UID}
 
 #Testing Values
 ${ProdductSearchValue}    037018200
@@ -45,7 +43,7 @@ Open Chrome Browser
     SeleniumLibrary.Open Browser    ${s2Retail}    Chrome  executable_path=${driver_path}
     maximize browser window
 
-Retail Screent Shot DIR
+Retail Screen Shot DIR
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
     create directory    ${Retail_screenshot_path}/AU_${currentdate}
     ${LogDIR}=    convert to string    ${Retail_screenshot_path}/AU_${currentdate}

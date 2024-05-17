@@ -30,8 +30,8 @@ ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files
 #${Username}    retailtitanp1@yopmail.com
 #${Password}    Welcom3@NT
 
-${Username}    ${HK_D1_UID}
-${Password}    ${HK_D1_PWD}
+${Username}    ${HK_D1_Automation_Bronze_UID}
+${Password}    ${HK_D1_Automation_Bronze_PWD}
 
 ${YopMailEmail}    ${HK_D1_Automation_Bronze_UID}
 
@@ -41,11 +41,11 @@ ${Retail_AccountProfileChangePassCurrentPassValue}    ${Password}
 ${ProdductSearchValue}    037018200
 
 *** Keywords ***
-Open Chrome Browser HK
+Open Chrome Browser
     SeleniumLibrary.Open Browser    ${d1HKRetail}    Chrome  executable_path=${driver_path}
     maximize browser window
 
-Retail Screent Shot DIR HK
+Retail Screen Shot DIR
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
     create directory    ${Retail_screenshot_path}/HK_${currentdate}
     ${LogDIR}=    convert to string    ${Retail_screenshot_path}/HK_${currentdate}

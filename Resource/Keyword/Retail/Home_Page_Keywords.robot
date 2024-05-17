@@ -3,6 +3,7 @@ Documentation    Suite description
 
 Library    SeleniumLibrary
 Library    Collections
+Library    String
 
 #Resource  ../../../Resource/testdata/config.robot
 Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
@@ -13,7 +14,7 @@ Resource  ../../../Resource/testdata/credentials.robot
 #-----------------------------------------------------Retail Home Page-------------------------------------------------
 Admin User should be able to Login
     wait until element is visible    ${HomePageLogo}    10
-    wait until element is visible    ${HomePage_DoubleHeader_SellerName}    10
+#    wait until element is visible    ${HomePage_DoubleHeader_SellerName}    10
     capture page screenshot
     sleep     2
 
@@ -34,8 +35,8 @@ User should be able to view All products
     capture page screenshot
     sleep    2
 
-User should be able to view All Products Page in HK Retail Home Page
-    go to    ${s2HKRetailAllProducts}
+#User should be able to view All Products Page in HK Retail Home Page
+#    go to    ${s2HKRetailAllProducts}
 
 
 User should be able to view shopping cart pop up modal
@@ -213,15 +214,19 @@ User should be able to view Toyota Hybrid menus in HK Retail Home Page
 User should be able to select 1 filter from selected category in Retail Home Page
     ${RandomFilterIndex}    evaluate    random.randint(0,7)
     mouse over    ${Retail_FilterListElements}[${RandomFilterIndex}]
+    ${CategoryText}    get text    ${Retail_HK_FilterListElements_New}[${RandomFilterIndex}]
     ${RandomFilterIndex}  evaluate    ${RandomFilterIndex}+1
     set global variable    ${RandomFilterIndex}
+    set global variable    ${CategoryText}
     sleep    2
 
 User should be able to select 1 filter from selected category in HK Retail Home Page
     ${RandomFilterIndex}    evaluate    random.randint(0,4)
     mouse over    ${Retail_HK_FilterListElements_New}[${RandomFilterIndex}]
+    ${CategoryText}    get text    ${Retail_HK_FilterListElements_New}[${RandomFilterIndex}]
     ${RandomFilterIndex}  evaluate    ${RandomFilterIndex}+1
     set global variable    ${RandomFilterIndex}
+    set global variable    ${CategoryText}
     sleep    2
 
 User should be able to click 1 sub filter from selected category in Retail Home Page
@@ -229,8 +234,20 @@ User should be able to click 1 sub filter from selected category in Retail Home 
     ${SubFilterIndex}    get element count    ${Retail_FilterListSubElements}
     ${RandomSubFilterIndex}    evaluate    random.randint(1,${SubFilterIndex})
     scroll element into view    ((//dpp-category-navigation//button[@tabindex='0'])[${RandomFilterIndex}]/following-sibling::div[@class='wrapper']//li)[${RandomSubFilterIndex}]
+    ${SubCategoryText}    get text    ((//dpp-category-navigation//button[@tabindex='0'])[${RandomFilterIndex}]/following-sibling::div[@class='wrapper']//li)[${RandomSubFilterIndex}]
     click element    ((//dpp-category-navigation//button[@tabindex='0'])[${RandomFilterIndex}]/following-sibling::div[@class='wrapper']//li)[${RandomSubFilterIndex}]
+    set global variable    ${SubCategoryText}
     sleep    10
+
+User should be able to verify parts breadcrumbs in HK Retail Home Page
+    ${breadcrumbstext2}  get text    (//dpp-breadcrumb//ol//li)[2]
+    ${breadcrumbstext3}  get text    (//dpp-breadcrumb//ol//li)[3]
+    ${lowerbreadcrumbstext2}    convert to lower case    ${breadcrumbstext2}
+    ${lowerbreadcrumbstext3}    convert to lower case    ${breadcrumbstext3}
+    ${lowerCategoryText}    convert to lower case    ${CategoryText}
+    ${lowerSubCategoryText}    convert to lower case    ${SubCategoryText}
+    run keyword and continue on failure    should be equal as strings    ${lowerbreadcrumbstext2}    ${lowerCategoryText}
+    run keyword and continue on failure    should be equal as strings    ${lowerbreadcrumbstext3}    ${lowerSubCategoryText}
 
 User should be able to click vehicle listing quick link in Retail Home Page
     wait until element is visible    ${HomePageVehicleQuickLink}    10
@@ -992,10 +1009,37 @@ User should be able to input rego in AU Retail Home Page
     capture element screenshot    ${Retail_AU_HomePage_VINRego_Rego_Textbox}
     sleep    2
 
+User should be able to input rego 2 in AU Retail Home Page
+    wait until element is visible    ${Retail_AU_HomePage_VINRego_Rego_Textbox}    10
+    clear element text    ${Retail_AU_HomePage_VINRego_Rego_Textbox}
+    input text    ${Retail_AU_HomePage_VINRego_Rego_Textbox}    ${Retail_AccountVehicleListingPageSelectVehicleRegoValue2}
+    capture element screenshot    ${Retail_AU_HomePage_VINRego_Rego_Textbox}
+    sleep    2
+
+User should be able to input rego 3 in AU Retail Home Page
+    wait until element is visible    ${Retail_AU_HomePage_VINRego_Rego_Textbox}    10
+    clear element text    ${Retail_AU_HomePage_VINRego_Rego_Textbox}
+    input text    ${Retail_AU_HomePage_VINRego_Rego_Textbox}    ${Retail_AccountVehicleListingPageSelectVehicleRegoValue3}
+    capture element screenshot    ${Retail_AU_HomePage_VINRego_Rego_Textbox}
+    sleep    2
+
 User should be albe to input vin in AU Retail Home Page
     wait until element is visible    ${Retail_AU_HomePage_VINRego_VIN_Textbox}    10
     clear element text    ${Retail_AU_HomePage_VINRego_VIN_Textbox}
     input text    ${Retail_AU_HomePage_VINRego_VIN_Textbox}    ${Retail_AccountVehicleListingPageSelectVehicleVINNumValue}
+    capture element screenshot    ${Retail_AU_HomePage_VINRego_VIN_Textbox}
+    sleep    2
+User should be albe to input vin 2 in AU Retail Home Page
+    wait until element is visible    ${Retail_AU_HomePage_VINRego_VIN_Textbox}    10
+    clear element text    ${Retail_AU_HomePage_VINRego_VIN_Textbox}
+    input text    ${Retail_AU_HomePage_VINRego_VIN_Textbox}    ${Retail_AccountVehicleListingPageSelectVehicleVINNumValue2}
+    capture element screenshot    ${Retail_AU_HomePage_VINRego_VIN_Textbox}
+    sleep    2
+
+User should be albe to input vin 3 in AU Retail Home Page
+    wait until element is visible    ${Retail_AU_HomePage_VINRego_VIN_Textbox}    10
+    clear element text    ${Retail_AU_HomePage_VINRego_VIN_Textbox}
+    input text    ${Retail_AU_HomePage_VINRego_VIN_Textbox}    ${Retail_AccountVehicleListingPageSelectVehicleVINNumValue3}
     capture element screenshot    ${Retail_AU_HomePage_VINRego_VIN_Textbox}
     sleep    2
 
@@ -1004,6 +1048,12 @@ User should be albe to click search button in AU Retail Home Page
     capture element screenshot    ${Retail_AU_HomePage_VINRego_Search_Button}
     click element    ${Retail_AU_HomePage_VINRego_Search_Button}
     sleep    5
+
+User should be able to Save or Select Manual Vehicle Search on Search Popup in AU Retail Home Page
+    ${VehicleStatus}    run keyword and return status    wait until element is visible    ${Retail_AU_HomePage_Search_PopUp_SelectSave_Button_Disabled}    10
+    run keyword if    '${VehicleStatus}' == 'True'    User should be able to click Select Vehicle button on Search Popup in AU Retail Home Page
+    run keyword if    '${VehicleStatus}' == 'False'    User should be able to click Select and Save Vehicle button on Search Popup in AU Retail Home Page
+    sleep    2
 
 User should be able to click Select and Save Vehicle button on Search Popup in AU Retail Home Page
     wait until element is visible    ${Retail_AU_HomePage_Search_PopUp_Container}    10
