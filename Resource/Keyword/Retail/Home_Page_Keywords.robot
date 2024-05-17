@@ -227,6 +227,7 @@ User should be able to click 1 filter from selected category in Retail Home Page
     ${RandomFilterIndex}    evaluate    random.randint(0,7)
     wait until element is visible    ${Retail_FilterListElements}[${RandomFilterIndex}]    10
     click element    ${Retail_FilterListElements}[${RandomFilterIndex}]
+    mouse over    ${HomePageLogo}
     sleep    2
 
 User should be able to select 1 filter from selected category in HK Retail Home Page

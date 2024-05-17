@@ -1884,8 +1884,8 @@ ${Retail_AccountProfileAccountsDetailsPhoneError}    //div[@class='form-errors']
 ${Retail_AccountProfileAccountsDetailsLandlineError}    //div[@class='form-errors']//p[contains(text(),'Landline Number must begin with a 0 followed by 9 digits')]
 
 ${Retail_AccountProfileAccountsDetailsConfirmationContainer}    //div[@class='cx-dialog-body modal-body']
-${Retail_AccountProfileAccountsDetailsConfirmationYesButton}    //button[@class='btn btn-secondary btn-block']
-${Retail_AccountProfileAccountsDetailsConfirmationNoButton}    //button[@class='btn btn-block btn-outline-secondary']
+${Retail_AccountProfileAccountsDetailsConfirmationYesButton}    //div[@class='cx-dialog-body modal-body']//button[@class='btn btn-secondary btn-block']
+${Retail_AccountProfileAccountsDetailsConfirmationNoButton}    //div[@class='cx-dialog-body modal-body']//button[@class='btn btn-block btn-outline-secondary']
 
 ${Retail_AccountProfileAccountsDetailsFirstNameValue}    Test FN
 ${Retail_AccountProfileAccountsDetailsLastNameValue}    Test LN
@@ -2219,7 +2219,8 @@ ${AllProdPageRemoveOneButton}    (//button[@aria-label='Remove one'])
 
 #-----------------------------------------------------Retail All Product Page Pop Up Message
 
-${Retail_AllProdPagePopUpMessageContainer}    //div[@class='cx-modal-content']
+${Retail_AllProdPagePopUpMessageContainer}     //div[@class='cx-modal-content']//div[@class='cx-dialog-body modal-body']
+${Retail_AllProdPagePopUpSentMessage}    //div[@class='cx-modal-content']//div[@class='cx-dialog-body modal-body thank-you']
 ${Retail_AllProdPagePopUpMessageToSupplierlabel}    //div[@class='col-sm-12 header']//span
 ${Retail_AllProdPagePopUpMessageSubjectlabel}    //div[@class='col-sm-12']//span[contains(text(),'Subject')]
 ${Retail_AllProdPagePopUpMessageMessagelabel}    //div[@class='col-sm-12']//span[contains(text(),'Message')]
