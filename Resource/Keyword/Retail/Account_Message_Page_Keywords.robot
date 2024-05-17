@@ -198,6 +198,12 @@ User should be able to click cancel in New message pop up in Retail Account Mess
     click element    ${Retail_AccountMessagePageNewMessagePopUpCancelButton}
     sleep    2
 
+User should be able to click Back to Message in New message pop up in Retail Account Message Page
+    wait until element is visible    ${Retail_AccountMessagePageNewMessagePopUpBackButton}    10
+    capture element screenshot    ${Retail_AccountMessagePageNewMessagePopUpBackButton}
+    click element    ${Retail_AccountMessagePageNewMessagePopUpBackButton}
+    sleep    2
+
 User should be able to view read General Enquiry in Retail Account Message Page
     FOR    ${Nextpage}    IN RANGE    1    500
     ${ReadGenEnqStatus}    run keyword and return status    element should be visible    ${Retail_AccountMessagePageReadMessagesGenEnqContainer}

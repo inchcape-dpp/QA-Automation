@@ -1049,6 +1049,12 @@ User should be albe to click search button in AU Retail Home Page
     click element    ${Retail_AU_HomePage_VINRego_Search_Button}
     sleep    5
 
+User should be able to Save or Select Manual Vehicle Search on Search Popup in AU Retail Home Page
+    ${VehicleStatus}    run keyword and return status    wait until element is visible    ${Retail_AU_HomePage_Search_PopUp_SelectSave_Button_Disabled}    10
+    run keyword if    '${VehicleStatus}' == 'True'    User should be able to click Select Vehicle button on Search Popup in AU Retail Home Page
+    run keyword if    '${VehicleStatus}' == 'False'    User should be able to click Select and Save Vehicle button on Search Popup in AU Retail Home Page
+    sleep    2
+
 User should be able to click Select and Save Vehicle button on Search Popup in AU Retail Home Page
     wait until element is visible    ${Retail_AU_HomePage_Search_PopUp_Container}    10
     wait until element is visible    ${Retail_AU_HomePage_Search_PopUp_SelectSave_Button}    10

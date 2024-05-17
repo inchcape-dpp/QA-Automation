@@ -546,6 +546,22 @@ TC-058 - User should be able to click Cancel button on 2C2P
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    reload page
 
+TC-053 - User should be able to change Address
+    [Tags]    Checkout Page
+    run keyword and continue on failure    User should be albe to click Change Address in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to view Change Shipping Address Modal in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to change Mobile Number on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to change Landline Number on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to clear shipping address on shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to edit shipping address on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to select Random Address from suggestions in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to click Area Dropdown on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to select Random Area on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to click District Dropdown on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to select Random District on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    User should be able to click Save Button on change shipping in HK Retail Checkout Page
+    run keyword and continue on failure    TC Sleep
+
 TC-054 - User should be able to view payment method in HK Retail Checkout Page
     [Tags]    Checkout Page
     run keyword and continue on failure    User should be able to view payment method in HK Retail Checkout Page
@@ -989,9 +1005,12 @@ TC-088 - User should be able create and send new message in Retail Account Messa
     run keyword and continue on failure    User should be able to Input Text on Message in Retail Account Messages Details Page
     run keyword and continue on failure    User should be able to upload image in Retail Account Messages Details Page
     run keyword and continue on failure    User should be able to click send in New message pop up in Retail Account Message Page
+    run keyword and continue on failure    User should be able to click Back to Message in New message pop up in Retail Account Message Page
 
 TC-089 - User should be able to view and message read Order Enquiry in Retail Account Message Page
     [Tags]    Message Page
+    run keyword and continue on failure    User should be able to click filter messages in Retail Account Messages Page
+    run keyword and continue on failure    User should be able to select Order Enquiry filter in Retail Account Messages Page
     run keyword and continue on failure    User should be able to view read Order Enquiry in Retail Account Message Page
     run keyword and continue on failure    User should be able to click read Order Enquiry in Retail Account Message Page
     run keyword and continue on failure    User should be able to Input Text on Message in Retail Account Messages Details Page
@@ -1001,6 +1020,8 @@ TC-089 - User should be able to view and message read Order Enquiry in Retail Ac
 
 TC-090 - User should be able to view and message read Product Enquiry in Retail Account Message Page
     [Tags]    Message Page
+    run keyword and continue on failure    User should be able to click filter messages in Retail Account Messages Page
+    run keyword and continue on failure    User should be able to select Product Enquiry filter in Retail Account Messages Page
     run keyword and continue on failure    User should be able to view read Product Enquiry in Retail Account Message Page
     run keyword and continue on failure    User should be able to click read Product Enquiry in Retail Account Message Page
     run keyword and continue on failure    User should be able to Input Text on Message in Retail Account Messages Details Page
@@ -1010,63 +1031,69 @@ TC-090 - User should be able to view and message read Product Enquiry in Retail 
 
 TC-128 - User should be able to view and message read General Enquiry in Retail Account Message Page
     [Tags]    Message Page
+    run keyword and continue on failure    User should be able to click filter messages in Retail Account Messages Page
+    run keyword and continue on failure    User should be able to select General Enquiry filter in Retail Account Messages Page
     run keyword and continue on failure    User should be able to view read General Enquiry in Retail Account Message Page
     run keyword and continue on failure    User should be able to click read General Enquiry in Retail Account Message Page
     run keyword and continue on failure    User should be able to Input Text on Message in Retail Account Messages Details Page
     run keyword and continue on failure    User should be able to upload image in Retail Account Messages Details Page
     run keyword and continue on failure    User should be able to click send in Retail Account Messages Details Page
     run keyword and continue on failure    User should be able to click Back to All Message in Retail Account Messages Details Page
-    run keyword and continue on failure    User should be able to view message page
 
 TC-130 - User should be able to view and message read Return Enquiry in Retail Account Message Page
     [Tags]    Message Page
+    run keyword and continue on failure    User should be able to click filter messages in Retail Account Messages Page
+    run keyword and continue on failure    User should be able to select Return Enquiry filter in Retail Account Messages Page
     run keyword and continue on failure    User should be able to view read Return Enquiry in Retail Account Message Page
     run keyword and continue on failure    User should be able to click read Return Enquiry in Retail Account Message Page
     run keyword and continue on failure    User should be able to Input Text on Message in Retail Account Messages Details Page
     run keyword and continue on failure    User should be able to upload image in Retail Account Messages Details Page
     run keyword and continue on failure    User should be able to click send in Retail Account Messages Details Page
     run keyword and continue on failure    User should be able to click Back to All Message in Retail Account Messages Details Page
-    run keyword and continue on failure    User should be able to view message page
 
 TC-133 - User should be able to view and message unread General Enquiry in Retail Account Message Page
     [Tags]    Message Page
+    run keyword and continue on failure    User should be able to click filter messages in Retail Account Messages Page
+    run keyword and continue on failure    User should be able to select General Enquiry filter in Retail Account Messages Page
     run keyword and continue on failure    User should be able to view unread General Enquiry in Retail Account Message Page
     run keyword and continue on failure    User should be able to click unread General Enquiry in Retail Account Message Page
     run keyword and continue on failure    User should be able to Input Text on Message in Retail Account Messages Details Page
     run keyword and continue on failure    User should be able to upload image in Retail Account Messages Details Page
     run keyword and continue on failure    User should be able to click send in Retail Account Messages Details Page
     run keyword and continue on failure    User should be able to click Back to All Message in Retail Account Messages Details Page
-    run keyword and continue on failure    User should be able to view message page
 
 TC-134 - User should be able to view and message unread Return Enquiry in Retail Account Message Page
     [Tags]    Message Page
+    run keyword and continue on failure    User should be able to click filter messages in Retail Account Messages Page
+    run keyword and continue on failure    User should be able to select Return Enquiry filter in Retail Account Messages Page
     run keyword and continue on failure    User should be able to view unread Return Enquiry in Retail Account Message Page
     run keyword and continue on failure    User should be able to click unread Return Enquiry in Retail Account Message Page
     run keyword and continue on failure    User should be able to Input Text on Message in Retail Account Messages Details Page
     run keyword and continue on failure    User should be able to upload image in Retail Account Messages Details Page
     run keyword and continue on failure    User should be able to click send in Retail Account Messages Details Page
     run keyword and continue on failure    User should be able to click Back to All Message in Retail Account Messages Details Page
-    run keyword and continue on failure    User should be able to view message page
 
 TC-135 - User should be able to view and message unread Order Enquiry in Retail Account Message Page
     [Tags]    Message Page
+    run keyword and continue on failure    User should be able to click filter messages in Retail Account Messages Page
+    run keyword and continue on failure    User should be able to select Order Enquiry filter in Retail Account Messages Page
     run keyword and continue on failure    User should be able to view unread Order Enquiry in Retail Account Message Page
     run keyword and continue on failure    User should be able to click unread Order Enquiry in Retail Account Message Page
     run keyword and continue on failure    User should be able to Input Text on Message in Retail Account Messages Details Page
     run keyword and continue on failure    User should be able to upload image in Retail Account Messages Details Page
     run keyword and continue on failure    User should be able to click send in Retail Account Messages Details Page
     run keyword and continue on failure    User should be able to click Back to All Message in Retail Account Messages Details Page
-    run keyword and continue on failure    User should be able to view message page
 
 TC-136 - User should be able to view and message unread Product Enquiry in Retail Account Message Page
     [Tags]    Message Page
+    run keyword and continue on failure    User should be able to click filter messages in Retail Account Messages Page
+    run keyword and continue on failure    User should be able to select Product Enquiry filter in Retail Account Messages Page
     run keyword and continue on failure    User should be able to view unread Product Enquiry in Retail Account Message Page
     run keyword and continue on failure    User should be able to click unread Product Enquiry in Retail Account Message Page
     run keyword and continue on failure    User should be able to Input Text on Message in Retail Account Messages Details Page
     run keyword and continue on failure    User should be able to upload image in Retail Account Messages Details Page
     run keyword and continue on failure    User should be able to click send in Retail Account Messages Details Page
     run keyword and continue on failure    User should be able to click Back to All Message in Retail Account Messages Details Page
-    run keyword and continue on failure    User should be able to view message page
 
 TC-091 - User should be able to view Account Details page
     [Tags]    Account Details Page

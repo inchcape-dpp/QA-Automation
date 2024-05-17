@@ -481,6 +481,8 @@ ${Retail_AU_HomePage_Search_PopUp_Container}    //dpp-vehicle-results
 ${Retail_AU_HomePage_Search_PopUp_SearchAgain_Button}    //dpp-vehicle-results//div[@class='col-6 pl-2']
 ${Retail_AU_HomePage_Search_PopUp_SelectSave_Button}    //dpp-vehicle-results//button[@class='btn btn-sm btn-block mt-0 p-1 select-this-vehicle-btn btn-default vehicleListing-btn' and contains(text(),'Select & Save Vehicle')]
 ${Retail_AU_HomePage_Search_PopUp_SelectVehicle_Button}    //dpp-vehicle-results//button[@class='btn btn-sm btn-block ml-2 mt-0 p-1 select-this-vehicle-btn btn-secondary' and contains(text(),'Select This Vehicle')]
+${Retail_AU_HomePage_Search_PopUp_SelectSave_Button_Disabled}    //dpp-vehicle-results//button[@class='btn btn-sm btn-block mt-0 p-1 select-this-vehicle-btn btn-default vehicleListing-btn' and @disabled and contains(text(),'Select & Save Vehicle')]
+
 
 ${Retail_AU_HomePage_Manual_Model_Combobox}    //dpp-search-by-vehicle//ng-select[@formcontrolname='model']//div[@class='ng-select-container']
 ${Retail_AU_HomePage_Manual_Year_Combobox}    //dpp-search-by-vehicle//ng-select[@formcontrolname='year']//div[@class='ng-select-container']
@@ -1762,6 +1764,8 @@ ${Retail_AccountMessagePageNewMessagePopUpUploadImage}    //input[@type='file']
 ${Retail_AccountMessagePageNewMessagePopUpCancelButton}    //button[@class='btn btn-sm btn-outline-secondary']
 ${Retail_AccountMessagePageNewMessagePopUpSendButton}    //button[@class='btn btn-sm btn-secondary ml-2']
 
+${Retail_AccountMessagePageNewMessagePopUpBackButton}    //button[@class='btn btn-secondary']
+
 ${Retail_AccountMessagePageNewMessagePopUpSubjectTextBox_Value}    Test New Message
 
 #-----------------------------------------------------Retail Account Message Page Read General Enquiry
@@ -2033,20 +2037,20 @@ ${Retail_AccountCompanyDetailsPageClosingHoursComboBox}    //ng-select[@formcont
 ${Retail_AccountCompanyDetailsPageOpeningHoursComboBoxValue}    (//ng-select[@formcontrolname='openingHours']//ng-dropdown-panel//div[@role='option'])[1]    #1-13 from 7AM to 7PM per hour values
 ${Retail_AccountCompanyDetailsPageClosingHoursComboBoxValue}    (//ng-select[@formcontrolname='closingHours']//ng-dropdown-panel//div[@role='option'])[10]    #1-13 from 7AM to 7PM per hour values
 
-${Retail_HK_AccountCompanyDetailsPage_Postal_Area_ComboBox}    (//div[@formgroupname='postalAddress']//span[@class='label-content' and contains(text(),'Area')]/following-sibling::ng-select//div[@class='ng-value-container'])
+${Retail_HK_AccountCompanyDetailsPage_Postal_Area_ComboBox}    (//div[@formgroupname='postalAddress']//span[@class='label-container' and contains(text(),'Area')]/following-sibling::ng-select//div[@class='ng-value-container'])
 ${Retail_HK_AccountCompanyDetailsPage_Postal_Area_ComboBox_Container}    (//form//div[@formgroupname='postalAddress']//ng-select[@formcontrolname='area']//ng-dropdown-panel//div//div[@role='option'])
-${Retail_HK_AccountCompanyDetailsPage_Postal_District_ComboBox}    (//div[@formgroupname='postalAddress']//span[@class='label-content' and contains(text(),'District')]/following-sibling::ng-select//div[@class='ng-value-container'])
+${Retail_HK_AccountCompanyDetailsPage_Postal_District_ComboBox}    (//div[@formgroupname='postalAddress']//span[@class='label-container' and contains(text(),'District')]/following-sibling::ng-select//div[@class='ng-value-container'])
 ${Retail_HK_AccountCompanyDetailsPage_Postal_District_ComboBox_Container}    (//form//div[@formgroupname='postalAddress']//ng-select[@formcontrolname='district']//ng-dropdown-panel//div//div[@role='option'])
-${Retail_HK_AccountCompanyDetailsPage_Postal_Area_ComboBox_Value}    (//div[@formgroupname='postalAddress']//span[@class='label-content' and contains(text(),'Area')]/following-sibling::ng-select//div[@class='ng-value-container']/parent::div/following-sibling::ng-dropdown-panel//span)
-${Retail_HK_AccountCompanyDetailsPage_Postal_District_ComboBox_value}    (//div[@formgroupname='postalAddress']//span[@class='label-content' and contains(text(),'District')]/following-sibling::ng-select//div[@class='ng-value-container']/parent::div/following-sibling::ng-dropdown-panel//span)
+${Retail_HK_AccountCompanyDetailsPage_Postal_Area_ComboBox_Value}    (//div[@formgroupname='postalAddress']//span[@class='label-container' and contains(text(),'Area')]/following-sibling::ng-select//div[@class='ng-value-container']/parent::div/following-sibling::ng-dropdown-panel//span)
+${Retail_HK_AccountCompanyDetailsPage_Postal_District_ComboBox_value}    (//div[@formgroupname='postalAddress']//span[@class='label-container' and contains(text(),'District')]/following-sibling::ng-select//div[@class='ng-value-container']/parent::div/following-sibling::ng-dropdown-panel//span)
 
-${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_Area_ComboBox}    (//div[@formgroupname='deliveryAddress']//span[@class='label-content' and contains(text(),'Area')]/following-sibling::ng-select//div[@class='ng-value-container'])
+${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_Area_ComboBox}    (//div[@formgroupname='deliveryAddress']//span[@class='label-container' and contains(text(),'Area')]//following-sibling::ng-select//div[@class='ng-value-container'])
 ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_Area_ComboBox_Container}    (//form//div[@formgroupname='deliveryAddress']//ng-select[@formcontrolname='area']//ng-dropdown-panel//div//div[@role='option'])
-${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_District_ComboBox}    (//div[@formgroupname='deliveryAddress']//span[@class='label-content' and contains(text(),'District')]/parent::label/following-sibling::ng-select//div[@class='ng-value-container'])
+${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_District_ComboBox}    (//div[@formgroupname='deliveryAddress']//span[@class='label-container' and contains(text(),'District')]/parent::label//following-sibling::ng-select//div[@class='ng-value-container'])
 ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_District_ComboBox_Container}    (//form//div[@formgroupname='deliveryAddress']//ng-select[@formcontrolname='district']//ng-dropdown-panel//div//div[@role='option'])
 
-${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_Area_ComboBox_Value}    (//div[@formgroupname='deliveryAddress']//span[@class='label-content' and contains(text(),'Area')]/following-sibling::ng-select//div[@class='ng-value-container']/parent::div/following-sibling::ng-dropdown-panel//span)
-${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_District_ComboBox_value}    (//div[@formgroupname='deliveryAddress']//span[@class='label-content' and contains(text(),'District')]/parent::label/following-sibling::ng-select//div[@class='ng-value-container']/parent::div/following-sibling::ng-dropdown-panel//span)
+${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_Area_ComboBox_Value}    (//div[@formgroupname='deliveryAddress']//span[@class='label-container' and contains(text(),'Area')]/following-sibling::ng-select//div[@class='ng-value-container']/parent::div//following-sibling::ng-dropdown-panel//span)
+${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_District_ComboBox_value}    (//div[@formgroupname='deliveryAddress']//span[@class='label-container' and contains(text(),'District')]/parent::label//following-sibling::ng-select//div[@class='ng-value-container']/parent::div/following-sibling::ng-dropdown-panel//span)
 
 
 
