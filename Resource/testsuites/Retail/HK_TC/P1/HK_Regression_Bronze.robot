@@ -18,7 +18,7 @@ TC-001 - Verify Login Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to click Translate to English Button
     run keyword and continue on failure    Verify Login Page
-    run keyword and continue on failure    Verify Login Page Elements
+    run keyword and continue on failure    Verify Login Page Elements HK
 
 TC-002 - Input Invalid Username
     [Tags]    Login Page

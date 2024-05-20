@@ -16,7 +16,7 @@ Screen Shot DIR  Run Keywords    Retail Screen Shot DIR HK
 TC-001 - Verify Login Page
     [Tags]    TC001    Login Page
     run keyword and continue on failure    Verify Login Page
-    run keyword and continue on failure    Verify Login Page Elements
+    run keyword and continue on failure    Verify Login Page Elements HK
 
 TC-002 - Input Valid Username
     [Tags]    Login Page

@@ -45,6 +45,41 @@ Verify Login Page Elements
     capture element screenshot    ${CopyRight}
     sleep   2
 
+Verify Login Page Elements HK
+    wait until element is visible    ${Logo}    10
+    wait until element is visible    ${Header}    10
+    wait until element is visible    ${Email}    10
+    wait until element is visible    ${Pass}    10
+    wait until element is visible    ${Remember}    10
+    wait until element is visible    ${Forgot}    10
+    wait until element is visible    ${LoginButton}    10
+    wait until element is visible    ${NoAccount}    10
+    wait until element is visible    ${CreateAccount}    10
+    wait until element is visible    ${FooterLogo}    10
+    wait until element is visible    ${PN}    10
+    wait until element is visible    ${TnC}    10
+    wait until element is visible    ${CopyRight}    10
+    wait until element is visible    ${About Us}    10
+    wait until element is visible    ${Frequently Asked Questions}    10
+    wait until element is visible    ${Contact Us}    10
+
+    capture element screenshot    ${Logo}
+    capture element screenshot    ${Header}
+    capture element screenshot    ${Email}
+    capture element screenshot    ${Pass}
+    capture element screenshot    ${Remember}
+    capture element screenshot    ${Forgot}
+    capture element screenshot    ${LoginButton}
+    capture element screenshot    ${NoAccount}
+    capture element screenshot    ${CreateAccount}
+    capture element screenshot    ${FooterLogo}
+    capture element screenshot    ${PN}
+    capture element screenshot    ${TnC}
+    capture element screenshot    ${CopyRight}
+    capture element screenshot    ${About Us}
+    capture element screenshot    ${Frequently Asked Questions}
+    capture element screenshot    ${Contact Us}
+
 Input Invalid Username
     clear element text    ${Email}
     input text    ${Email}    ${InvalidEmailFormat}
