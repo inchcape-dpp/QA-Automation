@@ -39,6 +39,7 @@ ${Dealer-HK_BuyerRelPage_Entry_ADP_Value}    QATest
 
 ${ProfileAccountsDetailsPhoneValue}    65457898
 ${ProfileAccountsDetailsLandlineValue}    12324565
+${test}
 
 *** Keywords ***
 Open Chrome Browser
