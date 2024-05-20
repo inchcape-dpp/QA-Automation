@@ -6,7 +6,7 @@ Library    Process
 #Library    FakerLibrary
 
 
-Resource  ../../../../../Resource/testdata/Dealer/HK_Config/S2/HK_S2_Config.robot
+Resource  ../../../../../Resource/testdata/Dealer/HK_Config/P1/HK_P1_Config.robot
 Resource  ../../../../../Resource/testdata/Dealer/Dealer_Variable.robot
 Resource  ../../../../../Resource/testdata/Dealer/Dealer_Resource.robot
 
@@ -469,7 +469,7 @@ TC-097 - User should be able to click edit one Entry in Dealer HK Buyer Relation
     run keyword and continue on failure    User should be able to check/uncheck active status in Dealer HK Buyer Relationship Page
     run keyword and continue on failure    User should be able to check/uncheck active status in Dealer HK Buyer Relationship Page
     run keyword and continue on failure    User should be able to click update button in Dealer HK Buyer Relationship Page
-    run keyword and continue on failure    User should be able to click Yes in Dealer HK Buyer Relationship Page
+    run keyword and continue on failure    User should be able to click No in Dealer HK Buyer Relationship Page
 
 TC-097 - User should be able to view message page
     [Tags]    Home Page    Message

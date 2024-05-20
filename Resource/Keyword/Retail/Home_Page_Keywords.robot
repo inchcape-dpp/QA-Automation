@@ -3,6 +3,7 @@ Documentation    Suite description
 
 Library    SeleniumLibrary
 Library    Collections
+Library    String
 
 #Resource  ../../../Resource/testdata/config.robot
 Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
@@ -34,8 +35,8 @@ User should be able to view All products
     capture page screenshot
     sleep    2
 
-User should be able to view All Products Page in HK Retail Home Page
-    go to    ${s2HKRetailAllProducts}
+#User should be able to view All Products Page in HK Retail Home Page
+#    go to    ${s2HKRetailAllProducts}
 
 
 User should be able to view shopping cart pop up modal
@@ -213,8 +214,10 @@ User should be able to view Toyota Hybrid menus in HK Retail Home Page
 User should be able to select 1 filter from selected category in Retail Home Page
     ${RandomFilterIndex}    evaluate    random.randint(0,7)
     mouse over    ${Retail_FilterListElements}[${RandomFilterIndex}]
+    ${CategoryText}    get text    ${Retail_HK_FilterListElements_New}[${RandomFilterIndex}]
     ${RandomFilterIndex}  evaluate    ${RandomFilterIndex}+1
     set global variable    ${RandomFilterIndex}
+    set global variable    ${CategoryText}
     sleep    2
 
 User should be able to click 1 filter from selected category in Retail Home Page
@@ -227,8 +230,10 @@ User should be able to click 1 filter from selected category in Retail Home Page
 User should be able to select 1 filter from selected category in HK Retail Home Page
     ${RandomFilterIndex}    evaluate    random.randint(0,4)
     mouse over    ${Retail_HK_FilterListElements_New}[${RandomFilterIndex}]
+    ${CategoryText}    get text    ${Retail_HK_FilterListElements_New}[${RandomFilterIndex}]
     ${RandomFilterIndex}  evaluate    ${RandomFilterIndex}+1
     set global variable    ${RandomFilterIndex}
+    set global variable    ${CategoryText}
     sleep    2
 
 User should be able to click 1 sub filter from selected category in Retail Home Page
@@ -236,8 +241,20 @@ User should be able to click 1 sub filter from selected category in Retail Home 
     ${SubFilterIndex}    get element count    ${Retail_FilterListSubElements}
     ${RandomSubFilterIndex}    evaluate    random.randint(1,${SubFilterIndex})
     scroll element into view    ((//dpp-category-navigation//button[@tabindex='0'])[${RandomFilterIndex}]/following-sibling::div[@class='wrapper']//li)[${RandomSubFilterIndex}]
+    ${SubCategoryText}    get text    ((//dpp-category-navigation//button[@tabindex='0'])[${RandomFilterIndex}]/following-sibling::div[@class='wrapper']//li)[${RandomSubFilterIndex}]
     click element    ((//dpp-category-navigation//button[@tabindex='0'])[${RandomFilterIndex}]/following-sibling::div[@class='wrapper']//li)[${RandomSubFilterIndex}]
+    set global variable    ${SubCategoryText}
     sleep    10
+
+User should be able to verify parts breadcrumbs in HK Retail Home Page
+    ${breadcrumbstext2}  get text    (//dpp-breadcrumb//ol//li)[2]
+    ${breadcrumbstext3}  get text    (//dpp-breadcrumb//ol//li)[3]
+    ${lowerbreadcrumbstext2}    convert to lower case    ${breadcrumbstext2}
+    ${lowerbreadcrumbstext3}    convert to lower case    ${breadcrumbstext3}
+    ${lowerCategoryText}    convert to lower case    ${CategoryText}
+    ${lowerSubCategoryText}    convert to lower case    ${SubCategoryText}
+    run keyword and continue on failure    should be equal as strings    ${lowerbreadcrumbstext2}    ${lowerCategoryText}
+    run keyword and continue on failure    should be equal as strings    ${lowerbreadcrumbstext3}    ${lowerSubCategoryText}
 
 User should be able to click vehicle listing quick link in Retail Home Page
     wait until element is visible    ${HomePageVehicleQuickLink}    10

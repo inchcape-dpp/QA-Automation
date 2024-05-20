@@ -535,16 +535,16 @@ ${Dealer-HK_BuyerRelPage_Entry_ADP_Label}    (//tbody//tr//td[3])
 ${Dealer-HK_BuyerRelPage_Entry_MemberTeir_Label}    (//tbody//tr//td[4])
 ${Dealer-HK_BuyerRelPage_Entry_Active_Label}    (//tbody//tr//td[5])
 
-${Dealer-HK_BuyerRelPage_Entry_PartsClub_Textbox}    //dpp-hk-buyer-relationship-list//tbody//tr//td[2]//input
-${Dealer-HK_BuyerRelPage_Entry_ADP_TextBox}    //dpp-hk-buyer-relationship-list//tbody//tr//td[3]//input
-${Dealer-HK_BuyerRelPage_Entry_MemberTeir_Dropdown}    //dpp-hk-buyer-relationship-list//tbody//tr//td[4]//ng-select//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
-${Dealer-HK_BuyerRelPage_Entry_MemberTeir_Dropdown_Options}    (//dpp-hk-buyer-relationship-list//tbody//tr//td[4]//ng-select//ng-dropdown-panel//div[@role='option'])
-${Dealer-HK_BuyerRelPage_Entry_MemberTeir_Dropdown_Options1}    (//dpp-hk-buyer-relationship-list//tbody//tr//td[4]//ng-select//ng-dropdown-panel//div[@role='option'])[1]
-${Dealer-HK_BuyerRelPage_Entry_Active_Checkbox}    (//dpp-hk-buyer-relationship-list//tbody//tr//td[5]//input[@type='checkbox'])
+${Dealer-HK_BuyerRelPage_Entry_PartsClub_Textbox}    //tbody//tr//td[2]//input
+${Dealer-HK_BuyerRelPage_Entry_ADP_TextBox}    //tbody//tr//td[3]//input
+${Dealer-HK_BuyerRelPage_Entry_MemberTeir_Dropdown}    //tbody//tr//td[4]//ng-select//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
+${Dealer-HK_BuyerRelPage_Entry_MemberTeir_Dropdown_Options}    (//tbody//tr//td[4]//ng-select//ng-dropdown-panel//div[@role='option'])
+${Dealer-HK_BuyerRelPage_Entry_MemberTeir_Dropdown_Options1}    (//tbody//tr//td[4]//ng-select//ng-dropdown-panel//div[@role='option'])[1]
+${Dealer-HK_BuyerRelPage_Entry_Active_Checkbox}    (//tbody//tr//td[5]//input[@type='checkbox'])
 
-${Dealer-HK_BuyerRelPage_Entry_Edit_Button}    (//dpp-hk-buyer-relationship-list//tbody//tr//td[@class='pr-0']//span[@class='edit-label d-flex justify-content-end'])
-${Dealer-HK_BuyerRelPage_Entry_Cancel_Button}    //dpp-hk-buyer-relationship-list//tbody//tr//td[@class='pr-0']//button[@class='btn btn-outline-secondary']
-${Dealer-HK_BuyerRelPage_Entry_Update_Button}    //dpp-hk-buyer-relationship-list//tbody//tr//td[@class='pr-0']//button[@class='btn btn-secondary']
+${Dealer-HK_BuyerRelPage_Entry_Edit_Button}    (//tbody//tr//td[@class='pr-0']//span[@class='edit-label d-flex justify-content-end'])
+${Dealer-HK_BuyerRelPage_Entry_Cancel_Button}    //tbody//tr//td[@class='pr-0']//button[@class='btn btn-outline-secondary']
+${Dealer-HK_BuyerRelPage_Entry_Update_Button}    //tbody//tr//td[@class='pr-0']//button[@class='btn btn-secondary']
 
 
 

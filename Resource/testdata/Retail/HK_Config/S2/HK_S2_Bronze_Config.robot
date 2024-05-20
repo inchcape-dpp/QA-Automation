@@ -22,6 +22,7 @@ ${Retail_screenshot_path}    ..\\..\\..\\..\\..\\Resource\\testsuites\\Retail\\S
 #${Retail_screenshot_path}    C:\\Users\\Danielouie.Estopace\\OneDrive - Inchcape\\06.Dev\\Dan\\Retail Screenshots
 
 ${UploadPhoto_Path_Value}    C:\\Users\\Danielouie.Estopace\\Pictures\\Sample Image\\Image.jpg
+#${UploadPhoto_Path_Value}    SampleImage\\Image.jpg
 
 ${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\HKProductReportView.
 ${ExcelFile_AU_Stock_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\Titan SUB Geerex.xlsx
@@ -30,8 +31,8 @@ ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files
 #${Username}    retailtitanp1@yopmail.com
 #${Password}    Welcom3@NT
 
-${Username}    ${HK_S2_UID}
-${Password}    ${HK_S2_PWD}
+${Username}    ${HK_S2_Automation_Bronze_UID}
+${Password}    ${HK_S2_Automation_Bronze_PWD}
 ${Retail_AccountProfileChangePassCurrentPassValue}    ${Password}
 ${YopMailEmail}    ${HK_S2_Automation_Bronze_UID}
 
@@ -50,8 +51,8 @@ Retail Screen Shot DIR
     set screenshot directory    ${LogDIR}
     set global variable    ${LogDIR}
 
-Save Log DIR
-    copy file    log.html    ${LogDIR}
+#Save Log DIR
+#    copy file    log.html    ${LogDIR}
  ### Test
 
 #-----------------------------------------------------Browser Commands--------------------------------------------------

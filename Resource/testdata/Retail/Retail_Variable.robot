@@ -9,23 +9,19 @@ ${Logo}    //*[@class='logo is-initialized']
 ${Header}    //div[@class='heading' and (contains(text(),'Login') or (contains(text(),'客戶登入')))]
 ${Email}    //*[@type='email']
 ${Pass}    //*[@type='password']
-${Remember}    //*[(contains(text(),'Remember Me') or contains(text(),'記住此帳戶'))]
+${Remember}    //div[@class='remember-me-checkbox']
 ${RememberCheck}    //input[@type='checkbox']
 ${Forgot}    //a[(contains(text(),'Forgot Password')) or contains(text(),'忘記密碼')]
-${LoginButton}    //button[@type='submit' and (contains(text(),'Login') or (contains(text(),' 登入 ')))]
-${NoAccount}    //*[(contains(text(),'No Account?')) or contains(text(),'沒有帳戶?')]
-${CreateAccount}    //*[(contains(text(),'Create Account')) or contains(text(),'註冊帳戶')]
+${LoginButton}    //button[@type='submit']
+${NoAccount}    //div[@class='not-having-account']
+${CreateAccount}    //a[@class='create-account']
 ${FooterLogo}    //div[@class='footer-logo']
 ${PN}    //*[(contains(text(),' Privacy Policy ') or contains(text(),'私隱條款'))]
 ${TnC}    //*[contains(text(),' Terms & Conditions ') or contains(text(),'條款及細則')]
-${CopyRight}    //*[contains(text(),' © 2023 PartsLane. All Rights Reserved.') or contains(text(),'2023 Partslane. 保留所有權利.')]
-${About Us}     //*[contains(text(),' About Us') or contains(text(),'關於我們')]
-${Frequently Asked Questions}     //*[contains(text(),' About Us') or contains(text(),'常見問題')]
-${Contact Us}     //*[contains(text(),' Contact Us') or contains(text(),'聯絡我們')]
+${CopyRight}    (//dpp-navigation-ui//div[@class='wrapper'])[3]
 
-
-${InvalidEmailMessage}    //*[(contains(text(),'Please enter a valid email address') or contains(text(),'請輸入正確的電子郵件'))]
-${InvalidEmailPassMessage}    //*[(contains(text(),'Password is a required field') or contains(text(),'密碼是必填項目'))]
+${InvalidEmailMessage}    //div[@class='form-errors']
+${InvalidEmailPassMessage}    //div[@class='alert alert-danger']
 
 ${InvalidEmail}    Hello
 ${InvalidPass}    Hello
@@ -48,7 +44,7 @@ ${Retail_ForgotPasswordPageEmailErrorMessage}    //dpp-forgot-password//div[@cla
 #-----------------------------------------------------Retail Registration Page------------------------------------------
 
 
-${Retail_RegistrationPageBackToLoginButton}    //div[@class='col-sm-12 col-md-7 p-0']//a|//div[@class='col-8 p-0']//a[(contains(text(),'Back to Login') or contains(text(),' 返回登錄'))]
+${Retail_RegistrationPageBackToLoginButton}    //div[@class='col-sm-12 col-md-7 p-0']//a|//div[@class='col-8 p-0']//a
 ${Retail_RegistrationPageLogo}    (//cx-media[@class='logo is-initialized']//img)[1]
 ${Retail_RegistrationJoinPartsLaneHeader}    //div[@class='cx-section']//*[contains(text(),'Join PartsLane') or contains(text(),'加入PartsLane')]
 ${Retail_RegistrationRegisteredSupplierLabel}    //div[@class='cx-section']//*[@class='mb-5']
@@ -70,30 +66,30 @@ ${Retail_RegistrationYesAccountNextButton}    //div[@class='col-md-6 option-wrap
 #-----------------------------------------------------Retail Registration Page Labels
 ${Retail_RegistrationPrefSuppLabel}    //form//div[@class='col-md-6']//ng-select[@formcontrolname='preferredSeller']/preceding-sibling::span[@class='label-content']|//form//div[@class='col-12']//ng-select[@formcontrolname='preferredSeller']/preceding-sibling::span[@class='label-content']
 ${Retail_RegistrationAccNumLabel}    //form//div[@class='col-md-6']//input[@formcontrolname='accountNumber']/preceding-sibling::span[@class='label-content']
-${Retail_RegistrationCompNameLabel}    //form//div[@class='col-md-6']//input[@formcontrolname='companyName']/preceding-sibling::span[@class='label-content']|//form//div[@class='col-12']//input[@formcontrolname='companyName']/preceding-sibling::span[@class='label-content'][contains(text(),'公司名稱*')]
+${Retail_RegistrationCompNameLabel}    //form//div[@class='col-md-6']//input[@formcontrolname='companyName']/preceding-sibling::span[@class='label-content']|//form//div[@class='col-12']//input[@formcontrolname='companyName']/preceding-sibling::span[@class='label-content']
 ${Retail_RegistrationTradenameLabel}    //form//div[@class='col-md-6']//input[@formcontrolname='tradingName']/preceding-sibling::span[@class='label-content']
 
-${Retail_RegistrationPostalAddLabel}    //form//div[@formgroupname='postalAddress']//div[@class='col-12 mb-2']//span[@class='label-container'][contains(text(),'郵寄地址')]|//form//div[@formgroupname='postalAddress']//div[@class='col-md-12 mb-2']//span[@class='label-content']
-${Retail_RegistrationPostalAddLine1Label}    //form//div[@formgroupname='postalAddress']//div[@class='col-12']//*[contains(text(),'地址第一行*')]|//form//div[@formgroupname='postalAddress']//span[@class='label-content color-grey'][contains(text(),'Address Line 1')]
-${Retail_RegistrationPostalAddLine2Label}    //form//div[@formgroupname='postalAddress']//div[@class='col-12']//*[contains(text(),'地址第二行')]|//form//div[@formgroupname='postalAddress']//span[@class='label-content color-grey'][contains(text(),'Address Line 2')]
+${Retail_RegistrationPostalAddLabel}    //form//div[@formgroupname='postalAddress']//div[@class='col-md-12 mb-2']//span[@class='label-content']|//form//div[@formgroupname='postalAddress']//div[@class='col-12 mb-2']//span[@class='label-content' or @class='label-container']
+${Retail_RegistrationPostalAddLine1Label}    //form//div[@formgroupname='postalAddress']//div[@class='col-md-12']//input[@formcontrolname='addressLine1']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
+${Retail_RegistrationPostalAddLine2Label}    //form//div[@formgroupname='postalAddress']//div[@class='col-md-12']//input[@formcontrolname='addressLine2']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']|//form//div[@formgroupname='postalAddress']//div[@class='col-12']//input[@formcontrolname='addressLine2']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey' or @class='label-container color-grey']
 ${Retail_RegistrationPostalSuburbLabel}    //form//div[@formgroupname='postalAddress']//input[@formcontrolname='suburb']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
 ${Retail_RegistrationPostalPostalCodeLabel}    //form//div[@formgroupname='postalAddress']//input[@formcontrolname='postalCode']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
 ${Retail_RegistrationPostalStateLabel}    //form//div[@formgroupname='postalAddress']//ng-select[@formcontrolname='region']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
 
-${Retail_HK_RegistrationPostalAreaLabel}    //form//div[@formgroupname='postalAddress']//div[@class='col-6']//ng-select[@formcontrolname='area']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
-${Retail_HK_RegistrationPostalDistrictLabel}    //form//div[@formgroupname='postalAddress']//div[@class='col-6']//ng-select[@formcontrolname='district']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
+${Retail_HK_RegistrationPostalAreaLabel}    //form//div[@formgroupname='postalAddress']//div[@class='col-6']//ng-select[@formcontrolname='area']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey' or @class='label-container']
+${Retail_HK_RegistrationPostalDistrictLabel}    //form//div[@formgroupname='postalAddress']//div[@class='col-6']//ng-select[@formcontrolname='district']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey' or @class='label-container']
 
 ${Retail_RegistrationDelAddSameAsPostalLabel}    //form//input[@type='checkbox']/following-sibling::span
 
-${Retail_RegistrationDelAddLabel}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-md-12 mb-2']//span[@class='label-content']|//form//div[@formgroupname='deliveryAddress']//div[@class='col-12 mb-2']//span[@class='label-content']
+${Retail_RegistrationDelAddLabel}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-md-12 mb-2']//span[@class='label-content']|//form//div[@formgroupname='deliveryAddress']//div[@class='col-12 mb-2']//span[@class='label-content' or @class='label-container']
 ${Retail_RegistrationDelAddLine1Label}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-md-12']//input[@formcontrolname='addressLine1']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
-${Retail_RegistrationDelAddLine2Label}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-md-12']//input[@formcontrolname='addressLine2']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']|//form//div[@formgroupname='deliveryAddress']//div[@class='col-12']//input[@formcontrolname='addressLine2']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
+${Retail_RegistrationDelAddLine2Label}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-md-12']//input[@formcontrolname='addressLine2']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']|//form//div[@formgroupname='deliveryAddress']//div[@class='col-12']//input[@formcontrolname='addressLine2']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey' or @class='label-container color-grey']
 ${Retail_RegistrationDelSuburbLabel}    //form//div[@formgroupname='deliveryAddress']//input[@formcontrolname='suburb']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
 ${Retail_RegistrationDelPostalCodeLabel}    //form//div[@formgroupname='deliveryAddress']//input[@formcontrolname='postalCode']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
 ${Retail_RegistrationDelStateLabel}    //form//div[@formgroupname='deliveryAddress']//ng-select[@formcontrolname='region']/preceding-sibling::label//span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
 
-${Retail_HK_RegistrationDelAreaLabel}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-6']//ng-select[@formcontrolname='area']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
-${Retail_HK_RegistrationDelDistrictLabel}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-6']//ng-select[@formcontrolname='district']/preceding-sibling::label//span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
+${Retail_HK_RegistrationDelAreaLabel}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-6']//ng-select[@formcontrolname='area']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey' or @class='label-container']
+${Retail_HK_RegistrationDelDistrictLabel}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-6']//ng-select[@formcontrolname='district']/preceding-sibling::label//span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']|//form//div[@formgroupname='deliveryAddress']//div[@class='col-6']//ng-select[@formcontrolname='district']/preceding-sibling::span[@class='label-container']
 
 ${Retail_RegistrationABNRadioLabel}    //form//div[@class='row']//input[@type='radio']/following-sibling::label[@for='abn']
 ${Retail_RegistrationACNRadioLabel}    //form//div[@class='row']//input[@type='radio']/following-sibling::label[@for='acn']
@@ -108,6 +104,9 @@ ${Retail_RegistrationContactLNLabel}    //form//div[@class='form-group']//input[
 ${Retail_RegistrationContactEmailLabel}    //form//div[@class='form-group']//input[@formcontrolname='email']/preceding-sibling::span
 ${Retail_RegistrationContactCompanyPhoneNumLabel}    //form//div[@class='form-group']//input[@formcontrolname='mobileNumber']/preceding-sibling::span
 ${Retail_RegistrationContactLandlineLabel}    //form//div[@class='form-group']//input[@formcontrolname='landlineNumber']/preceding-sibling::span
+
+${Retail_HK_RegistrationContactCompanyPhoneNumLabel}    //form//div[@class='form-group']//label//span[contains(text(),'Company Phone Number') or contains(text(),'公司電話號碼')]
+${Retail_HK_RegistrationContactLandlineLabel}    //form//div[@class='form-group']//label//span[contains(text(),'Landline Number') or contains(text(),'座機號碼')]
 
 ${Retail_RegistrationTNC&PNLabel}    //div[@class='terms-block']|//span[@class='terms-block']
 
@@ -139,7 +138,7 @@ ${Retail_RegistrationContactCompanyPhoneNumTextBox}    //form//div[@class='form-
 ${Retail_RegistrationContactLandlineTextBox}    //form//div[@class='form-group']//input[@formcontrolname='landlineNumber']
 
 ${Retail_HK_RegistrationContactCompanyPhoneNumTextBox}    //form//div[@class='form-group']//label//span[contains(text(),'Company Phone Number') or contains(text(),'公司電話號碼')]/parent::label/following-sibling::dpp-input-contact-number//input
-${Retail_HK_RegistrationContactLandlineTextBox}    //form//div[@class='form-group']//label//span[contains(text(),'Company Phone Number') or contains(text(),'座機號碼')]/parent::label/following-sibling::dpp-input-contact-number//input
+${Retail_HK_RegistrationContactLandlineTextBox}    //form//div[@class='form-group']//label//span[contains(text(),'Landline Number') or contains(text(),'座機號碼')]/parent::label/following-sibling::dpp-input-contact-number//input
 
 #-----------------------------------------------------Retail Registration Page Combobox
 ${Retail_RegistrationPrefSuppComboBox}    //form//div[@class='col-md-6']//ng-select//div[@class='ng-select-container ng-has-value']|//form//div[@class='col-12']//ng-select//div[@class='ng-select-container ng-has-value']
@@ -484,6 +483,7 @@ ${Retail_AU_HomePage_Search_PopUp_SelectSave_Button}    //dpp-vehicle-results//b
 ${Retail_AU_HomePage_Search_PopUp_SelectVehicle_Button}    //dpp-vehicle-results//button[@class='btn btn-sm btn-block ml-2 mt-0 p-1 select-this-vehicle-btn btn-secondary' and contains(text(),'Select This Vehicle')]
 ${Retail_AU_HomePage_Search_PopUp_SelectSave_Button_Disabled}    //dpp-vehicle-results//button[@class='btn btn-sm btn-block mt-0 p-1 select-this-vehicle-btn btn-default vehicleListing-btn' and @disabled and contains(text(),'Select & Save Vehicle')]
 
+
 ${Retail_AU_HomePage_Manual_Model_Combobox}    //dpp-search-by-vehicle//ng-select[@formcontrolname='model']//div[@class='ng-select-container']
 ${Retail_AU_HomePage_Manual_Year_Combobox}    //dpp-search-by-vehicle//ng-select[@formcontrolname='year']//div[@class='ng-select-container']
 ${Retail_AU_HomePage_Manual_Series_Combobox}    //dpp-search-by-vehicle//ng-select[@formcontrolname='series']//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
@@ -734,25 +734,25 @@ ${Retail_CheckoutPageCustomerDetailsShippingToInfoButton}    //div[@class='colum
 ${Retail_CheckoutPageCustomerDetailsShippingToNameLabel}    //div[@class='column ml-lg-4 pb-3 pb-lg-0']//span[@class='shipping-to']//strong
 ${Retail_CheckoutPageCustomerDetailsShippingToAddressLabel}    //div[@class='column ml-lg-4 pb-3 pb-lg-0']//div[@class='col-12 p-0 px-lg-3']//p[@class='m-0 d-flex']/following-sibling::span
 
-${Retail_HK_CheckoutPageReviewItemsContainer}    //dpp-hk-order-items-summary
-${Retail_HK_CheckoutPageReviewItemsHeader}    //dpp-hk-order-items-summary//*[@class='title']
-${Retail_HK_CheckoutPageReviewItemsDeliveryDate}    //dpp-hk-order-items-summary//div[@class='col-12 p-0 sub-header']
-${Retail_HK_CheckoutPageReviewItemsList}    //dpp-hk-order-items-summary//dpp-hk-order-items//div[@class='product-list-item']
+${Retail_HK_CheckoutPageReviewItemsContainer}    //dpp-order-items-summary|//dpp-hk-order-items-summary|//dpp-multi-step-checkout-order-items-summary
+${Retail_HK_CheckoutPageReviewItemsHeader}    //dpp-hk-order-items-summary//*[@class='title']|//dpp-multi-step-checkout-order-items-summary//*[@class='title']
+${Retail_HK_CheckoutPageReviewItemsDeliveryDate}    //dpp-hk-order-items-summary//div[@class='col-12 p-0 sub-header']|//dpp-multi-step-checkout-order-items-summary//div[@class='col-12 p-0 sub-header']
+${Retail_HK_CheckoutPageReviewItemsList}    //dpp-hk-order-items-summary//div[@class='product-list-item']|//dpp-multi-step-checkout-order-items-summary//div[@class='product-list-item']
 
-${Retail_HK_CheckoutPageReviewItemsArrowUp}    //dpp-hk-order-items-summary//cx-icon[@class='cx-icon dpp-icons__icon-up-arrow']
-${Retail_HK_CheckoutPageReviewItemsArrowDown}    //dpp-hk-order-items-summary//cx-icon[@class='cx-icon dpp-icons__icon-down-arrow']
+${Retail_HK_CheckoutPageReviewItemsArrowUp}    //dpp-hk-order-items-summary//cx-icon[@class='cx-icon dpp-icons__icon-up-arrow']|//dpp-multi-step-checkout-order-items-summary//cx-icon[@class='cx-icon dpp-icons__icon-up-arrow']
+${Retail_HK_CheckoutPageReviewItemsArrowDown}    //dpp-hk-order-items-summary//cx-icon[@class='cx-icon dpp-icons__icon-down-arrow']|//dpp-multi-step-checkout-order-items-summary//cx-icon[@class='cx-icon dpp-icons__icon-down-arrow']
 
-${Retail_HK_CheckoutPageShippingAddressContainer}    //dpp-hk-shipping-address
-${Retail_HK_CheckoutPageShippingAddressHeader}    //dpp-hk-shipping-address//*[@class='title']
-${Retail_HK_CheckoutPageShippingAddressBuyer}    //dpp-hk-shipping-address//div[@class='shipping-to']//span[@class='buyer']
-${Retail_HK_CheckoutPageShippingAddress1}    (//dpp-hk-shipping-address//div[@class='shipping-to']//span)[2]
-${Retail_HK_CheckoutPageShippingAddress2}    (//dpp-hk-shipping-address//div[@class='shipping-to']//span)[3]
-${Retail_HK_CheckoutPageShippingAddressAddInstruction}    //dpp-hk-shipping-address//div[@class='mt-3 delivery-instruction']//a
-${Retail_HK_CheckoutPageShippingAddressAddInstructionTextBox}    //dpp-hk-shipping-address//div[@class='mt-3 delivery-instruction']//a/following-sibling::div//textarea
-${Retail_HK_CheckoutPageShippingAddressAddInstructionCancelButton}    //dpp-hk-shipping-address//div[@class='mt-3 delivery-instruction']//a/following-sibling::div//button[@class='btn btn-outline-secondary']
-${Retail_HK_CheckoutPageShippingAddressAddInstructionSaveButton}    //dpp-hk-shipping-address//div[@class='mt-3 delivery-instruction']//a/following-sibling::div//button[@class='btn btn-secondary']
-${Retail_HK_CheckoutPageShippingAddressAddInstructionEditButton}    //dpp-hk-shipping-address//div[@class='mt-3 delivery-instruction']//cx-icon[@class='cx-icon dpp-icons__pencil-active']
-${Retail_HK_CheckoutPageShippingAddressAddInstructionDeleteButton}    //dpp-hk-shipping-address//div[@class='mt-3 delivery-instruction']//cx-icon[@class='cx-icon dpp-icons__trash-v2']
+${Retail_HK_CheckoutPageShippingAddressContainer}    //dpp-hk-shipping-address|//dpp-multi-step-checkout-shipping-address
+${Retail_HK_CheckoutPageShippingAddressHeader}    //dpp-hk-shipping-address//*[@class='title']|//dpp-multi-step-checkout-shipping-address//*[@class='title']
+${Retail_HK_CheckoutPageShippingAddressBuyer}    //dpp-hk-shipping-address//div[@class='shipping-to']//span[@class='buyer']|//dpp-multi-step-checkout-shipping-address//div[@class='shipping-to']//span[@class='buyer']
+${Retail_HK_CheckoutPageShippingAddress1}    (//dpp-hk-shipping-address//div[@class='shipping-to']//span)[2]|(//dpp-multi-step-checkout-shipping-address//div[@class='shipping-to']//span)[2]
+${Retail_HK_CheckoutPageShippingAddress2}    (//dpp-hk-shipping-address//div[@class='shipping-to']//span)[3]|(//dpp-multi-step-checkout-shipping-address//div[@class='shipping-to']//span)[3]
+${Retail_HK_CheckoutPageShippingAddressAddInstruction}    //div[@class='mt-3 delivery-instruction']//a
+${Retail_HK_CheckoutPageShippingAddressAddInstructionTextBox}    /div[@class='mt-3 delivery-instruction']//a/following-sibling::div//textarea
+${Retail_HK_CheckoutPageShippingAddressAddInstructionCancelButton}    //div[@class='mt-3 delivery-instruction']//a/following-sibling::div//button[@class='btn btn-outline-secondary']
+${Retail_HK_CheckoutPageShippingAddressAddInstructionSaveButton}    //div[@class='mt-3 delivery-instruction']//a/following-sibling::div//button[@class='btn btn-secondary']
+${Retail_HK_CheckoutPageShippingAddressAddInstructionEditButton}    //div[@class='mt-3 delivery-instruction']//cx-icon[@class='cx-icon dpp-icons__pencil-active']
+${Retail_HK_CheckoutPageShippingAddressAddInstructionDeleteButton}    //div[@class='mt-3 delivery-instruction']//cx-icon[@class='cx-icon dpp-icons__trash-v2']
 
 ${Retail_HK_CheckoutPage_ShippingAddress_AddInstructionDelete_PopUp_Container}    //div[@class='cx-modal-content']
 ${Retail_HK_CheckoutPage_ShippingAddress_AddInstructionDelete_PopUp_Yes_Button}    //div[@class='cx-modal-content']//button[@class='btn btn-secondary btn-block']
@@ -761,53 +761,53 @@ ${Retail_HK_CheckoutPage_ShippingAddress_AddInstructionDelete_PopUp_No_Button}  
 ${Retail_HK_CheckoutPage_ShippingAddress_AddInstruction_TextBox_Value1}    Tests Inst
 ${Retail_HK_CheckoutPage_ShippingAddress_AddInstruction_TextBox_Value2}    Tests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests Inst1
 
-${Retail_HK_CheckoutPageShippingAddressChangeButton}    //dpp-hk-shipping-address//div[@class='col-2 text-right']//a
-${Retail_HK_CheckoutPageShippingAddressChangePopUpContainer}    //dpp-hk-checkout-address-dialog//div
-${Retail_HK_CheckoutPageShippingAddressChangePopUpFirstNameLabel}    //dpp-hk-checkout-address-dialog//label[contains(text(),'First Name') or contains(text(),'名字')]
-${Retail_HK_CheckoutPageShippingAddressChangePopUpLastNameLabel}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Last Name') or contains(text(),'姓氏')]
-${Retail_HK_CheckoutPageShippingAddressChangePopUpEmailAddressLabel}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Email Address') or contains(text(),'電子郵件地址')]
-${Retail_HK_CheckoutPageShippingAddressChangePopUpMobileNumberLabel}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Mobile Number') or contains(text(),'手機號碼')]
-${Retail_HK_CheckoutPageShippingAddressChangePopUpLandlineNumberLabel}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Landline Number') or contains(text(),'分機號')]
-${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1Label}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]
-${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine2Label}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Address Line 2') or contains(text(),'地址第二行')]
-${Retail_HK_CheckoutPageShippingAddressChangePopUpAreaLabel}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Area') or contains(text(),'地區')]
-${Retail_HK_CheckoutPageShippingAddressChangePopUpDistrictLabel}    //dpp-hk-checkout-address-dialog//label[contains(text(),'District')]|(//dpp-hk-checkout-address-dialog//label[contains(text(),'區')])[2]
-${Retail_HK_CheckoutPageShippingAddressChangePopUpDeliveryInstructionsLabel}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Delivery Instructions') or contains(text(),'發貨備註')]
+${Retail_HK_CheckoutPageShippingAddressChangeButton}    //div[@class='col-2 text-right']//a
+${Retail_HK_CheckoutPageShippingAddressChangePopUpContainer}    //dpp-hk-checkout-address-dialog//div|//dpp-multi-step-checkout-address-dialog//div
+${Retail_HK_CheckoutPageShippingAddressChangePopUpFirstNameLabel}    //label[contains(text(),'First Name') or contains(text(),'名字')]
+${Retail_HK_CheckoutPageShippingAddressChangePopUpLastNameLabel}    //label[contains(text(),'Last Name') or contains(text(),'姓氏')]
+${Retail_HK_CheckoutPageShippingAddressChangePopUpEmailAddressLabel}    //label[contains(text(),'Email Address') or contains(text(),'電子郵件地址')]
+${Retail_HK_CheckoutPageShippingAddressChangePopUpMobileNumberLabel}    //label[contains(text(),'Mobile Number') or contains(text(),'手機號碼')]
+${Retail_HK_CheckoutPageShippingAddressChangePopUpLandlineNumberLabel}    //label[contains(text(),'Landline Number') or contains(text(),'分機號')]
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1Label}    //label[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine2Label}    //label[contains(text(),'Address Line 2') or contains(text(),'地址第二行')]
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAreaLabel}    //label[contains(text(),'Area') or contains(text(),'地區')]
+${Retail_HK_CheckoutPageShippingAddressChangePopUpDistrictLabel}    //label[contains(text(),'District')]|(//dpp-hk-checkout-address-dialog//label[contains(text(),'區')])
+${Retail_HK_CheckoutPageShippingAddressChangePopUpDeliveryInstructionsLabel}    //label[contains(text(),'Delivery Instructions') or contains(text(),'發貨備註')]
 
-${Retail_HK_CheckoutPageShippingAddressChangePopUpFirstNameTextBox}    //dpp-hk-checkout-address-dialog//input[@formcontrolname='firstName']
-${Retail_HK_CheckoutPageShippingAddressChangePopUpLastNameTextBox}    //dpp-hk-checkout-address-dialog//input[@formcontrolname='lastName']
-${Retail_HK_CheckoutPageShippingAddressChangePopUpEmailAddressTextBox}    //dpp-hk-checkout-address-dialog//input[@formcontrolname='email']
-${Retail_HK_CheckoutPageShippingAddressChangePopUpMobileNumberTextBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Mobile Number') or contains(text(),'手機號碼')]/parent::div//input
-${Retail_HK_CheckoutPageShippingAddressChangePopUpLandlineNumberTextBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Landline Number') or contains(text(),'分機號')]/parent::div//input
-${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]/parent::div//input
-${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox_Clear_Button}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]/parent::div//span[@title='Clear all']
-${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine2TextBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Address Line 2') or contains(text(),'地址第二行')]/parent::div//input
-${Retail_HK_CheckoutPageShippingAddressChangePopUpDeliveryInstructionsTextBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Delivery Instructions') or contains(text(),'發貨備註')]/following-sibling::div//textarea
+${Retail_HK_CheckoutPageShippingAddressChangePopUpFirstNameTextBox}    //input[@formcontrolname='firstName']
+${Retail_HK_CheckoutPageShippingAddressChangePopUpLastNameTextBox}    //input[@formcontrolname='lastName']
+${Retail_HK_CheckoutPageShippingAddressChangePopUpEmailAddressTextBox}    //input[@formcontrolname='email']
+${Retail_HK_CheckoutPageShippingAddressChangePopUpMobileNumberTextBox}    //label[contains(text(),'Mobile Number') or contains(text(),'手機號碼')]/parent::div//input
+${Retail_HK_CheckoutPageShippingAddressChangePopUpLandlineNumberTextBox}    //label[contains(text(),'Landline Number') or contains(text(),'分機號')]/parent::div//input
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}    //label[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]/parent::div//input
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox_Clear_Button}    //label[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]/parent::div//span[@title='Clear all']
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine2TextBox}    //label[contains(text(),'Address Line 2') or contains(text(),'地址第二行')]/parent::div//input
+${Retail_HK_CheckoutPageShippingAddressChangePopUpDeliveryInstructionsTextBox}    //label[contains(text(),'Delivery Instructions') or contains(text(),'發貨備註')]/following-sibling::div//textarea
 
 ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_AddressLine1_Suggest_Options}    (//dpp-autocomplete-search//ng-dropdown-panel//div//div[@role='option'])
 ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_AddressLine1_Manual_Options}    //dpp-autocomplete-search//ng-dropdown-panel//div//p/parent::div
 
 
-${Retail_HK_CheckoutPageShippingAddressChangePopUpAreaComboBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//div[@class='ng-select-container ng-has-value']
-${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_Area_ComboBox_Options}    (//dpp-hk-checkout-address-dialog//label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])
-${Retail_HK_CheckoutPageShippingAddressChangePopUpDistrictComboBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'District')]/following-sibling::ng-select//div[@class='ng-select-container ng-has-value' or @class='ng-select-container']|(//dpp-hk-checkout-address-dialog//label[contains(text(),'區')])[2]/following-sibling::ng-select//div[@class='ng-select-container ng-has-value' or @class='ng-select-container']
-${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_District_ComboBox_Options}   (//dpp-hk-checkout-address-dialog//label[contains(text(),'District') or contains(text(),'區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAreaComboBox}    //label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//div[@class='ng-select-container ng-has-value' or @class='ng-select-container']
+${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_Area_ComboBox_Options}    (//label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])
+${Retail_HK_CheckoutPageShippingAddressChangePopUpDistrictComboBox}    //label[contains(text(),'District')]/following-sibling::ng-select//div[@class='ng-select-container ng-has-value' or @class='ng-select-container']
+${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_District_ComboBox_Options}   (//label[contains(text(),'District') or contains(text(),'區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])
 
-${Retail_HK_CheckoutPageShippingAddressChangePopUpCancelButton}    //dpp-hk-checkout-address-dialog//div[@class='btn-action-container desktop']//button[@class='btn btn-outline-secondary']
-${Retail_HK_CheckoutPageShippingAddressChangePopUpSaveButton}    //dpp-hk-checkout-address-dialog//div[@class='btn-action-container desktop']//button[@class='btn btn-secondary']
+${Retail_HK_CheckoutPageShippingAddressChangePopUpCancelButton}    //div[@class='btn-action-container desktop']//button[@class='btn btn-outline-secondary']
+${Retail_HK_CheckoutPageShippingAddressChangePopUpSaveButton}    //div[@class='btn-action-container desktop']//button[@class='btn btn-secondary']
 
-${Retail_HK_CheckoutPageShippingAddressArrowDown}    //dpp-hk-shipping-address//cx-icon[@class='cx-icon dpp-icons__icon-up-arrow']
-${Retail_HK_CheckoutPageShippingAddressArrowDown}    //dpp-hk-shipping-address//cx-icon[@class='cx-icon dpp-icons__icon-down-arrow']
+${Retail_HK_CheckoutPageShippingAddressArrowDown}    //dpp-hk-shipping-address//cx-icon[@class='cx-icon dpp-icons__icon-up-arrow']|//dpp-multi-step-checkout-shipping-address//cx-icon[@class='cx-icon dpp-icons__icon-up-arrow']
+${Retail_HK_CheckoutPageShippingAddressArrowDown}    //dpp-hk-shipping-address//cx-icon[@class='cx-icon dpp-icons__icon-down-arrow']|//dpp-multi-step-checkout-shipping-address//cx-icon[@class='cx-icon dpp-icons__icon-down-arrow']
 
-${Retail_HK_CheckoutPagePaymentMethodContainer}    //dpp-hk-payment-method
-${Retail_HK_CheckoutPagePaymentMethodHeader}    //dpp-hk-payment-method//*[@class='title']
-${Retail_HK_CheckoutPagePaymentMethodArrowUp}    //dpp-hk-payment-method//cx-icon[@class='cx-icon dpp-icons__icon-up-arrow']
-${Retail_HK_CheckoutPagePaymentMethodArrowDown}    //dpp-hk-payment-method//cx-icon[@class='cx-icon dpp-icons__icon-down-arrow']
+${Retail_HK_CheckoutPagePaymentMethodContainer}    //dpp-hk-payment-method|//dpp-multi-step-checkout-payment-method
+${Retail_HK_CheckoutPagePaymentMethodHeader}    //dpp-hk-payment-method//*[@class='title']|//dpp-multi-step-checkout-payment-method//*[@class='title']
+${Retail_HK_CheckoutPagePaymentMethodArrowUp}    //dpp-hk-payment-method//cx-icon[@class='cx-icon dpp-icons__icon-up-arrow']|//dpp-multi-step-checkout-payment-method//cx-icon[@class='cx-icon dpp-icons__icon-up-arrow']
+${Retail_HK_CheckoutPagePaymentMethodArrowDown}    //dpp-hk-payment-method//cx-icon[@class='cx-icon dpp-icons__icon-down-arrow']|//dpp-multi-step-checkout-payment-method//cx-icon[@class='cx-icon dpp-icons__icon-down-arrow']
 
-${Retail_HK_CheckoutPage_PaymentMethod_COD_Label}    //dpp-hk-payment-method//label[@for='COD']
-${Retail_HK_CheckoutPage_PaymentMethod_COD_RadioButton}    //dpp-hk-payment-method//label[@for='COD']/preceding-sibling::input
-${Retail_HK_CheckoutPage_PaymentMethod_Credit_Label}    //dpp-hk-payment-method//label[@for='twoctwop']
-${Retail_HK_CheckoutPage_PaymentMethod_Credit_RadioButton}    //dpp-hk-payment-method//label[@for='twoctwop']/preceding-sibling::input
+${Retail_HK_CheckoutPage_PaymentMethod_COD_Label}    //dpp-hk-payment-method//label[@for='COD']|//dpp-multi-step-checkout-payment-method//label[@for='COD']
+${Retail_HK_CheckoutPage_PaymentMethod_COD_RadioButton}    //dpp-hk-payment-method//label[@for='COD']/preceding-sibling::input|//dpp-multi-step-checkout-payment-method//label[@for='COD']/preceding-sibling::input
+${Retail_HK_CheckoutPage_PaymentMethod_Credit_Label}    //dpp-hk-payment-method//label[@for='twoctwop']|//dpp-multi-step-checkout-payment-method//label[@for='twoctwop']
+${Retail_HK_CheckoutPage_PaymentMethod_Credit_RadioButton}    //dpp-hk-payment-method//label[@for='twoctwop']/preceding-sibling::input|//dpp-multi-step-checkout-payment-method//label[@for='twoctwop']/preceding-sibling::input
 
 ${Retail_HK_CheckoutPagePaymentMethodFrame}    payment-iframe
 ${Retail_HK_CheckoutPagePaymentMethodFrameHeaderActive}    //div[@class='accordion__header accordion__header--active']
@@ -887,7 +887,7 @@ ${Retail_Loader}    //div[@class='loader']
 ${Retail_CheckoutPageCustomerDetailsOrderItemList}    //div[@class='order-details-items-table']//div[@class='product-list-item']
 ${Retail_CheckoutPageCustomerDetailsOrderItemList1}    //div[@class='order-details-items-table']//div[@class='product-list-item'][1]
 
-${Retail_CheckoutPageCustomerDetailsOrderSummaryContainer}    //div[@class='order-cart-totals']|//dpp-hk-order-summary//div[@class='sticky-wrapper']
+${Retail_CheckoutPageCustomerDetailsOrderSummaryContainer}    //div[@class='order-cart-totals']|//div[@class='sticky-wrapper']
 ${Retail_CheckoutPageCustomerDetailsOrderSummaryHeader}    //div[@class='order-cart-totals' or @class='row order-summary']//div[@class='header col-12']|//div[@class='order-cart-totals' or @class='row order-summary']//h3
 ${Retail_CheckoutPageCustomerDetailsOrderSummarySubTotalLabel}    //div[@class='order-cart-totals' or @class='row order-summary']//div[@class='row' or @class='total-wrapper row w-100']//div[@class='col-6' or @class='details col-6'][1]
 ${Retail_CheckoutPageCustomerDetailsOrderSummarySubTotalValue}    //div[@class='order-cart-totals' or @class='row order-summary']//div[@class='row' or @class='total-wrapper row w-100']//div[@class='col-6 text-right' or @class='details col-6 text-right'][1]
@@ -970,11 +970,11 @@ ${Retail_PlaceOrderPageViewOrderButton}    //div[@class='container']//button[@cl
 
 #-----------------------------------------------------Retail Account Page-----------------------------------------------
 ${Retail_AccountAccountpageMyAccountLabel}    //div[@class='myaccount']//h2
-${Retail_AccountpageOrdersMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),'Orders')]|//ul[@class='vertical-menu tab-level']//a[contains(text(),' Order History ')]|//div[@class='acc-tab__title']//*[contains(text(),'Orders')]|//ul[@class='vertical-menu tab-level']//*[contains(text(),'Order History')]
+${Retail_AccountpageOrdersMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),'Orders')]|//ul[@class='vertical-menu tab-level']//a[contains(text(),' Order History ')]|//div[@class='acc-tab__title']//*[contains(text(),'Order History')]|//ul[@class='vertical-menu tab-level']//*[contains(text(),'Order History')]
 ${Retail_AccountAccountpageReturnMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),'Return Requests')]|//div[@class='acc-tab__title']//*[contains(text(),'Return Requests')]
 ${Retail_AccountpageSavedCartsMenu}    //div[@class='ml-3']//a[contains(text(),'Saved Carts')]|//div[@class='acc-tab__title']//a[contains(text(),'Saved Carts')]
 ${Retail_AccountpageVehicleListingMenu}    //div[@class='ml-3']//a[contains(text(),'Vehicle Listing')]|//div[@class='acc-tab__title']//a[contains(text(),'Vehicle Listing')]
-${Retail_AccountpageMessagesMenu}    //ul[@class='vertical-menu tab-level']//a[contains(text(),' Messages ') or contains(text(),'Inbox')]|//ul[@class='vertical-menu tab-level']//*[contains(text(),'Inbox')]|//div[@class='acc-tab__title']//*[contains(text(),'Messages')]
+${Retail_AccountpageMessagesMenu}    //ul[@class='vertical-menu tab-level']//a[contains(text(),' Messages ') or contains(text(),'Inbox')]|//ul[@class='vertical-menu tab-level']//*[contains(text(),'Inbox')]|//div[@class='acc-tab__title']//*[contains(text(),'Messages') or contains(text(),'Inbox')]
 ${Retail_AccountpageProfileMenu}    //ul[@class='vertical-menu tab-level']//a[contains(text(),'Profile')]|//div[@class='acc-tab__title']//a[contains(text(),'Profile')]
 ${Retail_AccountpageProfileAccountDetails}    //li[@class='mb-3 isActive' or @class='mb-3']//div[@class='tab-data has-child']//a[contains(text(),'Account Details')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'Account Details')]
 ${AccountpageProfileChangePass}    //li[@class='mb-3 isActive' or @class='mb-3']//div[@class='tab-data has-child']//a[contains(text(),'Change Password')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'Change Password')]
@@ -1745,7 +1745,7 @@ ${Retail_AccountMessagePageDetailsFirstPageButton}    (//a[@aria-label='first pa
 ${Retail_AccountMessagePageDetailsNextPageButtonDisabled}    //a[@class='next disabled']
 ${Retail_AccountMessagePageDetailsPreviousPageButtonDisabled}    //a[@class='previous disabled']
 
-${Retail_AccountMessagePageNewMessageButton}    //dpp-message-list//div[@class='row']//button[@class='btn btn-outline-secondary w-100']
+${Retail_AccountMessagePageNewMessageButton}   //dpp-message-list//button[@class='btn btn-outline-secondary w-100 p-0']
 
 ${Retail_AccountMessagePageNewMessagePopUpContainer}    //div[@class='cx-dialog-body modal-body']
 ${Retail_AccountMessagePageNewMessagePopUpToSupplierLabel}    //div[@class='col-sm-12 header']//span[@class='message-subject mb-1']
@@ -1763,6 +1763,10 @@ ${Retail_AccountMessagePageNewMessagePopUpUploadImage}    //input[@type='file']
 
 ${Retail_AccountMessagePageNewMessagePopUpCancelButton}    //button[@class='btn btn-sm btn-outline-secondary']
 ${Retail_AccountMessagePageNewMessagePopUpSendButton}    //button[@class='btn btn-sm btn-secondary ml-2']
+
+${Retail_AccountMessagePageNewMessagePopUpBackButton}    //button[@class='btn btn-secondary']
+
+${Retail_AccountMessagePageNewMessagePopUpSubjectTextBox_Value}    Test New Message
 
 #-----------------------------------------------------Retail Account Message Page Read General Enquiry
 ${Retail_AccountMessagePageReadMessagesGenEnqContainer}    (//div[@class='row message-container'][.//span[contains(text(),'GENERAL ENQUIRY')]])[1]
@@ -1876,8 +1880,8 @@ ${Retail_AccountProfileAccountsDetailsPhoneError}    //div[@class='form-errors']
 ${Retail_AccountProfileAccountsDetailsLandlineError}    //div[@class='form-errors']//p[contains(text(),'Landline Number must begin with a 0 followed by 9 digits')]
 
 ${Retail_AccountProfileAccountsDetailsConfirmationContainer}    //div[@class='cx-dialog-body modal-body']
-${Retail_AccountProfileAccountsDetailsConfirmationYesButton}    //div[@class='cx-dialog-body modal-body']//button[@class='btn btn-secondary btn-block']
-${Retail_AccountProfileAccountsDetailsConfirmationNoButton}    //div[@class='cx-dialog-body modal-body']//button[@class='btn btn-block btn-outline-secondary']
+${Retail_AccountProfileAccountsDetailsConfirmationYesButton}    //button[@class='btn btn-secondary btn-block']
+${Retail_AccountProfileAccountsDetailsConfirmationNoButton}    //button[@class='btn btn-block btn-outline-secondary']
 
 ${Retail_AccountProfileAccountsDetailsFirstNameValue}    Test FN
 ${Retail_AccountProfileAccountsDetailsLastNameValue}    Test LN
@@ -1930,15 +1934,15 @@ ${Retail_AccountProfileChangePassNewPassInvalidValue}    Test1
 ${Retail_AccountProfileChangePassConfirmPassInvalidValue}    Test
 
 #-----------------------------------------------------Retail Account Company Details Page-------------------------------
-${Retail_AccountCompanyDetailsPagePanelContainer}    //dpp-company-details|//dpp-hk-company-details
-${Retail_AccountCompanyDetailsPagePanelHeader}    //dpp-company-details//h2|//dpp-hk-company-details//h2[contains(text(),'Company Details') or contains(text(),'公司詳情')]
+${Retail_AccountCompanyDetailsPagePanelContainer}    //dpp-company-details|//dpp-hk-company-details|//dpp-toyota-company-details
+${Retail_AccountCompanyDetailsPagePanelHeader}    //dpp-company-details//h2|//dpp-hk-company-details//h2[contains(text(),'Company Details') or contains(text(),'公司詳情')]|//dpp-toyota-company-details//h2[contains(text(),'Company Details') or contains(text(),'公司詳情')]
 
 #-----------------------------------------------------Retail Account Company Details Page Labels
 ${Retail_AccountCompanyDetailsPagePrefSupplierLabel}    //dpp-company-details//span[@class='label-content' and contains(text(),'Preferred Supplier')]
 ${Retail_AccountCompanyDetailsPageAccNumLabel}    //span[@class='label-content' and contains(text(),'Account Number')]|//span[@class='label-content' and contains(text(),'Membership Number')]
 ${Retail_AccountCompanyDetailsPageCompanyNameLabel}    //span[@class='label-content' and contains(text(),'Company Name')]
 ${Retail_AccountCompanyDetailsPageTradingNameLabel}    //dpp-company-details//span[@class='label-content' and contains(text(),'Trading Name')]
-${Retail_AccountCompanyDetailsPagePostalAddressLabel}    //span[@class='label-content' and contains(text(),'Postal Address')]
+${Retail_AccountCompanyDetailsPagePostalAddressLabel}    //span[@class='label-container' and contains(text(),'Postal Address')]
 ${Retail_AccountCompanyDetailsPagePostalAddressAddLine1Label}    //dpp-company-details//span[@class='label-content color-grey' and contains(text(),'Address Line 1')]
 ${Retail_AccountCompanyDetailsPagePostalAddressAddLine2Label}    //span[@class='label-content color-grey' and contains(text(),'Address Line 2')]
 ${Retail_AccountCompanyDetailsPagePostalAddressSuburbLabel}    //dpp-company-details//div[@formgroupname='postalAddress']//span[@class='label-content' and contains(text(),'Suburb')]
@@ -2033,20 +2037,20 @@ ${Retail_AccountCompanyDetailsPageClosingHoursComboBox}    //ng-select[@formcont
 ${Retail_AccountCompanyDetailsPageOpeningHoursComboBoxValue}    (//ng-select[@formcontrolname='openingHours']//ng-dropdown-panel//div[@role='option'])[1]    #1-13 from 7AM to 7PM per hour values
 ${Retail_AccountCompanyDetailsPageClosingHoursComboBoxValue}    (//ng-select[@formcontrolname='closingHours']//ng-dropdown-panel//div[@role='option'])[10]    #1-13 from 7AM to 7PM per hour values
 
-${Retail_HK_AccountCompanyDetailsPage_Postal_Area_ComboBox}    (//div[@formgroupname='postalAddress']//span[@class='label-content' and contains(text(),'Area')]/following-sibling::ng-select//div[@class='ng-value-container'])
+${Retail_HK_AccountCompanyDetailsPage_Postal_Area_ComboBox}    (//div[@formgroupname='postalAddress']//span[@class='label-container' and contains(text(),'Area')]/following-sibling::ng-select//div[@class='ng-value-container'])
 ${Retail_HK_AccountCompanyDetailsPage_Postal_Area_ComboBox_Container}    (//form//div[@formgroupname='postalAddress']//ng-select[@formcontrolname='area']//ng-dropdown-panel//div//div[@role='option'])
-${Retail_HK_AccountCompanyDetailsPage_Postal_District_ComboBox}    (//div[@formgroupname='postalAddress']//span[@class='label-content' and contains(text(),'District')]/following-sibling::ng-select//div[@class='ng-value-container'])
+${Retail_HK_AccountCompanyDetailsPage_Postal_District_ComboBox}    (//div[@formgroupname='postalAddress']//span[@class='label-container' and contains(text(),'District')]/following-sibling::ng-select//div[@class='ng-value-container'])
 ${Retail_HK_AccountCompanyDetailsPage_Postal_District_ComboBox_Container}    (//form//div[@formgroupname='postalAddress']//ng-select[@formcontrolname='district']//ng-dropdown-panel//div//div[@role='option'])
-${Retail_HK_AccountCompanyDetailsPage_Postal_Area_ComboBox_Value}    (//div[@formgroupname='postalAddress']//span[@class='label-content' and contains(text(),'Area')]/following-sibling::ng-select//div[@class='ng-value-container']/parent::div/following-sibling::ng-dropdown-panel//span)
-${Retail_HK_AccountCompanyDetailsPage_Postal_District_ComboBox_value}    (//div[@formgroupname='postalAddress']//span[@class='label-content' and contains(text(),'District')]/following-sibling::ng-select//div[@class='ng-value-container']/parent::div/following-sibling::ng-dropdown-panel//span)
+${Retail_HK_AccountCompanyDetailsPage_Postal_Area_ComboBox_Value}    (//div[@formgroupname='postalAddress']//span[@class='label-container' and contains(text(),'Area')]/following-sibling::ng-select//div[@class='ng-value-container']/parent::div/following-sibling::ng-dropdown-panel//span)
+${Retail_HK_AccountCompanyDetailsPage_Postal_District_ComboBox_value}    (//div[@formgroupname='postalAddress']//span[@class='label-container' and contains(text(),'District')]/following-sibling::ng-select//div[@class='ng-value-container']/parent::div/following-sibling::ng-dropdown-panel//span)
 
-${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_Area_ComboBox}    (//div[@formgroupname='deliveryAddress']//span[@class='label-content' and contains(text(),'Area')]/following-sibling::ng-select//div[@class='ng-value-container'])
+${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_Area_ComboBox}    (//div[@formgroupname='deliveryAddress']//span[@class='label-container' and contains(text(),'Area')]//following-sibling::ng-select//div[@class='ng-value-container'])
 ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_Area_ComboBox_Container}    (//form//div[@formgroupname='deliveryAddress']//ng-select[@formcontrolname='area']//ng-dropdown-panel//div//div[@role='option'])
-${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_District_ComboBox}    (//div[@formgroupname='deliveryAddress']//span[@class='label-content' and contains(text(),'District')]/parent::label/following-sibling::ng-select//div[@class='ng-value-container'])
+${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_District_ComboBox}    (//div[@formgroupname='deliveryAddress']//span[@class='label-container' and contains(text(),'District')]/parent::label//following-sibling::ng-select//div[@class='ng-value-container'])
 ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_District_ComboBox_Container}    (//form//div[@formgroupname='deliveryAddress']//ng-select[@formcontrolname='district']//ng-dropdown-panel//div//div[@role='option'])
 
-${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_Area_ComboBox_Value}    (//div[@formgroupname='deliveryAddress']//span[@class='label-content' and contains(text(),'Area')]/following-sibling::ng-select//div[@class='ng-value-container']/parent::div/following-sibling::ng-dropdown-panel//span)
-${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_District_ComboBox_value}    (//div[@formgroupname='deliveryAddress']//span[@class='label-content' and contains(text(),'District')]/parent::label/following-sibling::ng-select//div[@class='ng-value-container']/parent::div/following-sibling::ng-dropdown-panel//span)
+${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_Area_ComboBox_Value}    (//div[@formgroupname='deliveryAddress']//span[@class='label-container' and contains(text(),'Area')]/following-sibling::ng-select//div[@class='ng-value-container']/parent::div//following-sibling::ng-dropdown-panel//span)
+${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_District_ComboBox_value}    (//div[@formgroupname='deliveryAddress']//span[@class='label-container' and contains(text(),'District')]/parent::label//following-sibling::ng-select//div[@class='ng-value-container']/parent::div/following-sibling::ng-dropdown-panel//span)
 
 
 
@@ -2211,8 +2215,7 @@ ${AllProdPageRemoveOneButton}    (//button[@aria-label='Remove one'])
 
 #-----------------------------------------------------Retail All Product Page Pop Up Message
 
-${Retail_AllProdPagePopUpMessageContainer}     //div[@class='cx-modal-content']//div[@class='cx-dialog-body modal-body']
-${Retail_AllProdPagePopUpSentMessage}    //div[@class='cx-modal-content']//div[@class='cx-dialog-body modal-body thank-you']
+${Retail_AllProdPagePopUpMessageContainer}    //div[@class='cx-modal-content']
 ${Retail_AllProdPagePopUpMessageToSupplierlabel}    //div[@class='col-sm-12 header']//span
 ${Retail_AllProdPagePopUpMessageSubjectlabel}    //div[@class='col-sm-12']//span[contains(text(),'Subject')]
 ${Retail_AllProdPagePopUpMessageMessagelabel}    //div[@class='col-sm-12']//span[contains(text(),'Message')]
@@ -2257,8 +2260,6 @@ ${ProductSelectionInStockDCStockInfoContainer}    //dpp-popover-info//cx-popover
 
 ${ProductSelectionInStockDCStockQtyTextBoxValue}    2
 
-${ProductSelectionQtyTextBoxValue}    999
-
 #-----------------------------------------------------Retail Product Selection In Stock Only
 ${ProductSelectionInStockOnly}    (//div[@class='custom-product-list' or @class='product-grid-list'][.//p[@class='inStock mr-0']][not(.//p[@class='inStock pr-2'])])
 ${ProductSelectionInStockOnlyContainer}    (//div[@class='custom-product-list' or @class='product-grid-list'][.//p[@class='inStock mr-0']][not(.//p[@class='inStock pr-2'])])[1]
@@ -2296,11 +2297,11 @@ ${ProductSelectionOutofStockDCStockQtyTextBoxValue}    2
 #-----------------------------------------------------Retail Product Selection Out of Stock
 ${ProductSelectionOutofStock}    (//div[@class='custom-product-list' or @class='product-grid-list'][.//p[@class='outOfStock mr-0']][not(.//p[@class='inStock pr-2'])])
 ${ProductSelectionOutofStockContainer}    (//div[@class='custom-product-list' or @class='product-grid-list'][.//p[@class='outOfStock mr-0' or @class='outOfStock mr-0 hk']][not(.//p[@class='inStock pr-2'])])[1]
-${ProductSelectionOutofStockProductNameContainer}    ((//div[@class='custom-product-list'][.//p[@class='outOfStock mr-0']][not(.//p[@class='inStock pr-2'])]//div[@class='col-12 col-md-5 mb-3']//a)|(//div[@class='product-grid-list'][.//p[@class='outOfStock mr-0 hk']][not(.//p[@class='inStock pr-2'])]//div[@class='list-item__desc']//span))[1]
-${ProductSelectionOutofStockProductPriceContainer}    ((//div[@class='custom-product-list'][.//p[@class='outOfStock mr-0']][not(.//p[@class='inStock pr-2'])]//div[@class='col-12 col-md-2 px-0'])|(//div[@class='product-grid-list'][.//p[@class='outOfStock mr-0 hk']][not(.//p[@class='inStock pr-2'])]//div[@class='list-item__price']))[1]
-${ProductSelectionOutofStockProductImageContainer}    ((//div[@class='custom-product-list'][.//p[@class='outOfStock mr-0']][not(.//p[@class='inStock pr-2'])]//div[@class='col-12 col-md-2'])|(//div[@class='product-grid-list'][.//p[@class='outOfStock mr-0 hk']][not(.//p[@class='inStock pr-2'])]//div[@class='list-item__img']))[1]
+${ProductSelectionOutofStockProductNameContainer}    ((//div[@class='custom-product-list'][.//p[@class='outOfStock mr-0']][not(.//p[@class='inStock pr-2'])]//div[@class='col-12 col-md-5 mb-3']//a)|(//div[@class='product-grid-list'][.//p[@class='outOfStock mr-0 hk' or @class='outOfStock mr-0']][not(.//p[@class='inStock pr-2'])]//div[@class='list-item__desc']//span))[1]
+${ProductSelectionOutofStockProductPriceContainer}    ((//div[@class='custom-product-list'][.//p[@class='outOfStock mr-0']][not(.//p[@class='inStock pr-2'])]//div[@class='col-12 col-md-2 px-0'])|(//div[@class='product-grid-list'][.//p[@class='outOfStock mr-0 hk' or @class='outOfStock mr-0']][not(.//p[@class='inStock pr-2'])]//div[@class='list-item__price']))[1]
+${ProductSelectionOutofStockProductImageContainer}    ((//div[@class='custom-product-list'][.//p[@class='outOfStock mr-0']][not(.//p[@class='inStock pr-2'])]//div[@class='col-12 col-md-2'])|(//div[@class='product-grid-list'][.//p[@class='outOfStock mr-0 hk' or @class='outOfStock mr-0']][not(.//p[@class='inStock pr-2'])]//div[@class='list-item__img']))[1]
 ${ProductSelectionOutofStockEnqButton}    (//div[@class='custom-product-list' or @class='product-grid-list'][.//p[@class='outOfStock mr-0' or @class='outOfStock mr-0 hk']][not(.//p[@class='inStock pr-2'])]//button[@class='btn btn-outline-secondary enquire-btn'])[1]
-${ProductSelectionOutofStockSoldBySellerButton}    ((//div[@class='custom-product-list'][.//p[@class='outOfStock mr-0']][not(.//p[@class='inStock pr-2'])]//div[@class='sold-by'])|(//div[@class='product-grid-list'][.//p[@class='outOfStock mr-0 hk']][not(.//p[@class='inStock pr-2'])]//div[@class='seller-info']))[1]
+${ProductSelectionOutofStockSoldBySellerButton}    ((//div[@class='custom-product-list'][.//p[@class='outOfStock mr-0']][not(.//p[@class='inStock pr-2'])]//div[@class='sold-by'])|(//div[@class='product-grid-list'][.//p[@class='outOfStock mr-0 hk'or @class='outOfStock mr-0']][not(.//p[@class='inStock pr-2'])]//div[@class='seller-info']))[1]
 ${ProductSelectionOutofStockSoldBySellerContainer}    //dpp-sold-by-seller//div[@class='cx-modal-content']
 
 #-----------------------------------------------------Retail Product Selection Price Not Available

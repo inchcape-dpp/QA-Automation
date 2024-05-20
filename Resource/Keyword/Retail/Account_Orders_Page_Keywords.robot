@@ -453,7 +453,7 @@ User should be able to view order with Submitted Status in Retail Account Orders
 User should be able to click order with Submitted Status in Retail Account Orders Page
     wait until element is visible    ${Retail_AccountOrderPageSubmittedPartRef}    10
     click element    ${Retail_AccountOrderPageSubmittedPartRef}
-    wait until element is visible    ${Retail_AccountOrderDetailsOrderHeader}
+    wait until element is visible    ${Retail_AccountOrderDetailsOrderHeader}    10
     capture page screenshot
     sleep    2
 
@@ -513,6 +513,7 @@ User should be able to click order with Orders with Returns Status in Retail Acc
 
 User should be able to click Back to Customer Orders in Retail Account Order Details Page
     wait until element is visible    ${Retail_AccountOrderDetailsBackButton}    10
+    scroll element into view    ${Retail_AccountAccountpageMyAccountLabel}
     scroll element into view    ${Retail_AccountOrderDetailsBackButton}
     capture element screenshot    ${Retail_AccountOrderDetailsBackButton}
     click element    ${Retail_AccountOrderDetailsBackButton}

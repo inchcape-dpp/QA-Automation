@@ -372,7 +372,7 @@ User should be able to edit shipping address on change shipping in HK Retail Che
     capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}
     sleep    2
 
-User should be able to cliear shipping address on shipping in HK Retail Checkout Page
+User should be able to clear shipping address on shipping in HK Retail Checkout Page
     wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox_Clear_Button}    10
     capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox_Clear_Button}
     click element    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox_Clear_Button}
@@ -414,9 +414,9 @@ User should be able to select Random Area on change shipping in HK Retail Checko
     ${AreaCount}    get element count    ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_Area_ComboBox_Options}
     ${AreaRanIndex}    evaluate    random.randint(1,${AreaCount})
     mouse over    ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_Area_ComboBox_Options}
-    scroll element into view    (//dpp-hk-checkout-address-dialog//label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${AreaRanIndex}]
-    capture element screenshot    (//dpp-hk-checkout-address-dialog//label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${AreaRanIndex}]
-    click element    (//dpp-hk-checkout-address-dialog//label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${AreaRanIndex}]
+    scroll element into view    (//label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${AreaRanIndex}]
+    capture element screenshot    (//label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${AreaRanIndex}]
+    click element    (//label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${AreaRanIndex}]
     sleep    2
 
 User should be able to click District Dropdown on change shipping in HK Retail Checkout Page
@@ -430,9 +430,9 @@ User should be able to select Random District on change shipping in HK Retail Ch
     ${DistrictCount}    get element count    ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_District_ComboBox_Options}
     ${DistrictRanIndex}    evaluate    random.randint(1,${DistrictCount})
     mouse over    ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_District_ComboBox_Options}
-    scroll element into view    (//dpp-hk-checkout-address-dialog//label[contains(text(),'District') or contains(text(),'區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${DistrictRanIndex}]
-    capture element screenshot    (//dpp-hk-checkout-address-dialog//label[contains(text(),'District') or contains(text(),'區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${DistrictRanIndex}]
-    click element    (//dpp-hk-checkout-address-dialog//label[contains(text(),'District') or contains(text(),'區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${DistrictRanIndex}]
+    scroll element into view    (//label[contains(text(),'District') or contains(text(),'區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${DistrictRanIndex}]
+    capture element screenshot    (//label[contains(text(),'District') or contains(text(),'區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${DistrictRanIndex}]
+    click element    (//label[contains(text(),'District') or contains(text(),'區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${DistrictRanIndex}]
     sleep    2
 
 User should be able to click Save Button on change shipping in HK Retail Checkout Page
@@ -631,7 +631,7 @@ User should be albe to input Email
     wait until element is visible    ${Retail_HK_CheckoutPage_PaymentMethod_Frame_Email_Label}    10
     wait until element is visible    ${Retail_HK_CheckoutPage_PaymentMethod_Frame_Email_TextBox}    10
     clear element text    ${Retail_HK_CheckoutPage_PaymentMethod_Frame_Email_TextBox}
-    input text    ${Retail_HK_CheckoutPage_PaymentMethod_Frame_Email_TextBox}    ${Retail_HK_CheckoutPage_PaymentMethod_Frame_Email_Value}
+    input text    ${Retail_HK_CheckoutPage_PaymentMethod_Frame_Email_TextBox}    ${Username}
     capture element screenshot    ${Retail_HK_CheckoutPage_PaymentMethod_Frame_Email_TextBox}
     sleep    2
 

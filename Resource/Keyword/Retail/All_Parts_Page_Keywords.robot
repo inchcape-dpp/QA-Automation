@@ -3,7 +3,7 @@ Documentation    Suite description
 
 Library    SeleniumLibrary
 Library    String
-Library    ExcelLibrary
+
 
 #Resource  ../../../Resource/testdata/config.robot
 Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
