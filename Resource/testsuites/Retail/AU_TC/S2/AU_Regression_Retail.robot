@@ -305,7 +305,7 @@ Home Page - User should be able to Select and Save Vehicle using Home Page manua
     run keyword and continue on failure    User should be able to select details on manual search in AU Retail Home Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User shoud be albe to click search this vehicle on manual seearh in AU Retail Home Page
-    run keyword and continue on failure    User should be able to click Select and Save Vehicle button on Search Popup in AU Retail Home Page
+    run keyword and continue on failure    User should be able to Save or Select Manual Vehicle Search on Search Popup in AU Retail Home Page
     run keyword and continue on failure    TC Sleep
 
 Home Page - User should be able to Search by Rego in AU Retail Home Page
@@ -315,7 +315,7 @@ Home Page - User should be able to Search by Rego in AU Retail Home Page
     run keyword and continue on failure    User should be able to select state in AU Retail Home Page
     run keyword and continue on failure    User should be able to input rego in AU Retail Home Page
     run keyword and continue on failure    User should be albe to click search button in AU Retail Home Page
-    run keyword and continue on failure    User should be able to click Select Vehicle button on Search Popup in AU Retail Home Page
+    run keyword and continue on failure    User should be able to Save or Select Manual Vehicle Search on Search Popup in AU Retail Home Page
     run keyword and continue on failure    TC Sleep
 
 Home Page - User should be able to Search by Rego 2 in AU Retail Home Page
@@ -325,7 +325,7 @@ Home Page - User should be able to Search by Rego 2 in AU Retail Home Page
     run keyword and continue on failure    User should be able to select state in AU Retail Home Page
     run keyword and continue on failure    User should be able to input rego 2 in AU Retail Home Page
     run keyword and continue on failure    User should be albe to click search button in AU Retail Home Page
-    run keyword and continue on failure    User should be able to click Select Vehicle button on Search Popup in AU Retail Home Page
+    run keyword and continue on failure    User should be able to Save or Select Manual Vehicle Search on Search Popup in AU Retail Home Page
     run keyword and continue on failure    TC Sleep
 
 Home Page - User should be able to Search by Rego 3 in AU Retail Home Page
@@ -335,7 +335,7 @@ Home Page - User should be able to Search by Rego 3 in AU Retail Home Page
     run keyword and continue on failure    User should be able to select state in AU Retail Home Page
     run keyword and continue on failure    User should be able to input rego 3 in AU Retail Home Page
     run keyword and continue on failure    User should be albe to click search button in AU Retail Home Page
-    run keyword and continue on failure    User should be able to click Select Vehicle button on Search Popup in AU Retail Home Page
+    run keyword and continue on failure    User should be able to Save or Select Manual Vehicle Search on Search Popup in AU Retail Home Page
     run keyword and continue on failure    TC Sleep
 
 Home Page - User should be able to Search by VIN in AU Retail Home Page
@@ -344,7 +344,7 @@ Home Page - User should be able to Search by VIN in AU Retail Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be albe to input vin in AU Retail Home Page
     run keyword and continue on failure    User should be albe to click search button in AU Retail Home Page
-    run keyword and continue on failure    User should be able to click Select Vehicle button on Search Popup in AU Retail Home Page
+    run keyword and continue on failure    User should be able to Save or Select Manual Vehicle Search on Search Popup in AU Retail Home Page
     run keyword and continue on failure    TC Sleep
 
 Home Page - User should be able to Search by VIN 2 in AU Retail Home Page
@@ -353,7 +353,7 @@ Home Page - User should be able to Search by VIN 2 in AU Retail Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be albe to input vin 2 in AU Retail Home Page
     run keyword and continue on failure    User should be albe to click search button in AU Retail Home Page
-    run keyword and continue on failure    User should be able to click Select Vehicle button on Search Popup in AU Retail Home Page
+    run keyword and continue on failure    User should be able to Save or Select Manual Vehicle Search on Search Popup in AU Retail Home Page
     run keyword and continue on failure    TC Sleep
 
 Home Page - User should be able to Search by VIN 3 in AU Retail Home Page
@@ -362,7 +362,7 @@ Home Page - User should be able to Search by VIN 3 in AU Retail Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be albe to input vin 3 in AU Retail Home Page
     run keyword and continue on failure    User should be albe to click search button in AU Retail Home Page
-    run keyword and continue on failure    User should be able to click Select Vehicle button on Search Popup in AU Retail Home Page
+    run keyword and continue on failure    User should be able to Save or Select Manual Vehicle Search on Search Popup in AU Retail Home Page
     run keyword and continue on failure    TC Sleep
 
 

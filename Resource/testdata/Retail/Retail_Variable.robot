@@ -9,19 +9,23 @@ ${Logo}    //*[@class='logo is-initialized']
 ${Header}    //div[@class='heading' and (contains(text(),'Login') or (contains(text(),'客戶登入')))]
 ${Email}    //*[@type='email']
 ${Pass}    //*[@type='password']
-${Remember}    //div[@class='remember-me-checkbox']
+${Remember}    //*[(contains(text(),'Remember Me') or contains(text(),'記住此帳戶'))]
 ${RememberCheck}    //input[@type='checkbox']
 ${Forgot}    //a[(contains(text(),'Forgot Password')) or contains(text(),'忘記密碼')]
-${LoginButton}    //button[@type='submit']
-${NoAccount}    //div[@class='not-having-account']
-${CreateAccount}    //a[@class='create-account']
+${LoginButton}    //button[@type='submit' and (contains(text(),'Login') or (contains(text(),' 登入 ')))]
+${NoAccount}    //*[(contains(text(),'No Account?')) or contains(text(),'沒有帳戶?')]
+${CreateAccount}    //*[(contains(text(),'Create Account')) or contains(text(),'註冊帳戶')]
 ${FooterLogo}    //div[@class='footer-logo']
 ${PN}    //*[(contains(text(),' Privacy Policy ') or contains(text(),'私隱條款'))]
 ${TnC}    //*[contains(text(),' Terms & Conditions ') or contains(text(),'條款及細則')]
-${CopyRight}    (//dpp-navigation-ui//div[@class='wrapper'])[3]
+${CopyRight}    //*[contains(text(),' © 2023 PartsLane. All Rights Reserved.') or contains(text(),'2023 Partslane. 保留所有權利.')]
+${About Us}     //*[contains(text(),' About Us') or contains(text(),'關於我們')]
+${Frequently Asked Questions}     //*[contains(text(),' About Us') or contains(text(),'常見問題')]
+${Contact Us}     //*[contains(text(),' Contact Us') or contains(text(),'聯絡我們')]
 
-${InvalidEmailMessage}    //div[@class='form-errors']
-${InvalidEmailPassMessage}    //div[@class='alert alert-danger']
+
+${InvalidEmailMessage}    //*[(contains(text(),'Please enter a valid email address') or contains(text(),'請輸入正確的電子郵件'))]
+${InvalidEmailPassMessage}    //*[(contains(text(),'Password is a required field') or contains(text(),'密碼是必填項目'))]
 
 ${InvalidEmail}    Hello
 ${InvalidPass}    Hello
@@ -44,7 +48,7 @@ ${Retail_ForgotPasswordPageEmailErrorMessage}    //dpp-forgot-password//div[@cla
 #-----------------------------------------------------Retail Registration Page------------------------------------------
 
 
-${Retail_RegistrationPageBackToLoginButton}    //div[@class='col-sm-12 col-md-7 p-0']//label[@class='cx-section pb-0 form-section__back']//a|//div[@class='col-8 p-0']//a
+${Retail_RegistrationPageBackToLoginButton}    //div[@class='col-sm-12 col-md-7 p-0']//a|//div[@class='col-8 p-0']//a[(contains(text(),'Back to Login') or contains(text(),' 返回登錄'))]
 ${Retail_RegistrationPageLogo}    (//cx-media[@class='logo is-initialized']//img)[1]
 ${Retail_RegistrationJoinPartsLaneHeader}    //div[@class='cx-section']//*[contains(text(),'Join PartsLane') or contains(text(),'加入PartsLane')]
 ${Retail_RegistrationRegisteredSupplierLabel}    //div[@class='cx-section']//*[@class='mb-5']
@@ -66,12 +70,12 @@ ${Retail_RegistrationYesAccountNextButton}    //div[@class='col-md-6 option-wrap
 #-----------------------------------------------------Retail Registration Page Labels
 ${Retail_RegistrationPrefSuppLabel}    //form//div[@class='col-md-6']//ng-select[@formcontrolname='preferredSeller']/preceding-sibling::span[@class='label-content']|//form//div[@class='col-12']//ng-select[@formcontrolname='preferredSeller']/preceding-sibling::span[@class='label-content']
 ${Retail_RegistrationAccNumLabel}    //form//div[@class='col-md-6']//input[@formcontrolname='accountNumber']/preceding-sibling::span[@class='label-content']
-${Retail_RegistrationCompNameLabel}    //form//div[@class='col-md-6']//input[@formcontrolname='companyName']/preceding-sibling::span[@class='label-content']|//form//div[@class='col-12']//input[@formcontrolname='companyName']/preceding-sibling::span[@class='label-content']
+${Retail_RegistrationCompNameLabel}    //form//div[@class='col-md-6']//input[@formcontrolname='companyName']/preceding-sibling::span[@class='label-content']|//form//div[@class='col-12']//input[@formcontrolname='companyName']/preceding-sibling::span[@class='label-content'][contains(text(),'公司名稱*')]
 ${Retail_RegistrationTradenameLabel}    //form//div[@class='col-md-6']//input[@formcontrolname='tradingName']/preceding-sibling::span[@class='label-content']
 
-${Retail_RegistrationPostalAddLabel}    //form//div[@formgroupname='postalAddress']//div[@class='col-md-12 mb-2']//span[@class='label-content']|//form//div[@formgroupname='postalAddress']//div[@class='col-12 mb-2']//span[@class='label-content' or @class='label-container']
-${Retail_RegistrationPostalAddLine1Label}    //form//div[@formgroupname='postalAddress']//div[@class='col-md-12']//input[@formcontrolname='addressLine1']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
-${Retail_RegistrationPostalAddLine2Label}    //form//div[@formgroupname='postalAddress']//div[@class='col-md-12']//input[@formcontrolname='addressLine2']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']|//form//div[@formgroupname='postalAddress']//div[@class='col-12']//input[@formcontrolname='addressLine2']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey' or @class='label-container color-grey']
+${Retail_RegistrationPostalAddLabel}    //form//div[@formgroupname='postalAddress']//div[@class='col-12 mb-2']//span[@class='label-container'][contains(text(),'郵寄地址')]|//form//div[@formgroupname='postalAddress']//div[@class='col-md-12 mb-2']//span[@class='label-content']
+${Retail_RegistrationPostalAddLine1Label}    //form//div[@formgroupname='postalAddress']//div[@class='col-12']//*[contains(text(),'地址第一行*')]|//form//div[@formgroupname='postalAddress']//span[@class='label-content color-grey'][contains(text(),'Address Line 1')]
+${Retail_RegistrationPostalAddLine2Label}    //form//div[@formgroupname='postalAddress']//div[@class='col-12']//*[contains(text(),'地址第二行')]|//form//div[@formgroupname='postalAddress']//span[@class='label-content color-grey'][contains(text(),'Address Line 2')]
 ${Retail_RegistrationPostalSuburbLabel}    //form//div[@formgroupname='postalAddress']//input[@formcontrolname='suburb']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
 ${Retail_RegistrationPostalPostalCodeLabel}    //form//div[@formgroupname='postalAddress']//input[@formcontrolname='postalCode']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
 ${Retail_RegistrationPostalStateLabel}    //form//div[@formgroupname='postalAddress']//ng-select[@formcontrolname='region']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
@@ -483,6 +487,7 @@ ${Retail_AU_HomePage_Search_PopUp_SelectSave_Button}    //dpp-vehicle-results//b
 ${Retail_AU_HomePage_Search_PopUp_SelectVehicle_Button}    //dpp-vehicle-results//button[@class='btn btn-sm btn-block ml-2 mt-0 p-1 select-this-vehicle-btn btn-secondary' and contains(text(),'Select This Vehicle')]
 ${Retail_AU_HomePage_Search_PopUp_SelectSave_Button_Disabled}    //dpp-vehicle-results//button[@class='btn btn-sm btn-block mt-0 p-1 select-this-vehicle-btn btn-default vehicleListing-btn' and @disabled and contains(text(),'Select & Save Vehicle')]
 
+${Retail_AU_HomePage_Search_PopUp_SelectSave_Button_Disabled}    //dpp-vehicle-results//button[@class='btn btn-sm btn-block mt-0 p-1 select-this-vehicle-btn btn-default vehicleListing-btn' and @disabled and contains(text(),'Select & Save Vehicle')]
 
 ${Retail_AU_HomePage_Manual_Model_Combobox}    //dpp-search-by-vehicle//ng-select[@formcontrolname='model']//div[@class='ng-select-container']
 ${Retail_AU_HomePage_Manual_Year_Combobox}    //dpp-search-by-vehicle//ng-select[@formcontrolname='year']//div[@class='ng-select-container']
@@ -765,37 +770,37 @@ ${Retail_HK_CheckoutPage_ShippingAddress_AddInstructionDelete_PopUp_No_Button}  
 ${Retail_HK_CheckoutPage_ShippingAddress_AddInstruction_TextBox_Value1}    Tests Inst
 ${Retail_HK_CheckoutPage_ShippingAddress_AddInstruction_TextBox_Value2}    Tests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests InstTests Inst1
 
-${Retail_HK_CheckoutPageShippingAddressChangeButton}    //div[@class='col-2 text-right']//a
-${Retail_HK_CheckoutPageShippingAddressChangePopUpContainer}    //dpp-hk-checkout-address-dialog//div|//dpp-multi-step-checkout-address-dialog//div
-${Retail_HK_CheckoutPageShippingAddressChangePopUpFirstNameLabel}    //label[contains(text(),'First Name') or contains(text(),'名字')]
-${Retail_HK_CheckoutPageShippingAddressChangePopUpLastNameLabel}    //label[contains(text(),'Last Name') or contains(text(),'姓氏')]
-${Retail_HK_CheckoutPageShippingAddressChangePopUpEmailAddressLabel}    //label[contains(text(),'Email Address') or contains(text(),'電子郵件地址')]
-${Retail_HK_CheckoutPageShippingAddressChangePopUpMobileNumberLabel}    //label[contains(text(),'Mobile Number') or contains(text(),'手機號碼')]
-${Retail_HK_CheckoutPageShippingAddressChangePopUpLandlineNumberLabel}    //label[contains(text(),'Landline Number') or contains(text(),'分機號')]
-${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1Label}    //label[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]
-${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine2Label}    //label[contains(text(),'Address Line 2') or contains(text(),'地址第二行')]
-${Retail_HK_CheckoutPageShippingAddressChangePopUpAreaLabel}    //label[contains(text(),'Area') or contains(text(),'地區')]
-${Retail_HK_CheckoutPageShippingAddressChangePopUpDistrictLabel}    //label[contains(text(),'District')]|(//dpp-hk-checkout-address-dialog//label[contains(text(),'區')])
-${Retail_HK_CheckoutPageShippingAddressChangePopUpDeliveryInstructionsLabel}    //label[contains(text(),'Delivery Instructions') or contains(text(),'發貨備註')]
+${Retail_HK_CheckoutPageShippingAddressChangeButton}    //dpp-hk-shipping-address//div[@class='col-2 text-right']//a
+${Retail_HK_CheckoutPageShippingAddressChangePopUpContainer}    //dpp-hk-checkout-address-dialog//div
+${Retail_HK_CheckoutPageShippingAddressChangePopUpFirstNameLabel}    //dpp-hk-checkout-address-dialog//label[contains(text(),'First Name') or contains(text(),'名字')]
+${Retail_HK_CheckoutPageShippingAddressChangePopUpLastNameLabel}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Last Name') or contains(text(),'姓氏')]
+${Retail_HK_CheckoutPageShippingAddressChangePopUpEmailAddressLabel}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Email Address') or contains(text(),'電子郵件地址')]
+${Retail_HK_CheckoutPageShippingAddressChangePopUpMobileNumberLabel}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Mobile Number') or contains(text(),'手機號碼')]
+${Retail_HK_CheckoutPageShippingAddressChangePopUpLandlineNumberLabel}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Landline Number') or contains(text(),'分機號')]
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1Label}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine2Label}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Address Line 2') or contains(text(),'地址第二行')]
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAreaLabel}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Area') or contains(text(),'地區')]
+${Retail_HK_CheckoutPageShippingAddressChangePopUpDistrictLabel}    //dpp-hk-checkout-address-dialog//label[contains(text(),'District')]|(//dpp-hk-checkout-address-dialog//label[contains(text(),'區')])[2]
+${Retail_HK_CheckoutPageShippingAddressChangePopUpDeliveryInstructionsLabel}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Delivery Instructions') or contains(text(),'發貨備註')]
 
-${Retail_HK_CheckoutPageShippingAddressChangePopUpFirstNameTextBox}    //input[@formcontrolname='firstName']
-${Retail_HK_CheckoutPageShippingAddressChangePopUpLastNameTextBox}    //input[@formcontrolname='lastName']
-${Retail_HK_CheckoutPageShippingAddressChangePopUpEmailAddressTextBox}    //input[@formcontrolname='email']
-${Retail_HK_CheckoutPageShippingAddressChangePopUpMobileNumberTextBox}    //label[contains(text(),'Mobile Number') or contains(text(),'手機號碼')]/parent::div//input
-${Retail_HK_CheckoutPageShippingAddressChangePopUpLandlineNumberTextBox}    //label[contains(text(),'Landline Number') or contains(text(),'分機號')]/parent::div//input
-${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}    //label[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]/parent::div//input
-${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox_Clear_Button}    //label[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]/parent::div//span[@title='Clear all']
-${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine2TextBox}    //label[contains(text(),'Address Line 2') or contains(text(),'地址第二行')]/parent::div//input
-${Retail_HK_CheckoutPageShippingAddressChangePopUpDeliveryInstructionsTextBox}    //label[contains(text(),'Delivery Instructions') or contains(text(),'發貨備註')]/following-sibling::div//textarea
+${Retail_HK_CheckoutPageShippingAddressChangePopUpFirstNameTextBox}    //dpp-hk-checkout-address-dialog//input[@formcontrolname='firstName']
+${Retail_HK_CheckoutPageShippingAddressChangePopUpLastNameTextBox}    //dpp-hk-checkout-address-dialog//input[@formcontrolname='lastName']
+${Retail_HK_CheckoutPageShippingAddressChangePopUpEmailAddressTextBox}    //dpp-hk-checkout-address-dialog//input[@formcontrolname='email']
+${Retail_HK_CheckoutPageShippingAddressChangePopUpMobileNumberTextBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Mobile Number') or contains(text(),'手機號碼')]/parent::div//input
+${Retail_HK_CheckoutPageShippingAddressChangePopUpLandlineNumberTextBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Landline Number') or contains(text(),'分機號')]/parent::div//input
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]/parent::div//input
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox_Clear_Button}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]/parent::div//span[@title='Clear all']
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine2TextBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Address Line 2') or contains(text(),'地址第二行')]/parent::div//input
+${Retail_HK_CheckoutPageShippingAddressChangePopUpDeliveryInstructionsTextBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Delivery Instructions') or contains(text(),'發貨備註')]/following-sibling::div//textarea
 
 ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_AddressLine1_Suggest_Options}    (//dpp-autocomplete-search//ng-dropdown-panel//div//div[@role='option'])
 ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_AddressLine1_Manual_Options}    //dpp-autocomplete-search//ng-dropdown-panel//div//p/parent::div
 
 
-${Retail_HK_CheckoutPageShippingAddressChangePopUpAreaComboBox}    //label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//div[@class='ng-select-container ng-has-value' or @class='ng-select-container']
-${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_Area_ComboBox_Options}    (//label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])
-${Retail_HK_CheckoutPageShippingAddressChangePopUpDistrictComboBox}    //label[contains(text(),'District')]/following-sibling::ng-select//div[@class='ng-select-container ng-has-value' or @class='ng-select-container']
-${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_District_ComboBox_Options}   (//label[contains(text(),'District') or contains(text(),'區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAreaComboBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//div[@class='ng-select-container ng-has-value']
+${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_Area_ComboBox_Options}    (//dpp-hk-checkout-address-dialog//label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])
+${Retail_HK_CheckoutPageShippingAddressChangePopUpDistrictComboBox}    //dpp-hk-checkout-address-dialog//label[contains(text(),'District')]/following-sibling::ng-select//div[@class='ng-select-container ng-has-value' or @class='ng-select-container']|(//dpp-hk-checkout-address-dialog//label[contains(text(),'區')])[2]/following-sibling::ng-select//div[@class='ng-select-container ng-has-value' or @class='ng-select-container']
+${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_District_ComboBox_Options}   (//dpp-hk-checkout-address-dialog//label[contains(text(),'District') or contains(text(),'區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])
 
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpCancelButton}    //div[@class='btn-action-container desktop']//button[@class='btn btn-outline-secondary']
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpSaveButton}    //div[@class='btn-action-container desktop']//button[@class='btn btn-secondary']
@@ -1749,7 +1754,7 @@ ${Retail_AccountMessagePageDetailsFirstPageButton}    (//a[@aria-label='first pa
 ${Retail_AccountMessagePageDetailsNextPageButtonDisabled}    //a[@class='next disabled']
 ${Retail_AccountMessagePageDetailsPreviousPageButtonDisabled}    //a[@class='previous disabled']
 
-${Retail_AccountMessagePageNewMessageButton}   //dpp-message-list//button[@class='btn btn-outline-secondary w-100 p-0']
+${Retail_AccountMessagePageNewMessageButton}    //dpp-message-list//div[@class='row']//button[@class='btn btn-outline-secondary w-100']
 
 ${Retail_AccountMessagePageNewMessagePopUpContainer}    //div[@class='cx-dialog-body modal-body']
 ${Retail_AccountMessagePageNewMessagePopUpToSupplierLabel}    //div[@class='col-sm-12 header']//span[@class='message-subject mb-1']
