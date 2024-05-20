@@ -1,5 +1,5 @@
 # created by virtualenv automatically
-venv/
+venv
 testdata/Dealer/AU_Config/
 testdata/Dealer/HK_Config/
 testdata/Retail/AU_Config/
