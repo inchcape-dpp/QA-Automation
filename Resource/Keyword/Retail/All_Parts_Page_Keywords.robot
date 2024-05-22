@@ -792,7 +792,7 @@ User should be able to input qty item for out of stock and dc stock in Retail Pr
     capture element screenshot    ${ProductSelectionOutofStockDCStockQtyTextBox}
     sleep    2
 
-User should be able to view message pop up in Retail All Products Page
+User should be able to view message pop up in Retail All Products PageUser should be able to click product details Price not Available
     wait until element is visible    ${Retail_AllProdPagePopUpMessageContainer}    10
     wait until element is visible    ${Retail_AllProdPagePopUpMessageToSupplierlabel}    10
     wait until element is visible    ${Retail_AllProdPagePopUpMessageSubjectlabel}    10

@@ -445,11 +445,13 @@ TC-073 - User should be able to side filter product
 
 TC-074 - User should be able to filter product
     [Tags]    All Products Page
-    run keyword and continue on failure    User should be able to filter product name from A to Z
+    run keyword and continue on failure    User should be able to click 1 filter from selected category in Retail Home Page
     run keyword and continue on failure    User should be able to fitler results per page to 100
 
 TC-075 - User should be able to view product In Stock and DC Stock
     [Tags]    All Products Page
+    run keyword and continue on failure    User should be able to click 1 filter from selected category in Retail Home Page
+    run keyword and continue on failure    User should be able to fitler results per page to 100
     run keyword and continue on failure    User should be able to view product In Stock and DC Stock
     run keyword and continue on failure    User should be able to click product details In Stock and DC Stock
     run keyword and continue on failure    User should be able to view product details In Stock and DC Stock
@@ -458,6 +460,8 @@ TC-075 - User should be able to view product In Stock and DC Stock
 
 TC-076 - User should be able to view product Out of Stock and DC Stock
     [Tags]    All Products Page
+    run keyword and continue on failure    User should be able to click 1 filter from selected category in Retail Home Page
+    run keyword and continue on failure    User should be able to fitler results per page to 100
     run keyword and continue on failure    User should be able to view product Out of Stock and DC Stock
     run keyword and continue on failure    User should be able to click product details Out of Stock and DC Stock
     run keyword and continue on failure    User should be able to view product details Out of Stock and DC Stock
@@ -466,6 +470,8 @@ TC-076 - User should be able to view product Out of Stock and DC Stock
 
 TC-077 - User should be able to view product Out of Stock
     [Tags]    All Products Page
+    run keyword and continue on failure    User should be able to click 1 filter from selected category in Retail Home Page
+    run keyword and continue on failure    User should be able to fitler results per page to 100
     run keyword and continue on failure    User should be able to view product Out of Stock
     run keyword and continue on failure    User should be albe to click enquire now button for out of stock in Retail Product Page
     run keyword and continue on failure    User should be able to message out of stock product in Retail Product Page
@@ -476,6 +482,8 @@ TC-077 - User should be able to view product Out of Stock
 
 TC-078 - User should be able to view product Price not Available
     [Tags]    All Products Page
+    run keyword and continue on failure    User should be able to click 1 filter from selected category in Retail Home Page
+    run keyword and continue on failure    User should be able to fitler results per page to 100
     run keyword and continue on failure    User should be able to view product Price not Available
     run keyword and continue on failure    User should be albe to click enquire now button for price not available in Retail Product Page
     run keyword and continue on failure    User should be able to message price not available product in Retail Product Page
@@ -486,9 +494,8 @@ TC-078 - User should be able to view product Price not Available
 
 TC-079 - User should be able to view product In Stock Only
     [Tags]    All Products Page
+    run keyword and continue on failure    User should be able to click 1 filter from selected category in Retail Home Page
     run keyword and continue on failure    User should be able to Filter Products by Stocks
-    run keyword and continue on failure    User should be able to filter product name from A to Z
-    run keyword and continue on failure    User should be able to fitler results per page to 100
     run keyword and continue on failure    User should be able to view product In Stock Only
     run keyword and continue on failure    User should be able to click product details In Stock Only
     run keyword and continue on failure    User should be able to view product details In Stock Only

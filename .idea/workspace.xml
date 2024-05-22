@@ -4,31 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="Commit May 17&#10;&#10;Minisite">
+    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_01_2024_1_34_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_01_2024_1_34_pm__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_01_2024_3_26_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_01_2024_3_26_pm__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_02_2024_2_02_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_02_2024_2_02_pm__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Home_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Home_Page_Keywords.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Login_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Login_Page_Keywords.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/All_Parts_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/All_Parts_Page_Keywords.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/Retail_Variable.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/Retail_Variable.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/AU_Regression_Retail.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/AU_Regression_Retail.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/AU_Regression_Retail.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/AU_Regression_Retail.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/P1/HK_EndToEnd_CompleteOrder_Bronze.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/P1/HK_EndToEnd_CompleteOrder_Bronze.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/P1/HK_EndToEnd_CompleteOrder_Gold-SIlver.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/P1/HK_EndToEnd_CompleteOrder_Gold-SIlver.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/P1/HK_EndToEnd_PriceCheck_Bronze.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/P1/HK_EndToEnd_PriceCheck_Bronze.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/P1/HK_EndToEnd_Re-Order_Bronze.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/P1/HK_EndToEnd_Re-Order_Bronze.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/P1/HK_EndToEnd_Re-Order_Gold-Silver.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/P1/HK_EndToEnd_Re-Order_Gold-Silver.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/P1/HK_Regression_Bronze.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/P1/HK_Regression_Bronze.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/P1/HK_Regression_Gold.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/P1/HK_Regression_Gold.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/P1/HK_Retail_Check_Bronze.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/P1/HK_Retail_Check_Bronze.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/HK_Regression_Bronze.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/HK_Regression_Bronze.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/HK_Regression_Gold.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/HK_Regression_Gold.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/HK_Retail_Check_Bronze.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/HK_Retail_Check_Bronze.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/HK_Retail_Translation.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/HK_Retail_Translation.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -242,6 +230,6 @@
     <MESSAGE value="8:55 AM | 5/06/24&#10;&#10;Minisite" />
     <MESSAGE value="Commit April 1" />
     <MESSAGE value="Commit May 17&#10;&#10;Minisite" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit May 17&#10;&#10;Minisite" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
 </project>

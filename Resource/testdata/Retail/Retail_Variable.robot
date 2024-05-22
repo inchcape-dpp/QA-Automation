@@ -9,19 +9,23 @@ ${Logo}    //*[@class='logo is-initialized']
 ${Header}    //div[@class='heading' and (contains(text(),'Login') or (contains(text(),'客戶登入')))]
 ${Email}    //*[@type='email']
 ${Pass}    //*[@type='password']
-${Remember}    //div[@class='remember-me-checkbox']
+${Remember}    //*[(contains(text(),'Remember Me') or contains(text(),'記住此帳戶'))]
 ${RememberCheck}    //input[@type='checkbox']
 ${Forgot}    //a[(contains(text(),'Forgot Password')) or contains(text(),'忘記密碼')]
-${LoginButton}    //button[@type='submit']
-${NoAccount}    //div[@class='not-having-account']
-${CreateAccount}    //a[@class='create-account']
+${LoginButton}    //button[@type='submit' and (contains(text(),'Login') or (contains(text(),' 登入 ')))]
+${NoAccount}    //*[(contains(text(),'No Account?')) or contains(text(),'沒有帳戶?')]
+${CreateAccount}    //*[(contains(text(),'Create Account')) or contains(text(),'註冊帳戶')]
 ${FooterLogo}    //div[@class='footer-logo']
 ${PN}    //*[(contains(text(),' Privacy Policy ') or contains(text(),'私隱條款'))]
 ${TnC}    //*[contains(text(),' Terms & Conditions ') or contains(text(),'條款及細則')]
-${CopyRight}    (//dpp-navigation-ui//div[@class='wrapper'])[3]
+${CopyRight}    //*[contains(text(),' © 2023 PartsLane. All Rights Reserved.') or contains(text(),'2023 Partslane. 保留所有權利.')]
+${About Us}     //*[contains(text(),' About Us') or contains(text(),'關於我們')]
+${Frequently Asked Questions}     //*[contains(text(),' About Us') or contains(text(),'常見問題')]
+${Contact Us}     //*[contains(text(),' Contact Us') or contains(text(),'聯絡我們')]
 
-${InvalidEmailMessage}    //div[@class='form-errors']
-${InvalidEmailPassMessage}    //div[@class='alert alert-danger']
+
+${InvalidEmailMessage}    //*[(contains(text(),'Please enter a valid email address') or contains(text(),'請輸入正確的電子郵件'))]
+${InvalidEmailPassMessage}    //*[(contains(text(),'Password is a required field') or contains(text(),'密碼是必填項目'))]
 
 ${InvalidEmail}    Hello
 ${InvalidPass}    Hello
@@ -29,6 +33,7 @@ ${InvalidPass}    Hello
 
 ${Retail_HK_LoginPage_English_Button}    //dpp-language-toggle//span[contains(text(),'EN')]
 ${Retail_HK_LoginPage_Chinese_Button}    //dpp-language-toggle//span[contains(text(),'中文')]
+
 
 #-----------------------------------------------------Retail Forgot Password Page---------------------------------------
 ${Retail_ForgotPasswordPageContainer}    //dpp-forgot-password
@@ -44,7 +49,7 @@ ${Retail_ForgotPasswordPageEmailErrorMessage}    //dpp-forgot-password//div[@cla
 #-----------------------------------------------------Retail Registration Page------------------------------------------
 
 
-${Retail_RegistrationPageBackToLoginButton}    //div[@class='col-sm-12 col-md-7 p-0']//a|//div[@class='col-8 p-0']//a
+${Retail_RegistrationPageBackToLoginButton}    //div[@class='col-sm-12 col-md-7 p-0']//label[@class='cx-section pb-0 form-section__back']//a|//div[@class='col-8 p-0']//a[(contains(text(),'Back to Login') or contains(text(),' 返回登錄'))]
 ${Retail_RegistrationPageLogo}    (//cx-media[@class='logo is-initialized']//img)[1]
 ${Retail_RegistrationJoinPartsLaneHeader}    //div[@class='cx-section']//*[contains(text(),'Join PartsLane') or contains(text(),'加入PartsLane')]
 ${Retail_RegistrationRegisteredSupplierLabel}    //div[@class='cx-section']//*[@class='mb-5']
@@ -66,23 +71,22 @@ ${Retail_RegistrationYesAccountNextButton}    //div[@class='col-md-6 option-wrap
 #-----------------------------------------------------Retail Registration Page Labels
 ${Retail_RegistrationPrefSuppLabel}    //form//div[@class='col-md-6']//ng-select[@formcontrolname='preferredSeller']/preceding-sibling::span[@class='label-content']|//form//div[@class='col-12']//ng-select[@formcontrolname='preferredSeller']/preceding-sibling::span[@class='label-content']
 ${Retail_RegistrationAccNumLabel}    //form//div[@class='col-md-6']//input[@formcontrolname='accountNumber']/preceding-sibling::span[@class='label-content']
-${Retail_RegistrationCompNameLabel}    //form//div[@class='col-md-6']//input[@formcontrolname='companyName']/preceding-sibling::span[@class='label-content']|//form//div[@class='col-12']//input[@formcontrolname='companyName']/preceding-sibling::span[@class='label-content']
+${Retail_RegistrationCompNameLabel}    //form//div[@class='col-md-6']//input[@formcontrolname='companyName']/preceding-sibling::span[@class='label-content']|//form//div[@class='col-12']//input[@formcontrolname='companyName']/preceding-sibling::span[@class='label-content'][contains(text(),'公司名稱*')]
 ${Retail_RegistrationTradenameLabel}    //form//div[@class='col-md-6']//input[@formcontrolname='tradingName']/preceding-sibling::span[@class='label-content']
 
-${Retail_RegistrationPostalAddLabel}    //form//div[@formgroupname='postalAddress']//div[@class='col-md-12 mb-2']//span[@class='label-content']|//form//div[@formgroupname='postalAddress']//div[@class='col-12 mb-2']//span[@class='label-content' or @class='label-container']
-${Retail_RegistrationPostalAddLine1Label}    //form//div[@formgroupname='postalAddress']//div[@class='col-md-12']//input[@formcontrolname='addressLine1']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
-${Retail_RegistrationPostalAddLine2Label}    //form//div[@formgroupname='postalAddress']//div[@class='col-md-12']//input[@formcontrolname='addressLine2']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']|//form//div[@formgroupname='postalAddress']//div[@class='col-12']//input[@formcontrolname='addressLine2']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey' or @class='label-container color-grey']
+${Retail_RegistrationPostalAddLabel}    //form//div[@formgroupname='postalAddress']//div[@class='col-12 mb-2']//span[@class='label-container'][contains(text(),'郵寄地址')]|//form//div[@formgroupname='postalAddress']//div[@class='col-md-12 mb-2']//span[@class='label-content']
+${Retail_RegistrationPostalAddLine1Label}     //form//div[@formgroupname='postalAddress']//div[@class='col-12']//*[contains(text(),'地址第一行*')]|//form//div[@formgroupname='postalAddress']//span[@class='label-content color-grey'][contains(text(),'Address Line 1')]
+${Retail_RegistrationPostalAddLine2Label}    //form//div[@formgroupname='postalAddress']//div[@class='col-12']//*[contains(text(),'地址第二行')]|//form//div[@formgroupname='postalAddress']//span[@class='label-content color-grey'][contains(text(),'Address Line 2')]
 ${Retail_RegistrationPostalSuburbLabel}    //form//div[@formgroupname='postalAddress']//input[@formcontrolname='suburb']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
 ${Retail_RegistrationPostalPostalCodeLabel}    //form//div[@formgroupname='postalAddress']//input[@formcontrolname='postalCode']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
 ${Retail_RegistrationPostalStateLabel}    //form//div[@formgroupname='postalAddress']//ng-select[@formcontrolname='region']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
 
-${Retail_HK_RegistrationPostalAreaLabel}    //form//div[@formgroupname='postalAddress']//div[@class='col-6']//ng-select[@formcontrolname='area']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey' or @class='label-container']
-${Retail_HK_RegistrationPostalDistrictLabel}    //form//div[@formgroupname='postalAddress']//div[@class='col-6']//ng-select[@formcontrolname='district']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey' or @class='label-container']
+${Retail_HK_RegistrationPostalAreaLabel}    //form//div[@formgroupname='postalAddress']//div[@class='col-6']//ng-select[@formcontrolname='area']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey' or @class='label-container'][contains(text(),'地區*')]
+${Retail_HK_RegistrationPostalDistrictLabel}    //form//div[@formgroupname='postalAddress']//div[@class='col-6']//ng-select[@formcontrolname='district']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey' or @class='label-container'][contains(text(),'區*')]
 
-${Retail_RegistrationDelAddSameAsPostalLabel}    //form//input[@type='checkbox']/following-sibling::span
-
-${Retail_RegistrationDelAddLabel}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-md-12 mb-2']//span[@class='label-content']|//form//div[@formgroupname='deliveryAddress']//div[@class='col-12 mb-2']//span[@class='label-content' or @class='label-container']
-${Retail_RegistrationDelAddLine1Label}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-md-12']//input[@formcontrolname='addressLine1']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
+${Retail_RegistrationDelAddSameAsPostalLabel}    //form//input[@type='checkbox']/following-sibling::span[contains(text(),'Delivery Address is the same as Postal Address') or contains(text(),'收件地址與聯絡地址相同')]
+${Retail_RegistrationDelAddLabel}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-md-12 mb-2']//span[@class='label-content']|//form//div[@formgroupname='deliveryAddress']//div[@class='col-12 mb-2']//span[@class='label-content' or @class='label-container'][contains(text(),'Delivery Address') or contains(text(),'收件地址')]
+${Retail_RegistrationDelAddLine1Label}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-md-12']//input[@formcontrolname='addressLine1']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']|//form//div[@formgroupname='deliveryAddress']//div[@class='col-12']//dpp-autocomplete-search[@formcontrolname='addressLine1']/preceding-sibling::label//span[contains(text(),'Address Line 1')]//form//div[@formgroupname='deliveryAddress']//div[@class='col-md-12']//input[@formcontrolname='addressLine1']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']|//form//div[@formgroupname='deliveryAddress']//div[@class='col-12']//dpp-autocomplete-search[@formcontrolname='addressLine1']/preceding-sibling::label//span[contains(text(),'地址第一行*')]
 ${Retail_RegistrationDelAddLine2Label}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-md-12']//input[@formcontrolname='addressLine2']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']|//form//div[@formgroupname='deliveryAddress']//div[@class='col-12']//input[@formcontrolname='addressLine2']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey' or @class='label-container color-grey']
 ${Retail_RegistrationDelSuburbLabel}    //form//div[@formgroupname='deliveryAddress']//input[@formcontrolname='suburb']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
 ${Retail_RegistrationDelPostalCodeLabel}    //form//div[@formgroupname='deliveryAddress']//input[@formcontrolname='postalCode']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
