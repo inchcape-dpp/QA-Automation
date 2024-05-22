@@ -970,7 +970,7 @@ ${Retail_PlaceOrderPageViewOrderButton}    //div[@class='container']//button[@cl
 
 #-----------------------------------------------------Retail Account Page-----------------------------------------------
 ${Retail_AccountAccountpageMyAccountLabel}    //div[@class='myaccount']//h2
-${Retail_AccountpageOrdersMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),'Orders')]|//ul[@class='vertical-menu tab-level']//a[contains(text(),' Order History ')]|//div[@class='acc-tab__title']//*[contains(text(),'Order History')]|//ul[@class='vertical-menu tab-level']//*[contains(text(),'Order History')]
+${Retail_AccountpageOrdersMenu}    //div[@class='d-flex acc-tab']//a[contains(text(),'Orders')]|//div[@class='acc-tab__title']//a[contains(text(),'Order History') or contains(text(),'訂單記錄')]
 ${Retail_AccountAccountpageReturnMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),'Return Requests')]|//div[@class='acc-tab__title']//*[contains(text(),'Return Requests')]
 ${Retail_AccountpageSavedCartsMenu}    //div[@class='ml-3']//a[contains(text(),'Saved Carts')]|//div[@class='acc-tab__title']//a[contains(text(),'Saved Carts')]
 ${Retail_AccountpageVehicleListingMenu}    //div[@class='ml-3']//a[contains(text(),'Vehicle Listing')]|//div[@class='acc-tab__title']//a[contains(text(),'Vehicle Listing')]
