@@ -227,7 +227,7 @@ TC-053 - User should be able to search by VIN1 to HK Retail Home Page
     run keyword and continue on failure    User should be able to click Shop this vehicle in EPC Search Result Pop Up Modal in HK Retail Home Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    TC Sleep
-    run keyword and continue on failure    User should be able to view All Parts Page
+    run keyword and continue on failure    User should be able to view EPC L1 Page in HK Retail
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    reload page
@@ -247,7 +247,7 @@ TC-053 - User should be able to search by VIN2 to HK Retail Home Page
     run keyword and continue on failure    User should be able to click Shop this vehicle in EPC Search Result Pop Up Modal in HK Retail Home Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    TC Sleep
-    run keyword and continue on failure    User should be able to view All Parts Page
+    run keyword and continue on failure    User should be able to view EPC L1 Page in HK Retail
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    reload page
@@ -267,7 +267,7 @@ TC-053 - User should be able to search by VIN3 to HK Retail Home Page
     run keyword and continue on failure    User should be able to click Shop this vehicle in EPC Search Result Pop Up Modal in HK Retail Home Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    TC Sleep
-    run keyword and continue on failure    User should be able to view All Parts Page
+    run keyword and continue on failure    User should be able to view EPC L1 Page in HK Retail
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    reload page
@@ -287,7 +287,7 @@ TC-053 - User should be able to search by VIN4 to HK Retail Home Page
     run keyword and continue on failure    User should be able to click Shop this vehicle in EPC Search Result Pop Up Modal in HK Retail Home Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    TC Sleep
-    run keyword and continue on failure    User should be able to view All Parts Page
+    run keyword and continue on failure    User should be able to view EPC L1 Page in HK Retail
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    reload page
@@ -307,13 +307,16 @@ TC-053 - User should be able to search by VIN5 to HK Retail Home Page
     run keyword and continue on failure    User should be able to click Shop this vehicle in EPC Search Result Pop Up Modal in HK Retail Home Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    TC Sleep
-    run keyword and continue on failure    User should be able to view All Parts Page
+    run keyword and continue on failure    User should be able to view EPC L1 Page in HK Retail
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    reload page
 
-
-
+TC-053 - User should be albe to delete all items from shopping cart pop up modal
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to view shopping cart pop up modal
+    run keyword and continue on failure    User should be albe to delete all items from shopping cart pop up modal
 
 
 

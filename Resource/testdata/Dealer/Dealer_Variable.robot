@@ -535,16 +535,16 @@ ${Dealer-HK_BuyerRelPage_Entry_ADP_Label}    (//tbody//tr//td[3])
 ${Dealer-HK_BuyerRelPage_Entry_MemberTeir_Label}    (//tbody//tr//td[4])
 ${Dealer-HK_BuyerRelPage_Entry_Active_Label}    (//tbody//tr//td[5])
 
-${Dealer-HK_BuyerRelPage_Entry_PartsClub_Textbox}    //dpp-hk-buyer-relationship-list//tbody//tr//td[2]//input
-${Dealer-HK_BuyerRelPage_Entry_ADP_TextBox}    //dpp-hk-buyer-relationship-list//tbody//tr//td[3]//input
-${Dealer-HK_BuyerRelPage_Entry_MemberTeir_Dropdown}    //dpp-hk-buyer-relationship-list//tbody//tr//td[4]//ng-select//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
-${Dealer-HK_BuyerRelPage_Entry_MemberTeir_Dropdown_Options}    (//dpp-hk-buyer-relationship-list//tbody//tr//td[4]//ng-select//ng-dropdown-panel//div[@role='option'])
-${Dealer-HK_BuyerRelPage_Entry_MemberTeir_Dropdown_Options1}    (//dpp-hk-buyer-relationship-list//tbody//tr//td[4]//ng-select//ng-dropdown-panel//div[@role='option'])[1]
-${Dealer-HK_BuyerRelPage_Entry_Active_Checkbox}    (//dpp-hk-buyer-relationship-list//tbody//tr//td[5]//input[@type='checkbox'])
+${Dealer-HK_BuyerRelPage_Entry_PartsClub_Textbox}    //tbody//tr//td[2]//input
+${Dealer-HK_BuyerRelPage_Entry_ADP_TextBox}    //tbody//tr//td[3]//input
+${Dealer-HK_BuyerRelPage_Entry_MemberTeir_Dropdown}    //tbody//tr//td[4]//ng-select//div[@class='ng-select-container' or @class='ng-select-container ng-has-value']
+${Dealer-HK_BuyerRelPage_Entry_MemberTeir_Dropdown_Options}    (//tbody//tr//td[4]//ng-select//ng-dropdown-panel//div[@role='option'])
+${Dealer-HK_BuyerRelPage_Entry_MemberTeir_Dropdown_Options1}    (//tbody//tr//td[4]//ng-select//ng-dropdown-panel//div[@role='option'])[1]
+${Dealer-HK_BuyerRelPage_Entry_Active_Checkbox}    (//tbody//tr//td[5]//input[@type='checkbox'])
 
-${Dealer-HK_BuyerRelPage_Entry_Edit_Button}    (//dpp-hk-buyer-relationship-list//tbody//tr//td[@class='pr-0']//span[@class='edit-label d-flex justify-content-end'])
-${Dealer-HK_BuyerRelPage_Entry_Cancel_Button}    //dpp-hk-buyer-relationship-list//tbody//tr//td[@class='pr-0']//button[@class='btn btn-outline-secondary']
-${Dealer-HK_BuyerRelPage_Entry_Update_Button}    //dpp-hk-buyer-relationship-list//tbody//tr//td[@class='pr-0']//button[@class='btn btn-secondary']
+${Dealer-HK_BuyerRelPage_Entry_Edit_Button}    (//tbody//tr//td[@class='pr-0']//span[@class='edit-label d-flex justify-content-end'])
+${Dealer-HK_BuyerRelPage_Entry_Cancel_Button}    //tbody//tr//td[@class='pr-0']//button[@class='btn btn-outline-secondary']
+${Dealer-HK_BuyerRelPage_Entry_Update_Button}    //tbody//tr//td[@class='pr-0']//button[@class='btn btn-secondary']
 
 
 
@@ -758,58 +758,58 @@ ${ProfileChangePassNewPassInvalidValue}    Test1
 ${ProfileChangePassConfirmPassInvalidValue}    Test
 
 #-----------------------------------------------------Dealer Company Details Page---------------------------------------
-${CompanyDetailsPagePanelContainer}    //dpp-company-details|//dpp-hk-company-details
-${CompanyDetailsPagePanelHeader}    //dpp-company-details//h2|//dpp-hk-company-details//h2
+${CompanyDetailsPagePanelContainer}    //dpp-company-details|//dpp-toyota-company-details
+${CompanyDetailsPagePanelHeader}    //dpp-company-details//h2|//dpp-toyota-company-details//h2
 
 #-----------------------------------------------------Dealer Company Details Page Labels
-${CompanyDetailsPageCompanyNameLabel}    //dpp-company-details//span[@class='label-content' and contains(text(),'Company Name')]
-${CompanyDetailsPageTradingNameLabel}    //dpp-company-details//span[@class='label-content' and contains(text(),'Trading Name')]
-${CompanyDetailsPagePostalAddressLabel}    //dpp-company-details//span[@class='label-content' and contains(text(),'Postal Address')]
-${CompanyDetailsPagePostalAddressAddLine1Label}    //dpp-company-details//span[@class='label-content color-grey' and contains(text(),'Address Line 1')]
-${CompanyDetailsPagePostalAddressAddLine2Label}    //dpp-company-details//span[@class='label-content color-grey' and contains(text(),'Address Line 2')]
-${CompanyDetailsPagePostalAddressSuburbLabel}    //dpp-company-details//div[@formgroupname='postalAddress']//span[@class='label-content' and contains(text(),'Suburb')]
-${CompanyDetailsPagePostalAddressPostalCodeLabel}    //dpp-company-details//div[@formgroupname='postalAddress']//span[@class='label-content' and contains(text(),'Postal Code')]
-${CompanyDetailsPagePostalAddressStateLabel}    //dpp-company-details//div[@formgroupname='postalAddress']//span[@class='label-content' and contains(text(),'State')]
-${CompanyDetailsPageDelSameAsPostalLabel}    //dpp-company-details//span[@class='label-content checkbox-content']
-${CompanyDetailsPageDelAddressLabel}    //dpp-company-details//span[@class='label-content' and contains(text(),'Delivery Address')]
-${CompanyDetailsPageDelAddressAddLine1Label}    //dpp-company-details//span[@class='label-content' and contains(text(),'Address Line 1')]
-${CompanyDetailsPageDelAddressAddLine2Label}    //dpp-company-details//span[@class='label-content' and contains(text(),'Address Line 2')]
-${CompanyDetailsPageDelAddressSuburbLabel}    //dpp-company-details//div[@formgroupname='deliveryAddress']//span[@class='label-content' and contains(text(),'Suburb')]
-${CompanyDetailsPageDelAddressPostalCodeLabel}    //dpp-company-details//div[@formgroupname='deliveryAddress']//span[@class='label-content' and contains(text(),'Postal Code')]
-${CompanyDetailsPageDelAddressStateLabel}    //dpp-company-details//div[@formgroupname='deliveryAddress']//span[@class='label-content' and contains(text(),'State')]
-${CompanyDetailsPageEmailAddLabel}    //dpp-company-details//span[@class='label-content' and contains(text(),'Email address')]
-${CompanyDetailsPageCompPhoneNumLabel}    //dpp-company-details//span[@class='label-content' and contains(text(),'Company Phone Number')]
-${CompanyDetailsPageContFNLabel}    //dpp-company-details//span[@class='label-content' and contains(text(),'Contact First Name')]
-${CompanyDetailsPageContLNLabel}    //dpp-company-details//span[@class='label-content' and contains(text(),'Contact Last Name')]
-${CompanyDetailsPageRadioABNLabel}    //dpp-company-details//label[@for='abn']
-${CompanyDetailsPageRadioACNLabel}    //dpp-company-details//label[@for='acn']
-${CompanyDetailsPageABNLabel}    //dpp-company-details//span[@class='label-content' and contains(text(),'ABN')]
-${CompanyDetailsPageOpeningLabel}    //dpp-company-details//span[@class='label-content' and contains(text(),'Opening Hours')]
-${CompanyDetailsPageClosingLabel}    //dpp-company-details//span[@class='label-content' and contains(text(),'Closing Hours')]
+${CompanyDetailsPageCompanyNameLabel}    //span[@class='label-content' and contains(text(),'Company Name')]
+${CompanyDetailsPageTradingNameLabel}    //span[@class='label-content' and contains(text(),'Trading Name')]
+${CompanyDetailsPagePostalAddressLabel}    //span[@class='label-content' and contains(text(),'Postal Address')]
+${CompanyDetailsPagePostalAddressAddLine1Label}    //span[@class='label-content color-grey' and contains(text(),'Address Line 1')]
+${CompanyDetailsPagePostalAddressAddLine2Label}    //span[@class='label-content color-grey' and contains(text(),'Address Line 2')]
+${CompanyDetailsPagePostalAddressSuburbLabel}    //div[@formgroupname='postalAddress']//span[@class='label-content' and contains(text(),'Suburb')]
+${CompanyDetailsPagePostalAddressPostalCodeLabel}    //div[@formgroupname='postalAddress']//span[@class='label-content' and contains(text(),'Postal Code')]
+${CompanyDetailsPagePostalAddressStateLabel}    //div[@formgroupname='postalAddress']//span[@class='label-content' and contains(text(),'State')]
+${CompanyDetailsPageDelSameAsPostalLabel}    //span[@class='label-content checkbox-content']
+${CompanyDetailsPageDelAddressLabel}    //span[@class='label-content' and contains(text(),'Delivery Address')]
+${CompanyDetailsPageDelAddressAddLine1Label}    //span[@class='label-content' and contains(text(),'Address Line 1')]
+${CompanyDetailsPageDelAddressAddLine2Label}    //span[@class='label-content' and contains(text(),'Address Line 2')]
+${CompanyDetailsPageDelAddressSuburbLabel}    //div[@formgroupname='deliveryAddress']//span[@class='label-content' and contains(text(),'Suburb')]
+${CompanyDetailsPageDelAddressPostalCodeLabel}    //div[@formgroupname='deliveryAddress']//span[@class='label-content' and contains(text(),'Postal Code')]
+${CompanyDetailsPageDelAddressStateLabel}    //div[@formgroupname='deliveryAddress']//span[@class='label-content' and contains(text(),'State')]
+${CompanyDetailsPageEmailAddLabel}    //span[@class='label-content' and contains(text(),'Email address')]
+${CompanyDetailsPageCompPhoneNumLabel}    //span[@class='label-content' and contains(text(),'Company Phone Number')]
+${CompanyDetailsPageContFNLabel}    //span[@class='label-content' and contains(text(),'Contact First Name')]
+${CompanyDetailsPageContLNLabel}    //span[@class='label-content' and contains(text(),'Contact Last Name')]
+${CompanyDetailsPageRadioABNLabel}    //label[@for='abn']
+${CompanyDetailsPageRadioACNLabel}    //label[@for='acn']
+${CompanyDetailsPageABNLabel}    //span[@class='label-content' and contains(text(),'ABN')]
+${CompanyDetailsPageOpeningLabel}    //span[@class='label-content' and contains(text(),'Opening Hours')]
+${CompanyDetailsPageClosingLabel}    //span[@class='label-content' and contains(text(),'Closing Hours')]
 
 #-----------------------------------------------------Dealer Company Details Page TextBox
-${CompanyDetailsPageCompanyNameTextBox}    //dpp-company-details//input[@formcontrolname='companyName']
-${CompanyDetailsPageTradingNameTextBox}    //dpp-company-details//input[@formcontrolname='tradingName']
-${CompanyDetailsPagePostalAddressAddLine1TextBox}    //dpp-company-details//div[@formgroupname='postalAddress']//input[@formcontrolname='addressLine1']
-${CompanyDetailsPagePostalAddressAddLine2TextBox}    //dpp-company-details//div[@formgroupname='postalAddress']//input[@formcontrolname='addressLine2']
-${CompanyDetailsPagePostalAddressSuburbTextBox}    //dpp-company-details//div[@formgroupname='postalAddress']//input[@formcontrolname='suburb']
-${CompanyDetailsPagePostalAddressPostalCodeTextBox}    //dpp-company-details//div[@formgroupname='postalAddress']//input[@formcontrolname='postalCode']
-${CompanyDetailsPageDelAddressAddLine1TextBox}    //dpp-company-details//div[@formgroupname='deliveryAddress']//input[@formcontrolname='addressLine1']
-${CompanyDetailsPageDelAddressAddLine2TextBox}    //dpp-company-details//div[@formgroupname='deliveryAddress']//input[@formcontrolname='addressLine2']
-${CompanyDetailsPageDelAddressSuburbTextBox}    //dpp-company-details//div[@formgroupname='deliveryAddress']//input[@formcontrolname='suburb']
-${CompanyDetailsPageDelAddressPostalCodeTextBox}    //dpp-company-details//div[@formgroupname='deliveryAddress']//input[@formcontrolname='postalCode']
-${CompanyDetailsPageEmailAddTextBox}    //dpp-company-details//input[@formcontrolname='email']
-${CompanyDetailsPageCompPhoneNumTextBox}    //dpp-company-details//input[@formcontrolname='telephone' or @formcontrolname='mobileNumber']
-${CompanyDetailsPageContFNTextBox}    //dpp-company-details//input[@formcontrolname='contactFirstName']
-${CompanyDetailsPageContLNTextBox}    //dpp-company-details//input[@formcontrolname='contactLastName']
-${CompanyDetailsPageABNTextBox}    //dpp-company-details//input[@formcontrolname='number']
+${CompanyDetailsPageCompanyNameTextBox}    //input[@formcontrolname='companyName']
+${CompanyDetailsPageTradingNameTextBox}    //input[@formcontrolname='tradingName']
+${CompanyDetailsPagePostalAddressAddLine1TextBox}    //div[@formgroupname='postalAddress']//input[@formcontrolname='addressLine1']
+${CompanyDetailsPagePostalAddressAddLine2TextBox}    //div[@formgroupname='postalAddress']//input[@formcontrolname='addressLine2']
+${CompanyDetailsPagePostalAddressSuburbTextBox}    //div[@formgroupname='postalAddress']//input[@formcontrolname='suburb']
+${CompanyDetailsPagePostalAddressPostalCodeTextBox}    //div[@formgroupname='postalAddress']//input[@formcontrolname='postalCode']
+${CompanyDetailsPageDelAddressAddLine1TextBox}    //div[@formgroupname='deliveryAddress']//input[@formcontrolname='addressLine1']
+${CompanyDetailsPageDelAddressAddLine2TextBox}    //div[@formgroupname='deliveryAddress']//input[@formcontrolname='addressLine2']
+${CompanyDetailsPageDelAddressSuburbTextBox}    //div[@formgroupname='deliveryAddress']//input[@formcontrolname='suburb']
+${CompanyDetailsPageDelAddressPostalCodeTextBox}    //div[@formgroupname='deliveryAddress']//input[@formcontrolname='postalCode']
+${CompanyDetailsPageEmailAddTextBox}    //input[@formcontrolname='email']
+${CompanyDetailsPageCompPhoneNumTextBox}    //input[@formcontrolname='telephone' or @formcontrolname='mobileNumber']
+${CompanyDetailsPageContFNTextBox}    //input[@formcontrolname='contactFirstName']
+${CompanyDetailsPageContLNTextBox}    //input[@formcontrolname='contactLastName']
+${CompanyDetailsPageABNTextBox}    //input[@formcontrolname='number']
 
 #-----------------------------------------------------Dealer Company Details Page CheckBox
-${CompanyDetailsPageDelSameAsPostalCheckBox}    //dpp-company-details//input[@type='checkbox']|//dpp-hk-company-details//input[@type='checkbox']
+${CompanyDetailsPageDelSameAsPostalCheckBox}    //input[@type='checkbox']|//input[@type='checkbox']
 
 #-----------------------------------------------------Dealer Company Details Page DropDownList
-${CompanyDetailsPagePostalStateComboBox}    (//dpp-company-details//ng-select[@formcontrolname='region']//div[@class='ng-value-container'])[1]
-${CompanyDetailsPagePostalStateComboBoxArrow}    (//dpp-company-details//ng-select[@formcontrolname='region']//span[@class='ng-arrow-wrapper'])[1]
+${CompanyDetailsPagePostalStateComboBox}    (//ng-select[@formcontrolname='region']//div[@class='ng-value-container'])[1]
+${CompanyDetailsPagePostalStateComboBoxArrow}    (//ng-select[@formcontrolname='region']//span[@class='ng-arrow-wrapper'])[1]
 
 ${CompanyDetailsPageStateComboBoxACT}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'ACT')]
 ${CompanyDetailsPageStateComboBoxNSW}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'NSW')]
@@ -820,8 +820,8 @@ ${CompanyDetailsPageStateComboBoxTAS}    //div[@class='ng-dropdown-panel-items s
 ${CompanyDetailsPageStateComboBoxVIC}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'VIC')]
 ${CompanyDetailsPageStateComboBoxWA}    //div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option']//span[contains(text(),'WA')]
 
-${CompanyDetailsPageDelStateComboBox}    (//dpp-company-details//ng-select[@formcontrolname='region']//div[@class='ng-value-container'])[2]
-${CompanyDetailsPageDelStateComboBoxArrow}    (//dpp-company-details//ng-select[@formcontrolname='region']//span[@class='ng-arrow-wrapper'])[2]
+${CompanyDetailsPageDelStateComboBox}    (//ng-select[@formcontrolname='region']//div[@class='ng-value-container'])[2]
+${CompanyDetailsPageDelStateComboBoxArrow}    (//ng-select[@formcontrolname='region']//span[@class='ng-arrow-wrapper'])[2]
 
 ${CompanyDetailsPageOpeningHoursComboBox}    //ng-select[@formcontrolname='openingHours']//div[@class='ng-select-container ng-has-value']
 ${CompanyDetailsPageClosingHoursComboBox}    //ng-select[@formcontrolname='closingHours']//div[@class='ng-select-container ng-has-value']
@@ -830,12 +830,12 @@ ${CompanyDetailsPageOpeningHoursComboBoxValue}    (//ng-select[@formcontrolname=
 ${CompanyDetailsPageClosingHoursComboBoxValue}    (//ng-select[@formcontrolname='closingHours']//ng-dropdown-panel//div[@role='option'])[10]    #1-13 from 7AM to 7PM per hour values
 
 #-----------------------------------------------------Dealer Company Details Page RadioButton
-${CompanyDetailsPageRadioABNRadioButton}    (//dpp-company-details//input[@type='radio'])[1]
-${CompanyDetailsPageRadioACNRadioButton}    (//dpp-company-details//input[@type='radio'])[2]
+${CompanyDetailsPageRadioABNRadioButton}    (//input[@type='radio'])[1]
+${CompanyDetailsPageRadioACNRadioButton}    (//input[@type='radio'])[2]
 
 #-----------------------------------------------------Dealer Company Details Page Buttons
-${CompanyDetailsPageCancelButton}    //dpp-company-details//button[@type='button']
-${CompanyDetailsPageSubmitButton}    //dpp-company-details//button[@type='submit']
+${CompanyDetailsPageCancelButton}    //button[@type='button']
+${CompanyDetailsPageSubmitButton}    //button[@type='submit']
 
 ${CompanyDetailsPageConfirmationContainer}    //div[@class='cx-modal-content']
 ${CompanyDetailsPagesConfirmationYesButton}    //button[@class='btn btn-secondary btn-block']

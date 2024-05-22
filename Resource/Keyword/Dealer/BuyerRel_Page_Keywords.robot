@@ -65,29 +65,29 @@ User should be albe to view one Entry in Dealer HK Buyer Relationship Page
     wait until element is visible    ${Dealer-HK_BuyerRelPage_Entry_Container}    10
     ${EntriesCount}    get element count    ${Dealer-HK_BuyerRelPage_Entry_Container}
     ${RandomEntryIndex}    evaluate    random.randint(1,${EntriesCount})
-    scroll element into view    (//dpp-hk-buyer-relationship-list//tbody//tr)[${RandomEntryIndex}]
+    scroll element into view    (//tbody//tr)[${RandomEntryIndex}]
 
-    wait until element is visible    (//dpp-hk-buyer-relationship-list//tbody//tr//td[1])[${RandomEntryIndex}]    10
-    wait until element is visible    (//dpp-hk-buyer-relationship-list//tbody//tr//td[2])[${RandomEntryIndex}]    10
-    wait until element is visible    (//dpp-hk-buyer-relationship-list//tbody//tr//td[3])[${RandomEntryIndex}]    10
-    wait until element is visible    (//dpp-hk-buyer-relationship-list//tbody//tr//td[4])[${RandomEntryIndex}]    10
-    wait until element is visible    (//dpp-hk-buyer-relationship-list//tbody//tr//td[5])[${RandomEntryIndex}]    10
-    wait until element is visible    (//dpp-hk-buyer-relationship-list//tbody//tr//td[@class='pr-0']//span[@class='edit-label d-flex justify-content-end'])[${RandomEntryIndex}]
+    wait until element is visible    (//tbody//tr//td[1])[${RandomEntryIndex}]    10
+    wait until element is visible    (//tbody//tr//td[2])[${RandomEntryIndex}]    10
+    wait until element is visible    (//tbody//tr//td[3])[${RandomEntryIndex}]    10
+    wait until element is visible    (//tbody//tr//td[4])[${RandomEntryIndex}]    10
+    wait until element is visible    (//tbody//tr//td[5])[${RandomEntryIndex}]    10
+    wait until element is visible    (//tbody//tr//td[@class='pr-0']//span[@class='edit-label d-flex justify-content-end'])[${RandomEntryIndex}]
 
-    capture element screenshot    (//dpp-hk-buyer-relationship-list//tbody//tr//td[1])[${RandomEntryIndex}]
-    capture element screenshot    (//dpp-hk-buyer-relationship-list//tbody//tr//td[2])[${RandomEntryIndex}]
-    capture element screenshot    (//dpp-hk-buyer-relationship-list//tbody//tr//td[3])[${RandomEntryIndex}]
-    capture element screenshot    (//dpp-hk-buyer-relationship-list//tbody//tr//td[4])[${RandomEntryIndex}]
-    capture element screenshot    (//dpp-hk-buyer-relationship-list//tbody//tr//td[5])[${RandomEntryIndex}]
-    capture element screenshot    (//dpp-hk-buyer-relationship-list//tbody//tr//td[@class='pr-0']//span[@class='edit-label d-flex justify-content-end'])[${RandomEntryIndex}]
+    capture element screenshot    (//tbody//tr//td[1])[${RandomEntryIndex}]
+    capture element screenshot    (//tbody//tr//td[2])[${RandomEntryIndex}]
+    capture element screenshot    (//tbody//tr//td[3])[${RandomEntryIndex}]
+    capture element screenshot    (//tbody//tr//td[4])[${RandomEntryIndex}]
+    capture element screenshot    (//tbody//tr//td[5])[${RandomEntryIndex}]
+    capture element screenshot    (//tbody//tr//td[@class='pr-0']//span[@class='edit-label d-flex justify-content-end'])[${RandomEntryIndex}]
 
     set global variable    ${RandomEntryIndex}
     sleep    2
 
 User should be able to click edit one Entry in Dealer HK Buyer Relationship Page
-    wait until element is visible    (//dpp-hk-buyer-relationship-list//tbody//tr//td[@class='pr-0']//span[@class='edit-label d-flex justify-content-end'])[${RandomEntryIndex}]    10
-    click element    (//dpp-hk-buyer-relationship-list//tbody//tr//td[@class='pr-0']//span[@class='edit-label d-flex justify-content-end'])[${RandomEntryIndex}]
-    capture element screenshot    (//dpp-hk-buyer-relationship-list//tbody//tr)[${RandomEntryIndex}]
+    wait until element is visible    (//tbody//tr//td[@class='pr-0']//span[@class='edit-label d-flex justify-content-end'])[${RandomEntryIndex}]    10
+    click element    (//tbody//tr//td[@class='pr-0']//span[@class='edit-label d-flex justify-content-end'])[${RandomEntryIndex}]
+    capture element screenshot    (//tbody//tr)[${RandomEntryIndex}]
     sleep    2
 
 User should be able to edit Parts Club in Dealer HK Buyer Relationship Page
@@ -113,13 +113,13 @@ User should be able to edit Member Teir in Dealer HK Buyer Relationship Page
     ${TeirCount}    get element count    ${Dealer-HK_BuyerRelPage_Entry_MemberTeir_Dropdown_Options}
     ${RandomTierIndex}    evaluate    random.randint(1,${TeirCount})
     mouse over    ${Dealer-HK_BuyerRelPage_Entry_MemberTeir_Dropdown_Options1}
-    click element    (//dpp-hk-buyer-relationship-list//tbody//tr//td[4]//ng-select//ng-dropdown-panel//div[@role='option'])[${RandomTierIndex}]
+    click element    (//tbody//tr//td[4]//ng-select//ng-dropdown-panel//div[@role='option'])[${RandomTierIndex}]
     sleep    2
 
 User should be able to check/uncheck active status in Dealer HK Buyer Relationship Page
-    wait until element is visible    (//dpp-hk-buyer-relationship-list//tbody//tr//td[5]//input[@type='checkbox'])[${RandomEntryIndex}]    10
-    capture element screenshot    (//dpp-hk-buyer-relationship-list//tbody//tr//td[5]//input[@type='checkbox'])[${RandomEntryIndex}]
-    click element    (//dpp-hk-buyer-relationship-list//tbody//tr//td[5]//input[@type='checkbox'])[${RandomEntryIndex}]
+    wait until element is visible    (//tbody//tr//td[5]//input[@type='checkbox'])[${RandomEntryIndex}]    10
+    capture element screenshot    (//tbody//tr//td[5]//input[@type='checkbox'])[${RandomEntryIndex}]
+    click element    (//tbody//tr//td[5]//input[@type='checkbox'])[${RandomEntryIndex}]
     sleep    2
 
 User should be able to click cancel button in Dealer HK Buyer Relationship Page
