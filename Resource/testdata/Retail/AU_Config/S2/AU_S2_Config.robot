@@ -37,6 +37,7 @@ ${YopMailEmail}    ${AU_S2_Automation_UID}
 
 #Testing Values
 ${ProdductSearchValue}    037018200
+${ProdductSearchValue1}
 
 *** Keywords ***
 Open Chrome Browser
