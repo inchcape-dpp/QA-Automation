@@ -18,14 +18,16 @@ ${CreateAccount}    //*[(contains(text(),'Create Account')) or contains(text(),'
 ${FooterLogo}    //div[@class='footer-logo']
 ${PN}    //*[(contains(text(),' Privacy Policy ') or contains(text(),'私隱條款'))]
 ${TnC}    //*[contains(text(),' Terms & Conditions ') or contains(text(),'條款及細則')]
-${CopyRight}    //*[contains(text(),' © 2023 PartsLane. All Rights Reserved.') or contains(text(),'2023 Partslane. 保留所有權利.')]
+${CopyRight}    //*[contains(text(),' © 2023 PartsLane. All Rights Reserved.') or contains(text(),'2023 Partslane. 保留所有權利.')]/parent::li
 ${About Us}     //*[contains(text(),' About Us') or contains(text(),'關於我們')]
 ${Frequently Asked Questions}     //*[contains(text(),' About Us') or contains(text(),'常見問題')]
 ${Contact Us}     //*[contains(text(),' Contact Us') or contains(text(),'聯絡我們')]
 
 
 ${InvalidEmailMessage}    //*[(contains(text(),'Please enter a valid email address') or contains(text(),'請輸入正確的電子郵件'))]
-${InvalidEmailPassMessage}    //*[(contains(text(),'Password is a required field') or contains(text(),'密碼是必填項目'))]
+${InvalidEmailPassMessage}    //div[@class='alert alert-danger']
+${InvalidPassMessage}    //*[(contains(text(),'Password is a required field') or contains(text(),'密碼是必填項目'))]
+
 
 ${InvalidEmail}    Hello
 ${InvalidPass}    Hello
@@ -974,17 +976,17 @@ ${Retail_PlaceOrderPageViewOrderButton}    //div[@class='container']//button[@cl
 
 #-----------------------------------------------------Retail Account Page-----------------------------------------------
 ${Retail_AccountAccountpageMyAccountLabel}    //div[@class='myaccount']//h2
-${Retail_AccountpageOrdersMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),'Orders')]|//ul[@class='vertical-menu tab-level']//a[contains(text(),' Order History ')]|//div[@class='acc-tab__title']//*[contains(text(),'Order History')]|//ul[@class='vertical-menu tab-level']//*[contains(text(),'Order History')]
-${Retail_AccountAccountpageReturnMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),'Return Requests')]|//div[@class='acc-tab__title']//*[contains(text(),'Return Requests')]
-${Retail_AccountpageSavedCartsMenu}    //div[@class='ml-3']//a[contains(text(),'Saved Carts')]|//div[@class='acc-tab__title']//a[contains(text(),'Saved Carts')]
-${Retail_AccountpageVehicleListingMenu}    //div[@class='ml-3']//a[contains(text(),'Vehicle Listing')]|//div[@class='acc-tab__title']//a[contains(text(),'Vehicle Listing')]
-${Retail_AccountpageMessagesMenu}    //ul[@class='vertical-menu tab-level']//a[contains(text(),' Messages ') or contains(text(),'Inbox')]|//ul[@class='vertical-menu tab-level']//*[contains(text(),'Inbox')]|//div[@class='acc-tab__title']//*[contains(text(),'Messages') or contains(text(),'Inbox')]
-${Retail_AccountpageProfileMenu}    //ul[@class='vertical-menu tab-level']//a[contains(text(),'Profile')]|//div[@class='acc-tab__title']//a[contains(text(),'Profile')]
-${Retail_AccountpageProfileAccountDetails}    //li[@class='mb-3 isActive' or @class='mb-3']//div[@class='tab-data has-child']//a[contains(text(),'Account Details')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'Account Details')]
-${AccountpageProfileChangePass}    //li[@class='mb-3 isActive' or @class='mb-3']//div[@class='tab-data has-child']//a[contains(text(),'Change Password')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'Change Password')]
-${Retail_AccountpageCompanyMenu}    //ul[@class='vertical-menu tab-level']//a[@class='has-nochild'][contains(text(),'Company')]|//div[@class='acc-tab__title']//a[contains(text(),'Company')]
-${Retail_AccountpageCompanyDetails}    //li[@class='mb-3 isActive' or @class='mb-3']//div[@class='tab-data has-child']//a[contains(text(),'Company Details')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'Company Details')]
-${Retail_AccountpageCompanyStaff}    //a[@href='/dppretail/my-account/company/staff' or @href='/hkretail/my-account/company/staff']
+${Retail_AccountpageOrdersMenu}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Order') or contains(text(),'訂單記錄')]
+${Retail_AccountAccountpageReturnMenu}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Return Requests') or contains(text(),'退貨請求')]
+${Retail_AccountpageSavedCartsMenu}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Saved Carts') or contains(text(),'已儲存貨品')]
+${Retail_AccountpageVehicleListingMenu}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Vehicle Listing') or contains(text(),'車輛列表')]
+${Retail_AccountpageMessagesMenu}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Inbox') or contains(text(),'收件匣')]
+${Retail_AccountpageProfileMenu}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Profile') or contains(text(),'個人資料')]
+${Retail_AccountpageProfileAccountDetails}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Account Details') or contains(text(),'帳戶資料')]
+${AccountpageProfileChangePass}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Change Password') or contains(text(),'更改密碼')]
+${Retail_AccountpageCompanyMenu}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//div[@class='d-flex acc-tab']//a[contains(text(),'Company') or contains(text(),'公司')]
+${Retail_AccountpageCompanyDetails}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Company Details') or contains(text(),'公司詳情')]
+${Retail_AccountpageCompanyStaff}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Staff') or contains(text(),'員工')]
 
 
 #-----------------------------------------------------Retail Account Order Page-----------------------------------------
@@ -1946,7 +1948,7 @@ ${Retail_AccountCompanyDetailsPagePrefSupplierLabel}    //dpp-company-details//s
 ${Retail_AccountCompanyDetailsPageAccNumLabel}    //span[@class='label-content' and contains(text(),'Account Number')]|//span[@class='label-content' and contains(text(),'Membership Number')]
 ${Retail_AccountCompanyDetailsPageCompanyNameLabel}    //span[@class='label-content' and contains(text(),'Company Name')]
 ${Retail_AccountCompanyDetailsPageTradingNameLabel}    //dpp-company-details//span[@class='label-content' and contains(text(),'Trading Name')]
-${Retail_AccountCompanyDetailsPagePostalAddressLabel}    //span[@class='label-container' and contains(text(),'Postal Address')]
+${Retail_AccountCompanyDetailsPagePostalAddressLabel}    //span[@class='label-content' and contains(text(),'Postal Address')]
 ${Retail_AccountCompanyDetailsPagePostalAddressAddLine1Label}    //dpp-company-details//span[@class='label-content color-grey' and contains(text(),'Address Line 1')]
 ${Retail_AccountCompanyDetailsPagePostalAddressAddLine2Label}    //span[@class='label-content color-grey' and contains(text(),'Address Line 2')]
 ${Retail_AccountCompanyDetailsPagePostalAddressSuburbLabel}    //dpp-company-details//div[@formgroupname='postalAddress']//span[@class='label-content' and contains(text(),'Suburb')]
