@@ -82,6 +82,9 @@ User should be able to click view cart button from shopping cart pop up modal
     click element    ${ShopCartPopCheckOutButton}
     sleep    10
 
+User should be able to check shopping cart pop up modal pricess
+##########
+
 User should be able to view message page from top navigaton
     wait until element is visible    ${HomePageMessageIcon}    10
     click element    ${HomePageMessageIcon}
