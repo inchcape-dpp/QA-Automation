@@ -646,6 +646,8 @@ ${ShopCartPopHeader}    //div[@id='miniCart']//div[@class='cx-modal-content']//d
 ${ShopCartPopCloseIcon}    //div[@id='miniCart']//div[@class='cx-modal-content']//cx-icon[@class='cx-icon fas fa-times']
 
 ${ShopCartPopItemList}    //div[@id='miniCart']//div[@class='products-container']//div[@class='item' or @class='item first-element' or @class='item last-element' or @class='item first-element last-element']
+${ShopCartPopItemListPrices}    //div[@class='products-container']//div[@class='item' or @class='item first-element' or @class='item last-element' or @class='item first-element last-element']//div[@class='cx-price']
+${ShopCartPopItemListPricesQty}    //div[@id='miniCart']//div[@class='products-container']//div[@class='item' or @class='item first-element' or @class='item last-element' or @class='item first-element last-element']//div[@class='col-3 pl-0']//span[@class='quantity']
 
 ${ShopCartPopEmptyCart}    //div[@id='miniCart']//div[@class='empty-cart']
 
@@ -658,6 +660,8 @@ ${ShopCartPopCheckOutButton}    //div[@class='price-container']//button[contains
 ${ShopCartPopEmptyLabel}    //div[@class='empty-cart']/following-sibling::div[contains(text(),'Your cart is empty') or contains(text(),'您的購物車是空的')]
 
 ${ShopCartPopContinueShoppingButton}    //div[@class='price-container']//button[contains(text(),'Continue Shopping') or contains(text(),'繼續購物')]
+
+
 
 
 #-----------------------------------------------------Retail Shopping Cart Page-----------------------------------------
@@ -970,17 +974,17 @@ ${Retail_PlaceOrderPageViewOrderButton}    //div[@class='container']//button[@cl
 
 #-----------------------------------------------------Retail Account Page-----------------------------------------------
 ${Retail_AccountAccountpageMyAccountLabel}    //div[@class='myaccount']//h2
-${Retail_AccountpageOrdersMenu}    //div[@class='d-flex acc-tab']//a[contains(text(),'Orders')]|//div[@class='acc-tab__title']//a[contains(text(),'Order History') or contains(text(),'訂單記錄')]
-${Retail_AccountAccountpageReturnMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),'Return Requests')]|//div[@class='acc-tab__title']//*[contains(text(),'Return Requests')]
-${Retail_AccountpageSavedCartsMenu}    //div[@class='ml-3']//a[contains(text(),'Saved Carts')]|//div[@class='acc-tab__title']//a[contains(text(),'Saved Carts')]
-${Retail_AccountpageVehicleListingMenu}    //div[@class='ml-3']//a[contains(text(),'Vehicle Listing')]|//div[@class='acc-tab__title']//a[contains(text(),'Vehicle Listing')]
-${Retail_AccountpageMessagesMenu}    //ul[@class='vertical-menu tab-level']//a[contains(text(),' Messages ') or contains(text(),'Inbox')]|//ul[@class='vertical-menu tab-level']//*[contains(text(),'Inbox')]|//div[@class='acc-tab__title']//*[contains(text(),'Messages') or contains(text(),'Inbox')]
-${Retail_AccountpageProfileMenu}    //ul[@class='vertical-menu tab-level']//a[contains(text(),'Profile')]|//div[@class='acc-tab__title']//a[contains(text(),'Profile')]
-${Retail_AccountpageProfileAccountDetails}    //li[@class='mb-3 isActive' or @class='mb-3']//div[@class='tab-data has-child']//a[contains(text(),'Account Details')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'Account Details')]
-${AccountpageProfileChangePass}    //li[@class='mb-3 isActive' or @class='mb-3']//div[@class='tab-data has-child']//a[contains(text(),'Change Password')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'Change Password')]
-${Retail_AccountpageCompanyMenu}    //ul[@class='vertical-menu tab-level']//a[@class='has-nochild'][contains(text(),'Company')]|//div[@class='acc-tab__title']//a[contains(text(),'Company')]
-${Retail_AccountpageCompanyDetails}    //li[@class='mb-3 isActive' or @class='mb-3']//div[@class='tab-data has-child']//a[contains(text(),'Company Details')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'Company Details')]
-${Retail_AccountpageCompanyStaff}    //a[@href='/dppretail/my-account/company/staff' or @href='/hkretail/my-account/company/staff']
+${Retail_AccountpageOrdersMenu}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Order') or contains(text(),'訂單記錄')]
+${Retail_AccountAccountpageReturnMenu}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Return Requests') or contains(text(),'退貨請求')]
+${Retail_AccountpageSavedCartsMenu}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Saved Carts') or contains(text(),'已儲存貨品')]
+${Retail_AccountpageVehicleListingMenu}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Vehicle Listing') or contains(text(),'車輛列表')]
+${Retail_AccountpageMessagesMenu}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Inbox') or contains(text(),'收件匣')]
+${Retail_AccountpageProfileMenu}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Profile') or contains(text(),'個人資料')]
+${Retail_AccountpageProfileAccountDetails}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Account Details') or contains(text(),'帳戶資料')]
+${AccountpageProfileChangePass}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Change Password') or contains(text(),'更改密碼')]
+${Retail_AccountpageCompanyMenu}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//div[@class='d-flex acc-tab']//a[contains(text(),'Company') or contains(text(),'公司')]
+${Retail_AccountpageCompanyDetails}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Company Details') or contains(text(),'公司詳情')]
+${Retail_AccountpageCompanyStaff}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Staff') or contains(text(),'員工')]
 
 
 #-----------------------------------------------------Retail Account Order Page-----------------------------------------
