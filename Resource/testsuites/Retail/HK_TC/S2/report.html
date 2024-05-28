@@ -5,16 +5,60 @@
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="-1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta content="Robot Framework 6.1.1 (Python 3.11.4 on win32)" name="Generator">
+<meta content="Robot Framework 7.0 (Python 3.11.4 on win32)" name="Generator">
 <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKcAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAAqAAAAAAAAAAAAAAAAAAAALIAAAD/AAAA4AAAANwAAADcAAAA3AAAANwAAADcAAAA3AAAANwAAADcAAAA4AAAAP8AAACxAAAAAAAAAKYAAAD/AAAAuwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC/AAAA/wAAAKkAAAD6AAAAzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN8AAAD/AAAA+gAAAMMAAAAAAAAAAgAAAGsAAABrAAAAawAAAGsAAABrAAAAawAAAGsAAABrAAAADAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAIsAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAANEAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAAAAAAAAMgAAADIAAAAyAAAAMgAAADIAAAAyAAAAMgAAADIAAAAFAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAADwAAAB8AAAAAAAAAGAAAABcAAAAAAAAAH8AAABKAAAAAAAAAAAAAAAAAAAA2gAAAP8AAAD6AAAAwwAAAAAAAADCAAAA/wAAACkAAADqAAAA4QAAAAAAAAD7AAAA/wAAALAAAAAGAAAAAAAAANoAAAD/AAAA+gAAAMMAAAAAAAAAIwAAAP4AAAD/AAAA/wAAAGAAAAAAAAAAAAAAAMkAAAD/AAAAigAAAAAAAADaAAAA/wAAAPoAAADDAAAAAAAAAAAAAAAIAAAAcAAAABkAAAAAAAAAAAAAAAAAAAAAAAAAEgAAAAAAAAAAAAAA2gAAAP8AAAD7AAAAywAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAN4AAAD/AAAAqwAAAP8AAACvAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALIAAAD/AAAAsgAAAAAAAAC5AAAA/wAAAMoAAADAAAAAwAAAAMAAAADAAAAAwAAAAMAAAADAAAAAwAAAAMkAAAD/AAAAvAAAAAAAAAAAAAAAAAAAAKwAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAArQAAAAAAAAAAwAMAAIABAAAf+AAAP/wAAD/8AAAgBAAAP/wAAD/8AAA//AAAJIwAADHEAAA//AAAP/wAAB/4AACAAQAAwAMAAA==">
-<style media="all" type="text/css">
+<style media="all">
+:root {
+    --text-color: black;
+    --background-color: white;
+    --primary-color: #ddd;
+    --secondary-color: #ccc;
+    --link-color: #15c;
+    --link-hover-color: #61c;
+    --highlight-color: #eee;
+    --target-color: #f9f9f9;
+    --pass-color: #97bd61;
+    --fail-color: #ce3e01;
+    --warn-color: #fed84f;
+    --pass-link-color: #098a09;
+    --warn-link-color: #927201;
+    --fail-link-color: #ce3e01;
+    --ascending-icon: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==);
+    --descending-icon: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==);
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        color-scheme: dark;
+    }
+}
+[data-theme="dark"] {
+    --text-color: #e2e1d7;
+    --background-color: #1c2227;
+    --primary-color: #26373b;
+    --secondary-color: #424f5a;
+    --link-color: #8cc4ff;
+    --link-hover-color: #bb86fc;
+    --highlight-color: #002b36;
+    --target-color: #1a252e;
+    --pass-link-color: #97bd61;
+    --warn-link-color: #fed84f;
+    --fail-link-color: #ff9b8f;
+    --ascending-icon: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJAgMAAACZCj6+AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAlQTFRFAAAAfn5+////f/cqYgAAAAN0Uk5TAP//RFDWIQAAACdJREFUeJxjYHBgYGAMYGBgDWFgEA1lAAOtVQwMXCsYGJgWADkNDAA78QP9oKr7vwAAAABJRU5ErkJggg==);
+    --descending-icon: url(data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAJAgMAAACZCj6+AAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAlQTFRFAAAA////fn5+K6jOaAAAAAN0Uk5TAP//RFDWIQAAACdJREFUeJxjYHBgYGAMYGBgDWFgEA1lAAOtVQwMXCsYGJgWADkNDAA78QP9oKr7vwAAAABJRU5ErkJggg==);
+}
 /* Generic and misc styles */
 body {
     font-family: Helvetica, sans-serif;
     font-size: 0.8em;
-    color: black;
+    color: black; /* Fallback value */
+    color: var(--text-color);
     padding: 6px;
-    background: white;
+    background: white; /* Fallback value */
+    background: var(--background-color);
+    margin-left: 15px;
+}
+body[theme-toggled] {
+    transition: background 0.3s, background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 table {
     table-layout: fixed;
@@ -29,20 +73,37 @@ br {
     mso-data-placement: same-cell; /* maintain line breaks in Excel */
 }
 hr {
-    background: #ccc;
+    background: #ccc; /* Fallback value */
+    background: var(--secondary-color);
     height: 1px;
     border: 0;
 }
 a, a:link, a:visited {
     text-decoration: none;
-    color: #15c;
+    color: #15c; /* Fallback value */
+    color: var(--link-color);
 }
 a > img {
-    border: 1px solid #15c !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    border-color: #15c !important; /* Fallback value */
+    border-color: var(--link-color) !important;
 }
 a:hover, a:active {
     text-decoration: underline;
-    color: #61c;
+    color: #61c; /* Fallback value */
+    color: var(--link-hover-color);
+}
+select {
+    background-color: white; /* Fallback value */
+    background-color: var(--background-color);
+    color: black; /* Fallback value */
+    color: var(--text-color);
+    border-width: 2px;
+    border-style: solid;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
+    border-radius: 4px;
 }
 .parent-name {
     font-size: 0.7em;
@@ -55,7 +116,7 @@ a:hover, a:active {
 #header {
     width: 65em;
     height: 3em;
-    margin: 6px 0;
+    margin: 20px 0 6px 0;
 }
 h1 {
     float: left;
@@ -83,14 +144,17 @@ h2 {
 }
 /* Status text colors -- !important allows using them in links */
 .fail {
-    color: #ce3e01 !important;
+    color: #ce3e01 !important; /* Fallback value */
+    color: var(--fail-link-color) !important;
     font-weight: bold;
 }
 .pass {
-    color: #098a09 !important;
+    color: #098a09 !important; /* Fallback value */
+    color: var(--pass-link-color) !important;
 }
 .skip {
-    color: #927201 !important;
+    color: #927201 !important; /* Fallback value */
+    color: var(--warn-link-color) !important;
     font-weight: bold;
 }
 .label {
@@ -98,8 +162,10 @@ h2 {
     font-size: 0.75em;
     letter-spacing: 1px;
     white-space: nowrap;
-    color: black;
-    background-color: #ddd;
+    color: black; /* Fallback value */
+    color: var(--text-color);
+    background-color: #ddd; /* Fallback value */
+    background-color: var(--primary-color);
     border-radius: 3px;
 }
 .label.debug, .label.trace, .label.error, .label.keyword {
@@ -109,15 +175,18 @@ h2 {
     font-weight: bold;
 }
 .label.pass {
-    background-color: #97bd61;
+    background-color: #97bd61; /* Fallback value */
+    background-color: var(--pass-color);
     color: #000 !important;
 }
 .label.fail, .label.error {
-    background-color: #ce3e01;
+    background-color: #ce3e01; /* Fallback value */
+    background-color: var(--fail-color);
     color: #fff !important;
 }
 .label.skip, .label.warn {
-    background-color: #fed84f;
+    background-color: #fed84f; /* Fallback value */
+    background-color: var(--warn-color);
     color: #000 !important;
 }
 /* Top right header */
@@ -146,7 +215,8 @@ h2 {
     padding: 0.3em 0;
     font-size: 0.9em;
     border-bottom-left-radius: 4px;
-    background: #ddd;
+    background: #ddd; /* Fallback value */
+    background: var(--primary-color);
 }
 /* Statistics table */
 .statistics {
@@ -156,15 +226,20 @@ h2 {
     margin-bottom: 1em;
 }
 .statistics tr:hover {
-    background: #f4f4f4;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
     cursor: pointer;
 }
 .statistics th, .statistics td {
-    border: 1px solid #ccc;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
     padding: 0.1em 0.3em;
 }
 .statistics th {
-    background-color: #ddd;
+    background-color: #ddd; /* Fallback value */
+    background-color: var(--primary-color);
     padding: 0.2em 0.3em;
 }
 .statistics td {
@@ -200,27 +275,33 @@ th.stats-col-graph:hover {
 }
 /* Statistics graph */
 .graph, .empty-graph {
-    border: 1px solid #ccc;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
     width: auto;
     height: 7px;
     padding: 0;
-    background: #aaa;
 }
 .empty-graph {
-    background: #eee;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
 }
 .pass-bar, .fail-bar, .skip-bar {
     float: left;
     height: 100%;
 }
 .fail-bar {
-    background: #ce3e01;
+    background: #ce3e01; /* Fallback value */
+    background: var(--fail-color);
 }
 .pass-bar {
-    background: #97bd61;
+    background: #97bd61; /* Fallback value */
+    background: var(--pass-color);
 }
 .skip-bar {
-    background: #fed84f;
+    background: #fed84f; /* Fallback value */
+    background: var(--warn-color);
 }
 /* Tablesorter - adapted from provided Blue Skin */
 .tablesorter-header {
@@ -230,47 +311,103 @@ th.stats-col-graph:hover {
     cursor: pointer;
 }
 .tablesorter-header:hover {
-    background-color: #ccc;
+    background-color: #ccc; /* Fallback value */
+    background-color: var(--secondary-color);
 }
 .tablesorter-headerAsc {
-    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==);
-    background-color: #ccc !important;
+    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlBWnFr3cnIr0WQOyBmvzp13CpxQAOw==); /* Fallback value */
+    background-image: var(--ascending-icon);
+    background-color: #ccc !important; /* Fallback value */
+    background-color: var(--secondary-color) !important;
 }
 .tablesorter-headerDesc {
-    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==);
-    background-color: #ccc !important;
+    background-image: url(data:image/gif;base64,R0lGODlhCwAJAKEAAAAAAH9/fwAAAAAAACH5BAEAAAIALAAAAAALAAkAAAIUlAWnBr3cnIr0WROyDmvzp13CpxQAOw==); /* Fallback value */
+    background-image: var(--descending-icon);
+    background-color: #ccc !important; /* Fallback value */
+    background-color: var(--secondary-color) !important;
 }
 .sorter-false {
     background-image: none;
     cursor: default;
 }
 .sorter-false:hover {
-    background-color: #ddd;
+    background-color: #ddd; /* Fallback value */
+    background-color: var(--primary-color);
+}
+#theme-toggle {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 28px;
+    height: 28px;
+    border: none;
+    padding: 4px;
+    z-index: 1000;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    background: var(--highlight-color);
+}
+[data-theme="dark"] .dark-mode-icon,
+[data-theme="light"] .light-mode-icon {
+    display: none;
+}
+[data-theme="dark"] .light-mode-icon,
+[data-theme="light"] .dark-mode-icon {
+    display: block;
+}
+@keyframes highlight {
+    0% {
+        background: var(--primary-color)
+    }
+    100% {
+        background: var(--target-color);
+    }
+}
+:target {
+    background: var(--target-color);
+    transition: background 0.3s;
+    animation: highlight 4s;
 }
 </style>
-<style media="all" type="text/css">
+<style media="all">
+:root {
+    --col-toggle-color: #6c6c6c; /* same as in sort icon */
+}
+@media (prefers-color-scheme: dark) {
+    :root {
+        --col-toggle-color: #adadad;
+    }
+}
 /* Generic table styles */
 table {
     margin: 0 1px;
-    background: white;
+    background: white; /* Fallback value */
+    background: var(--background-color);
 }
 tr {
-    background: white;
+    background: white; /* Fallback value */
+    background: var(--background-color);
 }
 th {
-    background: #ddd;
-    color: black;
+    background: #ddd; /* Fallback value */
+    background: var(--primary-color);
+    color: black; /* Fallback value */
+    color: var(--text-color);
 }
 /* Summary and total/tag/suite details */
 .details {
-    border: 1px solid #ccc;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
+    border-width: 1px;
+    border-style: solid;
     border-spacing: 0.2em;
     clear: both;
     width: 65em;
     margin-bottom: 1em;
 }
 .details th {
-    background: white;
+    background: white; /* Fallback value */
+    background: var(--background-color);
     width: 11em;
     text-align: left;
     vertical-align: top;
@@ -297,8 +434,30 @@ th {
     display: none;
 }
 /* Search */
+input[type='submit'], input[type='button'] {
+    background-color: #ddd; /* Fallback value */
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    border: 0;
+    padding: 4px 6px 4px 6px;
+    color: black; /* Fallback value */
+    color: var(--text-color);
+}
+input[type='submit']:hover, input[type='button']:hover {
+    background-color: #ccc; /* Fallback value */
+    background-color: var(--secondary-color);
+}
 #search-suite, #search-test, #search-include, #search-exclude {
     width: 25em;
+    background-color: white; /* Fallback value */
+    background-color: var(--background-color);
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 2px;
+    color: black; /* Fallback value */
+    color: var(--text-color);
 }
 #search a:hover {
     text-decoration: none;
@@ -306,8 +465,12 @@ th {
 #search-help div {
     margin: 0.5em 0.5em 0.7em 0;
     padding: 0.7em;
-    background: #eee;
-    border: 1px solid #ccc;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
+    border-width: 1px;
+    border-style: solid;
     border-radius: 3px;
 }
 #search-help h3, #search-help p {
@@ -342,18 +505,24 @@ th {
 }
 .detail-tab {
     float: left;
-    background: #ddd;
-    border: 1px solid #ccc;
+    background: #ddd; /* Fallback value */
+    background: var(--primary-color);
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
+    border-width: 1px;
+    border-style: solid;
     border-bottom-width: 0;
     margin: 0 0.5em 0 0;
     padding-top: 0.1em;
     border-radius: 3px 3px 0 0;
 }
 .detail-tab:hover {
-    background: #ccc;
+    background: #ccc; /* Fallback value */
+    background: var(--secondary-color);
 }
 .detail-tab a {
-    color: black;
+    color: black; /* Fallback value */
+    color: var(--text-color);
     text-decoration: none;
     font-weight: bold;
     padding: 0 1em;
@@ -361,19 +530,23 @@ th {
 .detail-tab-selected {
     position: relative;
     top: 1px;
-    background: white;
+    background: white; /* Fallback value */
+    background: var(--background-color);
 }
 .detail-tab-selected:hover {
-    background: white;
+    background: white; /* Fallback value */
+    background: var(--background-color);
 }
 /* Test details table */
 #test-details {
     width: 100%;
     border-spacing: 1px;
-    background-color: #ccc;
+    background-color: #ccc; /* Fallback value */
+    background-color: var(--secondary-color);
 }
 #test-details > tbody > tr:hover {
-    background: #f4f4f4;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
     cursor: pointer;
 }
 #test-details th, #test-details td {
@@ -388,11 +561,13 @@ th {
 }
 .details-col-toggle {
     float: left;
-    color: #6c6c6c; /* same as in sort icon */
+    color: #6c6c6c; /* Fallback value */
+    color: var(--col-toggle-color);
     cursor: pointer;
 }
 .details-col-toggle:hover {
-    color: black;
+    color: black; /* Fallback value */
+    color: var(--text-color);
 }
 .details-col-name {
     min-width: 20em;
@@ -433,10 +608,18 @@ th {
     background-image: none;
 }
 th.hidden:hover {
-    background-color: #ccc;
+    background-color: #ddd; /* Fallback value */
+    background-color: var(--primary-color);
+}
+#status-bar {
+    height: 100%;
+    width: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 </style>
-<style media="print" type="text/css">
+<style media="print">
 body {
     background: white !important;
     padding: 0;
@@ -476,7 +659,7 @@ a:link, a:visited {
     background: #ddd !important;
 }
 </style>
-<style media="all" type="text/css">
+<style media="all">
 #javascript-disabled {
     width: 600px;
     margin: 100px auto 0 auto;
@@ -499,7 +682,7 @@ a:link, a:visited {
     font-style: italic;
 }
 </style>
-<style media="all" type="text/css">
+<style media="all">
 .doc > * {
     margin: 0.7em 1em 0.1em 1em;
     padding: 0;
@@ -511,14 +694,12 @@ a:link, a:visited {
     margin-top: 0.1em;
 }
 .doc table {
-    border: 1px solid #ccc;
     background: transparent;
     border-collapse: collapse;
     empty-cells: show;
     font-size: 0.9em;
 }
 .doc table th, .doc table td {
-    border: 1px solid #ccc;
     background: transparent;
     padding: 0.1em 0.3em;
     height: 1.2em;
@@ -528,24 +709,32 @@ a:link, a:visited {
     letter-spacing: 0.1em;
 }
 .doc pre {
+    border-radius: 2px;
     font-size: 1.1em;
     letter-spacing: 0.05em;
-    background: #f4f4f4;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
 }
 .doc code {
+    border-radius: 2px;
     padding: 0 0.2em;
     letter-spacing: 0.05em;
-    background: #eee;
+    background: #eee; /* Fallback value */
+    background: var(--highlight-color);
 }
 .doc li {
     list-style-position: inside;
     list-style-type: square;
 }
-.doc img {
-    border: 1px solid #ccc;
+.doc img, .doc table, .doc table th, .doc table td {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc; /* Fallback value */
+    border-color: var(--secondary-color);
 }
 .doc hr {
-    background: #ccc;
+    background: #ccc; /* Fallback value */
+    background: var(--secondary-color);
     height: 1px;
     border: 0;
 }
@@ -642,7 +831,6 @@ window.model = (function () {
         suite.populateSuites = createIterablePopulator('Suite');
         suite.childrenNames = ['keyword', 'suite', 'test'];
         suite.callWhenChildrenReady = function (callable) { callable(); };
-        suite.message = data.message;
         suite.children = function () {
             return suite.keywords().concat(suite.tests()).concat(suite.suites());
         };
@@ -733,6 +921,7 @@ window.model = (function () {
             name: data.name,
             doc: data.doc,
             status: data.status,
+            message: data.message,
             times: data.times,
             id: data.parent ? data.parent.id + '-' + data.id : data.id
         };
@@ -753,7 +942,6 @@ window.model = (function () {
                 return test.keywords();
         };
         test.tags = data.tags;
-        test.message = data.message;
         test.matchesTagPattern = function (pattern) {
             return containsTagPattern(test.tags, pattern);
         };
@@ -764,13 +952,12 @@ window.model = (function () {
     }
     function Keyword(data) {
         var kw = createModelObject(data);
-        var flatTypes = ['RETURN', 'BREAK', 'CONTINUE'];
         kw.libname = data.libname;
         kw.fullName = (kw.libname ? kw.libname + '.' : '') + kw.name;
         kw.type = data.type;
         kw.template = 'keywordTemplate';
         kw.arguments = data.args;
-        kw.assign = data.assign + (data.assign ? ' =' : '');
+        kw.assign = data.assign + (data.assign ? ' =  ' : '');
         kw.tags = data.tags;
         kw.timeout = data.timeout;
         kw.populateKeywords = createIterablePopulator('Keyword');
@@ -1149,8 +1336,9 @@ window.testdata = function () {
     var _statistics = null;
     var LEVELS = ['TRACE', 'DEBUG', 'INFO', 'WARN', 'ERROR', 'FAIL', 'SKIP'];
     var STATUSES = ['FAIL', 'PASS', 'SKIP', 'NOT RUN'];
-    var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'ITERATION', 'IF', 'ELSE IF', 'ELSE', 'RETURN',
-                         'TRY', 'EXCEPT', 'FINALLY', 'WHILE', 'CONTINUE', 'BREAK', 'ERROR'];
+    var KEYWORD_TYPES = ['KEYWORD', 'SETUP', 'TEARDOWN', 'FOR', 'ITERATION', 'IF',
+                         'ELSE IF', 'ELSE', 'RETURN', 'VAR', 'TRY', 'EXCEPT', 'FINALLY',
+                         'WHILE', 'CONTINUE', 'BREAK', 'ERROR'];
     function addElement(elem) {
         if (!elem.id)
             elem.id = uniqueId();
@@ -1193,6 +1381,7 @@ window.testdata = function () {
         return createKeyword(parent, element, strings, index - messages.length);
     }
     function createKeyword(parent, element, strings, index) {
+        var status = element[8];
         var kw = model.Keyword({
             parent: parent,
             type: KEYWORD_TYPES[element[0]],
@@ -1208,7 +1397,12 @@ window.testdata = function () {
                 this.doc = function () { return doc; };
                 return doc;
             },
-            status: parseStatus(element[8], strings),
+            status: parseStatus(status),
+            message: function () {
+                var msg = status.length == 4 ? strings.get(status[3]) : '';
+                this.message = function () { return msg; };
+                return msg;
+            },
             times: model.Times(times(element[8])),
             isChildrenLoaded: typeof(element[9]) !== 'number'
         });
@@ -1419,6 +1613,20 @@ window.testdata = function () {
 }();
 </script>
 <script type="text/javascript">
+const lightModeIcon = `
+<svg class="light-mode-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+    viewBox="0 0 24 24" fill="var(--text-color)">
+    <rect fill="none" height="24" width="24" />
+    <path
+        d="M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0 c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2 c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1 C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06 c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41 l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41 c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36 c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z" />
+</svg>`
+const darkModeIcon = `
+<svg class="dark-mode-icon" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24"
+    viewBox="0 0 24 24" fill="var(--text-color)">
+    <rect fill="none" height="24" width="24" />
+    <path
+        d="M11.01,3.05C6.51,3.54,3,7.36,3,12c0,4.97,4.03,9,9,9c4.63,0,8.45-3.5,8.95-8c0.09-0.79-0.78-1.42-1.54-0.95 c-0.84,0.54-1.84,0.85-2.91,0.85c-2.98,0-5.4-2.42-5.4-5.4c0-1.06,0.31-2.06,0.84-2.89C12.39,3.94,11.9,2.98,11.01,3.05z" />
+</svg>`
 function removeJavaScriptDisabledWarning() {
     // Not using jQuery here for maximum speed
     document.getElementById('javascript-disabled').style.display = 'none';
@@ -1454,6 +1662,10 @@ function setTitle(suiteName, type) {
 function addHeader() {
     var generated = util.timestamp(window.output.generated);
     $.tmpl('<h1>${title}</h1>' +
+           '<button id=theme-toggle>' +
+             lightModeIcon +
+             darkModeIcon +
+           '</button>' +
            '<div id="generated">' +
              '<span>Generated<br>${generated}</span><br>' +
              '<span id="generated-ago">${ago} ago</span>' +
@@ -1465,6 +1677,7 @@ function addHeader() {
         ago: util.createGeneratedAgoString(generated),
         title: document.title
     }).appendTo($('#header'));
+    document.getElementById('theme-toggle')?.addEventListener('click', theme.onClick);
 }
 function addReportOrLogLink(myType) {
     var url;
@@ -1593,13 +1806,65 @@ function stopPropagation(event) {
     if (event.stopPropagation)
         event.stopPropagation();
 }
+const theme = function () {
+    const storageKey = 'theme-preference';
+    const urlParams = new URLSearchParams(window.location.search);
+    var storage;
+    var theme;
+    function init(givenStorage) {
+        storage = givenStorage;
+        theme = { value: getPreference() };
+        document.body.setAttribute('data-theme', theme.value);
+        reflectPreference();
+        window.matchMedia('(prefers-color-scheme: dark)')
+            .addEventListener('change', ({matches:isDark}) => {
+                theme.value = isDark ? 'dark' : 'light';
+                setPreference();
+            });
+        window.addEventListener('storage', ({key, newValue}) => {
+            if (key === storage.fullKey(storageKey)) {
+                theme.value = newValue === 'dark' ? 'dark' : 'light';
+                setPreference();
+            }
+        });
+    }
+    function getPreference() {
+        if (urlParams.has('theme')) {
+            var urlTheme = urlParams.get('theme') === 'dark' ? 'dark' : 'light';
+            storage.set(storageKey, urlTheme);
+            urlParams.delete('theme');
+            return urlTheme;
+        }
+        if (storage.get(storageKey))
+            return storage.get(storageKey) === 'dark' ? 'dark' : 'light';
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+    function setPreference() {
+        storage.set(storageKey, theme.value);
+        reflectPreference();
+    }
+    function reflectPreference() {
+        document.body.setAttribute('data-theme', theme.value);
+        document.querySelector('#theme-toggle')?.setAttribute('aria-label', theme.value);
+        const event = new Event('theme-change', {value: theme.value});
+        document.dispatchEvent(event);
+    }
+    function onClick() {
+        theme.value = theme.value === 'light' ? 'dark' : 'light';
+        document.body.setAttribute('theme-toggled', "");
+        setPreference();
+    }
+    return {init: init, getPreference: getPreference, setPreference: setPreference,
+        reflectPreference: reflectPreference, onClick: onClick};
+}();
 </script>
 <script type="text/javascript">
 storage = function () {
     var prefix = 'robot-framework-';
     var storage;
     function init(user) {
-        prefix += user + '-';
+        if (user)
+            prefix += user + '-';
         storage = getStorage();
     }
     function getStorage() {
@@ -1613,38 +1878,41 @@ storage = function () {
             return {};
         }
     }
-    function get(name, defaultValue) {
-        var value = storage[prefix + name];
+    function get(key, defaultValue) {
+        var value = storage[fullKey(key)];
         if (typeof value === 'undefined')
             return defaultValue;
         return value;
     }
-    function set(name, value) {
-        storage[prefix + name] = value;
+    function set(key, value) {
+        storage[fullKey(key)] = value;
     }
-    return {init: init, get: get, set: set};
+    function fullKey(key) {
+        return prefix + key;
+    }
+    return {init: init, get: get, set: set, fullKey: fullKey};
 }();
 </script>
 <script type="text/javascript">
 window.output = {};
 </script>
 <script type="text/javascript">
-window.output["suite"] = [1,2,3,4,[],[0,0,207967],[],[[5,0,0,[],[0,890,4273,6],[]],[7,0,0,[],[0,5165,4,8],[]],[9,0,0,[10,11],[0,5171,20028,12],[]],[14,0,0,[10],[0,25202,8,13],[]],[15,0,0,[10],[0,25211,7,13],[]],[16,0,0,[10],[0,25220,10007,13],[]],[17,0,0,[18],[0,35229,8,13],[]],[19,0,0,[20],[0,35239,10,12],[]],[21,0,0,[20],[0,35251,19,22],[]],[23,0,0,[24],[0,35272,18,22],[]],[25,0,0,[26],[0,35291,19,22],[]],[27,0,0,[28],[0,35311,19,22],[]],[29,0,0,[30],[0,35332,11,12],[]],[31,0,0,[32],[0,35345,20,12],[]],[33,0,0,[34],[0,35366,20,12],[]],[35,0,0,[36],[0,35387,27,12],[]],[37,0,0,[18],[0,35415,10008,13],[]],[38,0,0,[39],[0,45423,10,12],[]],[40,0,0,[39],[0,45433,20,41],[]],[42,0,0,[39],[0,45455,31,43],[]],[44,0,0,[39],[0,45487,58,45],[]],[46,0,0,[39],[0,45547,12,22],[]],[47,0,0,[48],[0,45559,2017,12],[]],[49,0,0,[48],[0,47577,10009,13],[]],[50,0,0,[48],[0,57587,10005,13],[]],[51,0,0,[52],[0,67593,10014,13],[]],[53,0,0,[52],[0,77608,72,54],[]],[55,0,0,[52],[0,77682,4,13],[]],[56,0,0,[18],[0,77687,10006,13],[]],[57,0,0,[58],[0,87694,10085,54],[]],[56,0,0,[18],[0,97783,10005,13],[]],[59,0,0,[18],[0,107790,20034,60],[]],[61,0,0,[18],[0,127826,20030,60],[]],[62,0,0,[18],[0,147858,20026,60],[]],[63,0,0,[18],[0,167886,20026,60],[]],[64,0,0,[18],[0,187915,20049,60],[]]],[],[36,0,36,0]];
+window.output["suite"] = [1,2,3,4,[],[0,0,2979265],[],[[5,0,0,[],[1,549,4610],[]],[6,0,0,[],[1,5159,0],[]],[7,0,0,[8,9],[1,5159,26253],[]],[10,0,0,[8],[1,31415,2274],[]],[11,0,0,[8],[1,33690,2164],[]],[12,0,0,[8],[1,35855,3592],[]],[13,0,0,[8],[1,39447,4285],[]],[14,0,0,[15,8],[1,43731,2146],[]],[16,0,0,[15,8],[1,45879,2727],[]],[17,0,0,[15,8],[1,48606,2197],[]],[18,0,0,[15,8],[1,50803,2202],[]],[19,0,0,[15,8],[1,53005,7224],[]],[20,0,0,[8,21],[1,60231,2128],[]],[22,0,0,[8,21],[1,62359,4804],[]],[23,0,0,[8,21],[1,67163,83391],[]],[24,0,0,[8],[1,150554,2194],[]],[25,0,0,[8],[1,152749,2186],[]],[26,0,0,[8],[1,154935,12156],[]],[27,0,0,[28],[1,167091,2914],[]],[29,0,0,[28],[1,170008,2615],[]],[30,0,0,[28],[1,172625,2543],[]],[31,0,0,[28],[1,175174,2491],[]],[32,0,0,[28],[1,177665,2503],[]],[33,0,0,[28],[1,180169,2531],[]],[34,0,0,[28],[1,182700,2299],[]],[35,0,0,[28],[1,184999,22964],[]],[36,0,0,[28],[0,207963,12667,37],[]],[38,0,0,[28],[0,220632,12615,39],[]],[40,0,0,[28],[0,233247,12937,41],[]],[42,0,0,[28],[1,246184,13911],[]],[43,0,0,[28],[1,260101,7046],[]],[44,0,0,[28],[1,267146,2117],[]],[45,0,0,[28],[1,269263,3350],[]],[46,0,0,[28],[1,272613,20744],[]],[47,0,0,[28],[1,293357,20537],[]],[48,0,0,[28],[1,313894,20787],[]],[49,0,0,[28],[1,334681,20532],[]],[50,0,0,[28],[1,355213,20326],[]],[51,0,0,[28],[0,375538,31202,52],[]],[53,0,0,[28],[0,406747,31610,52],[]],[54,0,0,[28],[0,438360,31088,52],[]],[55,0,0,[28],[1,469448,20481],[]],[56,0,0,[28],[1,489932,59470],[]],[57,0,0,[28],[0,549402,30448,58],[]],[59,0,0,[28],[1,579853,27167],[]],[57,0,0,[28],[1,607020,30947],[]],[60,0,0,[61],[1,637968,3463],[]],[62,0,0,[61],[1,641430,7185],[]],[63,0,0,[61],[1,648615,7183],[]],[64,0,0,[61],[1,655798,7208],[]],[65,0,0,[61],[1,663012,7251],[]],[66,0,0,[61],[1,670266,2157],[]],[66,0,0,[67],[1,672423,4291],[]],[68,0,0,[67],[1,676714,6868],[]],[69,0,0,[67],[1,683582,6850],[]],[70,0,0,[67],[1,690434,11598],[]],[71,0,0,[67],[1,702032,9261],[]],[72,0,0,[67],[1,711294,16481],[]],[73,0,0,[67],[1,727776,2460],[]],[74,0,0,[75],[1,730240,6122],[]],[76,0,0,[75],[0,736363,5810,77],[]],[78,0,0,[28],[1,742174,8985],[]],[79,0,0,[28],[1,751160,12291],[]],[80,0,0,[81],[1,763452,9817],[]],[82,0,0,[81],[1,773270,11043],[]],[83,0,0,[81],[1,784314,33488],[]],[84,0,0,[81],[1,817803,29452],[]],[85,0,0,[81],[1,847257,9050],[]],[86,0,0,[81],[1,856309,33005],[]],[87,0,0,[88],[1,889316,17398],[]],[89,0,0,[88],[1,906716,1619],[]],[90,0,0,[88],[1,908335,20913],[]],[91,0,0,[88],[1,929248,17683],[]],[92,0,0,[88],[1,946933,7248],[]],[93,0,0,[88],[1,954181,12158],[]],[94,0,0,[95],[0,966339,21722,96],[]],[97,0,0,[95],[1,988061,39223],[]],[98,0,0,[95],[1,1027285,34840],[]],[99,0,0,[95],[1,1062126,2458],[]],[100,0,0,[95],[1,1064584,17370],[]],[101,0,0,[95],[1,1081956,10075],[]],[102,0,0,[95],[1,1092033,4318],[]],[103,0,0,[95],[1,1096354,11445],[]],[104,0,0,[95],[0,1107799,20609,105],[]],[106,0,0,[95],[1,1128408,4712],[]],[107,0,0,[95],[1,1133122,25218],[]],[98,0,0,[95],[1,1158342,49536],[]],[102,0,0,[95],[1,1207879,4341],[]],[103,0,0,[95],[1,1212225,11449],[]],[104,0,0,[95],[1,1223675,25276],[]],[106,0,0,[95],[1,1248954,2214],[]],[108,0,0,[95],[1,1251169,12219],[]],[109,0,0,[95],[1,1263390,17346],[]],[110,0,0,[111],[0,1280737,130938,112],[]],[113,0,0,[114],[1,1411676,10692],[]],[115,0,0,[114],[1,1422370,27751],[]],[116,0,0,[114],[1,1450123,21885],[]],[117,0,0,[114],[1,1472010,7102],[]],[118,0,0,[114],[1,1479113,6836],[]],[119,0,0,[114],[1,1485951,13858],[]],[120,0,0,[114],[1,1499809,38896],[]],[121,0,0,[114],[1,1538706,36064],[]],[122,0,0,[114],[0,1574773,38030,123],[]],[124,0,0,[114],[0,1612804,50204,125],[]],[126,0,0,[127],[1,1663010,11717],[]],[128,0,0,[127],[1,1674728,4362],[]],[129,0,0,[127],[1,1679092,17384],[]],[130,0,0,[127],[1,1696478,21748],[]],[131,0,0,[127],[1,1718227,6635],[]],[132,0,0,[127],[1,1724864,6543],[]],[133,0,0,[127],[1,1731408,8676],[]],[134,0,0,[127],[0,1740085,37310,135],[]],[136,0,0,[127],[0,1777395,55223,137],[]],[138,0,0,[127],[0,1832619,113094,139],[]],[140,0,0,[141],[1,1945714,18658],[]],[142,0,0,[141],[1,1964373,47623],[]],[142,0,0,[141],[1,2011998,45831],[]],[143,0,0,[141],[1,2057829,21936],[]],[144,0,0,[141],[1,2079765,7529],[]],[145,0,0,[141],[1,2087294,7731],[]],[146,0,0,[141],[1,2095025,4401],[]],[147,0,0,[148],[1,2099426,16742],[]],[149,0,0,[148],[1,2116168,121965],[]],[150,0,0,[148],[1,2238133,57611],[]],[151,0,0,[148],[1,2295748,23321],[]],[152,0,0,[153],[0,2319068,17663,154],[]],[155,0,0,[153],[0,2336733,54361,156],[]],[157,0,0,[153],[1,2391094,25184],[]],[158,0,0,[153],[1,2416278,6621],[]],[159,0,0,[153],[1,2422899,6554],[]],[160,0,0,[153],[0,2429453,21576,161],[]],[162,0,0,[153],[0,2451029,35547,163],[]],[164,0,0,[153],[0,2486577,79664,165],[]],[166,0,0,[153],[1,2566241,26769],[]],[167,0,0,[153],[1,2593013,20047],[]],[168,0,0,[153],[1,2613059,20170],[]],[169,0,0,[153],[1,2633230,20113],[]],[170,0,0,[153],[1,2653343,20003],[]],[171,0,0,[153],[1,2673346,19809],[]],[172,0,0,[173],[1,2693155,13487],[]],[174,0,0,[173],[1,2706642,15535],[]],[175,0,0,[176],[1,2722178,12752],[]],[177,0,0,[176],[1,2734931,22064],[]],[178,0,0,[176],[1,2756995,11875],[]],[179,0,0,[180],[0,2768870,19575,181],[]],[182,0,0,[180],[0,2788445,188718,183],[]],[184,0,0,[185,186],[1,2977163,2101],[]]],[],[147,124,23,0]];
 </script>
 <script type="text/javascript">
 window.output["strings"] = [];
 </script>
 <script type="text/javascript">
-window.output["strings"] = window.output["strings"].concat(["*","*HK Retail Check Bronze","*C:\\Users\\Nino.Guerra\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Retail\\HK_TC\\S2\\HK_Retail_Check_Bronze.robot","*HK_Retail_Check_Bronze.robot","*<p>Suite description\x3c/p>","*Test Setup","*SeleniumManagerException: Message: Selenium Manager failed for: C:\\Users\\Nino.Guerra\\PycharmProjects\\pythonProject2\\venv\\Lib\\site-packages\\selenium\\webdriver\\common\\windows\\selenium-manager.exe --browser chrome --output json.\nThe chromedriver version cannot be discovered\n","*Screen Shot DIR","*PermissionError: [WinError 5] Access is denied: 'C:\\\\Users\\\\Danielouie.Estopace'","*TC-001 - Verify Login Page","*Login Page","*TC001","*Several failures occurred:\n\n1) No browser is open.\n\n2) No browser is open.","*No browser is open.","*TC-014 - Input Valid Username","*TC-015 - Input Valid Password","*TC-016 - User should be able to click Login Button","*TC-017 - User should be able to view home page","*Home Page","*TC-060 - User should be able to view account orders page","*Order Page","*TC-066 - User should be able to view order Retail Account Orders Page","eNoLTi1LLUrMUUhLzMwpLUotVshPTi4tKkpNseLiMtRU8MtXSCrKLy9OLVLIBMoVpObpcXEZ4RA3xioOAGFkIEM=","*TC-067 - User should be able to view account return request page","*Return Page","*TC-078 - User should be able to view account saved carts page","*Saved Carts Page","*TC-083 - User should be able to view account vehicle listing page","*Vehicle Listing Page","*TC-084 - User should be able to view message page","*Message Page","*TC-091 - User should be able to view Account Details page","*Account Details Page","*TC-093 - User should be able to view change password page","*Change Password Page","*TC-096 - User should be able to view company details page","*Company Details Page","*TC-041 - User should be able to view All Products Page in HK Retail Home Page","*TC-043 - User should be able to filter product","*All Products Page","*TC-044 - User should be able to view product Out of Stock","eNoLTi1LLUrMUUhLzMwpLUotVshPTi4tKkpNseLiMtRU8MtXSCrKLy9OLVLIBMoVpObpcXEZ4RA3xiFugkPcFKs4AMOfLyA=","*TC-045 - User should be able to view product In Stock Only","eNoLTi1LLUrMUUhLzMwpLUotVshPTi4tKkpNseLiMtRU8MtXSCrKLy9OLVLIBMoVpObpcXEZ4RA3xiFugkPcFIe4GQ5xc6ziAO//PgE=","*TC-046 - User should be able to click add to cart button for in stock only in Retail Product Page","eNrFjrEKwkAQRPv7iinEYCNErWKtkMbCgP3lsgmH527Y3EVB/HcP+9S2b2aY19BMagN660NSmiDOJVXqKmPKDS6CVuU5kcLnbCTeGrNb4PsNap5t8B3qM5xw56MXrnDKMNnoeQC9xvwyZYxi9b7SQ2aquYni7k3U3PhgPcQjyuKnlD1ws+ptG2hpUIAlopfEXZY4/F/iC6/Wdic=","*TC-047 - User should be able to add to cart random item in Retail Product Page","*TC-048 - User should be able to view shopping cart pop up modal","*Shopping Cart Page","*TC-049 - User should be able to view shopping cart in Retail Shopping Cart Page","*TC-052 - User should be able to click checkout button in Retail Shopping Cart Page","*TC-053 - User should be able to view checkout in Retail Checkout Page","*Checkout Page","*TC-053 - User should be able to change Address","eNoLTi1LLUrMUUhLzMwpLUotVshPTi4tKkpNseLiMtRU8MtXSCrKLy9OLVLIBMoVpObpcXEZ4RA3xiFugkPcFIe4GQ5xcxziFjjELXGIGxrgksDuYwBWilwd","*TC-053 - User should be albe to Compare Shipping Fee in HK Retail Checkout Page","*TC-053 - User should be able to Go to Home Page in HK Retail","*TC-053 - User should be able to Search Vehicle in the home page","*Vehicle Search","*TC-053 - User should be able to search by VIN1 to HK Retail Home Page","eNoLTi1LLUrMUUhLzMwpLUotVshPTi4tKkpNseLiMtRU8MtXSCrKLy9OLVLIBMoVpObpcXEZ4RA3xiFugkPcFIe4GVZxAICENpA=","*TC-053 - User should be able to search by VIN2 to HK Retail Home Page","*TC-053 - User should be able to search by VIN3 to HK Retail Home Page","*TC-053 - User should be able to search by VIN4 to HK Retail Home Page","*TC-053 - User should be able to search by VIN5 to HK Retail Home Page"]);
+window.output["strings"] = window.output["strings"].concat(["*","*HK Regression Bronze","*C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Retail\\HK_TC\\S2\\HK_Regression_Bronze.robot","*HK_Regression_Bronze.robot","*<p>Suite description\x3c/p>","*Test Setup","*Screen Shot DIR","*TC-001 - Verify Login Page","*Login Page","*TC001","*TC-002 - Input Invalid Username","*TC-003 - Input Invalid Password","*TC-004 - User should not be able to login using invalid account","*TC-005 - User should be able to check/uncheck Remember me in Retail Login Page","*TC-006 - User should be able to click Forgot Password in Retail Login Page","*Forgot Password","*TC-007 - User should be able to view Forgot Password Page in Retail Forgot Password Page","*TC-008 - User should be albe to view Error Message in Retail Forgot Password Page","*TC-009 - User should be albe to view Error Message in Retail Forgot Password Page","*TC-010 - User should be able to Input Valid Email Address in Retail Forgot Password Page","*TC-011 - User should be able to click Create Account in Retail Login Page","*Registration","*TC-012 - User should be able to view HK Registration Form","*TC-013 - User should be able to input details in Registration Form Page","*TC-014 - Input Valid Username","*TC-015 - Input Valid Password","*TC-016 - User should be able to click Login Button","*TC-017 - User should be able to view home page","*Home Page","*TC-024 - User should be able to view body parts menus in HK Retail Home Page","*TC-024 - User should be able to view Chemicals menus in HK Retail Home Page","*TC-024 - User should be able to view Maintenance Item menus in HK Retail Home Page","*TC-024 - User should be able to view Repair Parts menus in HK Retail Home Page","*TC-024 - User should be able to view Toyota Hybrid menus in HK Retail Home Page","*TC-025 - User should be able to select 1 filter from selected category in HK Retail Home Page","*TC-026 - User should be able to click 1 sub filter from selected category in Retail Home Page","*TC-038 - User should be able to click shop by category Body Parts in HK Retail Home Page","*Element '//div[@class='shop-by-category']//h4[contains(text(),' Body Parts ')]/parent::div/parent::div[@class='shop-by-category__card' or @class='shop-by-category__card mr-2 ml-2']' not visible after 10 seconds.","*TC-038 - User should be able to click shop by category Chemicals in HK Retail Home Page","*Element '//div[@class='shop-by-category']//h4[contains(text(),' Chemicals ')]/parent::div/parent::div[@class='shop-by-category__card' or @class='shop-by-category__card mr-2 ml-2']' not visible after 10 seconds.","*TC-038 - User should be able to click shop by category Maintenance in HK Retail Home Page","*Element '//div[@class='shop-by-category']//h4[contains(text(),' Maintenance Item ')]/parent::div/parent::div[@class='shop-by-category__card' or @class='shop-by-category__card mr-2 ml-2']' not visible after 10 seconds.","*TC-038 - User should be able to click shop by category Repair Parts in HK Retail Home Page","*TC-038 - User should be able to click shop by category Toyota Hybrid in HK Retail Home Page","*TC-039 - User should be able to input text on search bar","*TC-040 - User should be able to click searched text","*TC-041 - User should be able to access Order page using double header in Retail Homepage","*TC-041 - User should be able to access Retrun page using double header in Retail Homepage","*TC-041 - User should be able to access Save carts page using double header in Retail Homepage","*TC-041 - User should be able to access Vehicle Listing page using double header in Retail Homepage","*TC-041 - User should be able to access Inbox page using double header in Retail Homepage","*TC-041 - User should be able to access Account Details page using double header in Retail Homepage","eNqFjbEOwjAMBfd+hbeIIZQyIlXqwsbWsepgErdECnEVOxGfTweWTszv7t5IlTJGWDDEkkmAnSs5k781TXeCe6Q3JQXTtu5jN1zJSmSdho0laODUmzEoPXhlMxtIrFCDhGckwEUpQ3cBIcfJy7lproegD3UaXESR3nguu2NfhJ6ytZkiaqhk5iP229E5LkntXip/b7+LGU4a","*TC-041 - User should be able to access Change Pass page using double header in Retail Homepage","*TC-041 - User should be able to access Company Details page using double header in Retail Homepage","*TC-041 - User should be able to access Relationship page using double header in Retail Homepage","*TC-041 - User should be able to manual search vehicle in HK Retail Homepage","*TC-041 - User should be able to view EPC Search Result Pop Up Modal in HK Retail Home Page","eNqNk0tv1DAUhdedX2Fl1Sow8ttOJBaOk8AGFpTHAnWRJrckmhm7cgwtQvx3PCAWXeB0ZV378z3nWsef4bYNy3cI3eMI93HxrkZvYV2Hr1Cjb+7g/INDEIIP53Ie3HSECS1uvYcx+vDv6Gcx+gmK+iWjGOMXxelvi6Iu7OCcjygOB0DrGADcOqf6YYkzwmmZ4rwvfu0QurxOd5J+an7nazTOwZ/gFaFij/eSU7onhF3truMwHmIYRqh3F68hvvnj6BOE5W6BgL7gx6SPVd/LvrOYUktLmTboze7i8p1H64/TrT9ePeUaZY2ocoRhqmtNliBJT+WJjmKxQTS2zxJcEpx3qrnmeRVjqc7Pokzby40e3OAsYRu78R7GYsbyPiop1IZTKsjNZhJ6wjralowqTbV4Bi8xqXDJRIU518/ghSTtmeeVEHSbtw1pO1mq84A8G02tTD4SjaZdt9GDYbXxAajl/1cxrWl6KlSbiPfx+HGF8GEOMEzpM4b4BGwqaQzXJU/h+A3xeToL","*TC-041 - User should be able to VIN search vehicle in HK Retail Homepage","*TC-041 - User should be able to view EPC L1 Page in HK Retail","*EPC L1","*TC-041 - User should be able to click Shop Now in HK Retail EPC L1 Page","*TC-041 - User should be able to Click Engine Fuel System in HK Retail EPC L1 Page","*TC-041 - User should be able to Click Transmission and Chasis in HK Retail EPC L1 Page","*TC-041 - User should be able to Click Body and Interior in HK Retail EPC L1 Page","*TC-041 - User should be able to Click Electrics in HK Retail EPC L1 Page","*EPC L2","*TC-041 - User should be able to view Engine Fuel System Schema in HK Retail EPC L2 Page","*TC-041 - User should be able to view Transmission and Chasis Schema in HK Retail EPC L2 Page","*TC-041 - User should be able to view Body and Innterior Schema in HK Retail EPC L2 Page","*TC-041 - User should be able to view Electrics Schema in HK Retail EPC L2 Page","*TC-041 - User should be able to view All Schema in HK Retail EPC L2 Page","*TC-041 - User should be able to select random Schema in HK Retail EPC L2 Page","*TC-041 - User should be able to view EPC L3 Page in HK Retail EPC L3 Page","*EPC L3","*TC-041 - User should be able to view one Card on the Parts Card List in HK Retail EPC L3 Page","eNqNk09v1DAQxc/dT2Hl1Cqw8n87kTg4TgIXONACB9RDmp020e7alWNoUcV3xwvqoQecHsf++c0b6803uGnD/BNC9zjCfZy9q9FHWJbhDmr0w+2df3AIQvDhVE6D2x1gh2a33MMYfXi+eipGv4OifssoxvhNcfwnUdSFHZzzEcVhD2gZA4BbplQ/zHFCGE0w301xW/zeIHR+mR4lA0n91tdonII/wjtCxRZvJad0Swi72FzGYdzHMIxQb87eQ/zw19JXCPPtDAF9x4/JAFZ9L/vOYkotLWU6oNebs/NPHi2/jjf+cPGSa5Q1osoRhqmuNVmCpH4qT3QUixWisX2W4JLgvFPNNc93MZbq/CzKtL1c0eAGZwnb2JX/MBYzlvdRSaFWnFJBrleT0BPW0bZkVGmqxSt4iUmFSyYqzLl+BS8kaU88r4Sg67xtSNvJUp0G5NloamXykWg07boVDYbVygJQy//fxbSm6alQbSI+x8OXBcLVFGDYpWUM8QXYVNIYrkuewvEHdlc6ZA==","*TC-041 - User should be able to clear vehicle selection in HK Retail Home Page","*TC-041 - User should be able to view All Products Page in HK Retail Home Page","*TC-042 - User should be able to side filter product","*All Products Page","*TC-043 - User should be able to filter product","*TC-044 - User should be able to view product Out of Stock","*TC-045 - User should be able to view product In Stock Only","*TC-046 - User should be able to click add to cart button for in stock only in Retail Product Page","*TC-047 - User should be able to add to cart random item in Retail Product Page","*TC-048 - User should be able to view shopping cart pop up modal","*Shopping Cart Page","*TC-049 - User should be able to view shopping cart in HK Retail Shopping Cart Page","*TC-046 - User should be able to click save cart button in Retail Shopping Cart Page","*TC-050 - User should be able to edit shopping cart items in Retail Shopping Cart Page","*TC-051 - User should be able to click continue shopping button in Retail Shopping Cart Page","*TC-052 - User should be able to click checkout button in Retail Shopping Cart Page","*TC-053 - User should be able to view checkout in Retail Checkout Page","*Checkout Page","*Element '//dpp-hk-order-items-summary//*[@class='title']|//dpp-multi-step-checkout-order-items-summary//*[@class='title']' not visible after 10 seconds.","*TC-053 - User should be able to change to manual Address","*TC-053 - User should be able to change Address","*TC-053 - User should be able to view Promo Code in HK Retail Checkout Page","*TC-053 - User should be able to input Promo Code in HK Retail Checkout Page","*TC-053 - User should be able to check Promo Code in HK Retail Checkout Page","*TC-054 - User should be able to view payment method in HK Retail Checkout Page","*TC-055 - User should be able to input card details","*TC-056 - User should be able to click continue payment","*Element '//div[@class='acs-challenge-modal']//div[@class='acs-challenge-form']//input' not visible after 10 seconds.","*TC-057 - User should be able to input otp","*TC-058 - User should be able to click Cancel button on 2C2P","*TC-058 - User should be able to click Submit button on 2C2P","*TC-059 - User should be able to view place order in HK Retail Place Order Page","*TC-087 - User should be able to process Re-Order in Retail Account Order Details Page","*Re-Order Process","*Several failures occurred:\n\n1) 4475.5 != 400.0\n\n2) 200.0 != 4475.5","*TC-060 - User should be able to view account orders page","*Order Page","*TC-061 - User should be able to apply filter status in Retail Account Orders Page","*TC-062 - User should be able to apply date filter in Retail Account Orders Page","*TC-063 - User should be able to click Date Filter Clear Button in Account Order Page","*TC-064 - User should be able to Search in Account Order Page","*TC-065 - User should be able to arrange filter in Retail Account Orders Page","*TC-065 - User should be able to view and message order with Recieved Status in Retail Account Orders Page","*TC-066 - User should be able to view and message order with Submitted Status in Retail Account Orders Page","*TC-067 - User should be able to view and message order with Dispatched Status in Retail Account Orders Page","eNqNk01P3DAQhs/sr7A4oF2lpP6I7SSIg+M4LYe2Uml7qXoIycBGZJOVYxb67+sA/eBQB1+s8Tx+Z15pxvSwg8HpvmtuLwYHtoG9g9Y8zHc3Djn6ANNU30CO4AlFzcyi7i+cI/OcOund2bSvh5MbdxbH8Ry+/R2jbkLD+Py9vuoB1Q7tR6+D1oTg9A3i6SZGn9wW7J9a9+Nd3yILDXQHQD719D1/rNR2Bx/W03R+3NxNbtydbqFuwZ4eYNs1PRz/24aH53CF0PrSO/LWvIXrMUfN1o47OCeUxzgWCaUxIWyzunR1c+ts3UC+OnoH7n09tD18A9tdd77B7/gB+yOrSlRGY0o1jYR/oD9WR+uPI5p+7q7GfvOSK6RWPAsRiklTqiCRViwzYUKXgoYJRaoiTGRMiyAhi6QkQUJpmoa9SFVWYkEjUThI6EJruaCBGQv3kQkuFzqlfHa7MAkVYYaWEaMypSl/BS8wyXDEeIaTJH0FzwUpZz7JOKfLvC5IaUQkZ4NJcDRTqXQVJqgxCxoMy4UFoDr5fxVVqqKiXJae+Oz6rxPYL1vrd9ovo3UvwCITSiVplPjh+AU6qF3l","*TC-069 - User should be able to view and message order with Orders with Returns Status in Retail Account Orders Page","eNq9k81vmzAYxs/lr7B6aBJlIWC+qSqV8LHtsE1at12iqHLNm8aqgzPbpKm0P34mXbv2MOhpHIAXfn78PK/tK9iDJBytCeOtBIUEpa2UUKeW5U5QyWELjUaj+ZwsL4lkZMbJDfCLUQMHjXbkFkarEWqERnum2A0HRNYaJHIdpICKpla2ZeEXQuP5XMulbe718pJyotTFiB5mQtYgZxumtJAPMy004aPVquPMT2aEXsJdjerd7viirq8l6FY2aibhZwtKm4H98lTUxvZk6a5+vcmO0kS36n/4GWyl99zKnDN697ExBIWdhro8dE8mmhR9AqXMyqQI/nSddixif+H0eUHOuD5XO9Kc3epz27a7cv5UI6aOfo7DydGRWXNhdNDYdZ34HQriiY2+6I2x+TTXvWh5jSRQYHtA5tfj8PQ4U8326LELp7Q14bezDZCuFXvYMMrh9KUNA3elhdD4yiQy0UyEtUgR3UixhQsXB7Zjhz7Gtut6E+tKE3qnJaGQWifvQX8gTc3hB0i2Zsbg0jk45oqqKqzK3ME4x9PQfMAr62T8WSD1sL0RfPKaW0R5FiR9ROZFZZH1EnHlJWU/kRch7icyt1r0E4mXh71EtPALt5fIchz3Z4myogoHNPzM6SXyRZ5HAxqO5/X7SMIgGnCKgy7twE6oXK/ExdTDUYzj4A186LiJM/WCxPH9+A18ELpFx/tJEOBhPl+4RRlOoy6g37s14yjLq34Cl+WAhudEAwcA5/6/Z8mKbFHhICoM8VXz7wrkt400Z9ocRqlfgYskzDI/nvpmc/wGwc/1Cg==","*TC-067 - User should be able to view account return request page","*Return Page","*TC-068 - User should be able to click filter by status in Account Retrun Page","*TC-069 - User should be able to apply filter status in Account Retrun Page","*TC-070 - User should be able to apply date filter in Account Retrun Page","*TC-071 - User should be able to click Date Filter Clear Button in Account Return Page","*TC-072 - User should be able to Search in Account Return Page","*TC-073 - User should be able to arrange filter in Account Return Page","*TC-077 - User should be able to view and message order with Accepted Status in Retail Account Return Page","eNqNlDtv2zAURufoVxAeYhuOXtRbQYDq2XZoCyRtlyADTV3HRGQxJSnX/velnCaFh0rRQog8ujzfBak72IMgLdoQ1vYCJOKU9kJAkxqGu0RVCzvoFJrbdsP29x9oS6S8mdODueMNaU3KO6XX5w+2ve6V4p1ty2fS3Q/zhHVyoeCgFsureU7oE1Ic3YLqRaeHXz1INV8+zFHHFdozydYtILJRIJDrIAm6RCMtw8BvFkXL6NNnvaGg8KygqQ7DyHiXoi8gJXmEFMFfYTqwiP2D07csl626JmgrYHMzs7dPArRpa++OJqGU952yxcnRFC+OcoZeUs/WOoOpuMlFA8LcMqm4OM4uH9W1ZVlDVZsML4jJU6aTAjmlUuiZaxe0cF0nuULYiZYW+qa2Ouur8G/etw0SQIHtAemll+/Tk67u/avEWet1i0GcGWhyeDUQWtzpnujm6CZseIroVvAd3Lg4sBwr9DG2XNdbGndKh1KCUEiNi4+gPpGuaeEnCLZh2u7eOTj6ieo6rKvCwbjAq1BP4AfjYvGVI3ncrXm7POfyqMiCZIzIvKgqs1Eirr2kGieKMsTjRObW+TiReEU4SkS5X7qjRFbgeDxLlJV1OFHDz5xRosiLIpqo4XjeuEcSBtGEKQ6GtBMnoXa9CpcrD0cxjoN38KHjJs7KCxLH9+N38EHolgPvJ0GAp/kid8sqXEVDQH/0aMZRVtTjBK6qiRqeE01cAFz4/98lK7O8xkFUauJWtT8kiO/6d0QafRmFOgPzJMwyP175+nD8AVMVrd8=","*TC-109 - User should be able to view and message order with Declined Status in Retail Account Return Page","eNqNlU2P2kgQhs/xryjNIQYRG7v9BUQjxRiT7GF3pcxuLohDY9eEVho36W6TGSk/fsvATDIrxY4laNl+qHrrpbr6Dk+ouYR7LmSr0YCqqlZrrBeOE46hlHjAxoI7nfLNO64F9yTfobx1G3ywcOSf0d260CgLJ2HETiLwe4sawgAMVqqpje847KdAo+nU6o1P3/XmXSW5Mbdu9eBptK1uaPnaorHGs8qSKmO5bY1XKemduGzRBd7UQGEtF40ZWdIwGr9xV1hJ0WDtjrfbocCVqknyeBNuv5OUWpyeYa2+wZXuMpBad9sJJWY6NUfebAYS8768F/3nxIN+Rc9+FVJUX/4gMbrCo8W6fOhWoZoF/InGkP0LwKu1VceC+AEvnl1/Le3bXWutasA+HvH25nJzAxe9NzvbAH081dquHu8ihevHm9ef7Vvf97sA08uPuicgzLmGc0p+roKaQVFuGIXZLH4DIYuTsQ9/2z0V96Twm2plTR5XKE4I9OoSYHHWRzY/ySH7zFE0DeoX+Ynobh2A0R0VTy5QtfdqAdVeqwPehizxAz+NGfPDMBo7d5ZXX6zmFS6cV+/RfqDmkfgJtbgXpGoTPAR0Zet1ui6LgLGCTVJ6wLbOq9FfCszjYafk+CW3zIo8mfcReZSVq7yXmK2jedlPFKuUdABdm6d/Gq5dCYq27Nk9KQ7Cwp4b2CE2ZOyBXtU+9IYulkWR9RJ5EURRL5HN06Q/RpazJNwO2r4Oo5KtJhHLZmyW/AafBuE8mETJPIjj2W/wSRquOj6eJwkb5otluCrTSdYVGPf2wSzLi3U/wcpyIEYUZAPdxor411nyVb5csyRbEfHRyn8N6n/2GnlNna/tC3A5T/M8nk3iYOs4TvZisv88BGnrHVTN5Y8ROL3u+1/NwCVtMrAKPp4HHi3ngUcTcXDMzf5/vlw17CgiHQCe0jVqby+MVfpx8Jj5DyJ+H18=","*TC-110 - User should be able to view and message order with In Progress Status in Retail Account Return Page","eNq1lE9v2zAMxe/5FLwpAaa6zv4XCNBLD7sN2NHwgbaYTJgkphKVtcA+/JhmC1oUq70BO9jWgf7x+T3SX+hAGQNs0YeaqQCPY82Z3NVi0a7gJlCkJGCaBrtrzB5twIHCxiS6E9jjjkxvILHAwRc/BALcCmVoL6HQyMmVi8Vi/Qi0bBrJ3YXeXXc9BixlY8Y7m0lqTvq4rVSkWGFRVUVQarEjB3vAUMkAJgeKFfSpLEU1LFevzKcEnzPvVH4xq76fYo/sVPWqa/sfqsb5w7k483f4VX1sooJNf9SqNU1T9pi66d74UuvTVzz0nnTt9RP7hyrC6cweJIFelqsEn8ieXsN8PyOON3PAJf4z/+3/Ev7uCfhxcGq18xh4Zwd29xDZYXg4zqC+/zNV565E267NcaY0cMyk8W45x+McZA4JI21M1PDnbcKHKWt8VJCt+8DoZvA+/kWUZ6chBrueAW8vX/L75PF5TaZpz34nv2Xi+E333XJ2lO1XX4RnTMNPAaicng==","*TC-078 - User should be able to view account saved carts page","*Saved Carts Page","*TC-079 - User should be able to Saved Carts in Retail Account Saved Carts Page","*TC-079 - User should be able to select one Saved Carts in Retail Account Saved Carts Page","*TC-080 - User should be albe to click Restore in Retail Account Saved Carts Details Page","*TC-081 - User should be able to click Delete in Retail Account Saved Carts Details Page","*TC-082 - User should be able to click Delete in Retail Account Saved Carts Page","*TC-083 - User should be able to view account vehicle listing page","*Vehicle Listing Page","*TC-083 - User should be able to add new vehicle in Retail Account Vehicle Listing Page","*TC-009 - User should be able to click shop this vehicle in Retail Account Vehicle Listing Page","*TC-010 - User should be able to click delete in Retail Account Vehicle Listing Page","*TC-084 - User should be able to view message page","*Message Page","*Element '//dpp-message-list' not visible after 10 seconds.","*TC-085 - User should be able to filter message in message page","eNq1zrsOwjAMheG9T+EtVKKU24SExIIYQTAihpAYiJQ6YDsF3p6KJ4Ch89HR/x2wRbYRLjbEzCiQnMvM6BdFMSlhHbFBUjB17UN7XLloRZaGrpXndPfpSdXdEsYqKDYC4jjFWN2SqDnVtXTb0SVSG0gGii8dlEOzQfom1/TIgd+mPBmgpNAGCeeIYC+KDJMxCHZfL6OimPYj2aNmpn8gs34gW/Zd6Q/HvB/HjpPPTn+XfADSjciE","*TC-086 - User should be able to apply date filter in Retail Account Messages Page","*TC-087 - User should be able to click Date Filter Clear Button in Retail Account Messages Page","*TC-088 - User should be able to search message in Retail Account Messages Page","*TC-088 - User should be able create and send new message in Retail Account Messages Page","*Element '//button[@class='btn btn-secondary']' not visible after 10 seconds.","*TC-089 - User should be able to view and message read Order Enquiry in Retail Account Message Page","eNqtlE1P20AQhs/4V4w4EKI0xrv+NkLCn20PbaXS9hJx2NgTsmLtRd5NCP++a1JAVNThUF8s7z7zzsz63bnCLfZMwIpxselRgazrTd9jk1gWmUIpsMVO54LXt587jX2Ndxqbcje8uewS+IJKsRtMAPco1AML/AVOnlTgROjzhm8NwpS6OO5u5spE1Xpey04z3mEPZm3N1HzLxAaPT270uW3bQ9iZiRs+gSvo5J8sbCkQmIY7adLBKSEB+QA0DKY2fNNro/ZU073ciAZ6rJFvEczWPj75u6J6N29lw8RLQW/VYAGcXpm2Tf+mz5VMoF73ssULQn3bsQOPUpsQd2pdaVbf6p7VmFhHH1F/Yl0j8Bf2fMVNdQtn55gnrKqgKnOH0pzOArNAr62j068S1EO7lGL6msvCPPXjMSJ1w7JIR4mocuNynMiLgI4TKamycSJ282CUCDOvIKNEmtNovJcwLarggIaXOqNEnuV5eG3+K8DiydEweGAwjzQ35NEzgrdcg7EnLBE7Y6fWbDU2/J/koxqO644fQhz44YFjov5w1AdsWBG3pMXMpWFEI/8dfOCQ2Jm5fux4XvQO3g9IMfBe7Pv0MJ9npCiDWTg06I3eiyhM82qcoGV5QMN1wgO3j+bev7OkRZpV1A8LQ3zX4qfC/se6R9aYSdDrV2AWB2nqRTPPmMOyvOdRC5Ozs+VGa9ktLvXDHV5M1GZpfDe5njwOvi1X/HHsrcyABR8UGp82yrYs/5UGW1zuh9pkaYbQXMt5u/e1eluJOM9SvwGwC8pJ","*TC-090 - User should be able to view and message read Product Enquiry in Retail Account Message Page","eNqNkctOwzAQAO/9Ct/cSJhS3kKqVAl64MKbA4p62NjbYuHYwbsJ8Pc4qC2kKmqviXd2xn7EBiM4MQPr6ogkgtZ1jGguer1hJiYOS/Qs5GDg54rQoeZ8XFhvGnA1jqQOBuV0MDC2ycfaAdFIrk4qHTyD9RhF+vYKpH6m5FQKH1g0lmzhUMCM04nhgSBMA4b2e73Dzuo1uImhMuHDqwo8OmUZSxKkY3BOvQbi1ofSv3yxnvqMn9zP9uRdDKbWLCb+vbbxS2bbTY46JpCPIVpQDgp0SSZxRQXzXZKO/4D63aYYPkSJRAn0e2Vymu//2/Fwe/V8+SQmN/fP1w8vqWOZvETyV4UrJkNyUu2wnGb5cLvrSSe6HYSIqX0WYtnKpKv2UKbnX2zYIf+0gyxq5vBrW7AXtmxV68oFMDvwzjby2uyRpLooLW+GnPxhnK+/7VIH9JvioBZ1tFXnGxeuHSo=","*TC-128 - User should be able to view and message read General Enquiry in Retail Account Message Page","*TC-130 - User should be able to view and message read Return Enquiry in Retail Account Message Page","*TC-133 - User should be able to view and message unread General Enquiry in Retail Account Message Page","*TC-134 - User should be able to view and message unread Return Enquiry in Retail Account Message Page","*TC-135 - User should be able to view and message unread Order Enquiry in Retail Account Message Page","*TC-136 - User should be able to view and message unread Product Enquiry in Retail Account Message Page","*TC-091 - User should be able to view Account Details page","*Account Details Page","*TC-092 - User should be able to edit account details in Retail Account Details Page","*TC-093 - User should be able to view change password page","*Change Password Page","*TC-094 - User should be able to edit password in Retail Account Details Page","*TC-095 - User should be able to view password error messages in Retail Account Details Page","*TC-096 - User should be able to view company details page","*Company Details Page","*Element '//span[@class='label-content color-grey' and contains(text(),'Address Line 2')]' not visible after 10 seconds.","*TC-097 - User should be able to edit company details page","eNrNlFFr2zAQx9/9Ke5NCcxOnW6DGQot7d62pz2GPJytSyI4S0KS0+7b7xSn0MAgzuhKjMG2dKf/7+4v+RftKSDDBg0PgSK4rhtCIN0URT2H70w92QRqsdBmv7rfuNBvgxu8xZ7ulCY2kv/7QWvJjWotYd6XOCTXud4zJSojYeh2i0X0aFf3ySSWxEeWUUBmtVZgXYK9iaZlAtwkClDfQKTOWR2roli+K8YhP7gMIXOta91LjjfWD+ksyu31oHw+QckUk4HsttTBee2ebSmmEB8yT3icT8bZHOzlxiAyTSPzZ7G+XMee+Xo9RoFcK/gpGrglkNGUqZxoQ9oRsOlNgh1GaIksBOplSlewLqqqusCp+VmQb//Sk0ONY2BGF80xFMeQH8bScoIf9c0b8dlk9dH/jjHGO8XYEpeZAkU1KECr4fgZZ4le0mz+ST0EQjVf5yPB7J6NtDBTybNp8jsxdekIcFxYhvfIA71Ze0I76/q0pEuP4Ejyt9bmCi47phNolx9lwJOJKZguZRNe/xyHzA+w5PY/WaJfa3pfW/4AitWiag==","*TC-000000 - User should be able to logout","*Logout","*TC009"]);
 </script>
 <script type="text/javascript">
-window.output["stats"] = [[{"elapsed":"00:03:27","fail":36,"label":"All Tests","pass":0,"skip":0}],[{"elapsed":"00:00:00","fail":1,"label":"Account Details Page","pass":0,"skip":0},{"elapsed":"00:00:00","fail":5,"label":"All Products Page","pass":0,"skip":0},{"elapsed":"00:00:00","fail":1,"label":"Change Password Page","pass":0,"skip":0},{"elapsed":"00:00:10","fail":3,"label":"Checkout Page","pass":0,"skip":0},{"elapsed":"00:00:00","fail":1,"label":"Company Details Page","pass":0,"skip":0},{"elapsed":"00:02:10","fail":9,"label":"Home Page","pass":0,"skip":0},{"elapsed":"00:00:30","fail":4,"label":"Login Page","pass":0,"skip":0},{"elapsed":"00:00:00","fail":1,"label":"Message Page","pass":0,"skip":0},{"elapsed":"00:00:00","fail":2,"label":"Order Page","pass":0,"skip":0},{"elapsed":"00:00:00","fail":1,"label":"Return Page","pass":0,"skip":0},{"elapsed":"00:00:00","fail":1,"label":"Saved Carts Page","pass":0,"skip":0},{"elapsed":"00:00:22","fail":3,"label":"Shopping Cart Page","pass":0,"skip":0},{"elapsed":"00:00:20","fail":1,"label":"TC001","pass":0,"skip":0},{"elapsed":"00:00:00","fail":1,"label":"Vehicle Listing Page","pass":0,"skip":0},{"elapsed":"00:00:10","fail":1,"label":"Vehicle Search","pass":0,"skip":0}],[{"elapsed":"00:03:28","fail":36,"id":"s1","label":"HK Retail Check Bronze","name":"HK Retail Check Bronze","pass":0,"skip":0}]];
+window.output["stats"] = [[{"elapsed":"00:49:39","fail":23,"label":"All Tests","pass":124,"skip":0}],[{"elapsed":"00:00:29","fail":0,"label":"Account Details Page","pass":2,"skip":0},{"elapsed":"00:02:06","fail":0,"label":"All Products Page","pass":6,"skip":0},{"elapsed":"00:00:47","fail":0,"label":"Change Password Page","pass":3,"skip":0},{"elapsed":"00:05:14","fail":2,"label":"Checkout Page","pass":16,"skip":0},{"elapsed":"00:03:28","fail":2,"label":"Company Details Page","pass":0,"skip":0},{"elapsed":"00:00:34","fail":0,"label":"EPC L1","pass":6,"skip":0},{"elapsed":"00:00:58","fail":0,"label":"EPC L2","pass":7,"skip":0},{"elapsed":"00:00:12","fail":1,"label":"EPC L3","pass":1,"skip":0},{"elapsed":"00:00:16","fail":0,"label":"Forgot Password","pass":5,"skip":0},{"elapsed":"00:08:12","fail":7,"label":"Home Page","pass":23,"skip":0},{"elapsed":"00:02:42","fail":0,"label":"Login Page","pass":16,"skip":0},{"elapsed":"00:00:02","fail":0,"label":"Logout","pass":1,"skip":0},{"elapsed":"00:06:14","fail":5,"label":"Message Page","pass":9,"skip":0},{"elapsed":"00:04:11","fail":2,"label":"Order Page","pass":8,"skip":0},{"elapsed":"00:02:11","fail":1,"label":"Re-Order Process","pass":0,"skip":0},{"elapsed":"00:01:30","fail":0,"label":"Registration","pass":3,"skip":0},{"elapsed":"00:04:43","fail":3,"label":"Return Page","pass":7,"skip":0},{"elapsed":"00:02:34","fail":0,"label":"Saved Carts Page","pass":7,"skip":0},{"elapsed":"00:01:17","fail":0,"label":"Shopping Cart Page","pass":6,"skip":0},{"elapsed":"00:00:26","fail":0,"label":"TC001","pass":1,"skip":0},{"elapsed":"00:00:02","fail":0,"label":"TC009","pass":1,"skip":0},{"elapsed":"00:03:40","fail":0,"label":"Vehicle Listing Page","pass":4,"skip":0}],[{"elapsed":"00:49:39","fail":23,"id":"s1","label":"HK Regression Bronze","name":"HK Regression Bronze","pass":124,"skip":0}]];
 </script>
 <script type="text/javascript">
-window.output["baseMillis"] = 1708929485622;
+window.output["baseMillis"] = 1716858694164;
 </script>
 <script type="text/javascript">
-window.output["generated"] = 208030;
+window.output["generated"] = 2979522;
 </script>
 <script type="text/javascript">
 window.output["expand_keywords"] = null;
@@ -1654,7 +1922,7 @@ window.settings = {"background":{"fail":"#f66","pass":"#9e9","skip":"#fed84f"},"
 </script>
 <title></title>
 </head>
-<body>
+<body data-theme="dark">
 <div id="javascript-disabled">
   <h1>Opening Robot Framework report failed</h1>
   <ul>
@@ -1664,13 +1932,15 @@ window.settings = {"background":{"fail":"#f66","pass":"#9e9","skip":"#fed84f"},"
   </ul>
 </div>
 <script type="text/javascript">removeJavaScriptDisabledWarning();</script>
-
+<div id="status-bar"></div>
 <div id="header"></div>
 <div id="statistics-container"></div>
 <div id="test-details-container"></div>
 
 <script type="text/javascript">
 $(document).ready(function () {
+    storage.init();
+    theme.init(storage);
     try {
         var topsuite = window.testdata.suite();
     } catch (error) {
@@ -1678,24 +1948,37 @@ $(document).ready(function () {
         return;
     }
     window.prevLocationHash = '';
-    setBackground(topsuite);
     initLayout(topsuite.name, 'Report');
-    storage.init('report');
+    setStatusColor(topsuite);
     addSummary(topsuite);
     addStatistics();
     addDetails();
     window.onhashchange = showDetailsByHash;
+    document.addEventListener("theme-change", () => {
+        setStatusColor(topsuite);
+    });
 });
 
-function setBackground(topsuite) {
+function setStatusColor(topsuite) {
     var color;
-    if (topsuite.fail)
+    let fail = Boolean(topsuite.fail);
+    let pass = Boolean(!topsuite.fail && topsuite.pass);
+    let skip = Boolean(!topsuite.fail && !topsuite.pass);
+    if (theme.getPreference() === 'dark') {
+        $('#status-bar').toggleClass("fail-bar", fail);
+        $('#status-bar').toggleClass("pass-bar", pass);
+        $('#status-bar').toggleClass("skip-bar", skip);
+        $('body').css('background-color', "#1c2227");
+        return;
+    }
+    if (fail)
         color = window.settings.background.fail;
-    else if (topsuite.pass)
+    else if (pass)
         color = window.settings.background.pass;
     else
         color = window.settings.background.skip;
     $('body').css('background-color', color);
+    $('#status-bar').toggleClass("fail-bar pass-bar skip-bar", false);
 }
 
 function addSummary(topsuite) {
