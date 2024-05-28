@@ -94,6 +94,12 @@ Input Invalid Password
     capture element screenshot    ${Pass}
     sleep    2
 
+Required password message
+    clear element text    ${Pass}
+    wait until element is visible    ${InvalidPassMessage}    10
+    capture element screenshot    ${InvalidPassMessage}
+    sleep    2
+
 User should not be able to login using invalid account
     clear element text    ${Email}
     input text    ${Email}    ${InvalidEmail}

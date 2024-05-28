@@ -18,14 +18,16 @@ ${CreateAccount}    //*[(contains(text(),'Create Account')) or contains(text(),'
 ${FooterLogo}    //div[@class='footer-logo']
 ${PN}    //*[(contains(text(),' Privacy Policy ') or contains(text(),'私隱條款'))]
 ${TnC}    //*[contains(text(),' Terms & Conditions ') or contains(text(),'條款及細則')]
-${CopyRight}    //*[contains(text(),' © 2023 PartsLane. All Rights Reserved.') or contains(text(),'2023 Partslane. 保留所有權利.')]
+${CopyRight}    //*[contains(text(),' © 2023 PartsLane. All Rights Reserved.') or contains(text(),'2023 Partslane. 保留所有權利.')]/parent::li
 ${About Us}     //*[contains(text(),' About Us') or contains(text(),'關於我們')]
 ${Frequently Asked Questions}     //*[contains(text(),' About Us') or contains(text(),'常見問題')]
 ${Contact Us}     //*[contains(text(),' Contact Us') or contains(text(),'聯絡我們')]
 
 
 ${InvalidEmailMessage}    //*[(contains(text(),'Please enter a valid email address') or contains(text(),'請輸入正確的電子郵件'))]
-${InvalidEmailPassMessage}    //*[(contains(text(),'Password is a required field') or contains(text(),'密碼是必填項目'))]
+${InvalidEmailPassMessage}    //div[@class='alert alert-danger']
+${InvalidPassMessage}    //*[(contains(text(),'Password is a required field') or contains(text(),'密碼是必填項目'))]
+
 
 ${InvalidEmail}    Hello
 ${InvalidPass}    Hello
@@ -1951,7 +1953,7 @@ ${Retail_AccountCompanyDetailsPagePrefSupplierLabel}    //dpp-company-details//s
 ${Retail_AccountCompanyDetailsPageAccNumLabel}    //span[@class='label-content' and contains(text(),'Account Number')]|//span[@class='label-content' and contains(text(),'Membership Number')]
 ${Retail_AccountCompanyDetailsPageCompanyNameLabel}    //span[@class='label-content' and contains(text(),'Company Name')]
 ${Retail_AccountCompanyDetailsPageTradingNameLabel}    //dpp-company-details//span[@class='label-content' and contains(text(),'Trading Name')]
-${Retail_AccountCompanyDetailsPagePostalAddressLabel}    //span[@class='label-container' and contains(text(),'Postal Address')]
+${Retail_AccountCompanyDetailsPagePostalAddressLabel}    //span[@class='label-content' and contains(text(),'Postal Address')]
 ${Retail_AccountCompanyDetailsPagePostalAddressAddLine1Label}    //dpp-company-details//span[@class='label-content color-grey' and contains(text(),'Address Line 1')]
 ${Retail_AccountCompanyDetailsPagePostalAddressAddLine2Label}    //span[@class='label-content color-grey' and contains(text(),'Address Line 2')]
 ${Retail_AccountCompanyDetailsPagePostalAddressSuburbLabel}    //dpp-company-details//div[@formgroupname='postalAddress']//span[@class='label-content' and contains(text(),'Suburb')]

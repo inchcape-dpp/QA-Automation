@@ -19,3 +19,10 @@ User should be able to logout
     sleep    2
     capture page screenshot
     sleep    2
+
+User should be able to logout using double header
+    wait until element is visible    ${HomePage_DoubleHeader_DropDown_Button}    10
+    click element    ${HomePage_DoubleHeader_DropDown_Button}
+    wait until element is visible    ${HomePage_DoubleHeader_Menu_Logout_Button}    10
+    click element    ${HomePage_DoubleHeader_Menu_Logout_Button}
+    sleep    2

@@ -26,6 +26,7 @@ Login Page - Input Invalid Username
 
 Login Page - Input Invalid Password
     [Tags]    Login Page
+    run keyword and continue on failure    Required password message
     run keyword and continue on failure    Input Invalid Password
 
 Login Page - User should not be able to login using invalid account
@@ -161,6 +162,7 @@ Home Page - User should be able to view engine parts menus in Retail Home Page
 Home Page - User should be able to select 1 filter from selected category in Retail Home Page
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to select 1 filter from selected category in Retail Home Page
+
 
 Home Page - User should be able to click 1 sub filter from selected category in Retail Home Page
     [Tags]    Home Page

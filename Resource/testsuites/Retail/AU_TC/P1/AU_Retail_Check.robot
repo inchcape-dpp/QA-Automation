@@ -114,9 +114,9 @@ TC-021 - User should be able to view company details page
 #    run keyword and continue on failure    User should be able to access account from top navigaton
 #    run keyword and continue on failure    User should be able to view staff page
 
-TC-023 - User should be able to view All Parts Page
+TC-023 - User should be able to click 1 filter from selected category in Retail Home Page
     [Tags]    TC027    All Parts Page
-    run keyword and continue on failure    User should be able to view All Parts Page
+    run keyword and continue on failure    User should be able to click 1 filter from selected category in Retail Home Page
 
 TC-024 - User should be able to filter product name from A to Z
     [Tags]    TC028    Products
@@ -199,9 +199,9 @@ TC-040 - User should be able to view product details In Stock Only
     run keyword and continue on failure    Browse Back Button
     run keyword and continue on failure    Return to first page
 
-TC-041 - User should be able to logout
+TC-041 - User should be able to logout using double header
     [Tags]    TC009    Logout
-    run keyword and continue on failure    User should be able to logout
+    run keyword and continue on failure    User should be able to logout using double header
 
 #Test Teardown
 #    Run Keywords  Close Browser

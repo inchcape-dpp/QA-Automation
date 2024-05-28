@@ -217,7 +217,7 @@ User should be able to view Toyota Hybrid menus in HK Retail Home Page
 User should be able to select 1 filter from selected category in Retail Home Page
     ${RandomFilterIndex}    evaluate    random.randint(0,7)
     mouse over    ${Retail_FilterListElements}[${RandomFilterIndex}]
-    ${CategoryText}    get text    ${Retail_HK_FilterListElements_New}[${RandomFilterIndex}]
+    ${CategoryText}    get text    ${Retail_FilterListElements}[${RandomFilterIndex}]
     ${RandomFilterIndex}  evaluate    ${RandomFilterIndex}+1
     set global variable    ${RandomFilterIndex}
     set global variable    ${CategoryText}

@@ -26,6 +26,7 @@ TC-002 - Input Invalid Username
 
 TC-003 - Input Invalid Password
     [Tags]    Login Page
+    run keyword and continue on failure    Required password message
     run keyword and continue on failure    Input Invalid Password
 
 TC-004 - User should not be able to login using invalid account
