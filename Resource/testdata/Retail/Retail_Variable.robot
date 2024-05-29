@@ -654,8 +654,8 @@ ${ShopCartPopHeader}    //div[@id='miniCart']//div[@class='cx-modal-content']//d
 ${ShopCartPopCloseIcon}    //div[@id='miniCart']//div[@class='cx-modal-content']//cx-icon[@class='cx-icon fas fa-times']
 
 ${ShopCartPopItemList}    //div[@id='miniCart']//div[@class='products-container']//div[@class='item' or @class='item first-element' or @class='item last-element' or @class='item first-element last-element']
-${ShopCartPopItemListPrices}    //div[@class='products-container']//div[@class='item' or @class='item first-element' or @class='item last-element' or @class='item first-element last-element']//div[@class='cx-price']
-${ShopCartPopItemListPricesQty}    //div[@id='miniCart']//div[@class='products-container']//div[@class='item' or @class='item first-element' or @class='item last-element' or @class='item first-element last-element']//div[@class='col-3 pl-0']//span[@class='quantity']
+${ShopCartPopItemListPrices}    (//div[@class='products-container']//div[@class='item' or @class='item first-element' or @class='item last-element' or @class='item first-element last-element']//div[@class='cx-price']//div[@class='item-price'])
+${ShopCartPopItemListPricesQty}    (//div[@id='miniCart']//div[@class='products-container']//div[@class='item' or @class='item first-element' or @class='item last-element' or @class='item first-element last-element']//div[@class='col-3 pl-0']//span[@class='quantity'])
 
 ${ShopCartPopEmptyCart}    //div[@id='miniCart']//div[@class='empty-cart']
 

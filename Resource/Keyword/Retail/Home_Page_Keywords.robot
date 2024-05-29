@@ -82,8 +82,25 @@ User should be able to click view cart button from shopping cart pop up modal
     click element    ${ShopCartPopCheckOutButton}
     sleep    10
 
-User should be able to check shopping cart pop up modal pricess
-##########
+User should be able to check shopping cart pop up modal prices
+    wait until element is visible    ${ShopCartPopItemList}    10
+    ${PopUpCartTotalPrice}    get text    ${ShopCartPopPriceLabel}
+    ${RemovePopUpCartTotalString}    remove string    ${PopUpCartTotalPrice}    $    ,
+    ${ConvertPopUpCartTotal}    convert to number    ${RemovePopUpCartTotalString}
+
+    ${PopUpCartItemCount}    get element count    ${ShopCartPopItemList}
+    ${CartItemVariableList}    create list
+    log    ${PopUpCartItemCount}
+
+    FOR    ${ItemPriceIndex}    IN RANGE    1    ${PopUpCartItemCount}+1
+    ${ItemPrice}    get text    (//div[@class='products-container']//div[@class='item' or @class='item first-element' or @class='item last-element' or @class='item first-element last-element']//div[@class='cx-price']//div[@class='item-price'])[${ItemPriceIndex}]
+    set global variable    ${ItemPrice${ItemPriceIndex}}    ${ItemPrice}
+    append to list    ${CartItemVariableList}    ${ItemPrice}
+    log    ${ItemPrice}
+    log    ${CartItemVariableList}
+    END
+    ${itempricelistvariables}    get length    ${CartItemVariableList}
+    log    ${itempricelistvariables}
 
 User should be able to view message page from top navigaton
     wait until element is visible    ${HomePageMessageIcon}    10
