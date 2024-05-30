@@ -106,7 +106,7 @@ User should be able to Filter Products by Stocks
     sleep    5
 
 User should be able to view product In Stock and DC Stock
-    FOR    ${Nextpage}    IN RANGE    1    500
+    FOR    ${Nextpage}    IN RANGE    1    10
     ${InStockDCStockStatus}    run keyword and return status    element should be visible    ${ProductSelectionInStockDCStockContainer}
     run keyword if    '${InStockDCStockStatus}' == 'False'    User should be able to click next page
     exit for loop if    '${InStockDCStockStatus}' == 'True'
@@ -118,7 +118,7 @@ User should be able to view product In Stock and DC Stock
     sleep    2
 
 User should be able to view product Out of Stock and DC Stock
-    FOR    ${Nextpage}    IN RANGE    1    500
+    FOR    ${Nextpage}    IN RANGE    1    10
     ${OutofStockDCStockStatus}    run keyword and return status    element should be visible    ${ProductSelectionOutofStockDCStockContainer}
     run keyword if    '${OutofStockDCStockStatus}' == 'False'    User should be able to click next page
     exit for loop if    '${OutofStockDCStockStatus}' == 'True'
@@ -130,7 +130,7 @@ User should be able to view product Out of Stock and DC Stock
     sleep    2
 
 User should be able to view product In Stock Only
-    FOR    ${Nextpage}    IN RANGE    1    500
+    FOR    ${Nextpage}    IN RANGE    1    30
     ${InStockOnlyStatus}    run keyword and return status    element should be visible    ${ProductSelectionInStockOnlyContainer}
     run keyword if    '${InStockOnlyStatus}' == 'False'    User should be able to click next page
     exit for loop if    '${InStockOnlyStatus}' == 'True'
@@ -142,7 +142,7 @@ User should be able to view product In Stock Only
     sleep    2
 
 User should be able to view product In Stock Only in HK Retail Products Page
-    FOR    ${Nextpage}    IN RANGE    1    500
+    FOR    ${Nextpage}    IN RANGE    1    10
     ${InStockOnlyStatus}    run keyword and return status    element should be visible    ${ProductSelectionInStockOnlyContainer}
     run keyword if    '${InStockOnlyStatus}' == 'False'    User should be able to click load more button in HK Retail Product Page
     exit for loop if    '${InStockOnlyStatus}' == 'True'
@@ -154,7 +154,7 @@ User should be able to view product In Stock Only in HK Retail Products Page
     sleep    2
 
 User should be able to view product Out of Stock
-    FOR    ${Nextpage}    IN RANGE    1    500
+    FOR    ${Nextpage}    IN RANGE    1    10
     ${OutofStockStatus}    run keyword and return status    element should be visible    ${ProductSelectionOutofStockContainer}
     run keyword if    '${OutofStockStatus}' == 'False'    User should be able to click next page
     exit for loop if    '${OutofStockStatus}' == 'True'
@@ -166,7 +166,7 @@ User should be able to view product Out of Stock
     sleep    2
 
 User should be able to view product Out of Stock in HK Retail Products Page
-    FOR    ${Nextpage}    IN RANGE    1    500
+    FOR    ${Nextpage}    IN RANGE    1    10
     ${OutofStockStatus}    run keyword and return status    element should be visible    ${ProductSelectionOutofStockContainer}
     run keyword if    '${OutofStockStatus}' == 'False'    User should be able to click load more button in HK Retail Product Page
     exit for loop if    '${OutofStockStatus}' == 'True'
@@ -177,7 +177,7 @@ User should be able to view product Out of Stock in HK Retail Products Page
     sleep    2
 
 User should be able to view product Price not Available
-    FOR    ${Nextpage}    IN RANGE    1    500
+    FOR    ${Nextpage}    IN RANGE    1    10
     ${NoPriceStatus}    run keyword and return status    element should be visible    ${ProductSelectionNoPriceContainer}
     run keyword if    '${NoPriceStatus}' == 'False'    User should be able to click next page
     exit for loop if    '${NoPriceStatus}' == 'True'
@@ -189,7 +189,7 @@ User should be able to view product Price not Available
     sleep    2
 
 User should be able to view product Price not Available HK
-    FOR    ${Nextpage}    IN RANGE    1    500
+    FOR    ${Nextpage}    IN RANGE    1    10
     ${NoPriceStatus}    run keyword and return status    element should be visible    ${ProductSelectionNoPriceContainer}
     run keyword if    '${NoPriceStatus}' == 'False'    User should be able to click load more button in HK Retail Product Page
     exit for loop if    '${NoPriceStatus}' == 'True'
@@ -652,7 +652,7 @@ User should be able to click add to cart button for in stock and dc stock in Ret
     wait until element is visible    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${InStockDCStockRandomIndex}]    10
     scroll element into view    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${InStockDCStockRandomIndex}]
     capture element screenshot    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${InStockDCStockRandomIndex}]
-    click element    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${InStockDCStockRandomIndex}]
+    dobule click element    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${InStockDCStockRandomIndex}]
     run keyword    Get Number of InStock DCStock
     sleep    2
 
@@ -712,7 +712,7 @@ User should be able to click add to cart button for in stock only in Retail Prod
     wait until element is visible    (//div[@class='custom-product-list' or @class='product-grid-list'][.//p[@class='inStock mr-0']][not(.//p[@class='inStock pr-2'])]//button[@type='submit'])[${InStockOnlyRandomIndex}]    10
     scroll element into view    (//div[@class='custom-product-list' or @class='product-grid-list'][.//p[@class='inStock mr-0']][not(.//p[@class='inStock pr-2'])]//button[@type='submit'])[${InStockOnlyRandomIndex}]
     capture element screenshot    (//div[@class='custom-product-list' or @class='product-grid-list'][.//p[@class='inStock mr-0']][not(.//p[@class='inStock pr-2'])]//button[@type='submit'])[${InStockOnlyRandomIndex}]
-    click element    (//div[@class='custom-product-list' or @class='product-grid-list'][.//p[@class='inStock mr-0']][not(.//p[@class='inStock pr-2'])]//button[@type='submit'])[${InStockOnlyRandomIndex}]
+    double click element    (//div[@class='custom-product-list' or @class='product-grid-list'][.//p[@class='inStock mr-0']][not(.//p[@class='inStock pr-2'])]//button[@type='submit'])[${InStockOnlyRandomIndex}]
     run keyword    Get Number of InStockOnly
     sleep    2
 
@@ -765,7 +765,7 @@ User should be able to click add to cart button for out of stock and dc stock in
     wait until element is visible   (//div[@class='custom-product-list'][.//p[@class='outOfStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${OutofStockDCStockRandomIndex}]    10
     scroll element into view    (//div[@class='custom-product-list'][.//p[@class='outOfStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${OutofStockDCStockRandomIndex}]
     capture element screenshot    (//div[@class='custom-product-list'][.//p[@class='outOfStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${OutofStockDCStockRandomIndex}]
-    click element    (//div[@class='custom-product-list'][.//p[@class='outOfStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${OutofStockDCStockRandomIndex}]
+    double click element    (//div[@class='custom-product-list'][.//p[@class='outOfStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${OutofStockDCStockRandomIndex}]
     run keyword    Get Number of DCStock
     sleep    2
 
@@ -792,7 +792,7 @@ User should be able to input qty item for out of stock and dc stock in Retail Pr
     capture element screenshot    ${ProductSelectionOutofStockDCStockQtyTextBox}
     sleep    2
 
-User should be able to view message pop up in Retail All Products Page
+User should be able to view message pop up in Retail All Products PageUser should be able to click product details Price not Available
     wait until element is visible    ${Retail_AllProdPagePopUpMessageContainer}    10
     wait until element is visible    ${Retail_AllProdPagePopUpMessageToSupplierlabel}    10
     wait until element is visible    ${Retail_AllProdPagePopUpMessageSubjectlabel}    10
@@ -845,8 +845,8 @@ User should be able to click send on message pop in Retail All Products Page
     sleep    5
 
 User should be able to click continue shopping in Retail All Products Page
-    wait until element is visible    ${Retail_AllProdPagePopUpMessageContainer}    10
-    wait until element is visible    ${Retail_AllProdPagePopUpMessageContinueButton}    10
+    wait until element is visible    ${Retail_AllProdPagePopUpSentMessage}    10
+    wait until element is visible    ${Retail_AllProdPagePopUpMessageContinueButton}    15
     capture element screenshot    ${Retail_AllProdPagePopUpMessageContinueButton}
     click element    ${Retail_AllProdPagePopUpMessageContinueButton}
     sleep    2

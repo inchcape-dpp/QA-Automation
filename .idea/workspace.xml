@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="5/28/24 10:08AM">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/Dealer_Variable.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/Dealer_Variable.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/report.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="Ty" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2Zq7ofnN8JJQJxW3uPYm7NLVHU4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Ric&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="" />
+      <created>1703137933196</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703137933196</updated>
+    </task>
+    <task id="LOCAL-00001" summary="TestC">
+      <option name="closed" value="true" />
+      <created>1705046919604</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1705046919604</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1706149986016</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1706149986016</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Commit Feb 7">
+      <option name="closed" value="true" />
+      <created>1707283678166</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1707283678166</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1707286666223</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1707286666223</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Commit Feb 13">
+      <option name="closed" value="true" />
+      <created>1707807331814</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1707807331814</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Commit Feb 13">
+      <option name="closed" value="true" />
+      <created>1707809716430</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1707809716430</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Commit Feb 16">
+      <option name="closed" value="true" />
+      <created>1708050959178</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708050959178</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Commit Feb 19">
+      <option name="closed" value="true" />
+      <created>1708322551747</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1708322551748</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Commit Feb 19">
+      <option name="closed" value="true" />
+      <created>1710740724157</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1710740724157</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Commit March 18">
+      <option name="closed" value="true" />
+      <created>1710744554388</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1710744554388</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1711430815733</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1711430815733</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Commit">
+      <option name="closed" value="true" />
+      <created>1711959894978</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1711959894978</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Commit April 1">
+      <option name="closed" value="true" />
+      <created>1711960543716</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1711960543716</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Commit April 1">
+      <option name="closed" value="true" />
+      <created>1714958554469</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1714958554469</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Commit May 17&#10;&#10;Minisite">
+      <option name="closed" value="true" />
+      <created>1715926074930</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1715926074930</updated>
+    </task>
+    <task id="LOCAL-00016" summary="5/22/24 11:57AM">
+      <option name="closed" value="true" />
+      <created>1716349651361</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1716349651361</updated>
+    </task>
+    <task id="LOCAL-00017" summary="5/28/24 10:08AM">
+      <option name="closed" value="true" />
+      <created>1716862144963</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1716862144963</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/Ty" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/Ty" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="TestC" />
+    <MESSAGE value="Commit Feb 7" />
+    <MESSAGE value="Commit Feb 13" />
+    <MESSAGE value="Commit Feb 16" />
+    <MESSAGE value="Commit Feb 19" />
+    <MESSAGE value="Commit March 18" />
+    <MESSAGE value="Commit" />
+    <MESSAGE value="8:55 AM | 5/06/24&#10;&#10;Minisite" />
+    <MESSAGE value="Commit April 1" />
+    <MESSAGE value="Commit May 17&#10;&#10;Minisite" />
+    <MESSAGE value="5/22/24 11:57AM" />
+    <MESSAGE value="5/28/24 10:08AM" />
+    <option name="LAST_COMMIT_MESSAGE" value="5/28/24 10:08AM" />
+  </component>
+</project>

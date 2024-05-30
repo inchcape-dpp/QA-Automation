@@ -9,19 +9,25 @@ ${Logo}    //*[@class='logo is-initialized']
 ${Header}    //div[@class='heading' and (contains(text(),'Login') or (contains(text(),'客戶登入')))]
 ${Email}    //*[@type='email']
 ${Pass}    //*[@type='password']
-${Remember}    //div[@class='remember-me-checkbox']
+${Remember}    //*[(contains(text(),'Remember Me') or contains(text(),'記住此帳戶'))]
 ${RememberCheck}    //input[@type='checkbox']
 ${Forgot}    //a[(contains(text(),'Forgot Password')) or contains(text(),'忘記密碼')]
-${LoginButton}    //button[@type='submit']
-${NoAccount}    //div[@class='not-having-account']
-${CreateAccount}    //a[@class='create-account']
+${LoginButton}    //button[@type='submit' and (contains(text(),'Login') or (contains(text(),' 登入 ')))]
+${NoAccount}    //*[(contains(text(),'No Account?')) or contains(text(),'沒有帳戶?')]
+${CreateAccount}    //*[(contains(text(),'Create Account')) or contains(text(),'註冊帳戶')]
 ${FooterLogo}    //div[@class='footer-logo']
 ${PN}    //*[(contains(text(),' Privacy Policy ') or contains(text(),'私隱條款'))]
 ${TnC}    //*[contains(text(),' Terms & Conditions ') or contains(text(),'條款及細則')]
-${CopyRight}    (//dpp-navigation-ui//div[@class='wrapper'])[3]
+${CopyRight}    //*[contains(text(),' © 2023 PartsLane. All Rights Reserved.') or contains(text(),'2023 Partslane. 保留所有權利.')]/parent::li
+${About Us}     //*[contains(text(),' About Us') or contains(text(),'關於我們')]
+${Frequently Asked Questions}     //*[contains(text(),' About Us') or contains(text(),'常見問題')]
+${Contact Us}     //*[contains(text(),' Contact Us') or contains(text(),'聯絡我們')]
 
-${InvalidEmailMessage}    //div[@class='form-errors']
+
+${InvalidEmailMessage}    //*[(contains(text(),'Please enter a valid email address') or contains(text(),'請輸入正確的電子郵件'))]
 ${InvalidEmailPassMessage}    //div[@class='alert alert-danger']
+${InvalidPassMessage}    //*[(contains(text(),'Password is a required field') or contains(text(),'密碼是必填項目'))]
+
 
 ${InvalidEmail}    Hello
 ${InvalidPass}    Hello
@@ -29,6 +35,7 @@ ${InvalidPass}    Hello
 
 ${Retail_HK_LoginPage_English_Button}    //dpp-language-toggle//span[contains(text(),'EN')]
 ${Retail_HK_LoginPage_Chinese_Button}    //dpp-language-toggle//span[contains(text(),'中文')]
+
 
 #-----------------------------------------------------Retail Forgot Password Page---------------------------------------
 ${Retail_ForgotPasswordPageContainer}    //dpp-forgot-password
@@ -44,7 +51,7 @@ ${Retail_ForgotPasswordPageEmailErrorMessage}    //dpp-forgot-password//div[@cla
 #-----------------------------------------------------Retail Registration Page------------------------------------------
 
 
-${Retail_RegistrationPageBackToLoginButton}    //div[@class='col-sm-12 col-md-7 p-0']//label[@class='cx-section pb-0 form-section__back']//a|//div[@class='col-8 p-0']//a
+${Retail_RegistrationPageBackToLoginButton}    //div[@class='col-sm-12 col-md-7 p-0']//label[@class='cx-section pb-0 form-section__back']//a|//div[@class='col-8 p-0']//a[(contains(text(),'Back to Login') or contains(text(),' 返回登錄'))]
 ${Retail_RegistrationPageLogo}    (//cx-media[@class='logo is-initialized']//img)[1]
 ${Retail_RegistrationJoinPartsLaneHeader}    //div[@class='cx-section']//*[contains(text(),'Join PartsLane') or contains(text(),'加入PartsLane')]
 ${Retail_RegistrationRegisteredSupplierLabel}    //div[@class='cx-section']//*[@class='mb-5']
@@ -483,6 +490,7 @@ ${Retail_AU_HomePage_Search_PopUp_SelectSave_Button}    //dpp-vehicle-results//b
 ${Retail_AU_HomePage_Search_PopUp_SelectVehicle_Button}    //dpp-vehicle-results//button[@class='btn btn-sm btn-block ml-2 mt-0 p-1 select-this-vehicle-btn btn-secondary' and contains(text(),'Select This Vehicle')]
 ${Retail_AU_HomePage_Search_PopUp_SelectSave_Button_Disabled}    //dpp-vehicle-results//button[@class='btn btn-sm btn-block mt-0 p-1 select-this-vehicle-btn btn-default vehicleListing-btn' and @disabled and contains(text(),'Select & Save Vehicle')]
 
+${Retail_AU_HomePage_Search_PopUp_SelectSave_Button_Disabled}    //dpp-vehicle-results//button[@class='btn btn-sm btn-block mt-0 p-1 select-this-vehicle-btn btn-default vehicleListing-btn' and @disabled and contains(text(),'Select & Save Vehicle')]
 
 ${Retail_AU_HomePage_Manual_Model_Combobox}    //dpp-search-by-vehicle//ng-select[@formcontrolname='model']//div[@class='ng-select-container']
 ${Retail_AU_HomePage_Manual_Year_Combobox}    //dpp-search-by-vehicle//ng-select[@formcontrolname='year']//div[@class='ng-select-container']
@@ -646,6 +654,8 @@ ${ShopCartPopHeader}    //div[@id='miniCart']//div[@class='cx-modal-content']//d
 ${ShopCartPopCloseIcon}    //div[@id='miniCart']//div[@class='cx-modal-content']//cx-icon[@class='cx-icon fas fa-times']
 
 ${ShopCartPopItemList}    //div[@id='miniCart']//div[@class='products-container']//div[@class='item' or @class='item first-element' or @class='item last-element' or @class='item first-element last-element']
+${ShopCartPopItemListPrices}    (//div[@class='products-container']//div[@class='item' or @class='item first-element' or @class='item last-element' or @class='item first-element last-element']//div[@class='cx-price']//div[@class='item-price'])
+${ShopCartPopItemListPricesQty}    (//div[@id='miniCart']//div[@class='products-container']//div[@class='item' or @class='item first-element' or @class='item last-element' or @class='item first-element last-element']//div[@class='col-3 pl-0']//span[@class='quantity'])
 
 ${ShopCartPopEmptyCart}    //div[@id='miniCart']//div[@class='empty-cart']
 
@@ -658,6 +668,8 @@ ${ShopCartPopCheckOutButton}    //div[@class='price-container']//button[contains
 ${ShopCartPopEmptyLabel}    //div[@class='empty-cart']/following-sibling::div[contains(text(),'Your cart is empty') or contains(text(),'您的購物車是空的')]
 
 ${ShopCartPopContinueShoppingButton}    //div[@class='price-container']//button[contains(text(),'Continue Shopping') or contains(text(),'繼續購物')]
+
+
 
 
 #-----------------------------------------------------Retail Shopping Cart Page-----------------------------------------
@@ -970,17 +982,17 @@ ${Retail_PlaceOrderPageViewOrderButton}    //div[@class='container']//button[@cl
 
 #-----------------------------------------------------Retail Account Page-----------------------------------------------
 ${Retail_AccountAccountpageMyAccountLabel}    //div[@class='myaccount']//h2
-${Retail_AccountpageOrdersMenu}    //div[@class='d-flex acc-tab']//a[contains(text(),'Orders')]|//div[@class='acc-tab__title']//a[contains(text(),'Order History') or contains(text(),'訂單記錄')]
-${Retail_AccountAccountpageReturnMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),'Return Requests')]|//div[@class='acc-tab__title']//*[contains(text(),'Return Requests')]
-${Retail_AccountpageSavedCartsMenu}    //div[@class='ml-3']//a[contains(text(),'Saved Carts')]|//div[@class='acc-tab__title']//a[contains(text(),'Saved Carts')]
-${Retail_AccountpageVehicleListingMenu}    //div[@class='ml-3']//a[contains(text(),'Vehicle Listing')]|//div[@class='acc-tab__title']//a[contains(text(),'Vehicle Listing')]
-${Retail_AccountpageMessagesMenu}    //ul[@class='vertical-menu tab-level']//a[contains(text(),' Messages ') or contains(text(),'Inbox')]|//ul[@class='vertical-menu tab-level']//*[contains(text(),'Inbox')]|//div[@class='acc-tab__title']//*[contains(text(),'Messages') or contains(text(),'Inbox')]
-${Retail_AccountpageProfileMenu}    //ul[@class='vertical-menu tab-level']//a[contains(text(),'Profile')]|//div[@class='acc-tab__title']//a[contains(text(),'Profile')]
-${Retail_AccountpageProfileAccountDetails}    //li[@class='mb-3 isActive' or @class='mb-3']//div[@class='tab-data has-child']//a[contains(text(),'Account Details')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'Account Details')]
-${AccountpageProfileChangePass}    //li[@class='mb-3 isActive' or @class='mb-3']//div[@class='tab-data has-child']//a[contains(text(),'Change Password')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'Change Password')]
-${Retail_AccountpageCompanyMenu}    //ul[@class='vertical-menu tab-level']//a[@class='has-nochild'][contains(text(),'Company')]|//div[@class='acc-tab__title']//a[contains(text(),'Company')]
-${Retail_AccountpageCompanyDetails}    //li[@class='mb-3 isActive' or @class='mb-3']//div[@class='tab-data has-child']//a[contains(text(),'Company Details')]|//div[@class='acc-tab__sub-acc show-item']//a[contains(text(),'Company Details')]
-${Retail_AccountpageCompanyStaff}    //a[@href='/dppretail/my-account/company/staff' or @href='/hkretail/my-account/company/staff']
+${Retail_AccountpageOrdersMenu}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Order') or contains(text(),'訂單記錄')]
+${Retail_AccountAccountpageReturnMenu}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Return Requests') or contains(text(),'退貨請求')]
+${Retail_AccountpageSavedCartsMenu}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Saved Carts') or contains(text(),'已儲存貨品')]
+${Retail_AccountpageVehicleListingMenu}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Vehicle Listing') or contains(text(),'車輛列表')]
+${Retail_AccountpageMessagesMenu}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Inbox') or contains(text(),'收件匣')]
+${Retail_AccountpageProfileMenu}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Profile') or contains(text(),'個人資料')]
+${Retail_AccountpageProfileAccountDetails}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Account Details') or contains(text(),'帳戶資料')]
+${AccountpageProfileChangePass}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Change Password') or contains(text(),'更改密碼')]
+${Retail_AccountpageCompanyMenu}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//div[@class='d-flex acc-tab']//a[contains(text(),'Company') or contains(text(),'公司')]
+${Retail_AccountpageCompanyDetails}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Company Details') or contains(text(),'公司詳情')]
+${Retail_AccountpageCompanyStaff}    //dpp-my-account-tabs//li[@class='navigation-wrapper' or @class='navigation-wrapper isActive']//a[contains(text(),'Staff') or contains(text(),'員工')]
 
 
 #-----------------------------------------------------Retail Account Order Page-----------------------------------------
@@ -1745,7 +1757,7 @@ ${Retail_AccountMessagePageDetailsFirstPageButton}    (//a[@aria-label='first pa
 ${Retail_AccountMessagePageDetailsNextPageButtonDisabled}    //a[@class='next disabled']
 ${Retail_AccountMessagePageDetailsPreviousPageButtonDisabled}    //a[@class='previous disabled']
 
-${Retail_AccountMessagePageNewMessageButton}   //dpp-message-list//button[@class='btn btn-outline-secondary w-100 p-0']
+${Retail_AccountMessagePageNewMessageButton}    //dpp-message-list//div[@class='row']//button[@class='btn btn-outline-secondary w-100']
 
 ${Retail_AccountMessagePageNewMessagePopUpContainer}    //div[@class='cx-dialog-body modal-body']
 ${Retail_AccountMessagePageNewMessagePopUpToSupplierLabel}    //div[@class='col-sm-12 header']//span[@class='message-subject mb-1']
@@ -1880,8 +1892,8 @@ ${Retail_AccountProfileAccountsDetailsPhoneError}    //div[@class='form-errors']
 ${Retail_AccountProfileAccountsDetailsLandlineError}    //div[@class='form-errors']//p[contains(text(),'Landline Number must begin with a 0 followed by 9 digits')]
 
 ${Retail_AccountProfileAccountsDetailsConfirmationContainer}    //div[@class='cx-dialog-body modal-body']
-${Retail_AccountProfileAccountsDetailsConfirmationYesButton}    //button[@class='btn btn-secondary btn-block']
-${Retail_AccountProfileAccountsDetailsConfirmationNoButton}    //button[@class='btn btn-block btn-outline-secondary']
+${Retail_AccountProfileAccountsDetailsConfirmationYesButton}    //div[@class='cx-dialog-body modal-body']//button[@class='btn btn-secondary btn-block']
+${Retail_AccountProfileAccountsDetailsConfirmationNoButton}    //div[@class='cx-dialog-body modal-body']//button[@class='btn btn-block btn-outline-secondary']
 
 ${Retail_AccountProfileAccountsDetailsFirstNameValue}    Test FN
 ${Retail_AccountProfileAccountsDetailsLastNameValue}    Test LN
@@ -2215,7 +2227,8 @@ ${AllProdPageRemoveOneButton}    (//button[@aria-label='Remove one'])
 
 #-----------------------------------------------------Retail All Product Page Pop Up Message
 
-${Retail_AllProdPagePopUpMessageContainer}    //div[@class='cx-modal-content']
+${Retail_AllProdPagePopUpMessageContainer}     //div[@class='cx-modal-content']//div[@class='cx-dialog-body modal-body']
+${Retail_AllProdPagePopUpSentMessage}    //div[@class='cx-modal-content']//div[@class='cx-dialog-body modal-body thank-you']
 ${Retail_AllProdPagePopUpMessageToSupplierlabel}    //div[@class='col-sm-12 header']//span
 ${Retail_AllProdPagePopUpMessageSubjectlabel}    //div[@class='col-sm-12']//span[contains(text(),'Subject')]
 ${Retail_AllProdPagePopUpMessageMessagelabel}    //div[@class='col-sm-12']//span[contains(text(),'Message')]
@@ -2259,6 +2272,8 @@ ${ProductSelectionInStockDCStockInfoButton}    (//div[@class='custom-product-lis
 ${ProductSelectionInStockDCStockInfoContainer}    //dpp-popover-info//cx-popover
 
 ${ProductSelectionInStockDCStockQtyTextBoxValue}    2
+
+${ProductSelectionQtyTextBoxValue}    999
 
 #-----------------------------------------------------Retail Product Selection In Stock Only
 ${ProductSelectionInStockOnly}    (//div[@class='custom-product-list' or @class='product-grid-list'][.//p[@class='inStock mr-0']][not(.//p[@class='inStock pr-2'])])

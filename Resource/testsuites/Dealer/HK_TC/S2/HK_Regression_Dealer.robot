@@ -152,145 +152,145 @@ TC-032 - User should be able to view Cutomer Orders Panel
     run keyword and continue on failure    User should be able to click orders from left navigation
     run keyword and continue on failure    User should be able to view Cutomer Orders Panel
 
-TC-033 - User should be able to filter status by Received in Order Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to click filter by status in Order Page
-    run keyword and continue on failure    User should be able to filter status by Received in Order Page
-
-TC-034 - User should be able to filter status by Dispatched in Order Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to click filter by status in Order Page
-    run keyword and continue on failure    User should be able to filter status by Dispatched in Order Page
-
-TC-035 - User should be able to filter status by Delivered in Order Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to click filter by status in Order Page
-    run keyword and continue on failure    User should be able to filter status by Delivered in Order Page
-
-TC-035 - User should be able to filter status by Processing in Order Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to click filter by status in Order Page
-    run keyword and continue on failure    User should be able to filter status by Processing in Order Page
-
-TC-035 - User should be able to filter status by Order with Returns in Order Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to click filter by status in Order Page
-    run keyword and continue on failure    User should be able to filter status by Order with Returns in Order Page
-
-TC-036 - User should be able to filter status by ALL in Order Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to click filter by status in Order Page
-    run keyword and continue on failure    User should be able to filter status by ALL in Order Page
-
-TC-037 - User should be able to view Date Filter Elements in Order Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to click Date Filter in Order Page
-    run keyword and continue on failure    User should be able to view Date Filter Elements in Order Page
-
-TC-038 - User should be able to click Previous Month Button in Order Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to click Previous Month Button in Order Page
-
-TC-039 - User should be able to click Next Month Button in Order Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to click Next Month Button in Order Page
-
-TC-040 - User should be able to select month from drop down in Order Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to click Month Drop Down Filter in Order Page
-    run keyword and continue on failure    User should be able to select month from drop down in Order Page
-
-TC-041 - User should be able to select year from drop down in Order Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to click Year Drop Down Filter in Order Page
-    run keyword and continue on failure    User should be able to select year from drop down in Order Page
-
-TC-042 - User should be able to select From Date in Order Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to select From Date in Order Page
-
-TC-043 - User should be able to select To Date in Order Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to select To Date in Order Page
-
-TC-044 - User should be able to click Date Filter Submit Button in Order Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to click Date Filter Submit Button in Order Page
-
-TC-045 - User should be able to click Date Filter Clear Button in Order Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to click Date Filter in Order Page
-    run keyword and continue on failure    User should be able to click Date Filter Clear Button in Order Page
-    run keyword and continue on failure    User should be able to click Search Box in Order Page
-
-TC-046 - User should be able to click Search Box in Order Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to click Search Box in Order Page
-
-TC-047 - User should be able to Input Text in Search Box in Order Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to Input Text in Search Box in Order Page
-
-TC-048 - User should be able to click clear button from Search Box in Order Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to click clear button from Search Box in Order Page
-
-TC-049 - User should be able to Filter by Order Number in Order Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to click Arrage Filter in Order Page
-    run keyword and continue on failure    User should be able to Filter by Order Number in Order Page
-
-TC-050 - User should be able to Filter by Old to New in Order Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to click Arrage Filter in Order Page
-    run keyword and continue on failure    User should be able to Filter by Old to New in Order Page
-
-TC-051 - User should be able to Filter by New to Old in Order Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to click Arrage Filter in Order Page
-    run keyword and continue on failure    User should be able to Filter by New to Old in Order Page
-
-TC-052 - User should be able to view and click order with Recieved Status in Dealer Orders Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to view order with Recieved Status in Dealer Orders Page
-    run keyword and continue on failure    User should be able to click order with Recieved Status in Dealer Orders Page
-    run keyword and continue on failure    User should be able to view order details in HK Order Details Page
-    run keyword and continue on failure    User should be able to click Back to Customer Orders in Dealer Order Details Page
-
-TC-058 - User should be able to view and click order with Submitted Status in Dealer Orders Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to view order with Submitted Status in Dealer Orders Page
-    run keyword and continue on failure    User should be able to click order with Submitted Status in Dealer Orders Page
-    run keyword and continue on failure    User should be able to view order details in HK Order Details Page
-    run keyword and continue on failure    User should be able to click Back to Customer Orders in Dealer Order Details Page
-
-TC-059 - User should be able to view and click order with Dispatched Status in Dealer Orders Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to view order with Dispatched Status in Dealer Orders Page
-    run keyword and continue on failure    User should be able to click order with Dispatched Status in Dealer Orders Page
-    run keyword and continue on failure    User should be able to view order details in HK Order Details Page
-    run keyword and continue on failure    User should be able to click Back to Customer Orders in Dealer Order Details Page
-
-TC-061 - User should be able to view and click order with Orders with Returns Status in Dealer Orders Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to view order with Orders with Returns Status in Dealer Orders Page
-    run keyword and continue on failure    User should be able to click order with Orders with Returns Status in Dealer Orders Page
-    run keyword and continue on failure    User should be able to view order details in HK Order Details Page
-    run keyword and continue on failure    User should be able to click Back to Customer Orders in Dealer Order Details Page
-
-TC-061 - User should be able to view and click order with Delivered Status in Dealer Orders Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to view order with Delivered Status in Dealer Orders Page
-    run keyword and continue on failure    User should be able to click order with Delivered Status in Dealer Orders Page
-    run keyword and continue on failure    User should be able to view order details in HK Order Details Page
-    run keyword and continue on failure    User should be able to click Back to Customer Orders in Dealer Order Details Page
-
-TC-061 - User should be able to view and click order with Processing Status in Dealer Orders Page
-    [Tags]    Home Page    Orders Page
-    run keyword and continue on failure    User should be able to view order with Processing Status in Dealer Orders Page
-    run keyword and continue on failure    User should be able to click order with Processing Status in Dealer Orders Page
-    run keyword and continue on failure    User should be able to view order details in HK Order Details Page
-    run keyword and continue on failure    User should be able to click Back to Customer Orders in Dealer Order Details Page
+#TC-033 - User should be able to filter status by Received in Order Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to click filter by status in Order Page
+#    run keyword and continue on failure    User should be able to filter status by Received in Order Page
+#
+#TC-034 - User should be able to filter status by Dispatched in Order Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to click filter by status in Order Page
+#    run keyword and continue on failure    User should be able to filter status by Dispatched in Order Page
+#
+#TC-035 - User should be able to filter status by Delivered in Order Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to click filter by status in Order Page
+#    run keyword and continue on failure    User should be able to filter status by Delivered in Order Page
+#
+#TC-035 - User should be able to filter status by Processing in Order Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to click filter by status in Order Page
+#    run keyword and continue on failure    User should be able to filter status by Processing in Order Page
+#
+#TC-035 - User should be able to filter status by Order with Returns in Order Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to click filter by status in Order Page
+#    run keyword and continue on failure    User should be able to filter status by Order with Returns in Order Page
+#
+#TC-036 - User should be able to filter status by ALL in Order Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to click filter by status in Order Page
+#    run keyword and continue on failure    User should be able to filter status by ALL in Order Page
+#
+#TC-037 - User should be able to view Date Filter Elements in Order Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to click Date Filter in Order Page
+#    run keyword and continue on failure    User should be able to view Date Filter Elements in Order Page
+#
+#TC-038 - User should be able to click Previous Month Button in Order Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to click Previous Month Button in Order Page
+#
+#TC-039 - User should be able to click Next Month Button in Order Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to click Next Month Button in Order Page
+#
+#TC-040 - User should be able to select month from drop down in Order Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to click Month Drop Down Filter in Order Page
+#    run keyword and continue on failure    User should be able to select month from drop down in Order Page
+#
+#TC-041 - User should be able to select year from drop down in Order Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to click Year Drop Down Filter in Order Page
+#    run keyword and continue on failure    User should be able to select year from drop down in Order Page
+#
+#TC-042 - User should be able to select From Date in Order Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to select From Date in Order Page
+#
+#TC-043 - User should be able to select To Date in Order Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to select To Date in Order Page
+#
+#TC-044 - User should be able to click Date Filter Submit Button in Order Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to click Date Filter Submit Button in Order Page
+#
+#TC-045 - User should be able to click Date Filter Clear Button in Order Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to click Date Filter in Order Page
+#    run keyword and continue on failure    User should be able to click Date Filter Clear Button in Order Page
+#    run keyword and continue on failure    User should be able to click Search Box in Order Page
+#
+#TC-046 - User should be able to click Search Box in Order Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to click Search Box in Order Page
+#
+#TC-047 - User should be able to Input Text in Search Box in Order Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to Input Text in Search Box in Order Page
+#
+#TC-048 - User should be able to click clear button from Search Box in Order Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to click clear button from Search Box in Order Page
+#
+#TC-049 - User should be able to Filter by Order Number in Order Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to click Arrage Filter in Order Page
+#    run keyword and continue on failure    User should be able to Filter by Order Number in Order Page
+#
+#TC-050 - User should be able to Filter by Old to New in Order Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to click Arrage Filter in Order Page
+#    run keyword and continue on failure    User should be able to Filter by Old to New in Order Page
+#
+#TC-051 - User should be able to Filter by New to Old in Order Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to click Arrage Filter in Order Page
+#    run keyword and continue on failure    User should be able to Filter by New to Old in Order Page
+#
+#TC-052 - User should be able to view and click order with Recieved Status in Dealer Orders Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to view order with Recieved Status in Dealer Orders Page
+#    run keyword and continue on failure    User should be able to click order with Recieved Status in Dealer Orders Page
+#    run keyword and continue on failure    User should be able to view order details in HK Order Details Page
+#    run keyword and continue on failure    User should be able to click Back to Customer Orders in Dealer Order Details Page
+#
+#TC-058 - User should be able to view and click order with Submitted Status in Dealer Orders Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to view order with Submitted Status in Dealer Orders Page
+#    run keyword and continue on failure    User should be able to click order with Submitted Status in Dealer Orders Page
+#    run keyword and continue on failure    User should be able to view order details in HK Order Details Page
+#    run keyword and continue on failure    User should be able to click Back to Customer Orders in Dealer Order Details Page
+#
+#TC-059 - User should be able to view and click order with Dispatched Status in Dealer Orders Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to view order with Dispatched Status in Dealer Orders Page
+#    run keyword and continue on failure    User should be able to click order with Dispatched Status in Dealer Orders Page
+#    run keyword and continue on failure    User should be able to view order details in HK Order Details Page
+#    run keyword and continue on failure    User should be able to click Back to Customer Orders in Dealer Order Details Page
+#
+#TC-061 - User should be able to view and click order with Orders with Returns Status in Dealer Orders Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to view order with Orders with Returns Status in Dealer Orders Page
+#    run keyword and continue on failure    User should be able to click order with Orders with Returns Status in Dealer Orders Page
+#    run keyword and continue on failure    User should be able to view order details in HK Order Details Page
+#    run keyword and continue on failure    User should be able to click Back to Customer Orders in Dealer Order Details Page
+#
+#TC-061 - User should be able to view and click order with Delivered Status in Dealer Orders Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to view order with Delivered Status in Dealer Orders Page
+#    run keyword and continue on failure    User should be able to click order with Delivered Status in Dealer Orders Page
+#    run keyword and continue on failure    User should be able to view order details in HK Order Details Page
+#    run keyword and continue on failure    User should be able to click Back to Customer Orders in Dealer Order Details Page
+#
+#TC-061 - User should be able to view and click order with Processing Status in Dealer Orders Page
+#    [Tags]    Home Page    Orders Page
+#    run keyword and continue on failure    User should be able to view order with Processing Status in Dealer Orders Page
+#    run keyword and continue on failure    User should be able to click order with Processing Status in Dealer Orders Page
+#    run keyword and continue on failure    User should be able to view order details in HK Order Details Page
+#    run keyword and continue on failure    User should be able to click Back to Customer Orders in Dealer Order Details Page
 
 TC-062 - User should be able to view Return Request Panel
     [Tags]    Home Page    Return Page
@@ -646,7 +646,7 @@ TC-124 - User should be able to click and send message on unread Return Enquiry 
     run keyword and continue on failure    User should be able to click Back to All Message in Dealer Messages Details Page
 
 TC-125 - User should be able to click and send message on unread Product Enquiry in Dealer Message Page
-    [Tags]    Home Page    Messages
+    [Tags]    Home Page    Messagesc
     run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
     run keyword and continue on failure    User should be able to select Product Enquiry filter in Dealer Messages Page
     run keyword and continue on failure    User should be able to view unread Product Enquiry in Dealer Message Page

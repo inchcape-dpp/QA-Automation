@@ -26,6 +26,7 @@ TC-002 - Input Invalid Username
 
 TC-003 - Input Invalid Password
     [Tags]    Login Page
+    run keyword and continue on failure    Required password message
     run keyword and continue on failure    Input Invalid Password
 
 TC-004 - User should not be able to login using invalid account
@@ -304,7 +305,7 @@ TC-056 - User should be able to Select and Save Vehicle using Home Page manual S
     run keyword and continue on failure    User should be able to select details on manual search in AU Retail Home Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User shoud be albe to click search this vehicle on manual seearh in AU Retail Home Page
-    run keyword and continue on failure    User should be able to click Select and Save Vehicle button on Search Popup in AU Retail Home Page
+    run keyword and continue on failure    User should be able to Save or Select Manual Vehicle Search on Search Popup in AU Retail Home Page
     run keyword and continue on failure    TC Sleep
 
 TC-057 - User should be able to Search by Rego in AU Retail Home Page
@@ -314,7 +315,7 @@ TC-057 - User should be able to Search by Rego in AU Retail Home Page
     run keyword and continue on failure    User should be able to select state in AU Retail Home Page
     run keyword and continue on failure    User should be able to input rego in AU Retail Home Page
     run keyword and continue on failure    User should be albe to click search button in AU Retail Home Page
-    run keyword and continue on failure    User should be able to click Select Vehicle button on Search Popup in AU Retail Home Page
+    run keyword and continue on failure    User should be able to Save or Select Manual Vehicle Search on Search Popup in AU Retail Home Page
     run keyword and continue on failure    TC Sleep
 
 TC-058 - User should be able to Search by Rego 2 in AU Retail Home Page
@@ -324,7 +325,7 @@ TC-058 - User should be able to Search by Rego 2 in AU Retail Home Page
     run keyword and continue on failure    User should be able to select state in AU Retail Home Page
     run keyword and continue on failure    User should be able to input rego 2 in AU Retail Home Page
     run keyword and continue on failure    User should be albe to click search button in AU Retail Home Page
-    run keyword and continue on failure    User should be able to click Select Vehicle button on Search Popup in AU Retail Home Page
+    run keyword and continue on failure    User should be able to Save or Select Manual Vehicle Search on Search Popup in AU Retail Home Page
     run keyword and continue on failure    TC Sleep
 
 TC-059 - User should be able to Search by Rego 3 in AU Retail Home Page
@@ -334,7 +335,7 @@ TC-059 - User should be able to Search by Rego 3 in AU Retail Home Page
     run keyword and continue on failure    User should be able to select state in AU Retail Home Page
     run keyword and continue on failure    User should be able to input rego 3 in AU Retail Home Page
     run keyword and continue on failure    User should be albe to click search button in AU Retail Home Page
-    run keyword and continue on failure    User should be able to click Select Vehicle button on Search Popup in AU Retail Home Page
+    run keyword and continue on failure    User should be able to Save or Select Manual Vehicle Search on Search Popup in AU Retail Home Page
     run keyword and continue on failure    TC Sleep
 
 TC-060 - User should be able to Search by VIN in AU Retail Home Page
@@ -343,7 +344,7 @@ TC-060 - User should be able to Search by VIN in AU Retail Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be albe to input vin in AU Retail Home Page
     run keyword and continue on failure    User should be albe to click search button in AU Retail Home Page
-    run keyword and continue on failure    User should be able to click Select Vehicle button on Search Popup in AU Retail Home Page
+    run keyword and continue on failure    User should be able to Save or Select Manual Vehicle Search on Search Popup in AU Retail Home Page
     run keyword and continue on failure    TC Sleep
 
 TC-061 - User should be able to Search by VIN 2 in AU Retail Home Page
@@ -352,7 +353,7 @@ TC-061 - User should be able to Search by VIN 2 in AU Retail Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be albe to input vin 2 in AU Retail Home Page
     run keyword and continue on failure    User should be albe to click search button in AU Retail Home Page
-    run keyword and continue on failure    User should be able to click Select Vehicle button on Search Popup in AU Retail Home Page
+    run keyword and continue on failure    User should be able to Save or Select Manual Vehicle Search on Search Popup in AU Retail Home Page
     run keyword and continue on failure    TC Sleep
 
 TC-062 - User should be able to Search by VIN 3 in AU Retail Home Page
@@ -361,7 +362,7 @@ TC-062 - User should be able to Search by VIN 3 in AU Retail Home Page
     run keyword and continue on failure    User should be able to Go to Home page
     run keyword and continue on failure    User should be albe to input vin 3 in AU Retail Home Page
     run keyword and continue on failure    User should be albe to click search button in AU Retail Home Page
-    run keyword and continue on failure    User should be able to click Select Vehicle button on Search Popup in AU Retail Home Page
+    run keyword and continue on failure    User should be able to Save or Select Manual Vehicle Search on Search Popup in AU Retail Home Page
     run keyword and continue on failure    TC Sleep
 
 
@@ -445,11 +446,13 @@ TC-073 - User should be able to side filter product
 
 TC-074 - User should be able to filter product
     [Tags]    All Products Page
-    run keyword and continue on failure    User should be able to filter product name from A to Z
+    run keyword and continue on failure    User should be able to click 1 filter from selected category in Retail Home Page
     run keyword and continue on failure    User should be able to fitler results per page to 100
 
 TC-075 - User should be able to view product In Stock and DC Stock
     [Tags]    All Products Page
+    run keyword and continue on failure    User should be able to click 1 filter from selected category in Retail Home Page
+    run keyword and continue on failure    User should be able to fitler results per page to 100
     run keyword and continue on failure    User should be able to view product In Stock and DC Stock
     run keyword and continue on failure    User should be able to click product details In Stock and DC Stock
     run keyword and continue on failure    User should be able to view product details In Stock and DC Stock
@@ -458,6 +461,8 @@ TC-075 - User should be able to view product In Stock and DC Stock
 
 TC-076 - User should be able to view product Out of Stock and DC Stock
     [Tags]    All Products Page
+    run keyword and continue on failure    User should be able to click 1 filter from selected category in Retail Home Page
+    run keyword and continue on failure    User should be able to fitler results per page to 100
     run keyword and continue on failure    User should be able to view product Out of Stock and DC Stock
     run keyword and continue on failure    User should be able to click product details Out of Stock and DC Stock
     run keyword and continue on failure    User should be able to view product details Out of Stock and DC Stock
@@ -466,6 +471,8 @@ TC-076 - User should be able to view product Out of Stock and DC Stock
 
 TC-077 - User should be able to view product Out of Stock
     [Tags]    All Products Page
+    run keyword and continue on failure    User should be able to click 1 filter from selected category in Retail Home Page
+    run keyword and continue on failure    User should be able to fitler results per page to 100
     run keyword and continue on failure    User should be able to view product Out of Stock
     run keyword and continue on failure    User should be albe to click enquire now button for out of stock in Retail Product Page
     run keyword and continue on failure    User should be able to message out of stock product in Retail Product Page
@@ -476,6 +483,8 @@ TC-077 - User should be able to view product Out of Stock
 
 TC-078 - User should be able to view product Price not Available
     [Tags]    All Products Page
+    run keyword and continue on failure    User should be able to click 1 filter from selected category in Retail Home Page
+    run keyword and continue on failure    User should be able to fitler results per page to 100
     run keyword and continue on failure    User should be able to view product Price not Available
     run keyword and continue on failure    User should be albe to click enquire now button for price not available in Retail Product Page
     run keyword and continue on failure    User should be able to message price not available product in Retail Product Page
@@ -486,9 +495,8 @@ TC-078 - User should be able to view product Price not Available
 
 TC-079 - User should be able to view product In Stock Only
     [Tags]    All Products Page
+    run keyword and continue on failure    User should be able to click 1 filter from selected category in Retail Home Page
     run keyword and continue on failure    User should be able to Filter Products by Stocks
-    run keyword and continue on failure    User should be able to filter product name from A to Z
-    run keyword and continue on failure    User should be able to fitler results per page to 100
     run keyword and continue on failure    User should be able to view product In Stock Only
     run keyword and continue on failure    User should be able to click product details In Stock Only
     run keyword and continue on failure    User should be able to view product details In Stock Only

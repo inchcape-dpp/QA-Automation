@@ -1,12 +1,12 @@
 *** Settings ***
 Documentation    Suite description
 
-Library  SeleniumLibrary
+Library    SeleniumLibrary
 
-Resource  ../../../Resource/testdata/config.robot
-Resource  ../../../Resource/testdata/Dealer/Dealer_Variable.robot
-Resource  ../../../Resource/testdata/credentials.robot
-Resource  ../../../Resource/testdata/Dealer/Dealer_Resource.robot
+Resource    ../../../Resource/testdata/config.robot
+Resource    ../../../Resource/testdata/Dealer/Dealer_Variable.robot
+Resource    ../../../Resource/testdata/credentials.robot
+Resource    ../../../Resource/testdata/Dealer/Dealer_Resource.robot
 
 
 *** Keywords ***

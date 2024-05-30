@@ -82,6 +82,26 @@ User should be able to click view cart button from shopping cart pop up modal
     click element    ${ShopCartPopCheckOutButton}
     sleep    10
 
+User should be able to check shopping cart pop up modal prices
+    wait until element is visible    ${ShopCartPopItemList}    10
+    ${PopUpCartTotalPrice}    get text    ${ShopCartPopPriceLabel}
+    ${RemovePopUpCartTotalString}    remove string    ${PopUpCartTotalPrice}    $    ,
+    ${ConvertPopUpCartTotal}    convert to number    ${RemovePopUpCartTotalString}
+
+    ${PopUpCartItemCount}    get element count    ${ShopCartPopItemList}
+    ${CartItemVariableList}    create list
+    log    ${PopUpCartItemCount}
+
+    FOR    ${ItemPriceIndex}    IN RANGE    1    ${PopUpCartItemCount}+1
+    ${ItemPrice}    get text    (//div[@class='products-container']//div[@class='item' or @class='item first-element' or @class='item last-element' or @class='item first-element last-element']//div[@class='cx-price']//div[@class='item-price'])[${ItemPriceIndex}]
+    set global variable    ${ItemPrice${ItemPriceIndex}}    ${ItemPrice}
+    append to list    ${CartItemVariableList}    ${ItemPrice}
+    log    ${ItemPrice}
+    log    ${CartItemVariableList}
+    END
+    ${itempricelistvariables}    get length    ${CartItemVariableList}
+    log    ${itempricelistvariables}
+###Comment
 User should be able to view message page from top navigaton
     wait until element is visible    ${HomePageMessageIcon}    10
     click element    ${HomePageMessageIcon}
@@ -214,10 +234,17 @@ User should be able to view Toyota Hybrid menus in HK Retail Home Page
 User should be able to select 1 filter from selected category in Retail Home Page
     ${RandomFilterIndex}    evaluate    random.randint(0,7)
     mouse over    ${Retail_FilterListElements}[${RandomFilterIndex}]
-    ${CategoryText}    get text    ${Retail_HK_FilterListElements_New}[${RandomFilterIndex}]
+    ${CategoryText}    get text    ${Retail_FilterListElements}[${RandomFilterIndex}]
     ${RandomFilterIndex}  evaluate    ${RandomFilterIndex}+1
     set global variable    ${RandomFilterIndex}
     set global variable    ${CategoryText}
+    sleep    2
+
+User should be able to click 1 filter from selected category in Retail Home Page
+    ${RandomFilterIndex}    evaluate    random.randint(0,7)
+    wait until element is visible    ${Retail_FilterListElements}[${RandomFilterIndex}]    10
+    click element    ${Retail_FilterListElements}[${RandomFilterIndex}]
+    mouse over    ${HomePageLogo}
     sleep    2
 
 User should be able to select 1 filter from selected category in HK Retail Home Page
