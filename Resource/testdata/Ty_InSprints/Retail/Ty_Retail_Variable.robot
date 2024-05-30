@@ -51,3 +51,17 @@ ${Retail_RegistrationLNValue}    QA
 ${Retail_RegistrationEmailValue}    tyqatest@yopmail.com
 ${Retail_HK_Registration_MobileNumber_Value}    12121212
 ${Retail_HK_Registration_LandlineNumber_Value}    13131313
+
+${HomePageSearhProduct}    //div[@role='search']//input[@type='text']
+${HomePageLogo}    //cx-page-slot[@position='SiteLogo']
+${HomePageSearchSuggestion}    //ul[@class='suggestions']//li/a
+
+${Retail_AccountMessagePagePanelContainer}    //dpp-message-list
+${Retail_AccountMessagePagePanelHeader}    //dpp-message-list//h3//div[contains(text(),'Inbox') or contains(text(),'收件箱')]
+${Retail_AccountMessagePageReadMessagesOrdEnq}    //div[@class='row message-container']//div[@class='pl-1 pointer enquiry-col-value col-2']//span[contains(text(),'ORDER ENQUIRY')]
+${Retail_AccountMessagePageUnreadMessagesOrdEnqContainer}    (//div[@class='row message-container not-read'][.//span[contains(text(),'ORDER ENQUIRY')]])[1]
+${Retail_AccountMessagePageUnreadMessagesOrdEnqTitle}    (//div[@class='row message-container not-read'][.//span[contains(text(),'ORDER ENQUIRY')]]//span[@class='type message-table-text'])[1]
+${Retail_AccountMessagePageUnreadMessagesOrdEnqTicketNumber}    (//div[@class='row message-container not-read'][.//span[contains(text(),'ORDER ENQUIRY')]]//span[@class='ticket-no'])[1]
+${Retail_AccountMessagePageUnreadMessagesOrdEnqFrom/To}    (//div[@class='row message-container not-read'][.//span[contains(text(),'ORDER ENQUIRY')]]//div[@class='message-from-text message-table-text subject-col col-4'])[1]
+${Retail_AccountMessagePageUnreadMessagesOrdEnqMessage}    (//div[@class='row message-container not-read'][.//span[contains(text(),'ORDER ENQUIRY')]]//span[@class='message-text-ellipsis'])[1]
+${Retail_AccountMessagePageUnreadMessagesOrdEnqDate}    (//div[@class='row message-container not-read'][.//span[contains(text(),'ORDER ENQUIRY')]]//div[@class='col-2 message-table-text'])[1]
