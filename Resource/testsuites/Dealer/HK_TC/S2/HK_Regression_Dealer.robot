@@ -646,7 +646,7 @@ TC-124 - User should be able to click and send message on unread Return Enquiry 
     run keyword and continue on failure    User should be able to click Back to All Message in Dealer Messages Details Page
 
 TC-125 - User should be able to click and send message on unread Product Enquiry in Dealer Message Page
-    [Tags]    Home Page    Messages
+    [Tags]    Home Page    Messagesc
     run keyword and continue on failure    User should be able to click filter messages in Dealer Messages Page
     run keyword and continue on failure    User should be able to select Product Enquiry filter in Dealer Messages Page
     run keyword and continue on failure    User should be able to view unread Product Enquiry in Dealer Message Page

@@ -5,6 +5,7 @@ Library    SeleniumLibrary
 
 #Resource    ../../../Resource/testdata/config.robot
 Resource    ../../../../Resource/testdata/Retail/Retail_Variable.robot
+Resource    ../../../../Resource/testdata/Ty_InSprints/Retail/Ty_Retail_Variable.robot
 Resource    ../../../../Resource/testdata/credentials.robot
 Resource    ../../../../Resource/testdata/config.robot
 Resource    ../../../../Resource/testdata/Dealer/Dealer_Variable.robot
