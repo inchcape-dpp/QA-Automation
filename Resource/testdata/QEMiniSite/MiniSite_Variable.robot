@@ -6,8 +6,41 @@ Resource  ../../../Resource/testdata/QEMiniSite/MiniSite_resource.robot
 
 
 *** Variables ***
+#-----------------------------------------------------Header------------------------------------------------
+${PartslaneLogoHeader}    (//img[@src='https://cdn.partslane.com.au/sys-master-images/h49/h6b/8830725652510/PartsLane_Registered_logo.svg'])[1]
+${RegisterHeader}    (//a[@href='https://www.partslane.com.au/dppretail/login/register'])[1]
+${RegisterSignIn}    (//a[@href='https://www.partslane.com.au/dppretail/login'])[1]
 
-${PartsLane}    https://www.partslane.com.au/home/index.html
+
+#-----------------------------------------------------GetOn------------------------------------------------
+${GetOn}    //p[@class='section-hero-desktop-cta--p']
+${GetOnImg}    //img[@src='https://cdn.partslane.com.au/sys-master-images/minisite/blue-car.png']
+${Spending}    //header[@class='section-default--header'and (contains(text(),'Spending time searching for parts and waiting on hold?'))]
+${SpendingContent}    //p[@class='section-default--paragraph']
+
+#-----------------------------------------------------WhatIsPartslane------------------------------------------------
+${WhatIsPartslane}    //header[@class='section-wide--item-header head--left']
+${WhatIsPartslaneImg}    //div//img[@src='https://cdn.partslane.com.au/sys-master-images/minisite/what-is.svg']
+${WhatIsPartslaneContent}    //div[@class='section-wide--item whatis-item--margin']
+
+
+#-----------------------------------------------------Header------------------------------------------------
+${PartslaneLogoHeader}    (//img[@src='https://cdn.partslane.com.au/sys-master-images/h49/h6b/8830725652510/PartsLane_Registered_logo.svg'])[1]
+${RegisterHeader}    (//a[@href='https://www.partslane.com.au/dppretail/login/register'])[1]
+${SignIn}    (//a[@href='https://www.partslane.com.au/dppretail/login'])[1]
+
+
+#-----------------------------------------------------GetOn------------------------------------------------
+${GetOn}    //p[@class='section-hero-desktop-cta--p']
+${GetOnImg}    //img[@src='https://cdn.partslane.com.au/sys-master-images/minisite/blue-car.png']
+${RegisterBody}    (//a[@href='https://www.partslane.com.au/dppretail/login/register'])[2]
+${Spending}    //header[@class='section-default--header'and (contains(text(),'Spending time searching for parts and waiting on hold?'))]
+${SpendingContent}    //p[@class='section-default--paragraph']
+
+#-----------------------------------------------------WhatIsPartslane------------------------------------------------
+${WhatIsPartslane}    //header[@class='section-wide--item-header head--left']
+${WhatIsPartslaneImg}    //div//img[@src='https://cdn.partslane.com.au/sys-master-images/minisite/what-is.svg']
+${WhatIsPartslaneContent}    //div[@class='section-wide--item whatis-item--margin']
 
 #-----------------------------------------------------Header------------------------------------------------
 ${PartslaneLogoHeader}    (//img[@src='https://cdn.partslane.com.au/sys-master-images/h49/h6b/8830725652510/PartsLane_Registered_logo.svg'])[1]
