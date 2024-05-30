@@ -101,7 +101,7 @@ User should be able to check shopping cart pop up modal prices
     END
     ${itempricelistvariables}    get length    ${CartItemVariableList}
     log    ${itempricelistvariables}
-
+###Comment
 User should be able to view message page from top navigaton
     wait until element is visible    ${HomePageMessageIcon}    10
     click element    ${HomePageMessageIcon}
