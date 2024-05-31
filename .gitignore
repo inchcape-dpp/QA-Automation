@@ -1,11 +1,11 @@
 # created by virtualenv automatically
-venv
+#venv
 testdata/Dealer/AU_Config/
 testdata/Dealer/HK_Config/
 testdata/Retail/AU_Config/
 testdata/Retail/HK_Config/
-testsuites/Dealer/Screenshots/
-testsuites/Retail/Screenshots/
-log.html
-output.xml
-report.html
+#testsuites/Dealer/Screenshots/
+#testsuites/Retail/Screenshots/
+#log.html
+#output.xml
+#report.html
