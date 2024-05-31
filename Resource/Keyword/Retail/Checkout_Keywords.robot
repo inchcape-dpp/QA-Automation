@@ -845,3 +845,4 @@ Compare Promo Code
     run keyword and continue on failure    should be equal    ${OrderTotal}    ${OrderTotalPrice}
     run keyword and continue on failure    should be equal    ${DiscountValue}    ${RemoveDiscountString}
 
+#####sample

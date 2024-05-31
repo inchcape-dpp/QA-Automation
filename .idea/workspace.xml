@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="5/28/24 10:08AM">
+    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="Changes 05/31/24 2:04 PM">
       <changelist_data name="danielouie-estopace" email="danielouie.estopace@inchcape.com" date="1716190390000" />
       <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Checkout_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Checkout_Keywords.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/D1/AU_D1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/D1/AU_D1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/P1/AU_P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/P1/AU_P1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/S1/AU_S1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/S1/AU_S1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/S2/AU_S2_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/S2/AU_S2_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/D1/HK_D1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/D1/HK_D1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/P1/HK_P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/P1/HK_P1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S1/HK_S1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/HK_Config/S1/HK_S1_Config.robot" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,14 +34,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "Dan",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Dan&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -236,6 +229,7 @@
     <MESSAGE value="Commit May 17&#10;&#10;Minisite" />
     <MESSAGE value="5/22/24 11:57AM" />
     <MESSAGE value="5/28/24 10:08AM" />
-    <option name="LAST_COMMIT_MESSAGE" value="5/28/24 10:08AM" />
+    <MESSAGE value="Changes 05/31/24 2:04 PM" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes 05/31/24 2:04 PM" />
   </component>
 </project>
