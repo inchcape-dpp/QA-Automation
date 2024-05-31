@@ -4,15 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="5/29/24 09:41AM">
+    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="5/30/24 12:30PM&#10;&#10;Config update">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_01_2024_1_34_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_15_01_2024_1_34_pm__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_01_2024_3_26_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_29_01_2024_3_26_pm__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_02_2024_2_02_pm__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_26_02_2024_2_02_pm__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/QE MiniSIte/Nino/MiniSite_keyword.Robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/Keyword/QE_Minisite/Ty/Minisite_Footer.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/P1/AU_P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/P1/AU_P1_Config.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/QE MiniSIte/Nino/MiniSite_Variable.Robot" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/Retail_Variable.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/Retail_Variable.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Ric/Retail/Ric_Retail_Resource.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testdata/Ric/Retail/Ric_Retail_Variable.robot" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/QE MiniSIte/Nino/MiniSite_TestSuite.Robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/QE_MiniSIte/Ty/Minisite_Footer_TestSuite.robot" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/log.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/output.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/S2/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Ty_Sprints/In_Sprints/DPP-305829.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Ty_Sprints/In_Sprints/DPP-306390.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Ty_Sprints/Sprint 40/DPP-306525/DPP-306525_AU.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Ty_Sprints/Sprint 40/DPP-308519/DPP-308519_AU.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Ty_Sprints/Sprint 40/DPP-308536/DPP-308536_AU.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Ty_Sprints/Sprint 40/DPP-309122/DPP-309122_HK.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Ty_Sprints/Sprint 40/DPP-310169/DPP-310169_AU.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Ty_Sprints/Sprint 41/DPP-304986.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Ty_Sprints/Sprint 41/DPP-310362.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Ty_Sprints/Sprint 42/DPP-310718.robot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Ty_Sprints/Sprint 43/DPP-310339.robot" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716946898675</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="5/30/24 12:30PM&#10;&#10;Config update">
+      <option name="closed" value="true" />
+      <created>1717046642323</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1717046642323</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -253,6 +286,7 @@
     <MESSAGE value="5/22/24 11:57AM" />
     <MESSAGE value="5/28/24 10:08AM" />
     <MESSAGE value="5/29/24 09:41AM" />
-    <option name="LAST_COMMIT_MESSAGE" value="5/29/24 09:41AM" />
+    <MESSAGE value="5/30/24 12:30PM&#10;&#10;Config update" />
+    <option name="LAST_COMMIT_MESSAGE" value="5/30/24 12:30PM&#10;&#10;Config update" />
   </component>
 </project>
