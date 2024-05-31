@@ -30,13 +30,10 @@ ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files
 #${Username}    retailtitanp1@yopmail.com
 #${Password}    Welcom3@NT
 
-<<<<<<<<< Temporary merge branch 1
-${Username}    ${HK_D1_UID}
-${Password}    ${HK_D1_PWD}
-=========
+
 ${Username}    ${HK_D1_Automation_Bronze_UID}
 ${Password}    ${HK_D1_Automation_Bronze_PWD}
->>>>>>>>> Temporary merge branch 2
+
 
 ${YopMailEmail}    ${HK_D1_Automation_Bronze_UID}
 
