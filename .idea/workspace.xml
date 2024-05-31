@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="05/31/24 2:36PM&#10;Config Changes&#10;Remove cofig to GIT ignore">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="05/31/24 3:09PM&#10;Remove Config to Git ignore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -202,7 +200,23 @@
       <option name="project" value="LOCAL" />
       <updated>1717137433577</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="05/31/24 2:38PM&#10;Added Config to git ignore">
+      <option name="closed" value="true" />
+      <created>1717138061513</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1717138061513</updated>
+    </task>
+    <task id="LOCAL-00021" summary="05/31/24 3:09PM&#10;Remove Config to Git ignore">
+      <option name="closed" value="true" />
+      <created>1717139595195</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1717139595195</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -247,6 +261,8 @@
     <MESSAGE value="Changes 05/31/24 2:04 PM" />
     <MESSAGE value="05/31/24 2:19PM&#10;SAmple Push" />
     <MESSAGE value="05/31/24 2:36PM&#10;Config Changes&#10;Remove cofig to GIT ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="05/31/24 2:36PM&#10;Config Changes&#10;Remove cofig to GIT ignore" />
+    <MESSAGE value="05/31/24 2:38PM&#10;Added Config to git ignore" />
+    <MESSAGE value="05/31/24 3:09PM&#10;Remove Config to Git ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="05/31/24 3:09PM&#10;Remove Config to Git ignore" />
   </component>
 </project>
