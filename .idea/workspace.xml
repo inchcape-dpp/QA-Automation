@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="5/30/24 12:30PM&#10;&#10;Config update">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/P1/AU_P1_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/AU_Config/P1/AU_P1_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/Retail_Variable.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/Retail_Variable.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/config.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/AU_TC/P1/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/AU_TC/P1/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/HK_Retail_Translation.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/HK_Retail_Translation.robot" afterDir="false" />
-    </list>
+    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="6/03/24 2:35PM" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -209,7 +197,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717046642323</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="6/03/24 2:35PM">
+      <option name="closed" value="true" />
+      <created>1717396526574</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1717396526574</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -265,6 +261,7 @@
     <MESSAGE value="5/28/24 10:08AM" />
     <MESSAGE value="5/29/24 09:41AM" />
     <MESSAGE value="5/30/24 12:30PM&#10;&#10;Config update" />
-    <option name="LAST_COMMIT_MESSAGE" value="5/30/24 12:30PM&#10;&#10;Config update" />
+    <MESSAGE value="6/03/24 2:35PM" />
+    <option name="LAST_COMMIT_MESSAGE" value="6/03/24 2:35PM" />
   </component>
 </project>
