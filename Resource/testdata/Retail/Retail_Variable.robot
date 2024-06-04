@@ -553,14 +553,31 @@ ${Retail_HK_HomePage_BodyParts_Category_Rear Quarter Panel}    //dpp-category-na
 #-----------------------------------------------------Retail HK Home Page Chemicals
 ${Retail_HK_HomePage_Chemicals_Category_Button}    //dpp-category-navigation//button[@aria-label='Chemicals' or @aria-label='化工產品']
 ${Retail_HK_HomePage_Chemicals_Category_List}    (//dpp-category-navigation)[1]//button[@aria-label='Chemicals' or @aria-label='化工產品']/following-sibling::div[@class='wrapper']//li
-
-
+${Retail_HK_HomePage_Chemicals_Category_BrakeFluid}    //dpp-category-navigation//button[@aria-label='Chemicals' or @aria-label='化工產品']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Brake Fuild') or (contains(text(),'迫力油'))]
+${Retail_HK_HomePage_Chemicals_Category_Coolant}    //dpp-category-navigation//button[@aria-label='Chemicals' or @aria-label='化工產品']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Coolant') or (contains(text(),'水箱水'))]
+${Retail_HK_HomePage_Chemicals_Category_DifferentialOil}    //dpp-category-navigation//button[@aria-label='Chemicals' or @aria-label='化工產品']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Differential Oil') or (contains(text(),'尾牙油'))]
+${Retail_HK_HomePage_Chemicals_Category_EngineOil}    //dpp-category-navigation//button[@aria-label='Chemicals' or @aria-label='化工產品']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Engine Oil') or (contains(text(),'偈油'))]
+${Retail_HK_HomePage_Chemicals_Category_Packing}    //dpp-category-navigation//button[@aria-label='Chemicals' or @aria-label='化工產品']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Packing') or (contains(text(),'崢口膠'))]
+${Retail_HK_HomePage_Chemicals_Category_PoweSteeringFluid}    //dpp-category-navigation//button[@aria-label='Chemicals' or @aria-label='化工產品']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Power Steering Fuild') or (contains(text(),'軚油'))]
+${Retail_HK_HomePage_Chemicals_Category_SuspensionFluid}    //dpp-category-navigation//button[@aria-label='Chemicals' or @aria-label='化工產品']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Suspension Fluid') or (contains(text(),'避震機油'))]
+${Retail_HK_HomePage_Chemicals_Category_TransmissionOil}    //dpp-category-navigation//button[@aria-label='Chemicals' or @aria-label='化工產品']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Tranmission Oil') or (contains(text(),'波箱油'))]
 
 
 #-----------------------------------------------------Retail HK Home Page Maintenance Item
 ${Retail_HK_HomePage_MaintenanceItem_Category_Button}    //dpp-category-navigation//button[@aria-label='Maintenance Item' or @aria-label='快流件']
 ${Retail_HK_HomePage_MaintenanceItem_Category_List}    (//dpp-category-navigation)[1]//button[@aria-label='Maintenance Item' or @aria-label='快流件']/following-sibling::div[@class='wrapper']//li
-
+${Retail_HK_HomePage_MaintenanceItem_Category_Absorber}    //dpp-category-navigation//button[@aria-label='Maintenance Item' or @aria-label='快流件']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'A/C Filter') or (contains(text(),'冷氣格'))]
+${Retail_HK_HomePage_MaintenanceItem_Category_AirFilter}    //dpp-category-navigation//button[@aria-label='Maintenance Item' or @aria-label='快流件']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Absorber') or (contains(text(),'避震機'))]
+${Retail_HK_HomePage_MaintenanceItem_Category_Battery}
+${Retail_HK_HomePage_MaintenanceItem_Category_BrakePad}
+${Retail_HK_HomePage_MaintenanceItem_Category_FuelFilter}
+${Retail_HK_HomePage_MaintenanceItem_Category_OilFilter}
+${Retail_HK_HomePage_MaintenanceItem_Category_SparkPlug}
+${Retail_HK_HomePage_MaintenanceItem_Category_Vbelt}
+${Retail_HK_HomePage_MaintenanceItem_Category_WiperBlade}
+${Retail_HK_HomePage_MaintenanceItem_Category_WiperRubber}
+${Retail_HK_HomePage_MaintenanceItem_Category_A/C}
+${Retail_HK_HomePage_MaintenanceItem_Category_A/C}
 
 #-----------------------------------------------------Retail HK Home Page Repair Parts
 ${Retail_HK_HomePage_RepairParts_Category_Button}    //dpp-category-navigation//button[@aria-label='Repair Parts' or @aria-label='機修項目']
@@ -1955,7 +1972,7 @@ ${Retail_AccountCompanyDetailsPagePrefSupplierLabel}    //dpp-company-details//s
 ${Retail_AccountCompanyDetailsPageAccNumLabel}    //span[@class='label-content' and contains(text(),'Account Number')]|//span[@class='label-content' and contains(text(),'Membership Number')]
 ${Retail_AccountCompanyDetailsPageCompanyNameLabel}    //span[@class='label-content' and contains(text(),'Company Name')]
 ${Retail_AccountCompanyDetailsPageTradingNameLabel}    //dpp-company-details//span[@class='label-content' and contains(text(),'Trading Name')]
-${Retail_AccountCompanyDetailsPagePostalAddressLabel}    //span[@class='label-container' and contains(text(),'Postal Address')]
+${Retail_AccountCompanyDetailsPagePostalAddressLabel}    //span[@class='label-content' and contains(text(),'Postal Address')]
 ${Retail_AccountCompanyDetailsPagePostalAddressAddLine1Label}    //dpp-company-details//span[@class='label-content color-grey' and contains(text(),'Address Line 1')]
 ${Retail_AccountCompanyDetailsPagePostalAddressAddLine2Label}    //span[@class='label-content color-grey' and contains(text(),'Address Line 2')]
 ${Retail_AccountCompanyDetailsPagePostalAddressSuburbLabel}    //dpp-company-details//div[@formgroupname='postalAddress']//span[@class='label-content' and contains(text(),'Suburb')]

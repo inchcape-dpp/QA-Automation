@@ -36,8 +36,9 @@ ${Password}    ${AU_S2_PWD}
 ${Retail_AccountProfileChangePassCurrentPassValue}    ${Password}
 ${YopMailEmail}    ${AU_S2_Automation_UID}
 
+
 #Testing Values
-${ProdductSearchValue}    037018200
+${ProductSearchValue}    037018200
 
 *** Keywords ***
 Open Chrome Browser
