@@ -1,9 +1,9 @@
 # created by virtualenv automatically
 venv
-testdata/Dealer/AU_Config/
-testdata/Dealer/HK_Config/
-testdata/Retail/AU_Config/
-testdata/Retail/HK_Config/
+#testdata/Dealer/AU_Config/
+#testdata/Dealer/HK_Config/
+#testdata/Retail/AU_Config/
+#testdata/Retail/HK_Config/
 testsuites/Dealer/Screenshots/
 testsuites/Retail/Screenshots/
 log.html
