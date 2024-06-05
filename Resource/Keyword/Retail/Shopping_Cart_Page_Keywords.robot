@@ -3,7 +3,7 @@ Documentation    Suite description
 
 Library  SeleniumLibrary
 
-Resource  ../../../Resource/testdata/config.robot
+#Resource  ../../../Resource/testdata/config.robot
 Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../Resource/testdata/credentials.robot
 
@@ -154,20 +154,31 @@ User should be able to click 1 product cart item in Retail Shopping Cart Page
 
 User should be able to click add item qty in Retail Shopping Cart Page
     wait until element is visible    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//button[@aria-label='Add one more']    10
+    scroll element into view    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//button[@aria-label='Add one more']
     capture element screenshot    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//button[@aria-label='Add one more']
     click element    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//button[@aria-label='Add one more']
     sleep    2
 
 User should be able to click remove item qty in Retail Shopping Cart Page
     wait until element is visible    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//button[@aria-label='Remove one']    10
+    scroll element into view    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//button[@aria-label='Remove one']
     capture element screenshot    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//button[@aria-label='Remove one']
     click element    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//button[@aria-label='Remove one']
     sleep    2
 
 User should be able to input item qty in Retail Shopping Cart Page
     wait until element is visible    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//input[@type='number']    10
+    scroll element into view    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//input[@type='number']
     clear element text    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//input[@type='number']
     input text    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//input[@type='number']    ${Retail_ShoppingCartPageItemListQtyTextBoxValue}
+    capture element screenshot    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//input[@type='number']
+    sleep    2
+
+User should be able to input 999 item qty in Retail Shopping cart Page
+    wait until element is visible    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//input[@type='number']    10
+    scroll element into view    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//input[@type='number']
+    clear element text    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//input[@type='number']
+    input text    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//input[@type='number']    ${ProductSelectionQtyTextBoxValue}
     capture element screenshot    //dpp-cart-item-list//div[@class='cx-item-list-row'][${RandomItemIndex}]//div[@class='col-6 price-container']//div[@class='cx-quantity col-3']//input[@type='number']
     sleep    2
 

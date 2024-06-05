@@ -3,9 +3,9 @@ Documentation    Suite description
 
 Library    SeleniumLibrary
 Library    String
-Library    ExcelLibrary
 
-Resource  ../../../Resource/testdata/config.robot
+
+#Resource  ../../../Resource/testdata/config.robot
 Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../Resource/testdata/Retail/Retail_Resource.robot
 Resource  ../../../Resource/testdata/credentials.robot
@@ -17,12 +17,69 @@ User should be able to view All Parts Page
     click element    ${HomePageAllCategory}
     wait until element is visible    ${AllProdPageLabelFilter}    10
     wait until element is visible    ${AllProdPagePanelHeader}    10
-    capture page screenshot
+#    ${AllProdPage_AllProd_Label}
+#    ${AllProdPageSortProdDropdown}
+#    ${AllProdPageInStockCheckBoxContainer}
+#    ${AllProdPageInStockCheckBox}
+
+
     sleep    2
+
+User should be able to view All Parts Page with VIN
+    wait until element is visible    ${AllProdPage_CarSelected_Container}    10
+    wait until element is visible    ${AllProdPage_CarSelectedCar_Icon}    10
+    wait until element is visible    ${AllProdPage_CarSelectedCar_PartsforLabel}    10
+    wait until element is visible    ${AllProdPage_CarSelectedCar_CarModel_Label}    10
+    wait until element is visible    ${AllProdPage_CarSelectedCar_CarVIN_Label}    10
+    wait until element is visible    ${AllProdPageAddCar/ChangeCarButton}    10
+
+    capture element screenshot    ${AllProdPage_CarSelected_Container}
+    capture element screenshot    ${AllProdPage_CarSelectedCar_Icon}
+    capture element screenshot    ${AllProdPage_CarSelectedCar_PartsforLabel}
+    capture element screenshot    ${AllProdPage_CarSelectedCar_CarModel_Label}
+    capture element screenshot    ${AllProdPage_CarSelectedCar_CarVIN_Label}
+    capture element screenshot    ${AllProdPageAddCar/ChangeCarButton}
+
+    ${vintextvalue}    get text    ${AllProdPage_CarSelectedCar_CarVIN_Label}
+    ${RemoveVINString}    remove string    ${vintextvalue}    Vin Number:    ${SPACE}
+    run keyword and continue on failure    Should Be Equal As Strings    ${RemoveVINString}    ${Retail_HK_HomePage_SearchVIN_TextBox_Value1}
+
+User should be able to view All Parts Page with Manual Car Search
+    element should not be visible    ${AllProdPage_CarSelectedCar_CarVIN_Label}
+    wait until element is visible    ${AllProdPage_CarSelected_Container}    10
+    wait until element is visible    ${AllProdPage_CarSelectedCar_Icon}    10
+    wait until element is visible    ${AllProdPage_CarSelectedCar_PartsforLabel}    10
+    wait until element is visible    ${AllProdPage_CarSelectedCar_CarModel_Label}    10
+    wait until element is visible    ${AllProdPageAddCar/ChangeCarButton}    10
+
+    capture element screenshot    ${AllProdPage_CarSelected_Container}
+    capture element screenshot    ${AllProdPage_CarSelectedCar_Icon}
+    capture element screenshot    ${AllProdPage_CarSelectedCar_PartsforLabel}
+    capture element screenshot    ${AllProdPage_CarSelectedCar_CarModel_Label}
+    capture element screenshot    ${AllProdPageAddCar/ChangeCarButton}
+
+    ${allpartscarmodeltextvalue}    get text    ${AllProdPage_CarSelectedCar_CarModel_Label}
+    ${selectvehiclecarmodeltextvalue}    get text    ${HomePageSelectVehicle}
+    run keyword and continue on failure    Should Be Equal As Strings    ${allpartscarmodeltextvalue}    ${selectvehiclecarmodeltextvalue}
+
+
+User should be able to view All Parts Page with No Car Search
+    element should not be visible    ${AllProdPage_CarSelectedCar_CarVIN_Label}
+    wait until element is visible    ${AllProdPage_CarSelected_Container}    10
+    wait until element is visible    ${AllProdPage_CarSelectedCar_Icon}    10
+    wait until element is visible    ${AllProdPage_CarSelectedCar_PartsforLabel}    10
+    wait until element is visible    ${AllProdPage_CarSelectedCar_NoCar_Label}    10
+    wait until element is visible    ${AllProdPageAddCar/ChangeCarButton}    10
+
+    capture element screenshot    ${AllProdPage_CarSelected_Container}
+    capture element screenshot    ${AllProdPage_CarSelectedCar_Icon}
+    capture element screenshot    ${AllProdPage_CarSelectedCar_PartsforLabel}
+    capture element screenshot    ${AllProdPage_CarSelectedCar_NoCar_Label}
+    capture element screenshot    ${AllProdPageAddCar/ChangeCarButton}
 
 User should be able to filter product name from A to Z
     wait until element is visible    ${AllProdPageSortProdDropdown}    10
-    scroll element into view    ${AllProdPageSortProdDropdown}
+    scroll element into view    ${AllProdPageLabelFilter}
     capture element screenshot    ${AllProdPageSortProdDropdown}
     click element    ${AllProdPageSortProdDropdown}
     wait until element is visible    ${AllProdPageSortProdDropdownAtoZ}    10
@@ -49,62 +106,67 @@ User should be able to Filter Products by Stocks
     sleep    5
 
 User should be able to view product In Stock and DC Stock
-    FOR    ${Nextpage}    IN RANGE    1    500
+    FOR    ${Nextpage}    IN RANGE    1    10
     ${InStockDCStockStatus}    run keyword and return status    element should be visible    ${ProductSelectionInStockDCStockContainer}
     run keyword if    '${InStockDCStockStatus}' == 'False'    User should be able to click next page
     exit for loop if    '${InStockDCStockStatus}' == 'True'
     END
     scroll element into view    ${ProductSelectionInStockDCStockContainer}
+    mouse over    ${ProductSelectionInStockDCStockContainer}
     wait until element is visible    ${ProductSelectionInStockDCStockContainer}    10
     capture element screenshot    ${ProductSelectionInStockDCStockContainer}
     sleep    2
 
 User should be able to view product Out of Stock and DC Stock
-    FOR    ${Nextpage}    IN RANGE    1    500
+    FOR    ${Nextpage}    IN RANGE    1    10
     ${OutofStockDCStockStatus}    run keyword and return status    element should be visible    ${ProductSelectionOutofStockDCStockContainer}
     run keyword if    '${OutofStockDCStockStatus}' == 'False'    User should be able to click next page
     exit for loop if    '${OutofStockDCStockStatus}' == 'True'
     END
     scroll element into view    ${ProductSelectionOutofStockDCStockContainer}
+    mouse over    ${ProductSelectionOutofStockDCStockContainer}
     wait until element is visible    ${ProductSelectionOutofStockDCStockContainer}    10
     capture element screenshot    ${ProductSelectionOutofStockDCStockContainer}
     sleep    2
 
 User should be able to view product In Stock Only
-    FOR    ${Nextpage}    IN RANGE    1    500
+    FOR    ${Nextpage}    IN RANGE    1    30
     ${InStockOnlyStatus}    run keyword and return status    element should be visible    ${ProductSelectionInStockOnlyContainer}
     run keyword if    '${InStockOnlyStatus}' == 'False'    User should be able to click next page
     exit for loop if    '${InStockOnlyStatus}' == 'True'
     END
     scroll element into view    ${ProductSelectionInStockOnlyContainer}
+    mouse over  ${ProductSelectionInStockOnlyContainer}
     wait until element is visible    ${ProductSelectionInStockOnlyContainer}    10
     capture element screenshot    ${ProductSelectionInStockOnlyContainer}
     sleep    2
 
 User should be able to view product In Stock Only in HK Retail Products Page
-    FOR    ${Nextpage}    IN RANGE    1    500
+    FOR    ${Nextpage}    IN RANGE    1    10
     ${InStockOnlyStatus}    run keyword and return status    element should be visible    ${ProductSelectionInStockOnlyContainer}
     run keyword if    '${InStockOnlyStatus}' == 'False'    User should be able to click load more button in HK Retail Product Page
     exit for loop if    '${InStockOnlyStatus}' == 'True'
     END
     scroll element into view    ${ProductSelectionInStockOnlyContainer}
+    mouse over    ${ProductSelectionInStockOnlyContainer}
     wait until element is visible    ${ProductSelectionInStockOnlyContainer}    10
     capture element screenshot    ${ProductSelectionInStockOnlyContainer}
     sleep    2
 
 User should be able to view product Out of Stock
-    FOR    ${Nextpage}    IN RANGE    1    500
+    FOR    ${Nextpage}    IN RANGE    1    10
     ${OutofStockStatus}    run keyword and return status    element should be visible    ${ProductSelectionOutofStockContainer}
     run keyword if    '${OutofStockStatus}' == 'False'    User should be able to click next page
     exit for loop if    '${OutofStockStatus}' == 'True'
     END
     scroll element into view    ${ProductSelectionOutofStockContainer}
+    mouse over    ${ProductSelectionOutofStockContainer}
     wait until element is visible    ${ProductSelectionOutofStockContainer}    10
     capture element screenshot    ${ProductSelectionOutofStockContainer}
     sleep    2
 
 User should be able to view product Out of Stock in HK Retail Products Page
-    FOR    ${Nextpage}    IN RANGE    1    500
+    FOR    ${Nextpage}    IN RANGE    1    10
     ${OutofStockStatus}    run keyword and return status    element should be visible    ${ProductSelectionOutofStockContainer}
     run keyword if    '${OutofStockStatus}' == 'False'    User should be able to click load more button in HK Retail Product Page
     exit for loop if    '${OutofStockStatus}' == 'True'
@@ -115,18 +177,19 @@ User should be able to view product Out of Stock in HK Retail Products Page
     sleep    2
 
 User should be able to view product Price not Available
-    FOR    ${Nextpage}    IN RANGE    1    500
+    FOR    ${Nextpage}    IN RANGE    1    10
     ${NoPriceStatus}    run keyword and return status    element should be visible    ${ProductSelectionNoPriceContainer}
     run keyword if    '${NoPriceStatus}' == 'False'    User should be able to click next page
     exit for loop if    '${NoPriceStatus}' == 'True'
     END
     scroll element into view    ${ProductSelectionNoPriceContainer}
+    mouse over    ${ProductSelectionNoPriceContainer}
     wait until element is visible    ${ProductSelectionNoPriceContainer}    10
     capture element screenshot    ${ProductSelectionNoPriceContainer}
     sleep    2
 
 User should be able to view product Price not Available HK
-    FOR    ${Nextpage}    IN RANGE    1    500
+    FOR    ${Nextpage}    IN RANGE    1    10
     ${NoPriceStatus}    run keyword and return status    element should be visible    ${ProductSelectionNoPriceContainer}
     run keyword if    '${NoPriceStatus}' == 'False'    User should be able to click load more button in HK Retail Product Page
     exit for loop if    '${NoPriceStatus}' == 'True'
@@ -589,7 +652,7 @@ User should be able to click add to cart button for in stock and dc stock in Ret
     wait until element is visible    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${InStockDCStockRandomIndex}]    10
     scroll element into view    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${InStockDCStockRandomIndex}]
     capture element screenshot    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${InStockDCStockRandomIndex}]
-    click element    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${InStockDCStockRandomIndex}]
+    dobule click element    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${InStockDCStockRandomIndex}]
     run keyword    Get Number of InStock DCStock
     sleep    2
 
@@ -621,6 +684,7 @@ User should be able to add to cart random item in Retail Product Page
     ${AddToCartElements}    get element count    ${AllProdPageAddtoCartButton}
     ${RandomAddToCartIndex}    evaluate    random.randint(1,${AddToCartElements})
     scroll element into view    (//dpp-add-to-cart//button[@type='submit'])[${RandomAddToCartIndex}]
+    sleep    2
     click element    (//dpp-add-to-cart//button[@type='submit'])[${RandomAddToCartIndex}]
     set global variable    ${RandomAddToCartIndex}
     sleep    2
@@ -648,7 +712,7 @@ User should be able to click add to cart button for in stock only in Retail Prod
     wait until element is visible    (//div[@class='custom-product-list' or @class='product-grid-list'][.//p[@class='inStock mr-0']][not(.//p[@class='inStock pr-2'])]//button[@type='submit'])[${InStockOnlyRandomIndex}]    10
     scroll element into view    (//div[@class='custom-product-list' or @class='product-grid-list'][.//p[@class='inStock mr-0']][not(.//p[@class='inStock pr-2'])]//button[@type='submit'])[${InStockOnlyRandomIndex}]
     capture element screenshot    (//div[@class='custom-product-list' or @class='product-grid-list'][.//p[@class='inStock mr-0']][not(.//p[@class='inStock pr-2'])]//button[@type='submit'])[${InStockOnlyRandomIndex}]
-    click element    (//div[@class='custom-product-list' or @class='product-grid-list'][.//p[@class='inStock mr-0']][not(.//p[@class='inStock pr-2'])]//button[@type='submit'])[${InStockOnlyRandomIndex}]
+    double click element    (//div[@class='custom-product-list' or @class='product-grid-list'][.//p[@class='inStock mr-0']][not(.//p[@class='inStock pr-2'])]//button[@type='submit'])[${InStockOnlyRandomIndex}]
     run keyword    Get Number of InStockOnly
     sleep    2
 
@@ -701,7 +765,7 @@ User should be able to click add to cart button for out of stock and dc stock in
     wait until element is visible   (//div[@class='custom-product-list'][.//p[@class='outOfStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${OutofStockDCStockRandomIndex}]    10
     scroll element into view    (//div[@class='custom-product-list'][.//p[@class='outOfStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${OutofStockDCStockRandomIndex}]
     capture element screenshot    (//div[@class='custom-product-list'][.//p[@class='outOfStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${OutofStockDCStockRandomIndex}]
-    click element    (//div[@class='custom-product-list'][.//p[@class='outOfStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${OutofStockDCStockRandomIndex}]
+    double click element    (//div[@class='custom-product-list'][.//p[@class='outOfStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${OutofStockDCStockRandomIndex}]
     run keyword    Get Number of DCStock
     sleep    2
 
@@ -728,7 +792,7 @@ User should be able to input qty item for out of stock and dc stock in Retail Pr
     capture element screenshot    ${ProductSelectionOutofStockDCStockQtyTextBox}
     sleep    2
 
-User should be able to view message pop up in Retail All Products Page
+User should be able to view message pop up in Retail All Products PageUser should be able to click product details Price not Available
     wait until element is visible    ${Retail_AllProdPagePopUpMessageContainer}    10
     wait until element is visible    ${Retail_AllProdPagePopUpMessageToSupplierlabel}    10
     wait until element is visible    ${Retail_AllProdPagePopUpMessageSubjectlabel}    10
@@ -781,8 +845,8 @@ User should be able to click send on message pop in Retail All Products Page
     sleep    5
 
 User should be able to click continue shopping in Retail All Products Page
-    wait until element is visible    ${Retail_AllProdPagePopUpMessageContainer}    10
-    wait until element is visible    ${Retail_AllProdPagePopUpMessageContinueButton}    10
+    wait until element is visible    ${Retail_AllProdPagePopUpSentMessage}    10
+    wait until element is visible    ${Retail_AllProdPagePopUpMessageContinueButton}    15
     capture element screenshot    ${Retail_AllProdPagePopUpMessageContinueButton}
     click element    ${Retail_AllProdPagePopUpMessageContinueButton}
     sleep    2
@@ -839,7 +903,17 @@ User should be able to click load more button in HK Retail Product Page
     wait until element is visible    ${Retail_HK_AllProdPageLoadmoreButton}    10
     scroll element into view    ${Retail_HK_AllProdPageLoadmoreButton}
     click element    ${Retail_HK_AllProdPageLoadmoreButton}
-    sleep    2
+    sleep    5
+
+Show number of product list
+    wait until element is visible    ${Retail_HK_ProductSelectionProductlist}    10
+    ${elementcount}    get element count    ${Retail_HK_ProductSelectionProductlist}
+    ${Productlisttext}    get text     ${Retail_HK_ProductSelectionProductResult}
+    @{words}    split string    ${Productlisttext}    ${SPACE}
+    log    ${words}[0]
+
+    capture element screenshot    ${Retail_HK_ProductSelectionProductResult}
+
 
 User should be able to click scroll to top button in HK Retail Product Page
     wait until element is visible    ${Retail_HK_AllProdPageScrolltoTopButton}    10
@@ -946,27 +1020,811 @@ Product Price Check
 
     close all excel documents
 
-New browser tab
-    Log to console    Adding new tab
-    execute javascript    window.open('', '_blank')
-#    press keys    none    CTRL+TAB
-#    sleep    5
-#    press keys    none    CTRL+TAB
+#New browser tab
+#    Log to console    Adding new tab
+#    execute javascript    window.open('', '_blank')
+##    press keys    none    CTRL+TAB
+##    sleep    5
+##    press keys    none    CTRL+TAB
+##    go to    ${YopMail}
+#    sleep    10
+#    Log to console    Getting window name
+#    @{test}=    get window handles
+#    Log    ${test}
+#    ${Tab1}=    convert to string    ${test}[0]
+#    ${Tab2}=    convert to string    ${test}[1]
+#    Log    ${Tab1}
+#    Log    ${Tab2}
+#    Log to console    Switching window 2
+#    switch window    ${Tab2}
 #    go to    ${YopMail}
-    sleep    10
-    Log to console    Getting window name
-    @{test}=    get window handles
-    Log    ${test}
-    ${Tab1}=    convert to string    ${test}[0]
-    ${Tab2}=    convert to string    ${test}[1]
-    Log    ${Tab1}
-    Log    ${Tab2}
-    Log to console    Switching window 2
-    switch window    ${Tab2}
-    go to    ${YopMail}
-    sleep    10
-    Log to console    Switching window 1
-    switch window    ${Tab1}
-    sleep    10
+#    sleep    10
+#    Log to console    Switching window 1
+#    switch window    ${Tab1}
+#    sleep    10
+
+
+User should be able to Check Product Stock
+    open excel document    ${ExcelFile_AU_Stock_List_Path}    Titan SUB Geerex
+    ${sheets}=    get list sheet names
+    ${PartNum}=    read excel cell    row_num=2    col_num=1    sheet_name=Test
+
+    FOR    ${StockCheck}    IN RANGE    1    100
+
+      log    ${Part_Num_Index}
+
+      @{Part_Num_Column}=    read excel column    col_num=1    max_num=100    sheet_name=Test
+      @{Stock_Column}=    read excel column    col_num=3    max_num=100    sheet_name=Test
+
+      ${Part_Num}=    convert to string    ${Part_Num_Column}[${Part_Num_Index}]
+      ${Stock_Num}=    convert to string    ${Stock_Column}[${Part_Num_Index}]
+
+      run keyword and continue on failure    wait until element is visible    ${HomePageSearhProduct}    10
+      run keyword and continue on failure    click element    ${HomePageSearhProduct}
+      run keyword and continue on failure    clear element text    ${HomePageSearhProduct}
+      run keyword and continue on failure    input text    ${HomePageSearhProduct}    ${Part_Num}
+      sleep    7
+
+      run keyword and continue on failure    wait until element is visible    ${HomePageSearchSuggestionList1}    10
+    #  ${Prod_Price}  get text   ${SearchProdPrice}
+    #  ${Prod_Search_RemoveString}    remove string    ${Prod_Price}    $    ,    .0
+      run keyword and continue on failure    click element    ${HomePageSearchSuggestionList1}
+      run keyword and continue on failure    mouse over    ${HomePageLogo}
+      sleep    7
+
+      run keyword and continue on failure    wait until element is visible    ${ProductDeatilsPageProductInStock}    10
+      ${Part_Detail_Stock}    run keyword and continue on failure    get text    ${ProductDeatilsPageProductInStock}
+      ${Part_Detail_RemoveString}    run keyword and continue on failure    remove string    ${Part_Detail_Stock}    In stock    (    )    In Stock    ${SPACE}
+
+      ${ExelStockCount}    run keyword and continue on failure    set variable    ${Stock_Num}
+      ${ProductDetailsStockCount}    run keyword and continue on failure    set variable    ${Part_Detail_RemoveString}
+
+      Log    ${ExelStockCount}
+      Log    ${ProductDetailsStockCount}
+
+      run keyword and continue on failure    should be equal    ${ExelStockCount}    ${ProductDetailsStockCount}
+
+
+
+      ${Part_Num_Index}    evaluate    ${Part_Num_Index}+1
+
+      sleep    2
+    END
+
+    close all excel documents
+
+User should be able to view EPC L1 Page in HK Retail
+    wait until element is visible    ${Retail_HK_EPC_L1_Container}    10
+    wait until element is visible    ${Retail_HK_EPC_L1_ElectronicParts_Container}    10
+    wait until element is visible    ${Retail_HK_EPC_L1_ElectronicParts_Cards_Container}    10
+    wait until element is visible    ${Retail_HK_EPC_L1_ElectronicParts_Cards_Header}    10
+
+    capture element screenshot    ${Retail_HK_EPC_L1_Container}
+    capture element screenshot    ${Retail_HK_EPC_L1_ElectronicParts_Container}
+    capture element screenshot    ${Retail_HK_EPC_L1_ElectronicParts_Cards_Container}
+    capture element screenshot    ${Retail_HK_EPC_L1_ElectronicParts_Cards_Header}
+
+    wait until element is visible    ${Retail_HK_EPC_L1_ElectronicParts_Cards_EngineFuelSystem}    10
+    wait until element is visible    ${Retail_HK_EPC_L1_ElectronicParts_Cards_TransmissionChasis}    10
+    wait until element is visible    ${Retail_HK_EPC_L1_ElectronicParts_Cards_BodyInterior}    10
+    wait until element is visible    ${Retail_HK_EPC_L1_ElectronicParts_Cards_Electrics}    10
+
+    capture element screenshot    ${Retail_HK_EPC_L1_ElectronicParts_Cards_EngineFuelSystem}
+    capture element screenshot    ${Retail_HK_EPC_L1_ElectronicParts_Cards_TransmissionChasis}
+    capture element screenshot    ${Retail_HK_EPC_L1_ElectronicParts_Cards_BodyInterior}
+    capture element screenshot    ${Retail_HK_EPC_L1_ElectronicParts_Cards_Electrics}
+
+    wait until element is visible    ${Retail_HK_EPC_L1_MaintenanceParts_Container}    10
+    wait until element is visible    ${Retail_HK_EPC_L1_MaintenanceParts_Card_Container}    10
+    wait until element is visible    ${Retail_HK_EPC_L1_MaintenanceParts_Header}    10
+    wait until element is visible    ${Retail_HK_EPC_L1_MaintenanceParts_Card_ShopNow_Button}    10
+
+    capture element screenshot    ${Retail_HK_EPC_L1_MaintenanceParts_Container}
+    capture element screenshot    ${Retail_HK_EPC_L1_MaintenanceParts_Card_Container}
+    capture element screenshot    ${Retail_HK_EPC_L1_MaintenanceParts_Header}
+    capture element screenshot    ${Retail_HK_EPC_L1_MaintenanceParts_Card_ShopNow_Button}
+
+    sleep    2
+
+User should be able to click Shop Now in HK Retail EPC L1 Page
+    wait until element is visible    ${Retail_HK_EPC_L1_MaintenanceParts_Card_ShopNow_Button}    10
+    capture element screenshot    ${Retail_HK_EPC_L1_MaintenanceParts_Card_ShopNow_Button}
+    click element    ${Retail_HK_EPC_L1_MaintenanceParts_Card_ShopNow_Button}
+    sleep    2
+
+User should be able to Click Engine Fuel System in HK Retail EPC L1 Page
+    wait until element is visible    ${Retail_HK_EPC_L1_ElectronicParts_Cards_EngineFuelSystem}    10
+    capture element screenshot    ${Retail_HK_EPC_L1_ElectronicParts_Cards_EngineFuelSystem}
+    click element    ${Retail_HK_EPC_L1_ElectronicParts_Cards_EngineFuelSystem}
+    sleep    2
+
+User should be able to Click Transmission and Chasis in HK Retail EPC L1 Page
+    wait until element is visible    ${Retail_HK_EPC_L1_ElectronicParts_Cards_TransmissionChasis}    10
+    capture element screenshot    ${Retail_HK_EPC_L1_ElectronicParts_Cards_TransmissionChasis}
+    click element    ${Retail_HK_EPC_L1_ElectronicParts_Cards_TransmissionChasis}
+    sleep    2
+
+User should be able to Click Body and Interior in HK Retail EPC L1 Page
+    wait until element is visible    ${Retail_HK_EPC_L1_ElectronicParts_Cards_BodyInterior}    10
+    capture element screenshot    ${Retail_HK_EPC_L1_ElectronicParts_Cards_BodyInterior}
+    click element    ${Retail_HK_EPC_L1_ElectronicParts_Cards_BodyInterior}
+    sleep    2
+
+User should be able to Click Electrics in HK Retail EPC L1 Page
+    wait until element is visible    ${Retail_HK_EPC_L1_ElectronicParts_Cards_Electrics}    10
+    capture element screenshot    ${Retail_HK_EPC_L1_ElectronicParts_Cards_Electrics}
+    click element    ${Retail_HK_EPC_L1_ElectronicParts_Cards_Electrics}
+    sleep    2
+
+User should be able to view EPC L2 Page in HK Retail
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_Container}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_Header_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarModel_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarModelCode_Value}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarModelCode_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarEngine_Value}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarEngine_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarYear_Value}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarYear_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarTransmission_Value}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarTransmission_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Button}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_ChangeCar_Button}    10
+
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_Container}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_Header_Label}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarModel_Label}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarModelCode_Value}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarModelCode_Label}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarEngine_Value}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarEngine_Label}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarYear_Value}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarYear_Label}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarTransmission_Value}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarTransmission_Label}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Button}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_ChangeCar_Button}
+
+    wait until element is visible    ${Retail_HK_EPC_L2_PartsGroup_Header}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_PartsGroup_EngingFuelSystem_Button}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_PartsGroup_TransmissionChasis_Button}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_PartsGroup_BodyInterior_Button}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_PartsGroup_Electrics_Button}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_PartsGroup_All_Button}    10
+
+    capture element screenshot    ${Retail_HK_EPC_L2_PartsGroup_Header}
+    capture element screenshot    ${Retail_HK_EPC_L2_PartsGroup_EngingFuelSystem_Button}
+    capture element screenshot    ${Retail_HK_EPC_L2_PartsGroup_TransmissionChasis_Button}
+    capture element screenshot    ${Retail_HK_EPC_L2_PartsGroup_BodyInterior_Button}
+    capture element screenshot    ${Retail_HK_EPC_L2_PartsGroup_Electrics_Button}
+    capture element screenshot    ${Retail_HK_EPC_L2_PartsGroup_All_Button}
+
+    wait until element is visible    ${Retail_HK_EPC_L2_SearchBar_TextBox}    10
+    capture element screenshot    ${Retail_HK_EPC_L2_SearchBar_TextBox}
+
+    sleep    2
+
+User should be able to Click Engine Fuel System in HK Retail EPC L2 Page
+    wait until element is visible    ${Retail_HK_EPC_L2_PartsGroup_EngingFuelSystem_Button}    10
+    capture element screenshot    ${Retail_HK_EPC_L2_PartsGroup_EngingFuelSystem_Button}
+    click element    ${Retail_HK_EPC_L2_PartsGroup_EngingFuelSystem_Button}
+    sleep    2
+
+User should be able to Click Transmission and Chasis in HK Retail EPC L2 Page
+    wait until element is visible    ${Retail_HK_EPC_L2_PartsGroup_TransmissionChasis_Button}    10
+    capture element screenshot    ${Retail_HK_EPC_L2_PartsGroup_TransmissionChasis_Button}
+    click element    ${Retail_HK_EPC_L2_PartsGroup_TransmissionChasis_Button}
+    sleep    2
+
+User should be able to Click Body and Interior in HK Retail EPC L2 Page
+    wait until element is visible    ${Retail_HK_EPC_L2_PartsGroup_BodyInterior_Button}    10
+    capture element screenshot    ${Retail_HK_EPC_L2_PartsGroup_BodyInterior_Button}
+    click element    ${Retail_HK_EPC_L2_PartsGroup_BodyInterior_Button}
+    sleep    2
+
+User should be able to Click Electrics in HK Retail EPC L2 Page
+    wait until element is visible    ${Retail_HK_EPC_L2_PartsGroup_Electrics_Button}    10
+    capture element screenshot    ${Retail_HK_EPC_L2_PartsGroup_Electrics_Button}
+    click element    ${Retail_HK_EPC_L2_PartsGroup_Electrics_Button}
+    sleep    2
+
+User should be able to Click All in HK Retail EPC L2 Page
+    wait until element is visible    ${Retail_HK_EPC_L2_PartsGroup_All_Button}    10
+    capture element screenshot    ${Retail_HK_EPC_L2_PartsGroup_All_Button}
+    click element    ${Retail_HK_EPC_L2_PartsGroup_All_Button}
+    sleep    2
+
+User should be able to click Load More Button
+    wait until element is visible    ${Retail_HK_EPC_L2_Schema_LoadMore_Button}    10
+    scroll element into view    ${Retail_HK_EPC_L2_Schema_LoadMore_Button}
+    click element    ${Retail_HK_EPC_L2_Schema_LoadMore_Button}
+    sleep    2
+
+User should be able to view Engine Fuel System Schema in HK Retail EPC L2 Page
+    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_Header}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_Schema_CardList}    10
+
+    run keyword and continue on failure    Engine Fuel System Schema
+
+    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_Header}
+    capture element screenshot    ${Retail_HK_EPC_L2_Schema_CardList}
+
+    sleep    2
+
+User should be able to view Transmission and Chasis Schema in HK Retail EPC L2 Page
+    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_Header}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_Schema_CardList}    10
+
+    run keyword and continue on failure    Transmission and Chassis Schema
+
+    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_Header}
+    capture element screenshot    ${Retail_HK_EPC_L2_Schema_CardList}
+
+    sleep    2
+
+User should be able to view Body and Innterior Schema in HK Retail EPC L2 Page
+    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_Header}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_Schema_CardList}    10
+
+    run keyword and continue on failure    Body and Innterior Schema
+
+    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_Header}
+    capture element screenshot    ${Retail_HK_EPC_L2_Schema_CardList}
+
+    sleep    2
+
+User should be able to view Electrics Schema in HK Retail EPC L2 Page
+    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Header}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_Schema_CardList}    10
+
+    run keyword and continue on failure    Electrics Schema
+
+    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Header}
+    capture element screenshot    ${Retail_HK_EPC_L2_Schema_CardList}
+
+    sleep    2
+
+User should be able to view All Schema in HK Retail EPC L2 Page
+    FOR    ${Loadmore}    IN RANGE    1    10
+    ${ClickLoadMore}    run keyword and return status    element should be visible    ${Retail_HK_EPC_L2_Schema_LoadMore_Button}
+    run keyword if    '${ClickLoadMore}' == 'True'    User should be able to click Load More Button
+    exit for loop if    '${ClickLoadMore}' == 'False'
+    END
+
+    scroll element into view    ${Retail_HK_EPC_L2_Schema_All_Header}
+
+    capture page screenshot
+
+    sleep    2
+
+
+User should be able to select random Schema in HK Retail EPC L2 Page
+    ${SchemaCount}    get element count    ${Retail_HK_EPC_L2_Schema_CardList}
+    ${SchemaRandomIndex}    evaluate    random.randint(1,${SchemaCount})
+    wait until element is visible    (//dpp-epc-parts-schema-list//div[@class='epc-schema-card col-12 col-md-3 my-2 mx-0 px-2'])[${SchemaRandomIndex}]    10
+    scroll element into view    (//dpp-epc-parts-schema-list//div[@class='epc-schema-card col-12 col-md-3 my-2 mx-0 px-2'])[${SchemaRandomIndex}]
+    capture element screenshot    (//dpp-epc-parts-schema-list//div[@class='epc-schema-card col-12 col-md-3 my-2 mx-0 px-2'])[${SchemaRandomIndex}]
+    click element    (//dpp-epc-parts-schema-list//div[@class='epc-schema-card col-12 col-md-3 my-2 mx-0 px-2'])[${SchemaRandomIndex}]
+
+    sleep    2
+
+Engine Fuel System Schema
+    FOR    ${Loadmore}    IN RANGE    1    5
+    ${ClickLoadMore}    run keyword and return status    element should be visible    ${Retail_HK_EPC_L2_Schema_LoadMore_Button}
+    run keyword if    '${ClickLoadMore}' == 'True'    User should be able to click Load More Button
+    exit for loop if    '${ClickLoadMore}' == 'False'
+    END
+
+    scroll element into view    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_Header}
+
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_Header}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_StandardTool}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_PartialEngineAssembly}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ShortBlockAssembly}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOverhaulGasketKit}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CylinderHead}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CylinderBlock}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_TimingGearCoverReadEndPlate}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Mounting}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VentilationHose}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CrankshaftPiston}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CamshaftValve}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOilPump}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_OilFilter}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOilCooler}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_WaterPump}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_RadiatorWterOutlet}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VBelt}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Manifold}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ExhaustPipe}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_AirCleaner}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VaccumPiping}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CautionPlateNamePlate}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_IgnitionCoilSparkPlug}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Distributor}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Alternator}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Starter}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_FuelInjectionSystem}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ExhaustGasReciructionSystem}    10
+#
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_Header}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_StandardTool}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_PartialEngineAssembly}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ShortBlockAssembly}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOverhaulGasketKit}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CylinderHead}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CylinderBlock}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_TimingGearCoverReadEndPlate}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Mounting}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VentilationHose}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CrankshaftPiston}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CamshaftValve}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOilPump}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_OilFilter}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_EngineOilCooler}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_WaterPump}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_RadiatorWterOutlet}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VBelt}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Manifold}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ExhaustPipe}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_AirCleaner}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_VaccumPiping}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_CautionPlateNamePlate}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_IgnitionCoilSparkPlug}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Distributor}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Alternator}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_Starter}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_FuelInjectionSystem}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_EngingFuelSystem_CardList_ExhaustGasReciructionSystem}
+
+    sleep    2
+
+Transmission and Chassis Schema
+    FOR    ${Loadmore}    IN RANGE    1    5
+    ${ClickLoadMore}    run keyword and return status    element should be visible    ${Retail_HK_EPC_L2_Schema_LoadMore_Button}
+    run keyword if    '${ClickLoadMore}' == 'True'    User should be able to click Load More Button
+    exit for loop if    '${ClickLoadMore}' == 'False'
+    END
+
+    scroll element into view    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_Header}
+
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_Header}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchReleaseFork}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchPedalFlexibleHose}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchMasterCylinder}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchReleaseCylinder}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransaxleTransmissionAssyGasketKitMTM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchHousingTransmissionCaseMTM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SpeedmeterDrivenGearMTM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransmissionGearMTM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_GearShiftForkLeverShaftMTM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ShiftLeverRetainer}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransaxleTransmissionAssyGasketKitATM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TorqueConverterFrontOilPumpChainATM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransmissionCaseOilPanATM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SpeedometerDrivenGearATM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_OverdriveGearATM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BreakBandMultipleDiscClutch}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_CenterSupportPlanetarySunGearATM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeReverseBrakeATM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_PlanetaryGearReversePistonCounterGearATM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearOilStrainer}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ValveBodyOilStrainerATM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ThrottleLinkValveLever}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_OilCoolerTubeATM}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearAxleHousingDifferential}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearAxleShaftHub}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_DiscWheelWheelCap}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontAxleHub}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SteeringColumnShaft}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_VanePumpReservoirPowerSteering}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_PowerSteeringTube}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SteeringWheel}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontSteeringGearLink}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ParkingBrakeCable}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakePedalBracket}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BreakMasterCylinder}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeBoosterVacuumTube}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontDiscBrakeCaliperDustCover}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearDiscBrakeCaliperDustCover}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeTubeClamp}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontAxleArmSteeringKnuckle}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontSpringShockAbsorber}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearSpringShockAbsorber}    10
+#
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_Header}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchReleaseFork}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchPedalFlexibleHose}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchMasterCylinder}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchReleaseCylinder}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransaxleTransmissionAssyGasketKitMTM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ClutchHousingTransmissionCaseMTM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SpeedmeterDrivenGearMTM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransmissionGearMTM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_GearShiftForkLeverShaftMTM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ShiftLeverRetainer}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransaxleTransmissionAssyGasketKitATM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TorqueConverterFrontOilPumpChainATM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_TransmissionCaseOilPanATM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SpeedometerDrivenGearATM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_OverdriveGearATM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BreakBandMultipleDiscClutch}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_CenterSupportPlanetarySunGearATM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeReverseBrakeATM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_PlanetaryGearReversePistonCounterGearATM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearOilStrainer}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ValveBodyOilStrainerATM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ThrottleLinkValveLever}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_OilCoolerTubeATM}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearAxleHousingDifferential}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearAxleShaftHub}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_DiscWheelWheelCap}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontAxleHub}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SteeringColumnShaft}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_VanePumpReservoirPowerSteering}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_PowerSteeringTube}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_SteeringWheel}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontSteeringGearLink}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_ParkingBrakeCable}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakePedalBracket}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BreakMasterCylinder}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeBoosterVacuumTube}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontDiscBrakeCaliperDustCover}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearDiscBrakeCaliperDustCover}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_BrakeTubeClamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontAxleArmSteeringKnuckle}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_FrontSpringShockAbsorber}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_TransmissionChassis_CardList_RearSpringShockAbsorber}
+
+    sleep    2
+
+Body and Innterior Schema
+
+    FOR    ${Loadmore}    IN RANGE    1    5
+    ${ClickLoadMore}    run keyword and return status    element should be visible    ${Retail_HK_EPC_L2_Schema_LoadMore_Button}
+    run keyword if    '${ClickLoadMore}' == 'True'    User should be able to click Load More Button
+    exit for loop if    '${ClickLoadMore}' == 'False'
+    END
+
+    scroll element into view    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_Header}
+
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_Header}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SuspensionCrossmemberUnderCover}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SpareWheelCarrier}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontBumperBumperStay}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RearBumperBumperStay}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RadiatorGrille}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_HoodFrontFender}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_HoodLockHinge}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontFenderApronDashPanel}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FloorSideMember}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_InstrumentPanelGloveCompartment}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_CowlPanelWindshieldGlass}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FloorPanLowerBackPanel}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FloorInsulator}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_MatCarpet}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_ConsoleBoxBracket}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SideMember}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RoofSideVentilator}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_QuarterWindow}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RoofPanelBackWindowGlass}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_LuggageCompartmentDoorLock}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_EngineHoodLock}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_InsideTrimBoardDoorOpeningTrimMoulding}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RoofHeadliningSilencerPad}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_PackageTrayPanelLaggageCompartmentMat}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontDoorPanelGlass}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontDoorLockHandle}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrondDoorWindowRegulatorHinge}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_LockCylinderSet}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontSeatSearTrack}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SeatBeltChildRestrainSeat}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_ArmrestVisor}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_BatteryCarrier}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_CautionPlate}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_AshReceptacle}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_EmplemNamePlate}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontMoulding}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SideMoulding}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RearMoulding}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_MudguardSpoiler}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FuelTankTube}    10
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_AcceleratorLink}    10
+#
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_Header}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SuspensionCrossmemberUnderCover}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SpareWheelCarrier}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontBumperBumperStay}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RearBumperBumperStay}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RadiatorGrille}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_HoodFrontFender}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_HoodLockHinge}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontFenderApronDashPanel}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FloorSideMember}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_InstrumentPanelGloveCompartment}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_CowlPanelWindshieldGlass}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FloorPanLowerBackPanel}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FloorInsulator}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_MatCarpet}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_ConsoleBoxBracket}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SideMember}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RoofSideVentilator}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_QuarterWindow}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RoofPanelBackWindowGlass}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_LuggageCompartmentDoorLock}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_EngineHoodLock}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_InsideTrimBoardDoorOpeningTrimMoulding}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RoofHeadliningSilencerPad}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_PackageTrayPanelLaggageCompartmentMat}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontDoorPanelGlass}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontDoorLockHandle}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrondDoorWindowRegulatorHinge}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_LockCylinderSet}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontSeatSearTrack}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SeatBeltChildRestrainSeat}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_ArmrestVisor}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_BatteryCarrier}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_CautionPlate}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_AshReceptacle}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_EmplemNamePlate}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FrontMoulding}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SideMoulding}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_RearMoulding}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_MudguardSpoiler}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_FuelTankTube}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_AcceleratorLink}
+
+    sleep    2
+
+Electrics Schema
+    FOR    ${Loadmore}    IN RANGE    1    5
+    ${ClickLoadMore}    run keyword and return status    element should be visible    ${Retail_HK_EPC_L2_Schema_LoadMore_Button}
+    run keyword if    '${ClickLoadMore}' == 'True'    User should be able to click Load More Button
+    exit for loop if    '${ClickLoadMore}' == 'False'
+    END
+
+    scroll element into view    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Header}
+
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Header}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Headlamp}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_FogLamp}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_FrontTurnSignalLamp}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_SideTurnSignalLampOuterMirrorLamp}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RearCombinationLamp}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_BackUpLamp}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RearLicensePlateLamp}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RearSideMarkerLamp}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_CenterStopLamp}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_InteriorLamp}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_BatteryBatteryCable}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_WiringClamp}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Meter}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Indicator}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_SwitchRelayComputer}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_ElectronicFuelInjectionSystem}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_CruisControl}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_OverdriveElectronicControlledTransmission}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_ABSVSC}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_AntiTheftDevice}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_WindshieldWiper}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_WindshieldWasher}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_DoorMotorDoorSolenoid}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RadioReiverAmplifierCondenser}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Speaker}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Antena}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Horn}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Mirror}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningSet}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningHeaterUnitBlower}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningCoolerUnit}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningControlAirDuct}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningWaterPiping}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningVacuumPiping}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningCoolerPiping}
+#    wait until element is visible    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningCompressor}
+#
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Header}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Headlamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_FogLamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_FrontTurnSignalLamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_SideTurnSignalLampOuterMirrorLamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RearCombinationLamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_BackUpLamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RearLicensePlateLamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RearSideMarkerLamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_CenterStopLamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_InteriorLamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_BatteryBatteryCable}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_WiringClamp}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Meter}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Indicator}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_SwitchRelayComputer}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_ElectronicFuelInjectionSystem}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_CruisControl}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_OverdriveElectronicControlledTransmission}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_ABSVSC}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_AntiTheftDevice}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_WindshieldWiper}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_WindshieldWasher}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_DoorMotorDoorSolenoid}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_RadioReiverAmplifierCondenser}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Speaker}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Antena}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Horn}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_Mirror}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningSet}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningHeaterUnitBlower}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningCoolerUnit}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningControlAirDuct}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningWaterPiping}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningVacuumPiping}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningCoolerPiping}
+#    capture element screenshot    ${Retail_HK_EPC_L2_Schema_Electrics_CardList_HeatingAirConditioningCompressor}
+
+    sleep    2
+
+User should be able to view EPC L3 Page in HK Retail EPC L3 Page
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_Container}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_Header_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarModel_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarModelCode_Value}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarModelCode_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarEngine_Value}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarEngine_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarYear_Value}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarYear_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarTransmission_Value}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_CarTransmission_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Button}    10
+    wait until element is visible    ${Retail_HK_EPC_L2_SelectedCar_ChangeCar_Button}    10
+
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_Container}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_Header_Label}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarModel_Label}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarModelCode_Value}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarModelCode_Label}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarEngine_Value}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarEngine_Label}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarYear_Value}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarYear_Label}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarTransmission_Value}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_CarTransmission_Label}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_MoreInfo_Button}
+    capture element screenshot    ${Retail_HK_EPC_L2_SelectedCar_ChangeCar_Button}
+
+    wait until element is visible    ${Retail_HK_EPC_L3_SchemaCar_Header_Label}    10
+
+    capture element screenshot    ${Retail_HK_EPC_L3_SchemaCar_Header_Label}
+
+    wait until element is visible    ${Retail_HK_EPC_L3_SchemaCar_Diagram}    10
+
+    capture element screenshot    ${Retail_HK_EPC_L3_SchemaCar_Diagram}
+
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Container}    10
+
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Container}
+
+    sleep    2
+
+User should be able to view Parts List Card and Diagram in HK Retail EPC L3 Page
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Container}    10
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Container}
+
+    wait until element is visible    ${Retail_HK_EPC_L3_SchemaCar_Diagram}    10
+    capture element screenshot    ${Retail_HK_EPC_L3_SchemaCar_Diagram}
+
+    sleep    2
+
+User should be able to view one Card on the Parts Card List in HK Retail EPC L3 Page
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Options}    10
+    ${AddToCartElements}    get element count    ${Retail_HK_EPC_L3_PartsListCards_Options}
+    ${RandomPartsCardIndex}    evaluate    random.randint(1,${AddToCartElements})
+    scroll element into view    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0'])[${RandomPartsCardIndex}]
+    wait until element is visible    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//div[@class='pnc-id'])[${RandomPartsCardIndex}]    10
+    wait until element is visible    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//div[@class='pnc-name'])[${RandomPartsCardIndex}]    10
+    wait until element is visible    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//button//span[contains(text(),'EXPAND')])[${RandomPartsCardIndex}]    10
+
+    capture element screenshot    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//div[@class='pnc-id'])[${RandomPartsCardIndex}]
+    capture element screenshot    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//div[@class='pnc-name'])[${RandomPartsCardIndex}]
+    capture element screenshot    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//button//span[contains(text(),'EXPAND')])[${RandomPartsCardIndex}]
+
+    set global variable    ${RandomPartsCardIndex}
+    sleep    2
+
+User should be able to expand one Card on the Parts Card List in HK Retail EPC L3 Page
+    wait until element is visible    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//button//span[contains(text(),'EXPAND')])[${RandomPartsCardIndex}]    10
+    click element    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//button//span[contains(text(),'EXPAND')])[${RandomPartsCardIndex}]
+    sleep    2
+
+User should be able to view Option Card Details on the Parts Card List in HK Retail EPC L3 Page
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Container}    10
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Container}
+
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_PartNo_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_DetailsSpec_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Stock_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Price_Label}    10
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Note_Label}    10
+
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_PartNo_Label}
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_DetailsSpec_Label}
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Stock_Label}
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Price_Label}
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Note_Label}
+
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_PartNo_Value}
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_DetailsSpec_Value}
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Stock_Value}
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Price_Value}
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_MoreInfo_Button}
+
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_PartNo_Value}
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_DetailsSpec_Value}
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Stock_Value}
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Price_Value}
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_MoreInfo_Button}
+
+    click element    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_MoreInfo_Button}
+
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_Option_MoreDetails_Container}    10
+    capture element screenshot    ${Retail_HK_EPC_L3_PartsListCards_Option_MoreDetails_Container}
+
+    sleep    2
+
+    click element    ${Retail_HK_EPC_L3_PartsListCards_Option_Details_HideInfo_Button}
+
+    element should not be visible    ${Retail_HK_EPC_L3_PartsListCards_Option_MoreDetails_Container}    10
+
+    sleep    2
+
+
+User should be able to view PDP after EPC Level 3
+    wait until element is visible    ${ProductDeatilsPageProductImage}    10
+    wait until element is visible    ${ProductDeatilsPageProductName}    10
+    wait until element is visible    ${ProductDeatilsPageProductPartNum}    10
+    wait until element is visible    ${ProductDeatilsPageProductPrice}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductRRP}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductSeller}    10
+    wait until element is visible    ${ProductDeatilsPageProductInStock}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductSubCategory}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductFitment}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductPCQ}    10
+    wait until element is visible    ${ProductDeatilsPageProductAddtoCartButton}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductName}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductRef}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductModel}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductYear}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductModelValue}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductYearValue}    10
+    wait until element is visible    ${EPCProductDeatilsPageProductLoadMore}    10
+
+    capture element screenshot    ${ProductDeatilsPageProductImage}
+    capture element screenshot    ${ProductDeatilsPageProductName}
+    capture element screenshot    ${ProductDeatilsPageProductPartNum}
+    capture element screenshot    ${ProductDeatilsPageProductPrice}
+    capture element screenshot    ${EPCProductDeatilsPageProductRRP}
+    capture element screenshot    ${EPCProductDeatilsPageProductSeller}
+    capture element screenshot    ${ProductDeatilsPageProductInStock}
+    capture element screenshot    ${EPCProductDeatilsPageProductSubCategory}
+    capture element screenshot    ${EPCProductDeatilsPageProductFitment}
+    capture element screenshot    ${EPCProductDeatilsPageProductPCQ}
+    capture element screenshot    ${ProductDeatilsPageProductAddtoCartButton}
+    capture element screenshot    ${EPCProductDeatilsPageProductName}
+    capture element screenshot    ${EPCProductDeatilsPageProductRef}
+    capture element screenshot    ${EPCProductDeatilsPageProductModel}
+    capture element screenshot    ${EPCProductDeatilsPageProductYear}
+    capture element screenshot    ${EPCProductDeatilsPageProductModelValue}
+    capture element screenshot    ${EPCProductDeatilsPageProductYearValue}
+    capture element screenshot    ${EPCProductDeatilsPageProductLoadMore}
+
+
+
+
+
+
+
+
+
+
 
 

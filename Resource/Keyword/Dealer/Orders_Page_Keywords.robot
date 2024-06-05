@@ -1,11 +1,11 @@
 *** Settings ***
 Documentation    Suite description
 
-Library  SeleniumLibrary
+Library    SeleniumLibrary
 
-Resource  ../../../Resource/testdata/config.robot
-Resource  ../../../Resource/testdata/Dealer/Dealer_Variable.robot
-Resource  ../../../Resource/testdata/credentials.robot
+#Resource    ../../../Resource/testdata/config.robot
+Resource    ../../../Resource/testdata/Dealer/Dealer_Variable.robot
+Resource    ../../../Resource/testdata/credentials.robot
 
 
 
@@ -51,6 +51,35 @@ User should be able to select one order from the list
     sleep    2
     capture page screenshot
 
+User should be able to view account orders page HK
+    wait until element is visible    ${Retail_AccountpageOrdersMenu}    10
+    click element    ${Retail_AccountpageOrdersMenu}
+    wait until element is visible    ${Retail_AccountOrderPagePanelContainer}    10
+    capture page screenshot
+
+    wait until element is visible    ${Retail_HK_AccountOrderPageDetailsColumn}    10
+    wait until element is visible    ${Retail_HK_AccountOrderPageDetailsPartslaneRefLabel}    10
+    wait until element is visible    ${Retail_HK_AccountOrderPageDetailsCustAccNumLabel}    10
+    wait until element is visible    ${Retail_HK_AccountOrderPageDetailsOrderDateLabel}    10
+    wait until element is visible    ${Retail_HK_AccountOrderPageDetailsDeliveryMethod}    10
+    wait until element is visible    ${Retail_HK_AccountOrderPageDetailsPaymentMethod}    10
+    wait until element is visible    ${Retail_HK_AccountOrderPageDetailsTotalLabel}    10
+    wait until element is visible    ${Retail_HK_AccountOrderPageDetailsStatusLabel}    10
+    wait until element is visible    ${Retail_HK_AccountOrderPageDetailsReturnLabel}    10
+
+
+    capture element screenshot    ${Retail_HK_AccountOrderPageDetailsColumn}
+    capture element screenshot    ${Retail_HK_AccountOrderPageDetailsPartslaneRefLabel}
+    capture element screenshot    ${Retail_HK_AccountOrderPageDetailsCustAccNumLabel}
+    capture element screenshot    ${Retail_HK_AccountOrderPageDetailsOrderDateLabel}
+    capture element screenshot    ${Retail_HK_AccountOrderPageDetailsDeliveryMethod}
+    capture element screenshot    ${Retail_HK_AccountOrderPageDetailsPaymentMethod}
+    capture element screenshot    ${Retail_HK_AccountOrderPageDetailsTotalLabel}
+    capture element screenshot    ${Retail_HK_AccountOrderPageDetailsStatusLabel}
+    capture element screenshot    ${Retail_HK_AccountOrderPageDetailsReturnLabel}
+
+
+    sleep    2
 User should be able to view order details
     wait until element is visible    ${OrderDetailsOrderHeader}    20
     wait until element is visible    ${OrderDetailsOrderStatus}    10
@@ -60,30 +89,30 @@ User should be able to view order details
 
     wait until element is visible    ${OrderDetailsContainerRefNumLabel}    10
     wait until element is visible    ${OrderDetailsContainerCustNameLabel}    10
-    wait until element is visible    ${OrderDetailsContainerCustAccLabel}    10
-    wait until element is visible    ${OrderDetailsContainerCustOrderNumLabel}    10
-    wait until element is visible    ${OrderDetailsContainerYourRefLabel}    10
+    wait until element is visible    ${OrderDetailsContainerComNameLabel}     10
+    wait until element is visible    ${OrderDetailsContainerADPLabel}     10
+    wait until element is visible    ${OrderDetailsContainerMembershipLabel}    10
     wait until element is visible    ${OrderDetailsContainerOrderDateLabel}    10
 
     capture element screenshot    ${OrderDetailsContainerRefNumLabel}
     capture element screenshot    ${OrderDetailsContainerCustNameLabel}
-    capture element screenshot    ${OrderDetailsContainerCustAccLabel}
-    capture element screenshot    ${OrderDetailsContainerCustOrderNumLabel}
-    capture element screenshot    ${OrderDetailsContainerYourRefLabel}
+    capture element screenshot    ${OrderDetailsContainerComNameLabel}
+    capture element screenshot    ${OrderDetailsContainerADPLabel}
+    capture element screenshot    ${OrderDetailsContainerMembershipLabel}
     capture element screenshot    ${OrderDetailsContainerOrderDateLabel}
 
     wait until element is visible    ${OrderDetailsContainerRefNumValue}    10
     wait until element is visible    ${OrderDetailsContainerCustNameValue}    10
-    wait until element is visible    ${OrderDetailsContainerCustAccValue}    10
-    wait until element is visible    ${OrderDetailsContainerCustOrderNumValue}    10
-    wait until element is visible    ${OrderDetailsContainerYourRefValue}    10
-    wait until element is visible    ${OrderDetailsContainerOrderDateValue}    10
+    wait until element is visible    ${OrderDetailsContainerComNameValue}    10
+    wait until element is visible    ${OrderDetailsContainerADPValue}    10
+    wait until element is visible    ${OrderDetailsContainerMembershipValue}     10
+    wait until element is visible    ${OrderDetailsContainerOrderDateValue}     10
 
     capture element screenshot    ${OrderDetailsContainerRefNumValue}
     capture element screenshot    ${OrderDetailsContainerCustNameValue}
-    capture element screenshot    ${OrderDetailsContainerCustAccValue}
-    capture element screenshot    ${OrderDetailsContainerCustOrderNumValue}
-    capture element screenshot    ${OrderDetailsContainerYourRefValue}
+    capture element screenshot    ${OrderDetailsContainerComNameValue}
+    capture element screenshot    ${OrderDetailsContainerADPValue}
+    capture element screenshot    ${OrderDetailsContainerMembershipValue}
     capture element screenshot    ${OrderDetailsContainerOrderDateValue}
 
     scroll element into view    ${OrderDetailsReturnContainer}
@@ -114,15 +143,101 @@ User should be able to view order details
     wait until element is visible    ${OrderDetailsOrderSummaryLabel}    10
     wait until element is visible    ${OrderDetailsBillingDetailsAndTotal}    10
     wait until element is visible    ${OrderDetailsAddressField}    10
-    wait until element is visible    ${OrderDetailsPriceField}    10
+    wait until element is visible    ${OrderDetailsSummaryField}     10
 
     capture element screenshot    ${OrderDetailsBillingLabel}
     capture element screenshot    ${OrderDetailsOrderSummaryLabel}
     capture element screenshot    ${OrderDetailsBillingDetailsAndTotal}
     capture element screenshot    ${OrderDetailsAddressField}
-    capture element screenshot    ${OrderDetailsPriceField}
+    capture element screenshot    ${OrderDetailsSummaryField}
 
     sleep     3
+
+User should be able to view order details in HK Order Details Page
+#    click element    ${OrderPageDetailsReferenceNumber}
+    wait until element is visible    ${OrderDetailsOrderHeader}    20
+    wait until element is visible    ${OrderDetailsOrderStatus}    10
+
+    wait until element is visible    ${OrderDetailsContainer}    10
+    capture element screenshot    ${OrderDetailsContainer}
+
+    wait until element is visible    ${OrderDetailsContainerRefNumLabel}    10
+    wait until element is visible    ${OrderDetailsContainerCustNameLabel}    10
+    wait until element is visible    ${OrderDetailsContainerComNameLabel}    10
+    wait until element is visible    ${OrderDetailsContainerADPLabel}    10
+    wait until element is visible    ${OrderDetailsContainerMembershipLabel}    10
+    wait until element is visible    ${OrderDetailsContainerOrderDateLabel}    10
+    wait until element is visible    ${OrderDetailsContainerPaymenMethodLabel}    10
+    wait until element is visible    ${OrderDetailsContainerDeliveryMethodLabel}   10
+
+    capture element screenshot    ${OrderDetailsContainerRefNumLabel}
+    capture element screenshot    ${OrderDetailsContainerCustNameLabel}
+    capture element screenshot    ${OrderDetailsContainerComNameLabel}
+    capture element screenshot    ${OrderDetailsContainerADPLabel}
+    capture element screenshot    ${OrderDetailsContainerMembershipLabel}
+    capture element screenshot    ${OrderDetailsContainerOrderDateLabel}
+    capture element screenshot     ${OrderDetailsContainerPaymenMethodLabel}
+    capture element screenshot    ${OrderDetailsContainerDeliveryMethodLabel}
+
+    wait until element is visible    ${OrderDetailsContainerRefNumValue}    10
+    wait until element is visible    ${OrderDetailsContainerCustNameValue}    10
+    wait until element is visible    ${OrderDetailsContainerComNameValue}   10
+    wait until element is visible    ${OrderDetailsContainerADPValue}    10
+    wait until element is visible    ${OrderDetailsContainerMembershipValue}    10
+    wait until element is visible    ${OrderDetailsContainerPaymenMethodValue}    10
+    wait until element is visible    ${OrderDetailsContainerOrderDateValue}    10
+    wait until element is visible    ${OrderDetailsContainerDeliveryMethodValue}    10
+
+    capture element screenshot    ${OrderDetailsContainerRefNumValue}
+    capture element screenshot    ${OrderDetailsContainerCustNameValue}
+    capture element screenshot    ${OrderDetailsContainerComNameValue}
+    capture element screenshot    ${OrderDetailsContainerADPValue}
+    capture element screenshot    ${OrderDetailsContainerMembershipValue}
+    capture element screenshot    ${OrderDetailsContainerOrderDateValue}
+    capture element screenshot    ${OrderDetailsContainerPaymenMethodValue}
+    capture element screenshot    ${OrderDetailsContainerDeliveryMethodValue}
+
+
+    scroll element into view    ${OrderDetailsReturnContainer}
+    capture element screenshot    ${OrderDetailsReturnContainer}
+
+    wait until element is visible    ${OrderDetailsReturnHeader}    10
+    wait until element is visible    ${OrderDetailsReturnDescription}    10
+    wait until element is visible    ${OrderDetailsReturnPrice}    10
+    wait until element is visible    ${OrderDetailsReturnRRP}    10
+    wait until element is visible    ${OrderDetailsReturnOrder}    10
+    wait until element is visible    ${OrderDetailsReturnShipped}    10
+    wait until element is visible    ${OrderDetailsReturnPending}    10
+    wait until element is visible    ${OrderDetailsReturnTotal}    10
+
+    capture element screenshot    ${OrderDetailsReturnHeader}
+    capture element screenshot    ${OrderDetailsReturnDescription}
+    capture element screenshot    ${OrderDetailsReturnPrice}
+    capture element screenshot    ${OrderDetailsReturnRRP}
+    capture element screenshot    ${OrderDetailsReturnOrder}
+    capture element screenshot    ${OrderDetailsReturnShipped}
+    capture element screenshot    ${OrderDetailsReturnPending}
+    capture element screenshot    ${OrderDetailsReturnTotal}
+
+    scroll element into view    ${OrderDetailsBillingContainer}
+    capture element screenshot    ${OrderDetailsBillingContainer}
+
+    wait until element is visible    ${OrderDetailsBillingLabel}    10
+    wait until element is visible    ${OrderDetailsOrderSummaryLabel}    10
+    wait until element is visible    ${OrderDetailsBillingDetailsAndTotal}    10
+    wait until element is visible    ${OrderDetailsAddressField}    10
+    wait until element is visible    ${OrderDetailsSummaryField}     10
+    wait until element is visible    ${OrderDetailsDeliveryInstructionField}    10
+
+    capture element screenshot    ${OrderDetailsBillingLabel}
+    capture element screenshot    ${OrderDetailsOrderSummaryLabel}
+    capture element screenshot    ${OrderDetailsBillingDetailsAndTotal}
+    capture element screenshot    ${OrderDetailsAddressField}
+    capture element screenshot    ${OrderDetailsSummaryField}
+    capture element screenshot    ${OrderDetailsDeliveryInstructionField}
+
+    sleep     3
+
 
 
 User should be able to click filter by status in Order Page
@@ -166,6 +281,18 @@ User should be able to filter status by Order with Returns in Order Page
     wait until element is visible    ${OrderPageStatusFilterOrderwithReturns}    10
     capture element screenshot    ${OrderPageStatusFilterOrderwithReturns}
     click element    ${OrderPageStatusFilterOrderwithReturns}
+    sleep    2
+
+User should be able to filter status by Delivered in Order Page
+    wait until element is visible    ${OrderPageStatusFilterDelivered}    10
+    capture element screenshot    ${OrderPageStatusFilterDelivered}
+    click element    ${OrderPageStatusFilterDelivered}
+    sleep    2
+
+User should be able to filter status by Processing in Order Page
+    wait until element is visible    ${OrderPageStatusFilterProcessing}    10
+    capture element screenshot    ${OrderPageStatusFilterProcessing}
+    click element    ${OrderPageStatusFilterProcessing}
     sleep    2
 
 User should be able to click Date Filter in Order Page
@@ -375,6 +502,43 @@ User should be able to click order with Orders with Returns Status in Dealer Ord
     wait until element is visible    ${OrderDetailsOrderHeader}
     capture page screenshot
     sleep    2
+
+User should be able to view order with Delivered Status in Dealer Orders Page
+    FOR    ${Nextpage}    IN RANGE    1    500
+    ${DeliveredStatus}    run keyword and return status    element should be visible    ${OrderPageDeliveredContainer}
+    run keyword if    '${DeliveredStatus}' == 'False'    User should be able to click next page in Dealer Orders Page
+    exit for loop if    '${DeliveredStatus}' == 'True'
+    END
+    scroll element into view    ${OrderPageDeliveredContainer}
+    wait until element is visible    ${OrderPageDeliveredContainer}    10
+    capture element screenshot    ${OrderPageDeliveredContainer}
+    sleep    2
+
+User should be able to click order with Delivered Status in Dealer Orders Page
+    wait until element is visible    ${OrderPageDeliveredPartRef}    10
+    click element    ${OrderPageDeliveredPartRef}
+    wait until element is visible    ${OrderDetailsOrderHeader}
+    capture page screenshot
+    sleep    2
+
+User should be able to view order with Processing Status in Dealer Orders Page
+    FOR    ${Nextpage}    IN RANGE    1    500
+    ${ProcessingStatus}    run keyword and return status    element should be visible    ${OrderPageProcessingContainer}
+    run keyword if    '${ProcessingStatus}' == 'False'    User should be able to click next page in Dealer Orders Page
+    exit for loop if    '${ProcessingStatus}' == 'True'
+    END
+    scroll element into view    ${OrderPageProcessingContainer}
+    wait until element is visible    ${OrderPageProcessingContainer}    10
+    capture element screenshot    ${OrderPageProcessingContainer}
+    sleep    2
+
+User should be able to click order with Processing Status in Dealer Orders Page
+    wait until element is visible    ${OrderPageProcessingPartRef}    10
+    click element    ${OrderPageProcessingPartRef}
+    wait until element is visible    ${OrderPageProcessingPartRef}
+    capture page screenshot
+    sleep    2
+
 
 User should be able to click Back to Customer Orders in Dealer Order Details Page
     wait until element is visible    ${OrderDetailsBackButton}    10

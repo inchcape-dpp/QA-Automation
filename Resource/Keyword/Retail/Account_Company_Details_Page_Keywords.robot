@@ -1,11 +1,11 @@
 *** Settings ***
 Documentation    Suite description
 
-Library  SeleniumLibrary
+Library    SeleniumLibrary
 
-Resource  ../../../Resource/testdata/config.robot
-Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
-Resource  ../../../Resource/testdata/credentials.robot
+#Resource    ../../../Resource/testdata/config.robot
+Resource    ../../../Resource/testdata/Retail/Retail_Variable.robot
+Resource    ../../../Resource/testdata/credentials.robot
 
 
 *** Keywords ***
@@ -430,7 +430,7 @@ User should be able to view HK company details page
     capture element screenshot    ${Retail_HK_AccountCompanyDetailsPage_Postal_Area_ComboBox}
     capture element screenshot    ${Retail_HK_AccountCompanyDetailsPage_Postal_District_ComboBox}
 
-    run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Retail Account Company Details Page
+#    run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Retail Account Company Details Page
 
     scroll element into view    ${Retail_AccountCompanyDetailsPageOpeningHoursComboBox}
 
@@ -508,11 +508,30 @@ User should be able to click Postal Address Dropdown for HK Retail Account Compa
     click element    ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_TextBox}
     sleep    2
 
+User should be able to click clear Postal Address Dropdown for HK Retail Account Company Details Page
+    wait until element is visible    ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_TextBox_Clear_Button}    10
+    capture element screenshot    ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_TextBox_Clear_Button}
+    click element    ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_TextBox_Clear_Button}
+    sleep    2
+
 User should be able to input text in Postal Address for HK Retail Account Company Details Page
     wait until element is visible    ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_TextBox}    10
     clear element text    ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_TextBox}
     input text    ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_TextBox}    ${Retail_HK_RegistrationPostalAddLine1Value}
     capture element screenshot    ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_TextBox}
+    sleep    2
+
+User should be able to input manual text in Postal Address for HK Retail Account Company Details Page
+    wait until element is visible    ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_TextBox}    10
+    clear element text    ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_TextBox}
+    input text    ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_TextBox}    ${Retail_HK_RegistrationManualPostalAddLine1Value}
+    capture element screenshot    ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_TextBox}
+    sleep    2
+
+User should be able to click manual Postal Address Dropdown for HK Retail Account Company Details Page
+    wait until element is visible    ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_Manual_Container}    10
+    capture element screenshot    ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_Manual_Container}
+    click element    ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_Manual_Container}
     sleep    2
 
 User should be able to select Random Postal Address from suggestions for HK Retail Account Company Details Page
@@ -563,11 +582,30 @@ User should be able to click Delivery Address Dropdown for HK Retail Account Com
     click element    ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_TextBox}
     sleep    2
 
+User should be able to click clear Delivery Address Dropdown for HK Retail Account Company Details Page
+    wait until element is visible    ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_TextBox_Clear_Button}    10
+    capture element screenshot    ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_TextBox_Clear_Button}
+    click element    ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_TextBox_Clear_Button}
+    sleep    2
+
 User should be able to input text in Deliver Address for HK Retail Account Company Details Page
     wait until element is visible    ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_TextBox}    10
     clear element text    ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_TextBox}
     input text    ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_TextBox}    ${Retail_HK_RegistrationDelAddLine1Value}
     capture element screenshot    ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_TextBox}
+    sleep    2
+
+User should be able to input manual text in Deliver Address for HK Retail Account Company Details Page
+    wait until element is visible    ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_TextBox}    10
+    clear element text    ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_TextBox}
+    input text    ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_TextBox}    ${Retail_HK_RegistrationManualDelAddLine1Value}
+    capture element screenshot    ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_TextBox}
+    sleep    2
+
+User should be able to click manual Deliver Address Dropdown for HK Retail Account Company Details Page
+    wait until element is visible    ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_Manual_Container}    10
+    capture element screenshot    ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_Manual_Container}
+    click element    ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_Manual_Container}
     sleep    2
 
 User should be able to select Random Delivery Address from suggestions for HK Retail Account Company Details Page

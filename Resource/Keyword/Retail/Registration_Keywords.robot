@@ -3,7 +3,7 @@ Documentation    Suite description
 
 Library  SeleniumLibrary
 
-Resource  ../../../Resource/testdata/config.robot
+#Resource  ../../../Resource/testdata/config.robot
 Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../Resource/testdata/credentials.robot
 
@@ -590,6 +590,11 @@ User should be able to view HK Registration Form
     wait until element is visible    ${Retail_RegistrationContactFNLabel}    10
     wait until element is visible    ${Retail_RegistrationContactLNLabel}    10
     wait until element is visible    ${Retail_RegistrationContactEmailLabel}    10
+    wait until element is visible    ${Retail_HK_RegistrationContactCompanyPhoneNumLabel}    10
+    wait until element is visible    ${Retail_HK_RegistrationContactLandlineLabel}    10
+    wait until element is visible    ${Retail_RegistrationContactFNTextBox}    10
+    wait until element is visible    ${Retail_RegistrationContactLNTextBox}    10
+    wait until element is visible    ${Retail_RegistrationContactEmailTextBox}    10
     wait until element is visible    ${Retail_HK_RegistrationContactCompanyPhoneNumTextBox}    10
     wait until element is visible    ${Retail_HK_RegistrationContactLandlineTextBox}    10
     wait until element is visible    ${Retail_RegistrationTNC&PNLabel}    10
@@ -599,6 +604,11 @@ User should be able to view HK Registration Form
     capture element screenshot    ${Retail_RegistrationContactFNLabel}
     capture element screenshot    ${Retail_RegistrationContactLNLabel}
     capture element screenshot    ${Retail_RegistrationContactEmailLabel}
+    capture element screenshot    ${Retail_HK_RegistrationContactCompanyPhoneNumLabel}
+    capture element screenshot    ${Retail_HK_RegistrationContactLandlineLabel}
+    capture element screenshot    ${Retail_RegistrationContactFNTextBox}
+    capture element screenshot    ${Retail_RegistrationContactLNTextBox}
+    capture element screenshot    ${Retail_RegistrationContactEmailTextBox}
     capture element screenshot    ${Retail_HK_RegistrationContactCompanyPhoneNumTextBox}
     capture element screenshot    ${Retail_HK_RegistrationContactCompanyPhoneNumTextBox}
     capture element screenshot    ${Retail_RegistrationTNC&PNLabel}
@@ -631,6 +641,25 @@ User should be able to input text in Postal Address for HK Registration Form
     clear element text    ${Retail_HK_RegistrationPostalAddLine1Texbox}
     input text    ${Retail_HK_RegistrationPostalAddLine1Texbox}    ${Retail_HK_RegistrationPostalAddLine1Value}
     capture element screenshot    ${Retail_HK_RegistrationPostalAddLine1Texbox}
+    sleep    2
+
+User should be able to input manual text in Postal Address for HK Registration Form
+    wait until element is visible    ${Retail_HK_RegistrationPostalAddLine1Texbox}    10
+    clear element text    ${Retail_HK_RegistrationPostalAddLine1Texbox}
+    input text    ${Retail_HK_RegistrationPostalAddLine1Texbox}    ${Retail_HK_RegistrationManualPostalAddLine1Value}
+    capture element screenshot    ${Retail_HK_RegistrationPostalAddLine1Texbox}
+    sleep    2
+
+User should be able to click Manual Input Postal Address for HK Registration Form
+    wait until element is visible    ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_Options_Container}    10
+    capture element screenshot    ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_Options_Container}
+    click element    ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_Options_Container}
+    sleep    2
+
+User should be able to click Clear Postal Address for HK Registration Form
+    wait until element is visible    ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_TextBox_Clear_Button}    10
+    capture element screenshot    ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_TextBox_Clear_Button}
+    click element    ${Retail_HK_AccountCompanyDetailsPage_PostalAddress_TextBox_Clear_Button}
     sleep    2
 
 User should be able to select Random Postal Address from suggestions for HK Registration Form
@@ -686,6 +715,25 @@ User should be able to input text in Deliver Address for HK Registration Form
     clear element text    ${Retail_HK_RegistrationDelAddLine1Texbox}
     input text    ${Retail_HK_RegistrationDelAddLine1Texbox}    ${Retail_HK_RegistrationDelAddLine1Value}
     capture element screenshot    ${Retail_HK_RegistrationDelAddLine1Texbox}
+    sleep    2
+
+User should be able to input manual text in Deliver Address for HK Registration Form
+    wait until element is visible    ${Retail_HK_RegistrationDelAddLine1Texbox}    10
+    clear element text    ${Retail_HK_RegistrationDelAddLine1Texbox}
+    input text    ${Retail_HK_RegistrationDelAddLine1Texbox}    ${Retail_HK_RegistrationManualDelAddLine1Value}
+    capture element screenshot    ${Retail_HK_RegistrationDelAddLine1Texbox}
+    sleep    2
+
+User should be able to click Manual Input Deliver Address for HK Registration Form
+    wait until element is visible    ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_Manual_Container}    10
+    capture element screenshot    ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_Manual_Container}
+    click element    ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_Manual_Container}
+    sleep    2
+
+User should be able to click Clear Deliver Address for HK Registration Form
+    wait until element is visible    ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_TextBox_Clear_Button}    10
+    capture element screenshot    ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_TextBox_Clear_Button}
+    click element    ${Retail_HK_AccountCompanyDetailsPage_DeliveryAddress_TextBox_Clear_Button}
     sleep    2
 
 User should be able to select Random Delivery Address from suggestions for HK Registration Form

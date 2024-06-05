@@ -1,11 +1,11 @@
 *** Settings ***
 Documentation    Suite description
 
-Library  SeleniumLibrary
+Library    SeleniumLibrary
 
-Resource  ../../../Resource/testdata/config.robot
-Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
-Resource  ../../../Resource/testdata/credentials.robot
+#Resource    ../../../Resource/testdata/config.robot
+Resource    ../../../Resource/testdata/Retail/Retail_Variable.robot
+Resource    ../../../Resource/testdata/credentials.robot
 
 
 *** Keywords ***
@@ -14,6 +14,8 @@ User should be able to view message page
     wait until element is visible    ${Retail_AccountpageMessagesMenu}    10
     click element    ${Retail_AccountpageMessagesMenu}
     wait until element is visible    ${Retail_AccountMessagePagePanelContainer}    10
+    wait until element is visible    ${Retail_AccountMessagePagePanelHeader}    10
+    capture element screenshot    ${Retail_AccountMessagePagePanelHeader}
     capture page screenshot
     sleep    2
 
@@ -169,6 +171,37 @@ User should be able to click clear button from Search Box in Retail Account Mess
     wait until element is visible    ${Retail_AccountMessagePageSearchClose}    10
     capture element screenshot    ${Retail_AccountMessagePageSearchClose}
     click element    ${Retail_AccountMessagePageSearchClose}
+    sleep    2
+
+
+User should be able to click New Message in Retail Account Message Page
+    wait until element is visible    ${Retail_AccountMessagePageNewMessageButton}    10
+    capture element screenshot    ${Retail_AccountMessagePageNewMessageButton}
+    click element    ${Retail_AccountMessagePageNewMessageButton}
+    sleep    2
+
+User should be able to add message subject in New message pop up in Retail Account Message Page
+    wait until element is visible    ${Retail_AccountMessagePageNewMessagePopUpSubjectTextBox}    10
+    input text    ${Retail_AccountMessagePageNewMessagePopUpSubjectTextBox}    ${Retail_AccountMessagePageNewMessagePopUpSubjectTextBox_Value}
+    capture element screenshot    ${Retail_AccountMessagePageNewMessagePopUpSubjectTextBox}
+    sleep    2
+
+User should be able to click send in New message pop up in Retail Account Message Page
+    wait until element is visible    ${Retail_AccountMessagePageNewMessagePopUpSendButton}    10
+    capture element screenshot    ${Retail_AccountMessagePageNewMessagePopUpSendButton}
+    click element    ${Retail_AccountMessagePageNewMessagePopUpSendButton}
+    sleep    2
+
+User should be able to click cancel in New message pop up in Retail Account Message Page
+    wait until element is visible    ${Retail_AccountMessagePageNewMessagePopUpCancelButton}    10
+    capture element screenshot    ${Retail_AccountMessagePageNewMessagePopUpCancelButton}
+    click element    ${Retail_AccountMessagePageNewMessagePopUpCancelButton}
+    sleep    2
+
+User should be able to click Back to Message in New message pop up in Retail Account Message Page
+    wait until element is visible    ${Retail_AccountMessagePageNewMessagePopUpBackButton}    10
+    capture element screenshot    ${Retail_AccountMessagePageNewMessagePopUpBackButton}
+    click element    ${Retail_AccountMessagePageNewMessagePopUpBackButton}
     sleep    2
 
 User should be able to view read General Enquiry in Retail Account Message Page

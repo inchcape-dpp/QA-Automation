@@ -1,11 +1,11 @@
 *** Settings ***
 Documentation    Suite description
 
-Library  SeleniumLibrary
+Library    SeleniumLibrary
 
-Resource  ../../../Resource/testdata/config.robot
-Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
-Resource  ../../../Resource/testdata/credentials.robot
+#Resource    ../../../Resource/testdata/config.robot
+Resource    ../../../Resource/testdata/Retail/Retail_Variable.robot
+Resource    ../../../Resource/testdata/credentials.robot
 
 
 *** Keywords ***
@@ -16,6 +16,7 @@ User should be able to view account orders page
     click element    ${Retail_AccountpageOrdersMenu}
     wait until element is visible    ${Retail_AccountOrderPagePanelContainer}    10
     capture page screenshot
+
 
     wait until element is visible    ${Retail_AccountOrderPageTotalOrders}    10
     wait until element is visible    ${Retail_AccountOrderPageSortBar}    10
@@ -42,6 +43,35 @@ User should be able to view account orders page
     capture element screenshot    ${Retail_AccountOrderPageDetailsPage1Button}
 
     sleep    2
+User should be able to view account orders page HK
+    wait until element is visible    ${Retail_AccountpageOrdersMenu}    10
+    click element    ${Retail_AccountpageOrdersMenu}
+    wait until element is visible    ${Retail_AccountOrderPagePanelContainer}    10
+    capture page screenshot
+
+    wait until element is visible    ${Retail_HK_AccountOrderPageDetailsColumn}    10
+    wait until element is visible    ${Retail_HK_AccountOrderPageDetailsPartslaneRefLabel}    10
+    wait until element is visible    ${Retail_HK_AccountOrderPageDetailsCustAccNumLabel}    10
+    wait until element is visible    ${Retail_HK_AccountOrderPageDetailsOrderDateLabel}    10
+    wait until element is visible    ${Retail_HK_AccountOrderPageDetailsDeliveryMethod}    10
+    wait until element is visible    ${Retail_HK_AccountOrderPageDetailsPaymentMethod}    10
+    wait until element is visible    ${Retail_HK_AccountOrderPageDetailsTotalLabel}    10
+    wait until element is visible    ${Retail_HK_AccountOrderPageDetailsStatusLabel}    10
+    wait until element is visible    ${Retail_HK_AccountOrderPageDetailsReturnLabel}    10
+    wait until element is visible    ${Retail_HK_AccountOrderPageDetailsSupplierLabel}
+
+    capture element screenshot    ${Retail_HK_AccountOrderPageDetailsColumn}
+    capture element screenshot    ${Retail_HK_AccountOrderPageDetailsPartslaneRefLabel}
+    capture element screenshot    ${Retail_HK_AccountOrderPageDetailsCustAccNumLabel}
+    capture element screenshot    ${Retail_HK_AccountOrderPageDetailsOrderDateLabel}
+    capture element screenshot    ${Retail_HK_AccountOrderPageDetailsDeliveryMethod}
+    capture element screenshot    ${Retail_HK_AccountOrderPageDetailsPaymentMethod}
+    capture element screenshot    ${Retail_HK_AccountOrderPageDetailsTotalLabel}
+    capture element screenshot    ${Retail_HK_AccountOrderPageDetailsStatusLabel}
+    capture element screenshot    ${Retail_HK_AccountOrderPageDetailsReturnLabel}
+    capture element screenshot    ${Retail_HK_AccountOrderPageDetailsSupplierLabel}
+
+    sleep    2
 
 User should be able to select one order from the list
     wait until element is visible    ${Retail_AccountOrderPageHistory1}    10
@@ -53,7 +83,6 @@ User should be able to select one order from the list
 
 User should be able to view order details
     wait until element is visible    ${Retail_AccountOrderDetailsOrderHeader}    10
-
     wait until element is visible    ${Retail_AccountOrderDetailsContainer}    10
     capture element screenshot    ${Retail_AccountOrderDetailsContainer}
 
@@ -123,6 +152,82 @@ User should be able to view order details
 
     sleep     2
 
+User should be able to view order details HK
+#    click element    ${Retail_HK_AccountOrderPageDetailsReferenceNumber}
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsOrderHeader}   10
+    wait until element is visible    ${HK_AccountOrderDetailsOrderStatus}    10
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsOrderHeader}
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsBackButton}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsBackButton}
+
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsContainerRefNumLabel}      10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsContainerRefNumLabel}     10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsContainerRefNumLabel}       10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsContainerRefNumLabel}      10
+
+
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsContainer}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsContainerRefNumLabel}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsContainerRefNumLabel}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsContainerRefNumLabel}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsContainerRefNumLabel}
+
+
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsContainerRefNumValue}    10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsContainerCompanyNameValue}     10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsContainerSupplierValue}      10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsContainerOrderDateNumValue}    10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsContainerOrderTimeValue}    10
+
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsContainerRefNumValue}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsContainerCompanyNameValue}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsContainerSupplierValue}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsContainerOrderDateNumValue}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsContainerOrderTimeValue}
+
+    scroll element into view    ${HK_Retail_AccountOrderDetailsReturnContainer}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsReturnContainer}
+
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsReturnHeader}     10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsReturnDescription}    10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsReturnPrice}     10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsReturnRRP}     10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsReturnOrder}   10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsReturnShipped}    10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsReturnPending}   10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsReturnTotal}    10
+
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsReturnHeader}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsReturnDescription}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsReturnPrice}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsReturnRRP}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsReturnOrder}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsReturnShipped}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsReturnPending}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsReturnTotal}
+
+    scroll element into view    ${HK_Retail_AccountOrderDetailsBillingContainer}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsBillingContainer}
+
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsBillingLabel}    10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsOrderSummaryLabel}    10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsBillingDetailsAndTotal}  10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsAddressField}     10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsSummaryField}    10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsDeliveryInstructionField}    10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsMessageSupplierButton}     10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsRe-orderButton}    10
+
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsBillingLabel}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsOrderSummaryLabel}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsBillingDetailsAndTotal}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsAddressField}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsSummaryField}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsDeliveryInstructionField}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsMessageSupplierButton}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsRe-orderButton}
+
+    sleep     2
 User should be able to click filter status in Account Order Page
     wait until element is visible    ${Retail_AccountOrderPageStatusFilter}    10
     scroll element into view    ${Retail_AccountOrderPageStatusFilter}
@@ -143,7 +248,7 @@ User should be able to check all filter status in Account Order Page
 User should be able to check all filter status in HK Account Order Page
     wait until element is enabled    ${Retail_AccountOrderPageStatusFilterALL}    10
     wait until element is enabled    ${Retail_AccountOrderPageStatusFilterReceived}    10
-    wait until element is enabled    ${Retail_AccountOrderPageStatusFilterSubmitted}    10
+    element should not be visible    ${Retail_AccountOrderPageStatusFilterSubmitted}    10
     wait until element is visible    ${Retail_AccountOrderPageStatusFilterDispatched}    10
     element should not be visible    ${Retail_AccountOrderPageStatusFilterPartiallyDispatched}
     wait until element is visible    ${Retail_AccountOrderPageStatusFilterOrderwithReturns}    10
@@ -348,7 +453,7 @@ User should be able to view order with Submitted Status in Retail Account Orders
 User should be able to click order with Submitted Status in Retail Account Orders Page
     wait until element is visible    ${Retail_AccountOrderPageSubmittedPartRef}    10
     click element    ${Retail_AccountOrderPageSubmittedPartRef}
-    wait until element is visible    ${Retail_AccountOrderDetailsOrderHeader}
+    wait until element is visible    ${Retail_AccountOrderDetailsOrderHeader}    10
     capture page screenshot
     sleep    2
 
@@ -408,6 +513,7 @@ User should be able to click order with Orders with Returns Status in Retail Acc
 
 User should be able to click Back to Customer Orders in Retail Account Order Details Page
     wait until element is visible    ${Retail_AccountOrderDetailsBackButton}    10
+    scroll element into view    ${Retail_AccountAccountpageMyAccountLabel}
     scroll element into view    ${Retail_AccountOrderDetailsBackButton}
     capture element screenshot    ${Retail_AccountOrderDetailsBackButton}
     click element    ${Retail_AccountOrderDetailsBackButton}
@@ -553,6 +659,10 @@ User should be able to click orders with $129.0 spent in HK Retail Account Order
     capture element screenshot    (//tr[.//td[@class='cx-order-history-total' and contains(text(),'$129.0')]])|(//tr[.//td[@class='cx-order-history-total' and contains(text(),'$41.0')]])[${Orderwith$129.0RandomIndex}]
     click element    (//tr[.//td[@class='cx-order-history-total' and contains(text(),'$129.0')]]//td[@class='cx-order-history-code'])|(//tr[.//td[@class='cx-order-history-total' and contains(text(),'$41.0')]]//td[@class='cx-order-history-code'])[${Orderwith$129.0RandomIndex}]
     sleep    2
+
+User should be able to count number of text input in Note for Supplier in Return Request creation
+    ${Length}    get text    #Xpath ng return request textbox
+    ${TextboxLength}    get length    ${Length}
 
 #-----------------------------------------------------Retail Move to Top------------------------------------------------
 TC Move to Top

@@ -1,11 +1,11 @@
 *** Settings ***
 Documentation    Suite description
 
-Library  SeleniumLibrary
+Library    SeleniumLibrary
 
-Resource  ../../../Resource/testdata/config.robot
-Resource  ../../../Resource/testdata/Dealer/Dealer_Variable.robot
-Resource  ../../../Resource/testdata/credentials.robot
+Resource    ../../../Resource/testdata/config.robot
+Resource    ../../../Resource/testdata/Dealer/Dealer_Variable.robot
+Resource    ../../../Resource/testdata/credentials.robot
 
 *** Keywords ***
 User should be able to view login
@@ -30,3 +30,4 @@ User should be able to click login button in Training TC
 
 TCsleep training
     sleep    10
+
