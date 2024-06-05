@@ -652,7 +652,7 @@ User should be able to click add to cart button for in stock and dc stock in Ret
     wait until element is visible    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${InStockDCStockRandomIndex}]    10
     scroll element into view    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${InStockDCStockRandomIndex}]
     capture element screenshot    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${InStockDCStockRandomIndex}]
-    dobule click element    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${InStockDCStockRandomIndex}]
+    double click element    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']]//button[@type='submit'])[${InStockDCStockRandomIndex}]
     run keyword    Get Number of InStock DCStock
     sleep    2
 
