@@ -15,17 +15,17 @@ ${FirefoxBrowser}    Firefox
 ${EdgeBrowser}    Edge
 ${SafariBrowser}    Safari
 
-${driver_path}    C:\\Users\\Nino.Guerra\\PycharmProjects\\pythonProject2\\Resource\\chromedriver.exe
+${driver_path}    ..\\..\\..\\..\\..\\Resource\\chromedriver.exe
 #${driver_path}    C:\\Users\\Nino.Guerra\\PycharmProjects\\pythonProject2\\Resource\\geckodriver.exe
 
-${Retail_screenshot_path}    C:\\Users\\Nino.Guerra\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Retail\\Screenshots\\AU\\D1
+${Retail_screenshot_path}    ..\\..\\..\\..\\..\\Resource\\testsuites\\Retail\\Screenshots\\AU\\D1
 #${Retail_screenshot_path}    C:\\Users\\Nino.Guerra\\OneDrive - Inchcape\\06.Dev\\Dan\\Retail Screenshots
 
-${UploadPhoto_Path_Value}    C:\\Users\\Nino.Guerra\\Pictures\\Sample Image\\Image.jpg
+${UploadPhoto_Path_Value}    C:\\Users\\Danielouie.Estopace\\Pictures\\Sample Image\\Image.jpg
 
-${ExcelFile_HK_Product_List_Path}    C:\\Users\\Nino.Guerra\\Documents\\Files\\HKProductReportView.
-${ExcelFile_AU_Stock_List_Path}    C:\\Users\\Nino.Guerra\\Documents\\Files\\Titan SUB Geerex.xlsx
-${YouLeftSomething_FilePath}    C:\\Users\\Nino.Guerra\\Documents\\Files\\You left something behind (ENG).txt
+${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\HKProductReportView.
+${ExcelFile_AU_Stock_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\Titan SUB Geerex.xlsx
+${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\You left something behind (ENG).txt
 
 #${Username}    retailtitanp1@yopmail.com
 #${Password}    Welcom3@NT
@@ -40,7 +40,7 @@ Open Chrome Browser
     SeleniumLibrary.Open Browser    ${d1Retail}    Chrome  executable_path=${driver_path}
     maximize browser window
 
-Retail Screent Shot DIR
+Retail Screen Shot DIR
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
     create directory    ${Retail_screenshot_path}/AU_${currentdate}
     ${LogDIR}=    convert to string    ${Retail_screenshot_path}/AU_${currentdate}

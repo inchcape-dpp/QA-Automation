@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="6/05/24" />
+    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="05/31/24 3:09PM&#10;Remove Config to Git ignore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,10 +13,11 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Ty" />
+        <entry key="$PROJECT_DIR$" value="Develop" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="SOFT" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -34,7 +35,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Ric&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Dan&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
 }</component>
@@ -183,71 +184,40 @@
       <option name="project" value="LOCAL" />
       <updated>1716862144963</updated>
     </task>
-    <task id="LOCAL-00018" summary="5/29/24 09:41AM">
+
+    <task id="LOCAL-00018" summary="05/31/24 2:19PM&#10;SAmple Push">
       <option name="closed" value="true" />
-      <created>1716946898674</created>
+      <created>1717136404971</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
       <option name="project" value="LOCAL" />
-      <updated>1716946898675</updated>
+      <updated>1717136404971</updated>
     </task>
-    <task id="LOCAL-00019" summary="5/30/24 12:30PM&#10;&#10;Config update">
+    <task id="LOCAL-00019" summary="05/31/24 2:36PM&#10;Config Changes&#10;Remove cofig to GIT ignore">
       <option name="closed" value="true" />
-      <created>1717046642323</created>
+      <created>1717137433577</created>
       <option name="number" value="00019" />
       <option name="presentableId" value="LOCAL-00019" />
       <option name="project" value="LOCAL" />
-      <updated>1717046642323</updated>
+      <updated>1717137433577</updated>
     </task>
-    <task id="LOCAL-00020" summary="6/03/24 2:35PM">
+    <task id="LOCAL-00020" summary="05/31/24 2:38PM&#10;Added Config to git ignore">
       <option name="closed" value="true" />
-      <created>1717396526574</created>
+      <created>1717138061513</created>
       <option name="number" value="00020" />
       <option name="presentableId" value="LOCAL-00020" />
       <option name="project" value="LOCAL" />
-      <updated>1717396526574</updated>
+      <updated>1717138061513</updated>
     </task>
-    <task id="LOCAL-00021" summary="6/03/24 2:50PM">
+    <task id="LOCAL-00021" summary="05/31/24 3:09PM&#10;Remove Config to Git ignore">
       <option name="closed" value="true" />
-      <created>1717397395852</created>
+      <created>1717139595195</created>
       <option name="number" value="00021" />
       <option name="presentableId" value="LOCAL-00021" />
       <option name="project" value="LOCAL" />
-      <updated>1717397395852</updated>
+      <updated>1717139595195</updated>
     </task>
-    <task id="LOCAL-00022" summary="6/04/24">
-      <option name="closed" value="true" />
-      <created>1717489390128</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1717489390129</updated>
-    </task>
-    <task id="LOCAL-00023" summary="6/04/24">
-      <option name="closed" value="true" />
-      <created>1717489490607</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1717489490607</updated>
-    </task>
-    <task id="LOCAL-00024" summary="6/04/24">
-      <option name="closed" value="true" />
-      <created>1717489535414</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1717489535414</updated>
-    </task>
-    <task id="LOCAL-00025" summary="6/05/24">
-      <option name="closed" value="true" />
-      <created>1717569257574</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1717569257574</updated>
-    </task>
-    <option name="localTasksCounter" value="26" />
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -270,19 +240,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/Ty" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -301,12 +259,12 @@
     <MESSAGE value="Commit May 17&#10;&#10;Minisite" />
     <MESSAGE value="5/22/24 11:57AM" />
     <MESSAGE value="5/28/24 10:08AM" />
-    <MESSAGE value="5/29/24 09:41AM" />
-    <MESSAGE value="5/30/24 12:30PM&#10;&#10;Config update" />
-    <MESSAGE value="6/03/24 2:35PM" />
-    <MESSAGE value="6/03/24 2:50PM" />
-    <MESSAGE value="6/04/24" />
-    <MESSAGE value="6/05/24" />
-    <option name="LAST_COMMIT_MESSAGE" value="6/05/24" />
+
+    <MESSAGE value="Changes 05/31/24 2:04 PM" />
+    <MESSAGE value="05/31/24 2:19PM&#10;SAmple Push" />
+    <MESSAGE value="05/31/24 2:36PM&#10;Config Changes&#10;Remove cofig to GIT ignore" />
+    <MESSAGE value="05/31/24 2:38PM&#10;Added Config to git ignore" />
+    <MESSAGE value="05/31/24 3:09PM&#10;Remove Config to Git ignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="05/31/24 3:09PM&#10;Remove Config to Git ignore" />
   </component>
 </project>

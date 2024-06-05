@@ -15,16 +15,16 @@ ${FirefoxBrowser}    Firefox
 ${EdgeBrowser}    Edge
 ${SafariBrowser}    Safari
 
-${driver_path}    C:\\Users\\Nino.Guerra\\PycharmProjects\\pythonProject2\\Resource\\chromedriver.exe
+${driver_path}    ..\\..\\..\\..\\..\\Resource\\chromedriver.exe
 #${driver_path}    C:\\Users\\Nino.Guerra\\PycharmProjects\\pythonProject2\\Resource\\geckodriver.exe
 
-${Dealer_screenshot_path}    C:\\Users\\Nino.Guerra\\PycharmProjects\\pythonProject2\\Resource\\testsuites\\Dealer\\Screenshots\\HK\\D1
+${Dealer_screenshot_path}    ..\\..\\..\\..\\..\\Resource\\testsuites\\Dealer\\Screenshots\\HK\\D1
 
-${UploadPhoto_Path_Value}    C:\\Users\\Nino.Guerra\\Pictures\\Sample Image\\Image.jpg
+${UploadPhoto_Path_Value}    C:\\Users\\Danielouie.Estopace\\Pictures\\Sample Image\\Image.jpg
 
-${ExcelFile_HK_Product_List_Path}    C:\\Users\\Nino.Guerra\\Documents\\Files\\HKProductReportView.
-${ExcelFile_AU_Stock_List_Path}    C:\\Users\\Nino.Guerra\\Documents\\Files\\Titan SUB Geerex.xlsx
-${YouLeftSomething_FilePath}    C:\\Users\\Nino.Guerra\\Documents\\Files\\You left something behind (ENG).txt
+${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\HKProductReportView.
+${ExcelFile_AU_Stock_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\Titan SUB Geerex.xlsx
+${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\You left something behind (ENG).txt
 
 ${Username}    ${admin1_s2_HKdealer_UID}
 ${Password}    ${admin1_s2_HKdealer_PWD}
@@ -32,11 +32,11 @@ ${Password}    ${admin1_s2_HKdealer_PWD}
 ${YopMailEmail}    ${admin1_s2_HKdealer_UID}
 
 *** Keywords ***
-Open Chrome Browser HK
+Open Chrome Browser
     SeleniumLibrary.Open Browser    ${d1HKDealer}    Chrome  executable_path=${driver_path}
     maximize browser window
 
-Dealer Screent Shot DIR HK
+Dealer Screen Shot DIR
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
     create directory    ${Dealer_screenshot_path}/HK_${currentdate}
     ${LogDIR}=    convert to string    ${Dealer_screenshot_path}/HK_${currentdate}
