@@ -9,3 +9,5 @@ testsuites/Retail/Screenshots/
 log.html
 output.xml
 report.html
+/Resource/chromedriver.exe
+.idea/workspace.xml
