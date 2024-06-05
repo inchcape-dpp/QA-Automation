@@ -40,8 +40,8 @@ ${Retail_HK_LoginPage_Chinese_Button}    //dpp-language-toggle//span[contains(te
 #-----------------------------------------------------Retail Forgot Password Page---------------------------------------
 ${Retail_ForgotPasswordPageContainer}    //dpp-forgot-password
 ${Retail_ForgotPasswordPageLogo}    //dpp-forgot-password//*[@class='logo is-initialized']
-${Retail_ForgotPasswordPageHeader}    //dpp-forgot-password//div[@class='heading']
-${Retail_ForgotPasswordPageSubheader}    //dpp-forgot-password//div[@class='subheading']
+${Retail_ForgotPasswordPageHeader}    //dpp-forgot-password//div[@class='heading'][contains(text(),'Reset Password') or (contains(text(),'重設密碼'))]
+${Retail_ForgotPasswordPageSubheader}    //dpp-forgot-password//div[@class='subheading'][contains(text(),'Please enter your account email address. Instructions on how to Reset your Password will be sent to this address') or (contains(text(),'請輸入您的帳戶電子郵件地址。將向此地址發送有關如何重設密碼的說明'))]
 ${Retail_ForgotPasswordPageEmailTextBox}    //dpp-forgot-password//input[@formcontrolname='userEmail']
 ${Retail_ForgotPasswordPageSubmitButton}    //dpp-forgot-password//button[@type='submit']
 ${Retail_ForgotPasswordPageCreateAccountButton}    //dpp-forgot-password//a[@class='create-account']

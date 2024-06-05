@@ -18,3 +18,8 @@ TC-001 - Verify Login Page
     run keyword and continue on failure    User should be able to click Translate to English Button
     run keyword and continue on failure    Verify Login Page
     run keyword and continue on failure    Verify Login Page Elements HK
+
+TC-001 - Verify Login Page
+    [Tags]    TC001    Registration  Page
+    run keyword and continue on failure    User should be able to click Create Account in Retail Login Page
+    run keyword and continue on failure    User should be able to view HK Registration Form

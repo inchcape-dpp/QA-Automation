@@ -26,8 +26,8 @@ TC-002 - Input Invalid Username
 
 TC-003 - Input Invalid Password
     [Tags]    Login Page
-    run keyword and continue on failure    Required password message
     run keyword and continue on failure    Input Invalid Password
+    run keyword and continue on failure    Required password message
 
 TC-004 - User should not be able to login using invalid account
     [Tags]    Login Page
@@ -506,6 +506,7 @@ TC-079 - User should be able to view product In Stock Only
 TC-080 - User should be able to click add to cart button for out of stock and dc stock in Retail Product Page
     [Tags]    All Products Page
     run keyword and continue on failure    User should be able to click add to cart button for out of stock and dc stock in Retail Product Page
+    run keyword and continue on failure    TC sleep
     run keyword and continue on failure    User should be able to input qty item for out of stock and dc stock in Retail Product Page
     run keyword and continue on failure    User should be able to add 1 qty item for out of stock and dc stock in Retail Product Page
     run keyword and continue on failure    User should be able to remove 1 qty item for out of stock and dc stock in Retail Product Page
@@ -514,6 +515,7 @@ TC-080 - User should be able to click add to cart button for out of stock and dc
 TC-081 - User should be able to click add to cart button for in stock and dc stock in Retail Product Page
     [Tags]    All Products Page
     run keyword and continue on failure    User should be able to click add to cart button for in stock and dc stock in Retail Product Page
+    run keyword and continue on failure    TC sleep
     run keyword and continue on failure    User should be able to input qty item for in stock and dc stock in Retail Product Page
     run keyword and continue on failure    User should be able to add 1 qty item for in stock and dc stock in Retail Product Page
     run keyword and continue on failure    User should be able to remove 1 qty item for in stock and dc stock in Retail Product Page
@@ -523,6 +525,7 @@ TC-082 - User should be able to click add to cart button for in stock only in Re
     [Tags]    All Products Page
     run keyword and continue on failure    User should be able to fitler results per page to 100
     run keyword and continue on failure    User should be able to click add to cart button for in stock only in Retail Product Page
+    run keyword and continue on failure    TC sleep
     run keyword and continue on failure    User should be able to input qty item for in stock only in Retail Product Page
     run keyword and continue on failure    User should be able to add 1 qty item for in stock only in Retail Product Page
     run keyword and continue on failure    User should be able to remove 1 qty item for in stock only in Retail Product Page
