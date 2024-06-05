@@ -26,8 +26,8 @@ Login Page - Input Invalid Username
 
 Login Page - Input Invalid Password
     [Tags]    Login Page
-    run keyword and continue on failure    Required password message
     run keyword and continue on failure    Input Invalid Password
+    run keyword and continue on failure    Required password message
 
 Login Page - User should not be able to login using invalid account
     [Tags]    Login Page
@@ -508,6 +508,7 @@ Products Page - User should be able to view product In Stock Only
 Products Page - User should be able to click add to cart button for out of stock and dc stock in Retail Product Page
     [Tags]    All Products Page
     run keyword and continue on failure    User should be able to click add to cart button for out of stock and dc stock in Retail Product Page
+    run keyword and continue on failure    TC sleep
     run keyword and continue on failure    User should be able to input qty item for out of stock and dc stock in Retail Product Page
     run keyword and continue on failure    User should be able to add 1 qty item for out of stock and dc stock in Retail Product Page
     run keyword and continue on failure    User should be able to remove 1 qty item for out of stock and dc stock in Retail Product Page
@@ -516,6 +517,7 @@ Products Page - User should be able to click add to cart button for out of stock
 Products Page - User should be able to click add to cart button for in stock and dc stock in Retail Product Page
     [Tags]    All Products Page
     run keyword and continue on failure    User should be able to click add to cart button for in stock and dc stock in Retail Product Page
+    run keyword and continue on failure    TC sleep
     run keyword and continue on failure    User should be able to input qty item for in stock and dc stock in Retail Product Page
     run keyword and continue on failure    User should be able to add 1 qty item for in stock and dc stock in Retail Product Page
     run keyword and continue on failure    User should be able to remove 1 qty item for in stock and dc stock in Retail Product Page
@@ -525,6 +527,7 @@ Products Page - User should be able to click add to cart button for in stock onl
     [Tags]    All Products Page
     run keyword and continue on failure    User should be able to fitler results per page to 100
     run keyword and continue on failure    User should be able to click add to cart button for in stock only in Retail Product Page
+    run keyword and continue on failure    TC sleep
     run keyword and continue on failure    User should be able to input qty item for in stock only in Retail Product Page
     run keyword and continue on failure    User should be able to add 1 qty item for in stock only in Retail Product Page
     run keyword and continue on failure    User should be able to remove 1 qty item for in stock only in Retail Product Page
@@ -955,6 +958,7 @@ Vehicle Listing Page - User should be able to click delete in Retail Account Veh
     run keyword and continue on failure    User should be able to click delete in Retail Account Vehicle Listing Page
     run keyword and continue on failure    User should be able to click yes on confirm deletion in Retail Account Vehicle Listing Page
     run keyword and continue on failure    reload page
+    run keyword and continue on failure    TC Sleep
 
 Messages Page - User should be able to view message page
     [Tags]    Message Page
