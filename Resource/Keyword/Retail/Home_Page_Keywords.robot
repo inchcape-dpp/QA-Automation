@@ -109,7 +109,7 @@ User should be able to check shopping cart pop up modal prices
     ${total}    set global variable    ${total + ${CartItemNumbers}}
     log    ${total}
     END
-
+#### Test
 
 
 
