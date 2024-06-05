@@ -18,7 +18,7 @@ ${CreateAccount}    //*[(contains(text(),'Create Account')) or contains(text(),'
 ${FooterLogo}    //div[@class='footer-logo']
 ${PN}    //*[(contains(text(),' Privacy Policy ') or contains(text(),'私隱條款'))]
 ${TnC}    //*[contains(text(),' Terms & Conditions ') or contains(text(),'條款及細則')]
-${CopyRight}    //*[contains(text(),' © 2023 PartsLane. All Rights Reserved.') or contains(text(),'2023 Partslane. 保留所有權利.')]/parent::li
+${CopyRight}    //*[contains(text(),' © 2023 PartsLane. All Rights Reserved.') or contains(text(),'2023 Partslane. 保留所有權利.')]
 ${About Us}     //*[contains(text(),' About Us') or contains(text(),'關於我們')]
 ${Frequently Asked Questions}     //*[contains(text(),' About Us') or contains(text(),'常見問題')]
 ${Contact Us}     //*[contains(text(),' Contact Us') or contains(text(),'聯絡我們')]
@@ -1775,7 +1775,7 @@ ${Retail_AccountMessagePageDetailsFirstPageButton}    (//a[@aria-label='first pa
 ${Retail_AccountMessagePageDetailsNextPageButtonDisabled}    //a[@class='next disabled']
 ${Retail_AccountMessagePageDetailsPreviousPageButtonDisabled}    //a[@class='previous disabled']
 
-${Retail_AccountMessagePageNewMessageButton}    //dpp-message-list//div[@class='row']//button[@class='btn btn-outline-secondary w-100']
+${Retail_AccountMessagePageNewMessageButton}    //dpp-message-list//button[@type='button']
 
 ${Retail_AccountMessagePageNewMessagePopUpContainer}    //div[@class='cx-dialog-body modal-body']
 ${Retail_AccountMessagePageNewMessagePopUpToSupplierLabel}    //div[@class='col-sm-12 header']//span[@class='message-subject mb-1']

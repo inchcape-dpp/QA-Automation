@@ -521,7 +521,7 @@ ${CustRelPageModal}    //div[@class='cx-modal-content']
 ${CustRelPageModalYes}    //div[@class='cx-dialog-row text-center']//button[contains(text(),'Yes')]
 ${CustRelPageModalNo}    //div[@class='cx-dialog-row text-center']//button[contains(text(),'No')]
 
-${Dealer-HK_BuyerRelPage_Header_CustomerName_Label}    //thead//th[@class='cust-name']//span[contains(text(),'Customer Name')]
+${Dealer-HK_BuyerRelPage_Header_CustomerName_Label}    //thead//th[@class='cust-name']//span[contains(text(),'Company Name')]
 ${Dealer-HK_BuyerRelPage_Header_PartsClub_Label}    //thead//th[@class='part-club']//span[contains(text(),'Parts Club')]
 ${Dealer-HK_BuyerRelPage_Header_ADP_Label}    //thead//th[@class='adp-code']//span[contains(text(),'ADP')]
 ${Dealer-HK_BuyerRelPage_Header_MemberTier_Label}    //thead//span[contains(text(),'Membership')]
@@ -698,8 +698,8 @@ ${ProfileAccountsDetailsLandlineLabel}    //dpp-account-details[@class='user-for
 ${ProfileAccountsDetailsFirstNameTextBox}    //dpp-account-details[@class='user-form']//input[@formcontrolname='firstName']
 ${ProfileAccountsDetailsLastNameTextBox}    //dpp-account-details[@class='user-form']//input[@formcontrolname='lastName']
 ${ProfileAccountsDetailsEmailTextBox}    //dpp-account-details[@class='user-form']//input[@formcontrolname='email']
-${ProfileAccountsDetailsPhoneTextBox}    //dpp-account-details[@class='user-form']//input[@formcontrolname='contactNumber']|//dpp-account-details[@class='user-form']//span[@class='label-content' and (contains(text(),'Phone') or contains(text(),'電話號碼*'))]/following-sibling::dpp-input-contact-number//input
-${ProfileAccountsDetailsLandlineTextBox}    //dpp-account-details[@class='user-form']//input[@formcontrolname='landlineNumber']|//dpp-account-details[@class='user-form']//span[@class='label-content' and (contains(text(),'Landline') or contains(text(),'住宅電話號碼 (選填)'))]/following-sibling::dpp-input-contact-number//input
+${ProfileAccountsDetailsPhoneTextBox}    //dpp-account-details[@class='user-form']//input[@formcontrolname='contactNumber']|//dpp-account-details[@class='user-form']//span[contains(text(),'Phone Number') or contains(text(),'電話號碼')]/parent::label//input
+${ProfileAccountsDetailsLandlineTextBox}    //dpp-account-details[@class='user-form']//input[@formcontrolname='landlineNumber']|//dpp-account-details[@class='user-form']//span[contains(text(),'Landline Number') or contains(text(),'住宅電話號碼 (選填)')]/parent::label//input
 
 ${ProfileAccountsDetailsCancelButton}    //dpp-account-details[@class='user-form']//button[@type='button']
 ${ProfileAccountsDetailsUpdateButton}    //dpp-account-details[@class='user-form']//button[@type='submit']
