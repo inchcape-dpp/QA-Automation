@@ -4,56 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="05/31/24 3:09PM&#10;Return Config to Git ignore">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Au/Test.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/Keyword/QE MiniSIte/Nino/MiniSite_keyword.Robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/Keyword/QE_Minisite/Ty/Minisite_Footer.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/All_Parts_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/All_Parts_Page_Keywords.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Checkout_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Checkout_Keywords.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Home_Page_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Home_Page_Keywords.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Retail_All_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Retail_All_Keywords.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Retail/Search_Bar_Keywords.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/Keyword/Retail/Search_Bar_Keywords.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Ric/Retail/AU_Login_Page.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Ric/Retail/HK_Login_Page.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/Keyword/Ty/Retail/Ty_Retail_Keywords.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Dealer/Dealer_Variable.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Dealer/Dealer_Variable.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/QE MiniSIte/Nino/MiniSite_Variable.Robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/P1/HK_P1_Bronze_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/P1/HK_P1_Bronze_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S2/HK_S2_Bronze_Config.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/HK_Config/S2/HK_S2_Bronze_Config.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Retail/Retail_Variable.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testdata/Retail/Retail_Variable.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Ric/Retail/Ric_Retail_Resource.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testdata/Ric/Retail/Ric_Retail_Variable.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/HK_TC/P1/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/HK_TC/P1/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/HK_TC/P1/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/HK_TC/P1/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/HK_TC/P1/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/HK_TC/P1/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/HK_TC/S2/HK_Regression_Dealer.robot" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/HK_TC/S2/HK_Regression_Dealer.robot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/HK_TC/S2/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/HK_TC/S2/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/HK_TC/S2/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/HK_TC/S2/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Dealer/HK_TC/S2/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Dealer/HK_TC/S2/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/QE MiniSIte/Nino/MiniSite_TestSuite.Robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/QE_MiniSIte/Ty/Minisite_Footer_TestSuite.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/P1/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/P1/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/P1/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/P1/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/P1/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/P1/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/log.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/output.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/Resource/testsuites/Retail/HK_TC/S2/report.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/Test_Retail.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/Test_TCs/Retail_Smoke.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/Test_TCs/Test_Retail_Smoke1.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/Test_TCs/log.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/Test_TCs/output.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/Test_TCs/report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/log.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/output.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Retail/report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Ric/Retail/HK_Login_Page.robot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Ric/Retail/log.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Ric/Retail/output.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Ric/Retail/report.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Resource/testsuites/Sprints/Sprint/DPP-306959/DPP-306959.robot" beforeDir="false" />
-    </list>
+    <list default="true" id="3e416933-a2e2-4e00-8659-349dbc970dec" name="Changes" comment="Commit 55c3c4f4&#10;06/05/24 4:45PM" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -80,14 +31,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;Dan&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "44fc9e5c",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -288,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717139729770</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Commit 55c3c4f4&#10;06/05/24 4:45PM">
+      <option name="closed" value="true" />
+      <created>1717577827583</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1717577827583</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -353,6 +312,7 @@
     <MESSAGE value="05/31/24 2:38PM&#10;Added Config to git ignore" />
     <MESSAGE value="05/31/24 3:09PM&#10;Remove Config to Git ignore" />
     <MESSAGE value="05/31/24 3:09PM&#10;Return Config to Git ignore" />
-    <option name="LAST_COMMIT_MESSAGE" value="05/31/24 3:09PM&#10;Return Config to Git ignore" />
+    <MESSAGE value="Commit 55c3c4f4&#10;06/05/24 4:45PM" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit 55c3c4f4&#10;06/05/24 4:45PM" />
   </component>
 </project>
