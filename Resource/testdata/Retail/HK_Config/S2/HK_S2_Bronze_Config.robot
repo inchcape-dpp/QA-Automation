@@ -35,6 +35,9 @@ ${Password}    ${HK_S2_Automation_Bronze_PWD}
 
 ${YopMailEmail}    ${HK_S2_Automation_Bronze_UID}
 
+${ProductSearchValue}    8521410100
+
+
 *** Keywords ***
 Open Chrome Browser
     SeleniumLibrary.Open Browser    ${s2HKRetail}    Chrome  executable_path=${driver_path}

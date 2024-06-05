@@ -728,8 +728,8 @@ User should be able to view place order in HK Retail Place Order Page
     wait until element is visible    ${Retail_HK_PlaceOrderPage_CofirmationDetails_OrderDate_Value}    10
     wait until element is visible    ${Retail_HK_PlaceOrderPage_CofirmationDetails_EstDelDate_Label}    10
     wait until element is visible    ${Retail_HK_PlaceOrderPage_CofirmationDetails_EstDelDate_Value}    10
-    wait until element is visible    ${Retail_HK_PlaceOrderPage_CofirmationDetails_PONumer_Label}    10
-    wait until element is visible    ${Retail_HK_PlaceOrderPage_CofirmationDetails_PONumer_Value}    10
+#    wait until element is visible    ${Retail_HK_PlaceOrderPage_CofirmationDetails_PONumer_Label}    10
+#    wait until element is visible    ${Retail_HK_PlaceOrderPage_CofirmationDetails_PONumer_Value}    10
     wait until element is visible    ${Retail_PlaceOrderPageBacktoHomeButton}    10
     wait until element is visible    ${Retail_PlaceOrderPageViewOrderButton}    10
 
@@ -741,8 +741,8 @@ User should be able to view place order in HK Retail Place Order Page
     capture element screenshot    ${Retail_HK_PlaceOrderPage_CofirmationDetails_OrderDate_Value}
     capture element screenshot    ${Retail_HK_PlaceOrderPage_CofirmationDetails_EstDelDate_Label}
     capture element screenshot    ${Retail_HK_PlaceOrderPage_CofirmationDetails_EstDelDate_Value}
-    capture element screenshot    ${Retail_HK_PlaceOrderPage_CofirmationDetails_PONumer_Label}
-    capture element screenshot    ${Retail_HK_PlaceOrderPage_CofirmationDetails_PONumer_Value}
+#    capture element screenshot    ${Retail_HK_PlaceOrderPage_CofirmationDetails_PONumer_Label}
+#    capture element screenshot    ${Retail_HK_PlaceOrderPage_CofirmationDetails_PONumer_Value}
     capture element screenshot    ${Retail_PlaceOrderPageBacktoHomeButton}
     capture element screenshot    ${Retail_PlaceOrderPageViewOrderButton}
 

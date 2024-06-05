@@ -38,7 +38,7 @@ ${YopMailEmail}    ${HK_P1_Automation_Bronze_UID}
 ${Retail_AccountProfileChangePassCurrentPassValue}    ${Password}
 
 #Testing Values
-${ProdductSearchValue}    1780121060
+${ProductSearchValue}    1780121060
 
 *** Keywords ***
 Open Chrome Browser
