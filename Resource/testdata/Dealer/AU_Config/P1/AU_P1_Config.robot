@@ -14,6 +14,7 @@ ${FirefoxBrowser}    Firefox
 ${EdgeBrowser}    Edge
 ${SafariBrowser}    Safari
 
+
 ${driver_path}    ..\\..\\..\\..\\..\\Resource\\chromedriver.exe
 #${driver_path}    C:\\Users\\Nino.Guerra\\PycharmProjects\\pythonProject2\\Resource\\geckodriver.exe
 
@@ -25,8 +26,8 @@ ${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\
 ${ExcelFile_AU_Stock_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\Titan SUB Geerex.xlsx
 ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\You left something behind (ENG).txt
 
-${Username}    seller1.admin@test.com
-${Password}    sellEr@dm!n1
+${Username}    testp1seller@yopmail.com
+${Password}    dealNTG07.
 
 ${YopMailEmail}    ${admin1_s2_dealer_UID}
 

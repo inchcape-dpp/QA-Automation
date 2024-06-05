@@ -77,38 +77,39 @@ ${Retail_RegistrationCompNameLabel}    //form//div[@class='col-md-6']//input[@fo
 ${Retail_RegistrationTradenameLabel}    //form//div[@class='col-md-6']//input[@formcontrolname='tradingName']/preceding-sibling::span[@class='label-content']
 
 ${Retail_RegistrationPostalAddLabel}    //form//div[@formgroupname='postalAddress']//div[@class='col-md-12 mb-2']//span[@class='label-content']|//form//div[@formgroupname='postalAddress']//div[@class='col-12 mb-2']//span[@class='label-content' or @class='label-container']
-${Retail_RegistrationPostalAddLine1Label}    //form//div[@formgroupname='postalAddress']//div[@class='col-md-12']//input[@formcontrolname='addressLine1']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
-${Retail_RegistrationPostalAddLine2Label}    //form//div[@formgroupname='postalAddress']//div[@class='col-md-12']//input[@formcontrolname='addressLine2']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']|//form//div[@formgroupname='postalAddress']//div[@class='col-12']//input[@formcontrolname='addressLine2']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey' or @class='label-container color-grey']
+${Retail_RegistrationPostalAddLine1Label}    //form//div[@formgroupname='postalAddress']//div[@class='col-12' or @class='col-md-12']//*[@formcontrolname='addressLine1']/preceding-sibling::*[self::span[contains(text(),'Address Line 1')] or self::label//span[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]]
+${Retail_RegistrationPostalAddLine2Label}    //form//div[@formgroupname='postalAddress']//div[@class='col-12' or @class='col-md-12']//*[@formcontrolname='addressLine2']/preceding-sibling::*[contains(text(),'Address Line 2') or contains(text(),'地址第二行') ]
 ${Retail_RegistrationPostalSuburbLabel}    //form//div[@formgroupname='postalAddress']//input[@formcontrolname='suburb']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
 ${Retail_RegistrationPostalPostalCodeLabel}    //form//div[@formgroupname='postalAddress']//input[@formcontrolname='postalCode']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
 ${Retail_RegistrationPostalStateLabel}    //form//div[@formgroupname='postalAddress']//ng-select[@formcontrolname='region']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
 
-${Retail_HK_RegistrationPostalAreaLabel}    //form//div[@formgroupname='postalAddress']//div[@class='col-6']//ng-select[@formcontrolname='area']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey' or @class='label-container']
-${Retail_HK_RegistrationPostalDistrictLabel}    //form//div[@formgroupname='postalAddress']//div[@class='col-6']//ng-select[@formcontrolname='district']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey' or @class='label-container']
+${Retail_HK_RegistrationPostalAreaLabel}    //form//div[@formgroupname='postalAddress']//div[@class='col-6']//ng-select[@formcontrolname='area']/preceding-sibling::span[contains(text(),'Area') or (contains(text(),'地區'))]
+${Retail_HK_RegistrationPostalDistrictLabel}    //form//div[@formgroupname='postalAddress']//div[@class='col-6']//ng-select[@formcontrolname='district']/preceding-sibling::span[contains(text(),'District') or (contains(text(),' 區'))]
 
-${Retail_RegistrationDelAddSameAsPostalLabel}    //form//input[@type='checkbox']/following-sibling::span
+${Retail_RegistrationDelAddSameAsPostalLabel}     //form//input[@type='checkbox']/following-sibling::span[contains(text(),'Delivery Address is the same as Postal Address') or (contains(text(),'收件地址與聯絡地址相同'))]
 
-${Retail_RegistrationDelAddLabel}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-md-12 mb-2']//span[@class='label-content']|//form//div[@formgroupname='deliveryAddress']//div[@class='col-12 mb-2']//span[@class='label-content' or @class='label-container']
-${Retail_RegistrationDelAddLine1Label}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-md-12']//input[@formcontrolname='addressLine1']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']|//form//div[@formgroupname='deliveryAddress']//div[@class='col-12']//dpp-autocomplete-search[@formcontrolname='addressLine1']/preceding-sibling::label//span[contains(text(),'Address Line 1')]
-${Retail_RegistrationDelAddLine2Label}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-md-12']//input[@formcontrolname='addressLine2']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']|//form//div[@formgroupname='deliveryAddress']//div[@class='col-12']//input[@formcontrolname='addressLine2']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey' or @class='label-container color-grey']
+${Retail_RegistrationDelAddLabel}     //form//div[@formgroupname='deliveryAddress']//div[@class='col-md-12 mb-2']//span[@class='label-content']|//form//div[@formgroupname='deliveryAddress']//div[@class='col-12 mb-2']//span[@class='label-content' or @class='label-container'][contains(text(),'Delivery Address') or (contains(text(),'收件地址 '))]
+${Retail_RegistrationDelAddLine1Label}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-12' or @class='col-md-12']//*[@formcontrolname='addressLine1']/preceding-sibling::*[self::span[contains(text(),'Address Line 1')] or self::label//span[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]]
+${Retail_RegistrationDelAddLine2Label}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-12' or @class='col-md-12']//*[@formcontrolname='addressLine2']/preceding-sibling::*[contains(text(),'Address Line 2') or contains(text(),'地址第二行') ]
 ${Retail_RegistrationDelSuburbLabel}    //form//div[@formgroupname='deliveryAddress']//input[@formcontrolname='suburb']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
 ${Retail_RegistrationDelPostalCodeLabel}    //form//div[@formgroupname='deliveryAddress']//input[@formcontrolname='postalCode']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
 ${Retail_RegistrationDelStateLabel}    //form//div[@formgroupname='deliveryAddress']//ng-select[@formcontrolname='region']/preceding-sibling::label//span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']
 
-${Retail_HK_RegistrationDelAreaLabel}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-6']//ng-select[@formcontrolname='area']/preceding-sibling::span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey' or @class='label-container']
-${Retail_HK_RegistrationDelDistrictLabel}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-6']//ng-select[@formcontrolname='district']/preceding-sibling::label//span[@class='label-content' or @class='label-content has-error' or @class='label-content color-grey']|//form//div[@formgroupname='deliveryAddress']//div[@class='col-6']//ng-select[@formcontrolname='district']/preceding-sibling::span[@class='label-container']
+${Retail_HK_RegistrationDelAreaLabel}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-6']//ng-select[@formcontrolname='area']/preceding-sibling::span[contains(text(),'Area') or (contains(text(),'地區'))]
+${Retail_HK_RegistrationDelDistrictLabel}    //form//div[@formgroupname='deliveryAddress']//div[@class='col-6']//ng-select[@formcontrolname='district']/preceding-sibling::span[contains(text(),'District') or (contains(text(),' 區'))]
 
 ${Retail_RegistrationABNRadioLabel}    //form//div[@class='row']//input[@type='radio']/following-sibling::label[@for='abn']
 ${Retail_RegistrationACNRadioLabel}    //form//div[@class='row']//input[@type='radio']/following-sibling::label[@for='acn']
 
 ${Retail_RegistrationABN/ACNLabel}    //form//div[@class='form-group']//input[@formcontrolname='number']/preceding-sibling::span
 
-${Retail_RegistrationOpeningLabel}    //form//div[@class='form-group']//ng-select[@formcontrolname='openingHours']/preceding-sibling::span
-${Retail_RegistrationClosingLabel}    //form//div[@class='form-group']//ng-select[@formcontrolname='closingHours']/preceding-sibling::span
+${Retail_RegistrationOpeningLabel}     //form//div[@class='form-group']//ng-select[@formcontrolname='openingHours']/preceding-sibling::span[contains(text(),'Opening Hours') or (contains(text(),'營業時間'))]
+${Retail_RegistrationClosingLabel}    //form//div[@class='form-group']//ng-select[@formcontrolname='closingHours']/preceding-sibling::span[contains(text(),'Closing Hours') or (contains(text(),'關閉時間'))]
 
-${Retail_RegistrationContactFNLabel}    //form//div[@class='form-group']//input[@formcontrolname='contactFirstName']/preceding-sibling::span
-${Retail_RegistrationContactLNLabel}    //form//div[@class='form-group']//input[@formcontrolname='contactLastName']/preceding-sibling::span
-${Retail_RegistrationContactEmailLabel}    //form//div[@class='form-group']//input[@formcontrolname='email']/preceding-sibling::span
+
+${Retail_RegistrationContactFNLabel}    //form//div[@class='form-group']//input[@formcontrolname='contactFirstName']/preceding-sibling::span[contains(text(),'Contact First Name') or (contains(text(),'聯絡人名字'))]
+${Retail_RegistrationContactLNLabel}    //form//div[@class='form-group']//input[@formcontrolname='contactLastName']/preceding-sibling::span[contains(text(),'Contact Last Name') or (contains(text(),'聯絡人姓氏'))]
+${Retail_RegistrationContactEmailLabel}    //form//div[@class='form-group']//input[@formcontrolname='email']/preceding-sibling::span[contains(text(),'Email address') or (contains(text(),'電郵'))]
 ${Retail_RegistrationContactCompanyPhoneNumLabel}    //form//div[@class='form-group']//input[@formcontrolname='mobileNumber']/preceding-sibling::span
 ${Retail_RegistrationContactLandlineLabel}    //form//div[@class='form-group']//input[@formcontrolname='landlineNumber']/preceding-sibling::span
 
@@ -251,7 +252,7 @@ ${Retail_RegistrationDelStateValue}    ${Retail_RegistrationStateComboBoxTAS}
 
 #-----------------------------------------------------Retail Home Page--------------------------------------------------
 ${HomePageLogo}    //cx-page-slot[@position='SiteLogo']
-${HomePageSelectVehicle}    (//div[@class='custom-header-vehicle'])[1]
+${HomePageSelectVehicle}    (//div[@class='custom-header-vehicle'])[1][contains(text(),'Select your vehicle') or (contains(text(),''))]
 ${HomePageSearhProduct}    //div[@role='search']//input[@type='text']
 ${HomePageSearhProductIcon}    //div[@role='presentation']
 ${HomePageProfileIcon}     //dpp-my-accounts-header//cx-icon[@class='header-account-icon cx-icon dpp-icons__user-circle']
@@ -536,30 +537,47 @@ ${Retail_HK_HomePage_EPC_Button_Disabled}    //dpp-category-navigation//span[con
 #-----------------------------------------------------Retail HK Home Page Body Parts
 ${Retail_HK_HomePage_BodyParts_Category_Button}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']
 ${Retail_HK_HomePage_BodyParts_Category_List}    (//dpp-category-navigation)[1]//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li
-${Retail_HK_HomePage_BodyParts_Category_BackDoor}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[starts-with(text(),' Back Door / Luggage Panel ') or starts-with(text(),' 尾冚 / 尾箱 ')]
-${Retail_HK_HomePage_BodyParts_Category_FrontBumper}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[starts-with(text(),' Front Bumper Cover ') or starts-with(text(),' 尾冚 / 尾箱 ')]
-${Retail_HK_HomePage_BodyParts_Category_FrontDoor}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[starts-with(text(),' Front Door ') or starts-with(text(),' 尾冚 / 尾箱 ')]
-${Retail_HK_HomePage_BodyParts_Category_FrontFender}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[starts-with(text(),' Front Fender ') or starts-with(text(),' 尾冚 / 尾箱 ')]
-${Retail_HK_HomePage_BodyParts_Category_HeadLamp}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[starts-with(text(),' Head Lamp ') or starts-with(text(),' 尾冚 / 尾箱 ')]
-${Retail_HK_HomePage_BodyParts_Category_Hood}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[starts-with(text(),' Hood ') or starts-with(text(),' 尾冚 / 尾箱 ')]
-${Retail_HK_HomePage_BodyParts_Category_OuterMirror}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[starts-with(text(),' Outer Mirror ') or starts-with(text(),' 尾冚 / 尾箱 ')]
-${Retail_HK_HomePage_BodyParts_Category_RearBumper}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[starts-with(text(),' Rear Bumper Cover ') or starts-with(text(),' 尾冚 / 尾箱 ')]
-${Retail_HK_HomePage_BodyParts_Category_RearCombinationLamp}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[starts-with(text(),' Rear Combination Lamp ') or starts-with(text(),' 尾冚 / 尾箱 ')]
-${Retail_HK_HomePage_BodyParts_Category_RearDoor}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[starts-with(text(),' Rear Door ') or starts-with(text(),' 尾冚 / 尾箱 ')]
-${Retail_HK_HomePage_BodyParts_Category_RearLamp}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[starts-with(text(),' Rear Lamp ') or starts-with(text(),' 尾冚 / 尾箱 ')]
-${Retail_HK_HomePage_BodyParts_Category_Rear Quarter Panel}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[starts-with(text(),' Rear Quarter Panel ') or starts-with(text(),' 尾冚 / 尾箱 ')]
+${Retail_HK_HomePage_BodyParts_Category_BackDoor}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Back Door / Luggage Panel') or (contains(text(),'尾冚 / 尾箱'))]
+${Retail_HK_HomePage_BodyParts_Category_FrontBumper}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Front Bumper Cover') or (contains(text(),'頭泵把'))]
+${Retail_HK_HomePage_BodyParts_Category_FrontDoor}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Front Door') or (contains(text(),'前門'))]
+${Retail_HK_HomePage_BodyParts_Category_FrontFender}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Front Fender') or (contains(text(),'頭沙板'))]
+${Retail_HK_HomePage_BodyParts_Category_HeadLamp}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Head Lamp') or (contains(text(),'頭燈'))]
+${Retail_HK_HomePage_BodyParts_Category_Hood}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Hood') or (contains(text(),'頭冚'))]
+${Retail_HK_HomePage_BodyParts_Category_OuterMirror}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Outer Mirror') or (contains(text(),'倒後鏡'))]
+${Retail_HK_HomePage_BodyParts_Category_RearBumper}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Rear Bumper Cover') or (contains(text(),'尾泵把'))]
+${Retail_HK_HomePage_BodyParts_Category_RearCombinationLamp}    (//dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Rear Combination Lamp') or (contains(text(),'尾燈'))])[1]
+${Retail_HK_HomePage_BodyParts_Category_RearDoor}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Rear Door') or (contains(text(),'尾門'))]
+${Retail_HK_HomePage_BodyParts_Category_RearLamp}    (//dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Rear Lamp') or (contains(text(),'尾燈'))])[2]
+${Retail_HK_HomePage_BodyParts_Category_Rear Quarter Panel}    //dpp-category-navigation//button[@aria-label='Body Parts' or @aria-label='車身部件']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Rear Quarter Panel') or (contains(text(),'尾沙板'))]
 
 #-----------------------------------------------------Retail HK Home Page Chemicals
 ${Retail_HK_HomePage_Chemicals_Category_Button}    //dpp-category-navigation//button[@aria-label='Chemicals' or @aria-label='化工產品']
 ${Retail_HK_HomePage_Chemicals_Category_List}    (//dpp-category-navigation)[1]//button[@aria-label='Chemicals' or @aria-label='化工產品']/following-sibling::div[@class='wrapper']//li
-
-
+${Retail_HK_HomePage_Chemicals_Category_BrakeFluid}    //dpp-category-navigation//button[@aria-label='Chemicals' or @aria-label='化工產品']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Brake Fuild') or (contains(text(),'迫力油'))]
+${Retail_HK_HomePage_Chemicals_Category_Coolant}    //dpp-category-navigation//button[@aria-label='Chemicals' or @aria-label='化工產品']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Coolant') or (contains(text(),'水箱水'))]
+${Retail_HK_HomePage_Chemicals_Category_DifferentialOil}    //dpp-category-navigation//button[@aria-label='Chemicals' or @aria-label='化工產品']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Differential Oil') or (contains(text(),'尾牙油'))]
+${Retail_HK_HomePage_Chemicals_Category_EngineOil}    //dpp-category-navigation//button[@aria-label='Chemicals' or @aria-label='化工產品']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Engine Oil') or (contains(text(),'偈油'))]
+${Retail_HK_HomePage_Chemicals_Category_Packing}    //dpp-category-navigation//button[@aria-label='Chemicals' or @aria-label='化工產品']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Packing') or (contains(text(),'崢口膠'))]
+${Retail_HK_HomePage_Chemicals_Category_PoweSteeringFluid}    //dpp-category-navigation//button[@aria-label='Chemicals' or @aria-label='化工產品']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Power Steering Fuild') or (contains(text(),'軚油'))]
+${Retail_HK_HomePage_Chemicals_Category_SuspensionFluid}    //dpp-category-navigation//button[@aria-label='Chemicals' or @aria-label='化工產品']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Suspension Fluid') or (contains(text(),'避震機油'))]
+${Retail_HK_HomePage_Chemicals_Category_TransmissionOil}    //dpp-category-navigation//button[@aria-label='Chemicals' or @aria-label='化工產品']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Tranmission Oil') or (contains(text(),'波箱油'))]
 
 
 #-----------------------------------------------------Retail HK Home Page Maintenance Item
 ${Retail_HK_HomePage_MaintenanceItem_Category_Button}    //dpp-category-navigation//button[@aria-label='Maintenance Item' or @aria-label='快流件']
 ${Retail_HK_HomePage_MaintenanceItem_Category_List}    (//dpp-category-navigation)[1]//button[@aria-label='Maintenance Item' or @aria-label='快流件']/following-sibling::div[@class='wrapper']//li
-
+${Retail_HK_HomePage_MaintenanceItem_Category_Absorber}    //dpp-category-navigation//button[@aria-label='Maintenance Item' or @aria-label='快流件']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'A/C Filter') or (contains(text(),'冷氣格'))]
+${Retail_HK_HomePage_MaintenanceItem_Category_AirFilter}    //dpp-category-navigation//button[@aria-label='Maintenance Item' or @aria-label='快流件']/following-sibling::div[@class='wrapper']//li//a[contains(text(),'Absorber') or (contains(text(),'避震機'))]
+${Retail_HK_HomePage_MaintenanceItem_Category_Battery}
+${Retail_HK_HomePage_MaintenanceItem_Category_BrakePad}
+${Retail_HK_HomePage_MaintenanceItem_Category_FuelFilter}
+${Retail_HK_HomePage_MaintenanceItem_Category_OilFilter}
+${Retail_HK_HomePage_MaintenanceItem_Category_SparkPlug}
+${Retail_HK_HomePage_MaintenanceItem_Category_Vbelt}
+${Retail_HK_HomePage_MaintenanceItem_Category_WiperBlade}
+${Retail_HK_HomePage_MaintenanceItem_Category_WiperRubber}
+${Retail_HK_HomePage_MaintenanceItem_Category_A/C}
+${Retail_HK_HomePage_MaintenanceItem_Category_A/C}
 
 #-----------------------------------------------------Retail HK Home Page Repair Parts
 ${Retail_HK_HomePage_RepairParts_Category_Button}    //dpp-category-navigation//button[@aria-label='Repair Parts' or @aria-label='機修項目']
@@ -1954,7 +1972,7 @@ ${Retail_AccountCompanyDetailsPagePrefSupplierLabel}    //dpp-company-details//s
 ${Retail_AccountCompanyDetailsPageAccNumLabel}    //span[@class='label-content' and contains(text(),'Account Number')]|//span[@class='label-content' and contains(text(),'Membership Number')]
 ${Retail_AccountCompanyDetailsPageCompanyNameLabel}    //span[@class='label-content' and contains(text(),'Company Name')]
 ${Retail_AccountCompanyDetailsPageTradingNameLabel}    //dpp-company-details//span[@class='label-content' and contains(text(),'Trading Name')]
-${Retail_AccountCompanyDetailsPagePostalAddressLabel}    //span[@class='label-container' and contains(text(),'Postal Address')]
+${Retail_AccountCompanyDetailsPagePostalAddressLabel}    //span[@class='label-content' and contains(text(),'Postal Address')]
 ${Retail_AccountCompanyDetailsPagePostalAddressAddLine1Label}    //dpp-company-details//span[@class='label-content color-grey' and contains(text(),'Address Line 1')]
 ${Retail_AccountCompanyDetailsPagePostalAddressAddLine2Label}    //span[@class='label-content color-grey' and contains(text(),'Address Line 2')]
 ${Retail_AccountCompanyDetailsPagePostalAddressSuburbLabel}    //dpp-company-details//div[@formgroupname='postalAddress']//span[@class='label-content' and contains(text(),'Suburb')]
