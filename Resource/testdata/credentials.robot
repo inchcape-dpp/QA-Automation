@@ -199,7 +199,7 @@ ${user1_p1_dealer_UID}    seller1.customer@test.com
 ${user1_p1_dealer_PWD}    AUPass@12345
                                                                              #------------------------User2-------------
 ${admin2_p1_HKdealer_UID}    hk.seller2.admin@test.com
-${admin2_p1_HKdealer_PWD}    HKPass@12345
+${admin2_p1_HKdealer_PWD}    hkdealQAp1.
 
 
 ${retailautomationuser1}    retailautomation1@yopmail.com

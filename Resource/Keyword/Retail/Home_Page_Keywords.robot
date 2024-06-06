@@ -96,18 +96,16 @@ User should be able to check shopping cart pop up modal prices
     ${ItemPrice}    get text    (//div[@class='products-container']//div[@class='item' or @class='item first-element' or @class='item last-element' or @class='item first-element last-element']//div[@class='cx-price']//div[@class='item-price'])[${ItemPriceIndex}]
     ${ItemPriceRemoveString}    remove string    ${ItemPrice}    $    ,    ${SPACE}
     ${ItemPriceConvert}    convert to number    ${ItemPriceRemoveString}
-#    set global variable    ${ItemPrice${ItemPriceIndex}}    ${ItemPriceConvert}
     append to list    ${CartItemVariableList}    ${ItemPriceConvert}
-    log    ${ItemPriceConvert}
-    log    ${CartItemVariableList}
     END
 
     ${itempricelistvariables}    get length    ${CartItemVariableList}
-    log    ${itempricelistvariables}
+    set global variable    ${minicarttotal}    0
+    set global variable    ${CartItemIndxe}    0
 
-    FOR    ${CartItemNumbers}    IN RANGE    1
-    ${total}    set global variable    ${total + ${CartItemNumbers}}
-    log    ${total}
+    FOR    ${CartItemNumbers}    IN RANGE    1    ${itempricelistvariables}+1
+    ${minicarttotal}    evaluate    ${minicarttotal}+${CartItemVariableList}[${CartItemIndxe}]
+    ${CartItemIndxe}    evaluate    ${CartItemIndxe}+1
     END
 #### Test
 
