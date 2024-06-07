@@ -18,7 +18,7 @@ ${SafariBrowser}    Safari
 ${driver_path}    ..\\..\\..\\..\\..\\Resource\\chromedriver.exe
 #${driver_path}    C:\\Users\\Danielouie.Estopace\\PycharmProjects\\pythonProject2\\Resource\\geckodriver.exe
 
-${Retail_screenshot_path}    ..\\..\\..\\..\\..\\Resource\\testsuites\\Retail\\Screenshots\\HK\\S2
+${Retail_screenshot_path}    ..\\..\\..\\..\\..\\Resource\\testsuites\\Retail\\Screenshots\\SG\\S2
 #${Retail_screenshot_path}    C:\\Users\\Danielouie.Estopace\\OneDrive - Inchcape\\06.Dev\\Dan\\Retail Screenshots
 
 ${UploadPhoto_Path_Value}    C:\\Users\\Danielouie.Estopace\\Pictures\\Sample Image\\Image.jpg
@@ -31,23 +31,23 @@ ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files
 #${Username}    retailtitanp1@yopmail.com
 #${Password}    Welcom3@NT
 
-${Username}    ${HK_S2_Automation_Bronze_UID}
-${Password}    ${HK_S2_Automation_Bronze_PWD}
+${Username}    ${gamechanger_s2_SGretail_UID}
+${Password}    ${gamechanger_s2_SGretail_PWD}
 ${Retail_AccountProfileChangePassCurrentPassValue}    ${Password}
-${YopMailEmail}    ${HK_S2_Automation_Bronze_UID}
+${YopMailEmail}    ${gamechanger_s2_SGretail_UID}
 
 #Testing Values
 ${ProdductSearchValue}    1780121060
 
 *** Keywords ***
 Open Chrome Browser
-    SeleniumLibrary.Open Browser    ${s2HKRetail}    Chrome  executable_path=${driver_path}
+    SeleniumLibrary.Open Browser    ${s2SGRetail}    Chrome  executable_path=${driver_path}
     maximize browser window
 
 Retail Screen Shot DIR
     ${currentdate}    get current date    result_format=%m-%d-%y %H-%M
-    create directory    ${Retail_screenshot_path}/HK_${currentdate}
-    ${LogDIR}=    convert to string    ${Retail_screenshot_path}/HK_${currentdate}
+    create directory    ${Retail_screenshot_path}/SG_${currentdate}
+    ${LogDIR}=    convert to string    ${Retail_screenshot_path}/SG_${currentdate}
     set screenshot directory    ${LogDIR}
     set global variable    ${LogDIR}
 
