@@ -2307,6 +2307,8 @@ ${ProductSelectionInStockOnlyAddOneButton}    (//div[@class='custom-product-list
 ${ProductSelectionInStockOnlyProductSoldBySellerButton}    ((//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][not(.//p[@class='inStock pr-2'])]//div[@class='sold-by'])|(//div[@class='product-grid-list'][.//p[@class='inStock mr-0']][not(.//p[@class='inStock pr-2'])]//div[@class='seller-info']))[1]
 ${ProductSelectionInStockOnlyProductSoldBySellerContainer}    //dpp-sold-by-seller//div[@class='cx-modal-content']
 
+(//div[@class='custom-product-list' or @class='product-grid-list'][.//p[@class='inStock mr-0']][not(.//p[@class='inStock pr-2'])][.//button[@type='submit']]//div[@class='product-msrp']//span[1])
+
 ${ProductSelectionInStockOnlyQtyTextBoxValue}    2
 
 #-----------------------------------------------------Retail Product Selection Out of Stock and DC Stock
