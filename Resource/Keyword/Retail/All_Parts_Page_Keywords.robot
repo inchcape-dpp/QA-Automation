@@ -689,6 +689,21 @@ User should be able to add to cart random item in Retail Product Page
     set global variable    ${RandomAddToCartIndex}
     sleep    2
 
+User shold be able to get RRP value of random item with add to cart button in Retail Product Page
+    wait until element is visible    ${AllProdPageAddtoCartButton}    10
+    ${AddToCartRRPCount}    get element count    ${AllProdPageAddtoCartButton}
+    ${RandomRRPItemIndex}    evaluate    random.randint(1,${AddToCartRRPCount})
+    scroll element into view    (//dpp-add-to-cart//button[@type='submit'])[${RandomRRPItemIndex}]
+    ${ProductRRPValue}    get text    (//div[@class='custom-product-list' or @class='product-grid-list'][.//button[@type='submit']]//div[@aria-label='RRP.' or @class='product-msrp']//span[1])[${RandomRRPItemIndex}]
+    ${RemoveRRPStrings}    remove string    ${ProductRRPValue}    RRP.    $    ,    ${SPACE}
+    ${ConvertRRPString}    convert to number    ${RemoveRRPStrings}
+    set global variable    ${ConvertRRPString}
+    sleep    2
+    click element    (//dpp-add-to-cart//button[@type='submit'])[${RandomRRPItemIndex}]
+    sleep    2
+
+
+
 User should be able to add item Qty in Retail Product Page
     wait until element is visible    (//button[@aria-label='Add one more'])[${RandomAddToCartIndex}]
     capture element screenshot    (//button[@aria-label='Add one more'])[${RandomAddToCartIndex}]

@@ -2,6 +2,7 @@
 Documentation    Suite description
 
 Library  SeleniumLibrary
+Library    String
 
 #Resource  ../../../Resource/testdata/config.robot
 Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
@@ -201,3 +202,15 @@ User should be able to click checkout button in Retail Shopping Cart Page
     capture element screenshot    ${Retail_ShoppingCartPageOrderSummaryCheckoutButton}
     click element    ${Retail_ShoppingCartPageOrderSummaryCheckoutButton}
     sleep    2
+
+User should be able to get RRP Value in Retail Shopping Cart Page
+    wait until element is visible    ${Retail_ShoppingCartPageItemListRRPPrice}    10
+    wait until element is visible    ${Retail_ShoppingCartPageOrderSummaryRRPTotalLabel}    10
+    ${ShoppingCartRRPItemValue}    get text    ${Retail_ShoppingCartPageItemListRRPPrice}
+    ${ShoppingCartRRPOrderSummaryValue}    get text    ${Retail_ShoppingCartPageOrderSummaryRRPTotalLabel}
+    ${ShoppingCartRRPItemRemoveString}    remove string    ${ShoppingCartRRPItemValue}    $    ,    ${SPACE}
+    ${ShoppingCartRRPSummaryRemoveString}    remove string    ${ShoppingCartRRPOrderSummaryValue}    $    ,    ${SPACE}    RRP    Total:    Retail    Price
+    ${ShoppingCartRRPItemConvert}    convert to number    ${ShoppingCartRRPItemRemoveString}
+    ${ShoppingCartRRpSummaryConvert}    convert to number    ${ShoppingCartRRPSummaryRemoveString}
+    set global variable    ${ShoppingCartRRPItemConvert}
+    set global variable    ${ShoppingCartRRpSummaryConvert}

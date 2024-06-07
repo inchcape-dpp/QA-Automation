@@ -448,7 +448,7 @@ ${Retail_HomePageEnginePartsCategoryMiscButton}    //dpp-category-navigation//bu
 @{Retail_RandomEnginePartsList}    ${Retail_HomePageEnginePartsCategoryValvetrainButton}    ${Retail_HomePageEnginePartsCategoryConnectingRodButton}    ${Retail_HomePageEnginePartsCategoryManifoldsButton}    ${Retail_HomePageEnginePartsCategoryEngineMountButton}    ${Retail_HomePageEnginePartsCategoryEngineValvesButton}    ${Retail_HomePageEnginePartsCategoryHarmonicButton}    ${Retail_HomePageEnginePartsCategoryOilSumpButton}    ${Retail_HomePageEnginePartsCategoryOilPumpButton}    ${Retail_HomePageEnginePartsCategoryPistonsButton}    ${Retail_HomePageEnginePartsCategoryTimingBeltsButton}    ${Retail_HomePageEnginePartsCategoryTimingChainsButton}    ${Retail_HomePageEnginePartsCategoryTimingCoverButton}    ${Retail_HomePageEnginePartsCategoryTurbochargerButton}    ${Retail_HomePageEnginePartsCategoryCylinderButton}    ${Retail_HomePageEnginePartsCategoryCrankshaftButton}    ${Retail_HomePageEnginePartsCategoryEngineBlockButton}    ${Retail_HomePageEnginePartsCategoryTimingGearsButton}    ${Retail_HomePageEnginePartsCategoryRockerCoverButton}    ${Retail_HomePageEnginePartsCategoryMiscButton}
 
 #-----------------------------------------------------Retail Home Page All
-${HomePageAllCategory}    //dpp-category-navigation//a[@href='/dppretail/c/0']|//dpp-category-navigation//a[contains(text(),'All') or contains(text(),'Other')]
+${HomePageAllCategory}    //dpp-category-navigation//a[@href='/dppretail/c/0']|//dpp-category-navigation//a[contains(text(),'All')]
 ${HomePageOtherCategory}
 
 #${HomePageYourPirceLabel}    //div[@class='custom-control custom-switch']//label
@@ -733,7 +733,7 @@ ${Retail_ShoppingCartPageOrderSummarySubTotalValueLabel}    (//div[@class='cart-
 ${Retail_ShoppingCartPageOrderSummaryGSTValueLabel}    (//div[@class='cart-total-container']//div[@class='col-6 text-right' and contains(text(),'')])[2]
 ${Retail_ShoppingCartPageOrderSummaryOrderTotalLabel}    //div[@class='cart-total-container']//div[@class='col-6 pr-0 order-total']
 ${Retail_ShoppingCartPageOrderSummaryOrderTotalValueLabel}    //div[@class='cart-total-container']//div[@class='col-6 text-right order-total' and contains(text(),'')]
-${Retail_ShoppingCartPageOrderSummaryRRPTotalLabel}    //div[@class='cart-total-container']//div[@class='row cart-rrp mx-0']
+${Retail_ShoppingCartPageOrderSummaryRRPTotalLabel}    //div[@class='cart-total-container']//div[@class='row cart-rrp mx-0' or @class='row mx-0 cart-rrp']
 
 ${Retail_ShoppingCartPageOrderSummaryCheckoutButton}    //div[@class='cart-total-container']//button[@class='btn btn-secondary w-100 mt-3 text-capitalize']
 ${Retail_ShoppingCartPageOrderSummaryContinueShoppingButton}    //div[@class='cart-total-container']//button[@class='btn btn-outline-secondary w-100 mt-3 text-capitalize']
@@ -917,6 +917,8 @@ ${Retail_Loader}    //div[@class='loader']
 ${Retail_CheckoutPageCustomerDetailsOrderItemList}    //div[@class='order-details-items-table']//div[@class='product-list-item']
 ${Retail_CheckoutPageCustomerDetailsOrderItemList1}    //div[@class='order-details-items-table']//div[@class='product-list-item'][1]
 
+${Retail_CheckoutPageCustomerDetailsOrderItemList1RRPLabel}    //div[@class='order-details-items-table']//div[@class='product-list-item']//div[@class='col-total__msrp' or @class='col rrp-label text-left']
+
 ${Retail_CheckoutPageCustomerDetailsOrderSummaryContainer}    //div[@class='order-cart-totals']|//div[@class='sticky-wrapper']
 ${Retail_CheckoutPageCustomerDetailsOrderSummaryHeader}    //div[@class='order-cart-totals' or @class='row order-summary']//div[@class='header col-12']|//div[@class='order-cart-totals' or @class='row order-summary']//h3
 ${Retail_CheckoutPageCustomerDetailsOrderSummarySubTotalLabel}    //div[@class='order-cart-totals' or @class='row order-summary']//div[@class='row' or @class='total-wrapper row w-100']//div[@class='col-6' or @class='details col-6'][1]
@@ -925,6 +927,8 @@ ${Retail_CheckoutPageCustomerDetailsOrderSummaryGTSLabel}    //div[@class='order
 ${Retail_CheckoutPageCustomerDetailsOrderSummaryGTSValue}    //div[@class='order-cart-totals']//div[@class='row']//div[@class='col-6 text-right'][2]
 ${Retail_CheckoutPageCustomerDetailsOrderSummaryOrderTotalLabel}    //div[@class='order-cart-totals' or @class='row order-summary']//div[@class='row' or @class='total-wrapper row w-100']//div[@class='col-6 order-total' or @class='total col-6 mt-2 order-total']
 ${Retail_CheckoutPageCustomerDetailsOrderSummaryOrderTotalValue}    //div[@class='order-cart-totals']//div[@class='row']//div[@class='col-6 text-right'][3]|//div[@class='row order-summary']//div[@class='total-wrapper row w-100']//div[@class='total col-6 mt-2 text-right']
+
+${Retail_CheckoutPageCustomerDetailsOrderSummaryRRPLabel}    //div[@class='order-cart-totals' or @class='sticky-wrapper']//div[@class='cart-rrp mx-0' or @class='row cart-rrp mx-0']
 
 ${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryShippingFeeLabel}    //div[@class='row order-summary']//div[@class='details mt-2 col-6']
 ${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryShippingFeeValue}    //div[@class='row order-summary']//div[@class='total-wrapper row w-100']//div[4]
@@ -2238,6 +2242,8 @@ ${AllProdPageDisabledCurrentPage1}     //a[@aria-label='page 1' and @class='page
 ${Retail_HK_AllProdPageLoadmoreButton}    //dpp-product-grid-view//div[@class='showmore']//button[@class='showmore-btn btn btn-secondary align-btn']
 ${Retail_HK_AllProdPageScrolltoTopButton}    //cx-scroll-to-top//button
 
+${AllProdPageAddtoCartRRPLabel}    (//div[@class='custom-product-list' or @class='product-grid-list'][.//button[@type='submit']]//div[@aria-label='RRP.' or @class='product-msrp']//span[1])
+
 ${AllProdPageAddtoCartButton}    (//dpp-add-to-cart//button[@type='submit'])
 ${AllProdPageAddOneButton}    (//button[@aria-label='Add one more'])
 ${AllProdPageRemoveOneButton}    (//button[@aria-label='Remove one'])
@@ -2289,6 +2295,8 @@ ${ProductSelectionInStockDCStockSoldBySellerContainer}    //dpp-sold-by-seller//
 ${ProductSelectionInStockDCStockInfoButton}    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']]//cx-icon)[1]
 ${ProductSelectionInStockDCStockInfoContainer}    //dpp-popover-info//cx-popover
 
+${ProductSelectionInStockDCStockRRPLable}    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']][.//button[@type='submit']]//div[@aria-label='RRP' or @class='product-msrp']//span[1])
+
 ${ProductSelectionInStockDCStockQtyTextBoxValue}    2
 
 ${ProductSelectionQtyTextBoxValue}    999
@@ -2307,7 +2315,7 @@ ${ProductSelectionInStockOnlyAddOneButton}    (//div[@class='custom-product-list
 ${ProductSelectionInStockOnlyProductSoldBySellerButton}    ((//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][not(.//p[@class='inStock pr-2'])]//div[@class='sold-by'])|(//div[@class='product-grid-list'][.//p[@class='inStock mr-0']][not(.//p[@class='inStock pr-2'])]//div[@class='seller-info']))[1]
 ${ProductSelectionInStockOnlyProductSoldBySellerContainer}    //dpp-sold-by-seller//div[@class='cx-modal-content']
 
-(//div[@class='custom-product-list' or @class='product-grid-list'][.//p[@class='inStock mr-0']][not(.//p[@class='inStock pr-2'])][.//button[@type='submit']]//div[@class='product-msrp']//span[1])
+${ProductSelectionInStockOnlyProductRRPLabel}    (//div[@class='custom-product-list' or @class='product-grid-list'][.//p[@class='inStock mr-0']][not(.//p[@class='inStock pr-2'])][.//button[@type='submit']]//div[@aria-label='RRP' or @class='product-msrp']//span[1])
 
 ${ProductSelectionInStockOnlyQtyTextBoxValue}    2
 
@@ -2326,6 +2334,8 @@ ${ProductSelectionOutofStockDCStockInfoButton}    (//div[@class='custom-product-
 ${ProductSelectionOutofStockDCStockInfoContainer}    //dpp-popover-info//cx-popover
 ${ProductSelectionOutofStockDCStockSoldBySellerButton}    (//div[@class='custom-product-list'][.//p[@class='outOfStock mr-0']][.//p[@class='inStock pr-2']]//div[@class='sold-by'])[1]
 ${ProductSelectionOutofStockDCStockSoldBySellerContainer}    //dpp-sold-by-seller//div[@class='cx-modal-content']
+
+${ProductSelectionOutofStockDCStockRRPLabel}    (//div[@class='custom-product-list'][.//p[@class='outOfStock mr-0']][.//p[@class='inStock pr-2']][.//button[@type='submit']]//div[@aria-label='RRP' or @class='product-msrp']//span[1])
 
 ${ProductSelectionOutofStockDCStockQtyTextBoxValue}    2
 
