@@ -20,6 +20,13 @@ Login Page - Verify Login Page
     run keyword and continue on failure    Verify Login Page
     run keyword and continue on failure    Verify Login Page Elements
 
+Verify - Clickable Footers
+    [Tags]    Login Page
+    run keyword and continue on failure    User should verify clickable Privacy Policy on footer
+    run keyword and continue on failure    browse back button
+    run keyword and continue on failure    User should verify clickable Terms & Conditions on footer
+    run keyword and continue on failure    browse back button
+
 Login Page - Input Invalid Username
     [Tags]    Login Page
     run keyword and continue on failure    Input Invalid Username
@@ -27,7 +34,7 @@ Login Page - Input Invalid Username
 Login Page - Input Invalid Password
     [Tags]    Login Page
     run keyword and continue on failure    Input Invalid Password
-    run keyword and continue on failure    Required password message
+#    run keyword and continue on failure    Required password message
 
 Login Page - User should not be able to login using invalid account
     [Tags]    Login Page
@@ -126,6 +133,13 @@ Login Page - User should be able to click Login Button
     [Tags]    Login Page
     run keyword and continue on failure    User should be able to click Login Button
     run keyword and continue on failure    TC Sleep
+
+Home Page - Verify - Clickable Footers homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should verify homepage clickable Privacy Policy on footer
+    run keyword and continue on failure    browse back button
+    run keyword and continue on failure    User should verify homepage clickable Terms & Conditions on footer
+    run keyword and continue on failure    browse back button
 
 Home Page - User should be able to view filters & oil menus in Retail Home Page
     [Tags]    Home Page

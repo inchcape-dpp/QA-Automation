@@ -15,10 +15,17 @@ Resource  ../../../../../Resource/testdata/Retail/Retail_Resource.robot
 Test Setup  Run Keywords   Open Chrome Browser
 Screen Shot DIR  Run Keywords    Retail Screen Shot DIR
 
-TC-001 - Verify Login Page
+TC-000 - Verify Login Page
     [Tags]    Login Page
     run keyword and continue on failure    Verify Login Page
     run keyword and continue on failure    Verify Login Page Elements
+
+TC-001 - Clickable Footers
+    [Tags]    Login Page
+    run keyword and continue on failure    User should verify clickable Privacy Policy on footer
+    run keyword and continue on failure    browse back button
+    run keyword and continue on failure    User should verify clickable Terms & Conditions on footer
+    run keyword and continue on failure    browse back button
 
 TC-002 - Input Invalid Username
     [Tags]    Login Page
@@ -126,6 +133,13 @@ TC-020 - User should be able to click Login Button
     [Tags]    Login Page
     run keyword and continue on failure    User should be able to click Login Button
     run keyword and continue on failure    TC Sleep
+
+TC-020 - Clickable Footers homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should verify homepage clickable Privacy Policy on footer
+    run keyword and continue on failure    browse back button
+    run keyword and continue on failure    User should verify homepage clickable Terms & Conditions on footer
+    run keyword and continue on failure    browse back button
 
 TC-021 - User should be able to view filters & oil menus in Retail Home Page
     [Tags]    Home Page

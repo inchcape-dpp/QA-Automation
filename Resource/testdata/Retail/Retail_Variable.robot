@@ -16,13 +16,19 @@ ${LoginButton}    //button[@type='submit' and (contains(text(),'Login') or (cont
 ${NoAccount}    //*[(contains(text(),'No Account?')) or contains(text(),'沒有帳戶?')]
 ${CreateAccount}    //*[(contains(text(),'Create Account')) or contains(text(),'註冊帳戶')]
 ${FooterLogo}    //div[@class='footer-logo']
+${ShippingPolicy}    //*[(contains(text(),' Shipping Policy ') or contains(text(),'運送政策'))]
 ${PN}    //*[(contains(text(),' Privacy Policy ') or contains(text(),'私隱條款'))]
 ${TnC}    //*[contains(text(),' Terms & Conditions ') or contains(text(),'條款及細則')]
-${CopyRight}    //*[contains(text(),' © 2023 PartsLane. All Rights Reserved.') or contains(text(),'2023 Partslane. 保留所有權利.')]
+${CopyRight}    //span[contains(text(),' © 2024 PartsLane. All Rights Reserved.') or contains(text(),'2024 Partslane. 保留所有權利.')]/parent::li
 ${About Us}     //*[contains(text(),' About Us') or contains(text(),'關於我們')]
 ${Frequently Asked Questions}     //*[contains(text(),' About Us') or contains(text(),'常見問題')]
 ${Contact Us}     //*[contains(text(),' Contact Us') or contains(text(),'聯絡我們')]
-
+${PrivacyHeader}    //span[@style='font-size: 16pt; line-height: 107%']|//cx-page-layout[@class='PrivacyPolicyPageTemplate']//div/h1[contains(text(),'Privacy Policy')]
+${T&CHeader}    //span[@style='font-size:16pt']|//cx-page-layout[@class='TermsAndConditionsPageTemplate']//div/h1[contains(text(),'Terms and Conditions')]
+${DeliveryHeader}    //cx-page-layout[@class='ShippingPolicyPageTemplate']//div/h1[contains(text(),'Delivery Coverage')]
+${AboutUsHeader}    //cx-page-layout[@class='AboutUsPageTemplate']//div/h1[contains(text(),'About Us')]
+${ContactUsHeader}    //cx-page-layout[@class='FooterContactUsPageTemplate']//div/h3
+${EyeIcon}    //dpp-login-form//cx-icon[@class='eye cx-icon dpp-icons__eye-on' or @class='eye cx-icon dpp-icons__eye-off']
 
 ${InvalidEmailMessage}    //*[(contains(text(),'Please enter a valid email address') or contains(text(),'請輸入正確的電子郵件'))]
 ${InvalidEmailPassMessage}    //div[@class='alert alert-danger']
