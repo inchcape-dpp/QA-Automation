@@ -107,6 +107,8 @@ User should be able to check shopping cart pop up modal prices
     ${minicarttotal}    evaluate    ${minicarttotal}+${CartItemVariableList}[${CartItemIndxe}]
     ${CartItemIndxe}    evaluate    ${CartItemIndxe}+1
     END
+
+    run keyword and continue on failure    should be equal    ${ConvertPopUpCartTotal}    ${minicarttotal}
 #### Test
 
 

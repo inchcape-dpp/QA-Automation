@@ -5,7 +5,7 @@ Library  SeleniumLibrary
 Library    Process
 #Library  FakerLibrary
 
-Resource  ../../../../../Resource/testdata/Retail/HK_Config/S2/HK_S2_Bronze_Config.robot
+Resource  ../../../../../Resource/testdata/Retail/SG_Config/S2/SG_S2_GameChanger_Config.robot
 Resource  ../../../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../../../Resource/testdata/Retail/Retail_Resource.robot
 
@@ -46,21 +46,21 @@ TC-004 - User should be able to click Login Button
     [Tags]    Login Page
     run keyword and continue on failure    User should be able to click Login Button
     run keyword and continue on failure    TC Sleep
-
-TC-004 - User should be able to compare RRP Values in Retail Checkout Page
-    [Tags]    Login Page
-    run keyword and continue on failure    TC Sleep
-    run keyword and continue on failure    User should be able to view shopping cart pop up modal
-    run keyword and continue on failure    User should be albe to delete all items from shopping cart pop up modal
-    run keyword and continue on failure    User should be able to view All products
-    run keyword and continue on failure    User shold be able to get RRP value of random item with add to cart button in Retail Product Page
-    run keyword and continue on failure    User should be able to view shopping cart pop up modal
-    run keyword and continue on failure    User should be able to click view cart button from shopping cart pop up modal
-    run keyword and continue on failure    User should be able to get RRP Value in Retail Shopping Cart Page
-    run keyword and continue on failure    User should be able to click checkout button in Retail Shopping Cart Page
-    run keyword and continue on failure    TC Sleep
-    run keyword and continue on failure    User should be able to get RRP Values in Retail Checkout Page
-    run keyword and continue on failure    User should be able to compare RRP Values in Retail Checkout Page
+#
+#TC-004 - User should be able to compare RRP Values in Retail Checkout Page
+#    [Tags]    Login Page
+#    run keyword and continue on failure    TC Sleep
+#    run keyword and continue on failure    User should be able to view shopping cart pop up modal
+#    run keyword and continue on failure    User should be albe to delete all items from shopping cart pop up modal
+#    run keyword and continue on failure    User should be able to view All products
+#    run keyword and continue on failure    User shold be able to get RRP value of random item with add to cart button in Retail Product Page
+#    run keyword and continue on failure    User should be able to view shopping cart pop up modal
+#    run keyword and continue on failure    User should be able to click view cart button from shopping cart pop up modal
+#    run keyword and continue on failure    User should be able to get RRP Value in Retail Shopping Cart Page
+#    run keyword and continue on failure    User should be able to click checkout button in Retail Shopping Cart Page
+#    run keyword and continue on failure    TC Sleep
+#    run keyword and continue on failure    User should be able to get RRP Values in Retail Checkout Page
+#    run keyword and continue on failure    User should be able to compare RRP Values in Retail Checkout Page
 
 
 

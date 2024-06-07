@@ -34,6 +34,9 @@ ${s2HKDealer}    https://hkdealer.coyzchwfjr-inchcaped2-s2-public.model-t.cc.com
 
 ${s2HKRetailAllProducts}    https://hkretail.coyzchwfjr-inchcaped2-s2-public.model-t.cc.commerce.ondemand.com/hkretail/c/0
 
+${s2SGRetail}    https://sgretail.coyzchwfjr-inchcaped2-s2-public.model-t.cc.commerce.ondemand.com/sgretail
+${s2SGDealer}    https://sgdealer.coyzchwfjr-inchcaped2-s2-public.model-t.cc.commerce.ondemand.com/sgdealer/login
+
 #------------------------P1------------------------
 ${p1BE}             https://backoffice.coyzchwfjr-inchcaped2-p1-public.model-t.cc.commerce.ondemand.com/backoffice
 ${p1Retail}         https://www.partslane.com.au/dppretail/login

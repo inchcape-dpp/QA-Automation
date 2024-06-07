@@ -139,6 +139,27 @@ ${admin1_s2_Gold_HKretail_PWD}    HKPass@12345
 ${admin1_s2_Bronze_HKretail_UID}    hk.bronze.admin@test.com
 ${admin1_s2_Bronze_HKretail_PWD}    HKPass@12345
 
+#------------------------SG ADMIN1----------
+${admin1_s2_SGretail_UID}    sg.buyer1.admin@test.com
+${admin1_s2_SGretail_PWD}    SGPass@12345
+#------------------------SG ADMIN2----------
+${admin2_s2_SGretail_UID}    sg.buyer2.admin@test.com
+${admin2_s2_SGretail_PWD}    SGPass@12345
+#------------------------SG Buyer1----------
+${buyer1_s2_SGretail_UID}    sg.buyer1.customer@test.com
+${buyer1_s2_SGretail_PWD}    SGPass@12345
+#------------------------SG Buyer2----------
+${buyer2_s2_SGretail_UID}    sg.buyer2.customer@test.com
+${buyer2_s2_SGretail_PWD}    SGPass@12345
+#------------------------SG Game Changer----
+${gamechanger_s2_SGretail_UID}    sg.gamechanger.admin@test.com
+${gamechanger_s2_SGretail_PWD}    SGPass@12345
+#------------------------SG Infuencer-------
+${influencer_s2_SGretail_UID}    sg.influencer.admin@test.com
+${influencer_s2_SGretail_PWD}    SGPass@12345
+
+
+
 ${Ric_S2_HKUser_GOLD}    hktestric3@yopmail.com
 ${Ric_S2_HKPass_GOLD}    Pass@12345
 
