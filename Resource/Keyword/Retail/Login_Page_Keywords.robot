@@ -9,6 +9,8 @@ Resource  ../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource  ../../../Resource/testdata/credentials.robot
 
 
+
+
 *** Keywords ***
 #-----------------------------------------------------Retail Login Page-------------------------------------------------
 Verify Login Page
@@ -56,6 +58,7 @@ Verify Login Page Elements HK
     wait until element is visible    ${NoAccount}    10
     wait until element is visible    ${CreateAccount}    10
     wait until element is visible    ${FooterLogo}    10
+    wait until element is visible    ${ShippingPolicy}     10
     wait until element is visible    ${PN}    10
     wait until element is visible    ${TnC}    10
     wait until element is visible    ${CopyRight}    10
@@ -73,6 +76,7 @@ Verify Login Page Elements HK
     capture element screenshot    ${NoAccount}
     capture element screenshot    ${CreateAccount}
     capture element screenshot    ${FooterLogo}
+    capture element screenshot    ${ShippingPolicy}
     capture element screenshot    ${PN}
     capture element screenshot    ${TnC}
     capture element screenshot    ${CopyRight}
@@ -96,6 +100,8 @@ Input Invalid Password
 
 Required password message
     clear element text    ${Pass}
+    click element    ${EyeIcon}
+    click element    ${Logo}
     wait until element is visible    ${InvalidPassMessage}    10
     capture element screenshot    ${InvalidPassMessage}
     sleep    2
@@ -203,3 +209,32 @@ User should be able to click Translate to Chinese Button
     click element    ${Retail_HK_LoginPage_Chinese_Button}
     sleep    2
 
+User should verify clickable Privacy Policy on footer
+    click element    ${PN}
+    wait until element is visible    ${PrivacyHeader}      10
+    capture page screenshot
+    sleep    10
+
+User should verify clickable Terms & Conditions on footer
+    click element    ${TnC}
+    wait until element is visible    ${T&CHeader}       10
+    capture page screenshot
+    sleep    10
+
+User should verify clickable Shipping Policy on footer
+    click element    ${ShippingPolicy}
+    wait until element is visible    ${DeliveryHeader}        10
+    capture page screenshot
+    sleep    10
+
+User should verify clickable About Us on footer
+    click element    ${About Us}
+    wait until element is visible    ${AboutUsHeader}         10
+    capture page screenshot
+    sleep    10
+
+User should verify clickable Contact Us on footer
+    click element    ${Contact Us}
+    wait until element is visible    ${ContactUsHeader}        10
+    capture page screenshot
+    sleep    10

@@ -137,6 +137,20 @@ User should be able to Go to Home page
     scroll element into view    ${HomePageLogo}
     sleep    2
 
+User should verify homepage clickable Privacy Policy on footer
+    scroll element into view    ${PN}
+    click element    ${PN}
+    wait until element is visible    ${PrivacyHeader}      10
+    capture page screenshot
+    sleep    10
+
+User should verify homepage clickable Terms & Conditions on footer
+    scroll element into view    ${PN}
+    click element    ${TnC}
+    wait until element is visible    ${T&CHeader}     10
+    capture page screenshot
+    sleep    10
+
 User should be able to view filters & oil menus in Retail Home Page
     wait until element is visible    ${Retail_HomePageFilter&OilCategoryButton}    10
     mouse over    ${Retail_HomePageFilter&OilCategoryButton}
@@ -1214,7 +1228,23 @@ User shoud be albe to click search this vehicle on manual seearh in HK Retail Ho
     click element    ${Retail_HK_HomePage_Manula_Search_Button}
     sleep    5
 
+User should verify homepage clickable Shipping Policy on footer
+    click element    ${ShippingPolicy}
+    wait until element is visible    ${DeliveryHeader}        10
+    capture page screenshot
+    sleep    10
 
+User should verify homepage clickable About Us on footer
+    click element    ${About Us}
+    wait until element is visible    ${AboutUsHeader}         10
+    capture page screenshot
+    sleep    10
+
+User should verify homepage clickable Contact Us on footer
+    click element    ${Contact Us}
+    wait until element is visible    ${ContactUsHeader}        10
+    capture page screenshot
+    sleep    10
 
 
 
