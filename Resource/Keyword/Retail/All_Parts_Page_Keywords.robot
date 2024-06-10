@@ -240,6 +240,7 @@ User should be able to view product details In Stock and DC Stock
     wait until element is visible    ${ProductDeatilsPageProductPartNum}    10
     wait until element is visible    ${ProductDeatilsPageProductPrice}    10
     wait until element is visible    ${ProductDeatilsPageProductPriceRRP}    10
+    wait until element is visible    ${ProductDeatilsPageProductInclGST}     10
     wait until element is visible    ${ProductDeatilsPageProductInStock}    10
     wait until element is visible    ${ProductDeatilsPageProductDCStock}    10
     wait until element is visible    ${ProductDeatilsPageProductAddtoCartButton}    10
@@ -254,6 +255,7 @@ User should be able to view product details Out of Stock and DC Stock
     wait until element is visible    ${ProductDeatilsPageProductPartNum}    10
     wait until element is visible    ${ProductDeatilsPageProductPrice}    10
     wait until element is visible    ${ProductDeatilsPageProductPriceRRP}    10
+    wait until element is visible    ${ProductDeatilsPageProductInclGST}     10
     wait until element is visible    ${ProductDeatilsPageProductOutofStock}    10
     wait until element is visible    ${ProductDeatilsPageProductDCStock}    10
     wait until element is visible    ${ProductDeatilsPageProductAddtoCartButton}    10
@@ -268,6 +270,7 @@ User should be able to view product details Out of Stock
     wait until element is visible    ${ProductDeatilsPageProductPartNum}    10
     wait until element is visible    ${ProductDeatilsPageProductPrice}    10
     wait until element is visible    ${ProductDeatilsPageProductPriceRRP}    10
+    wait until element is visible    ${ProductDeatilsPageProductInclGST}     10
     wait until element is visible    ${ProductDeatilsPageProductOutofStock}    10
     wait until element is visible    ${ProductDeatilsPageProductEnqNowButton}    10
     wait until element is visible    ${ProductDeatilsPageProductAddtoCartButtonDisabled}    10
@@ -293,6 +296,7 @@ User should be able to view product details In Stock Only
     wait until element is visible    ${ProductDeatilsPageProductPartNum}    10
     wait until element is visible    ${ProductDeatilsPageProductPrice}    10
     wait until element is visible    ${ProductDeatilsPageProductPriceRRP}    10
+    wait until element is visible    ${ProductDeatilsPageProductInclGST}     10
     wait until element is visible    ${ProductDeatilsPageProductInStock}    10
     wait until element is visible    ${ProductDeatilsPageProductAddtoCartButton}    10
     wait until element is visible    ${ProductDeatilsPageProductYourPriceToggle}    10
