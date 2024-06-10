@@ -377,13 +377,28 @@ TC-041 - User should be able to view All Products Page in HK Retail Home Page
     run keyword and continue on failure    User should be able to view All products
     run keyword and continue on failure    TC Sleep
 
-
 TC-042 - User should be able to side filter product
     [Tags]    All Products Page
     run keyword and continue on failure    User should be able to breakdown L1 product filter in Retail All Products Page
     run keyword and continue on failure    User should be able to breakdown L2 product filter in Retail All Products Page
     run keyword and continue on failure    User should be able to breakdown L3 product filter in Retail All Products Page
 #    run keyword and continue on failure    User should be albe to check/uncheck 1 product sub category in Retail All Products Page
+
+TC-004 - User should be able to compare RRP Values in Retail Checkout Page
+    [Tags]    Login Page
+    run keyword and continue on failure    User should be able to view All products
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User should be able to view shopping cart pop up modal
+    run keyword and continue on failure    User should be albe to delete all items from shopping cart pop up modal
+    run keyword and continue on failure    User should be able to view All products
+    run keyword and continue on failure    User shold be able to get RRP value of random item with add to cart button in Retail Product Page
+    run keyword and continue on failure    User should be able to view shopping cart pop up modal
+    run keyword and continue on failure    User should be able to click view cart button from shopping cart pop up modal
+    run keyword and continue on failure    User should be able to get RRP Value in Retail Shopping Cart Page
+    run keyword and continue on failure    User should be able to click checkout button in Retail Shopping Cart Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User should be able to get RRP Values in Retail Checkout Page
+    run keyword and continue on failure    User should be able to compare RRP Values in Retail Checkout Page
 
 TC-043 - User should be able to filter product
     [Tags]    All Products Page
