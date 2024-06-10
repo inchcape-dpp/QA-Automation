@@ -2375,7 +2375,7 @@ ${ProductDeatilsPageProductImage}    //dpp-product-images
 ${ProductDeatilsPageProductName}    //div[@class='pl-0 pb-0 mb-0 product-title']
 ${ProductDeatilsPageProductPartNum}    //span[@class='part-number mb-2']
 ${ProductDeatilsPageProductPrice}    //div[@class='row price']
-${ProductDeatilsPageProductPriceRRP}    //div[@class='row price']//span[@class='rrp-info']
+${ProductDeatilsPageProductPriceRRP}    //dpp-common-price//span[@class='rrp-info']
 ${ProductDeatilsPageProductInclGST}    //dpp-common-price//span[@class='gst-info d-block' and contains(text(),'Incl. GST')]
 ${ProductDeatilsPageProductExclGST}    //dpp-common-price//span[@class='gst-info d-block' and contains(text(),'Excl. GST')]
 ${ProductDeatilsPageProductNoPrice}    //dpp-common-price//span[@class='gst-info d-block' and contains(text(),'Price not available!')]
