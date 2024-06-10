@@ -459,6 +459,23 @@ Products Page - User should be able to side filter product
     run keyword and continue on failure    User should be able to toggle on/off gts in Retail Filtered Product Page
     run keyword and continue on failure    User should be able to toggle on/off gts in Retail Filtered Product Page
 
+Products Page - User should be able to compare RRP Values in Retail Checkout Page
+    [Tags]    Login Page
+    run keyword and continue on failure    User should be able to view All Parts Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User should be able to view shopping cart pop up modal
+    run keyword and continue on failure    User should be albe to delete all items from shopping cart pop up modal
+    run keyword and continue on failure    User should be able to view All products
+    run keyword and continue on failure    User shold be able to get RRP value of random item with add to cart button in Retail Product Page
+    run keyword and continue on failure    User should be able to view shopping cart pop up modal
+    run keyword and continue on failure    User should be able to click view cart button from shopping cart pop up modal
+    run keyword and continue on failure    User should be able to get RRP Value in Retail Shopping Cart Page
+    run keyword and continue on failure    User should be able to click checkout button in Retail Shopping Cart Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User should be able to get RRP Values in Retail Checkout Page
+    run keyword and continue on failure    User should be able to compare RRP Values in Retail Checkout Page
+    run keyword and continue on failure    User should be able to view All Parts Page
+
 Products Page - User should be able to filter product
     [Tags]    All Products Page
     run keyword and continue on failure    User should be able to click 1 filter from selected category in Retail Home Page
