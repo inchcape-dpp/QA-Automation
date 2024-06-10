@@ -13,12 +13,25 @@ Resource    ../../../../../Resource/testdata/Retail/Retail_Resource.robot
 Test Setup  Run Keywords   Open Chrome Browser
 Screen Shot DIR  Run Keywords    Retail Screen Shot DIR
 
-TC-001 - Verify Login Page
+TC-000 - Verify Login Page
     [Tags]    TC001    Login Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to click Translate to English Button
     run keyword and continue on failure    Verify Login Page
     run keyword and continue on failure    Verify Login Page Elements HK
+
+TC-001- Verify - Clickable Footers
+    [Tags]    Login Page
+    run keyword and continue on failure    User should verify clickable Privacy Policy on footer
+    run keyword and continue on failure    browse back button
+    run keyword and continue on failure    User should verify clickable Terms & Conditions on footer
+    run keyword and continue on failure    browse back button
+    run keyword and continue on failure    User should verify clickable Shipping Policy on footer
+    run keyword and continue on failure    browse back button
+    run keyword and continue on failure    User should verify clickable About Us on footer
+    run keyword and continue on failure    browse back button
+    run keyword and continue on failure    User should verify clickable Contact Us on footer
+    run keyword and continue on failure    browse back button
 
 TC-002 - Input Invalid Username
     [Tags]    Login Page
@@ -120,6 +133,19 @@ TC-016 - User should be able to click Login Button
 TC-017 - User should be able to view home page
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to view home page
+
+TC-018 Verify - Clickable Footers homepage
+    [Tags]    Home Page
+    run keyword and continue on failure    User should verify homepage clickable Privacy Policy on footer
+    run keyword and continue on failure    browse back button
+    run keyword and continue on failure    User should verify homepage clickable Terms & Conditions on footer
+    run keyword and continue on failure    browse back button
+    run keyword and continue on failure    User should verify homepage clickable Shipping Policy on footer
+    run keyword and continue on failure    browse back button
+    run keyword and continue on failure    User should verify homepage clickable About Us on footer
+    run keyword and continue on failure    browse back button
+    run keyword and continue on failure    User should verify homepage clickable Contact Us on footer
+    run keyword and continue on failure    browse back button
 
 TC-024 - User should be able to view body parts menus in HK Retail Home Page
     [Tags]    Home Page
