@@ -6,14 +6,14 @@ Library    Process
 #Library    FakerLibrary
 
 
-Resource  ../../../../../Resource/testdata/Dealer/AU_Config/S2/AU_S2_Config.robot
-Resource  ../../../../../Resource/testdata/Dealer/Dealer_Variable.robot
-Resource  ../../../../../Resource/testdata/Dealer/Dealer_Resource.robot
+Resource    ../../../../../Resource/testdata/Dealer/AU_Config/S2/AU_S2_Config.robot
+Resource    ../../../../../Resource/testdata/Dealer/Dealer_Variable.robot
+Resource    ../../../../../Resource/testdata/Dealer/Dealer_Resource.robot
 
 
 *** Test Cases ***
-Test Setup  Run Keywords   Open Chrome Browser
-Screen Shot DIR  Run Keywords    Dealer Screen Shot DIR
+Test Setup    Run Keywords   Open Chrome Browser
+Screen Shot DIR    Run Keywords    Dealer Screen Shot DIR
 
 Login Page - Verify Login Page
     [Tags]    Login Page

@@ -19,7 +19,7 @@ ${driver_path}    ..\\..\\..\\..\\..\\\Resource\\chromedriver.exe
 
 ${Dealer_screenshot_path}    ..\\..\\..\\..\\..\\\Resource\\testsuites\\Dealer\\Screenshots\\AU\\S2
 
-${UploadPhoto_Path_Value}    C:\\Users\\Danielouie.Estopace\\Pictures\\Sample Image\\Image.jpg
+${UploadPhoto_Path_Value}    C:\\Users\\Tyron.Demate\\Pictures\\Sample Image\\Image.jpg
 
 ${ExcelFile_HK_Product_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\HKProductReportView.
 ${ExcelFile_AU_Stock_List_Path}    C:\\Users\\Danielouie.Estopace\\Documents\\Files\\Titan SUB Geerex.xlsx
