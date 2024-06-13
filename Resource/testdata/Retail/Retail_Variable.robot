@@ -19,9 +19,9 @@ ${FooterLogo}    //div[@class='footer-logo']
 ${ShippingPolicy}    //*[(contains(text(),' Shipping Policy ') or contains(text(),'運送政策'))]
 ${PN}    //*[(contains(text(),' Privacy Policy ') or contains(text(),'私隱條款'))]
 ${TnC}    //*[contains(text(),' Terms & Conditions ') or contains(text(),'條款及細則')]
-${CopyRight}    //span[contains(text(),' © 2024 PartsLane. All Rights Reserved.') or contains(text(),'2024 Partslane. 保留所有權利.')]/parent::li
+${CopyRight}    //*[contains(text(),' © 2024 PartsLane. All Rights Reserved.') or contains(text(),'2024 Partslane. 保留所有權利.')]/parent::*
 ${About Us}     //*[contains(text(),' About Us') or contains(text(),'關於我們')]
-${Frequently Asked Questions}     //*[contains(text(),' About Us') or contains(text(),'常見問題')]
+${Frequently Asked Questions}     //*[contains(text(),' Frequently Asked Questions') or contains(text(),'常見問題')]
 ${Contact Us}     //*[contains(text(),' Contact Us') or contains(text(),'聯絡我們')]
 ${PrivacyHeader}    //span[@style='font-size: 16pt; line-height: 107%']|//cx-page-layout[@class='PrivacyPolicyPageTemplate']//div/h1[contains(text(),'Privacy Policy')]
 ${T&CHeader}    //span[@style='font-size:16pt']|//cx-page-layout[@class='TermsAndConditionsPageTemplate']//div/h1[contains(text(),'Terms and Conditions')]
