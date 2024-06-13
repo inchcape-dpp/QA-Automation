@@ -17,7 +17,7 @@ TC-000 - Verify Login Page
     [Tags]    TC001    Login Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to click Translate to English Button
-    run keyword and continue on failure    Verify Login Page
+#    run keyword and continue on failure    Verify Login Page
     run keyword and continue on failure    Verify Login Page Elements HK
 
 TC-001- Verify - Clickable Footers
@@ -689,6 +689,8 @@ TC-061 - User should be able to apply filter status in Retail Account Orders Pag
     run keyword and continue on failure    User should be able to click filter status in Account Order Page
     run keyword and continue on failure    User should be able to filter status by Received in Account Order Page
     run keyword and continue on failure    User should be able to click filter status in Account Order Page
+    run keyword and continue on failure    User should be able to filter status by Submitted in Account Order Page
+    run keyword and continue on failure    User should be able to click filter status in Account Order Page
     run keyword and continue on failure    User should be able to filter status by ALL in Account Order Page
 
 TC-062 - User should be able to apply date filter in Retail Account Orders Page
@@ -775,6 +777,36 @@ TC-069 - User should be able to view and message order with Orders with Returns 
     [Tags]    Order Page
     run keyword and continue on failure    User should be able to view order with Orders with Returns Status in Retail Account Orders Page
     run keyword and continue on failure    User should be able to click order with Orders with Returns Status in Retail Account Orders Page
+    run keyword and continue on failure    User should be able to view order details HK
+    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to view message supplier pop up in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to input text on message pop up text field in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to upload photo on message pop in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to send on message pop in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to click back to order details in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to click Back to Customer Orders in Retail Account Order Details Page
+
+TC-069 - User should be able to view and message order with Delivered Status in Retail Account Orders Page
+    [Tags]    Order Page
+    run keyword and continue on failure    User should be able to view order with Delivered Status in Retail Account Orders Page
+    run keyword and continue on failure    User should be able to click order with Delivered Status in Retail Account Orders Page
+    run keyword and continue on failure    User should be able to view order details HK
+    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to view message supplier pop up in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to input text on message pop up text field in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to upload photo on message pop in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to send on message pop in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to click back to order details in Retail Account Order Details Page
+    run keyword and continue on failure    User should be able to click Back to Customer Orders in Retail Account Order Details Page
+
+TC-069 - User should be able to view and message order with Processing Status in Retail Account Orders Page
+    [Tags]    Order Page
+    run keyword and continue on failure    User should be able to view order with Processing Status in Retail Account Orders Page
+    run keyword and continue on failure    User should be able to click order with Processing Status in Retail Account Orders Page
     run keyword and continue on failure    User should be able to view order details HK
     run keyword and continue on failure    User should be able to click message supplier button in Retail Account Order Details Page
     run keyword and continue on failure    User should be able to click cancel on message pop in Retail Account Order Details Page

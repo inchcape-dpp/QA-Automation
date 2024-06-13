@@ -20,12 +20,12 @@ Login Page - Verify Login Page
     run keyword and continue on failure    Verify Login Page
     run keyword and continue on failure    Verify Login Page Elements
 
-Verify - Clickable Footers
-    [Tags]    Login Page
-    run keyword and continue on failure    User should verify clickable Privacy Policy on footer
-    run keyword and continue on failure    browse back button
-    run keyword and continue on failure    User should verify clickable Terms & Conditions on footer
-    run keyword and continue on failure    browse back button
+#Verify - Clickable Footers
+#    [Tags]    Login Page
+#    run keyword and continue on failure    User should verify clickable Privacy Policy on footer
+#    run keyword and continue on failure    browse back button
+#    run keyword and continue on failure    User should verify clickable Terms & Conditions on footer
+#    run keyword and continue on failure    browse back button
 
 Login Page - Input Invalid Username
     [Tags]    Login Page

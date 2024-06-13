@@ -266,6 +266,9 @@ ${HK_D1_Automation_Gold_PWD}    HK_Auto@12345!
 ${AU_S2_Automation_UID}    au_automation1retails2@yopmail.com
 ${AU_S2_Automation_PWD}    AU_Auto@12345!
 
+${AU2_S2_Automation_UID}    au_automation2retails2@yopmail.com
+${AU2_S2_Automation_PWD}    AU_Auto@12345!
+
 ${HK_S2_Automation_Bronze_UID}    hk_automation1retails2_bronze@yopmail.com
 ${HK_S2_Automation_Bronze_PWD}    HK_Auto@12345!
 
