@@ -37,7 +37,7 @@ ${Retail_AccountProfileChangePassCurrentPassValue}    ${Password}
 ${YopMailEmail}    ${gamechanger_s2_SGretail_UID}
 
 #Testing Values
-${ProdductSearchValue}    1780121060
+${ProductSearchValue}    1780121060
 
 *** Keywords ***
 Open Chrome Browser

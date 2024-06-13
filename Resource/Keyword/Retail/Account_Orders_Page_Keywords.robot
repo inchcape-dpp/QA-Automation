@@ -214,6 +214,14 @@ User should be able to view order details HK
     wait until element is visible    ${HK_Retail_AccountOrderDetailsBillingDetailsAndTotal}  10
     wait until element is visible    ${HK_Retail_AccountOrderDetailsAddressField}     10
     wait until element is visible    ${HK_Retail_AccountOrderDetailsSummaryField}    10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsSummaryField_SubTotal_Label}    10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsSummaryField_SubTotal_Value_Label}    10
+
+    ${DiscountViewStatus}    run keyword and return status    element should be visible    ${HK_Retail_AccountOrderDetailsSummaryField_Discount_Label}
+    run keyword if    '${DiscountViewStatus}' == 'True'    Discount Field
+
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsSummaryField_RRP_Label}    10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsSummaryField_RRP_Value_Label}    10
     wait until element is visible    ${HK_Retail_AccountOrderDetailsDeliveryInstructionField}    10
     wait until element is visible    ${HK_Retail_AccountOrderDetailsMessageSupplierButton}     10
     wait until element is visible    ${HK_Retail_AccountOrderDetailsRe-orderButton}    10
@@ -223,11 +231,23 @@ User should be able to view order details HK
     capture element screenshot    ${HK_Retail_AccountOrderDetailsBillingDetailsAndTotal}
     capture element screenshot    ${HK_Retail_AccountOrderDetailsAddressField}
     capture element screenshot    ${HK_Retail_AccountOrderDetailsSummaryField}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsSummaryField_SubTotal_Label}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsSummaryField_SubTotal_Value_Label}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsSummaryField_RRP_Label}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsSummaryField_RRP_Value_Label}
     capture element screenshot    ${HK_Retail_AccountOrderDetailsDeliveryInstructionField}
     capture element screenshot    ${HK_Retail_AccountOrderDetailsMessageSupplierButton}
     capture element screenshot    ${HK_Retail_AccountOrderDetailsRe-orderButton}
 
     sleep     2
+
+Discount Field
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsSummaryField_Discount_Label}    10
+    wait until element is visible    ${HK_Retail_AccountOrderDetailsSummaryField_Discount_Value_Label}    10
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsSummaryField_Discount_Label}
+    capture element screenshot    ${HK_Retail_AccountOrderDetailsSummaryField_Discount_Value_Label}
+
+
 User should be able to click filter status in Account Order Page
     wait until element is visible    ${Retail_AccountOrderPageStatusFilter}    10
     scroll element into view    ${Retail_AccountOrderPageStatusFilter}
@@ -248,7 +268,7 @@ User should be able to check all filter status in Account Order Page
 User should be able to check all filter status in HK Account Order Page
     wait until element is enabled    ${Retail_AccountOrderPageStatusFilterALL}    10
     wait until element is enabled    ${Retail_AccountOrderPageStatusFilterReceived}    10
-    element should not be visible    ${Retail_AccountOrderPageStatusFilterSubmitted}    10
+    wait until element is enabled    ${Retail_AccountOrderPageStatusFilterSubmitted}    10
     wait until element is visible    ${Retail_AccountOrderPageStatusFilterDispatched}    10
     element should not be visible    ${Retail_AccountOrderPageStatusFilterPartiallyDispatched}
     wait until element is visible    ${Retail_AccountOrderPageStatusFilterOrderwithReturns}    10
@@ -510,6 +530,43 @@ User should be able to click order with Orders with Returns Status in Retail Acc
     wait until element is visible    ${Retail_AccountOrderDetailsOrderHeader}
     capture page screenshot
     sleep    2
+
+User should be able to view order with Delivered Status in Retail Account Orders Page
+    FOR    ${Nextpage}    IN RANGE    1    500
+    ${RecivedStatus}    run keyword and return status    element should be visible    ${Retail_AccountOrderPageDeliveredContainer}
+    run keyword if    '${RecivedStatus}' == 'False'    User should be able to click next page in Retail Account Orders Page
+    exit for loop if    '${RecivedStatus}' == 'True'
+    END
+    scroll element into view    ${Retail_AccountOrderPageDeliveredContainer}
+    wait until element is visible    ${Retail_AccountOrderPageDeliveredContainer}    10
+    capture element screenshot    ${Retail_AccountOrderPageDeliveredContainer}
+    sleep    2
+
+User should be able to click order with Delivered Status in Retail Account Orders Page
+    wait until element is visible    ${Retail_AccountOrderPageDeliveredPartRef}    10
+    click element    ${Retail_AccountOrderPageDeliveredPartRef}
+    wait until element is visible    ${Retail_AccountOrderPageDeliveredPartRef}    10
+    capture page screenshot
+    sleep    2
+
+User should be able to view order with Processing Status in Retail Account Orders Page
+    FOR    ${Nextpage}    IN RANGE    1    500
+    ${RecivedStatus}    run keyword and return status    element should be visible    ${Retail_AccountOrderPageProcessingContainer}
+    run keyword if    '${RecivedStatus}' == 'False'    User should be able to click next page in Retail Account Orders Page
+    exit for loop if    '${RecivedStatus}' == 'True'
+    END
+    scroll element into view    ${Retail_AccountOrderPageProcessingContainer}
+    wait until element is visible    ${Retail_AccountOrderPageProcessingContainer}    10
+    capture element screenshot    ${Retail_AccountOrderPageProcessingContainer}
+    sleep    2
+
+User should be able to click order with Processing Status in Retail Account Orders Page
+    wait until element is visible    ${Retail_AccountOrderPageProcessingPartRef}    10
+    click element    ${Retail_AccountOrderPageProcessingPartRef}
+    wait until element is visible    ${Retail_AccountOrderPageProcessingPartRef}    10
+    capture page screenshot
+    sleep    2
+
 
 User should be able to click Back to Customer Orders in Retail Account Order Details Page
     wait until element is visible    ${Retail_AccountOrderDetailsBackButton}    10

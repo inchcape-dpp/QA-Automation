@@ -199,6 +199,13 @@ TC-040 - User should be able to view product details In Stock Only
     run keyword and continue on failure    Browse Back Button
     run keyword and continue on failure    Return to first page
 
+TC-053 - User should be albe to delete all items from shopping cart pop up modal
+    [Tags]    Home Page
+    run keyword and continue on failure    User should be able to Go to Home page
+    run keyword and continue on failure    User should be able to view shopping cart pop up modal
+    run keyword and continue on failure    User should be albe to delete all items from shopping cart pop up modal
+
+
 TC-041 - User should be able to logout using double header
     [Tags]    TC009    Logout
     run keyword and continue on failure    User should be able to logout using double header

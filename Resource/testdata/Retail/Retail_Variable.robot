@@ -115,7 +115,8 @@ ${Retail_RegistrationClosingLabel}    //form//div[@class='form-group']//ng-selec
 
 ${Retail_RegistrationContactFNLabel}    //form//div[@class='form-group']//input[@formcontrolname='contactFirstName']/preceding-sibling::span[contains(text(),'Contact First Name') or (contains(text(),'聯絡人名字'))]
 ${Retail_RegistrationContactLNLabel}    //form//div[@class='form-group']//input[@formcontrolname='contactLastName']/preceding-sibling::span[contains(text(),'Contact Last Name') or (contains(text(),'聯絡人姓氏'))]
-${Retail_RegistrationContactEmailLabel}    //form//div[@class='form-group']//input[@formcontrolname='email']/preceding-sibling::span[contains(text(),'Email address') or (contains(text(),'電郵'))]
+${Retail_RegistrationContactEmailLabel}    //form//div[@class='form-group']//input[@formcontrolname='email']/preceding-sibling::span[contains(text(),'Email Address') or (contains(text(),'電郵'))]
+
 ${Retail_RegistrationContactCompanyPhoneNumLabel}    //form//div[@class='form-group']//input[@formcontrolname='mobileNumber']/preceding-sibling::span
 ${Retail_RegistrationContactLandlineLabel}    //form//div[@class='form-group']//input[@formcontrolname='landlineNumber']/preceding-sibling::span
 
@@ -804,10 +805,10 @@ ${Retail_HK_CheckoutPageShippingAddressChangePopUpLastNameLabel}    //label[cont
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpEmailAddressLabel}    //label[contains(text(),'Email Address') or contains(text(),'電子郵件地址')]
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpMobileNumberLabel}    //label[contains(text(),'Mobile Number') or contains(text(),'手機號碼')]
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpLandlineNumberLabel}    //label[contains(text(),'Landline Number') or contains(text(),'分機號')]
-${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1Label}    //label[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]
-${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine2Label}    //label[contains(text(),'Address Line 2') or contains(text(),'地址第二行')]
-${Retail_HK_CheckoutPageShippingAddressChangePopUpAreaLabel}    //label[contains(text(),'Area') or contains(text(),'地區')]
-${Retail_HK_CheckoutPageShippingAddressChangePopUpDistrictLabel}    //label[contains(text(),'District')]|(//dpp-hk-checkout-address-dialog//label[contains(text(),'區')])
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1Label}    //span[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]|//label[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine2Label}    //span[contains(text(),'Address Line 2') or contains(text(),'地址第二行')]|//label[contains(text(),'Address Line 2') or contains(text(),'地址第二行')]
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAreaLabel}    //span[contains(text(),'Area') or contains(text(),'地區')]|//label[contains(text(),'Area') or contains(text(),'地區')]
+${Retail_HK_CheckoutPageShippingAddressChangePopUpDistrictLabel}    //label[contains(text(),'District') or contains(text(),'區')]|//span[contains(text(),'District') or contains(text(),'區')]
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpDeliveryInstructionsLabel}    //label[contains(text(),'Delivery Instructions') or contains(text(),'發貨備註')]
 
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpFirstNameTextBox}    //input[@formcontrolname='firstName']
@@ -815,19 +816,19 @@ ${Retail_HK_CheckoutPageShippingAddressChangePopUpLastNameTextBox}    //input[@f
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpEmailAddressTextBox}    //input[@formcontrolname='email']
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpMobileNumberTextBox}    //label[contains(text(),'Mobile Number') or contains(text(),'手機號碼')]/parent::div//input
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpLandlineNumberTextBox}    //label[contains(text(),'Landline Number') or contains(text(),'分機號')]/parent::div//input
-${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}    //label[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]/parent::div//input
-${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox_Clear_Button}    //label[contains(text(),'Address Line 1') or contains(text(),'地址第一行')]/parent::div//span[@title='Clear all']
-${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine2TextBox}    //label[contains(text(),'Address Line 2') or contains(text(),'地址第二行')]/parent::div//input
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}    //dpp-autocomplete-search//div//input
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox_Clear_Button}    //div//span[@title='Clear all']
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine2TextBox}    //span[contains(text(),'Address Line 2') or contains(text(),'地址第二行')]/parent::*//input|//label[contains(text(),'Address Line 2') or contains(text(),'地址第二行')]/parent::*//input
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpDeliveryInstructionsTextBox}    //label[contains(text(),'Delivery Instructions') or contains(text(),'發貨備註')]/following-sibling::div//textarea
 
 ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_AddressLine1_Suggest_Options}    (//dpp-autocomplete-search//ng-dropdown-panel//div//div[@role='option'])
 ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_AddressLine1_Manual_Options}    //dpp-autocomplete-search//ng-dropdown-panel//div//p/parent::div
 
 
-${Retail_HK_CheckoutPageShippingAddressChangePopUpAreaComboBox}    //label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//div[@class='ng-select-container ng-has-value' or @class='ng-select-container']
-${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_Area_ComboBox_Options}    (//label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])
-${Retail_HK_CheckoutPageShippingAddressChangePopUpDistrictComboBox}    //label[contains(text(),'District')]/following-sibling::ng-select//div[@class='ng-select-container ng-has-value' or @class='ng-select-container']
-${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_District_ComboBox_Options}   (//label[contains(text(),'District') or contains(text(),'區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])
+${Retail_HK_CheckoutPageShippingAddressChangePopUpAreaComboBox}    //*[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//div[@class='ng-select-container ng-has-value' or @class='ng-select-container']
+${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_Area_ComboBox_Options}    (//*[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])
+${Retail_HK_CheckoutPageShippingAddressChangePopUpDistrictComboBox}    //*[contains(text(),'District')]/following-sibling::ng-select//div[@class='ng-select-container ng-has-value' or @class='ng-select-container']
+${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_District_ComboBox_Options}   (//*[contains(text(),'District') or contains(text(),'區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])
 
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpCancelButton}    //div[@class='btn-action-container desktop']//button[@class='btn btn-outline-secondary']
 ${Retail_HK_CheckoutPageShippingAddressChangePopUpSaveButton}    //div[@class='btn-action-container desktop']//button[@class='btn btn-secondary']
@@ -1123,6 +1124,16 @@ ${Retail_AccountOrderPagePartiallyDispatchedPartRef}    (//tr[.//td[@class='cx-o
 ${Retail_AccountOrderPageOrderwithReturnContainer}    (//tr[.//td[@class='cx-order-history-total']][.//cx-icon[@class='cx-icon dpp-icons__returns-request']])[1]|(//tr[.//td[@class='cx-order-history-status']][.//cx-icon[@class='cx-icon dpp-icons__returns-request']])[1]
 ${Retail_AccountOrderPageOrderwithReturnPartRef}    (//tr[.//td[@class='cx-order-history-total']][.//cx-icon[@class='cx-icon dpp-icons__returns-request']]//td[@class='cx-order-history-code'])[1]|(//tr[.//td[@class='cx-order-history-status']][.//cx-icon[@class='cx-icon dpp-icons__returns-request']]//td[@class='cx-order-history-code'])[1]
 
+#-----------------------------------------------------Retail Account Order Page Delivered
+${Retail_AccountOrderPageDeliveredContainer}    (//tr[.//td[@class='cx-order-history-total' and contains(text(),'Delivered')]])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Delivered')]])[1]
+${Retail_AccountOrderPageDeliveredPartRef}    (//tr[.//td[@class='cx-order-history-total' and contains(text(),'Delivered')]]//td[@class='cx-order-history-code'])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Delivered')]]//td[@class='cx-order-history-code'])[1]
+
+#-----------------------------------------------------Retail Account Order Page Processing
+${Retail_AccountOrderPageProcessingContainer}    (//tr[.//td[@class='cx-order-history-total' and contains(text(),'Processing')]])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Processing')]])[1]
+${Retail_AccountOrderPageProcessingPartRef}    (//tr[.//td[@class='cx-order-history-total' and contains(text(),'Processing')]]//td[@class='cx-order-history-code'])[1]|(//tr[.//td[@class='cx-order-history-status' and contains(text(),'Processing')]]//td[@class='cx-order-history-code'])[1]
+
+
+
 #-----------------------------------------------------Retail Account Order Page Orders with $0.25 Spent
 ${Retail_AccountOrderPageOrderwith$0.25Container}    (//tr[.//td[@class='cx-order-history-total' and contains(text(),'$0.25')]])|(//tr[.//td[@class='cx-order-history-total' and contains(text(),'$1.60')]])
 ${Retail_AccountOrderPageOrderwith$0.25PartRef}    (//tr[.//td[@class='cx-order-history-total' and contains(text(),'$0.25')]]//td[@class='cx-order-history-code'])|(//tr[.//td[@class='cx-order-history-total' and contains(text(),'$1.60')]]//td[@class='cx-order-history-code'])
@@ -1317,7 +1328,17 @@ ${HK_Retail_AccountOrderDetailsBillingLabel}    //p[(contains(text(),'Billing Ad
 ${HK_Retail_AccountOrderDetailsOrderSummaryLabel}    //p[(contains(text(),'Order Summary'))]
 ${HK_Retail_AccountOrderDetailsBillingDetailsAndTotal}    //div[@class='row mt-2 content']
 ${HK_Retail_AccountOrderDetailsAddressField}    //p[@class='address-field']
+
 ${HK_Retail_AccountOrderDetailsSummaryField}    //div[@class='col-12 col-md-6 col-lg-5 px-0 px-md-3']
+${HK_Retail_AccountOrderDetailsSummaryField_SubTotal_Label}    //div[@class='col-12 col-md-6 col-lg-5 px-0 px-md-3']//div[@class='row']//div[@class='col-6 pl-0' and contains(text(),'Sub Total')]
+${HK_Retail_AccountOrderDetailsSummaryField_SubTotal_Value_Label}    //div[@class='col-12 col-md-6 col-lg-5 px-0 px-md-3']//div[@class='row']//div[@class='col-6 pl-0' and contains(text(),'Sub Total')]/following-sibling::div[@class='col-6 text-right'][1]
+
+${HK_Retail_AccountOrderDetailsSummaryField_Discount_Label}    //div[@class='col-12 col-md-6 col-lg-5 px-0 px-md-3']//div[@class='row']//div[@class='col-6 pl-0' and contains(text(),'Discount')]
+${HK_Retail_AccountOrderDetailsSummaryField_Discount_Value_Label}    //div[@class='col-12 col-md-6 col-lg-5 px-0 px-md-3']//div[@class='row']//div[@class='col-6 pl-0' and contains(text(),'Discount')]/following-sibling::div[@class='col-6 text-right']
+
+${HK_Retail_AccountOrderDetailsSummaryField_RRP_Label}    //div[@class='col-12 col-md-6 col-lg-5 px-0 px-md-3']//div[@class='col-6 p-3 order-rrp-total rrp-postion-left']//span[contains(text(),'Retail Price Total')]
+${HK_Retail_AccountOrderDetailsSummaryField_RRP_Value_Label}    //div[@class='col-12 col-md-6 col-lg-5 px-0 px-md-3']//div[@class='col-6 p-3 text-right order-rrp-total rrp-postion-right']
+
 ${HK_Retail_AccountOrderDetailsDeliveryInstructionField}    //div[@class='col-md-12 col-sm-12 px-0 px-md-3']
 ${HK_Retail_AccountOrderDetailsMessageSupplierButton}    //button[@class='btn btn-outline-secondary']
 ${HK_Retail_AccountOrderDetailsRe-orderButton}    //button[@class='btn btn-secondary']
@@ -2400,10 +2421,10 @@ ${Retail_HK_EPC_L1_ElectronicParts_Container}    //cx-page-slot[@class='Section2
 ${Retail_HK_EPC_L1_ElectronicParts_Cards_Container}    //cx-page-slot[@class='Section2A has-components']//div[@class='epc-cards row m-0']
 ${Retail_HK_EPC_L1_ElectronicParts_Cards_Header}    //cx-page-slot[@class='Section2A has-components']//div[@class='epc-title mb-3']
 
-${Retail_HK_EPC_L1_ElectronicParts_Cards_EngineFuelSystem}    //cx-page-slot[@class='Section2A has-components']//div[@class='epc-cards row m-0']//div[@class='epc-card-title pt-3 text-center' and contains(text(),'Engine, fuel system, and tools')]//parent::div[@class='epc-card d-flex flex-column justify-content-start align-items-center']
-${Retail_HK_EPC_L1_ElectronicParts_Cards_TransmissionChasis}    //cx-page-slot[@class='Section2A has-components']//div[@class='epc-cards row m-0']//div[@class='epc-card-title pt-3 text-center' and contains(text(),'Transmission and chassis')]//parent::div[@class='epc-card d-flex flex-column justify-content-start align-items-center']
-${Retail_HK_EPC_L1_ElectronicParts_Cards_BodyInterior}    //cx-page-slot[@class='Section2A has-components']//div[@class='epc-cards row m-0']//div[@class='epc-card-title pt-3 text-center' and contains(text(),'Body and interior')]//parent::div[@class='epc-card d-flex flex-column justify-content-start align-items-center']
-${Retail_HK_EPC_L1_ElectronicParts_Cards_Electrics}    //cx-page-slot[@class='Section2A has-components']//div[@class='epc-cards row m-0']//div[@class='epc-card-title pt-3 text-center' and contains(text(),'Electrics')]//parent::div[@class='epc-card d-flex flex-column justify-content-start align-items-center']
+${Retail_HK_EPC_L1_ElectronicParts_Cards_EngineFuelSystem}    //cx-page-slot[@class='Section2A has-components']//div[@class='epc-cards row m-0']//div[contains(text(),'Engine, fuel system, and tools')]//parent::div[@class='epc-card d-flex flex-column justify-content-start align-items-center']
+${Retail_HK_EPC_L1_ElectronicParts_Cards_TransmissionChasis}    //cx-page-slot[@class='Section2A has-components']//div[@class='epc-cards row m-0']//div[contains(text(),'Transmission and chassis')]//parent::div[@class='epc-card d-flex flex-column justify-content-start align-items-center']
+${Retail_HK_EPC_L1_ElectronicParts_Cards_BodyInterior}    //cx-page-slot[@class='Section2A has-components']//div[@class='epc-cards row m-0']//div[contains(text(),'Body and interior')]//parent::div[@class='epc-card d-flex flex-column justify-content-start align-items-center']
+${Retail_HK_EPC_L1_ElectronicParts_Cards_Electrics}    //cx-page-slot[@class='Section2A has-components']//div[@class='epc-cards row m-0']//div[contains(text(),'Electrics')]//parent::div[@class='epc-card d-flex flex-column justify-content-start align-items-center']
 
 ${Retail_HK_EPC_L1_MaintenanceParts_Container}    //cx-page-slot[@class='Section2B has-components']
 ${Retail_HK_EPC_L1_MaintenanceParts_Card_Container}    //cx-page-slot[@class='Section2B has-components']//div[@class='top-sellers d-flex flex-column align-items-center justify-content-between']
@@ -2651,7 +2672,7 @@ ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Price_Value}    //dpp-epc-part-
 ${Retail_HK_EPC_L3_PartsListCards_Option_Details_MoreInfo_Button}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='row part-details']//div[@class='col-4 d-flex justify-content-between flex-wrap more-info-wrapper']//span[contains(text(),'More Info')]
 ${Retail_HK_EPC_L3_PartsListCards_Option_Details_HideInfo_Button}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='row part-details']//div[@class='col-4 d-flex justify-content-between flex-wrap more-info-wrapper']//span[contains(text(),'Hide Info')]
 
-${Retail_HK_EPC_L3_PartsListCards_Option_MoreDetails_Container}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='more-details']
+${Retail_HK_EPC_L3_PartsListCards_Option_MoreDetails_Container}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='mt-3 more-details']
 
 
 
