@@ -17,6 +17,19 @@ TC-001 - Verify Login Page
     [Tags]    TC001    Login Page
     run keyword and continue on failure    Verify Login Page
 
+TC-002- Verify - Clickable Footers
+    [Tags]    TC001    Login Page
+    run keyword and continue on failure    User should verify clickable Privacy Policy on footer
+    run keyword and continue on failure    browse back button
+    run keyword and continue on failure    User should verify clickable Terms & Conditions on footer
+    run keyword and continue on failure    browse back button
+    run keyword and continue on failure    User should verify clickable Shipping Policy on footer
+    run keyword and continue on failure    browse back button
+    run keyword and continue on failure    User should verify clickable About Us on footer
+    run keyword and continue on failure    browse back button
+    run keyword and continue on failure    User should verify clickable Contact Us on footer
+    run keyword and continue on failure    browse back button
+
 #TC-002 - Email
 #    [Tags]    Get Email
 #    run keyword and continue on failure    New browser tab
