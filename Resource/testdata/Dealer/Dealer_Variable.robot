@@ -192,6 +192,10 @@ ${Retail_HK_AccountOrderPageDetailsSupplierLabel}   //thead//span[contains(text(
 ${Retail_HK_AccountOrderPageDetailsReferenceNumber}    (//td[@class='cx-order-history-code'])[1]
 ${Retail_AccountpageOrdersMenu}    //ul[@class='vertical-menu tab-level']//*[contains(text(),' Orders ')]|//ul[@class='vertical-menu tab-level']//*[contains(text(),' Order History ')]
 ${Retail_AccountOrderPagePanelContainer}    //cx-page-slot[@position='BodyContent']
+${Retail_AccountOrderStatusCombobox}    (//ng-select[@appendto='dpp-order-history'])
+${Retail_AccountOrderStatusOptionCombobox}  (//div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option'])
+
+
 #-----------------------------------------------------HK Dealer Order Details Page-----------------------------------------
 ${OrderPageDetailsReferenceNumber}  (//td[@class='cx-order-history-code'])[1]
 ${OrderDetailsOrderHeader}    //div[@class='order-header col-12 col-md-9 pl-0' or @class='order-header col-9 pl-0']

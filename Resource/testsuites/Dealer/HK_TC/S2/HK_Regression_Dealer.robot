@@ -252,6 +252,10 @@ TC-051 - User should be able to Filter by New to Old in Order Page
     run keyword and continue on failure    User should be able to click Arrage Filter in Order Page
     run keyword and continue on failure    User should be able to Filter by New to Old in Order Page
 
+Order Page - User should be able to change order status
+    [Tags]    Home Page    Orders Page
+    run keyword and continue on failure    User should be able to change order status
+
 TC-052 - User should be able to view and click order with Recieved Status in Dealer Orders Page
     [Tags]    Home Page    Orders Page
     run keyword and continue on failure    User should be able to view order with Recieved Status in Dealer Orders Page
