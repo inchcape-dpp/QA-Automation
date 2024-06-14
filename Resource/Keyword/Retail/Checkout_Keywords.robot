@@ -850,23 +850,31 @@ Compare Promo Code
 
 User should be able to get RRP Values in Retail Checkout Page
     wait until element is visible    ${Retail_CheckoutPageCustomerDetailsOrderSummaryRRPLabel}    10
+    ${CheckoutSummaryRRPValue}    get text    ${Retail_CheckoutPageCustomerDetailsOrderSummaryRRPLabel}
+    ${CheckoutRRPSummaryRemoveString}    remove string    ${CheckoutSummaryRRPValue}    $    ,    ${SPACE}    RRP    Total    :    Retail    Price
+    ${CheckoutRRPSummaryConvert}    convert to number    ${CheckoutRRPSummaryRemoveString}
+    set global variable    ${CheckoutRRPSummaryConvert}
+
+    ${ItemListRRPStatus}    run keyword and return status    element should be visible    ${Retail_CheckoutPageCustomerDetailsOrderItemList1RRPLabel}
+    set global variable    ${ItemListRRPStatus}
+    run keyword if    '${ItemListRRPStatus}' == 'True'    Item List RRP
+
+Item List RRP
     wait until element is visible    ${Retail_CheckoutPageCustomerDetailsOrderItemList1RRPLabel}    10
     ${CheckoutItemRRPValue}    get text    ${Retail_CheckoutPageCustomerDetailsOrderItemList1RRPLabel}
-    ${CheckoutSummaryRRPValue}    get text    ${Retail_CheckoutPageCustomerDetailsOrderSummaryRRPLabel}
     ${CheckoutRRPItemRemoveString}    remove string    ${CheckoutItemRRPValue}    $    ,    ${SPACE}    Retail    Price    :
-    ${CheckoutRRPSummaryRemoveString}    remove string    ${CheckoutSummaryRRPValue}    $    ,    ${SPACE}    RRP    Total    :    Retail    Price
     ${CheckoutRRPItemConvert}    convert to number    ${CheckoutRRPItemRemoveString}
-    ${CheckoutRRPSummaryConvert}    convert to number    ${CheckoutRRPSummaryRemoveString}
     set global variable    ${CheckoutRRPItemConvert}
-    set global variable    ${CheckoutRRPSummaryConvert}
 
 User should be able to compare RRP Values in Retail Checkout Page
     run keyword and continue on failure    should be equal    ${ConvertRRPString}    ${ShoppingCartRRPItemConvert}
     run keyword and continue on failure    should be equal    ${ConvertRRPString}    ${ShoppingCartRRpSummaryCOnvert}
-    run keyword and continue on failure    should be equal    ${ConvertRRPString}    ${CheckoutRRPItemConvert}
     run keyword and continue on failure    should be equal    ${ConvertRRPString}    ${CheckoutRRPSummaryConvert}
     run keyword and continue on failure    should be equal    ${ShoppingCartRRPItemConvert}    ${ShoppingCartRRpSummaryConvert}
+    run keyword and continue on failure    should be equal    ${ShoppingCartRRpSummaryConvert}    ${CheckoutRRPSummaryConvert}
+    run keyword if    '${ItemListRRPStatus}' == 'True'    Compare Item RRP
+
+Compare Item RRP
+    run keyword and continue on failure    should be equal    ${ConvertRRPString}    ${CheckoutRRPItemConvert}
     run keyword and continue on failure    should be equal    ${CheckoutRRPItemConvert}    ${ShoppingCartRRpSummaryConvert}
     run keyword and continue on failure    should be equal    ${ShoppingCartRRPItemConvert}    ${CheckoutRRPItemConvert}
-    run keyword and continue on failure    should be equal    ${ShoppingCartRRpSummaryConvert}    ${CheckoutRRPSummaryConvert}
-

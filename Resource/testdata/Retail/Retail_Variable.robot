@@ -924,7 +924,7 @@ ${Retail_Loader}    //div[@class='loader']
 ${Retail_CheckoutPageCustomerDetailsOrderItemList}    //div[@class='order-details-items-table']//div[@class='product-list-item']
 ${Retail_CheckoutPageCustomerDetailsOrderItemList1}    //div[@class='order-details-items-table']//div[@class='product-list-item'][1]
 
-${Retail_CheckoutPageCustomerDetailsOrderItemList1RRPLabel}    //div[@class='order-details-items-table']//div[@class='product-list-item']//div[@class='col-total__msrp' or @class='col rrp-label text-left']
+${Retail_CheckoutPageCustomerDetailsOrderItemList1RRPLabel}    //div[@class='product-list-item']//div[@class='col-total__msrp' or @class='col rrp-label text-left']
 
 ${Retail_CheckoutPageCustomerDetailsOrderSummaryContainer}    //div[@class='order-cart-totals']|//div[@class='sticky-wrapper']
 ${Retail_CheckoutPageCustomerDetailsOrderSummaryHeader}    //div[@class='order-cart-totals' or @class='row order-summary']//div[@class='header col-12']|//div[@class='order-cart-totals' or @class='row order-summary']//h3
@@ -935,7 +935,7 @@ ${Retail_CheckoutPageCustomerDetailsOrderSummaryGTSValue}    //div[@class='order
 ${Retail_CheckoutPageCustomerDetailsOrderSummaryOrderTotalLabel}    //div[@class='order-cart-totals' or @class='row order-summary']//div[@class='row' or @class='total-wrapper row w-100']//div[@class='col-6 order-total' or @class='total col-6 mt-2 order-total']
 ${Retail_CheckoutPageCustomerDetailsOrderSummaryOrderTotalValue}    //div[@class='order-cart-totals']//div[@class='row']//div[@class='col-6 text-right'][3]|//div[@class='row order-summary']//div[@class='total-wrapper row w-100']//div[@class='total col-6 mt-2 text-right']
 
-${Retail_CheckoutPageCustomerDetailsOrderSummaryRRPLabel}    //div[@class='order-cart-totals' or @class='sticky-wrapper']//div[@class='cart-rrp mx-0' or @class='row cart-rrp mx-0']
+${Retail_CheckoutPageCustomerDetailsOrderSummaryRRPLabel}    //div[@class='order-cart-totals' or @class='sticky-wrapper' or @class='sticky-container']//div[@class='cart-rrp mx-0' or @class='row cart-rrp mx-0' or @class='row mx-0 cart-rrp']
 
 ${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryShippingFeeLabel}    //div[@class='row order-summary']//div[@class='details mt-2 col-6']
 ${Retail_HK_CheckoutPageCustomerDetailsOrderSummaryShippingFeeValue}    //div[@class='row order-summary']//div[@class='total-wrapper row w-100']//div[4]
@@ -2269,7 +2269,7 @@ ${AllProdPageDisabledCurrentPage1}     //a[@aria-label='page 1' and @class='page
 ${Retail_HK_AllProdPageLoadmoreButton}    //dpp-product-grid-view//div[@class='showmore']//button[@class='showmore-btn btn btn-secondary align-btn']
 ${Retail_HK_AllProdPageScrolltoTopButton}    //cx-scroll-to-top//button
 
-${AllProdPageAddtoCartRRPLabel}    (//div[@class='custom-product-list' or @class='product-grid-list'][.//button[@type='submit']]//div[@aria-label='RRP.' or @class='product-msrp']//span[1])
+${AllProdPageAddtoCartRRPLabel}    (//div[@class='custom-product-list' or @class='product-grid-list'][.//button[@type='submit']]//div[@aria-label='RRP.' or @class='product-msrp' or @aria-label='Retail Price']//span[1])
 
 ${AllProdPageAddtoCartButton}    (//dpp-add-to-cart//button[@type='submit'])
 ${AllProdPageAddOneButton}    (//button[@aria-label='Add one more'])

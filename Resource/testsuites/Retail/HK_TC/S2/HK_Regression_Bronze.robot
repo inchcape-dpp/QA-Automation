@@ -411,7 +411,7 @@ TC-042 - User should be able to side filter product
 #    run keyword and continue on failure    User should be albe to check/uncheck 1 product sub category in Retail All Products Page
 
 TC-004 - User should be able to compare RRP Values in Retail Checkout Page
-    [Tags]    Login Page
+    [Tags]    All Products Page
     run keyword and continue on failure    User should be able to view All products
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to view shopping cart pop up modal

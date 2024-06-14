@@ -698,8 +698,8 @@ User shold be able to get RRP value of random item with add to cart button in Re
     ${AddToCartRRPCount}    get element count    ${AllProdPageAddtoCartButton}
     ${RandomRRPItemIndex}    evaluate    random.randint(1,${AddToCartRRPCount})
     scroll element into view    (//dpp-add-to-cart//button[@type='submit'])[${RandomRRPItemIndex}]
-    ${ProductRRPValue}    get text    (//div[@class='custom-product-list' or @class='product-grid-list'][.//button[@type='submit']]//div[@aria-label='RRP.' or @class='product-msrp']//span[1])[${RandomRRPItemIndex}]
-    ${RemoveRRPStrings}    remove string    ${ProductRRPValue}    RRP.    $    ,    ${SPACE}
+    ${ProductRRPValue}    get text    (//div[@class='custom-product-list' or @class='product-grid-list'][.//button[@type='submit']]//div[@aria-label='RRP.' or @class='product-msrp' or @aria-label='Retail Price']//span[1])[${RandomRRPItemIndex}]
+    ${RemoveRRPStrings}    remove string    ${ProductRRPValue}    RRP.    $    ,    Retail    Price    ${SPACE}
     ${ConvertRRPString}    convert to number    ${RemoveRRPStrings}
     set global variable    ${ConvertRRPString}
     sleep    2
