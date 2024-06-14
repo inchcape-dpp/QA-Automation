@@ -47,16 +47,21 @@ TC-004 - User should be able to click Login Button
     run keyword and continue on failure    User should be able to click Login Button
     run keyword and continue on failure    TC Sleep
 
-TC-060 - User should be able to view account orders page
-    [Tags]    Order Page
-    run keyword and continue on failure    User should be able to access Account page using double header in Retail Home page
-    run keyword and continue on failure    User should be able to view account orders page HK
-
-TC-066 - User should be able to view and message order with Submitted Status in Retail Account Orders Page
-    [Tags]    Order Page
-    run keyword and continue on failure    User should be able to view order with Submitted Status in Retail Account Orders Page
-    run keyword and continue on failure    User should be able to click order with Submitted Status in Retail Account Orders Page
-    run keyword and continue on failure    User should be able to view order details HK
+TC-004 - User should be able to compare RRP Values in Retail Checkout Page
+    [Tags]    All Products Page
+    run keyword and continue on failure    User should be able to view All products
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User should be able to view shopping cart pop up modal
+    run keyword and continue on failure    User should be albe to delete all items from shopping cart pop up modal
+    run keyword and continue on failure    User should be able to view All products
+    run keyword and continue on failure    User shold be able to get RRP value of random item with add to cart button in Retail Product Page
+    run keyword and continue on failure    User should be able to view shopping cart pop up modal
+    run keyword and continue on failure    User should be able to click view cart button from shopping cart pop up modal
+    run keyword and continue on failure    User should be able to get RRP Value in Retail Shopping Cart Page
+    run keyword and continue on failure    User should be able to click checkout button in Retail Shopping Cart Page
+    run keyword and continue on failure    TC Sleep
+    run keyword and continue on failure    User should be able to get RRP Values in Retail Checkout Page
+    run keyword and continue on failure    User should be able to compare RRP Values in Retail Checkout Page
 
 
 
