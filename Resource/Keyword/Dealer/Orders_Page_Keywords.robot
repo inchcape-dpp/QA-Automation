@@ -579,3 +579,17 @@ Return to first page in Dealer Order Page
     run keyword if    '${firstpagestatus}' == 'True'    User should be able to return to first page in Dealer Orders Page
     scroll element into view    ${OrderPageCustomerOderHeader}
     sleep    3
+
+User should be able to change order status
+    click element    ${Dealer_HK_LoginPage_Chinese_Button}
+    sleep    3
+    ${RandomOrderStatusCount}    get element count   ${Retail_AccountOrderStatusCombobox}
+    ${RandomOrderStatusIndex}    evaluate    random.randint(1,${RandomOrderStatusCount})
+    scroll element into view    (//ng-select[@appendto='dpp-order-history'])[${RandomOrderStatusIndex}]
+    click element    (//ng-select[@appendto='dpp-order-history'])[${RandomOrderStatusIndex}]
+    ${RandomOptionStatusCount}    get element count    ${Retail_AccountOrderStatusOptionCombobox}
+    ${RandomOptionStatusIndex}    evaluate    random.randint(1,6)
+    click element    (//div[@class='ng-dropdown-panel-items scroll-host']//div[@role='option'])[${RandomOptionStatusIndex}]
+    click element    ${Dealer_HK_LoginPage_English_Button}
+
+
