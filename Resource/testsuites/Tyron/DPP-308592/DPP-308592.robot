@@ -13,6 +13,8 @@ Resource    ../../../../Resource/testdata/Retail/Retail_Resource.robot
 Test Setup  Run Keywords   Open Chrome Browser
 Screen Shot DIR  Run Keywords    Retail Screen Shot DIR
 
+#HK Toyota - Messaging - What's App Integration
+
 TC-000 - Verify Login Page
     [Tags]    TC001    Login Page
     run keyword and continue on failure    TC Sleep

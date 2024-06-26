@@ -9,7 +9,7 @@ Resource    ../../../../Resource/testdata/Retail/HK_Config/S2/HK_S2_Bronze_Confi
 Resource    ../../../../Resource/testdata/Retail/Retail_Variable.robot
 Resource    ../../../../Resource/testdata/Retail/Retail_Resource.robot
 
-#HK Toyota - Vehicle Listing - Layout
+#HK - Toyota - Prod - Vehicle Listing - Saved Vehicle has 2 entries on vehicle listing page
 
 *** Test Cases ***
 Test Setup  Run Keywords   Open Chrome Browser
