@@ -115,7 +115,7 @@ ${Retail_RegistrationClosingLabel}    //form//div[@class='form-group']//ng-selec
 
 ${Retail_RegistrationContactFNLabel}    //form//div[@class='form-group']//input[@formcontrolname='contactFirstName']/preceding-sibling::span[contains(text(),'Contact First Name') or (contains(text(),'聯絡人名字'))]
 ${Retail_RegistrationContactLNLabel}    //form//div[@class='form-group']//input[@formcontrolname='contactLastName']/preceding-sibling::span[contains(text(),'Contact Last Name') or (contains(text(),'聯絡人姓氏'))]
-${Retail_RegistrationContactEmailLabel}    //form//div[@class='form-group']//input[@formcontrolname='email']/preceding-sibling::span[contains(text(),'Email Address') or (contains(text(),'電郵'))]
+${Retail_RegistrationContactEmailLabel}    //form//div[@class='form-group']//input[@formcontrolname='email']/preceding-sibling::span[contains(text(),'Email Address') or (contains(text(),'Email address') or (contains(text(),'電郵')))]
 
 ${Retail_RegistrationContactCompanyPhoneNumLabel}    //form//div[@class='form-group']//input[@formcontrolname='mobileNumber']/preceding-sibling::span
 ${Retail_RegistrationContactLandlineLabel}    //form//div[@class='form-group']//input[@formcontrolname='landlineNumber']/preceding-sibling::span
@@ -2302,9 +2302,15 @@ ${Retail_AllProdPageMessagePopUpUpMessageValue}    Test
 
 
 #-----------------------------------------------------Retail Product Selection------------------------------------------
-${Retail_HK_ProductSelectionProductlist}    //div[@class='custom-product-list' or @class='product-grid-list']
+${Retail_HK_ProductSelectionProductlist}    (//div[@class='custom-product-list' or @class='product-grid-list'])
 ${Retail_HK_ProductSelectionProductResult}    //div[@class='showmore-result text-center mb-2']
-
+${Retail_HK_ProductPrice}    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__price']//div[@class='cx-product-price'])
+${Retail_HK_ProductImg}    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__img'])
+${Retail_HK_ProductName}    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__desc']//span)
+${Retail_HK_ProductNumber}    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__desc']//p)
+${Retail_HK_ProductRRP}    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__price']//div[@class='product-msrp' or @aria-label='Retail Price'])
+${Retail_HK_ProductStock}    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__stock']//dpp-product-stock)
+${Retail_HK_SupplierName}    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__stock']//dpp-seller-info)
 #-----------------------------------------------------Retail Product Selection In Stock and DC Stock
 ${ProductSelectionInStockDCStock}    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']])
 ${ProductSelectionInStockDCStockContainer}    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']])[1]

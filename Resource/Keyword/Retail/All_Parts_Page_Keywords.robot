@@ -1837,13 +1837,47 @@ User should be able to view PDP after EPC Level 3
     capture element screenshot    ${EPCProductDeatilsPageProductLoadMore}
 
 
+User should be able to view PLP label
+    wait until element is visible    ${Retail_HK_ProductSelectionProductlist}    10
+    ${RandomProductsCount}    get element count   ${Retail_HK_ProductSelectionProductlist}
+    ${RandomProductsIndex}    evaluate     random.randint(1,${RandomProductsCount})
+    scroll element into view    (//div[@class='custom-product-list' or @class='product-grid-list'])[${RandomProductsIndex}]
+    capture element screenshot    (//div[@class='custom-product-list' or @class='product-grid-list'])[${RandomProductsIndex}]
+    set global variable    ${RandomProductsIndex}
+    wait until element is visible    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__img'])[${RandomProductsIndex}]    10
+    wait until element is visible    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__desc']//span)[${RandomProductsIndex}]    10
+    wait until element is visible    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__desc']//p)[${RandomProductsIndex}]    10
+    wait until element is visible    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__price']//div[@class='product-msrp' or @aria-label='Retail Price'])[${RandomProductsIndex}]    10
+    wait until element is visible    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__stock']//dpp-product-stock)[${RandomProductsIndex}]    10
+    wait until element is visible    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__stock']//dpp-seller-info)[${RandomProductsIndex}]        10
+    run keyword and continue on failure    Check Two Decimal Pricing PLP
+
+Check Two Decimal Pricing PLP
+    wait until element is visible    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__price']//div[@class='cx-product-price'])[${RandomProductsIndex}]    10
+    capture element screenshot    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__price']//div[@class='cx-product-price'])[${RandomProductsIndex}]
+    ${PriceString}    get text    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__price']//div[@class='cx-product-price'])[${RandomProductsIndex}]
+    ${PriceTextRemove}    remove string    ${PriceString}    $    ,    Incl.    GST    ${SPACE}
+    ${PriceSplit}    split string    ${PriceTextRemove}    .
+    ${Pricelength}    get length    ${PriceSplit}[1]
+    ${PriceConvert}    convert to string    ${Pricelength}
+    ${PriceDecimal}    set variable    2
+    run keyword and continue on failure    should be equal    ${PriceConvert}     ${PriceDecimal}
 
 
-
-
-
-
-
+Check Two Decimal Pricing PDP
+    click element    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__img'])[${RandomProductsIndex}]
+    wait until element is visible    ${ProductDeatilsPageProductPrice}    10
+    capture element screenshot    ${ProductDeatilsPageProductPrice}    10
+    ${PriceString}    get text    ${ProductDeatilsPageProductPrice}
+    ${PriceTextRemove}    remove string    ${PriceString}    $    ,    \n    Incl.    GST    ${SPACE}
+    ${PriceSplit}    split string    ${PriceTextRemove}    .
+    ${Pricelength}    get length    ${PriceSplit}[1]
+    ${PriceConvert}    convert to string    ${Pricelength}
+    log    ${PriceConvert}
+    log    ${Pricelength}
+    ${PriceDecimal}    set variable    2
+    log    ${PriceDecimal}
+    run keyword and continue on failure    should be equal    ${PriceConvert}     ${PriceDecimal}
 
 
 
