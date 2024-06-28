@@ -297,6 +297,10 @@ TC-054 - User should be able to click searched text
     run keyword and continue on failure    User should be able to click searched text
     run keyword and continue on failure    User should be able to Go to Home page
 
+TC-054 - User should not be able to search VW Part name and Part number
+    [Tags]    Home Page
+    run keyword and continue on failure    User should not be able to search VW Part name and Part number
+
 TC-055 - User should be able to view Vehicle Search in AU Retail Home Page
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to view Vehicle Search in AU Retail Home Page

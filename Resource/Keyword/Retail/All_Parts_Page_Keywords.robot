@@ -1750,6 +1750,12 @@ User should be able to view one Card on the Parts Card List in HK Retail EPC L3 
     set global variable    ${RandomPartsCardIndex}
     sleep    2
 
+User should be able to view first Card on the Parts Card List in HK Retail EPC L3 Page
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsFirstCards_Options}    10
+    click element    ${Retail_HK_EPC_L3_PartsListFirstCard_Options_Expand_Button}
+    sleep    2
+
+
 User should be able to expand one Card on the Parts Card List in HK Retail EPC L3 Page
     wait until element is visible    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//button//span[contains(text(),'EXPAND')])[${RandomPartsCardIndex}]    10
     click element    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//button//span[contains(text(),'EXPAND')])[${RandomPartsCardIndex}]
@@ -1879,5 +1885,11 @@ Check Two Decimal Pricing PDP
     log    ${PriceDecimal}
     run keyword and continue on failure    should be equal    ${PriceConvert}     ${PriceDecimal}
 
+User should be able to click Suspension Crossmember
+    wait until element is visible    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SuspensionCrossmemberUnderCover}    10
+    click element    ${Retail_HK_EPC_L2_Schema_BodyInterior_CardList_SuspensionCrossmemberUnderCover}
+    sleep    2
 
-
+User should be able to click Add to Cart Button Level 3 EPC
+    wait until element is visible    ${Retail_HK_EPC_L3_PartsListCards_AddtoCart}    10
+    click element     ${Retail_HK_EPC_L3_PartsListCards_AddtoCart}
