@@ -545,7 +545,7 @@ User should be able to view order with Delivered Status in Retail Account Orders
 User should be able to click order with Delivered Status in Retail Account Orders Page
     wait until element is visible    ${Retail_AccountOrderPageDeliveredPartRef}    10
     click element    ${Retail_AccountOrderPageDeliveredPartRef}
-    wait until element is visible    ${Retail_AccountOrderPageDeliveredPartRef}    10
+    wait until element is visible    ${Retail_AccountOrderDetailsOrderHeader}    10
     capture page screenshot
     sleep    2
 
@@ -563,7 +563,7 @@ User should be able to view order with Processing Status in Retail Account Order
 User should be able to click order with Processing Status in Retail Account Orders Page
     wait until element is visible    ${Retail_AccountOrderPageProcessingPartRef}    10
     click element    ${Retail_AccountOrderPageProcessingPartRef}
-    wait until element is visible    ${Retail_AccountOrderPageProcessingPartRef}    10
+    wait until element is visible    ${Retail_AccountOrderDetailsOrderHeader}    10
     capture page screenshot
     sleep    2
 
