@@ -570,11 +570,12 @@ User should be able to click order with Processing Status in Retail Account Orde
 
 User should be able to click Back to Customer Orders in Retail Account Order Details Page
     wait until element is visible    ${Retail_AccountOrderDetailsBackButton}    10
-    scroll element into view    ${Retail_AccountAccountpageMyAccountLabel}
     scroll element into view    ${Retail_AccountOrderDetailsBackButton}
+    press keys    none    \\ue011
     capture element screenshot    ${Retail_AccountOrderDetailsBackButton}
     click element    ${Retail_AccountOrderDetailsBackButton}
     sleep    2
+
 
 User should be able to click next page in Retail Account Orders Page
     wait until element is visible    ${Retail_AccountOrderPageDetailsNextPageButton}    10

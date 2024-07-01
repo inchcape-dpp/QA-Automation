@@ -430,7 +430,7 @@ User should be able to view HK company details page
     capture element screenshot    ${Retail_HK_AccountCompanyDetailsPage_Postal_Area_ComboBox}
     capture element screenshot    ${Retail_HK_AccountCompanyDetailsPage_Postal_District_ComboBox}
 
-#    run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Retail Account Company Details Page
+    run keyword and continue on failure    User should be able to check/uncheck Del Add Same As Postal Add Checkbox in Retail Account Company Details Page
 
     scroll element into view    ${Retail_AccountCompanyDetailsPageOpeningHoursComboBox}
 
