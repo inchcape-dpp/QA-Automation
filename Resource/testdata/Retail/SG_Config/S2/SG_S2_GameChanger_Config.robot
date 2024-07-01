@@ -31,10 +31,10 @@ ${YouLeftSomething_FilePath}    C:\\Users\\Danielouie.Estopace\\Documents\\Files
 #${Username}    retailtitanp1@yopmail.com
 #${Password}    Welcom3@NT
 
-${Username}    ${gamechanger_s2_SGretail_UID}
-${Password}    ${gamechanger_s2_SGretail_PWD}
+${Username}    ${SG_S2_Automation_GameChanger_UID}
+${Password}    ${SG_S2_Automation_GameChanger_PWD}
 ${Retail_AccountProfileChangePassCurrentPassValue}    ${Password}
-${YopMailEmail}    ${gamechanger_s2_SGretail_UID}
+${YopMailEmail}    ${SG_S2_Automation_GameChanger_UID}
 
 #Testing Values
 ${ProductSearchValue}    1780121060

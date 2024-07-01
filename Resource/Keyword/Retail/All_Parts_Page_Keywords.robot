@@ -25,6 +25,18 @@ User should be able to view All Parts Page
 
     sleep    2
 
+Get All Products Page Product Qty and In Stock Qty
+    ${AllProductsNumber}    get text    ${AllProdPageAllProductQty}
+    ${AllProductsInStockNumber}    get text    ${AllProdPageAllInStockQty}
+
+    ${AllProductsNumberRemoveString}    remove string    ${AllProductsNumber}    All Products    (    )    ${SPACE}    ALL PRODUCTS
+    ${AllProductsInStockNumberRemoveString}    remove string    ${AllProductsInStockNumber}    In stock   (    )    ${SPACE}
+
+    set global variable    ${AllProductsNumberRemoveString}
+    set global variable    ${AllProductsInStockNumberRemoveString}
+    log    ${AllProductsNumberRemoveString}
+    log    ${AllProductsInStockNumberRemoveString}
+
 User should be able to view All Parts Page with VIN
     wait until element is visible    ${AllProdPage_CarSelected_Container}    10
     wait until element is visible    ${AllProdPage_CarSelectedCar_Icon}    10
@@ -44,6 +56,15 @@ User should be able to view All Parts Page with VIN
     ${RemoveVINString}    remove string    ${vintextvalue}    Vin Number:    ${SPACE}
     run keyword and continue on failure    Should Be Equal As Strings    ${RemoveVINString}    ${Retail_HK_HomePage_SearchVIN_TextBox_Value1}
 
+    ${VINAllProductsNumber}    get text    ${AllProdPageAllProductQty}
+    ${VINAllProductsInStockNumber}    get text    ${AllProdPageAllInStockQty}
+
+    set global variable    ${VINAllProductsNumber}
+    set global variable    ${VINAllProductsInStockNumber}
+
+    log    ${VINAllProductsNumber}
+    log    ${VINAllProductsInStockNumber}
+
 User should be able to view All Parts Page with Manual Car Search
     element should not be visible    ${AllProdPage_CarSelectedCar_CarVIN_Label}
     wait until element is visible    ${AllProdPage_CarSelected_Container}    10
@@ -61,6 +82,40 @@ User should be able to view All Parts Page with Manual Car Search
     ${allpartscarmodeltextvalue}    get text    ${AllProdPage_CarSelectedCar_CarModel_Label}
     ${selectvehiclecarmodeltextvalue}    get text    ${HomePageSelectVehicle}
     run keyword and continue on failure    Should Be Equal As Strings    ${allpartscarmodeltextvalue}    ${selectvehiclecarmodeltextvalue}
+
+    ${ManualVehicleAllProductsNumber}    get text    ${AllProdPageAllProductQty}
+    ${ManualVehicleAllProductsInStockNumber}    get text    ${AllProdPageAllInStockQty}
+
+    set global variable    ${ManualVehicleAllProductsNumber}
+    set global variable    ${ManualVehicleAllProductsInStockNumber}
+
+    log    ${ManualVehicleAllProductsNumber}
+    log    ${ManualVehicleAllProductsInStockNumber}
+
+Compare Product Number with Manual Vehicle Search and Clear Vehicle
+    ${ManualVehicleAllProductsNumberRemoveString}    remove string    ${ManualVehicleAllProductsNumber}    All    Products    (    )    ${SPACE}    ALL    PRODUCTS
+    ${ManualVehicleAllProductsInStockNumberRemoveString}    remove string    ${ManualVehicleAllProductsInStockNumber}    In stock   (    )    ${SPACE}
+
+    log    ${ManualVehicleAllProductsNumberRemoveString}
+    log    ${ManualVehicleAllProductsInStockNumberRemoveString}
+
+    run keyword and continue on failure    should not be equal as strings    ${ManualVehicleAllProductsNumberRemoveString}    ${AllProductsNumberRemoveString}
+    run keyword and continue on failure    should not be equal as strings    ${ManualVehicleAllProductsInStockNumberRemoveString}    ${AllProductsInStockNumberRemoveString}
+
+Compare Product Number with VIN Search and Clear Vehicle
+    ${VINAllProductsNumberRemoveString}    remove string    ${VINAllProductsNumber}    All    Products    (    )    ${SPACE}    ALL    PRODUCTS
+    ${VINAllProductsInStockNumberRemoveString}    remove string    ${VINAllProductsInStockNumber}    In stock   (    )    ${SPACE}
+
+    log    ${VINAllProductsNumberRemoveString}
+    log    ${VINAllProductsInStockNumberRemoveString}
+
+    run keyword and continue on failure    should not be equal as strings    ${VINAllProductsNumberRemoveString}    ${AllProductsNumberRemoveString}
+    run keyword and continue on failure    should not be equal as strings    ${VINAllProductsInStockNumberRemoveString}    ${AllProductsInStockNumberRemoveString}
+
+User should be able to get category numbers
+    ${ProductCategoryCount}    get element count    ${AllProdPageAllProductCategory}
+    log    ${ProductCategoryCount}
+    should be true    ${ProductCategoryCount} >= 2
 
 
 User should be able to view All Parts Page with No Car Search
@@ -1111,6 +1166,13 @@ User should be able to Check Product Stock
     END
 
     close all excel documents
+
+
+User should be able to click EPC Button
+    wait until element is visible    ${Retail_HK_HomePage_EPC_Button}    10
+    click element    ${Retail_HK_HomePage_EPC_Button}
+    sleep    2
+
 
 User should be able to view EPC L1 Page in HK Retail
     wait until element is visible    ${Retail_HK_EPC_L1_Container}    10

@@ -304,6 +304,7 @@ User should be able to click order with In Progress Status in Retail Account Ret
 User should be able to click Back to Return Request in Retail Account Return Details Page
     wait until element is visible    ${Retail_AccountReturnPageReturnDetailsBack}   10
     scroll element into view    ${Retail_AccountReturnPageReturnDetailsBack}
+    press keys    none    \\ue011
     capture element screenshot    ${Retail_AccountReturnPageReturnDetailsBack}
     click element    ${Retail_AccountReturnPageReturnDetailsBack}
     sleep    2

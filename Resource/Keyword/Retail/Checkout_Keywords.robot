@@ -356,6 +356,13 @@ User should be able to change Mobile Number on change shipping in HK Retail Chec
     capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpMobileNumberTextBox}
     sleep    2
 
+User should be able to change Office Contact Number on change shipping in SG Retail Checkout Page
+    wait until element is visible    ${Retail_SG_CheckoutPageShippingAddressChangePopUpOfficeContactNumberTextBox}    10
+    clear element text    ${Retail_SG_CheckoutPageShippingAddressChangePopUpOfficeContactNumberTextBox}
+    input text    ${Retail_SG_CheckoutPageShippingAddressChangePopUpOfficeContactNumberTextBox}    ${Retail_HK_Registration_MobileNumber_Value}
+    capture element screenshot    ${Retail_SG_CheckoutPageShippingAddressChangePopUpOfficeContactNumberTextBox}
+    sleep    2
+
 User should be able to change Landline Number on change shipping in HK Retail Checkout Page
     wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpLandlineNumberTextBox}    10
     clear element text    ${Retail_HK_CheckoutPageShippingAddressChangePopUpLandlineNumberTextBox}
@@ -387,6 +394,22 @@ User should be able to edit manual shipping address on change shipping in HK Ret
     capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}
     sleep    2
 
+User should be able to edit address line 1 on change shipping in SG Retail Checkout Page
+    wait until element is visible    ${Retail_SG_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}    10
+    scroll element into view    ${Retail_SG_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}
+    clear element text    ${Retail_SG_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}
+    input text    ${Retail_SG_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}    ${Retail_RegistrationPostalAddLine1Value}
+    capture element screenshot    ${Retail_SG_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}
+    sleep    2
+
+User should be able to edit address line 2 on change shipping in SG Retail Checkout Page
+    wait until element is visible    ${Retail_SG_CheckoutPageShippingAddressChangePopUpAddressLine2TextBox}    10
+    scroll element into view    ${Retail_SG_CheckoutPageShippingAddressChangePopUpAddressLine2TextBox}
+    clear element text    ${Retail_SG_CheckoutPageShippingAddressChangePopUpAddressLine2TextBox}
+    input text    ${Retail_SG_CheckoutPageShippingAddressChangePopUpAddressLine2TextBox}    ${Retail_RegistrationDelAddLine2Value}
+    capture element screenshot    ${Retail_SG_CheckoutPageShippingAddressChangePopUpAddressLine2TextBox}
+    sleep    2
+
 User should be able to click manual shipping address on change shipping in HK Retail Checkout Page
     wait until element is visible    ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_AddressLine1_Manual_Options}    10
     capture element screenshot    ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_AddressLine1_Manual_Options}
@@ -409,14 +432,21 @@ User should be able to click Area Dropdown on change shipping in HK Retail Check
     click element    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAreaComboBox}
     sleep    2
 
+User should be able to edit Unit Number on change shipping in SG Retail Checkout Page
+    wait until element is visible    ${Retail_SG_CheckoutPageShippingAddressChangePopUpUnitNumberTextBox}    10
+    clear element text    ${Retail_SG_CheckoutPageShippingAddressChangePopUpUnitNumberTextBox}
+    input text    ${Retail_SG_CheckoutPageShippingAddressChangePopUpUnitNumberTextBox}    ${Retail_SG_RegistrationUnitNumbervalue}
+    capture element screenshot    ${Retail_SG_CheckoutPageShippingAddressChangePopUpUnitNumberTextBox}
+    sleep    2
+
 User should be able to select Random Area on change shipping in HK Retail Checkout Page
     wait until element is visible    ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_Area_ComboBox_Options}    10
     ${AreaCount}    get element count    ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_Area_ComboBox_Options}
     ${AreaRanIndex}    evaluate    random.randint(1,${AreaCount})
     mouse over    ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_Area_ComboBox_Options}
-    scroll element into view    (//label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${AreaRanIndex}]
-    capture element screenshot    (//label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${AreaRanIndex}]
-    click element    (//label[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${AreaRanIndex}]
+    scroll element into view    (//*[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${AreaRanIndex}]
+    capture element screenshot    (//*[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${AreaRanIndex}]
+    click element    (//*[contains(text(),'Area') or contains(text(),'地區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${AreaRanIndex}]
     sleep    2
 
 User should be able to click District Dropdown on change shipping in HK Retail Checkout Page
@@ -425,14 +455,21 @@ User should be able to click District Dropdown on change shipping in HK Retail C
     click element    ${Retail_HK_CheckoutPageShippingAddressChangePopUpDistrictComboBox}
     sleep    2
 
+User should be able to edit Postal Code on change shipping in SG Retail Checkout Page
+    wait until element is visible    ${Retail_SG_CheckoutPageShippingAddressChangePopUpPostalCodeTextBox}    10
+    clear element text    ${Retail_SG_CheckoutPageShippingAddressChangePopUpPostalCodeTextBox}
+    input text    ${Retail_SG_CheckoutPageShippingAddressChangePopUpPostalCodeTextBox}    ${Retail_SG_RegistrationPostalCodevalue}
+    capture element screenshot    ${Retail_SG_CheckoutPageShippingAddressChangePopUpPostalCodeTextBox}
+    sleep    2
+
 User should be able to select Random District on change shipping in HK Retail Checkout Page
     wait until element is visible    ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_District_ComboBox_Options}    10
     ${DistrictCount}    get element count    ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_District_ComboBox_Options}
     ${DistrictRanIndex}    evaluate    random.randint(1,${DistrictCount})
     mouse over    ${Retail_HK_CheckoutPage_ShippingAddress_ChangePopUp_District_ComboBox_Options}
-    scroll element into view    (//label[contains(text(),'District') or contains(text(),'區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${DistrictRanIndex}]
-    capture element screenshot    (//label[contains(text(),'District') or contains(text(),'區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${DistrictRanIndex}]
-    click element    (//label[contains(text(),'District') or contains(text(),'區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${DistrictRanIndex}]
+    scroll element into view    (//*[contains(text(),'District') or contains(text(),'區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${DistrictRanIndex}]
+    capture element screenshot    (//*[contains(text(),'District') or contains(text(),'區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${DistrictRanIndex}]
+    click element    (//*[contains(text(),'District') or contains(text(),'區')]/following-sibling::ng-select//ng-dropdown-panel//div[@role='option'])[${DistrictRanIndex}]
     sleep    2
 
 User should be able to click Save Button on change shipping in HK Retail Checkout Page
@@ -537,6 +574,23 @@ User should be able to click view order button in Retail Place Order Page
 User should be able to view payment method in HK Retail Checkout Page
     wait until element is visible    ${Retail_HK_CheckoutPagePaymentMethodHeader}    10
     scroll element into view    ${Retail_HK_CheckoutPagePaymentMethodHeader}
+    sleep    2
+
+User should be able to view payment method in SG Retail Checkout Page
+    wait until element is visible    ${Retail_HK_CheckoutPagePaymentMethodHeader}    10
+    scroll element into view    ${Retail_HK_CheckoutPagePaymentMethodHeader}
+    capture element screenshot    ${Retail_HK_CheckoutPagePaymentMethodHeader}
+    wait until element is visible    ${Retail_SG_CheckoutPagePaymentMethodCreditCointaner}    10
+    wait until element is visible    ${Retail_SG_CheckoutPagePaymentMethodCreditLabel}    10
+    wait until element is visible    ${Retail_SG_CheckoutPagePaymentMethodPONumLabel}    10
+    wait until element is visible    ${Retail_SG_CheckoutPagePaymentMethodPONumTextBox}    10
+    wait until element is visible    ${Retail_SG_CheckoutPagePaymentMethodPONumSaveButton}    10
+
+    capture element screenshot    ${Retail_SG_CheckoutPagePaymentMethodCreditCointaner}
+    capture element screenshot    ${Retail_SG_CheckoutPagePaymentMethodCreditLabel}
+    capture element screenshot    ${Retail_SG_CheckoutPagePaymentMethodPONumLabel}
+    capture element screenshot    ${Retail_SG_CheckoutPagePaymentMethodPONumTextBox}
+    capture element screenshot    ${Retail_SG_CheckoutPagePaymentMethodPONumSaveButton}
     sleep    2
 
 User should be albe to select COD Payment
@@ -795,11 +849,6 @@ User should be able to check Promo Code in HK Retail Checkout Page
     ${DiscountText}    get text    ${Retail_HK_CheckoutPage_CustomerDetails_OrderSummary_Discounnt_Value}
     ${OrderTotalText}    get text    ${Retail_CheckoutPageCustomerDetailsOrderSummaryOrderTotalValue}
 
-#    ${SubtotalString}    convert to string    ${SubtotalText}
-#    ${ShippingString}    convert to string    ${ShippingFeeText}
-#    ${DiscountString}    convert to string    ${DiscountText}
-#    ${OrderTotalString}    convert to string    ${OrderTotalText}
-
     ${RemoveSubTotalString}    remove string    ${SubtotalText}    $    ,
     ${RemoveShippingString}    remove string   ${ShippingFeeText}    Free    $    ,    FREE
     ${RemoveDiscountString}    remove string    ${DiscountText}    $    ,
@@ -824,7 +873,6 @@ User should be able to check Promo Code in HK Retail Checkout Page
     run keyword if    ${RemoveSubTotalString} > ${300DiscountMin}    Set Discount to 300
     run keyword if    ${RemoveSubTotalString} > ${100DiscountMin}    Compare Promo Code
 
-
 Set Discount to 100
     ${DiscountValue}  set variable    ${100}
     set global variable    ${DiscountValue}
@@ -844,8 +892,6 @@ Invalid Promo Code
 Compare Promo Code
     run keyword and continue on failure    should be equal    ${OrderTotal}    ${OrderTotalPrice}
     run keyword and continue on failure    should be equal    ${DiscountValue}    ${RemoveDiscountString}
-
-
 
 
 User should be able to get RRP Values in Retail Checkout Page
@@ -878,3 +924,72 @@ Compare Item RRP
     run keyword and continue on failure    should be equal    ${ConvertRRPString}    ${CheckoutRRPItemConvert}
     run keyword and continue on failure    should be equal    ${CheckoutRRPItemConvert}    ${ShoppingCartRRpSummaryConvert}
     run keyword and continue on failure    should be equal    ${ShoppingCartRRPItemConvert}    ${CheckoutRRPItemConvert}
+
+
+User should be able to view Change Shipping Address Modal in SG Retail Checkout Page
+    wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpContainer}    10
+    capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpContainer}
+
+    scroll element into view    ${Retail_HK_CheckoutPageShippingAddressChangePopUpFirstNameLabel}
+    wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpFirstNameLabel}    10
+    wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpLastNameLabel}    10
+    wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpEmailAddressLabel}    10
+    wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpMobileNumberLabel}    10
+    wait until element is visible    ${Retail_SG_CheckoutPageShippingAddressChangePopUpOfficeNumberLabel}    10
+    wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1Label}    10
+    wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine2Label}    10
+    wait until element is visible    ${Retail_SG_CheckoutPageShippingAddressChangePopUpUnitNumberLabel}    10
+    wait until element is visible    ${Retail_SG_CheckoutPageShippingAddressChangePopUpPostalCodeLabel}    10
+    wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpDeliveryInstructionsLabel}    10
+    wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpFirstNameTextBox}    10
+    wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpLastNameTextBox}    10
+    wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpEmailAddressTextBox}    10
+    wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpMobileNumberTextBox}    10
+    wait until element is visible    ${Retail_SG_CheckoutPageShippingAddressChangePopUpOfficeContactNumberTextBox}    10
+    wait until element is visible    ${Retail_SG_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}    10
+    wait until element is visible    ${Retail_SG_CheckoutPageShippingAddressChangePopUpAddressLine2TextBox}    10
+    wait until element is visible    ${Retail_SG_CheckoutPageShippingAddressChangePopUpUnitNumberTextBox}    10
+    wait until element is visible    ${Retail_SG_CheckoutPageShippingAddressChangePopUpPostalCodeTextBox}    10
+    wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpDeliveryInstructionsTextBox}    10
+    scroll element into view    ${Retail_HK_CheckoutPageShippingAddressChangePopUpCancelButton}
+    wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpCancelButton}    10
+    wait until element is visible    ${Retail_HK_CheckoutPageShippingAddressChangePopUpSaveButton}    10
+
+    scroll element into view    ${Retail_HK_CheckoutPageShippingAddressChangePopUpFirstNameLabel}
+    capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpFirstNameLabel}
+    capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpLastNameLabel}
+    capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpEmailAddressLabel}
+    capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpMobileNumberLabel}
+    capture element screenshot    ${Retail_SG_CheckoutPageShippingAddressChangePopUpOfficeNumberLabel}
+    capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine1Label}
+    capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpAddressLine2Label}
+    capture element screenshot    ${Retail_SG_CheckoutPageShippingAddressChangePopUpUnitNumberLabel}
+    capture element screenshot    ${Retail_SG_CheckoutPageShippingAddressChangePopUpPostalCodeLabel}
+    capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpDeliveryInstructionsLabel}
+    capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpFirstNameTextBox}
+    capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpLastNameTextBox}
+    capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpEmailAddressTextBox}
+    capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpMobileNumberTextBox}
+    capture element screenshot    ${Retail_SG_CheckoutPageShippingAddressChangePopUpOfficeContactNumberTextBox}
+    capture element screenshot    ${Retail_SG_CheckoutPageShippingAddressChangePopUpAddressLine1TextBox}
+    capture element screenshot    ${Retail_SG_CheckoutPageShippingAddressChangePopUpAddressLine2TextBox}
+    capture element screenshot    ${Retail_SG_CheckoutPageShippingAddressChangePopUpUnitNumberTextBox}
+    capture element screenshot    ${Retail_SG_CheckoutPageShippingAddressChangePopUpPostalCodeTextBox}
+    capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpDeliveryInstructionsTextBox}
+    scroll element into view    ${Retail_HK_CheckoutPageShippingAddressChangePopUpCancelButton}
+    capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpCancelButton}
+    capture element screenshot    ${Retail_HK_CheckoutPageShippingAddressChangePopUpSaveButton}
+
+    sleep    2
+
+
+
+
+
+
+
+
+
+
+
+
