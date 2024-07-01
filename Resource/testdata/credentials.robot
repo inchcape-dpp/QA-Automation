@@ -166,7 +166,7 @@ ${Ric_S2_HKPass_GOLD}    Pass@12345
                                                                          #------------------------Dealer----------------
                                                                              #------------------------ADMIN1------------
 ${admin1_s2_dealer_UID}    seller1.admin@test.com
-${admin1_s2_dealer_PWD}    AUPass@12345
+${admin1_s2_dealer_PWD}    AUs2@12345
                                                                              #------------------------ADMIN2------------
 ${admin2_s2_dealer_UID}    seller2.admin@test.com
 ${admin2_s2_dealer_PWD}    AUs2@12345

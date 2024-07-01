@@ -17,7 +17,6 @@ TC-000 - Verify Login Page
     [Tags]    TC001    Login Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to click Translate to English Button
-#    run keyword and continue on failure    Verify Login Page
     run keyword and continue on failure    Verify Login Page Elements HK
 
 TC-001- Verify - Clickable Footers
@@ -319,6 +318,24 @@ TC-041 - User should be able to view EPC Search Result Pop Up Modal in HK Retail
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    TC Sleep
 
+TC-041 - User should be able to Click Body and Interior in HK Retail EPC L1 Page
+    [Tags]    EPC L1
+    run keyword and continue on failure    User should be able to Click Body and Interior in HK Retail EPC L1 Page
+
+TC-041 - User should be able to click Suspension Crossmember
+    [Tags]    EPC L2
+    run keyword and continue on failure    User should be able to click Suspension Crossmember
+
+TC-041 - User should be able to add to cart from EPC L3
+    [Tags]    EPC L3
+    run keyword and continue on failure    User should be able to view first Card on the Parts Card List in HK Retail EPC L3 Page
+    run keyword and continue on failure    User should be able to click Add to Cart Button Level 3 EPC
+    run keyword and continue on failure    User should be able to view shopping cart pop up modal
+    run keyword and continue on failure    User should be able to click view cart button from shopping cart pop up modal
+    run keyword and continue on failure    User should be able to view shopping cart pop up modal
+    run keyword and continue on failure    User should be albe to delete all items from shopping cart pop up modal
+    run keyword and continue on failure    User should be able to close shopping cart pop up modal
+
 TC-041 - User should be able to view EPC L1 Page in HK Retail
     [Tags]    EPC L1
     run keyword and continue on failure    User should be able to view EPC L1 Page in HK Retail
@@ -438,6 +455,7 @@ TC-044 - User should be able to view product Out of Stock
     run keyword and continue on failure    User should be able to message out of stock product in Retail Product Page
     run keyword and continue on failure    User should be able to click product details Out of Stock
     run keyword and continue on failure    User should be able to view product details Out of Stock in HK Product Page
+    run keyword and continue on failure    Check Two Decimal Pricing PDP
     run keyword and continue on failure    Browse Back Button
     run keyword and continue on failure    User should be able to view All products
 
@@ -448,6 +466,7 @@ TC-045 - User should be able to view product In Stock Only
     run keyword and continue on failure    User should be able to view product In Stock Only in HK Retail Products Page
     run keyword and continue on failure    User should be able to click product details In Stock Only
     run keyword and continue on failure    User should be able to view product details In Stock Only in HK Product Page
+    run keyword and continue on failure    Check Two Decimal Pricing PDP
     run keyword and continue on failure    Browse Back Button
     run keyword and continue on failure    User should be able to view All products
 
@@ -461,10 +480,12 @@ TC-046 - User should be able to click add to cart button for in stock only in Re
 TC-047 - User should be able to add to cart random item in Retail Product Page
     [Tags]    All Products Page
     run keyword and continue on failure    User should be able to add to cart random item in Retail Product Page
+    run keyword and continue on failure    User should be able to view PLP label
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to add to cart random item in Retail Product Page
     run keyword and continue on failure    TC Sleep
     run keyword and continue on failure    User should be able to add to cart random item in Retail Product Page
+
 
 TC-048 - User should be able to view shopping cart pop up modal
     [Tags]    Shopping Cart Page

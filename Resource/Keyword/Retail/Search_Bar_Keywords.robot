@@ -20,6 +20,15 @@ User should be able to click searched text
     mouse over    ${HomePageLogo}
     sleep    3
 
+User should not be able to search VW Part name and Part number
+    wait until element is visible    ${HomePageSearhProduct}    10
+    click element    ${HomePageSearhProduct}
+    input text    ${HomePageSearhProduct}    ${VWProductSearchValue}
+    wait until element is visible    ${SearchNResult}    10
+    capture element screenshot    ${SearchNResult}
+    clear element text    ${HomePageSearhProduct}
+
+
 
 
 

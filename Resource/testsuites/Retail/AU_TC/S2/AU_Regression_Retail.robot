@@ -299,6 +299,10 @@ Home Page - User should be able to click searched text
     run keyword and continue on failure    User should be able to click searched text
     run keyword and continue on failure    User should be able to Go to Home page
 
+Home Page - User should not be able to search VW Part name and Part number
+    [Tags]    Home Page
+    run keyword and continue on failure    User should not be able to search VW Part name and Part number
+
 Home Page - User should be able to view Vehicle Search in AU Retail Home Page
     [Tags]    Home Page
     run keyword and continue on failure    User should be able to view Vehicle Search in AU Retail Home Page

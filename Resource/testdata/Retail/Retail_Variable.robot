@@ -115,7 +115,7 @@ ${Retail_RegistrationClosingLabel}    //form//div[@class='form-group']//ng-selec
 
 ${Retail_RegistrationContactFNLabel}    //form//div[@class='form-group']//input[@formcontrolname='contactFirstName']/preceding-sibling::span[contains(text(),'Contact First Name') or (contains(text(),'聯絡人名字'))]
 ${Retail_RegistrationContactLNLabel}    //form//div[@class='form-group']//input[@formcontrolname='contactLastName']/preceding-sibling::span[contains(text(),'Contact Last Name') or (contains(text(),'聯絡人姓氏'))]
-${Retail_RegistrationContactEmailLabel}    //form//div[@class='form-group']//input[@formcontrolname='email']/preceding-sibling::span[contains(text(),'Email Address') or (contains(text(),'電郵'))]
+${Retail_RegistrationContactEmailLabel}    //form//div[@class='form-group']//input[@formcontrolname='email']/preceding-sibling::span[contains(text(),'Email Address') or (contains(text(),'Email address') or (contains(text(),'電郵')))]
 
 ${Retail_RegistrationContactCompanyPhoneNumLabel}    //form//div[@class='form-group']//input[@formcontrolname='mobileNumber']/preceding-sibling::span
 ${Retail_RegistrationContactLandlineLabel}    //form//div[@class='form-group']//input[@formcontrolname='landlineNumber']/preceding-sibling::span
@@ -262,9 +262,11 @@ ${HomePageLogo}    //cx-page-slot[@position='SiteLogo']
 ${HomePageSelectVehicle}    (//div[@class='custom-header-vehicle'])[1][contains(text(),'Select your vehicle') or (contains(text(),''))]
 ${HomePageSearhProduct}    //div[@role='search']//input[@type='text']
 ${HomePageSearhProductIcon}    //div[@role='presentation']
+${SearchNResult}    //div[@id='results']
 ${HomePageProfileIcon}     //dpp-my-accounts-header//cx-icon[@class='header-account-icon cx-icon dpp-icons__user-circle']
 ${HomePageProfileAccount}    //div[@class='header-account-label']//span[contains(text(),'My Account') or contains(text(),'我的帳戶')]
 ${HomePageProfileLogout}    //li//a[@href='/dppretail/logout']
+
 
 ${HomePage_DoubleHeader}    //div[@class='double-header--relative']
 ${HomePage_DoubleHeader_SellerName}    //div[@class='double-header--relative']//div[@class='seller-info']//p[@class='seller-name']
@@ -532,7 +534,7 @@ ${Retail_HK_HomePage_Manual_ModelID_Combobox}    //dpp-hk-search-by-vehicle//ng-
 
 ${Retail_HK_HomePage_Manula_Search_Button}    //dpp-hk-search-by-vehicle//button|//dpp-toyota-search-by-vehicle//button
 
-${Retail_HK_HomePage_SearchVIN_TextBox_Value1}    JTNKC4B1809000753
+${Retail_HK_HomePage_SearchVIN_TextBox_Value1}    JT711SR4000251506
 ${Retail_HK_HomePage_SearchVIN_TextBox_Value2}    JTMBH31V10D017606
 ${Retail_HK_HomePage_SearchVIN_TextBox_Value3}    JT711MP1000052922
 ${Retail_HK_HomePage_SearchVIN_TextBox_Value4}    JTHBH96S605048702
@@ -2302,9 +2304,15 @@ ${Retail_AllProdPageMessagePopUpUpMessageValue}    Test
 
 
 #-----------------------------------------------------Retail Product Selection------------------------------------------
-${Retail_HK_ProductSelectionProductlist}    //div[@class='custom-product-list' or @class='product-grid-list']
+${Retail_HK_ProductSelectionProductlist}    (//div[@class='custom-product-list' or @class='product-grid-list'])
 ${Retail_HK_ProductSelectionProductResult}    //div[@class='showmore-result text-center mb-2']
-
+${Retail_HK_ProductPrice}    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__price']//div[@class='cx-product-price'])
+${Retail_HK_ProductImg}    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__img'])
+${Retail_HK_ProductName}    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__desc']//span)
+${Retail_HK_ProductNumber}    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__desc']//p)
+${Retail_HK_ProductRRP}    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__price']//div[@class='product-msrp' or @aria-label='Retail Price'])
+${Retail_HK_ProductStock}    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__stock']//dpp-product-stock)
+${Retail_HK_SupplierName}    (//div[@class='custom-product-list' or @class='product-grid-list']//div[@class='list-item__stock']//dpp-seller-info)
 #-----------------------------------------------------Retail Product Selection In Stock and DC Stock
 ${ProductSelectionInStockDCStock}    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']])
 ${ProductSelectionInStockDCStockContainer}    (//div[@class='custom-product-list'][.//p[@class='inStock mr-0']][.//p[@class='inStock pr-2']])[1]
@@ -2653,10 +2661,12 @@ ${Retail_HK_EPC_L3_SchemaCar_Header_Next_Button_Enabled}    //div[@class='parts-
 ${Retail_HK_EPC_L3_SchemaCar_Diagram}    //dpp-dpp-epc-parts-diagram
 ${Retail_HK_EPC_L3_PartsListCards_Container}    //dpp-epc-part-list//div[@class='part-list-wrapper d-flex flex-column']
 ${Retail_HK_EPC_L3_PartsListCards_Options}      (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0'])
+${Retail_HK_EPC_L3_PartsFirstCards_Options}     (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0'])[1]
 
 ${Retail_HK_EPC_L3_PartsListCards_Options_PartNum}    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//div[@class='pnc-id'])
 ${Retail_HK_EPC_L3_PartsListCards_Options_ProdName}    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//div[@class='pnc-name'])
 ${Retail_HK_EPC_L3_PartsListCards_Options_Expand_Button}    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//button//span[contains(text(),'EXPAND')])
+${Retail_HK_EPC_L3_PartsListFirstCard_Options_Expand_Button}    (//dpp-epc-part-list//div[@class='part-list-card d-flex flex-column' or @class='part-list-card d-flex flex-column m-0']//button//span[contains(text(),'EXPAND')])[1]
 
 ${Retail_HK_EPC_L3_PartsListCards_Option_Details_Container}    //dpp-epc-part-detail//div[@class='part-detail-container']
 ${Retail_HK_EPC_L3_PartsListCards_Option_Details_PartNo_Label}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='header-container']//div[@class='col-2']//p[contains(text(),'Part No')]
@@ -2675,7 +2685,7 @@ ${Retail_HK_EPC_L3_PartsListCards_Option_Details_HideInfo_Button}    //dpp-epc-p
 ${Retail_HK_EPC_L3_PartsListCards_Option_MoreDetails_Container}    //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='mt-3 more-details']
 
 
-
+${Retail_HK_EPC_L3_PartsListCards_AddtoCart}     //dpp-epc-part-detail//div[@class='part-detail-container']//div[@class='row part-details']//div[@class='col-4 d-flex justify-content-between flex-wrap more-info-wrapper']//button
 
 
 
