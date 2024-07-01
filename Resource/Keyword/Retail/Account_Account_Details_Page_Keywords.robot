@@ -58,6 +58,7 @@ User should be able to edit Last name in Retail Account Details Page
     capture element screenshot    ${Retail_AccountProfileAccountsDetailsLastNameTextBox}
     sleep    2
 
+
 User should be able to edit Phone Number in Retail Account Details Page
     clear element text    ${Retail_AccountProfileAccountsDetailsPhoneTextBox}
     input text    ${Retail_AccountProfileAccountsDetailsPhoneTextBox}    ${Retail_AccountProfileAccountsDetailsPhoneValue}
@@ -92,6 +93,8 @@ User should be able to click Update in Retail Account Details Page
     wait until element is visible    ${Retail_AccountProfileAccountsDetailsUpdateButton}    10
     capture element screenshot    ${Retail_AccountProfileAccountsDetailsUpdateButton}
     click element    ${Retail_AccountProfileAccountsDetailsUpdateButton}
+    wait until element is visible    ${Retail_AccountProfileAccountsDetailsConfirmationYesButton}    10
+    click element    ${Retail_AccountProfileAccountsDetailsConfirmationYesButton}
     sleep    2
 
 User should be able to view update confirmation modal in Retail Account Details Page
@@ -125,4 +128,12 @@ User should be able to view invalid landline number error in Retail Account Deta
     capture element screenshot    ${Retail_AccountProfileAccountsDetailsLandlineError}
     sleep    2
 
-
+User First Name should not move to Last Name
+   wait until element is visible    ${Retail_AccountProfileAccountsDetailsLastNameTextBox}    10
+   capture element screenshot    ${Retail_AccountProfileAccountsDetailsLastNameTextBox}
+   ${NameString}    get text   ${Retail_AccountProfileAccountsDetailsLastNameTextBox}
+   log    ${NameString}
+   ${NameLength}    get length    ${NameString}
+   log     ${NameLength}
+   ${NameCount}    set variable    2
+   run keyword and continue on failure    should be equal    ${NameLength}     ${NameCount}

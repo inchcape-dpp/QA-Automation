@@ -1947,7 +1947,7 @@ ${Retail_AccountProfileAccountsDetailsConfirmationYesButton}    //div[@class='cx
 ${Retail_AccountProfileAccountsDetailsConfirmationNoButton}    //div[@class='cx-dialog-body modal-body']//button[@class='btn btn-block btn-outline-secondary']
 
 ${Retail_AccountProfileAccountsDetailsFirstNameValue}    Test FN
-${Retail_AccountProfileAccountsDetailsLastNameValue}    Test LN
+${Retail_AccountProfileAccountsDetailsLastNameValue}    QA
 ${Retail_AccountProfileAccountsDetailsPhoneValue}    0412333444
 ${Retail_AccountProfileAccountsDetailsLandlineValue}    0421333444
 
